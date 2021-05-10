@@ -30,10 +30,10 @@
         <a class="nav-link" id="pills-tpscript7-tab" data-toggle="pill" href="#pills-tpscript7" role="tab" aria-controls="pills-tpscript7" aria-selected="false" style="color: black;">Clases</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript9-tab" data-toggle="pill" href="#pills-tpscript9" role="tab" aria-controls="pills-tpscript9" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-tpscript9-tab" data-toggle="pill" href="#pills-tpscript9" role="tab" aria-controls="pills-tpscript9" aria-selected="false" style="color: black;">Importaciones<br>URL</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript10-tab" data-toggle="pill" href="#pills-tpscript10" role="tab" aria-controls="pills-tpscript10" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-tpscript10-tab" data-toggle="pill" href="#pills-tpscript10" role="tab" aria-controls="pills-tpscript10" aria-selected="false" style="color: black;">Decoradores</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-tpscript11-tab" data-toggle="pill" href="#pills-tpscript11" role="tab" aria-controls="pills-tpscript11" aria-selected="false" style="color: black;">x</a>
@@ -46,7 +46,7 @@
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-        <div class="tab-pane fade show active" id="pills-tpscript" role="tabpanel" aria-labelledby="pills-tpscript-tab"><hr><app-instalaciontype></app-instalaciontype></div>
+    <div class="tab-pane fade" id="pills-tpscript" role="tabpanel" aria-labelledby="pills-tpscript-tab"><hr><app-instalaciontype></app-instalaciontype></div>
 
     <div class="tab-pane fade" id="pills-tpscript8" role="tabpanel" aria-labelledby="pills-tpscript8-tab">
 
@@ -102,7 +102,7 @@
     /* Module Resolution Options */
     // "moduleResolution": "node",                  /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     // "baseUrl": "./",                             /* Base directory to resolve non-absolute module names. */
-    // "paths": {{c}}},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "paths": {{c}},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                             /* List of folders to include type definitions from. */
     // "types": [],                                 /* Type declaration files to be included in compilation. */
@@ -223,29 +223,16 @@
 
     <div class="tab-pane fade" id="pills-tpscript2" role="tabpanel" aria-labelledby="pills-tpscript2-tab">
         
-        <h3>En el terminal</h3>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                     <pre class="card-text"><ul><li><b>console.log (nombre_variable);</b></li>
-<li>console<b>.warn</b> (nombre_variable);          //Para que el mensaje salga en amarillo (warning)</li>
+<li>console<b><abbr title="Para que el mensaje salga en amarillo (warning)">.warn</abbr></b> (nombre_variable);</li>
 <li>console.log (<b>"Texto" + " " + nombre_variable + " " + 36</b>);</li>
 <li>console.log(<b>`${{c}}getNombre_Variable()}`</b>);</li></ul></pre>
                 </div>
             </div>
         </div>
-
-        <br>
-
-        <h3>En el navegador</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">x</pre>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
@@ -258,10 +245,10 @@
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><b>interface nombre_interface {{c}}</b>   //Como van a ir definido obligatoriamente (string, number, boolean...)
+                    <pre class="card-text"><b><abbr title="Como van a ir definido obligatoriamente (string, number, boolean...)">interface</abbr> nombre_interface {{c}}</b>
     <b>nombre_por_dentro: string;
     numero_por_dentro: number;
-    nombre2_por_dentro?: string;</b>    //Opcional <b>?</b>
+    nombre2_por_dentro<abbr title="Opcional">?:</abbr> string;</b>
   <b>}</b>
 
   const nombre_funcion = ( nombre_parametro<b>: nombre_interface</b> ) => {{c}}
@@ -269,7 +256,7 @@
     console.log(`Le damos interface al ${{c}} <b>nombre_parametro.nombre_por_dentro</b> } que cojamos`);
   }
 
-  <b>const nombre_utilizar: nombre_interface = {{c}}</b>   //Superhéroe
+  <b>const <abbr title="Superhéroe">nombre_utilizar</abbr>: nombre_interface = {{c}}</b>
     <b>nombre_por_dentro: 'Nombre',
     numero_por_dentro: 30
   }</b>
@@ -282,17 +269,163 @@
     </div>
 
     <div class="tab-pane fade" id="pills-tpscript7" role="tabpanel" aria-labelledby="pills-tpscript7-tab">
-        
+                
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>class nombreClase {{c}}
 
+       <abbr title="Metemos en el constructor las variables que vamos a usar">constructor</abbr> (
+            <abbr title="Public (Uso fuera de la clase), Private (Uso dentro de la clase)">public</abbr> nombre_parametro: string,</b>
+            <b>public <abbr title="Opcional">boolean_parametro?:</abbr> boolean,</b>
+            <b>public numero_parametro: number <abbr title="Podemos iniciarlo poniendo un valor. Ejemplo peleas ganadas o true/false en boolean o texto...">= 0</abbr> ){{c}}</b>
+        <b>}
+    }
+        
+        const nombre_variable = <abbr title="Inicializamos la variable con la clase y de paso le damos valor">new nombreClase('Nombre');</abbr></b>
+    
+    console.log(nombre_variable);</pre>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
 
 
 
 
-    <div class="tab-pane fade" id="pills-tpscript9" role="tabpanel" aria-labelledby="pills-tpscript9-tab">x</div>
+    <div class="tab-pane fade" id="pills-tpscript9" role="tabpanel" aria-labelledby="pills-tpscript9-tab">
+        
+        <h2 style="text-align: center;">Classe</h2>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Se <b>exporta a</b> otro lugar</h3>
+                    <pre class="card-text"><b>export class nombre_Clase {{c}}</b>
+
+  constructor (
+
+    public nombre_parametro: string,
+    public nombre_parametro2: string
+
+  ){{c}}}
+
+  <abbr title="Función que se usará en el otro archivo por exporta/importar la clase"><b>funcion</b></abbr><b>Ver_EnConsola()</b>{{c}}
+    console.log(<b>`${{c}} <abbr title="Cogemos las variables declaradas en el constructor">this.</abbr>nombre_parametro } - ${{c}} this.nombre_parametro2 }`</b>);
+
+   }
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Se <b>importa de</b> otro lugar</h3>
+                    <pre class="card-text"><b>import {{c}} nombre_Clase } from './classes/nombre_Clase';</b>
+
+        const <abbr title="Metemos en la variable la clase, para poder llamar luego a sus características (funciones...)">nombre_variable</abbr> = <b>new nombre_Clase<abbr title="Dentro del paréntesis metemos los valores que se verán">'nombre_parametro', 'nombre_parametro2')</abbr>;</b>
+
+        <b>nombre_variable.<abbr title="Llama a la función que está en la clase">funcionVer_EnConsola();</abbr></b></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
-    <div class="tab-pane fade" id="pills-tpscript10" role="tabpanel" aria-labelledby="pills-tpscript10-tab">x</div>
+    <div class="tab-pane fade" id="pills-tpscript10" role="tabpanel" aria-labelledby="pills-tpscript10-tab">
+        
+        
+         <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <h4 style="color: white;">tsconfig.json</h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{c}}
+  "compilerOptions": {{c}}
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Basic Options */
+    // "incremental": true,                         /* Enable incremental compilation */
+    "target": "es5",                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    // "lib": [],                                   /* Specify library files to be included in the compilation. */
+    // "allowJs": true,                             /* Allow javascript files to be compiled. */
+    // "checkJs": true,                             /* Report errors in .js files. */
+    // "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
+    // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    // "sourceMap": true,                           /* Generates corresponding '.map' file. */
+    // "outFile": "./",                             /* Concatenate and emit output to single file. */
+    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "composite": true,                           /* Enable project compilation */
+    // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
+    // "removeComments": true,                      /* Do not emit comments to output. */
+    // "noEmit": true,                              /* Do not emit outputs. */
+    // "importHelpers": true,                       /* Import emit helpers from 'tslib'. */
+    // "downlevelIteration": true,                  /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    // "isolatedModules": true,                     /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+
+    /* Strict Type-Checking Options */
+    "strict": true,                                 /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                       /* Raise error on expressions and declarations with an implied 'any' type. */
+    // "strictNullChecks": true,                    /* Enable strict null checks. */
+    // "strictFunctionTypes": true,                 /* Enable strict checking of function types. */
+    // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
+    // "noImplicitThis": true,                      /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
+    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
+    // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
+    // "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
+
+    /* Module Resolution Options */
+    // "moduleResolution": "node",                  /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    // "baseUrl": "./",                             /* Base directory to resolve non-absolute module names. */
+    // "paths": {{c}}},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "typeRoots": [],                             /* List of folders to include type definitions from. */
+    // "types": [],                                 /* Type declaration files to be included in compilation. */
+    // "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,                        /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,                    /* Do not resolve the real path of symlinks. */
+    // "allowUmdGlobalAccess": true,                /* Allow accessing UMD globals from modules. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                            /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                               /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,                     /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                       /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
+
+    /* Advanced Options */
+    "skipLibCheck": true,                           /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
+  }
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <h4 style="color: white;">x</h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 
     <div class="tab-pane fade" id="pills-tpscript11" role="tabpanel" aria-labelledby="pills-tpscript11-tab">x</div>

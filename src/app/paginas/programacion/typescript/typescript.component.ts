@@ -19,3 +19,5 @@ export class TypescriptComponent implements OnInit {
   c=`{`;
   co=`<`;
 }
+
+

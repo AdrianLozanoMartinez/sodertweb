@@ -23,7 +23,7 @@
     /* Basic Options */
     // "incremental": true,                         
     <b>"target": "es6",</b> </small> //Cambiamos al es6 para que acepte las promesas                             
-    <small>.....    //Y el resto de código</small></pre>
+    <small><abbr title="resto de código">...</abbr></small></pre>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 const nombre_promesa <b>= new Promise (( resolve, reject )</b> => {{c}}
 
     setTimeout(() => {{c}}
-        <b>resolve</b> ('Se terminó el timeout, en 1 seg');  //O usamos <b>reject</b>. Acaba después del mensaje Fin
+        <abbr title="O usamos reject. Acaba después del mensaje Fin"><b>resolve</b></abbr> ('Se terminó el timeout, en 1 seg');
     }, 1000);
 
 });
@@ -62,32 +62,32 @@ nombre_promesa<b>.then (mensaje_No_Error => console.log( mensaje_No_Error ))
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text">const <b>nombre_funcion = ( nombre_parametro: number ): Promise{{co}}number></b> => {{c}}  //Definimos que es una promesa del tipo que usemos, en este caso estamos trabajando en el catch y then con números, por ello es number
+                    <pre class="card-text">const <b>nombre_funcion = ( nombre_parametro: number ): <abbr title="Definimos que es una promesa del tipo que usemos, en este caso estamos trabajando en el catch y then con números, por ello es number">Promise</abbr>{{co}}number></b> => {{c}}
 
 
-      <b>let variable_inicial = 1000;</b>                                   //Valor <b>inicial</b> que <b>comparamos</b> con el valor <b>introducido</b> (nombre_parametro)
+      <b>let <abbr title="Valor inicial que comparamos con el valor introducido (nombre_parametro)">variable_inicial</abbr> = 1000;</b>
   
 
-      return <b>new Promise ( (resolve, reject ) => {{c}}</b>               //Creamos promesa para usar then/catch y función de flechas para coger valores sin interferencias
+      return <b>new <abbr title="Creamos promesa para usar then/catch y función de flechas para coger valores sin interferencias">Promise</abbr> ( (<abbr title="Resultado positivo">resolve</abbr>, <abbr title="Resultado negativo">reject</abbr> ) => {{c}}</b>
           
 
-          if ( <b>nombre_parametro > variable_inicial</b> ){{c}}            //Si el valor introducido es mayor que el inicial, entra en el if
-              <b>reject</b> ('No hay suficientes fondo');                   //Devuelve el mensaje cuando es llamado por el <b>.catch</b>
-          }else{{c}}                                                        //Si el valor introducido es menor o igual que el inicial, entra en el else
+          <abbr title="Si el valor introducido es mayor que el inicial, entra en el if">if</abbr> ( <b>nombre_parametro > variable_inicial</b> ){{c}}
+            <abbr title="Devuelve el mensaje cuando es llamado por el .catch"><b>reject</b></abbr> ('No hay suficientes fondo');
+          }<abbr title="Si el valor introducido es menor o igual que el inicial, entra en el else">else</abbr>{{c}}
               // <b>variable_inicial = variable_inicial - nombre_parametro;</b>    //Opción compleja
                  <b>variable_inicial -= nombre_parametro;</b>               //Opción reducida (ambas hacen lo mismo)
-                 <b>resolve (variable_inicial);</b>                         //Devuelve el resultado de la resta para mostrarlo cuando es llamado por el <b>.then</b>                   
+                 <b><abbr title="Devuelve el resultado de la resta para mostrarlo cuando es llamado por el .then  ">resolve</abbr> (variable_inicial);</b>              
           }
 
 
       });
   }
   
-  nombre_funcion ( <b>200</b> )                                                                        //Ponemos el precio que <b>entrará como nombre_parametro</b> en el if o else
-                        <b>.then ( correcto => console.log(`Me queda ${{c}} correcto }`))</b>        //Resultado <b>.then</b> -> <b>correcto</b> (U otro nombre), manda mensaje con el resultado definido en el <b>else</b>
-                                                                                                    //Al poner el <b>tipo</b> arriba de la <b>promesa</b>, nos permite elegir <b>funciones</b> a ejecutar <b>en las variables</b>
-                        //<b>.catch ( error => console.warn( error ))</b>                               //Resultado <b>.catch</b> -> <b>error</b> (U otro nombre), manda mensaje error definido en el <b>if</b>
-                        <b>.catch ( console.warn)</b>                               //Resultado <b>.catch</b> -> <b>error</b> (U otro nombre), manda mensaje error definido en el <b>if</b></pre>
+  nombre_funcion ( <abbr title="Ponemos el precio que entrará como nombre_parametro en el if o else"><b>200</b></abbr> )
+                        <b><abbr title="Resultado .then -> correcto (U otro nombre), manda mensaje con el resultado definido en el else">.then</abbr> ( correcto => console.log(`Me queda ${{c}} <abbr title="Al poner el tipo arriba de la promesa, nos permite elegir funciones a ejecutar en las variables. Ej. nombrevariable.nombreparametro">correcto</abbr> }`))</b>
+
+                        //<b><abbr title="Resultado .catch ->error (U otro nombre), manda mensaje error definido en el if">.catch</abbr> ( error => console.warn( error ))</b>
+                        <b><abbr title="Resultado .catch ->error (U otro nombre), manda mensaje error definido en el if">.catch</abbr> ( console.warn)</b></pre>
                 </div>
             </div>
         </div>

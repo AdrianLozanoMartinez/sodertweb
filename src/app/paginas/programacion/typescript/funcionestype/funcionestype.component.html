@@ -91,9 +91,9 @@ console.log(`${{c}}getNombre_Variable()}`);</pre>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text">function nombre_funcion( <b>nombre_parametro_obligatorio: string, 
+                    <pre class="card-text">function <abbr title="Orden de los parámetros: 1º Obligatorios, 2º Opcionales, 3º Por defectos">nombre_funcion</abbr>( <b>nombre_parametro_obligatorio: string, 
                             nombre_parametro_opcional?: string, 
-                            nombre_parametro_por_defecto: string = 'texto_por-defecto'</b> ) {{c}}    //Orden de los parámetros: 1º Obligatorios, 2º Opcionales, 3º Por defectos
+                            nombre_parametro_por_defecto: string = 'texto_por-defecto'</b> ) {{c}}
 
             console.log (`<b>${{c}} nombre_parametro_obligatorio }</b>, <b>${{c}} nombre_parametro_opcional</b> } y <b>${{c}} nombre_parametro_por_defecto</b> }`);
 }
@@ -102,7 +102,7 @@ console.log(`${{c}}getNombre_Variable()}`);</pre>
 O
 <b>nombre_funcion ('texto-que-ponemos-al-instante', 'texto-que-sustituye-el-por-fecto');</b>     
 O
-<b>nombre_funcion ('texto-que-ponemos-al-instante', 'texto-opcional', 'texto-que-sustituye-el-por-fecto');</b> -> //Orden igual que los parámetros de arriba</pre>
+<b> <abbr title="Orden igual que los parámetros de arriba">nombre_funcion</abbr>('texto-que-ponemos-al-instante', 'texto-opcional', 'texto-que-sustituye-el-por-fecto');</b></pre>
                 </div>
             </div>
         </div>
@@ -120,10 +120,10 @@ O
                         nombre_parametro_opcional?: string, 
                         nombre_parametro_por_defecto: string = 'texto_por-defecto' ) {{c}}   
 
-                    <b>if ( nombre_parametro_opcional ) {{c}}</b>       //Si se cumple lo que hay dentro del paréntesis muestra lo que hay dentro
+                    <b><abbr title="Si se cumple lo que hay dentro del paréntesis muestra lo que hay dentro">if</abbr> ( nombre_parametro_opcional ) {{c}}</b>
                         <b>console.log (`${{c}} nombre_parametro_obligatorio }, ${{c}} nombre_parametro_opcional } y ${{c}} nombre_parametro_por_defecto }`);
                     }
-                    else{{c}}</b>                                           //Si no se cumple la condición del if muestra lo que hay dentro
+                    <abbr title="Si no se cumple la condición del if muestra lo que hay dentro">else</abbr>{{c}}</b>
                         <b>console.log (`${{c}} nombre_parametro_obligatorio } y ${{c}} nombre_parametro_opcional }`);
                     }</b>
                          
@@ -159,13 +159,13 @@ O
 	nombre_parametro2: 'Texto2'
     }
 
-	const nombre_funcion = ({{c}} nombre_parametro, nombre_parametro2 }: any ) => {{c}}</b>  //Metemos los parámetros de arriba, no es necesario especificar porque las => traspasa y no es necesario
+	const <abbr title="Metemos los parámetros de arriba, no es necesario especificar porque las => traspasa y no es necesario">nombre_funcion</abbr> = ({{c}} nombre_parametro, nombre_parametro2 }: any ) => {{c}}</b>
 		
         <b>console.log (nombre_parametro);
         console.log (nombre_parametro2);
      }
 
-     nombre_funcion (nombre_variable);</b>  //Llamamos a la función que a su vez coge los parámetros de la variable de arriba, por ello se llama a la variable</pre>
+     <abbr title="Llamamos a la función que a su vez coge los parámetros de la variable de arriba, por ello se llama a la variable">nombre_funcion</abbr>(nombre_variable);</b></pre>
                 </div>
             </div>
         </div>
@@ -179,11 +179,11 @@ O
                         nombre_parametro: 'Texto',
                         nombre_funcion() {{c}}
                         
-                        <b>setTimeout ( () => {{c}}</b>   //La flecha hace que el this. se traspase y pueda coger el valor de arriba del parámetro (nombre_parametro)
+                        <b>setTimeout ( () <abbr title="La flecha hace que el this. se traspase y pueda coger el valor de arriba del parámetro (nombre_parametro)">=></abbr> {{c}}</b>
                         
                         console.log (`${{c}} this.nombre_parametro } en un tiempo de 1000`);    
                         
-                        <b>}, 1000 );</b>            //Tiempo que tarda antes de ejecutarse
+                        <b>}, <abbr title="Tiempo que tarda antes de ejecutarse">1000</abbr> );</b>
                     }
                 }
                 
@@ -203,7 +203,7 @@ O
     console.log (nombre_funcion ('Texto') );  -> Sale TEXTO<hr><h5>Cálculo</h5>
     const variable_nombre = ( nombre_parametro1:number, nombre_parametro2:number ) => <b>nombre_parametro1 + nombre_parametro2;</b>
     
-    console.log(variable_nombre(2,4));  //Ponemos los números que queremos que sume</pre>
+    console.log(variable_nombre(<abbr title="Ponemos los números que queremos que sume">2,4</abbr>));</pre>
             </div>
         </div>
     </div>
