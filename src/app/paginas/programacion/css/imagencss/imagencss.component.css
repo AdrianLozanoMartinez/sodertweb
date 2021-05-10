@@ -1,0 +1,517 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+body{
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 50px, 75px;
+    background-attachment: fixed;           
+}
+
+#piedra{
+    background: yellow;     /*La imagen debe ser PNG no JPG para que se vea el fondo*/
+    border: blue 5px solid;
+}
+
+#paddingbox{
+    background-image: url("../../../../../assets/imagenes/01.jpg");  
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: padding-box;   
+    background-repeat: no-repeat;                                                  
+}
+
+#borderbox{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: border-box;   
+    background-repeat: no-repeat;                                           
+}
+
+#contentbox{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: content-box;  
+    background-repeat: no-repeat;                                                 
+}
+
+#initial{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: initial; 
+    background-repeat: no-repeat;                                               
+}
+
+#inherit{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: inherit; 
+    background-repeat: no-repeat;                                                
+}
+
+
+
+#paddingbox2{
+    background-image: url("../../../../../assets/imagenes/01.jpg");  
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-origin: padding-box;  
+    background-repeat: no-repeat;                                                 
+}
+
+#borderbox2{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-origin: border-box; 
+    background-repeat: no-repeat;                                             
+}
+
+#contentbox2{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-origin: content-box;
+    background-repeat: no-repeat;                                                   
+}
+
+#initial2{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-origin: initial;
+    background-repeat: no-repeat;                                                
+}
+
+#inherit2{
+    background-image: url("../../../../../assets/imagenes/01.jpg"); 
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-origin: inherit; 
+    background-repeat: no-repeat;                                                
+}
+
+#opaco{
+    height: 200px;
+    width: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-position: top left, bottom left;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    opacity: 1;                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#casiopaco{
+    height: 200px;
+    width: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-position: top left, bottom left;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    opacity: 0.8;                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#medio{
+    height: 200px;
+    width: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-position: top left, bottom left;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    opacity: 0.5;                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#casitranslucido{
+    height: 200px;
+    width: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-position: top left, bottom left;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    opacity: 0.2;                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#translucido{
+    height: 200px;
+    width: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-position: top left, bottom left;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    opacity: 0;                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#tamano{
+    width: 100px;                   /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+    height: 100px;                  /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 25px, 25px;    /*Tamaño de la imagen, depende del width y height. Puede ser px o %. Posición x (Horizontal) y (vertical)*/
+}
+
+#tamano2{
+    width: 100px;                   /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+    height: 100px;                  /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%, 25px;    /*Tamaño de la imagen, depende del width y height. Puede ser px o %. Posición x (Horizontal) y (vertical)*/
+}
+
+.borde{
+    border: solid rgb(9, 192, 168) 2px;
+}
+
+
+#left{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 25px, 25px;    
+}
+
+
+#right{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 25px, 25px;    
+}
+
+#top{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 25px, 25px;    
+}
+
+
+#bottom{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 25px, 25px;    
+}
+
+
+#center{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px, 25px;    
+}
+
+
+#lefttop{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 25px, 25px;    
+}
+
+#righttop{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 25px, 25px;    
+}
+
+
+#leftbottom{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 25px, 25px;    
+}
+
+#rightbottom{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 25px, 25px;    
+}
+
+#leftcenter{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px, 25px;    
+}
+
+#rightcenter{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 25px, 25px;    
+}
+
+#topcenter{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 25px, 25px;    
+}
+
+#bottomcenter{
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 25px, 25px;    
+}
+
+
+
+#norepetir{
+    width: 100px;
+    height: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 25px, 25px;
+}
+
+#repetiry{
+    width: 100px;                       
+    height: 300px;                      /*Depende el tamaño del div depende que se repita más o menos en vertical (y)*/
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: repeat-y;        /*Repetir en vertical*/
+    background-position: right top;
+    background-size: 25px, 25px;
+}
+
+#repetirx{
+    width: 100px;                       /*Depende el tamaño del div depende que se repita más o menos en horizontal (x)*/
+    height: 300px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: repeat-x;        /*Repetir en horizontal*/
+    background-position: right top;
+    background-size: 25px, 25px;
+}
+
+
+.fixed{
+    width: 500px;
+    height: 500px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    background-attachment: fixed;           /*No se desplaza a movernos por la página, al poner width y height vemos un cuadro que vemos partes del fondo al movernos*/
+}
+
+.scroll{
+    width: 500px;
+    height: 500px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 50px, 75px;
+    background-attachment: scroll;          /*Se desplaza con la página*/
+}
+
+#index{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    z-index: 1;                             /*Texto delante y la imagen atras, más grande negativo más atras*/
+}
+
+
+#ocultar{
+    width: 200px;
+    height: 200px;
+    visibility: hidden;                     /*La imagen se oculta del todo en la visual de html - Se comprueba en la consola del navegador (Ctrl + i)*/
+}
+
+#desaparecer{
+    width: 200px;
+    height: 200px;
+    display:none;                           /*La imagen desaparece pero no del todo del html - Se comprueba en la consola del navegador (Ctrl + i)*/
+}
+
+#static{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    position: static;                      /*Se coloca siguiendo los patrones de la web: top, right, left, bottom*/
+    background-position: left;
+    color: deeppink;
+}
+
+#absolute{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    position: absolute;                     /*Depende de la posicion del padre*/
+    color: deeppink;
+
+}
+
+#fixed{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    position: fixed;                        /*Siempre mismo sitio aunque se haga scroll*/
+    color: deeppink;
+    right: 0;
+    bottom: 0;
+}
+
+#relative{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    position: relative;                     /*Se usa top, right, left, bottom, para colocarlo, se va donde digamos*/
+    color: deeppink;
+    left: 100px;
+}
+
+#float{
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    color: deeppink;
+    float: left;                           /*Toma valores como left o right*/
+}
+
+
+
+
+
+#sobre2imagenes{
+    height: 200px;                                         /*Ha sido necesario para que se vea las imágenes, posiblemente width en otra ocasión o ambos*/
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  /*2 imágenes*/
+    background-position: top right, bottom left;          /*bottom left, bottom right, bottom center, top left, top right, top center, right, left, center, top, bottom*/
+                        /*1º Imagen, 2º Imagen*/
+    background-size: contain, 500px 400px;                /*Tamaño y ajuste sobre celda*/
+                 /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+                    /*1º Imagen, 2º Imagen*/
+    background-origin: padding-box;                       /*Como queremos que sea el fondo por dentro*/
+    background-clip: border-box;                          /*Como queremos que sea el fondo por fuera*/
+    opacity: 0.5;                                         /*Opaco/translucido de ambas imágenes. 0...0.5...1*/
+}
+
+
+#contain1{
+    width: 200px;
+    height: 200px;                                         
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+    background-position: top right, bottom left;   
+    background-size: 200px 100px, contain;                /*Contain: Ajusta al tamaño de la celda*/
+                    /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+    background-origin: padding-box;                       
+    background-clip: border-box;                          
+    opacity: 0.5;                                         
+}
+
+
+#cover1{
+    width: 200px;
+    height: 200px;                                         
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+    background-position: top right, bottom left;   
+    background-size: cover, 200px 100px;                /*Cover: Se deja a su forma original, lo cubre todo*/
+                /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+    background-origin: padding-box;                       
+    background-clip: border-box;                          
+    opacity: 0.5;                                         
+}
+
+#contain2{
+    width: 200px;
+    height: 200px;                                         
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+    background-position: top right, bottom left;   
+    background-size: contain, 200px 100px;                /*Contain: Ajusta al tamaño de la celda*/
+                 /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+    background-origin: padding-box;                       
+    background-clip: border-box;                          
+    opacity: 0.5;                                         
+}
+
+
+#cover2{
+    width: 200px;
+    height: 200px;                                         
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+    background-position: top right, bottom left;   
+    background-size: 200px 100px, Cover;                /*Cover: Se deja a su forma original, lo cubre todo*/
+                    /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+    background-origin: padding-box;                       
+    background-clip: border-box;                          
+    opacity: 0.5;                                         
+}
+
+#tamano{
+    width: 200px;
+    height: 200px;                                         
+    background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+    background-position: top right, bottom left;   
+    background-size: 200px, 100px;                /*Especifica el tamaño de cada imagen*/
+                /*1º Imagen, 2º Imagen*/
+    background-repeat: repeat, no-repeat;
+    background-origin: padding-box;                       
+    background-clip: border-box;                          
+    opacity: 0.5;                                         
+} 

@@ -1,0 +1,11 @@
+<div class="card-columns">
+    <div class="card" *ngFor="let item of items | async">
+                  <!--*ngFor="let item of items | async": Cogido de angular/firebase. Realiza un for 
+                                                          para ir llamando cada 1 de las imágenes-->
+        <img class="card-img-top" [src]="item.url">
+                             <!-- [src]="item.url": Llama para mostrar las imagenes -->
+        <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+        </div>
+    </div>
+</div>

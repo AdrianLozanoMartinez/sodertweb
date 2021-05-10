@@ -1,0 +1,251 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-displayboot-tab" data-toggle="pill" href="#pills-displayboot" role="tab" aria-controls="pills-displayboot" aria-selected="true" style="color: black;">Ajuste<br>al nombre</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-displayboot0-tab" data-toggle="pill" href="#pills-displayboot0" role="tab" aria-controls="pills-displayboot0" aria-selected="false" style="color: black;">Ajusta nombre<br>según pantalla</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-displayboot1-tab" data-toggle="pill" href="#pills-displayboot1" role="tab" aria-controls="pills-displayboot1" aria-selected="false" style="color: black;">Visible<br>Invisible</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-displayboot2-tab" data-toggle="pill" href="#pills-displayboot2" role="tab" aria-controls="pills-displayboot2" aria-selected="false" style="color: black;">Overflow<br>en Css</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-displayboot3-tab" data-toggle="pill" href="#pills-displayboot3" role="tab" aria-controls="pills-displayboot3" aria-selected="false" style="color: black;">Posición</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-displayboot" role="tabpanel" aria-labelledby="pills-displayboot-tab">
+
+      
+        <u>Ajusta al texto</u>
+        <br>
+        <div class="d-inline bg-success">D-inline: Se ajusta al nombre escrito</div>
+        <br>
+
+        <div class="card-group">
+          <div class="card text-dark m-3" id="lila2">
+              <div class="card-body" id="lila2">
+                <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            {{co}}/head>                                                                                       
+            {{co}}body>    
+                <b>
+                  {{co}}div class="d-inline bg-success">D-inline: Se ajusta al nombre escrito{{co}}/div>
+              </b>                                                                                                                                                                   
+                  {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                  {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                  {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+              </div>
+            </div>
+      </div>
+
+
+        <u>No ajusta al texto</u>
+        <br>
+        <div class="d-block bg-warning">D-block: No se ajusta al nombre escrito, ocupa toda la fila del navegador</div>
+<br>
+
+<div class="card-group">
+  <div class="card text-dark m-3" id="lila2">
+      <div class="card-body" id="lila2">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head>                                                                                        
+        {{co}}meta charset="UTF-8">                                                                    
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+        {{co}}title>Título en pestaña de la web{{co}}/title>
+        {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{co}}/head>                                                                                       
+    {{co}}body>    
+        <b>
+          {{co}}div class="d-block bg-warning">D-block: No se ajusta al nombre escrito, ocupa toda la fila del navegador{{co}}/div>
+      </b>                                                                                                                                                                   
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+    {{co}}/body>                                                                                       
+{{co}}/html></pre>
+      </div>
+    </div>
+</div>
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-displayboot0" role="tabpanel" aria-labelledby="pills-displayboot0-tab">
+  
+      
+      <div class="d-inline d-lg-block bg-danger">D-inline d-lg-block: Tamaño según el tamaño de pantalla</div>  
+
+      <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="d-inline d-lg-block bg-danger">D-inline d-lg-block: Tamaño según el tamaño de pantalla{{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-displayboot1" role="tabpanel" aria-labelledby="pills-displayboot1-tab">
+  
+      
+<div class="d-inline bg-primary visible">Visible: Solo especifica que es visible</div>
+<div class="d-inline bg-primary invisible">Invisible: Desaparece del navegador pero aparece en el editor del navegador</div>
+<div class="d-none bg-primary">None: Desaparece del navegador y del editor del navegador</div>
+    
+
+<div class="card-group">
+  <div class="card text-dark m-3" id="lila2">
+      <div class="card-body" id="lila2">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head>                                                                                        
+        {{co}}meta charset="UTF-8">                                                                    
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+        {{co}}title>Título en pestaña de la web{{co}}/title>
+        {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{co}}/head>                                                                                       
+    {{co}}body>    
+        <b>
+          {{co}}div class="d-inline bg-primary visible">Visible: Solo especifica que es visible{{co}}/div>
+          {{co}}div class="d-inline bg-primary invisible">Invisible: Desaparece del navegador pero aparece en el editor del navegador{{co}}/div>
+          {{co}}div class="d-none bg-primary">None: Desaparece del navegador y del editor del navegador{{co}}/div>
+      </b>                                                                                                                                                                   
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+    {{co}}/body>                                                                                       
+{{co}}/html></pre>
+      </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-displayboot2" role="tabpanel" aria-labelledby="pills-displayboot2-tab">
+
+
+<div id="displayaConBarras">
+      <div class="d-inline bg-secondary">Overflow en archivo Css: Debemos crear un div con id (id="displayaConBarras") y dentro de este un display (d-inline). Para que se vea el texto reducido entre barras y con display (rodeado con colores)</div>
+</div>
+
+<div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                    <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">
+{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head>                                                                                        
+          {{co}}meta charset="UTF-8">                                                                    
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+          {{co}}title>Título en pestaña de la web{{co}}/title>
+          {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+      {{co}}/head>                                                                                       
+      {{co}}body>  
+          <b>
+            {{co}}div id="displayaConBarras">
+              {{co}}div class="d-inline bg-secondary">Overflow en archivo Css: Debemos crear un div con id (id="displayaConBarras") y dentro de este un display (d-inline). Para que se vea el texto reducido entre barras y con display (rodeado con colores){{co}}/div>
+            {{co}}/div>
+          </b>
+                                                                                                                                                                              
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+      {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+                    </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#displayaConBarras{{c}}
+  width: 100px;
+  height: 100px;
+  overflow: auto; 
+}</pre>
+                </div>
+              </div>
+          </div>
+<br>
+    </div>
+
+<div class="tab-pane fade" id="pills-displayboot3" role="tabpanel" aria-labelledby="pills-displayboot3-tab">
+ 
+  
+    <div class="d-inline bg-info position-static">Posicion static</div>
+    <br>
+    <div class="d-inline bg-info position-relative">Posicion relative</div>
+    <br>
+    <div class="d-inline bg-info position-absolute">Posicion absolute</div>
+    <br>
+    <div class="d-inline bg-info position-fixed">Posicion fixed Posición fija</div>
+    <br>
+    <div class="d-inline bg-info position-sticky">Posicion sticky</div>
+
+
+    <div class="card-group">
+      <div class="card text-dark m-3" id="lila2">
+          <div class="card-body" id="lila2">
+            <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+        {{co}}head>                                                                                        
+            {{co}}meta charset="UTF-8">                                                                    
+            {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+            {{co}}title>Título en pestaña de la web{{co}}/title>
+            {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {{co}}/head>                                                                                       
+        {{co}}body>    
+            <b>
+              {{co}}div class="d-inline bg-info position-static">Posicion static{{co}}/div>
+              {{co}}br>
+              {{co}}div class="d-inline bg-info position-relative">Posicion relative{{co}}/div>
+              {{co}}br>
+              {{co}}div class="d-inline bg-info position-absolute">Posicion absolute{{co}}/div>
+              {{co}}br>
+              {{co}}div class="d-inline bg-info position-fixed">Posicion fixed Posición fija{{co}}/div>
+              {{co}}br>
+              {{co}}div class="d-inline bg-info position-sticky">Posicion sticky{{co}}/div>
+          </b>                                                                                                                                                                   
+              {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+              {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+              {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+        {{co}}/body>                                                                                       
+    {{co}}/html></pre>
+          </div>
+        </div>
+    </div>
+
+
+</div>
+
+  </div>

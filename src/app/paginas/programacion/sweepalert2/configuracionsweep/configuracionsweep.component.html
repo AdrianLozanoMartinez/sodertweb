@@ -1,0 +1,70 @@
+<b><a href="https://sweetalert2.github.io/#configuration">Configurar Sweetalert2</a></b>
+      <pre><b>import Swal from 'sweetalert2'</b>
+        
+        <b>Dentro de una función o del ngOnInit(){{c}}</b>
+        <b>Swal.fire({{c}}</b>
+          <b>title</b> o <b>titleText</b>: '{{ti}}',                              //'Título' o Código
+          <b>html</b>: '{{ti}}',                                                  //'Código html'
+          <b>text</b>: 'Texto',                                                   //'Texto'
+          <b>icon</b>: 'warning' o 'error' o 'success' o 'info' o 'question',     //'Icono'
+          <b>iconHtml</b>: '{{fon}}',              //Debe ir también el <b>icon</b> anterior. 'Icono' -> Lo que pongamos en html Código
+          <b>footer</b>: 'Título' o '{{t}}',                                      //'Título' o '{{t}}'
+          <b>toast</b>: true,                                                     //Muestra la ventana más pequeña. Para que funcione (true)
+          <b>timer</b>: Swal.getTimerLeft(), Swal.stopTimer(), Swal.resumeTimer(), Swal.toggleTimer(), Swal.isTimerRunning() and Swal.increaseTimer(): 'No me funciona por ahora',
+          <b>inputValue</b>:                                                      /*No se aún pero pone que coge los datos. Según pone en la web: Ingrese el valor inicial del 
+                                                                                  campo. Si el tipo de entrada es checkbox, inputValue representará el estado marcado. Si el 
+                                                                                  tipo de entrada es texto, correo electrónico, número, teléfono o área de texto, se puede 
+                                                                                  aceptar una promesa como inputValue*/
+          <b>width</b>: 'númeropx' o 'número'%,                                   //Tamaño del cuadro o imagen. Por defecto 32rem
+          <b>padding</b>: 'númeropx' o 'número'%,                                 //Margen del cuadro o imagen. Por defecto 1.25rem
+          <b>background</b>: 'color en inglés' o '#ColorHex',                     //Fondo del cuadro. Por defecto #fff
+          <b>allowOutsideClick</b> false,                                         //No se pueda cerrar al <b>pulsar fuera de la ventana</b>
+          <b>allowEscapeKey</b> false,                                            //No se pueda cerrar al pulsar <b>ESC</b>
+          <b>allowEnterKey</b> false,                                             //No se pueda cerrar al pulsar <b>Espacio</b> o <b>ESC</b>
+          <b>showConfirmButton</b> true o false,                                  //true (Ver botón de confirmación), false (Oculta botón de confirmación)
+          <b>showCancelButton</b> true o false,                                   //true (Ver botón de cancelación), false (Oculta botón de cancelación)
+          <b>confirmButtonText</b> 'Texto del botón',
+          <b>cancelButtonText</b> 'Texto del botón',
+          <b>confirmButtonColor</b> Color del botón de confirmación,              //'color en inglés' o '#ColorHex', Por defecto #3085d6
+          <b>cancelButtonColor</b> Color del botón de Cancelación,                //'color en inglés' o '#ColorHex', Por defecto #aaa
+          <b>buttonsStyling</b> true o false,                                     //true (Botón bootstrap) false(Botón normal),
+          <b>showCloseButton</b> Icono                                            //(x), para cerrar (Arriba a la derecha)
+          <b>closeButtonHtml</b> 'Texto icono de cerrar' o código html            //(Ejemplo: {{x}}) -> aparece -> X
+          <app-input></app-input><app-position></app-position><app-grow></app-grow><app-imagenurl></app-imagenurl>
+          <b>showClass</b>: 'No me funciona por ahora',
+          <b>hideClass</b>: 'No me funciona por ahora',
+          <b>backdrop</b>: 'No me funciona por ahora',
+          <b>target</b>: 'No me funciona por ahora',
+          <b>customClass</b>: 'No me funciona por ahora',
+          <b>timerProgressBar</b>: 'No me funciona por ahora',
+          <b>heightAuto</b>: 'No me funciona por ahora',
+          <b>stopKeydownPropagation</b>: 'No me funciona por ahora',
+          <b>keydownListenerCapture</b>: 'No me funciona por ahora)',
+          <b>confirmButtonAriaLabel</b>: 'No me funciona por ahora',
+          <b>cancelButtonAriaLabel</b>: 'No me funciona por ahora',
+          <b>reverseButtons</b>: 'No me funciona por ahora',
+          <b>focusConfirm</b>: 'No me funciona por ahora',
+          <b>focusCancel</b>: 'No me funciona por ahora',
+          <b>closeButtonAriaLabel</b>: 'No me funciona por ahora',
+          <b>showLoaderOnConfirm</b>: 'No me funciona por ahora',
+          <b>scrollbarPadding</b>: 'No me funciona por ahora',
+          <b>preConfirm</b>: 'No me funciona por ahora',
+          <b>inputPlaceholder</b>: 'No me funciona por ahora',
+          <b>inputAutoTrim</b>: 'No me funciona por ahora',
+          <b>inputAttributes</b>: 'No me funciona por ahora',
+          <b>inputValidator</b>: 'No me funciona por ahora',
+          <b>validationMessage</b>: 'No me funciona por ahora',
+          <b>progressSteps</b>: 'No me funciona por ahora',
+          <b>currentProgressStep</b>: 'No me funciona por ahora',
+          <b>progressStepsDistance</b>: 'No me funciona por ahora',
+          <b>onBeforeOpen</b>: 'No me funciona por ahora',
+          <b>onOpen</b>: 'No me funciona por ahora',
+          <b>onRender</b>: 'No me funciona por ahora',
+          <b>onClose</b>: 'No me funciona por ahora',
+          <b>onAfterClose</b>: 'No me funciona por ahora',
+          <b>onDestroy</b>: 'No me funciona por ahora',
+      <b>})
+      }
+      </b></pre>
+  
+      <button class="btn btn-dark m-2" [routerLink]="['/sweepalert2']">Atras</button>

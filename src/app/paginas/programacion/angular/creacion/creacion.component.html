@@ -1,0 +1,360 @@
+<h6><u><b>Angular - Creación</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-creacionangular-tab" data-toggle="pill" href="#pills-creacionangular" role="tab" aria-controls="pills-creacionangular" aria-selected="true" style="color: black;">Solucionar<br>errores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-creacionangular0-tab" data-toggle="pill" href="#pills-creacionangular0" role="tab" aria-controls="pills-creacionangular0" aria-selected="false" style="color: black;">Proyecto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-creacionangular1-tab" data-toggle="pill" href="#pills-creacionangular1" role="tab" aria-controls="pills-creacionangular1" aria-selected="false" style="color: black;">Componentes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-creacionangular2-tab" data-toggle="pill" href="#pills-creacionangular2" role="tab" aria-controls="pills-creacionangular2" aria-selected="false" style="color: black;">App.routing.ts<br><small>Poder enlazar páginas</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-creacionangular3-tab" data-toggle="pill" href="#pills-creacionangular3" role="tab" aria-controls="pills-creacionangular3" aria-selected="false" style="color: black;">App.module.ts<br><small>Centro de unión<br>componentes/directivas/servicios...</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-creacionangular4-tab" data-toggle="pill" href="#pills-creacionangular4" role="tab" aria-controls="pills-creacionangular4" aria-selected="false" style="color: black;">Ya creados<br>Añadir</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-creacionangular5-tab" data-toggle="pill" href="#pills-creacionangular5" role="tab" aria-controls="pills-creacionangular5" aria-selected="false" style="color: black;">Servicios.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-creacionangular6-tab" data-toggle="pill" href="#pills-creacionangular6" role="tab" aria-controls="pills-creacionangular6" aria-selected="false" style="color: black;">Model.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-creacionangular7-tab" data-toggle="pill" href="#pills-creacionangular7" role="tab" aria-controls="pills-creacionangular7" aria-selected="false" style="color: black;">Guard.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-creacionangular8-tab" data-toggle="pill" href="#pills-creacionangular8" role="tab" aria-controls="pills-creacionangular8" aria-selected="false" style="color: black;">Directiva.ts</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/angular']">Atras</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-creacionangular" role="tabpanel" aria-labelledby="pills-creacionangular-tab">
+<ul>
+    <li>Al ejecutar -> <b>PoweShell</b> como <u>administrador</u> -> <b>Set-ExecutionPolicy Unrestricted</b> -> <u>s</u> (si) -> intro</li>
+</ul>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-creacionangular0" role="tabpanel" aria-labelledby="pills-creacionangular0-tab">
+<ul>
+    <li>Instalar -> <b>ng new</b> Nombre_proyecto (Incluye node_modules) -> <u>routing</u> (n (No queremos que sea automático) o s (Se haga automático todo)) -> <u>CSS</u></li>
+    <li>Ver detalles instalación -> <b>npm audit</b> (<u>Ejecutar dentro del proyecto</u>)</li>
+</ul>
+    </div>
+
+  <div class="tab-pane fade" id="pills-creacionangular1" role="tabpanel" aria-labelledby="pills-creacionangular1-tab">
+<ul>
+    <li><b>Crear</b>:
+        <ul>
+            <li><b>ng generate component</b> nombre_carpeta/nombre_componente</li>
+            <li><b>ng g c</b> nombre_carpeta/nombre_componente</li>
+        </ul>
+    </li>
+    <br>
+        <li><b>Estructura interna</b>:
+            <ul>
+        <li><b>Css</b>: Estilo</li>
+        <li><b>Html</b>: Visual</li>
+        <li><b>Ts</b> (Typescript):
+                <ul>
+                    <li><b>Import</b>: Para <u>usar</u> servicios, interface, otros <u>dentro del componente</u></li>
+                    <li><b>Decorador (@Component)</b>: Usar decoradores (<u>stylos</u> y otros) <u>en todo el componente</u></li>
+                    <li><b>Export</b>: Para poder <u>importar en otro componente</u>... Dentro de él declaramos variables, constructor y funciones</li>
+                    <li><b>Constructor</b>: Dentro de él declaramos variables, funciones... <u>1º en ejecutarse</u></li>
+                    <li><b>ngOnInit</b>: Dentro de él declaramos variables, funciones... <u>2º en ejecutarse</u></li>
+                </ul>
+        <li><b>Spec.ts</b>: Test de typescript</li>
+            </ul>
+    </li>
+
+</ul>
+</div>
+
+  <div class="tab-pane fade" id="pills-creacionangular2" role="tabpanel" aria-labelledby="pills-creacionangular2-tab">
+<ul>
+    <li><b>Manual</b>: <u>Botón derecho</u> encima de app -> <u>New File</u> -> ponemos: app.routing.ts<pre>
+        
+<h6><u>Estructura recomendada</u></h6>
+//<u>import -> Copiamos del module los que vayamos a usar en enlaces y botones</u>
+
+//<b>Conexión con app.module.ts - Enlazar páginas</b>
+import {{c}} ModuleWithProviders } from '@angular/core';
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+//<b>Componentes - Automático</b>
+import {{c}} AppComponent } from './app.component';
+
+//Componentes - <b>Páginas añadir después de crearlas</b>
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+
+//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
+
+export const appRoutes: Routes = [
+  //Componentes - Páginas añadir después de crearlas
+  {{c}} path: '', component: HomeComponent },                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
+  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
+  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
+  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  //Componentes - Especiales
+  {{c}} path: 'appcomponente', component: AppComponent },
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+  {{c}} path: '**', component: ErrorComponent},                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+  {{c}} path: '**', component: HomeComponent }                       //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+];
+
+
+//<b>Conexión con app.module.ts - Enlazar páginas</b>
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);
+    </pre></li>
+    <li><b>Automático</b>(No realizado aún): <ul>
+        <li><b>ng g m appRouting</b></li>
+        <li><b>ng generate module appRouting</b></li>
+    </ul></li>
+</ul>
+    </div>
+
+    <div class="tab-pane fade" id="pills-creacionangular3" role="tabpanel" aria-labelledby="pills-creacionangular3-tab">
+<pre>//<u><b>Ya creado</b>. Se <b>añade automáticamente</b> pero se <b>borra manualmente</b></u>
+//<u>Añadimos para sincronizarlo con el app.routing.ts</u>
+
+//Esctructura interna básica:
+
+//Por <b>defecto</b>
+  import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+  
+  import {{c}} AppComponent } from './app.component';
+  
+  //<b>Conexión con app.routing.ts - Enlazar páginas</b>
+  import {{c}} routing, appRoutingProviders } from './app.routing';
+  
+  //Componentes - <b>Páginas</b> añadir después de crearlas
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+  
+  @NgModule({{c}}
+      declarations: [
+        //Por <b>defecto</b>
+        AppComponent,
+        //Componentes - <b>Páginas</b> añadir después de crearlas
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        //Por <b>defecto</b>
+        BrowserModule,
+        //<b>Conexión con app.routing.ts - Enlazar páginas</b>
+        routing
+      ],
+       providers: [
+        //<b>Conexión con app.routing.ts - Enlazar páginas</b>
+        appRoutingProviders
+       ],
+        //Por <b>defecto</b> - Librería
+        bootstrap: [AppComponent]
+   })
+    //Por <b>defecto</b>
+    export class AppModule {{c}} }</pre>
+
+    </div>
+
+  <div class="tab-pane fade" id="pills-creacionangular4" role="tabpanel" aria-labelledby="pills-creacionangular4-tab">
+<ul>
+    <li><b>Index.html</b>: <b>{{base}}</b>: Raíz del proyecto. Se <u>cambia</u> para <u>usarlo</u> en <u>servidores</u> <u>locales</u></li>
+    <li><b>Style.css</b>: Estilo en todo el proyecto</li>
+    <li><b>App.component</b>: <ul>
+        <li><b>Unión</b> de todas las páginas, se pone la <b>llamada</b> de lo que queremos que aparezca <u>{{componente}}</u></li>
+        <li>Para que <b>funcione</b> los <b>enlaces</b>: <u>{{ro}}</u></li>
+        <li><b>Css</b> del component: <u>Menos importante que style.css</u> pero <u>más que</u> los <u>componentes</u> normales</li></ul></li>
+    <li><b>Favicon.ico</b>: Tamaño <u>32x32</u>. <u>Icono</u> de la <u>pestaña</u>. Coger cualquier imagen, ponerle mismo nombre y extensión, luego reemplazarlo</li>
+    <li><b>Assets</b>: <u>Almacen</u> de documento, foto...</li>
+    <li><b>Angular.json</b>: <pre>{{c}}
+"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+"version": 1,
+"newProjectRoot": "projects",
+"projects": {{c}}
+"Sodert": {{c}}
+"projectType": "application",
+"schematics": {{c}}},
+"root": "",
+"sourceRoot": "src",
+"prefix": "app",
+"architect": {{c}}
+  "build": {{c}}
+    "builder": "@angular-devkit/build-angular:browser",
+    "options": {{c}}
+      "outputPath": "dist/Sodert",
+      <b>"index": "src/index.html",</b>
+      "main": "src/main.ts",
+      "polyfills": "src/polyfills.ts",
+      "tsConfig": "tsconfig.app.json",
+      "aot": true,
+      "assets": [
+        <b>"src/favicon.ico",</b>        //<u>Icono de pestaña</u>
+        <b>"src/assets"</b>              //<u>Almacen</u> de archivos
+      ],
+      "styles": [
+        "src/styles.css"
+      ],
+      "scripts": []
+    },
+    "configurations": {{c}}
+      "production": {{c}}
+        "fileReplacements": [
+          {{c}}
+            "replace": "src/environments/<b>environment.ts</b>",        //<u>Desarrollo</u>
+            "with": "src/environments/<b>environment.prod.ts</b>"        //<u>Producción</u>
+          }
+        ],
+        "optimization": true,
+        "outputHashing": "all",
+        "sourceMap": false,
+        "extractCss": true,
+        "namedChunks": false,
+        "extractLicenses": true,
+        "vendorChunk": false,
+        "buildOptimizer": true,
+        "budgets": [
+          {{c}}
+            "type": "initial",
+            "maximumWarning": "2mb",
+            "maximumError": "5mb"
+          },
+          {{c}}
+            "type": "anyComponentStyle",
+            "maximumWarning": "6kb",
+            "maximumError": "10kb"
+          }
+        ]
+      }
+    }
+  },
+  "serve": {{c}}
+    "builder": "@angular-devkit/build-angular:dev-server",
+    "options": {{c}}
+      "browserTarget": "Sodert:build"
+    },
+    "configurations": {{c}}
+      "production": {{c}}
+        "browserTarget": "Sodert:build:production"
+      }
+    }
+  },
+  "extract-i18n": {{c}}
+    "builder": "@angular-devkit/build-angular:extract-i18n",
+    "options": {{c}}
+      "browserTarget": "Sodert:build"
+    }
+  },
+  "test": {{c}}
+    "builder": "@angular-devkit/build-angular:karma",
+    "options": {{c}}
+      "main": "src/test.ts",
+      "polyfills": "src/polyfills.ts",
+      "tsConfig": "tsconfig.spec.json",
+      "karmaConfig": "karma.conf.js",
+      "assets": [
+        "src/favicon.ico",
+        "src/assets"
+      ],
+      <b>"styles": [</b>             //Se <u>añade cuando se instale las extensiones</u>: <b>styles.css, Bootstrap, Font-awesome</b>
+        <b>"src/styles.css"</b>
+      <b>],
+        "scripts": []</b>           //Se <u>añade cuando se instale las extensiones</u>: <b>Bootstrap</b>
+    }
+  },
+  "lint": {{c}}
+    "builder": "@angular-devkit/build-angular:tslint",
+    "options": {{c}}
+      "tsConfig": [
+        "tsconfig.app.json",
+        "tsconfig.spec.json",
+        "e2e/tsconfig.json"
+      ],
+      "exclude": [
+        "**/node_modules/**"
+      ]
+    }
+  },
+  "e2e": {{c}}
+    "builder": "@angular-devkit/build-angular:protractor",
+    "options": {{c}}
+      "protractorConfig": "e2e/protractor.conf.js",
+      "devServerTarget": "Sodert:serve"
+    },
+    "configurations": {{c}}
+      "production": {{c}}
+        "devServerTarget": "Sodert:serve:production"
+      }
+    }
+  }
+}
+}},
+"defaultProject": "Sodert"
+}</pre></li>
+</ul>
+  </div>
+
+  <div class="tab-pane fade" id="pills-creacionangular5" role="tabpanel" aria-labelledby="pills-creacionangular5-tab">
+<ul>
+  <li>Crear:
+    <ul>
+      <li><b>ng generate service</b> nombreCarpeta/nombreServicio</li>
+      <li><b>ng g s</b> nombreCarpeta/nombreServicio</li>
+    </ul></li>
+
+</ul>
+  </div>    
+
+  <div class="tab-pane fade" id="pills-creacionangular6" role="tabpanel" aria-labelledby="pills-creacionangular6-tab">
+      <ul>
+        <li>Crear: <b>Carpeta</b> (model) dentro de ella <b>archivo.model.ts</b></li>
+        <li>Estructura: <b>?</b> Dato opcional de rellenar (telefono<b>?</b>: number;)</li>
+      </ul>
+    
+     
+    </div>
+
+    <div class="tab-pane fade" id="pills-creacionangular7" role="tabpanel" aria-labelledby="pills-creacionangular7-tab">
+      <ul>
+        <li>Crear:<ul>
+            <li><b>ng generate guard</b> nombre_carpeta/nombre_servicio</li>
+            <li><b>ng g g</b> nombre_carpeta/nombre_servicio</li>
+            <li>Opciones:<ul>
+                <li><b>CanActivate</b>: <u>Elegimos</u> esta opción porque NO trabajamos con Lazyloading </li>
+                <li><b>CanActivateChild</b>: Tiene rutas hijas</li>
+                <li><b>CanDeactivate</b></li>
+                <li><b>CanLoad</b>: Usamos Lazyloading</li>
+            </ul></li>
+         </ul></li>
+      </ul>
+    </div>
+
+    
+    <div class="tab-pane fade" id="pills-creacionangular8" role="tabpanel" aria-labelledby="pills-creacionangular8-tab">
+      <li>Crear:
+        <ul>
+          <li><b>ng generate directive</b> nombreCarpeta/nombreDirectiva</li>
+          <li><b>ng g d</b> nombreCarpeta/nombreDirectiva</li>
+        </ul></li>
+    </div>
+
+</div>

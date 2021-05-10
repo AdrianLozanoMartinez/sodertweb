@@ -1,0 +1,297 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-padrehijo-tab" data-toggle="pill" href="#pills-padrehijo" role="tab" aria-controls="pills-padrehijo" aria-selected="true" style="color: black;">Block<br><small>1 elemnto</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-padrehijo0-tab" data-toggle="pill" href="#pills-padrehijo0" role="tab" aria-controls="pills-padrehijo0" aria-selected="false" style="color: black;">Inline<br><small>1 elemnto</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-padrehijo1-tab" data-toggle="pill" href="#pills-padrehijo1" role="tab" aria-controls="pills-padrehijo1" aria-selected="false" style="color: black;">Inline-block<br><small>1 elemnto</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-padrehijo2-tab" data-toggle="pill" href="#pills-padrehijo2" role="tab" aria-controls="pills-padrehijo2" aria-selected="false" style="color: black;">Varios elemntos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-padrehijo3-tab" data-toggle="pill" href="#pills-padrehijo3" role="tab" aria-controls="pills-padrehijo3" aria-selected="false" style="color: black;">Pseudoelemento</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-padrehijo" role="tabpanel" aria-labelledby="pills-padrehijo-tab">
+
+      <div class="cuadro-principal-container-PADRE0">
+        <div class="cuadro-dentro-de-principal-HIJO0">Elemento (Hijo) dentro de otro elemento (Padre) con Block</div>
+      </div>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+        <b>{{co}}div class="cuadro-principal-container-PADRE">
+          {{co}}div class="cuadro-dentro-de-principal-HIJO">Elemento (Hijo) dentro de otro elemento (Padre){{co}}/div>
+        {{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+<pre class="card-text"><b>.cuadro-principal-container-PADRE0{{c}}       /*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;                   /*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO0{{c}}        /*Está dentro de cuadro-principal-container-PADRE*/
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    <b>display: block;</b>                       /*Hace que el comportamiento del elemento sea como un bloque*/
+}</b></pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-padrehijo0" role="tabpanel" aria-labelledby="pills-padrehijo0-tab">
+  
+      <div class="cuadro-principal-container-PADRE1">
+        <div class="cuadro-dentro-de-principal-HIJO1">Elemento (Hijo) dentro de otro elemento (Padre) con Inline</div>
+      </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+        <b>{{co}}div class="cuadro-principal-container-PADRE">
+          {{co}}div class="cuadro-dentro-de-principal-HIJO">Elemento (Hijo) dentro de otro elemento (Padre){{co}}/div>
+        {{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+<pre class="card-text">.cuadro-principal-container-PADRE0{{c}}       /*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;                   /*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO0{{c}}        /*Está dentro de cuadro-principal-container-PADRE*/
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    <b>display: inline;</b>                       /*El elemento se renderizará en línea con otros elementos*/
+}</pre>
+            </div>
+          </div>
+      </div>
+                           
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-padrehijo1" role="tabpanel" aria-labelledby="pills-padrehijo1-tab">
+
+      <div class="cuadro-principal-container-PADRE">
+        <div class="cuadro-dentro-de-principal-HIJO">Elemento (Hijo) dentro de otro elemento (Padre) con Inline-block</div>
+      </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+        <b>{{co}}div class="cuadro-principal-container-PADRE">
+          {{co}}div class="cuadro-dentro-de-principal-HIJO">Elemento (Hijo) dentro de otro elemento (Padre){{co}}/div>
+        {{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+<pre class="card-text">.cuadro-principal-container-PADRE0{{c}}       /*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;                   /*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO0{{c}}        /*Está dentro de cuadro-principal-container-PADRE*/
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    <b>display: inline-block;</b>                       /*El elemento tendrá un comportamiento mezcla entre los dos anteriores. Se centra*/
+}</pre>
+            </div>
+          </div>
+      </div>
+                           
+
+    </div>
+  
+
+    <div class="tab-pane fade" id="pills-padrehijo2" role="tabpanel" aria-labelledby="pills-padrehijo2-tab">
+
+      <div><p>Párrafo Padre</p></div>       <!--Si el parrafo esta dentro del div. Solo a sus hijos directos-->
+<p>Párrafo Hijo</p>                   <!-- Despues del div el párrafo continuo (mismo padre), los siguientes no -->
+<p>Párrafos restantes</p>             <!-- Todos los párrafos restantes -->
+
+             <div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div>{{co}}p>Párrafo Padre{{co}}/p>{{co}}/div>      {{co}}!--Si el parrafo esta dentro del div. Solo a sus hijos directos-->
+          {{co}}p>Párrafo Hijo{{co}}/p>              {{co}}!-- Despues del div el párrafo continuo (mismo padre), los siguientes no -->
+          {{co}}p>Párrafos restantes{{co}}/p>        {{co}}!-- Todos los párrafos restantes --></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">/*ORDEN PARA QUE FUNCIONE*/
+<b>div>p</b>{{c}}                  /*Si el parrafo esta dentro del div. Solo a sus hijos directos - Párrafo Padre*/
+    color:yellow;
+}
+<b>div~p</b>{{c}}                  /*Todos los párrafos restantes - Párrafos restantes*/
+    color: green;
+}
+<b>div+p</b>{{c}}                  /*Despues del div el párrafo continuo (mismo padre), los siguientes no - Párrafo Hijo*/
+    color:red;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-padrehijo3" role="tabpanel" aria-labelledby="pills-padrehijo3-tab">
+      
+      <app-pseudoelemento></app-pseudoelemento>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div>
+      {{co}}div id="x1">Hover (Poner ratón encima y ver párrafo oculto)      {{co}}!--Hover-->
+          {{co}}p>El Div oculta este párrafo con hover{{co}}/p>
+      {{co}}/div> 
+
+      {{co}}div id="x2">{{co}}/div>                                               {{co}}!--Elemento vacío, empty-->
+
+      {{co}}div id="x4">                                                     {{co}}!--1º y último hijo, efectos-->
+          {{co}}p>first-child (Primer hijo){{co}}/p>
+          {{co}}p>Hijo del medio{{co}}/p>
+          {{co}}p>last-child (Último hijo){{co}}/p>
+      {{co}}/div>
+
+      {{co}}/div>
+
+      {{co}}p id="par">Párrafo fuera del div{{co}}/p>                               
+      {{co}}p class="der">Odd: Párrafo Impar{{co}}/p>    
+      {{co}}p class="doc">Even: Párrafo Par{{co}}/p>                              {{co}}!--(::) Para especificar el elemento que se encuentra dentro, en este caso el párrafo--></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#x1{{c}}
+    width: 500px;
+    height: 100px;
+}
+#x1<b>>p</b>{{c}}                           /*<b>Primer p</b>*/
+    <b>display:none</b>;                /*<b>oculto</b>*/
+    background-color: yellow;
+}
+#x1<b>:hover p</b>{{c}}                     /*<b>Pasa el raton y sale el párrafo</b> (p)*/
+    display:block;
+}
+#x4 <b>p:last-child</b>{{c}}                /*<b>Último hijo, último párrafo</b>*/
+    background-color: aqua;
+}
+#x4 <b>p:first-child</b>{{c}}               /*<b>Primer hijo, primer párrafo</b>*/
+    background-color: blueviolet;
+}
+div<b>:empty</b>{{c}}                       /*<b>Elemento vacío en el html</b>, el x2*/
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin-top: 5px;
+}
+#par{{c}}                             /*Justifica el párrafo y lo encierra en las medidas de width y height*/
+    width: 200px;
+    height: 50px;
+    text-align: justify;
+}
+#par<b>::first-line</b>{{c}}                /*(::) <b>Para especificar el elemento que se encuentra dentro, en este caso el párrafo</b>*/
+    text-transform: uppercase;
+}
+
+.der<b>:nth-child(odd)</b>{{c}}                  /*Hijos. <b>Impar</b>*/
+    background-color: rgb(38, 0, 255);
+}
+.doc<b>:nth-child(even)</b>{{c}}                  /*Hijos. <b>Par</b>*/
+    background-color: chartreuse;
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+</div>
+
+
+
+  </div>

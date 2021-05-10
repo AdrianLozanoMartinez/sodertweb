@@ -1,0 +1,172 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap-tab" data-toggle="pill" href="#pills-bootstrap" role="tab" aria-controls="pills-bootstrap" aria-selected="true" style="color: black;">Estructura</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap0-tab" data-toggle="pill" href="#pills-bootstrap0" role="tab" aria-controls="pills-bootstrap0" aria-selected="false" style="color: black;">Alineación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap1-tab" data-toggle="pill" href="#pills-bootstrap1" role="tab" aria-controls="pills-bootstrap1" aria-selected="false" style="color: black;">Color</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap8-tab" data-toggle="pill" href="#pills-bootstrap8" role="tab" aria-controls="pills-bootstrap8" aria-selected="false" style="color: black;">Display</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap4-tab" data-toggle="pill" href="#pills-bootstrap4" role="tab" aria-controls="pills-bootstrap4" aria-selected="false" style="color: black;">Bordes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap2-tab" data-toggle="pill" href="#pills-bootstrap2" role="tab" aria-controls="pills-bootstrap2" aria-selected="false" style="color: black;">Letras</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap3-tab" data-toggle="pill" href="#pills-bootstrap3" role="tab" aria-controls="pills-bootstrap3" aria-selected="false" style="color: black;">Tablas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap5-tab" data-toggle="pill" href="#pills-bootstrap5" role="tab" aria-controls="pills-bootstrap5" aria-selected="false" style="color: black;">Imagen</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap6-tab" data-toggle="pill" href="#pills-bootstrap6" role="tab" aria-controls="pills-bootstrap6" aria-selected="false" style="color: black;">Botón<br>Enlace</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap7-tab" data-toggle="pill" href="#pills-bootstrap7" role="tab" aria-controls="pills-bootstrap7" aria-selected="false" style="color: black;">Formulario</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap9-tab" data-toggle="pill" href="#pills-bootstrap9" role="tab" aria-controls="pills-bootstrap9" aria-selected="false" style="color: black;">Cartas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap10-tab" data-toggle="pill" href="#pills-bootstrap10" role="tab" aria-controls="pills-bootstrap10" aria-selected="false" style="color: black;">Nav</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap11-tab" data-toggle="pill" href="#pills-bootstrap11" role="tab" aria-controls="pills-bootstrap11" aria-selected="false" style="color: black;">Jumbotron</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap12-tab" data-toggle="pill" href="#pills-bootstrap12" role="tab" aria-controls="pills-bootstrap12" aria-selected="false" style="color: black;">Alertas</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-bootstrap" role="tabpanel" aria-labelledby="pills-bootstrap-tab">
+        <hr>
+        <app-estructurabootstrap></app-estructurabootstrap>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap0" role="tabpanel" aria-labelledby="pills-bootstrap0-tab">
+        <hr>
+        <app-alineacionbootstrap></app-alineacionbootstrap>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap1" role="tabpanel" aria-labelledby="pills-bootstrap1-tab">
+
+        <div class="bg-primary">Bg-primary</div>
+        <div class="bg-secondary">Bg-secondary</div>
+        <div class="bg-success">Bg-success</div>
+        <div class="bg-danger">Bg-danger</div>
+        <div class="bg-warning">Bg-warning</div>
+        <div class="bg-info">Bg-info</div>
+        <div class="bg-light text-dark">Bg-light</div>
+        <div class="bg-dark text-white">Bg-dark</div>
+        <div class="bg-white text-dark">Bg-white</div>
+
+        <div class="card-group">
+            <div class="card text-dark m-3" id="lila2">
+                <div class="card-body" id="lila2">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="bg-primary">Bg-primary{{co}}/div>
+                {{co}}div class="bg-secondary">Bg-secondary{{co}}/div>
+                {{co}}div class="bg-success">Bg-success{{co}}/div>
+                {{co}}div class="bg-danger">Bg-danger{{co}}/div>
+                {{co}}div class="bg-warning">Bg-warning{{co}}/div>
+                {{co}}div class="bg-info">Bg-info{{co}}/div>
+                {{co}}div class="bg-light text-dark">Bg-light{{co}}/div>
+                {{co}}div class="bg-dark text-white">Bg-dark{{co}}/div>
+                {{co}}div class="bg-white text-dark">Bg-white{{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap4" role="tabpanel" aria-labelledby="pills-bootstrap4-tab">
+        <hr>
+        <app-bordesboot></app-bordesboot>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap2" role="tabpanel" aria-labelledby="pills-bootstrap2-tab">
+        <hr>
+        <app-letrasboot></app-letrasboot>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap3" role="tabpanel" aria-labelledby="pills-bootstrap3-tab">
+        <hr>
+        <app-tablaboot></app-tablaboot>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap5" role="tabpanel" aria-labelledby="pills-bootstrap5-tab">
+        <hr>
+        <app-imagenboot></app-imagenboot>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap6" role="tabpanel" aria-labelledby="pills-bootstrap6-tab">
+        <hr>
+        <app-botonboot></app-botonboot>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap7" role="tabpanel" aria-labelledby="pills-bootstrap7-tab">
+        <hr>
+        <app-formularioboot></app-formularioboot>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-bootstrap8" role="tabpanel" aria-labelledby="pills-bootstrap8-tab">
+        <hr>
+        <app-displayboot></app-displayboot>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-bootstrap9" role="tabpanel" aria-labelledby="pills-bootstrap9-tab">
+        <hr>
+        <app-cartasboot></app-cartasboot>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-bootstrap10" role="tabpanel" aria-labelledby="pills-bootstrap10-tab">
+        <hr>
+        <app-navboot></app-navboot>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-bootstrap11" role="tabpanel" aria-labelledby="pills-bootstrap11-tab">
+        <hr>
+        <app-jumbotron></app-jumbotron>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap12" role="tabpanel" aria-labelledby="pills-bootstrap12-tab">
+        <hr>
+        <app-alerta></app-alerta>
+    </div>
+
+
+</div>
+<br><br>
+<b id="lila" style="margin-left: 18%;">Web de Ayuda</b>: <abbr title="Manual"><b><a target="_black" href="https://getbootstrap.com/">Oficial</a></b></abbr>-<abbr title="Manual 4.6"><b><a target="_black" href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">V.4.6</a></b></abbr>-
+<abbr title="Manual Html"><b><a target="_black" href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">W3schools</a></b></abbr>
+<img src="../../../../assets/imagenes/Bootstrap.png" style="margin-left: 2%; width: 300px;">
+<button class="btn btn-info m-2" [routerLink]="['/programacion']">Atras</button>

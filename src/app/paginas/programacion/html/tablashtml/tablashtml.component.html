@@ -1,0 +1,195 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-htmltabla-tab" data-toggle="pill" href="#pills-htmltabla" role="tab" aria-controls="pills-htmltabla" aria-selected="true" style="color: black;">Cabecera<br>Cuerpo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-htmltabla0-tab" data-toggle="pill" href="#pills-htmltabla0" role="tab" aria-controls="pills-htmltabla0" aria-selected="false" style="color: black;">Combinar<br>Columnas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-htmltabla1-tab" data-toggle="pill" href="#pills-htmltabla1" role="tab" aria-controls="pills-htmltabla1" aria-selected="false" style="color: black;">Combinar<br>Filas</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-htmltabla" role="tabpanel" aria-labelledby="pills-htmltabla-tab">
+  
+        <table border='6'>   <!--Podemos poner bordes, 'número' = grosor-->
+            <caption>Título de la tabla</caption> <!--NO SALE PERO DEBERÍA SALIR ARRIBA-->
+            <thead>    <!--Cabecera-->
+                <tr>    <!--Fila-->
+                    <th>Cabecera 1</th>    <!--Columnas-->
+                    <th>Cabecera 2</th>
+                </tr>
+            </thead>
+            <tbody>    <!--Cuerpo-->
+                <tr>    <!--Fila-->
+                    <td>Cuerpo 1</td>    <!--Columnas-->
+                    <td>Cuerpo 2</td>
+                </tr>
+            </tbody>
+            <tfoot>     <!--Pie-->
+                <tr>    <!--Fila-->
+                    <td>Pie 1</td>    <!--Columnas-->
+                    <td>Pie 2</td>
+                </tr>                       
+            </tfoot>
+        </table>
+
+  <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}table border='6'>   {{co}}!--Podemos poner bordes, 'número' = grosor-->
+            {{co}}caption>Título de la tabla{{co}}/caption> {{co}}!--NO SALE PERO DEBERÍA SALIR ARRIBA-->
+            {{co}}thead>    {{co}}!--Cabecera-->
+                {{co}}tr>    {{co}}!--Fila-->
+                    {{co}}th>Cabecera 1{{co}}/th>    {{co}}!--Columnas-->
+                    {{co}}th>Cabecera 2{{co}}/th>
+                {{co}}/tr>
+            {{co}}/thead>
+            {{co}}tbody>    {{co}}!--Cuerpo-->
+                {{co}}tr>    {{co}}!--Fila-->
+                    {{co}}td>Cuerpo 1{{co}}/td>    {{co}}!--Columnas-->
+                    {{co}}td>Cuerpo 2{{co}}/td>
+                {{co}}/tr>
+            {{co}}/tbody>
+            {{co}}tfoot>     {{co}}!--Pie-->
+                {{co}}tr>    {{co}}!--Fila-->
+                    {{co}}td>Pie 1{{co}}/td>    {{co}}!--Columnas-->
+                    {{co}}td>Pie 2{{co}}/td>
+                {{co}}/tr>                       
+            {{co}}/tfoot>
+        {{co}}/table></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+  
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-htmltabla0" role="tabpanel" aria-labelledby="pills-htmltabla0-tab">
+  
+        <table border='6'>
+            <tr>
+                <td>1</td>
+                <td colspan="2">2</td>    <!--Coge 2 COLUMNAS a la derecha de la fila, es decir, hacia el lado, por eso no colocamos otra columna, se expande-->
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+   <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}table border='6'>
+            {{co}}tr>
+                {{co}}td>1{{co}}/td>
+                {{co}}td colspan="2">2{{co}}/td>    {{co}}!--Coge 2 COLUMNAS a la derecha de la fila, es decir, hacia el lado, por eso no colocamos otra columna, se expande-->
+            {{co}}/tr>
+            {{co}}tr>
+                {{co}}td>3{{co}}/td>
+                {{co}}td>4{{co}}/td>
+                {{co}}td>5{{co}}/td>
+            {{co}}/tr>
+            {{co}}tr>
+                {{co}}td>6{{co}}/td>
+                {{co}}td>7{{co}}/td>
+                {{co}}td>8{{co}}/td>
+            {{co}}/tr>
+        {{co}}/table></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div>        
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-htmltabla1" role="tabpanel" aria-labelledby="pills-htmltabla1-tab">
+
+        <table border='6'>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td rowspan="2">6</td>    <!--Coge 2 FILAS de la columna, es decir, hacia abajo, por eso en la siguiente fila solo hay 2 columnas, se expande-->
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        
+   <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}table border='6'>
+            {{co}}tr>
+                {{co}}td>1{{co}}/td>
+                {{co}}td>2{{co}}/td>
+                {{co}}td>3{{co}}/td>
+            {{co}}/tr>
+            {{co}}tr>
+                {{co}}td>4{{co}}/td>
+                {{co}}td>5{{co}}/td>
+                {{co}}td rowspan="2">6{{co}}/td>    {{co}}!--Coge 2 FILAS de la columna, es decir, hacia abajo, por eso en la siguiente fila solo hay 2 columnas, se expande-->
+            {{co}}/tr>
+            {{co}}tr>
+                {{co}}td>7{{co}}/td>
+                {{co}}td>8{{co}}/td>
+            {{co}}/tr>
+        {{co}}/table></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div>     
+
+
+
+    </div>
+
+</div>

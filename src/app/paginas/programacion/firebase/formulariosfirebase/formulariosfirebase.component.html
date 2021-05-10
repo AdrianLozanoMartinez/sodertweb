@@ -1,0 +1,1428 @@
+<h6><u><b>Firebase - Formulario - Angular</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-firebaseangularformulario-tab" data-toggle="pill" href="#pills-firebaseangularformulario" role="tab" aria-controls="pills-firebaseangularformulario" aria-selected="true" style="color: black;">App.module.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaseangularformulario0-tab" data-toggle="pill" href="#pills-firebaseangularformulario0" role="tab" aria-controls="pills-firebaseangularformulario0" aria-selected="false" style="color: black;">App.routing.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario1-tab" data-toggle="pill" href="#pills-firebaseangularformulario1" role="tab" aria-controls="pills-firebaseangularformulario1" aria-selected="false" style="color: black;">Model.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario2-tab" data-toggle="pill" href="#pills-firebaseangularformulario2" role="tab" aria-controls="pills-firebaseangularformulario2" aria-selected="false" style="color: black;">___Web___<br>(Firebase)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario3-tab" data-toggle="pill" href="#pills-firebaseangularformulario3" role="tab" aria-controls="pills-firebaseangularformulario3" aria-selected="false" style="color: black;">Coger datos<br><small>Componente de<br>1 Elemento</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario4-tab" data-toggle="pill" href="#pills-firebaseangularformulario4" role="tab" aria-controls="pills-firebaseangularformulario4" aria-selected="false" style="color: black;">Crear datos<br><small>Componente de<br>1 Elemento</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario5-tab" data-toggle="pill" href="#pills-firebaseangularformulario5" role="tab" aria-controls="pills-firebaseangularformulario5" aria-selected="false" style="color: black;">Modificar datos<br><small>Sino existe Crea datos<br>Componente de<br>1 Elemento</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario6-tab" data-toggle="pill" href="#pills-firebaseangularformulario6" role="tab" aria-controls="pills-firebaseangularformulario6" aria-selected="false" style="color: black;">Mensajes Sweetalert2<br><small>Crear/Modificar<br>Componente de<br>1 Elemento</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario7-tab" data-toggle="pill" href="#pills-firebaseangularformulario7" role="tab" aria-controls="pills-firebaseangularformulario7" aria-selected="false" style="color: black;">Obtener datos<br><small>Componente de<br>Todos los elementos</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario8-tab" data-toggle="pill" href="#pills-firebaseangularformulario8" role="tab" aria-controls="pills-firebaseangularformulario8" aria-selected="false" style="color: black;">Obtener 1 dato<br><small>Componente de<br>1 Elemento</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario9-tab" data-toggle="pill" href="#pills-firebaseangularformulario9" role="tab" aria-controls="pills-firebaseangularformulario9" aria-selected="false" style="color: black;">Eliminar 1 dato<br><small>Componente de<br>Todos los elementos</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaseangularformulario10-tab" data-toggle="pill" href="#pills-firebaseangularformulario10" role="tab" aria-controls="pills-firebaseangularformulario10" aria-selected="false" style="color: black;">Mensaje Cargando/Sin registro<br><small>Componente de<br>Todos los elementos</small></a>
+    </li>
+    <button class="btn btn-success m-2" [routerLink]="['/firebase']">Atras</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-firebaseangularformulario" role="tabpanel" aria-labelledby="pills-firebaseangularformulario-tab">
+     <pre>
+        //Por defecto
+        import {{c}} BrowserModule } from '@angular/platform-browser';
+        import {{c}} NgModule } from '@angular/core';
+
+        import {{c}} AppComponent } from './app.component';
+
+        //Conexión con app.routing.ts - Enlazar páginas
+        import {{c}} routing, appRoutingProviders } from './app.routing';
+
+        //Componentes - Páginas añadir después de crearlas
+        import {{c}} HomeComponent } from './paginas/home/home.component';
+        import {{c}} ErrorComponent } from './componentes/error/error.component';
+        import {{c}} PieComponent } from './componentes/pie/pie.component';
+        import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+        //Formularios
+        <b>import {{c}} FormsModule } from '@angular/forms';</b>
+
+        //Http para usar servicio de usuario y base de datos en firebase
+        <b>import {{c}} HttpClientModule } from '@angular/common/http';</b>
+
+        @NgModule({{c}}
+            declarations: [
+            //Por defecto
+            AppComponent,
+            //Componentes - Páginas añadir después de crearlas
+            HomeComponent,
+            ErrorComponent,
+            PieComponent,
+            CabeceraComponent<b>,</b>
+            //Componentes necesarios para mostrar los resultados
+            <b>ForfireunelementohtmlComponent,
+            ForfirevarioselementoshtmlComponent</b>
+            ],
+            imports: [
+            //Por defecto
+            BrowserModule,
+            //Conexión con app.routing.ts - Enlazar páginas
+            routing<b>,</b>
+            //Formularios
+            <b>FormsModule,</b>
+            //Http para usar servicio de usuario y base de datos en firebase
+            <b>HttpClientModule</b>
+        ],
+        providers: [
+            //Conexión con app.routing.ts - Enlazar páginas
+            appRoutingProviders
+        ],
+        //Por defecto - Librería
+        bootstrap: [AppComponent]
+        })
+        //Por defecto
+        export class AppModule {{c}}}
+    
+    </pre>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-firebaseangularformulario0" role="tabpanel" aria-labelledby="pills-firebaseangularformulario0-tab">
+<pre>
+        import {{c}} ModuleWithProviders } from '@angular/core';
+        import {{c}} Routes, RouterModule } from '@angular/router';
+
+        //Componentes - Especiales
+        import {{c}} AppComponent } from './app.component';
+
+        //Componentes - Páginas añadir después de crearlas
+        import {{c}} HomeComponent } from './paginas/home/home.component';
+        import {{c}} ErrorComponent } from './componentes/error/error.component';
+        import {{c}} PieComponent } from './componentes/pie/pie.component';
+        import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+        //Componentes necesarios para mostrar los resultados
+        <b>import {{c}} ForfireunelementohtmlComponent } from './paginas/programacion/angular/formulario/firebase/forfireunelementohtml/forfireunelementohtml.component';
+        import {{c}} ForfirevarioselementoshtmlComponent } from './paginas/programacion/angular/formulario/firebase/forfirevarioselementoshtml/forfirevarioselementoshtml.component';</b>
+
+        export const appRoutes: Routes = [
+        //Componentes - Páginas añadir después de crearlas
+        {{c}} path: '', component: HomeComponent },                        //Siempre va a HomeComponent cuando da errores los botones             
+        {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
+        {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
+        {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+        //Componentes - Especiales
+        {{c}} path: 'appcomponente', component: AppComponent },
+        //Componentes necesarios para mostrar los resultados
+        <b>{{c}} path: 'unelemento/:id', component: ForfireunelementohtmlComponent},</b>        //Coger la id (posición/index) del producto
+        <b>{{c}} path: 'varioselementos', component: ForfirevarioselementoshtmlComponent},</b>
+        //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+        {{c}} path: '**', component: ErrorComponent},                      //Si introducimos mal en la barra de direcciones nos va al ErrorComponent (**)
+        //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+        {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},           //Si introducimos mal en la barra de direcciones nos va al HomeComponent (home)
+        //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+        {{c}} path: '**', component: HomeComponent }                       //Si introducimos mal en la barra de direcciones nos va al HomeComponent (**)
+        ];
+
+
+        //Conexión con app.module.ts - Enlazar páginas
+        export const appRoutingProviders: any[] = [];
+        export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);
+    
+    </pre>
+    </div>
+
+  <div class="tab-pane fade" id="pills-firebaseangularformulario1" role="tabpanel" aria-labelledby="pills-firebaseangularformulario1-tab">
+    
+        <pre>
+        Dentro de él:
+        <b>export class UnoModel {{c}}</b>        //Ponemos el nombre que sea pero le ponemos Model para no cofundirnos
+        <b>id: string;
+        nombre: string;
+        poder: string;
+        vivo: boolean;
+
+            constructor() {{c}}
+            this.vivo = true;</b>                 //Iniciamos la variable (vivo) con true/false<b>
+            }
+        }</b></pre>
+  </div>
+
+  <div class="tab-pane fade" id="pills-firebaseangularformulario2" role="tabpanel" aria-labelledby="pills-firebaseangularformulario2-tab">
+    <a class="enlace" [routerLink]="['/proyecto']"><u><b>1º Crear proyecto</b></u></a>
+    <br>
+    <u><b>2º Crear base de datos</b></u> (<a class="enlace" href="https://firebase.google.com/?pli=1"><u><b>Web Firebase</b></u></a> -> Ir a consola -> Proyecto -> Realtime Database -> Crear base de datos)
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">1º Paso</th>
+                <th scope="col">2º Paso</th>
+                <th scope="col">3º Paso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Inicio en <b>modo de prueba</b> (otra opción: modo de bloqueo) -> <b>Habilitar</b> -> <b>Reglas</b></td>
+                <td><pre>Cambiar:
+{{c}}
+    "rules": {{c}}
+{{ru}}
+    }
+}
+Por:
+<b>{{c}}
+    "rules": {{c}}
+        ".read": true,
+        ".write": true
+    }
+}</b>
+-> <b>Ctrl + s</b> (Para guardar) -> Nos comunica: Tus reglas de seguridad están definidas como públicas, 
+                                     así que cualquiera puede robar, modificar o eliminar datos de tu 
+                                     base de datos.</pre></td>
+                <td><pre>
+<b>Metemos algunos datos</b>, por ejemplo:
+    <b>Nombre </b>heroes -> <b>Valor</b> no ponemos nada -> <b>+</b>
+    <b>Nombre del ID </b>ABC128637178 -> <b>Valor</b> no ponemos nada -> <b>+</b>
+    <b>Nombre </b>Nombre -> <b>Valor</b> Ironman -> <b>+</b>
+    <b>Nombre </b>Poder -> <b>Valor</b> Dinero -> <b>+</b>
+    <b>Añadir</b>
+
+<b>Obtener la conexión de la base de datos</b> -> Pulsamos en la base de datos sobre el 1º nombre (Ejemplo: heroes) 
+                                            -> <b>Copiamos la URL de arriba</b> 
+                                                (Ejemplo: https://sodertweb.firebaseio.com/heroes) 
+                                            -> <b>Obtener objeto json</b> -> Pegamos en navegador y añadimos .json 
+                                                (Ejemplo: https://sodertweb.firebaseio.com/heroes.json)</pre></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+
+  <div class="tab-pane fade" id="pills-firebaseangularformulario3" role="tabpanel" aria-labelledby="pills-firebaseangularformulario3-tab">
+<div class="table-responsive-md">
+  <table class="table table-bordered">
+      <thead class="thead-light">
+          <tr>
+              <th scope="col">Ts</th>
+              <th scope="col">Html</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><pre>
+        import {{c}} Component, OnInit } from '@angular/core';
+        //Model
+        <b>import {{c}} UnoModel } from  '../model/uno.model';</b>
+        //PAra coger datos
+        <b>import {{c}} NgForm } from '@angular/forms';</b>
+
+        @Component({{c}}
+        selector: 'app-forfireunelementohtml',
+        templateUrl: './forfireunelementohtml.component.html',
+        styleUrls: ['./forfireunelementohtml.component.css']
+        })
+        export class ForfireunelementohtmlComponent implements OnInit {{c}}
+
+            /*1º Opción (Recomendable) - Declaramos una variable (uno) 
+                                         y le metemos dentro el model creado*/
+            <b>unomodel = new UnoModel();</b>                           
+
+            //2º Opción (Redundante)
+            //<b>unomodel: UnoModel = new UnoModel();</b>
+
+        constructor() {{c}} }
+
+        ngOnInit(): void {{c}}
+        }
+
+        /*Creamos función (guardar()) puesta en formulario del componente de 
+          1 elemento.html y ponemos una variable nueva (variableRecibidodelHTML) 
+          donde recibimos lo que nos llega del formulario, declarando NgForm*/
+        <b>guardar( variableRecibidodelHTML: NgForm ){{c}}</b>        
+
+            <b>if ( variableRecibidodelHTML.invalid ){{c}}</b>          
+            /*Si la variable recibida del html (variableRecibidodelHTML), 
+              es decir los datos son inválido (invalid) devuelve (return) 
+              un mensaje en consola*/
+            <b>console.log('Formulario no válido');
+                return;
+            }</b>
+
+            //Muestra todo lo que recibamos del html
+            <b>console.log(variableRecibidodelHTML);</b> 
+            //Contenido especifico de lo que cojamos del html que esté en el model                  
+            <b>console.log(this.unomodel);</b>                          
+
+        }
+    }</pre></td>
+              <td><pre>{{a}}<b>{{a0}}</b>{{a1}}<b>{{a2}}</b>{{a3}}<b>{{a4}}</b>{{a5}}<b>{{a6}}</b>{{a7}}<b>{{a8}}</b>{{a9}}<b>{{a10}}</b>{{a11}}<b>{{a12}}</b>{{a13}}</pre></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<div class="table-responsive-md">
+    <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th colspan="2">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><app-forfireunelementohtml></app-forfireunelementohtml></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+  </div>
+
+  <div class="tab-pane fade" id="pills-firebaseangularformulario4" role="tabpanel" aria-labelledby="pills-firebaseangularformulario4-tab">
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Servicio</th>
+                  <th scope="col">Ts</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><pre>
+import {{c}} Injectable } from '@angular/core';
+//Conexión con Firebase
+<b>import {{c}} HttpClient } from '@angular/common/http';</b>
+//Model
+<b>import {{c}} UnoModel } from '../model/uno.model';</b>
+//Trasformar la respuesta (coger la ID)
+<b>import {{c}} map } from 'rxjs/operators'; </b>          
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  /*Metemos en la variable (variableUrl) la url/dirección 
+  que está nuestra base de datos, dentro de Realtime Database 
+  -> Datos. El manual-sodert cambiará según el proyecto que 
+  estemos usando*/
+  <b>private variableUrl = 'https://sodertweb.firebaseio.com/';</b>      
+
+  constructor( 
+    //Metido en la variable (variablehttp) el HttpClient
+    <b>private variablehttp: HttpClient</b> ) {{c}} }       
+
+  /*crearHeroe() -> Función para crear datos. variableHeroe: UnoModel 
+  -> Metemos en la función la variable nueva (variableHeroe) que tendrá 
+  la estructura definida en el model (UnoModel)*/
+  <b>crearHeroe ( variableHeroe: UnoModel ){{c}}</b>
+      /*return this.variablehttp.post -> Va a devolver (return), la variable (this.variablehttp). 
+        post (podría ser delete, put, get...). (`${{c}} this.variableUrl }/heroes.json`, variableHeroe): 
+        Dirección/url metida en la variable (this.variableUrl) unido al /base_de_datos (/heroes) y 
+        poniendo al final el json. Segundo argumento es el cuerpo (variableHeroe) que es la misma 
+        variable que ponemos en la función (crearHeroe). .pipe() -> Lo pasamos al método pipe de 
+        los observables*/                     
+      <b>return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe( </b> 
+        /*Guarda en la variable (variableresp) la respuesta y lo ponemos de tipo any, ya que 
+          name no viene definido aquí pero sí sale en consola que sustituye la id pero en firebase*/  
+         <b> map( (variableresp: any) => {{c}}  </b>     
+              /*Comparamos la variable definida aquí (variableHeroe) y hace referencia al model (unoModel), 
+                de ese modo saca la id y demás campos, lo compara con la variable de salida al crear el 
+                archivo (variableresp) que es lo que se va a meter en firebase + .name que sale en consola 
+                que pertenece a firebase*/                
+              <b>variableHeroe.id = variableresp.name; </b>  
+              /*Devuelve la variable modificada, de este modo obtenemos la ID (Se muestra en la ID 
+                autogenerado del html) y podemos actualizar, borrar, ver...*/            
+             <b> return variableHeroe;                               
+            })
+          );
+    }</b>
+}
+
+                  </pre></td>
+                  <td><pre>
+    import {{c}} Component, OnInit } from '@angular/core';
+    import {{c}} UnoModel } from  '../model/uno.model';
+    import {{c}} NgForm } from '@angular/forms';
+    //Servicio de conexión con firebase
+    <b>import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';</b>
+
+    @Component({{c}}
+    selector: 'app-forfireunelementohtml',
+    templateUrl: './forfireunelementohtml.component.html',
+    styleUrls: ['./forfireunelementohtml.component.css']
+    })
+    export class ForfireunelementohtmlComponent implements OnInit {{c}}
+
+        //1º Opción (Recomendable)
+        unomodel = new UnoModel();                           
+
+        //2º Opción (Redundante)
+        //unomodel: UnoModel = new UnoModel();
+
+    constructor( 
+        //Metemos en privado, en la variable (variableservicio) el servicio (ServicioformulariofireService)
+        <b>private variableservicio: ServicioformulariofireService </b>) {{c}} }
+
+    ngOnInit(): void {{c}}
+    }
+
+    guardar( variableRecibidodelHTML: NgForm ){{c}}        
+
+        if ( variableRecibidodelHTML.invalid ){{c}}          
+        console.log('Formulario no válido');
+            return;
+        }
+        console.log(variableRecibidodelHTML);              
+        console.log(this.unomodel);                          
+
+    //Conexión con servicio.ts y este con Firebase
+    <b>this.variableservicio.crearHeroe( this.unomodel ).subscribe( variableRespuesta => {{c}}  
+      /*Metemos en la variable que coge el servicio (this.variableservicio) la función (crearHeroe) 
+        y dentro de ella el model (this.unomodel) o estructura, lo subscribimos (.subscribe) y lo 
+        metemos en la variable (variableRespuesta)*/
+        console.log(variableRespuesta);
+    });</b>
+    }
+}</pre></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th colspan="2">Funcionamiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"><app-forfireunelementohtml2></app-forfireunelementohtml2></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+      </div>
+
+        <div class="tab-pane fade" id="pills-firebaseangularformulario5" role="tabpanel" aria-labelledby="pills-firebaseangularformulario5-tab">
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Servicio</th>
+                  <th scope="col">Ts</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UnoModel } from '../model/uno.model';
+import {{c}} map } from 'rxjs/operators';           
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  private variableUrl = 'https://sodertweb.firebaseio.com/';      
+
+  constructor( private variablehttp: HttpClient ) {{c}} }       
+
+  crearHeroe ( variableHeroe: UnoModel ){{c}}
+                     
+      return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe(  
+       
+          map( (variableresp: any) => {{c}}       
+                             
+              variableHeroe.id = variableresp.name;   
+                
+              return variableHeroe;                               
+            })
+          );
+    }
+
+    /*Función para actualizar el campo con la id, 
+      declaramos aquí una variable (variableHeroe2) 
+      con la estructura del model (UnoModel)*/
+    <b>actualizarHeroe( variableHeroe2: UnoModel ){{c}}</b>                                              
+
+        /*Creamos una constante (idTemporal) donde metemos 
+          en la variable (variableHeroe2) todo el valor que 
+          creamos en la función. De ese modo como se saca 
+          otra ID al actualizar los componentes y no queremos
+          tener más de una ID, por ello luego borramos la ID 
+          nueva creada*/
+        <b>const idTemporal = {{c}}                                                                   
+            ...variableHeroe2
+          };</b>
+      
+          /*Borramos la id temporal creada al actualizar 
+            para que no exista más de una id, manteniendo 
+            la primera id creada*/
+          <b>delete idTemporal.id;</b>                                                                       
+      
+          /*Devuelve (return) la variable del servicio http (variablehttp). Actualizamos (put). Ponemos la variable 
+            que sustituye al url principal (${{c}} this.idTemporal }) seguido del url específico de la base de datos 
+            creada (/heroes), seguido del id (/${{c}} variableHeroe2.id) y seguido por último de json propio de 
+            firebase (En otras bases de datos no se incluye). Por último ponemos la variable de salida nombrada 
+            también en la función que contiene la variable temporal pero sin la ID (idTemporal)*/
+          <b>return this.variablehttp.put(`${{c}} this.variableUrl }/heroes/${{c}} variableHeroe2.id }.json`, idTemporal)         
+      }</b>
+}
+
+                  </pre></td>
+                  <td><pre>
+    import {{c}} Component, OnInit } from '@angular/core';
+    import {{c}} UnoModel } from  '../model/uno.model';
+    import {{c}} NgForm } from '@angular/forms';
+    import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+
+    @Component({{c}}
+    selector: 'app-forfireunelementohtml',
+    templateUrl: './forfireunelementohtml.component.html',
+    styleUrls: ['./forfireunelementohtml.component.css']
+    })
+    export class ForfireunelementohtmlComponent implements OnInit {{c}}
+
+        //1º Opción (Recomendable)
+        unomodel = new UnoModel();                           
+
+        //2º Opción (Redundante)
+        //unomodel: UnoModel = new UnoModel();
+
+    constructor( private variableservicio: ServicioformulariofireService ) {{c}} }
+
+    ngOnInit(): void {{c}}
+    }
+
+    guardar( variableRecibidodelHTML: NgForm ){{c}}        
+
+        if ( variableRecibidodelHTML.invalid ){{c}}          
+        console.log('Formulario no válido');
+            return;
+        }
+    //Si la variable de model (unomodel) tiene ID, actualice sino crea una
+   <b>if (this.unomodel.id){{c}}</b>                                                                                
+    //Conexión con servicio.ts y este con Firebase - ACTUALIZAR
+    <b>this.variableservicio.actualizarHeroe( this.unomodel ).subscribe( variableRespuesta3 => {{c}}  </b>
+    //La única diferencia con la de crear es la función (actualizarHeroe)         
+      <b>console.log(variableRespuesta3);
+    });
+    }else{{c}}</b>
+      //Conexión con servicio.ts y este con Firebase - CREAR NUEVO
+        <b>this.variableservicio.crearHeroe( this.unomodel ).subscribe( variableRespuesta => {{c}} </b>
+        //Metemos crear dentro del else para que funcione la condición                
+          <b>console.log(variableRespuesta);
+        });
+    }</b>
+
+   console.log(variableRecibidodelHTML);               
+   console.log(this.unomodel);   
+     
+   }
+}</pre></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th colspan="2">Funcionamiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"><app-forfireunelementohtml3></app-forfireunelementohtml3></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-firebaseangularformulario6" role="tabpanel" aria-labelledby="pills-firebaseangularformulario6-tab">
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Ts</th>
+                  <th scope="col">Funcionamiento</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <pre>
+    import {{c}} Component, OnInit } from '@angular/core';
+    import {{c}} UnoModel } from  '../model/uno.model';
+    import {{c}} NgForm } from '@angular/forms';
+    import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+    //Sweetalert2
+    <b>import Swal from 'sweetalert2';</b>
+    //Necesario en este caso para sweetalert2
+    <b>import {{c}} Observable } from 'rxjs';</b>
+
+    @Component({{c}}
+    selector: 'app-forfireunelementohtml',
+    templateUrl: './forfireunelementohtml.component.html',
+    styleUrls: ['./forfireunelementohtml.component.css']
+    })
+    export class ForfireunelementohtmlComponent implements OnInit {{c}}
+
+        //1º Opción (Recomendable)
+        unomodel = new UnoModel();                           
+
+        //2º Opción (Redundante)
+        //unomodel: UnoModel = new UnoModel();
+
+    constructor( private variableservicio: ServicioformulariofireService ) {{c}} }
+
+    ngOnInit(): void {{c}}
+    }
+
+    guardar( variableRecibidodelHTML: NgForm ){{c}}        
+
+        if ( variableRecibidodelHTML.invalid ){{c}}          
+        console.log('Formulario no válido');
+            return;
+        }
+
+        //Mostrar mensaje de Swal
+        <b>Swal.fire({{c}}</b>  
+            //'Título' o 'Código html'                                                                                  
+            <b>title: 'Espere',</b>    
+            //Texto                                                                             
+            <b>text: 'Guardando información',</b>  
+            //Icono. Otras opciones: success, error, warning, info, question                                                                 
+            <b>icon: 'info',</b>   
+            //Para que no se pueda cerrar al pulsar fuera de la ventana                                                                                 
+            <b>allowOutsideClick: false</b>                                                                         
+        <b>});</b>
+        //Se elimina el botón aceptar y se muestra símbolo de cargando
+        <b>Swal.showLoading();</b>                                                                                 
+    
+        //Para usar Sweetalert2
+        <b>let variablePeticion: Observable{{uff}}</b> 
+        //Creamos la variable petición (variablePeticion) donde metemos un observable                                                         
+  
+    //Si la variable de model (unomodel) tiene ID, actualice sino crea una
+    if (this.unomodel.id){{c}}                                                                                
+    //OPCIÓN 1 SIN SWEETALERT2 - Conexión con servicio.ts y este con Firebase - ACTUALIZAR
+    /*<b>this.variableservicio.actualizarHeroe( this.unomodel ).subscribe( variableRespuesta3 => {{c}}
+      console.log(variableRespuesta3);
+    });</b>*/
+  
+   //OPCIÓN 2 CON SWEETALERT2 - Conexión con servicio.ts y este con Firebase - ACTUALIZAR
+   <b>variablePeticion = this.variableservicio.actualizarHeroe(this.unomodel);</b>
+   /*Metemos en la variable (variablePeticion) el resultado que obtenemos en el model al coger 
+   la id (unomodel) y lo llevamos a la función (actualizarHeroe) del servicio (variableservicio)*/                           
+  <b>variablePeticion.subscribe( variableRespu => {{c}}
+        <b>Swal.fire({{c}}</b>                                                                                  
+        <b>title: this.unomodel.nombre,</b>                                                                     
+        <b>text: 'Se actualizó correctamente',</b>                                                              
+        <b>icon: 'success' </b>                                                                                 
+    });
+  });</b>
+  }else{{c}}
+  //OPCIÓN 1 SIN SWEETALERT2 - Conexión con servicio.ts y este con Firebase - CREAR NUEVO
+     /*<b>this.variableservicio.crearHeroe( this.unomodel ).subscribe( variableRespuesta => {{c}}
+      console.log(variableRespuesta);
+    });</b>*/
+  
+    //OPCIÓN 2 CON SWEETALERT2 - Conexión con servicio.ts y este con Firebase - CREAR NUEVO
+    <b>variablePeticion = this.variableservicio.crearHeroe(this.unomodel);</b>
+    /*Metemos en la variable (variablePeticion) el resultado que obtenemos en el model al no 
+      coger una id (unomodel) y lo llevamos a la función (crearHeroe) del servicio (variableservicio)*/                                
+      <b>variablePeticion.subscribe( variableRespu => {{c}}</b> 
+      /*Si se usa fuera del if/else es un mensaje genérico actualiza/guarda pero si lo metemos 
+        dentro de cada uno, especificamos si es guardar o actualizar*/                                              
+          <b>Swal.fire({{c}}
+          title: this.unomodel.nombre,
+          text: 'Se guardó correctamente',
+          icon: 'success'
+          });
+    });</b>
+  }
+  
+  //Opción 3 CON SWEETALERT2 - Fuera del if/else
+      /*<b>variablePeticion.subscribe( variableRespu => {{c}}
+        Swal.fire({{c}}
+        title: this.unomodel.nombre,
+        text: 'Se guardo/actualizó correctamente',
+        icon: 'success'
+        });
+    });</b>*/
+  
+      console.log(variableRecibidodelHTML);                   
+      console.log(this.unomodel);                          
+  
+  }
+
+}
+
+
+</pre>
+                  </td>
+                  <td><app-forfireunelementohtml4></app-forfireunelementohtml4></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaseangularformulario7" role="tabpanel" aria-labelledby="pills-firebaseangularformulario7-tab">
+        <div class="table-responsive-md">
+          <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col">Servicio</th>
+                      <th scope="col">Ts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UnoModel } from '../model/uno.model';
+import {{c}} map } from 'rxjs/operators';           
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  private variableUrl = 'https://sodertweb.firebaseio.com/';      
+
+  constructor( private variablehttp: HttpClient ) {{c}} }       
+
+  crearHeroe ( variableHeroe: UnoModel ){{c}}
+                     
+      return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe(  
+       
+          map( (variableresp: any) => {{c}}       
+                             
+              variableHeroe.id = variableresp.name;   
+                
+              return variableHeroe;                               
+            })
+          );
+    }
+
+    actualizarHeroe( variableHeroe2: UnoModel ){{c}}                                              
+
+        const idTemporal = {{c}}                                                                   
+            ...variableHeroe2
+          };
+      
+          delete idTemporal.id;                                                                       
+      
+          return this.variablehttp.put(`${{c}} this.variableUrl }/heroes/${{c}} variableHeroe2.id }.json`, idTemporal)         
+      }
+
+      //Función creada para obtener todos los elementos
+      <b>getTodosElementos(){{c}}</b>                                                     
+        //Opción completa
+        //<b>return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( variableRespuestaTodosElementos => this.variableCrearArreglo(variableRespuestaTodosElementos)</b>       
+        /*return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`) -> Devuelve (return) lo que almacena en la variable (variablehttp) 
+          del servicio http que coge (get) de la dirección guardada en la variable (variableUrl) y la continuidad de una base de datos, en este caso 
+          se llama heroes, acabando en json para que actue bien en firebase, no necesario en otras bases de datos. .pipe( map( variableRespuestaTodosElementos => 
+          this.variableCrearArreglo(variableRespuestaTodosElementos) o .pipe( map( this.variableCrearArreglo -> Map transforma la respuesta recibida 
+          (variableRespuestaTodosElementos) en un objeto para obetener/filtrar la información que realmente necesitamos (Paso especial y necesario de firebase)*/
+        
+        //Opción reducida
+        <b>return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( this.variableCrearArreglo 
+        ));
+       }</b>
+
+       //Metemos en la variable (variableCrearArreglo) lo que devolvemos (return) (Paso especial y necesario de firebase)
+        <b>private variableCrearArreglo ( variableObjeto: object ){{c}}</b>                  
+
+        //Creamos una constante/arreglo (variableConst) donde metemos el model (UnoModel) y lo vemos (console.log(variableObjeto);)
+        <b>const variableConst: UnoModel[] = [];</b>                                     
+        <b>console.log(variableObjeto);</b>
+
+    //Si la variable de objeto (variableObjeto) es nulo, no hay información en la base de datos, devuelve (return) un objeto vacío
+    <b>if ( variableObjeto === null ) {{c}}</b>                                        
+    <b>return [];
+    }</b>
+
+    /*El objeto (Object) y llaves (keys), cogemos la variable (variableObjeto) y lo pasamos por el for (forEach) para obtener cada 
+      registro de la base de datos metiendolo en la variable key (variableKey)*/
+    <b>Object.keys( variableObjeto ).forEach( variableKeyID => {{c}}</b>               
+    <b>const variableObjetoHeroe: UnoModel = variableObjeto[variableKeyID];</b>
+    //Metemos la variable del objeto (variableObjetoHeroe) y sacamos la id, lo metemos en una variable de ID (variableKeyID)
+    <b>variableObjetoHeroe.id = variableKeyID; </b>                                    
+
+    <b>variableConst.push( variableObjetoHeroe );
+    } );</b>
+    //Devolvemos la variable
+    <b>return variableConst;</b>                                                     
+  <b>}</b>
+}</pre></td>
+                      <td><pre>import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+import {{c}} UnoModel } from '../model/uno.model';</b>
+
+@Component({{c}}
+  selector: 'app-forfirevarioselementoshtml',
+  templateUrl: './forfirevarioselementoshtml.component.html',
+  styleUrls: ['./forfirevarioselementoshtml.component.css']
+})
+export class ForfirevarioselementoshtmlComponent implements OnInit {{c}}
+
+  //Metemos en la variable del model (unomodel) el model (UnoModel())
+  <b>unomodel2: UnoModel[] = [];</b>                                                                
+
+  constructor( private variableservicio: ServicioformulariofireService ) {{c}} }
+
+  //Para que se inicie nada más arrancar la página
+  ngOnInit() {{c}}  
+  /*Llamamos a la variable del servicio (variableservicio) especialmente a la función 
+    get (getTodosElementos()), la subscribimos (subscribe) y lo metemos en la variable 
+    de respuesta (variableRespuestaTodos). Al hacer console.log(variableRespuestaTodos); 
+    observamos todos los datos en la consola*/                                                                              
+    <b>this.variableservicio.getTodosElementos().subscribe( variableRespuestaTodos => {{c}}     
+        console.log(variableRespuestaTodos);</b>
+    //Metemos en la variable del model (unomodel2) la variable recibido (variableRespuestaTodos)
+    <b>this.unomodel2 = variableRespuestaTodos;                                                  
+  });</b>
+  }
+
+}</pre></td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        
+        <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Html</th>
+                    <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>{{b}}<b>{{b0}}</b>{{b1}}<b>{{b2}}</b>{{b3}}<b>{{b4}}</b>{{b5}}<b>{{b6}}</b>{{b7}}<b>{{b8}}</b>{{b9}}<b>{{b10}}</b>{{b11}}<b>{{b12}}</b>{{b13}}<b>{{b14}}</b>{{b15}}</pre></td>
+                    <td><app-forfirevarioselementoshtml></app-forfirevarioselementoshtml></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+
+            <div class="tab-pane fade" id="pills-firebaseangularformulario8" role="tabpanel" aria-labelledby="pills-firebaseangularformulario8-tab">
+        <div class="table-responsive-md">
+          <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col">Servicio</th>
+                      <th scope="col">Ts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UnoModel } from '../model/uno.model';
+import {{c}} map } from 'rxjs/operators';           
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  private variableUrl = 'https://sodertweb.firebaseio.com/';      
+
+  constructor( private variablehttp: HttpClient ) {{c}} }       
+
+  crearHeroe ( variableHeroe: UnoModel ){{c}}
+                     
+      return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe(  
+       
+          map( (variableresp: any) => {{c}}       
+                             
+              variableHeroe.id = variableresp.name;   
+                
+              return variableHeroe;                               
+            })
+          );
+    }
+
+    actualizarHeroe( variableHeroe2: UnoModel ){{c}}                                              
+
+        const idTemporal = {{c}}                                                                   
+            ...variableHeroe2
+          };
+      
+          delete idTemporal.id;                                                                       
+      
+          return this.variablehttp.put(`${{c}} this.variableUrl }/heroes/${{c}} variableHeroe2.id }.json`, idTemporal)         
+      }
+
+      getTodosElementos(){{c}}                                                     
+        //Opción completa
+        //return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( variableRespuestaTodosElementos => 
+          this.variableCrearArreglo(variableRespuestaTodosElementos)       
+        
+        //Opción reducida
+        return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( this.variableCrearArreglo 
+        ));
+       }
+
+        private variableCrearArreglo ( variableObjeto: object ){{c}}                  
+
+        const variableConst: UnoModel[] = [];                                     
+        console.log(variableObjeto);
+
+    if ( variableObjeto === null ) {{c}}                                        
+    return [];
+    }
+
+    Object.keys( variableObjeto ).forEach( variableKeyID => {{c}}               
+    const variableObjetoHeroe: UnoModel = variableObjeto[variableKeyID];
+
+    variableObjetoHeroe.id = variableKeyID;                                     
+
+    variableConst.push( variableObjetoHeroe );
+    } );
+
+    return variableConst;                                                     
+  }
+
+  //Función (getUnElemento()) donde cogemos la variable (variableID) sacada de la función
+<b>  getUnElemento(variableID:string){{c}}  </b>
+    /*Devuelve (return) lo que metemos en la variable del servicio http (variablehttp) 
+      cogiendo (get) la dirección principal con la variable (`${{c}} this.variableUrl }), 
+      la base de datos (/heroes) especialmente la ID (/${{c}} variableID }.json`) acabado 
+      en json para que funcione en firebase*/                                                      
+<b>    return this.variablehttp.get(`${{c}} this.variableUrl }/heroes/${{c}} variableID }.json`); 
+}</b>
+
+}</pre></td>
+                      <td><pre>
+    import {{c}} Component, OnInit } from '@angular/core';
+    import {{c}} UnoModel } from  '../model/uno.model';
+    import {{c}} NgForm } from '@angular/forms';
+    import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+    import Swal from 'sweetalert2';
+    import {{c}} Observable } from 'rxjs';
+    <b>import {{c}} ActivatedRoute } from '@angular/router';</b>
+
+    @Component({{c}}
+    selector: 'app-forfireunelementohtml',
+    templateUrl: './forfireunelementohtml.component.html',
+    styleUrls: ['./forfireunelementohtml.component.css']
+    })
+    export class ForfireunelementohtmlComponent implements OnInit {{c}}
+
+        //1º Opción (Recomendable)
+        unomodel = new UnoModel();                           
+
+        //2º Opción (Redundante)
+        //unomodel: UnoModel = new UnoModel();
+
+    constructor( private variableservicio: ServicioformulariofireService<b>,
+                 private variableRoute: ActivatedRoute</b> ) {{c}} }
+
+    ngOnInit() {{c}}
+
+    //Mete en la variable (variable_Id) la id de cada elemento
+    <b>const variable_Id = this.variableRoute.snapshot.paramMap.get('id');          
+        console.log(variable_Id);</b>
+    
+    /*Si la variable (variable_Id) es distitno (!==) al argumento ('nuevo') 
+      que coincide con el enlace de todos los elementos.html*/
+    <b>if ( variable_Id !== 'nuevo' ){{c}}</b>    
+        /*Meter en la variable del servicio (variableservicio) la función de un elemento (getUnElemento) 
+          para coger la variable anterior creada (variable_Id) y nos subscribimos (subscribe), dejando 
+          los resultados en la variable de respuesta (variable_respuesta) con estructura del model (UnoModel)*/                                       
+        <b>this.variableservicio.getUnElemento(variable_Id).subscribe( (variable_respuesta: UnoModel) => {{c}}     
+        console.log(variable_respuesta);</b>
+
+        //Metemos en model (unomodel) la variable de la respuesta (variable_respuesta)
+        <b>this.unomodel = variable_respuesta;</b>                                   
+        //Metemos en model (unomodel) punto (.) id la variable utilizada en la función de este componente.ts    
+        <b>this.unomodel.id = variable_Id;                                       
+        });
+      }</b>
+
+    }
+
+    guardar( variableRecibidodelHTML: NgForm ){{c}}        
+
+        if ( variableRecibidodelHTML.invalid ){{c}}          
+        console.log('Formulario no válido');
+            return;
+        }
+
+        Swal.fire({{c}}                                                                                    
+            title: 'Espere',                                                                     
+            text: 'Guardando información',  
+            //Icono. Otras opciones: success, error, warning, info, question                                                                 
+            icon: 'info',                                                                                  
+            allowOutsideClick: false                                                                         
+        });
+
+        Swal.showLoading();                                                                                 
+
+        let variablePeticion: Observable{{uff}}                                                        
+  
+    if (this.unomodel.id){{c}}                                                                                
+    //OPCIÓN 1 SIN SWEETALERT2 - Conexión con servicio.ts y este con Firebase - ACTUALIZAR
+    /*this.variableservicio.actualizarHeroe( this.unomodel ).subscribe( variableRespuesta3 => {{c}}
+      console.log(variableRespuesta3);
+    });*/
+  
+   //OPCIÓN 2 CON SWEETALERT2 - Conexión con servicio.ts y este con Firebase - ACTUALIZAR
+   variablePeticion = this.variableservicio.actualizarHeroe(this.unomodel);                           
+  variablePeticion.subscribe( variableRespu => {{c}}
+        Swal.fire({{c}}                                                                                  
+        title: this.unomodel.nombre,                                                                     
+        text: 'Se actualizó correctamente',                                                              
+        icon: 'success'                                                                                  
+    });
+  });
+  }else{{c}}
+  //OPCIÓN 1 SIN SWEETALERT2 - Conexión con servicio.ts y este con Firebase - CREAR NUEVO
+     /*this.variableservicio.crearHeroe( this.unomodel ).subscribe( variableRespuesta => {{c}}
+      console.log(variableRespuesta);
+    });*/
+  
+    //OPCIÓN 2 CON SWEETALERT2 - Conexión con servicio.ts y este con Firebase - CREAR NUEVO
+    variablePeticion = this.variableservicio.crearHeroe(this.unomodel);                               
+      variablePeticion.subscribe( variableRespu => {{c}}                                            
+          Swal.fire({{c}}
+          title: this.unomodel.nombre,
+          text: 'Se guardó correctamente',
+          icon: 'success'
+          });
+    });
+  }
+  
+  //Opción 3 CON SWEETALERT2 - Fuera del if/else
+      /*variablePeticion.subscribe( variableRespu => {{c}}
+        Swal.fire({{c}}
+        title: this.unomodel.nombre,
+        text: 'Se guardo/actualizó correctamente',
+        icon: 'success'
+        });
+    });*/
+  
+      console.log(variableRecibidodelHTML);                   
+      console.log(this.unomodel);                          
+  
+  }
+
+}</pre></td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        
+        <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th colspan="2">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><pre>
+<b>Entrar</b> en algún <b>elemento</b> dándole al <b>lápiz</b> y <b>observamos que se carga los datos</b> 
+en el <b>componente</b> de <b>1 elemento</b> y <u>podremos modificarlo</u></pre><app-forfirevarioselementoshtml2></app-forfirevarioselementoshtml2></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-firebaseangularformulario9" role="tabpanel" aria-labelledby="pills-firebaseangularformulario9-tab">
+        <div class="table-responsive-md">
+          <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col">Servicio</th>
+                      <th scope="col">Ts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UnoModel } from '../model/uno.model';
+import {{c}} map } from 'rxjs/operators';           
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  private variableUrl = 'https://sodertweb.firebaseio.com/';      
+
+  constructor( private variablehttp: HttpClient ) {{c}} }       
+
+  crearHeroe ( variableHeroe: UnoModel ){{c}}
+                     
+      return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe(  
+       
+          map( (variableresp: any) => {{c}}       
+                             
+              variableHeroe.id = variableresp.name;   
+                
+              return variableHeroe;                               
+            })
+          );
+    }
+
+    actualizarHeroe( variableHeroe2: UnoModel ){{c}}                                              
+
+        const idTemporal = {{c}}                                                                   
+            ...variableHeroe2
+          };
+      
+          delete idTemporal.id;                                                                       
+      
+          return this.variablehttp.put(`${{c}} this.variableUrl }/heroes/${{c}} variableHeroe2.id }.json`, idTemporal)         
+      }
+
+      getTodosElementos(){{c}}                                                     
+        //Opción completa
+        //return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( variableRespuestaTodosElementos => 
+          this.variableCrearArreglo(variableRespuestaTodosElementos)       
+        
+        //Opción reducida
+        return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( this.variableCrearArreglo 
+        ));
+       }
+
+        private variableCrearArreglo ( variableObjeto: object ){{c}}                  
+
+        const variableConst: UnoModel[] = [];                                     
+        console.log(variableObjeto);
+
+    if ( variableObjeto === null ) {{c}}                                        
+    return [];
+    }
+
+    Object.keys( variableObjeto ).forEach( variableKeyID => {{c}}               
+    const variableObjetoHeroe: UnoModel = variableObjeto[variableKeyID];
+
+    variableObjetoHeroe.id = variableKeyID;                                     
+
+    variableConst.push( variableObjetoHeroe );
+    } );
+
+    return variableConst;                                                     
+  }
+
+  getUnElemento(variableID:string){{c}}  
+
+    return this.variablehttp.get(`${{c}} this.variableUrl }/heroes/${{c}} variableID }.json`); 
+  }
+
+  //Función (borrarElemento()) que saca en una variable (VariableId) lo que abajo se muestra
+  <b>borrarElemento( VariableId: string ){{c}} </b>                                             
+
+    /*Devuelve (return) en la variable de servicio http (variablehttp) la función de borrar (delete) 
+      a la dirección desglosada en variable principal (${{c}} this.variableUrl }), luego la base de 
+      datos que estamos tratando (heroes) y por último la ID que cogemos (${{c}} VariableId }.json) 
+      acabado en json para que funcione en firebase*/
+    <b>return this.variablehttp.delete(`${{c}} this.variableUrl }/heroes/${{c}} VariableId }.json`);   
+  }</b>
+
+}</pre>
+                      </td>
+                      <td>
+                          <pre>import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+import {{c}} UnoModel } from '../model/uno.model';
+<b>import Swal from 'sweetalert2';</b>
+
+@Component({{c}}
+  selector: 'app-forfirevarioselementoshtml',
+  templateUrl: './forfirevarioselementoshtml.component.html',
+  styleUrls: ['./forfirevarioselementoshtml.component.css']
+})
+export class ForfirevarioselementoshtmlComponent implements OnInit {{c}}
+
+  unomodel2: UnoModel[] = [];                                                                
+
+  constructor( private variableservicio: ServicioformulariofireService ) {{c}} }
+
+  ngOnInit() {{c}}  
+                                                                          
+    this.variableservicio.getTodosElementos().subscribe( variableRespuestaTodos => {{c}}     
+        console.log(variableRespuestaTodos);
+
+    this.unomodel2 = variableRespuestaTodos;                                                  
+  });
+  }
+
+  //Función (borrarUnElemento) donde sacamos y usamos la variable que coge el model (VariableModel)
+  <b>borrarUnElemento(  VariableModel: UnoModel, i: number ){{c}}</b>                       
+    //Borrar elemento del arreglo, para no tener que actualizar para verlo
+
+<b>Swal.fire({{c}}
+    title: '¿Estás seguro?',</b>
+    //Muestra el nombre seleccionado
+    <b>text: `Está seguro que desea borrar a ${{c}} VariableModel.nombre }`,    
+    icon: 'question',</b>
+    //Muestra botón de confirmación (true) no muestra (false)
+    <b>showConfirmButton: true,</b>
+    //Muestra botón de cancelación (true) no muestra (false)                                                  
+    <b>showCancelButton: true  </b>
+    //Depende lo que la persona conteste (then) se mete en la variable (variableContestacion)                                                  
+  <b>}).then(variableContestacion => {{c}}  </b> 
+  //Si la variable (variableContestacion) su valor (value) es true (borra) y si es false (no hace nada)                                    
+   <b> if (variableContestacion.value){{c}} </b>                                     
+
+        <b>this.unomodel2.splice(i, 1);</b>
+        //Coge el arreglo y borra (splice) la posición (i) una sola (1)                                                 
+
+        //Borrar elemento, se ve al actualizar
+        <b>this.variableservicio.borrarElemento( VariableModel.id ).subscribe();</b>
+        /*Metemos en la variable del servicio.ts (variableservicio), sacamos 
+          la función del servicio.ts (borrarElemento) cogiendo la variable 
+          del model con la id (VariableModel.id) para subscribirlo y poder borrarlo*/        
+  <b> }
+    });   
+    
+  }</b>
+
+}</pre>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        
+        <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Html</th>
+                    <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>{{d}}<b>{{d0}}</b>{{d1}}</pre></td>
+                    <td><app-forfirevarioselementoshtml3></app-forfirevarioselementoshtml3></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-firebaseangularformulario10" role="tabpanel" aria-labelledby="pills-firebaseangularformulario10-tab">
+        <div class="table-responsive-md">
+          <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col">Servicio</th>
+                      <th scope="col">Ts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UnoModel } from '../model/uno.model';
+import {{c}} map<b>, delay</b> } from 'rxjs/operators';           
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicioformulariofireService {{c}}
+
+  private variableUrl = 'https://sodertweb.firebaseio.com/';      
+
+  constructor( private variablehttp: HttpClient ) {{c}} }       
+
+  crearHeroe ( variableHeroe: UnoModel ){{c}}
+                     
+      return this.variablehttp.post(`${{c}} this.variableUrl }/heroes.json`, variableHeroe).pipe(  
+       
+          map( (variableresp: any) => {{c}}       
+                             
+              variableHeroe.id = variableresp.name;   
+                
+              return variableHeroe;                               
+            })
+          );
+    }
+
+    actualizarHeroe( variableHeroe2: UnoModel ){{c}}                                              
+
+        const idTemporal = {{c}}                                                                   
+            ...variableHeroe2
+          };
+      
+          delete idTemporal.id;                                                                       
+      
+          return this.variablehttp.put(`${{c}} this.variableUrl }/heroes/${{c}} variableHeroe2.id }.json`, idTemporal)         
+      }
+
+      getTodosElementos(){{c}}                                                     
+        //Opción completa
+        //return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( variableRespuestaTodosElementos => 
+          this.variableCrearArreglo(variableRespuestaTodosElementos)       
+        
+        //Opción reducida
+        return this.variablehttp.get(`${{c}} this.variableUrl }/heroes.json`).pipe( map( this.variableCrearArreglo<b>),</b>
+      
+            //Para atrasar la muestra de información en pantalla y así poder ver que está cargando
+            <b>delay(0)</b>        
+            /*delay(0) o delay(1500 u otros segundos): Para atrasar la muestra de información en pantalla y así poder ver que 
+              está cargando, no es recomendable a mi opinión pero para verlo ahora sí. En este ejercicio hemos puesto en el 
+              servicio un delay de 5500 seg*/
+            <b>); </b>
+       }
+
+        private variableCrearArreglo ( variableObjeto: object ){{c}}                  
+
+        const variableConst: UnoModel[] = [];                                     
+        console.log(variableObjeto);
+
+    if ( variableObjeto === null ) {{c}}                                        
+    return [];
+    }
+
+    Object.keys( variableObjeto ).forEach( variableKeyID => {{c}}               
+    const variableObjetoHeroe: UnoModel = variableObjeto[variableKeyID];
+
+    variableObjetoHeroe.id = variableKeyID;                                     
+
+    variableConst.push( variableObjetoHeroe );
+    } );
+
+    return variableConst;                                                     
+  }
+
+  getUnElemento(variableID:string){{c}}  
+
+    return this.variablehttp.get(`${{c}} this.variableUrl }/heroes/${{c}} variableID }.json`); 
+  }
+
+  borrarElemento( VariableId: string ){{c}}                                              
+
+    return this.variablehttp.delete(`${{c}} this.variableUrl }/heroes/${{c}} VariableId }.json`);   
+  }
+
+}</pre>
+                      </td>
+                      <td>
+                          <pre>import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ServicioformulariofireService } from '../servicio/servicioformulariofire.service';
+import {{c}} UnoModel } from '../model/uno.model';
+import Swal from 'sweetalert2';
+
+@Component({{c}}
+  selector: 'app-forfirevarioselementoshtml',
+  templateUrl: './forfirevarioselementoshtml.component.html',
+  styleUrls: ['./forfirevarioselementoshtml.component.css']
+})
+export class ForfirevarioselementoshtmlComponent implements OnInit {{c}}
+
+  unomodel2: UnoModel[] = [];   
+  
+  <b>variablecargando = false;  </b>
+
+  constructor( private variableservicio: ServicioformulariofireService ) {{c}} }
+
+  ngOnInit() {{c}}
+  
+  /*Antes que cualquier cosa se dispare esto por eso lo ponemos el 1º dentro del ngOnInit
+    Dentro del ngOnInit para que se dispare el 1º, en true para que aparezca cargando 
+    mientras carga los datos/página*/
+  <b>this.variablecargando = true;</b>
+                                                                          
+    this.variableservicio.getTodosElementos().subscribe( variableRespuestaTodos => {{c}}     
+        console.log(variableRespuestaTodos);
+
+    this.unomodel2 = variableRespuestaTodos; 
+    
+    //Para cuando termine de cargar. Cuando termine de cargar desaparezca
+    <b>this.variablecargando = false; </b>  
+  });
+  }
+
+  borrarUnElemento(  VariableModel: UnoModel, i: number ){{c}}                       
+
+Swal.fire({{c}}
+    title: '¿Estás seguro?',
+    text: `Está seguro que desea borrar a ${{c}} VariableModel.nombre }`,    
+    icon: 'question',
+    showConfirmButton: true,                                                  
+    showCancelButton: true                                                   
+  }).then(variableContestacion => {{c}}                                      
+    if (variableContestacion.value){{c}}                                      
+
+        this.unomodel2.splice(i, 1);                                            
+
+        this.variableservicio.borrarElemento( VariableModel.id ).subscribe();       
+   }
+    });   
+    
+  }
+
+}</pre>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        
+        <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Html</th>
+                    <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>{{r}}<b>{{r0}}</b>{{r1}}<b>{{r2}}</b>{{r3}}</pre></td>
+                    <td> <button class="btn btn-dark m-2" [routerLink]="['/varioselementos4']">Para ver efecto de como se carga, ya que abajo ya está cargado cuando bajamos (Si vemos el efecto si no tenemos registro)</button>
+                    <app-forfirevarioselementoshtml4></app-forfirevarioselementoshtml4></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+</div>
+
+
+

@@ -1,0 +1,151 @@
+<h6><u><b>Angular - Login</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-loginangular-tab" data-toggle="pill" href="#pills-loginangular" role="tab" aria-controls="pills-loginangular" aria-selected="true" style="color: black;">App.module.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-loginangular0-tab" data-toggle="pill" href="#pills-loginangular0" role="tab" aria-controls="pills-loginangular0" aria-selected="false" style="color: black;">Model.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-loginangular1-tab" data-toggle="pill" href="#pills-loginangular1" role="tab" aria-controls="pills-loginangular1" aria-selected="false" style="color: black;">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-loginangular2-tab" data-toggle="pill" href="#pills-loginangular2" role="tab" aria-controls="pills-loginangular2" aria-selected="false" style="color: black;">Firebase</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/angular']">Atras</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-loginangular" role="tabpanel" aria-labelledby="pills-loginangular-tab"><pre>
+      //Por defecto
+      import {{c}} BrowserModule } from '@angular/platform-browser';
+      import {{c}} NgModule } from '@angular/core';
+
+      import {{c}} AppComponent } from './app.component';
+
+      //Conexión con app.routing.ts - Enlazar páginas
+      import {{c}} routing, appRoutingProviders } from './app.routing';
+
+      //Componentes - Páginas añadir después de crearlas
+      import {{c}} HomeComponent } from './paginas/home/home.component';
+      import {{c}} ErrorComponent } from './componentes/error/error.component';
+      import {{c}} PieComponent } from './componentes/pie/pie.component';
+      import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+      //Formularios
+      <b>import {{c}} FormsModule } from '@angular/forms';</b>
+
+      @NgModule({{c}}
+          declarations: [
+          //Por defecto
+          AppComponent,
+          //Componentes - Páginas añadir después de crearlas
+          HomeComponent,
+          ErrorComponent,
+          PieComponent,
+          CabeceraComponent
+          ],
+          imports: [
+          //Por defecto
+          BrowserModule,
+          //Conexión con app.routing.ts - Enlazar páginas
+          routing<b>,</b>
+          //Formularios
+          <b>FormsModule</b>
+      ],
+      providers: [
+          //Conexión con app.routing.ts - Enlazar páginas
+          appRoutingProviders
+      ],
+      //Por defecto - Librería
+      bootstrap: [AppComponent]
+      })
+      //Por defecto
+      export class AppModule {{c}}}
+  
+  
+</pre>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-loginangular0" role="tabpanel" aria-labelledby="pills-loginangular0-tab">
+<pre>
+     //Export -> Para ser usado fuera
+  <b>export class UsuarioModel {{c}}    
+        email: string;
+        password: string;
+        nombre: string;
+        fechadenacimiento?: string;</b>   //? -> Opcional de rellenar
+    }</pre>
+    </div>
+
+    <div class="tab-pane fade" id="pills-loginangular1" role="tabpanel" aria-labelledby="pills-loginangular1-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Ts</th>
+                    <th scope="col">Html</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>
+import {{c}} Component, OnInit } from '@angular/core';
+//Para usar [(ngModel)] 
+<b>import {{c}} NgForm } from '@angular/forms'; </b>    
+//Para usar la estructura definida en model -> UsuarioModel                    
+<b>import {{c}} UsuarioModel } from '../model/usuario.model';   </b>        
+
+@Component({{c}}
+  selector: 'app-loginnormal',
+  templateUrl: './loginnormal.component.html',
+  styleUrls: ['./loginnormal.component.css']
+})
+export class LoginnormalComponent implements OnInit {{c}}
+
+  <b>usuario: UsuarioModel = new UsuarioModel (); </b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  //Recibe formulario
+  <b>login (form:NgForm){{c}}  </b>
+    //Si el formulario es invalido se salga del formulario, no envíe/ni coja datos                                         
+    <b>if(form.invalid){{c}}                                               
+    return;
+  }</b>
+  
+  //Si es válido (else) muestre console.log(this.usuario);
+  <b>console.log(this.usuario);                                          
+  console.log('Imprimir si el formulario es válido');
+  
+  }</b>
+
+}</pre></td>
+                    <td><pre>{{a}}<b>{{a0}}</b>{{a1}}<b>{{a2}}</b>{{a3}}<b>{{a4}}</b>{{a5}}<b>{{a6}}</b>{{a7}}<b>{{a8}}</b>{{a9}}</pre></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive-md">
+        <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="2">Funcionamiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2"><app-loginnormal></app-loginnormal></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-loginangular2" role="tabpanel" aria-labelledby="pills-loginangular2-tab"><app-login></app-login></div>
+
+</div>

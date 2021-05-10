@@ -1,0 +1,69 @@
+<form autocomplete="off" (ngSubmit)="guardartemplate(variableLocalTemplate)" #variableLocalTemplate="ngForm">
+    <!-- autocompletar formulario. off=No y on=Si -->
+                       <!-- (ngSubmit...: Llama a la función al pulsar el botón de más abajo (button type="submit") y manda la variable local (variableLocalTemplate) -->
+                                                                           <!-- #variable_local: Se usa dentro del html del tipo ngForm -->
+   <div>
+   
+       
+       <div class="form-group row">
+           <label class="col-2 col-form-label">Nombre de Prueba</label>
+           <div class="col-8">
+               <input class="form-control" type="text" name="nombreDePrueba" [(ngModel)]="usuario.nombreDePrueba" placeholder="Nombre de prueba">
+                                                  <!-- name: Necesario para coger datos e identificar campo de datos -->
+                                                  <!-- [(ngModel)]: Recibe [] y envía () valores ngModel. Coge los datos. 
+                                                                    Array de la variable (usuario) y dentro subvariable (nombreDePrueba) -->
+                                                                                             <!-- nombreDePrueba: Ejemplo para ver que coge datos,
+                                                                                                                  Se observa el nombre indicado -->
+           </div>
+       </div>
+   
+   
+     <div class="form-group row">
+         <label class="col-2 col-form-label">Nombre</label>
+         <div class="col-8">
+             <input class="form-control" type="text" name="nombre" [(ngModel)]="usuario.nombre" required minlength="5" placeholder="Nombre">
+         </div>
+     </div>
+   
+   
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Apellido</label>
+       <div class="col-8">
+         <input class="form-control" type="text" name="apellido" [(ngModel)]="usuario.apellido" required minlength="5" placeholder="Apellido">
+       </div>
+     </div>
+   
+   </div>
+   
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Correo</label>
+       <div class="col-8">
+         <input class="form-control"type="email" name="email" [(ngModel)]="usuario.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" required placeholder="Correo electrónico">
+     </div>
+   </div>
+   
+   <div class="form-group row mt-5">
+   <label class="col-2 col-form-label">Género</label>
+   <div class="col-8">
+       <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="genero" [(ngModel)]="usuario.genero" value="M" required>
+                                                                                           <!-- value: Para seleccionar uno y no los dos a la vez, 
+                                                                                                       hay que darle diferente valor 
+                                                                                                       (Ej: uno M y otro F) -->
+           <label class="form-check-label">Masculino</label>
+       </div>
+       <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="genero" [(ngModel)]="usuario.genero" value="F" required>
+           <label class="form-check-label">Femenino</label>
+       </div>
+   </div>
+   </div>
+   
+     <div class="form-group row">
+       <label class="col-2 col-form-label">&nbsp;</label>
+       <div class="input-group col-md-8">
+           <button type="submit" class="btn btn-outline-primary btn-block">Guardar</button>
+       </div>
+     </div>
+   
+   </form>

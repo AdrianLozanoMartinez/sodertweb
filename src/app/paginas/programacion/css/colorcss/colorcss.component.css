@@ -1,0 +1,165 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+
+
+.unColor{
+    background-color: lightgreen;
+}
+
+.ColorSaturacionLuz{
+    background-color:  hsl(170,87%,31%);        /*Color,Saturación,Luz, 
+                                                    0-360,  0-100%,  0-100%*/
+}
+
+.RedGreenBlueTransparencia{
+    background-color: rgba(127, 158, 41, 0.726);    /*Red green blue y transparencia, 
+                                                     0-360, 0-360, 0-360,    0-1*/
+}
+
+
+.TonoSaturacionBrilloTransparencia{
+    background-color: hsla(10, 27%, 25%, 0.849);        /*Tono, Saturación, Brillo, transparencia
+                                                            hue, saturation, lightness, transparency
+                                                        0-120-240, 0-100%,    0-100%,      0-1*/ 
+}
+
+#linealverticaltodo{
+    background-image: linear-gradient(rgb(129,18,18)30%, blue 50px); /*color % o px (opcional), hex,rgb,rgba...%(inusual) o px (recomendable)*/
+}
+
+#linealverticalderecha{
+    background-image: linear-gradient(to right, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalizquierda{
+    background-image: linear-gradient(to left, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarriba{
+    background-image: linear-gradient(to top, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalabajo{
+    background-image: linear-gradient(to bottom, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalabajoderecha{
+    background-image: linear-gradient(to bottom right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalabajoizquierda{
+    background-image: linear-gradient(to bottom left, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarribaderecha{
+    background-image: linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarribaizquierda{
+    background-image: linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalmascolores{
+    background-image: linear-gradient(rgb(129, 18, 120)30%, rgb(0, 0, 0), green, blue); /*color1 hex,rgb,rgba (opcional -> %(inusual) o px (recomendable)), color2 hex,rgb,rgba (opcional -> % o px), color3 hex,rgb,rgba (opcional -> % o px)......*/
+}
+
+#linealhorizontal{
+    background-image: repeating-linear-gradient(red 10%, blue 15%, green 20%);  /*color % o px (opcional), hex,rgb,rgba...%(inusual) o px (recomendable)*/
+}
+
+#linealhorizontalderecha{
+    background-image: repeating-linear-gradient(to right, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalizquierda{
+    background-image: repeating-linear-gradient(to left, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarriba{
+    background-image: repeating-linear-gradient(to top, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalabajo{
+    background-image: repeating-linear-gradient(to bottom, rgb(18, 129, 27)30%, rgb(44, 111, 138)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalabajoderecha{
+    background-image: repeating-linear-gradient(to bottom right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalabajoizquierda{
+    background-image: repeating-linear-gradient(to bottom left, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarribaderecha{
+    background-image: repeating-linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarribaizquierda{
+    background-image: repeating-linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalmascolores{
+    background-image: repeating-linear-gradient(rgb(129, 18, 120)30%, rgb(0, 0, 0), green, blue); /*color1 hex,rgb,rgba (opcional -> %(inusual) o px (recomendable)), color2 hex,rgb,rgba (opcional -> % o px), color3 hex,rgb,rgba (opcional -> % o px)......*/
+}
+
+
+
+#radialfondocirculos{
+    background-image: radial-gradient(ellipse, red 10%, blue 30%, yellow 500px);  /*Fondo y círculos entero en el centro*/
+}
+
+#radialfondocirculoscortados{
+    background-image: radial-gradient(Circle, red 10%, blue 30%, yellow 500px);  /*Fondo y círculos cortados en el centro*/
+}
+
+#radialcirculostodo{
+    background-image: repeating-radial-gradient(ellipse, red 10%, blue 30%, yellow 500px);  /*Los círculos cubre todo*/
+}
+
+#radialcirculoscortados{
+    background-image: repeating-radial-gradient(Circle, red 10%, blue 30%, yellow 500px);     /*Los círculos cubre todo cortados en trozos y repetidos*/
+}
+
+
+
+#width{
+    width: fit-content;                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width*/
+    padding: 15px;                                      /*Actua con width, depende el que use fit-content, amplia cuadro hacia lo ancho*/
+    background-color: blue;                           /*Color principal*/
+    box-shadow: chartreuse 15px 10px;                 /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}
+
+#widthnegativo{
+    width: fit-content;                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width*/
+    padding: 15px;                                      /*Actua con width, depende el que use fit-content, amplia cuadro hacia lo ancho*/
+    background-color: blue;                           /*Color principal*/
+    box-shadow: chartreuse -15px -10px;               /*Color de la sombre (opcional), de izquierda arriba, difuminado*/
+}
+
+
+#height{
+    height: fit-content;                                /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del height*/
+    padding: 15px;                                      /*Actua con height, depende el que use fit-content, amplia cuadro hacia abajo*/
+    background-color: rgb(60, 255, 0);                           /*Color principal*/
+    box-shadow: rgb(255, 0, 221) 15px 10px;                 /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}
+
+#heightnegativo{
+    height: fit-content;                                /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del height*/
+    padding: 15px;                                      /*Actua con height, depende el que use fit-content, amplia cuadro hacia abajo*/
+    background-color: rgb(60, 255, 0);                           /*Color principal*/
+    box-shadow: rgb(255, 0, 221) -15px -10px;                 /*Color de la sombre (opcional), de izquierda arriba, difuminado*/
+}
+
+#massombras{
+    width: fit-content;                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width o height*/
+    padding: 15px;                                      /*Actua como height o width, depende el que use fit-content, amplia cuadro hacia abajo o ancho*/
+    background-color: blue;                           /*Color principal*/
+    box-shadow: chartreuse 15px 5px 5px 10px;         /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}

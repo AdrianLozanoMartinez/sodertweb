@@ -1,0 +1,61 @@
+<br><button class="btn btn-success" routerLink="/deudasid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+<button class="btn btn-dark" routerLink="/home">Atrás</button><br><br>
+<div class="row">
+
+  <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let deudas of DeudasModel; let i = index">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">{{deudas.persona}}</h5>
+        <br>
+        <p style="color: black;">Tienda: {{deudas.tienda}}</p>
+        <br>
+        <p style="color: black;">Artículo: {{deudas.articulo}}</p>
+        <br>
+        <p style="color: black;">Precio: {{deudas.precio}}€</p>
+        <hr>
+        <p style="color: black;" *ngIf=deudas.articulo2>Artículo: {{deudas.articulo2}}</p>
+        <p style="color: black;" *ngIf=deudas.precio2>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo2>
+        <p style="color: black;" *ngIf=deudas.articulo3>Artículo: {{deudas.articulo3}}</p>
+        <p style="color: black;" *ngIf=deudas.precio3>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo3>
+        <p style="color: black;" *ngIf=deudas.articulo4>Artículo: {{deudas.articulo4}}</p>
+        <p style="color: black;" *ngIf=deudas.precio4>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo4>
+        <p style="color: black;" *ngIf=deudas.articulo5>Artículo: {{deudas.articulo5}}</p>
+        <p style="color: black;" *ngIf=deudas.precio5>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo5>
+        <p style="color: black;" *ngIf=deudas.articulo6>Artículo: {{deudas.articulo6}}</p>
+        <p style="color: black;" *ngIf=deudas.precio6>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo6>
+        <p style="color: black;" *ngIf=deudas.articulo7>Artículo: {{deudas.articulo7}}</p>
+        <p style="color: black;" *ngIf=deudas.precio7>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo7>
+        <p style="color: black;" *ngIf=deudas.articulo8>Artículo: {{deudas.articulo8}}</p>
+        <p style="color: black;" *ngIf=deudas.precio8>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo8>
+        <p style="color: black;" *ngIf=deudas.articulo9>Artículo: {{deudas.articulo9}}</p>
+        <p style="color: black;" *ngIf=deudas.precio9>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo9>
+        <p style="color: black;" *ngIf=deudas.articulo10>Artículo: {{deudas.articulo10}}</p>
+        <p style="color: black;" *ngIf=deudas.precio10>Precio: {{deudas.precio2}}</p>
+        <hr *ngIf=deudas.articulo10>
+        <p style="color: black;">Fecha pedido: {{deudas.fechaDepedido}}</p>
+        <hr>
+        <label *ngIf="deudas.pagado" class="badge badge-success">Pagado</label>
+        <label *ngIf="!deudas.pagado" class="badge badge-danger">No pagado</label>
+        <p *ngIf="deudas.pagado" style="color: black;">Fecha pagado: {{deudas.fechaPagado}}</p>
+        <br>
+        <p *ngIf="deudas.pagado"><label *ngIf="deudas.formaDePagado" class="badge badge-info">Efectivo</label>
+        <label *ngIf="!deudas.formaDePagado" class="badge badge-primary">Tarjeta</label></p>
+        <hr>
+        <p *ngIf="deudas.motivo" style="color: black;">Motivo: {{deudas.motivo}}</p>
+        <hr *ngIf="deudas.motivo">
+        <button class="btn btn-success mr-1" [routerLink]="['/deudasid', deudas.id ]"><i class="fa fa-pencil"></i> </button>
+        <button class="btn btn-danger" (click)="borrarUnElementode(deudas, i)"><i class="fa fa-trash"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-success" routerLink="/deudasid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+<button class="btn btn-dark" routerLink="/home">Atrás</button><br><br>

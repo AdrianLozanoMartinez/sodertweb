@@ -1,0 +1,306 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+.simple{
+    border: 5px limegreen solid;        
+         /*Grosor  Color    Estilo*/
+}
+
+
+.separacion{
+    border: 5px dotted rgb(233, 166, 20);   /*Borde más cercano al contenido*/
+    margin: 30px;                             /*Para que se vean los bordes*/
+    outline: 5px solid rgb(0, 255, 136);   /*Borde más lejos al contenido*/
+    outline-offset: 5px;                     /*Distancia de separación entre bordes, necesita el anterior outline*/
+}
+
+p{       /*USADO PARA QUE SE VEA EL EFECTO, NO NECESARIO*/
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top: 25px;
+    background-color: green;
+    position: relative;
+    display: inline-flex;       /*Posición horizontal de los cuadros*/
+    top: 0;
+    left: 20px;
+}
+
+#c1{
+    border-radius: 10px;        /*Todas las esquinas*/
+}
+
+#c10{
+    border-radius: 50%;        /*50% o 50px o más para ponerlo redondo*/
+}
+
+#c2{
+    border-radius: 50% 35px;   /*2 Esquinas*/       
+                 /*50% -> arriba-izquierda/abajo-derecha
+                        35px -> arriba-derecha/abajo-izquierda*/
+}
+
+#c3{
+    border-radius: 50% 35px 45px;  /*3 Esquinas*/
+                 /*50% -> arriba-izquierda
+                        35px -> arriba-derecha y abajo-izquierda
+                             45px -> abajo-derecha*/
+}
+
+#c4{
+    border-radius: 50% 35px 45px 75px; /*4 Esquinas*/
+                 /*50% -> arriba-izquierda
+                        35px -> arriba-derecha
+                             45px -> abajo-derecha
+                                  75px -> abajo-izquierda*/
+}
+
+
+#b1{
+    padding: 20px;                                                      /*Necesario para introducir datos*/
+    border: 1px solid black;                                          /*Necesario para que salga el borde de imagen*/
+    border-image-source: url("../../../../../assets/imagenes/01.jpg");  /*Usar imagen como borde*/
+    border-image-width: 25px;                                           /*Grosor del borde de la imagen*/
+    border-image-repeat: no-repeat;                                     /*Se repita o no la imagen en el borde*/
+                        /*repear*/
+    border-image-slice: 35%;                                            /*Es la forma de cortar la imagen como marco, en este caso se corta en 9 partes , admite % y números*/
+}
+
+#paddingbox{
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: padding-box;                     /*Arriba-izquierda del padding*/                               
+}
+
+#borderbox{
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: border-box;                     /*Se origina a partir de la esquina arriba-izquierda*/                                  
+}
+
+#contentbox{
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: content-box;                     /*Arriba-Izquierda del contenido*/                             
+}
+
+#initial{
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: initial;                     /*No se ve efecto, investigar más adelante*/                             
+}
+
+#inherit{
+    border: rgb(245, 0, 0) 10px dotted;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    background-clip: inherit;                     /*No se ve efecto, investigar más adelante*/                              
+}
+
+
+.todos{
+    border: rgb(50, 187, 205) double;        
+    border-width: 5px;
+}
+
+.dos{
+    border: rgb(50, 187, 205) double;        
+    border-width: 5px 12px;
+            /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+.tres{
+    border: rgb(50, 187, 205) double;        
+    border-width: 5px 12px 1px;
+            /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+.cuatro{
+    border: rgb(50, 187, 205) double;        
+    border-width: 5px 12px 1px 50px;
+            /*Arriba, Derecha, Abajo, Izquierda*/
+}
+
+
+
+.todos2{
+    border: 5px double;        
+    border-color:rgb(92, 0, 128);
+}
+
+.dos2{
+    border: 5px double;        
+    border-color: rgb(92, 0, 128) blue;
+                /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+.tres2{
+    border: 5px double;        
+    border-color:  rgb(92, 0, 128) blue lightgreen;
+                     /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+.cuatro2{
+    border: 5px double;        
+    border-color: rgb(92, 0, 128)  blue lightgreen darkmagenta;
+                        /*Arriba,    Derecha,    Abajo,     Izquierda*/
+}
+
+
+.solid{
+    border: 5px rgb(50, 187, 205) solid;        
+         /*Grosor      Color    Recto - línea*/
+}
+
+.dashed{
+    border: 5px rgb(50, 187, 205) dashed;        
+         /*Grosor      Color    Recto - discontínuo*/
+}
+
+.dotted{
+    border: 5px rgb(50, 187, 205) dotted;        
+         /*Grosor      Color    Punto - discontínuo*/
+}
+
+.double{
+    border: 5px rgb(50, 187, 205) double;        
+         /*Grosor      Color    Recto - doble*/
+}
+
+.topp{
+    border: firebrick 5px;
+    border-top-style: dashed;
+}
+
+.bottomm{
+    border: firebrick 5px;
+    border-bottom-style: dashed;
+}
+
+.leftt{
+    border: firebrick 5px;
+    border-left-style: dashed;
+}
+
+.rightt{
+    border: firebrick 5px;
+    border-right-style: dashed;
+}
+
+
+.groove{
+    border: 5px rgb(112, 112, 112) groove;        
+         /*Grosor Color Relieve*/
+}
+
+.ridge{
+    border: 5px rgb(112, 112, 112) ridge;        
+         /*Grosor Color Relieve*/
+}
+
+.inset{
+    border: 5px rgb(112, 112, 112) inset;        
+         /*Grosor Color Relieve*/
+}
+
+.outset{
+    border: 5px rgb(112, 112, 112) outset;        
+         /*Grosor Color Relieve*/
+}
+
+
+
+
+.hidden{
+    border: hidden;       
+}
+
+.outset{
+    border: none;        
+}
+
+
+.dos{
+    border: 5px rgb(50, 187, 205) double;        
+    border-style: dashed dotted;
+            /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+.tres{
+    border: 5px rgb(50, 187, 205) double;        
+    border-style: dashed dotted double;
+            /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+.cuatro{
+    border: 5px rgb(50, 187, 205) double;        
+    border-style: dashed dotted double solid;
+            /*Arriba, Derecha, Abajo, Izquierda*/
+}
+
+
+
+
+
+.top {
+    border-top: red 5px solid;
+}
+.bottom {
+    border-bottom: red 5px solid;
+}
+.left {
+    border-left: red 5px solid;
+}
+.right {
+    border-right: red 5px solid;
+}
+
+
+
+
+.maslineas{
+    border-top: red 5px solid;
+    border-bottom: rgb(157, 255, 0) 15px dashed;
+    border-left: rgb(0, 102, 255) 10px dotted;
+    border-right: rgb(255, 0, 128) 20px double;
+}
+
+
+
+
+.todo{
+    border-color: rgb(0, 255, 221);
+    border-width: 10px;
+    border-style: dashed;
+  }
+  
+  .dos{
+      border-color: rgb(0, 255, 221) rgb(94, 85, 4);
+      border-width: 10px 5px;
+      border-style: dashed solid;
+  }
+  
+  .tres{
+      border-color: rgb(0, 255, 221) rgb(94, 85, 4) red;
+      border-width: 10px 5px 3px;
+      border-style: dashed solid double;
+  }
+  
+  .cuatro{
+      border-color: rgb(0, 255, 221) rgb(94, 85, 4) red lightseagreen;
+      border-width: 10px 5px 3px 15px;
+      border-style: dashed solid double dotted;
+  }

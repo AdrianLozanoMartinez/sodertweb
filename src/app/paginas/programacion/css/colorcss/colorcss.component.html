@@ -1,0 +1,908 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-colorcss-tab" data-toggle="pill" href="#pills-colorcss" role="tab" aria-controls="pills-colorcss" aria-selected="true" style="color: black;">Un color</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-colorcss0-tab" data-toggle="pill" href="#pills-colorcss0" role="tab" aria-controls="pills-colorcss0" aria-selected="false" style="color: black;">Color + Saturación + Luz</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-colorcss1-tab" data-toggle="pill" href="#pills-colorcss1" role="tab" aria-controls="pills-colorcss1" aria-selected="false" style="color: black;">Red + green + blue + transparencia</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-colorcss2-tab" data-toggle="pill" href="#pills-colorcss2" role="tab" aria-controls="pills-colorcss2" aria-selected="false" style="color: black;">Tono + saturación + brillo + transparencia</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-colorcss3-tab" data-toggle="pill" href="#pills-colorcss3" role="tab" aria-controls="pills-colorcss3" aria-selected="false" style="color: black;">Gradiente lineal</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-colorcss4-tab" data-toggle="pill" href="#pills-colorcss4" role="tab" aria-controls="pills-colorcss4" aria-selected="false" style="color: black;">Gradiente radial</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-colorcss5-tab" data-toggle="pill" href="#pills-colorcss5" role="tab" aria-controls="pills-colorcss5" aria-selected="false" style="color: black;">Sombra</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-colorcss" role="tabpanel" aria-labelledby="pills-colorcss-tab">
+      
+      <div class="unColor">Un Color</div> 
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div class="unColor">Un Color{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.unColor{{c}}
+    <b>background-color: lightgreen;</b>
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+
+ 
+    </div>
+  
+    <div class="tab-pane fade" id="pills-colorcss0" role="tabpanel" aria-labelledby="pills-colorcss0-tab">
+
+      <div class="ColorSaturacionLuz">Color, Saturación, Luz</div> 
+
+ <div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div class="ColorSaturacionLuz">Color, Saturación, Luz{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.ColorSaturacionLuz{{c}}
+    <b>background-color:  hsl(170,87%,31%);</b>        /*Color,Saturación,Luz, 
+                                                  0-360,  0-100%,  0-100%*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-colorcss1" role="tabpanel" aria-labelledby="pills-colorcss1-tab">
+
+      <div class="RedGreenBlueTransparencia">Red, green, blue y transparencia</div> 
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div class="RedGreenBlueTransparencia">Red, green, blue y transparencia{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.RedGreenBlueTransparencia{{c}}
+    <b>background-color: rgba(127, 158, 41, 0.726);</b>    /*Red green blue y transparencia, 
+                                                     0-360, 0-360, 0-360,    0-1*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-colorcss2" role="tabpanel" aria-labelledby="pills-colorcss2-tab">
+
+      <div class="TonoSaturacionBrilloTransparencia">Tono, saturación, brillo y transparencia</div> 
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div class="TonoSaturacionBrilloTransparencia">Tono, saturación, brillo y transparencia/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.TonoSaturacionBrilloTransparencia{{c}}
+    <b>background-color: hsla(10, 27%, 25%, 0.849);</b>        /*Tono, Saturación, Brillo, transparencia
+                                                            hue, saturation, lightness, transparency
+                                                        0-120-240, 0-100%,    0-100%,      0-1*/ 
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-colorcss3" role="tabpanel" aria-labelledby="pills-colorcss3-tab">
+
+<h3>Vertical</h3>   
+<div id="linealverticaltodo">Lineal vertical, por defecto</div>   
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="linealverticaltodo">Lineal vertical, por defecto{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#linealverticaltodo{{c}}
+    <b>background-image: linear-gradient(rgb(129,18,18)30%, blue 50px);</b> /*color % o px (opcional), hex,rgb,rgba...%(inusual) o px (recomendable)*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+       
+    
+
+<br>
+<h3>Vertical: 1 Dirección</h3>
+<div id="linealverticalderecha">Lineal vertical <b>derecha</b></div>
+<br>
+<div id="linealverticalizquierda">Lineal vertical <b>izquierda</b></div>
+<br>
+<div id="linealverticalarriba">Lineal vertical <b>arriba</b></div>
+<br>
+<div id="linealverticalabajo">Lineal vertical <b>abajo</b></div>
+
+    <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div id="linealverticalderecha">Lineal vertical derecha{{co}}/div>
+      {{co}}br>
+      {{co}}div id="linealverticalizquierda">Lineal vertical izquierda{{co}}/div>
+      {{co}}br>
+      {{co}}div id="linealverticalarriba">Lineal vertical arriba{{co}}/div>
+      {{co}}br>
+      {{co}}div id="linealverticalabajo">Lineal vertical abajo{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#linealverticalderecha{{c}}
+    <b>background-image: linear-gradient(to right, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalizquierda{{c}}
+    <b>background-image: linear-gradient(to left, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarriba{{c}}
+    <b>background-image: linear-gradient(to top, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalabajo{{c}}
+    <b>background-image: linear-gradient(to bottom, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+
+<br>
+<h3>Vertical: 2 Direcciones</h3>
+<div id="linealverticalabajoderecha">Lineal vertical abajo - derecha</div>
+<br>
+<div id="linealverticalabajoizquierda">Lineal vertical abajo - izquierda</div>
+<br>
+<div id="linealverticalarribaderecha">Lineal vertical arriba - derecha</div>
+<br>
+<div id="linealverticalarribaizquierda">Lineal vertical arriba - izquierda</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealverticalabajoderecha">Lineal vertical abajo - derecha{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealverticalabajoizquierda">Lineal vertical abajo - izquierda{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealverticalarribaderecha">Lineal vertical arriba - derecha{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealverticalarribaizquierda">Lineal vertical arriba - izquierda{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealverticalabajoderecha{{c}}
+    <b>background-image: linear-gradient(to bottom right, rgb(129, 18, 120)30%, rgb(0, 0, 0));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalabajoizquierda{{c}}
+    <b>background-image: linear-gradient(to bottom left, rgb(129, 18, 120)30%, rgb(0, 0, 0));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarribaderecha{{c}}
+    <b>background-image: linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealverticalarribaizquierda{{c}}
+    <b>background-image: linear-gradient(to top right, rgb(129, 18, 120)30%, rgb(0, 0, 0));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+<br>
+<h3>Vertical: Más direcciones</h3>
+<div id="linealverticalmascolores">Lineal vertical más colores</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealverticalmascolores">Lineal vertical más colores{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealverticalmascolores{{c}}
+    background-image: linear-gradient(<u>rgb(129, 18, 120)30%, rgb(0, 0, 0),</u> <b>green, blue</b>); /*color1 hex,rgb,rgba (opcional -> %(inusual) o px (recomendable)), color2 hex,rgb,rgba (opcional -> % o px), color3 hex,rgb,rgba (opcional -> % o px)......*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+<br>
+<h3>Horizontal</h3>
+<div id="linealhorizontal">Lineal horizontal, por defecto</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealhorizontal">Lineal horizontal, por defecto{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealhorizontal{{c}}
+    <b>background-image: repeating-linear-gradient(red 10%, blue 15%, green 20%);</b>  /*color % o px (opcional), hex,rgb,rgba...%(inusual) o px (recomendable)*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+<br>
+<h3>Horizontal: 1 Dirección</h3>
+<div id="linealhorizontalderecha">Lineal horizontal derecha</div>
+<br>
+<div id="linealhorizontalizquierda">Lineal horizontal izquierda</div>
+<br>
+<div id="linealhorizontalarriba">Lineal horizontal arriba</div>
+<br>
+<div id="linealhorizontalabajo">Lineal horizontal abajo</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealhorizontalderecha">Lineal horizontal derecha{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalizquierda">Lineal horizontal izquierda{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalarriba">Lineal horizontal arriba{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalabajo">Lineal horizontal abajo{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealhorizontalderecha{{c}}
+    <b>background-image: repeating-linear-gradient(to right, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalizquierda{{c}}
+    <b>background-image: repeating-linear-gradient(to left, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarriba{{c}}
+    <b>background-image: repeating-linear-gradient(to top, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalabajo{{c}}
+   <b> background-image: repeating-linear-gradient(to bottom, rgb(18, 129, 27)30%, rgb(44, 111, 138));</b> /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+<br>
+<h3>Horizontal: 2 Direcciones</h3>
+<div id="linealhorizontalabajoderecha">Lineal horizontal abajo - derecha</div>
+<br>
+<div id="linealhorizontalabajoizquierda">Lineal horizontal abajo - izquierda</div>
+<br>
+<div id="linealhorizontalarribaderecha">Lineal horizontal arriba - derecha</div>
+<br>
+<div id="linealhorizontalarribaizquierda">Lineal horizontal arriba - izquierda</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealhorizontalabajoderecha">Lineal horizontal abajo - derecha{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalabajoizquierda">Lineal horizontal abajo - izquierda{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalarribaderecha">Lineal horizontal arriba - derecha{{co}}/div>
+        {{co}}br>
+        {{co}}div id="linealhorizontalarribaizquierda">Lineal horizontal arriba - izquierda{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealhorizontalabajoderecha{{c}}
+    background-image: repeating-linear-gradient(<b>to bottom right</b>, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalabajoizquierda{{c}}
+    background-image: repeating-linear-gradient(<b>to bottom left</b>, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarribaderecha{{c}}
+    background-image: repeating-linear-gradient(<b>to top right</b>, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}
+
+#linealhorizontalarribaizquierda{{c}}
+    background-image: repeating-linear-gradient(<b>to top right</b>, rgb(129, 18, 120)30%, rgb(0, 0, 0)); /*to bottom / to top / to right / to left. Por defecto: arriba->abajo.*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+<br>
+<h3>Horizontal: Más direcciones</h3>
+<div id="linealhorizontalmascolores">Lineal horizontal más colores</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="linealhorizontalmascolores">Lineal horizontal más colores{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">#linealhorizontalmascolores{{c}}
+    background-image: repeating-linear-gradient(<u>rgb(129, 18, 120)30%, rgb(0, 0, 0),</u> <b>green, blue</b>); /*color1 hex,rgb,rgba (opcional -> %(inusual) o px (recomendable)), color2 hex,rgb,rgba (opcional -> % o px), color3 hex,rgb,rgba (opcional -> % o px)......*/
+}</pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+</div>
+
+    <div class="tab-pane fade" id="pills-colorcss4" role="tabpanel" aria-labelledby="pills-colorcss4-tab">
+        
+<h3>Fondo + Círculos</h3>    
+<div id="radialfondocirculos">Radial Fondo y círculos entero en el centro</div>  
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="radialfondocirculos">Radial Fondo y círculos entero en el centro{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#radialfondocirculos{{c}}
+    <b>background-image: radial-gradient(ellipse, red 10%, blue 30%, yellow 500px);</b>  /*Fondo y círculos entero en el centro*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+     
+   
+    
+
+
+ <br>
+    <h3>Círculos cortados</h3>  
+    <div id="radialfondocirculoscortados">Radial Fondo y círculos cortados en el centro</div>
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="radialfondocirculoscortados">Radial Fondo y círculos cortados en el centro{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#radialfondocirculoscortados{{c}}
+    <b>background-image: radial-gradient(Circle, red 10%, blue 30%, yellow 500px);</b>  /*Fondo y círculos cortados en el centro*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+     
+    
+
+
+
+    <br>
+    <h3>Círculos cubre todo</h3>     
+    <div id="radialcirculostodo">Radial Los círculos cubre todo</div>
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="radialcirculostodo">Radial Los círculos cubre todo{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#radialcirculostodo{{c}}
+    <b>background-image: repeating-radial-gradient(ellipse, red 10%, blue 30%, yellow 500px);</b>  /*Los círculos cubre todo*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+
+  
+
+
+
+    <br>
+    <h3>Círculos cubre todo: Cortados y repetidos</h3>   
+    <div id="radialcirculoscortados">Radial Los círculos cubre todo cortados en trozos y repetidos</div>
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="radialcirculoscortados">Radial Los círculos cubre todo cortados en trozos y repetidos{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#radialcirculoscortados{{c}}
+    <b>background-image: repeating-radial-gradient(Circle, red 10%, blue 30%, yellow 500px);</b>     /*Los círculos cubre todo cortados en trozos y repetidos*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+
+ 
+
+</div>
+
+
+    <div class="tab-pane fade" id="pills-colorcss5" role="tabpanel" aria-labelledby="pills-colorcss5-tab">
+
+<h3>Width: Fit-content - Positivo</h3>
+<div id="width">Width: fit-content y box-shadow: chartreuse 15px 15px en positivo</div>
+
+<div class="card-group">
+            <div class="card text-dark bg-warning m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div id="width">Width: fit-content y box-shadow: chartreuse 15px 15px en positivo{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+              </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">#width{{c}}
+    <b>width: fit-content;</b>                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width*/
+    padding: 15px;                                      /*Actua con width, depende el que use fit-content, amplia cuadro hacia lo ancho*/
+    background-color: blue;                           /*Color principal*/
+    <b>box-shadow: chartreuse 15px 10px;</b>                 /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}</pre>
+                </div>
+              </div>
+          </div>
+    
+    
+     
+            
+        
+<br>
+<h3>Width: Fit-content - Negativo</h3>
+<div id="widthnegativo">Width: fit-content y box-shadow: chartreuse -15px -15px en negativo</div>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="widthnegativo">Width: fit-content y box-shadow: chartreuse -15px -15px en negativo{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+            </div>
+            <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">#widthnegativo{{c}}
+    <b>width: fit-content;</b>                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width*/
+    padding: 15px;                                      /*Actua con width, depende el que use fit-content, amplia cuadro hacia lo ancho*/
+    background-color: blue;                           /*Color principal*/
+    <b>box-shadow: chartreuse -15px -10px;</b>               /*Color de la sombre (opcional), de izquierda arriba, difuminado*/
+}</pre>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+<br>
+<h3>Height: Fit-content - Positivo</h3>
+<div id="height">Height: fit-content y box-shadow: chartreuse 15px 15px en positivo</div>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="height">Height: fit-content y box-shadow: chartreuse 15px 15px en positivo{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+            </div>
+            <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">#height{{c}}
+    <b>height: fit-content;</b>                                /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del height*/
+    padding: 15px;                                      /*Actua con height, depende el que use fit-content, amplia cuadro hacia abajo*/
+    background-color: rgb(60, 255, 0);                           /*Color principal*/
+    <b>box-shadow: rgb(255, 0, 221) 15px 10px;</b>                 /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}</pre>
+            </div>
+            </div>
+        </div>
+
+
+
+
+<br>
+<h3>Height: Fit-content - Negativo</h3>
+<div id="heightnegativo">Height: fit-content y box-shadow: chartreuse -15px -15px en negativo</div>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="heightnegativo">Height: fit-content y box-shadow: chartreuse -15px -15px en negativo{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+            </div>
+            <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">#heightnegativo{{c}}
+    <b>height: fit-content; </b>                               /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del height*/
+    padding: 15px;                                      /*Actua con height, depende el que use fit-content, amplia cuadro hacia abajo*/
+    background-color: rgb(60, 255, 0);                           /*Color principal*/
+    <b>box-shadow: rgb(255, 0, 221) -15px -10px;</b>                 /*Color de la sombre (opcional), de izquierda arriba, difuminado*/
+}</pre>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+<br>
+<h3>Más sombras</h3>
+<div id="massombras">Más sombras</div>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}div id="massombras">Más sombras{{co}}/div></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+            </div>
+            <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+                <pre class="card-text">#massombras{{c}}
+    width: fit-content;                                 /*Fit: Para usar el centro, deja el centro vacío, lo ajusta a la caja del width o height*/
+    padding: 15px;                                      /*Actua como height o width, depende el que use fit-content, amplia cuadro hacia abajo o ancho*/
+    background-color: blue;                           /*Color principal*/
+    <b>box-shadow: chartreuse 15px 5px 5px 10px;</b>        /*Color de la sombre (opcional), de derecha abajo, difuminado*/
+}</pre>
+            </div>
+            </div>
+        </div>
+
+
+
+  
+  </div>

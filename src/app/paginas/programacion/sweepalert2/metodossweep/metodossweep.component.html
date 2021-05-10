@@ -1,0 +1,43 @@
+      <b><a href="https://sweetalert2.github.io/#methods">Métodos</a></b><pre>
+        Swal.isVisible()	Determine if modal is shown.
+        Swal.mixin({{c}} ...options })	Returns an extended version of `Swal` containing `params` as defaults. Useful for reusing Swal configuration.
+        Swal.update({{c}} ...options })	Updates popup options.
+        Swal.close()	Close the currently open SweetAlert2 modal programmatically, the Promise returned by Swal.fire() will be resolved with an empty object {{c}} }
+        Swal.getContainer()	Get the popup container which contains the backdrop.
+        Swal.getHeader()	Get the modal header. The header contains progress steps, the icon, the image, the title, and the close button.
+        Swal.getTitle()	Get the modal title.
+        Swal.getProgressSteps()	Get the progress steps.
+        Swal.getCloseButton()	Get the close button.
+        Swal.getContent()	Get the modal content.
+        Swal.getImage()	Get the image.
+        Swal.getActions()	Get the actions block (buttons container).
+        Swal.getFooter()	Get the modal footer.
+        Swal.getFocusableElements()	Get all focusable elements in the popup.
+        Swal.getConfirmButton()	Get the "Confirm" button.
+        Swal.getCancelButton()	Get the "Cancel" button.
+        Swal.enableButtons()	Enable "Confirm" and "Cancel" buttons.
+        Swal.disableButtons()	Disable "Confirm" and "Cancel" buttons.
+        Swal.showLoading() or Swal.enableLoading()	Disable buttons and show loader. This is useful with AJAX requests.
+        Swal.hideLoading() or Swal.disableLoading()	Enable buttons and hide loader.
+        Swal.isLoading()	Determine if modal is in the loading state. Related methods: Swal.showLoading() and Swal.hideLoading()
+        Swal.getTimerLeft()	Returns the time left in case when timer parameter is set.
+        Swal.stopTimer()	Stops the timer in case when timer parameter is set. Returns the time left
+        Swal.resumeTimer()	Resume the timer previously stopped. Returns the time left
+        Swal.toggleTimer()	Toggle state of the timer between stopped and running. Returns the time left
+        Swal.isTimerRunning()	Returns the status of a timer: true if is running, false if it's paused
+        Swal.increaseTimer(n)	Increase the timer by n milliseconds. Returns the time left
+        Swal.clickConfirm()	Click the "Confirm"-button programmatically.
+        Swal.clickCancel()	Click the "Cancel"-button programmatically.
+        Swal.getInput()	Get the input DOM node, this method works with input parameter.
+        Swal.disableInput()	Disable input. A disabled input element is unusable and un-clickable.
+        Swal.enableInput()	Enable input.
+        Swal.showValidationMessage(message)	Show the validation message DOM node.
+        Swal.resetValidationMessage()	Hide the validation message DOM node.
+        Swal.getValidationMessage()	Get the validation message DOM node.
+        Swal.queue([Array])	Provide array of SweetAlert2 parameters to show multiple modals, one modal after another. See usage example
+        Swal.getQueueStep()	Get the index of current modal in queue. When there's no active queue, null will be returned.
+        Swal.insertQueueStep()	Insert a modal to queue, you can specify modal positioning with second parameter. By default a modal will be added to the end of a queue.
+        Swal.deleteQueueStep(index)	Delete a modal at index from queue.
+        Swal.isValidParameter(param)	Determine if parameter name is valid.
+        Swal.isUpdatableParameter(param)	Determine if parameter name is valid for Swal.update() method.</pre>
+        <button class="btn btn-dark m-2" [routerLink]="['/sweepalert2']">Atras</button>

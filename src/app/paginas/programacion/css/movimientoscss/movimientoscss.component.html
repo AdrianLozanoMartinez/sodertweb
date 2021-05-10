@@ -1,0 +1,1155 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-movimientoscssa-tab" data-toggle="pill" href="#pills-movimientoscssa" role="tab" aria-controls="pills-movimientoscssa" aria-selected="true" style="color: black;">Sin tiempo</a>
+  </li>
+    <li class="nav-item">
+      <a class="nav-link " id="pills-movimientoscss-tab" data-toggle="pill" href="#pills-movimientoscss" role="tab" aria-controls="pills-movimientoscss" aria-selected="true" style="color: black;">Con tiempo</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-movimientoscssa" role="tabpanel" aria-labelledby="pills-movimientoscssa-tab">
+      
+ <h3>Translate (Translada)</h3>
+ <p id="translate">Translate: Se traslada de Izquierda-Arriba a Derecha-Abajo</p>
+<br>
+<p id="translatenegativo">Translate (negativo): Se traslada de Derecha-Abajo a Izquierda-Arriba</p>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+      {{co}}meta charset="UTF-8">
+      {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {{co}}title>Título de pestaña{{co}}/title>
+      {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+{{co}}body>
+    <b>{{co}}p id="translate">Translate: Se traslada de Izquierda-Arriba a Derecha-Abajo{{co}}/p>
+    {{co}}br>
+    {{co}}p id="translatenegativo">Translate (negativo): Se traslada de Derecha-Abajo a Izquierda-Arriba{{co}}/p></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#translate:hover{{c}}                                  /*Se traslada de Izquierda-Arriba a Derecha-Abajo*/
+  transform: <b>translate(20px, 20px);</b>           /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: translate(20px, 20px);       /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#translatenegativo:hover{{c}}                          /*Se traslada de Derecha-Abajo a Izquierda-Arriba*/
+  transform: <b>translate(-20px, -20px);</b>         /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/  
+  -ms-transform: translate(-20px, -20px);     /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+<br>
+<h3>Rotate (Gira)</h3>
+<p id="rotate">Rotate: Gira en sentido del reloj</p>
+  <br>
+  <p id="rotatenegativo">Rotate (negativo):Gira en sentido contrario del reloj</p>
+  <br>
+  <p id="rotateZ">RotateZ: Gira en sentido del reloj</p>
+  <br>
+  <p id="rotateZnegativo">RotateZ (negativo): Gira en sentido contrario del reloj</p>
+  <br>
+  <p id="rotateY">RotateY: Se estrecha</p>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+      {{co}}meta charset="UTF-8">
+      {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {{co}}title>Título de pestaña{{co}}/title>
+      {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+        <b>{{co}}p id="rotate">Rotate: Gira en sentido del reloj{{co}}/p>
+        {{co}}br>
+        {{co}}p id="rotatenegativo">Rotate (negativo):Gira en sentido contrario del reloj{{co}}/p>
+        {{co}}br>
+        {{co}}p id="rotateZ">RotateZ: Gira en sentido del reloj{{co}}/p>
+        {{co}}br>
+        {{co}}p id="rotateZnegativo">RotateZ (negativo): Gira en sentido contrario del reloj{{co}}/p>
+        {{co}}br>
+        {{co}}p id="rotateY">RotateY: Se estrecha{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#rotate:hover{{c}}                                /*Gira en sentido del reloj*/
+  transform: <b>rotate(30deg);</b>                   /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+  -ms-transform: rotate(30deg);               /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotatenegativo:hover{{c}}                        /*Gira en sentido contrario del reloj*/
+  transform: <b>rotate(-30deg);</b>                  /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+  -ms-transform: rotate(-30deg);              /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateZ:hover{{c}}                                /*Gira en sentido del reloj*/
+  transform: <b>rotateZ(120deg);</b>                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+  -ms-transform: rotateZ(120deg);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateZnegativo:hover{{c}}                        /*Gira en sentido contrario del reloj*/
+  transform: <b>rotateZ(-120deg);</b>                /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+  -ms-transform: rotateZ(-120deg);            /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateY:hover{{c}}                                /*Se estrecha*/
+  transform: <b>rotateY(120deg);</b>                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: rotateY(120deg);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+<br>
+<h3>Scale (Aumenta)</h3>
+<p id="scale">Scale: Aumenta de tamaño. Admite decimales pero poniendo punto (.)</p>
+<br>
+<p id="scalenegativo">Scale (negativo): Aumenta de tamaño en otra dirección. Admite decimales pero poniendo punto (.)</p>
+<br>
+<p id="scaleX">ScaleX: Aumenta de tamaño en horizontal</p>
+<br>
+<p id="scaleXnegativo">ScaleX (negativo): Aumenta de tamaño en horizontal en otra dirección</p>
+<br>
+<p id="scaleY">ScaleY: Aumenta de tamaño en vertical</p>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="scale">Scale: Aumenta de tamaño. Admite decimales pero poniendo punto (.){{co}}/p>
+        {{co}}br>
+        {{co}}p id="scalenegativo">Scale (negativo): Aumenta de tamaño en otra dirección. Admite decimales pero poniendo punto (.){{co}}/p>
+        {{co}}br>
+        {{co}}p id="scaleX">ScaleX: Aumenta de tamaño en horizontal{{co}}/p>
+        {{co}}br>
+        {{co}}p id="scaleXnegativo">ScaleX (negativo): Aumenta de tamaño en horizontal en otra dirección{{co}}/p>
+        {{co}}br>
+        {{co}}p id="scaleY">ScaleY: Aumenta de tamaño en vertical{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#scale:hover{{c}}                                /*Aumenta de tamaño. Admite decimales pero poniendo punto (.)*/
+  transform: <b>scale(2, 3.2);</b>                   /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: scale(2, 3.2);               /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scalenegativo:hover{{c}}                        /*Aumenta de tamaño en otra dirección. Admite decimales pero poniendo punto (.)*/
+  transform: <b>scale(-2, -3.2);</b>                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: scale(-2, -3.2);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleX:hover{{c}}                                /*Aumenta de tamaño en horizontal*/
+  transform:<b> scaleX(2);</b>                       /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: scaleX(2);                   /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleXnegativo:hover{{c}}                        /*Aumenta de tamaño en horizontal en otra dirección*/
+  transform: <b>scaleX(-2);</b>                       /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: scaleX(-2);                   /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleY:hover{{c}}                                /*Aumenta de tamaño en vertical*/
+  transform: <b>scaleY(2);</b>                        /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: scaleY(2);                    /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+<br>
+<h3>Skew (Dobla)</h3>
+<p id="skewX">SkewX: Dobla sobre su eje en horizontal hacia la izquierda</p>
+<br>
+<p id="skewXnegativo">SkewX (negativo): Dobla sobre su eje en horizontal hacia la derecha</p>
+<br>
+<p id="skewY">SkewY: Dobla sobre su eje en vertical hacia la izquierda</p>
+<br>
+<p id="skewYnegativo">SkewY (negativo): Dobla sobre su eje en vertical hacia la derecha</p>
+<br>
+<p id="skew">Skew: Dobla sobre su eje en horizontal y vertical hacia la izquierda</p>
+<br>
+<p id="skewnegativo">Skew (negativo): Dobla sobre su eje en horizontal y vertical hacia la derecha</p>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="skewX">SkewX: Dobla sobre su eje en horizontal hacia la izquierda{{co}}/p>
+        {{co}}br>
+        {{co}}p id="skewXnegativo">SkewX (negativo): Dobla sobre su eje en horizontal hacia la derecha{{co}}/p>
+        {{co}}br>
+        {{co}}p id="skewY">SkewY: Dobla sobre su eje en vertical hacia la izquierda{{co}}/p>
+        {{co}}br>
+        {{co}}p id="skewYnegativo">SkewY (negativo): Dobla sobre su eje en vertical hacia la derecha{{co}}/p>
+        {{co}}br>
+        {{co}}p id="skew">Skew: Dobla sobre su eje en horizontal y vertical hacia la izquierda{{co}}/p>
+        {{co}}br>
+        {{co}}p id="skewnegativo">Skew (negativo): Dobla sobre su eje en horizontal y vertical hacia la derecha{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#skewX:hover{{c}}                                /*Dobla sobre su eje en horizontal hacia la izquierda*/
+  transform: <b>skewX(20deg);</b>                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skewX(20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewXnegativo:hover{{c}}                        /*Dobla sobre su eje en horizontal hacia la derecha*/
+  transform: <b>skewX(-20deg);</b>                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skewX(-20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewY:hover{{c}}                                /*Dobla sobre su eje en vertical hacia la izquierda*/
+  transform: <b>skewY(20deg);</b>                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skewY(20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewYnegativo:hover{{c}}                        /*Dobla sobre su eje en vertical hacia la derecha*/
+  transform: <b>skewY(-20deg);</b>                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skewY(-20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skew:hover{{c}}                               /*Dobla sobre su eje en horizontal y vertical hacia la izquierda*/
+  transform: <b>skew(40deg, 30deg);</b>              /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skew(40deg, 30deg);          /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewnegativo:hover{{c}}                       /*Dobla sobre su eje en horizontal y vertical hacia la derecha*/
+  transform: <b>skew(-40deg, -30deg);</b>            /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: skew(-40deg, -30deg);        /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+<br>
+<h3>Matrix (Transforma)</h3>
+<p id="matrix">Matrix: Transformaciones en 3D. Orden (scalex,skewy,skewx,scaley,translatex,translatey</p>
+<br>
+<p>Existen ademas: matrix3d(matriz de 4x4), translate 3d, scale3d que hay que investigar</p>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="matrix">Matrix: Transformaciones en 3D. Orden (scalex,skewy,skewx,scaley,translatex,translatey{{co}}/p>
+        {{co}}br>
+        {{co}}p>Existen ademas: matrix3d(matriz de 4x4), translate 3d, scale3d que hay que investigar{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#matrix:hover{{c}}                               /*Transformaciones en 3D. Orden (scalex,skewy,skewx,scaley,translatex,translatey*/
+  transform: <b>matrix(1,-0.3,0,2,20,20);</b>        /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+  -ms-transform: matrix(1,-0.3,0,2,20,20);    /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+<br>
+<h3>Más efectos a la vez</h3>
+<p id="transro">Dos efectos: traslado y rotar</p>    
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="transro">Dos efectos: traslado y rotar{{co}}/p></b>
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#transro:hover{{c}}                  /*Se traslada de Derecha-Abajo a Izquierda-Arriba y Gira en sentido del reloj*/
+  transform: <b>translate(-20px, -20px) rotate(30deg);</b>         /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/  
+  -ms-transform: translate(-20px, -20px) rotate(30deg);     /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/               
+}</pre>
+      </div>
+    </div>
+</div>
+
+       
+</div>
+
+    <div class="tab-pane fade" id="pills-movimientoscss" role="tabpanel" aria-labelledby="pills-movimientoscss-tab">
+      
+      <h3>Velocidad</h3>
+      <p id="lento">Ease: Ensancha y gira con TIEMPO (Lento, rápido y lento), dejando el ratón encima</p>
+      <p id="comienzolento">Ease-in: Ensancha y gira con TIEMPO (Comienzo lento), dejando el ratón encima</p>
+      <p id="mismavelocidad">Linear: Ensancha y gira con TIEMPO (Misma velocidad siempre), dejando el ratón encima</p>
+      <p id="final">Ease-out: Ensancha y gira con TIEMPO (Misma velocidad siempre), dejando el ratón encima</p>
+      <p id="union">Ease-in-out: Ensancha y gira con TIEMPO (Union de los dos), dejando el ratón encima</p>
+      <p id="libre">Cubic-bezier(0.075, 0.82, 0.165, 1): Ensancha y gira con TIEMPO (Te permite definir como lo quieres), dejando el ratón encima</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+<pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}p id="lento">Ease: Ensancha y gira con TIEMPO (Lento, rápido y lento), dejando el ratón encima{{co}}/p>
+          {{co}}p id="comienzolento">Ease-in: Ensancha y gira con TIEMPO (Comienzo lento), dejando el ratón encima{{co}}/p>
+          {{co}}p id="mismavelocidad">Linear: Ensancha y gira con TIEMPO (Misma velocidad siempre), dejando el ratón encima{{co}}/p>
+          {{co}}p id="final">Ease-out: Ensancha y gira con TIEMPO (Misma velocidad siempre), dejando el ratón encima{{co}}/p>
+          {{co}}p id="union">Ease-in-out: Ensancha y gira con TIEMPO (Union de los dos), dejando el ratón encima{{co}}/p>
+          {{co}}p id="libre">Cubic-bezier(0.075, 0.82, 0.165, 1): Ensancha y gira con TIEMPO (Te permite definir como lo quieres), dejando el ratón encima{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+
+
+#lento:hover{{c}}                          
+  <b>width: 500px;</b>                           /*Ancho que coge al moverse*/
+  <b>transform: rotate(30deg);</b>               /*Gira en sentido del reloj al tocarlo*/
+  <b>transition: width 2s, transform 2s;</b>     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  <b>transition-timing-function: ease;</b>       /*Lento, rápido y lento*/
+}
+
+#comienzolento:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: <b>ease-in</b>;       /*Comienzo lento*/
+}
+
+#mismavelocidad:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: <b>linear</b>;       /*Misma velocidad siempre*/
+}
+
+#final:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: <b>ease-out</b>;       /*Misma velocidad siempre*/
+}
+
+#union:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: <b>ease-in-out</b>;       /*Union de los dos*/
+}
+
+#libre:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: <b>cubic-bezier(0.075, 0.82, 0.165, 1)</b>;       /*Te permite definir como lo quieres*/
+}</pre>
+           </div>
+         </div>
+     </div>
+
+     
+    
+    
+    <br>
+     <h3>Retraso</h3>
+     <p id="retraso">Retraso antes de empezar, secuencia continua, no termina</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}p id="retraso">Retraso antes de empezar, secuencia continua, no termina{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#retraso:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  <b>transition-delay: 1s; </b>                  /*Retraso antes de empezar, secuencia continua, no termina*/
+}</pre>
+           </div>
+         </div>
+     </div>
+     
+
+
+
+     <br>
+     <h3>Instantáneo</h3>
+     <p id="inherit">Inherit: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma</p>
+     <p id="unset">Unset: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma</p>
+     <p id="initial">Initial: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+            <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p id="inherit">Inherit: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma{{co}}/p>
+            {{co}}p id="unset">Unset: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma{{co}}/p>
+            {{co}}p id="initial">Initial: No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+  
+#inherit:hover{{c}}                          
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: ease;                    
+  <b>transition-duration: inherit;</b>           /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}
+
+#unset:hover{{c}}                         
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: ease;                    
+  <b>transition-duration: unset;</b>           /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}
+
+#initial:hover{{c}}                         
+  width: 500px;                           /*Ancho que coge al moverse*/
+  transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+  transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+  transition-timing-function: ease;                    
+  <b>transition-duration: initial; </b>          /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}</pre>
+           </div>
+         </div>
+     </div>
+     
+     
+
+     
+     <br>
+     <h3>Especificamos: desde -> hasta</h3>
+     <p id="especificar">Especificar efecto From (Desde) To (Hasta)</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}p id="especificar">Especificar efecto From (Desde) To (Hasta){{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#especificar{{c}}
+  <b>animation-name: primera;</b>                /*<b>Nombre</b> a elegir para que se haga el efecto <b>abajo descrito (keyframes)</b>*/
+  animation-duration: 5s;                 /*Duración*/
+  animation-delay: 2s;                    /*Retraso*/
+  animation-iteration-count: 2;           /*Veces que lo realiza antes de parar, puede usarse infinite*/
+  animation-direction: normal;            /*Dirección*/
+  animation-timing-function: ease;        /*Velocidad*/
+  animation-fill-mode: both;              /*Como acaba*/
+}
+
+<b>@keyframes primera</b>{{c}}                         /*Ponemos <b>mismo nombre</b> que <b>animation-name</b>*/
+  <b>from</b>{{c}}                                   /*<b>Desde: px o 0%, 25%, 50% 100%</b>*/
+          <b>width: 200px;</b>
+      }
+  <b>to</b>{{c}}                                     /*<b>Hasta: px o 0%, 25%, 50% 100%</b>*/
+         <b> width: 300px;</b>
+      }
+}</pre>
+           </div>
+         </div>
+     </div>
+     
+
+     
+     <br>
+     <h3>Repetición</h3>
+     <p id="repeticion">Número: Se repite el tiempo que pongamos</p>
+     <p id="repeticionunica">Inherit: No se repite</p>
+     <p id="repeticionunica2">Initial: No se repite </p>
+     <p id="repeticionunica3">Unset: No se repite</p>
+     <p id="repeticioninfinito">Infinite: Se repite indefinidamente</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p id="repeticion">Número: Se repite el tiempo que pongamos{{co}}/p>
+            {{co}}p id="repeticionunica">Inherit: No se repite{{co}}/p>
+            {{co}}p id="repeticionunica2">Initial: No se repite {{co}}/p>
+            {{co}}p id="repeticionunica3">Unset: No se repite{{co}}/p>
+            {{co}}p id="repeticioninfinito">Infinite: Se repite indefinidamente{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#repeticion{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  <b>animation-iteration-count: 2;</b>           /*Veces que lo realiza antes de parar*/
+  animation-direction: normal;            
+  animation-timing-function: ease;        
+  animation-fill-mode: both;              
+}
+
+@keyframes primera{{c}}                         
+  from{{c}}                                   
+          width: 200px;
+      }
+  to{{c}}                                     
+          width: 300px;
+      }
+}
+
+#repeticioninfinito{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: <b>infinite</b>;           /*Se repite siempre, no termina*/
+  animation-direction: normal;            
+  animation-timing-function: ease;        
+  animation-fill-mode: both;              
+}
+
+@keyframes primera{{c}}                         
+  from{{c}}                                   
+          width: 200px;
+      }
+  to{{c}}                                     
+          width: 300px;
+      }
+}</pre>
+           </div>
+         </div>
+     </div>
+     
+     
+
+     
+     <br>
+     <h3>Dirección</h3>
+     <p id="direnormal">Normal: De izquierda a derecha</p>
+     <p id="reverse">Reverse: De derecha a izquierda</p>
+     <p id="alternate">Alternate: De izquierda a derecha y de derecha a izquierda</p>
+     <p id="alternate-reverse">Alternate-reverse: De derecha a izquierda y de izquierda a derecha</p>
+
+      <div class="card-group">
+       <div class="card text-dark bg-warning m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p id="direnormal">Normal: De izquierda a derecha{{co}}/p>
+            {{co}}p id="reverse">Reverse: De derecha a izquierda{{co}}/p>
+            {{co}}p id="alternate">Alternate: De izquierda a derecha y de derecha a izquierda{{co}}/p>
+            {{co}}p id="alternate-reverse">Alternate-reverse: De derecha a izquierda y de izquierda a derecha{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+           </div>
+         </div>
+         <div class="card text-dark bg-info m-3" >
+           <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+           <div class="card-body">
+             <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#direnormal{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;           
+  <b>animation-direction: normal;</b>           /*Izquierda a derecha*/
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#reverse{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;           
+  animation-direction: <b>reverse</b>;           /*Derecha a izquierda*/
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#alternate{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;           
+  animation-direction: <b>alternate</b>;       /*Izquierda a derecha y derecha a izquierda*/     
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+
+#alternate-reverse{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;           
+  animation-direction: <b>alternate-reverse</b>;            /*Derecha a izquierda y Izquierda a derecha*/
+  animation-timing-function: ease;/*
+                             linear 
+                             ease-in 
+                             ease-out 
+                             ease-in-out 
+                             cubic-bezier (n,n,n,n)*/
+  animation-fill-mode: both;/*Como acaba*/
+                     /*none - no cambia nada al terminar
+                       fowards - retiene estilos del ultimo frame
+                       backwards -retiene estilos del primer frame*/
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}</pre>
+           </div>
+         </div>
+     </div>
+     
+
+
+
+
+      <br>
+     <h3>Duración</h3>
+     <p id="linear">Linear</p>
+     <p id="ease">Ease</p>
+     <p id="ease-in">Ease-in</p>
+     <p id="ease-out">Ease-out</p>
+     <p id="ease-in-out">ease-in-out</p>
+     <p id="cubic-bezier">Cubic-bezier(0.075, 0.82, 0.165, 1)</p>
+
+     <div class="card-group">
+      <div class="card text-dark bg-warning m-3" >
+          <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+          <div class="card-body">
+            <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}p id="linear">Linear{{co}}/p>
+          {{co}}p id="ease">Ease{{co}}/p>
+          {{co}}p id="ease-in">Ease-in{{co}}/p>
+          {{co}}p id="ease-out">Ease-out{{co}}/p>
+          {{co}}p id="ease-in-out">ease-in-out{{co}}/p>
+          {{co}}p id="cubic-bezier">Cubic-bezier(0.075, 0.82, 0.165, 1){{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+          </div>
+        </div>
+        <div class="card text-dark bg-info m-3" >
+          <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+          <div class="card-body">
+            <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#linear{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  <b>animation-timing-function: linear;</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#ease{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+<b>animation-timing-function: ease;</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+
+#ease-in{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+<b>animation-timing-function: ease-in;</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#ease-out{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+<b>animation-timing-function: ease-out;</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#ease-in-out{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+<b>animation-timing-function: ease-in-out;</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+#cubic-bezier{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+<b>animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);</b>
+  animation-fill-mode: both;
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}</pre>
+          </div>
+        </div>
+    </div>
+    
+    
+
+    
+<br>
+    <h3>Terminación</h3>
+    <p id="none">None: No cambia nada al terminar</p>
+    <p id="forwards">Forwards: Retiene estilos del ultimo frame</p>
+    <p id="backwards">Backwards: Retiene estilos del primer frame</p>
+    <p id="both">Both: Ambas</p>  
+
+    <div class="card-group">
+     <div class="card text-dark bg-warning m-3" >
+         <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+         <div class="card-body">
+           <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p id="none">None: No cambia nada al terminar{{co}}/p>
+            {{co}}p id="forwards">Forwards: Retiene estilos del ultimo frame{{co}}/p>
+            {{co}}p id="backwards">Backwards: Retiene estilos del primer frame{{co}}/p>
+            {{co}}p id="both">Both: Ambas{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+         </div>
+       </div>
+       <div class="card text-dark bg-info m-3" >
+         <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+         <div class="card-body">
+           <pre class="card-text">p{{c}}                  /*Para que se vea el efecto*/
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(0, 255, 85);
+}
+
+#none{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: none;          /*No cambia nada al terminar*/
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+
+
+#forwards{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;      /*Retiene estilos del ultimo frame*/
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+
+
+
+#backwards{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;     /*Retiene estilos del primer frame*/
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}
+
+
+
+#both{{c}}
+  animation-name: primera;                
+  animation-duration: 5s;                 
+  animation-delay: 2s;                    
+  animation-iteration-count: 2;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: both;              /*Ambas*/
+}
+
+@keyframes primera{{c}}
+  from{{c}}
+          width: 200px;
+      }
+  to{{c}}
+          width: 300px;
+      }
+}</pre>
+         </div>
+       </div>
+   </div>
+   
+
+      
+      
+
+  </div>

@@ -1,0 +1,44 @@
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/personal"><i class="fa fa-arrow-left"></i>Regresas</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="guardar(variableFormulario)" #variableFormulario="ngForm">
+
+      
+            <label>Persona</label>
+            <input type="text" class="form-control" placeholder="Persona" required name="persona" [(ngModel)]="PersonalModel.persona">
+       
+
+      
+            <label>Título</label>
+            <input type="text" class="form-control" placeholder="Título" name="titulo" [(ngModel)]="PersonalModel.titulo">
+       
+
+      
+            <label>Fecha próxima</label>
+            <input type="date" class="form-control" placeholder="Fecha próxima" name="fechaproxima" [(ngModel)]="PersonalModel.fechaproxima">
+            <br>
+            <label>Fecha última</label>
+            <input type="date" class="form-control" placeholder="Fecha última" name="fechaultima" [(ngModel)]="PersonalModel.fechaultima">
+            <br>
+            <input type="text" class="form-control" placeholder="Años por renovar" name="anoXrenovar" [(ngModel)]="PersonalModel.anoXrenovar">
+       
+
+      
+            <label>Citas</label>
+            <input type="date" class="form-control" placeholder="Fecha cita" name="fechacita" [(ngModel)]="PersonalModel.fechacita">
+            <input type="text" class="form-control" placeholder="Hora cita" name="horacita" [(ngModel)]="PersonalModel.horacita">
+       
+
+        <hr>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-dark w-25"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </form>
+  </div>
+</div>

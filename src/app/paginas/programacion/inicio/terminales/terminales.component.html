@@ -1,0 +1,32 @@
+<h6><u><b>Inicio - Terminales</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-terminal-tab" data-toggle="pill" href="#pills-terminal" role="tab" aria-controls="pills-terminal" aria-selected="true" style="color: black;">Tipos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-terminal0-tab" data-toggle="pill" href="#pills-terminal0" role="tab" aria-controls="pills-terminal0" aria-selected="false" style="color: black;">Interactuar</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-terminal" role="tabpanel" aria-labelledby="pills-terminal-tab">
+        <ul>
+            <li><b>Windows/MSDOS: CMD o COMANDO o Símbolo del sistema</b></li>
+            <li><b>Visual Code Studio: Terminal</b> -> New Terminal</li>
+            <li><b>Navegador</b> -> F12 o Ctrl+shift+i</li>
+        </ul>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-terminal0" role="tabpanel" aria-labelledby="pills-terminal0-tab">
+        <ul>
+            <li>Crear carpeta: <b>mkdir nombre_carpeta</b></li>
+            <li>Entrar capeta: <b>cd nombre_carpeta o unidad o /unidad o unidad/nombre_carpeta</b></li>
+            <li>Salir carpeta: <b>cd..</b></li>
+            <li>Cancelar: <b>Ctrl + C</b></li>
+            <li>Limpia pantalla -> <b>cls</b></li>
+        </ul>
+    </div>
+  
+  </div>
+  <button class="btn btn-dark m-2" [routerLink]="['/inicio']">Atras</button>

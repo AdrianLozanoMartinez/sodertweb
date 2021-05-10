@@ -1,0 +1,25 @@
+<h6><u><b>SQL - Base de datos.sql</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-basededatos-tab" data-toggle="pill" href="#pills-basededatos" role="tab" aria-controls="pills-basededatos" aria-selected="true" style="color: black;">Crear</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-basededatos0-tab" data-toggle="pill" href="#pills-basededatos0" role="tab" aria-controls="pills-basededatos0" aria-selected="false" style="color: black;">Eliminar</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-basededatos" role="tabpanel" aria-labelledby="pills-basededatos-tab">
+<ul>
+    <li><b>CREATE DATABASE</b> nombre_base_de_datos; -> Crea tabla aunque exista una con igual nombre</li>
+    <li><b>CREATE DATABASE IF NOT EXISTS</b> nombre_base_de_datos; -> Crea tabla si no existe con igual nombre</li>
+</ul>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-basededatos0" role="tabpanel" aria-labelledby="pills-basededatos0-tab">
+        <b>DROP DATABASE</b> nombre_base_de_datos
+    </div>
+      
+</div>
+  <button class="btn btn-dark m-2" [routerLink]="['/sql']">Atras</button>

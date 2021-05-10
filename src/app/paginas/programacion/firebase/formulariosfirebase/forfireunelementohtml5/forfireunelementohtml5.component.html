@@ -1,0 +1,41 @@
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/formulariosangular"><i class="fa fa-arrow-left"></i>Regresas</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="guardar(variableFormulario)" #variableFormulario="ngForm">
+
+<div class="form-group">
+    <label>Firebase ID</label>
+    <input type="text" class="form-control" placeholder="Firebase ID" disabled="disabled" name="id" [(ngModel)]="unomodel.id">
+    <small class="form-text text-muted">Este campo es autogenerado</small>
+</div>
+
+<div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre" required name="nombre" [(ngModel)]="unomodel.nombre">
+</div>
+
+<div class="form-group">
+    <label>Poder</label>
+    <input type="text" class="form-control" placeholder="Poder" name="poder" [(ngModel)]="unomodel.poder">
+</div>
+
+<div class="form-group">
+    <label>Estado</label>
+    <br>
+    <button *ngIf="unomodel.vivo" (click)="unomodel.vivo = false" class="btn btn-outline-success w-50" type="button"><i class="fa fa-smile-o"></i>Vivo</button>
+    <button *ngIf="!unomodel.vivo" (click)="unomodel.vivo = true" class="btn btn-outline-danger w-50" type="button"><i class="fa fa-heartbeat" aria-hidden="true"></i>Muerto</button>
+</div>
+
+<hr>
+
+      <div class="form-group text-center">
+          <button type="submit" class="btn btn-dark w-25"><i class="fa fa-save"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>

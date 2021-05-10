@@ -1,0 +1,1124 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-dimagencss-tab" data-toggle="pill" href="#pills-dimagencss" role="tab" aria-controls="pills-dimagencss" aria-selected="true" style="color: black;">Tamaño</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencssa-tab" data-toggle="pill" href="#pills-dimagencssa" role="tab" aria-controls="pills-dimagencssa" aria-selected="true" style="color: black;">Posición</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencssb-tab" data-toggle="pill" href="#pills-dimagencssb" role="tab" aria-controls="pills-dimagencssb" aria-selected="true" style="color: black;">Repetir</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencssc-tab" data-toggle="pill" href="#pills-dimagencssc" role="tab" aria-controls="pills-dimagencssc" aria-selected="true" style="color: black;">Hacer<br>Scroll</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss0-tab" data-toggle="pill" href="#pills-dimagencss0" role="tab" aria-controls="pills-dimagencss0" aria-selected="false" style="color: black;">Fondo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss1-tab" data-toggle="pill" href="#pills-dimagencss1" role="tab" aria-controls="pills-dimagencss1" aria-selected="false" style="color: black;">Imagen sobre<br>Otra imagen</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss2-tab" data-toggle="pill" href="#pills-dimagencss2" role="tab" aria-controls="pills-dimagencss2" aria-selected="false" style="color: black;">Borde<br>exterior</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss3-tab" data-toggle="pill" href="#pills-dimagencss3" role="tab" aria-controls="pills-dimagencss3" aria-selected="false" style="color: black;">Borde<br>interior</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss4-tab" data-toggle="pill" href="#pills-dimagencss4" role="tab" aria-controls="pills-dimagencss4" aria-selected="false" style="color: black;">Opaco<br>Translucido</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss5-tab" data-toggle="pill" href="#pills-dimagencss5" role="tab" aria-controls="pills-dimagencss5" aria-selected="false" style="color: black;">Z-index</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-dimagencss6-tab" data-toggle="pill" href="#pills-dimagencss6" role="tab" aria-controls="pills-dimagencss6" aria-selected="false" style="color: black;">Ocultar<br>Desaparecer</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-dimagencss" role="tabpanel" aria-labelledby="pills-dimagencss-tab">
+   
+      <h6>Tamaño</h6>
+      <div id="tamano"></div>
+      <br>
+      <h6>Tamaño 2</h6>
+      <div id="tamano2"></div>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h6>Tamaño{{co}}/h6>
+      {{co}}div id="tamano">{{co}}/div>
+      {{co}}h6>Tamaño 2{{co}}/h6>
+      {{co}}div id="tamano2">{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#tamano{{c}}
+  <b>width: 100px;</b>                   /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+  <b>height: 100px;</b>                  /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    <b>background-size: 25px, 25px;</b>    /*Tamaño de la imagen, depende del width y height. Puede ser px o %. Posición x (Horizontal) y (vertical)*/
+}
+
+#tamano2{{c}}
+<b>width: 100px;</b>                   /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+<b>height: 300px;</b>                  /*Depende el tamaño del div depende el tamaño de la imagen y que se repita más o menos*/
+background-image: url("../../../../../../assets/imagenes/01.jpg");
+background-repeat: no-repeat;
+    background-position: right top;
+    <b>background-size: 50%, 25px;</b>    /*Tamaño de la imagen, depende del width y height. Puede ser px o %. Posición x (Horizontal) y (vertical)*/
+  }</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencssa" role="tabpanel" aria-labelledby="pills-dimagencssa-tab">
+      
+      <h3>Direcciones</h3>
+      <h6>Left</h6>
+<p id="left" class="borde"></p>
+<h6>Right</h6>
+<p id="right" class="borde"></p>
+<h6>Top</h6>
+<p id="top" class="borde"></p>
+<h6>Bottom</h6>
+<p id="bottom" class="borde"></p>
+<h6>Center</h6>
+<p id="center"class="borde"></p>
+<h6>Left - top</h6>
+<p id="lefttop"class="borde"></p>
+<h6>Right - top</h6>
+<p id="righttop"class="borde"></p>
+<h6>Left - bottom</h6>
+<p id="leftbottom"class="borde"></p>
+<h6>Right - bottom</h6>
+<p id="rightbottom"class="borde"></p>
+<h6>Left - center</h6>
+<p id="leftcenter"class="borde"></p>
+<h6>Right - center</h6>
+<p id="rightcenter"class="borde"></p>
+<h6>Top - center</h6>
+<p id="topcenter"class="borde"></p>
+<h6>Bottom - center</h6>
+<p id="bottomcenter"class="borde"></p> 
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h6>Left{{co}}/h6>
+      {{co}}p id="left" class="borde">{{co}}/p>
+      {{co}}h6>Right{{co}}/h6>
+      {{co}}p id="right" class="borde">{{co}}/p>
+      {{co}}h6>Top{{co}}/h6>
+      {{co}}p id="top" class="borde">{{co}}/p>
+      {{co}}h6>Bottom{{co}}/h6>
+      {{co}}p id="bottom" class="borde">{{co}}/p>
+      {{co}}h6>Center{{co}}/h6>
+      {{co}}p id="center"class="borde">{{co}}/p>
+      {{co}}h6>Left - top{{co}}/h6>
+      {{co}}p id="lefttop"class="borde">{{co}}/p>
+      {{co}}h6>Right - top{{co}}/h6>
+      {{co}}p id="righttop"class="borde">{{co}}/p>
+      {{co}}h6>Left - bottom{{co}}/h6>
+      {{co}}p id="leftbottom"class="borde">{{co}}/p>
+      {{co}}h6>Right - bottom{{co}}/h6>
+      {{co}}p id="rightbottom"class="borde">{{co}}/p>
+      {{co}}h6>Left - center{{co}}/h6>
+      {{co}}p id="leftcenter"class="borde">{{co}}/p>
+      {{co}}h6>Right - center{{co}}/h6>
+      {{co}}p id="rightcenter"class="borde">{{co}}/p>
+      {{co}}h6>Top - center{{co}}/h6>
+      {{co}}p id="topcenter"class="borde">{{co}}/p>
+      {{co}}h6>Bottom - center{{co}}/h6>
+      {{co}}p id="bottomcenter"class="borde">{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">.borde{{c}}                        /*Para poder ver bien la demostración de la posición de la imagen. No necesario*/
+    border: solid rgb(9, 192, 168) 2px;
+}
+
+
+#left{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: left;</b>
+    background-size: 25px, 25px;    
+}
+
+
+#right{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: right;</b>
+    background-size: 25px, 25px;    
+}
+
+#top{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: top;</b>
+    background-size: 25px, 25px;    
+}
+
+
+#bottom{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: bottom;</b>
+    background-size: 25px, 25px;    
+}
+
+
+#center{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: center;</b>
+    background-size: 25px, 25px;    
+}
+
+
+#lefttop{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: left top;</b>
+    background-size: 25px, 25px;    
+}
+
+#righttop{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: right top;</b>
+    background-size: 25px, 25px;    
+}
+
+
+#leftbottom{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: left bottom;</b>
+    background-size: 25px, 25px;    
+}
+
+#rightbottom{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: right bottom;</b>
+    background-size: 25px, 25px;    
+}
+
+#leftcenter{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: left center;</b>
+    background-size: 25px, 25px;    
+}
+
+#rightcenter{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: right center;</b>
+    background-size: 25px, 25px;    
+}
+
+#topcenter{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: top center;</b>
+    background-size: 25px, 25px;    
+}
+
+#bottomcenter{{c}}
+    width: 100px;                   
+    height: 100px;                  
+    background-image: url("../../../../../../assets/imagenes/01.jpg");
+    background-repeat: no-repeat;
+    <b>background-position: bottom center;</b>
+    background-size: 25px, 25px;    
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+      
+ <h3>Especiales</h3>   
+ <p id="fixed">Fixed</p>
+<p id="static">Static</p>
+<p id="absolute">Absolute</p>
+<p id="relative">Relative</p>
+<p id="float">Float</p>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}p id="fixed">Fixed{{co}}/p>
+    {{co}}p id="static">Static{{co}}/p>
+    {{co}}p id="absolute">Absolute{{co}}/p>
+    {{co}}p id="relative">Relative{{co}}/p>
+    {{co}}p id="float">Float{{co}}/p></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#static{{c}}
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    <b>position: static; </b>                     /*Se coloca siguiendo los patrones de la web: top, right, left, bottom*/
+    <b>background-position: left;</b>
+    color: deeppink;
+}
+
+#absolute{{c}}
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    <b>position: absolute;</b>                     /*<b>Depende de la posicion del padre</b>*/
+    color: deeppink;
+
+}
+
+#fixed{{c}}
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    <b>position: fixed; </b>                       /*Siempre <b>mismo sitio aunque se haga scroll</b>*/
+    color: deeppink;
+    right: 0;
+    bottom: 0;
+}
+
+#relative{{c}}
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    <b>position: relative;</b>                     /*Se usa top, right, left, bottom, para colocarlo, se va donde digamos*/
+    color: deeppink;
+    <b>left: 100px;</b>
+}
+
+#float{{c}}
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../assets/imagenes/01.jpg");
+    color: deeppink;
+    <b>float: left;</b>                           /*Toma valores como left o right*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+</div>
+
+    <div class="tab-pane fade" id="pills-dimagencssb" role="tabpanel" aria-labelledby="pills-dimagencssb-tab">
+
+      <div id="norepetir">No repetir imagen -> </div>
+<div id="repetiry">Repetir imagen vertical, depende del height -> </div>
+<br>
+<div id="repetirx">Repetir imagen horizontal, depende del width</div>
+
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div id="norepetir">No repetir imagen -> {{co}}/div>
+      {{co}}div id="repetiry">Repetir imagen vertical, depende del height -> {{co}}/div>
+      {{co}}br>
+      {{co}}div id="repetirx">Repetir imagen horizontal, depende del width{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#norepetir{{c}}
+  width: 100px;
+  height: 300px;
+  background-image: url("../../../../../../assets/imagenes/01.jpg");
+  background-repeat: <b>no-repeat</b>;
+  background-position: right top;
+  background-size: 25px, 25px;
+}
+
+#repetiry{{c}}
+  width: 100px;
+  <b>height: 300px</b>;                          /*Depende el tamaño del div depende que se repita más o menos en vertical (y)*/
+  background-image: url("../../../../../../assets/imagenes/01.jpg");
+  background-repeat: <b>repeat-y</b>;    /*Repetir en vertical*/
+  background-position: right top;
+  background-size: 25px, 25px;
+}
+
+#repetirx{{c}}
+  <b>width: 100px</b>;                           /*Depende el tamaño del div depende que se repita más o menos en horizontal (x)*/
+  height: 300px;
+  background-image: url("../../../../../../assets/imagenes/01.jpg");
+  background-repeat: <b>repeat-x</b>;    /* Repetir en horizontal*/
+  background-position: right top;
+  background-size: 25px, 25px;
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencssc" role="tabpanel" aria-labelledby="pills-dimagencssc-tab">
+      <h6>Imagen no se mueve (Fixed)</h6>
+<div class="fixed"></div>
+<br>
+<h6>Imagen se mueve (Scroll)</h6>
+<div class="scroll"></div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h6>Imagen no se mueve (Fixed){{co}}/h6>
+      {{co}}div class="fixed">{{co}}/div>
+      {{co}}br>
+      {{co}}h6>Imagen se mueve (Scroll){{co}}/h6>
+      {{co}}div class="scroll">{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">.fixed{{c}}
+  width: 500px;
+  height: 500px;
+  background-image: url("../../../../../../assets/imagenes/01.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+  <b>background-attachment: fixed; </b>          /*No se desplaza a movernos por la página, al poner width y height vemos un cuadro que vemos partes del fondo al movernos*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-dimagencss0" role="tabpanel" aria-labelledby="pills-dimagencss0-tab">
+
+     <h3>Fondo</h3>
+     No funciona aquí
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>No funciona aquí, no hay código html específico</b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text"><b>body</b>{{c}}
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 50px, 75px;
+  background-attachment: fixed;   
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+  <br>
+<h3>Fondo de la imagen</h3>
+<img id="piedra" src="../../../../../assets/imagenes/01.jpg">
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}img id="piedra" src="../../../../../assets/imagenes/01.jpg"></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text"><b>#piedra</b>{{c}}
+    <b>background</b>: yellow;    /*La imagen debe ser PNG no JPG para que se vea el fondo*/
+    border: blue 5px solid;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencss1" role="tabpanel" aria-labelledby="pills-dimagencss1-tab">
+
+<h3>Mostrar</h3>   
+<div id="sobre2imagenes"></div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div id="sobre2imagenes">{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#sobre2imagenes{{c}}
+  height: 200px;                                        /*Ha sido necesario para que se vea las imágenes, posiblemente width en otra ocasión o ambos*/
+  <b>background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); </b> /*2 imágenes*/
+  background-position: top right, bottom left;          /*bottom left, bottom right, bottom center, top left, top right, top center, right, left, center, top, bottom*/
+                      /*<u>1º Imagen, 2º Imagen</u>*/
+  background-size: contain, 500px 400px;                /*Tamaño y ajuste sobre celda*/
+            /*<u>1º Imagen, 2º Imagen</u>*/
+  background-repeat: repeat, no-repeat;
+                  /*<u>1º Imagen, 2º Imagen</u>*/
+  background-origin: padding-box;                       /*Como queremos que sea el fondo por dentro*/
+  background-clip: border-box;                          /*Como queremos que sea el fondo por fuera*/
+  opacity: 0.5;                                         /*Opaco/translucido de ambas imágenes. 0...0.5...1*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<h3>Ajuste de tamaño</h3>
+<h6>Background-size: 200px 100px, contain</h6>
+<div id="contain1"></div>
+<br>
+<h6>Background-size: contain, 200px 100px</h6>
+<div id="contain2"></div>
+<br>
+<h6>Background-size: cover, 200px, 100px</h6>
+<div id="cover1"></div>
+<br>
+<h6>Bsackground-size: 200px, 100px;, Cover</h6>
+<div id="cover2"></div>
+<br>
+<h6>Background-size: 200px, 100px</h6>
+<div id="tamano"></div>     
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}h6>Background-size: 200px 100px, contain{{co}}/h6>
+    {{co}}div id="contain1">{{co}}/div>
+    {{co}}br>
+    {{co}}h6>Background-size: contain, 200px 100px{{co}}/h6>
+    {{co}}div id="contain2">{{co}}/div>
+    {{co}}br>
+    {{co}}h6>Background-size: cover, 200px, 100px{{co}}/h6>
+    {{co}}div id="cover1">{{co}}/div>
+    {{co}}br>
+    {{co}}h6>Bsackground-size: 200px, 100px;, Cover{{co}}/h6>
+    {{co}}div id="cover2">{{co}}/div>
+    {{co}}br>
+    {{co}}h6>Background-size: 200px, 100px{{co}}/h6>
+    {{co}}div id="tamano">{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#contain1{{c}}
+  width: 200px;                                         /*Necesario para que se vea el efecto*/
+  height: 200px;                                         
+  background-image: url("../../../../../../assets/imagenes/drop-images.png"), url("../../../../../../assets/imagenes/01.jpg");  
+  background-position: top right, bottom left;   
+  <b>background-size: 200px 100px, contain;</b>                /*Contain: Ajusta al tamaño de la celda*/
+                  /*<b>1º Imagen, 2º Imagen</b>*/
+  background-repeat: repeat, no-repeat;
+  background-origin: padding-box;                       
+  background-clip: border-box;                          
+  opacity: 0.5;                                         
+}
+
+#contain2{{c}}
+  width: 200px;                                       /*Necesario para que se vea el efecto*/
+  height: 200px;                                         
+  background-image: url("../../../../../../assets/imagenes/drop-images.png"), url("../../../../../../assets/imagenes/01.jpg");  
+  background-position: top right, bottom left;   
+  <b>background-size: contain, 200px 100px;</b>                /*Contain: Ajusta al tamaño de la celda*/
+               /*<b>1º Imagen, 2º Imagen</b>*/
+  background-repeat: repeat, no-repeat;
+  background-origin: padding-box;                       
+  background-clip: border-box;                          
+  opacity: 0.5;                                         
+}
+
+#cover1{{c}}
+  width: 200px;                                         /*Necesario para que se vea el efecto*/
+  height: 200px;                                         
+  background-image: url("../../../../../../assets/imagenes/drop-images.png"), url("../../../../../../assets/imagenes/01.jpg");  
+  background-position: top right, bottom left;   
+  <b>background-size: cover, 200px, 100px;</b>                /*Cover: Se deja a su forma original, lo cubre todo*/
+              /*<b>1º Imagen, 2º Imagen</b>*/
+  background-repeat: repeat, no-repeat;
+  background-origin: padding-box;                       
+  background-clip: border-box;                          
+  opacity: 0.5;                                         
+}
+
+#cover2{{c}}
+  width: 200px;                                         /*Necesario para que se vea el efecto*/
+  height: 200px;                                         
+  background-image: url("../../../../../../assets/imagenes/drop-images.png"), url("../../../../../../assets/imagenes/01.jpg");  
+  background-position: top right, bottom left;   
+  <b>background-size: 200px, 100px;, Cover;</b>                /*Cover: Se deja a su forma original, lo cubre todo*/
+                  /*<b>1º Imagen, 2º Imagen</b>*/
+  background-repeat: repeat, no-repeat;
+  background-origin: padding-box;                       
+  background-clip: border-box;                          
+  opacity: 0.5;                                         
+}
+
+#tamano{{c}}
+  width: 200px;                                         /*Necesario para que se vea el efecto*/
+  height: 200px;                                         
+  background-image: url("../../../../../../assets/imagenes/drop-images.png"), url("../../../../../../assets/imagenes/01.jpg");  
+  background-position: top right, bottom left;   
+  <b>background-size: 200px, 100px;</b>                /*Especifica el tamaño de cada imagen*/
+              /*<b>1º Imagen, 2º Imagen</b>*/
+  background-repeat: repeat, no-repeat;
+  background-origin: padding-box;                       
+  background-clip: border-box;                          
+  opacity: 0.5;                                         
+}</pre>
+      </div>
+    </div>
+</div>
+
+ 
+      
+</div>
+
+    <div class="tab-pane fade" id="pills-dimagencss2" role="tabpanel" aria-labelledby="pills-dimagencss2-tab">
+
+      <p id="paddingbox">Padding-box</p>
+<p id="borderbox">Border-box</p>
+<p id="contentbox">Content-box</p>
+<p id="initial">Initial</p>
+<p id="inherit">Inherit</p>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}p id="paddingbox">Padding-box{{co}}/p>
+      {{co}}p id="borderbox">Border-box{{co}}/p>
+      {{co}}p id="contentbox">Content-box{{co}}/p>
+      {{co}}p id="initial">Initial{{co}}/p>
+      {{co}}p id="inherit">Inherit{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#paddingbox{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: padding-box;</b>   
+  background-repeat: no-repeat;                                                  
+}
+
+#borderbox{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+ <b> background-clip: border-box;</b>   
+  background-repeat: no-repeat;                                           
+}
+
+#contentbox{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: content-box;</b>  
+  background-repeat: no-repeat;                                                 
+}
+
+#initial{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: initial;</b> 
+  background-repeat: no-repeat;                                               
+}
+
+#inherit{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: inherit;</b> 
+  background-repeat: no-repeat;                                                
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencss3" role="tabpanel" aria-labelledby="pills-dimagencss3-tab">
+
+      <p id="paddingbox2">Padding-box</p>
+<p id="borderbox2">Border-box</p>
+<p id="contentbox2">Content-box</p>
+<p id="initial2">Initial</p>
+<p id="inherit2">Inherit</p>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}p id="paddingbox2">Padding-box{{co}}/p>
+      {{co}}p id="borderbox2">Border-box{{co}}/p>
+      {{co}}p id="contentbox2">Content-box{{co}}/p>
+      {{co}}p id="initial2">Initial{{co}}/p>
+      {{co}}p id="inherit2">Inherit{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#paddingbox2{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg");  
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-origin: padding-box;</b>  
+  background-repeat: no-repeat;                                                 
+}
+
+#borderbox2{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-origin: border-box;</b> 
+  background-repeat: no-repeat;                                             
+}
+
+#contentbox2{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-origin: content-box;</b>
+  background-repeat: no-repeat;                                                   
+}
+
+#initial2{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-origin: initial;</b>
+  background-repeat: no-repeat;                                                
+}
+
+#inherit2{{c}}
+  background-image: url("../../../../../assets/imagenes/drop-images.png"), url("../../../../../assets/imagenes/01.jpg"); 
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-origin: inherit;</b> 
+  background-repeat: no-repeat;                                                
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencss4" role="tabpanel" aria-labelledby="pills-dimagencss4-tab">
+
+      <h6>Opaco</h6>
+<p id="opaco"></p>
+<h6>Casi opaco</h6>
+<p id="casiopaco"></p>
+<h6>Medio</h6>
+<p id="medio"></p>
+<h6>Casi translucido</h6>
+<p id="casitranslucido"></p>
+<h6>Translucido</h6>
+<p id="translucido"></p>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h6>Opaco{{co}}/h6>
+      {{co}}p id="opaco">{{co}}/p>
+      {{co}}h6>Casi opaco{{co}}/h6>
+      {{co}}p id="casiopaco">{{co}}/p>
+      {{co}}h6>Medio{{co}}/h6>
+      {{co}}p id="medio">{{co}}/p>
+      {{co}}h6>Casi translucido{{co}}/h6>
+      {{co}}p id="casitranslucido">{{co}}/p>
+      {{co}}h6>Translucido{{co}}/h6>
+      {{co}}p id="translucido">{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#opaco{{c}}
+  height: 200px;
+  width: 300px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-position: top left, bottom left;
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  <b>opacity: 1;</b>                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#casiopaco{{c}}
+  height: 200px;
+  width: 300px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-position: top left, bottom left;
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  <b>opacity: 0.8;</b>                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#medio{{c}}
+  height: 200px;
+  width: 300px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-position: top left, bottom left;
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  <b>opacity: 0.5;</b>                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#casitranslucido{{c}}
+  height: 200px;
+  width: 300px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-position: top left, bottom left;
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  <b>opacity: 0.2;</b>                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}
+
+#translucido{{c}}
+  height: 200px;
+  width: 300px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  background-position: top left, bottom left;
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  <b>opacity: 0;</b>                       /*Opaco/Translucido de ambas imágenes. 0...0.5...1*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dimagencss5" role="tabpanel" aria-labelledby="pills-dimagencss5-tab">
+
+      No me funciona, investigar
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>No me funciona, investigar</b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#index{{c}}
+  width: 200px;
+  height: 200px;
+  background-image: url("../../../../../assets/imagenes/01.jpg");
+  <b>z-index: 1;</b>                             /*Texto delante y la imagen atras, más grande negativo más atras*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-dimagencss6" role="tabpanel" aria-labelledby="pills-dimagencss6-tab">
+
+      <h6>Ocultar<small><br>La imagen se oculta del todo en la visual de html - Se ve en la consola del navegador (Ctrl + i)</small></h6>
+<img id="ocultar" src="../../../../../assets/imagenes/01.jpg">
+<h6>Desaparecer<small><br>La imagen desaparece pero no del todo del html - Se ve en la consola del navegador (Ctrl + i)</small></h6>
+<img id="desaparecer" src="../../../../../assets/imagenes/01.jpg">
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h6>Ocultar{{co}}small>{{co}}br>La imagen se oculta del todo en la visual de html - Se ve en la consola del navegador (Ctrl + i){{co}}/small>{{co}}/h6>
+      {{co}}img id="ocultar" src="../../../../../assets/imagenes/01.jpg">
+      {{co}}h6>Desaparecer{{co}}small>{{co}}br>La imagen desaparece pero no del todo del html - Se ve en la consola del navegador (Ctrl + i){{co}}/small>{{co}}/h6>
+      {{co}}img id="desaparecer" src="../../../../../assets/imagenes/01.jpg"></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#ocultar{{c}}
+  width: 200px;
+  height: 200px;
+  <b>visibility: hidden;</b>                     /*La imagen se <b>oculta del todo en la visual de html</b> - Se comprueba en la consola del navegador (Ctrl + i)*/
+}
+
+#desaparecer{{c}}
+  width: 200px;
+  height: 200px;
+  <b>display:none;</b>                           /*La imagen <b>desaparece pero no del todo del html</b> - Se comprueba en la consola del navegador (Ctrl + i)*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+      </div>
+
+  </div>

@@ -1,0 +1,18 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+#nombreId{
+    color: pink;
+}
+
+.nombreClass{
+    color: orange;
+}
+
+h1, #idNombre, .classNombre{
+    font-size: 60px;
+}

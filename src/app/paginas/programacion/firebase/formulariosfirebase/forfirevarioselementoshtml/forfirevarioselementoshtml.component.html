@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col text-right">
+        <button class="btn btn-primary" routerLink="/unelemento4/nuevo"><i class="fa fa-plus"></i>Agregar (Ir al componente de un elemento)</button>
+                                              <!-- "/muestrauno4/nuevo": Nos lleva a la página para agregar un nuevo argumento poniendo /nuevo va a
+                                                                         ser el id { path: 'muestrauno/:id', component: MuestraunoComponent}, Nos
+                                                                         lleva al componente creado para un elemento. Enlace que va al componente de
+                                                                         un elemento sin ningún ID y de ese modo se crea uno nuevo al rellenarlo, no
+                                                                         actualiza, y por ello ponemos nuevo porque pide un argumento -->
+    </div>
+</div>
+<table>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Poderes</th>
+            <th scope="col">Vivo</th>
+            <th scope="col">Herramientas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todosloselementos of unomodel2; let i = index">
+        <!-- ngFor="let todosloselementos of unomodel2: ngFor para coger cada elemento. Metemos (let) en la variable local (todosloselementos), lo que
+                                                        obtenemos de la variable del TS (unomodel2).
+                                                        let i = index": Metemos (let) en la variable local (i) lo que tenemos en el íncide/posición
+                                                        (index) -->
+            <th scope="row">{{i + 1}}</th>
+            <td>{{todosloselementos.nombre}}</td>
+            <td>{{todosloselementos.poder}}</td>
+            <!--  todosloselementos.poder o vivo o ...}}: Al darle el valor a la variable local (todosloselementos) podemos usarlo como si usaramos del tirón
+                                                          el model (UnoModel) y con el punto (.) especificamos lo que hay en su interior/subvariable (nombre,
+                                                          poder, vivo...) -->
+            <td><label *ngIf="todosloselementos.vivo" class="badge badge-success">Vivo</label>
+                <!--    ngIf="todosloselementos.vivo": Si la variable (todosloselementos/UnoModel) tiene una subvariable (vivo) que es true, se muestra -->
+                <label *ngIf="!todosloselementos.vivo" class="badge badge-danger">Muerto</label>
+                <!--    ngIf="!todosloselementos.vivo": Si la variable (todosloselementos/UnoModel) tiene una subvariable (vivo) que es false, se muestra -->
+            </td>
+            <td><button class="btn btn-info mr-1" [routerLink]="['/unelemento4', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+                                                          <!-- "['/muestrauno4', todosloselementos.id ]": Enlace que va al componente de un elemento
+                                                                                                          y el segundo argumento nos específica la id
+                                                                                                          para poder actualizar/modificar -->
+                <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  <div>
+  <h4 class="alert-heading">Cargando</h4>
+  <p>
+      <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+  </p>
+  <p class="mb-0">Espere por favor</p>
+  </div>
+
+  <div>
+  <h4 class="alert-heading">No hay registro</h4>
+  <p>
+      <i class="fa fa-exclamation fa-3x fa-fw"></i>
+  </p>
+  </div>

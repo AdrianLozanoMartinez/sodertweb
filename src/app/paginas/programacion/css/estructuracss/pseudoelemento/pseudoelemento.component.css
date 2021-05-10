@@ -1,0 +1,40 @@
+#x1{
+    width: 500px;
+    height: 100px;
+}
+#x1>p{              /*Primer p*/
+    display:none;               /*oculto*/
+    background-color: yellow;
+}
+#x1:hover p{        /*Pasa el raton y sale el párrafo (p)*/
+    display:block;
+}
+#x4 p:last-child{   /*Último hijo, último párrafo*/
+    background-color: aqua;
+}
+#x4 p:first-child{  /*Primer hijo, primer párrafo*/
+    background-color: blueviolet;
+}
+div:empty{          /*Elemento vacío en el html, el x2*/
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin-top: 5px;
+}
+#par{               /*Justifica el párrafo y lo encierra en las medidas de width y height*/
+    width: 200px;
+    height: 50px;
+    text-align: justify;
+}
+#par::first-line{   /*(::) Para especificar el elemento que se encuentra dentro, en este caso el párrafo*/
+    text-transform: uppercase;
+}
+
+.der:nth-child(odd){                  /*Hijos. Impar*/
+    background-color: rgb(38, 0, 255);
+}
+.doc:nth-child(even){                  /*Hijos. Par*/
+    background-color: chartreuse;
+}
+
+

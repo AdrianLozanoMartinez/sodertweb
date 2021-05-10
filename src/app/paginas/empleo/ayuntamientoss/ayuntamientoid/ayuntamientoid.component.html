@@ -1,0 +1,128 @@
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/ayuntamiento"><i class="fa fa-arrow-left"></i>Regresas</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="guardar(variableFormulario)" #variableFormulario="ngForm">
+
+<div class="form-group">
+    <label>Comunidad Autónoma / Estado / Junta de andalucía</label>
+    <input type="text" class="form-control" placeholder="Comunidad" name="Comunidad" [(ngModel)]="MunicipiosModel.comunidad">
+</div>
+
+<div class="form-group">
+    <label>Estado</label>
+    <br>
+    <button *ngIf="MunicipiosModel.malaga" (click)="MunicipiosModel.malaga = false" class="btn btn-outline-success" type="button">Málaga</button>
+    <button *ngIf="!MunicipiosModel.malaga" (click)="MunicipiosModel.malaga = true" class="btn btn-outline-danger" type="button">No Málaga</button>
+    <button *ngIf="MunicipiosModel.cadiz" (click)="MunicipiosModel.cadiz = false" class="btn btn-outline-success" type="button">Cádiz</button>
+    <button *ngIf="!MunicipiosModel.cadiz" (click)="MunicipiosModel.cadiz = true" class="btn btn-outline-danger" type="button">No Cádiz</button>
+    <button *ngIf="MunicipiosModel.granada" (click)="MunicipiosModel.granada = false" class="btn btn-outline-success" type="button">Granada</button>
+    <button *ngIf="!MunicipiosModel.granada" (click)="MunicipiosModel.granada = true" class="btn btn-outline-danger" type="button">No Granada</button>
+    <button *ngIf="MunicipiosModel.jaen" (click)="MunicipiosModel.jaen = false" class="btn btn-outline-success" type="button">Jaén</button>
+    <button *ngIf="!MunicipiosModel.jaen" (click)="MunicipiosModel.jaen = true" class="btn btn-outline-danger" type="button">No Jaén</button>
+    <button *ngIf="MunicipiosModel.cordoba" (click)="MunicipiosModel.cordoba = false" class="btn btn-outline-success" type="button">Córdoba</button>
+    <button *ngIf="!MunicipiosModel.cordoba" (click)="MunicipiosModel.cordoba = true" class="btn btn-outline-danger" type="button">No Córdoba</button>
+    <button *ngIf="MunicipiosModel.almeria" (click)="MunicipiosModel.almeria = false" class="btn btn-outline-success" type="button">Almería</button>
+    <button *ngIf="!MunicipiosModel.almeria" (click)="MunicipiosModel.almeria = true" class="btn btn-outline-danger" type="button">No Almería</button>
+    <button *ngIf="MunicipiosModel.huelva" (click)="MunicipiosModel.huelva = false" class="btn btn-outline-success" type="button">Huelva</button>
+    <button *ngIf="!MunicipiosModel.huelva" (click)="MunicipiosModel.huelva = true" class="btn btn-outline-danger" type="button">No Huelva</button>
+    <button *ngIf="MunicipiosModel.sevilla" (click)="MunicipiosModel.sevilla = false" class="btn btn-outline-success" type="button">Sevilla</button>
+    <button *ngIf="!MunicipiosModel.sevilla" (click)="MunicipiosModel.sevilla = true" class="btn btn-outline-danger" type="button">No Sevilla</button>
+</div>
+
+<div class="form-group">
+    <label>Municipio</label>
+    <input type="text" class="form-control" placeholder="Municipio" required name="municipio" [(ngModel)]="MunicipiosModel.municipio">
+</div>
+
+<div class="form-group">
+    <label>Bolsa de empleo 1</label>
+    <input type="text" class="form-control" placeholder="Dirección de la bolsa de empleo" name="direccion1" [(ngModel)]="MunicipiosModel.direccion1">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.direccion1">
+    <label>Bolsa de empleo 2</label>
+    <input type="text" class="form-control" placeholder="Dirección de la bolsa de empleo" name="direccion2" [(ngModel)]="MunicipiosModel.direccion2">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.direccion2">
+    <label>Bolsa de empleo 3</label>
+    <input type="text" class="form-control" placeholder="Dirección de la bolsa de empleo" name="direccion3" [(ngModel)]="MunicipiosModel.direccion3">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.direccion3">
+    <label>Bolsa de empleo 4</label>
+    <input type="text" class="form-control" placeholder="Dirección de la bolsa de empleo" name="direccion4" [(ngModel)]="MunicipiosModel.direccion4">
+</div>
+
+<div class="form-group">
+    <label>Sede electrónica</label>
+    <input type="text" class="form-control" placeholder="Sede electrónica" name="sede" [(ngModel)]="MunicipiosModel.sedeelectronica">
+</div>
+
+<div class="form-group">
+    <label>Distancia desde Marbella</label>
+    <input type="text" class="form-control" placeholder="Distancia desde Marbella" name="distancia" [(ngModel)]="MunicipiosModel.distancia">
+</div>
+
+<div class="form-group">
+    <label>Tiempo desde Marbella</label>
+    <input type="text" class="form-control" placeholder="Tiempo desde Marbella" name="tiempo" [(ngModel)]="MunicipiosModel.tiempo">
+</div>
+
+<div class="form-group">
+    <label>Estado</label>
+    <br>
+    <button *ngIf="MunicipiosModel.bolsaechada" (click)="MunicipiosModel.bolsaechada = false" class="btn btn-outline-success w-50" type="button">Bolsa echada</button>
+    <button *ngIf="!MunicipiosModel.bolsaechada" (click)="MunicipiosModel.bolsaechada = true" class="btn btn-outline-danger w-50" type="button">Bolsa no echada</button>
+    <br><br>
+    <button *ngIf="MunicipiosModel.seleccionado" (click)="MunicipiosModel.seleccionado = false" class="btn btn-outline-success w-50" type="button">Seleccionado</button>
+    <button *ngIf="!MunicipiosModel.seleccionado" (click)="MunicipiosModel.seleccionado = true" class="btn btn-outline-danger w-50" type="button">No seleccionado</button>
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.seleccionado">
+    <label>Tipo y puesto 1 de la bolsa</label>
+    <input type="text" class="form-control" placeholder="Tipo 1 de la bolsa" name="tipo1" [(ngModel)]="MunicipiosModel.tipo1">
+    <input type="text" class="form-control" placeholder="Puesto 1 de la bolsa" name="puesto1" [(ngModel)]="MunicipiosModel.puesto1">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.tipo1">
+    <label>Tipo y puesto 2 de la bolsa</label>
+    <input type="text" class="form-control" placeholder="Tipo 2 de la bolsa" name="tipo1" [(ngModel)]="MunicipiosModel.tipo2">
+    <input type="text" class="form-control" placeholder="Puesto 2 de la bolsa" name="puesto2" [(ngModel)]="MunicipiosModel.puesto2">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.tipo2">
+    <label>Tipo y puesto 3 de la bolsa</label>
+    <input type="text" class="form-control" placeholder="Tipo 3 de la bolsa" name="tipo3" [(ngModel)]="MunicipiosModel.tipo3">
+    <input type="text" class="form-control" placeholder="Puesto 3 de la bolsa" name="puesto3" [(ngModel)]="MunicipiosModel.puesto3">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.tipo3">
+    <label>Tipo y puesto 4 de la bolsa</label>
+    <input type="text" class="form-control" placeholder="Tipo 4 de la bolsa" name="tipo4" [(ngModel)]="MunicipiosModel.tipo4">
+    <input type="text" class="form-control" placeholder="Puesto 4 de la bolsa" name="puesto4" [(ngModel)]="MunicipiosModel.puesto4">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.bolsaechada">
+    <label>Fecha de la instancia</label>
+    <input type="text" class="form-control" placeholder="Fecha de la instancia" name="fechainstancia" [(ngModel)]="MunicipiosModel.fechainstancia">
+</div>
+
+<div class="form-group" *ngIf="MunicipiosModel.bolsaechada">
+    <label>Información extra</label>
+    <input type="text" class="form-control" placeholder="Información extra" name="informacion" [(ngModel)]="MunicipiosModel.informacion">
+</div>
+
+<hr>
+
+      <div class="form-group text-center">
+          <button type="submit" class="btn btn-dark w-25"><i class="fa fa-save"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>

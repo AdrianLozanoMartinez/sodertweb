@@ -1,0 +1,55 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link, button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+
+#top{
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el top*/
+    top: 0;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más alto*/
+}
+
+#top2{
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el top*/
+    top: 100px;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más alto*/
+}
+
+#rigth{
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el right*/
+    right: 0;               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la derecha*/
+}
+
+#rigth2{
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el right*/
+    right: 100px;               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la derecha*/
+}
+
+#left{
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el left*/
+    left: 0;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la izquierda*/
+}
+
+#left2{
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el left*/
+    left: 100px;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la izquierda*/
+}
+
+#bottom{
+    background: lightgreen;
+    position: absolute;        /*Necesario para que se ejecute el bottom*/
+    bottom: 0;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más abajo*/
+}
+
+#bottom2{
+    background: lightgreen;
+    position: absolute;            /*Necesario para que se ejecute el bottom*/
+    bottom: 100px;                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más abajo*/
+}

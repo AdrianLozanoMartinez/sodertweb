@@ -1,0 +1,884 @@
+<h6><u><b>Firebase - Subir archivos - Angular</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-subirarchivos-tab" data-toggle="pill" href="#pills-subirarchivos" role="tab" aria-controls="pills-subirarchivos" aria-selected="true" style="color: black;">Model.ts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-subirarchivos0-tab" data-toggle="pill" href="#pills-subirarchivos0" role="tab" aria-controls="pills-subirarchivos0" aria-selected="false" style="color: black;">___Web___<br>(Firebase)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivos1-tab" data-toggle="pill" href="#pills-subirarchivos1" role="tab" aria-controls="pills-subirarchivos1" aria-selected="false" style="color: black;">Environment.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivos2-tab" data-toggle="pill" href="#pills-subirarchivos2" role="tab" aria-controls="pills-subirarchivos2" aria-selected="false" style="color: black;">App.module.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivos3-tab" data-toggle="pill" href="#pills-subirarchivos3" role="tab" aria-controls="pills-subirarchivos3" aria-selected="false" style="color: black;">Conexión a <br>Firebase</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivos4-tab" data-toggle="pill" href="#pills-subirarchivos4" role="tab" aria-controls="pills-subirarchivos4" aria-selected="false" style="color: black;">Directiva.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivo5-tab" data-toggle="pill" href="#pills-subirarchivo5" role="tab" aria-controls="pills-subirarchivo5" aria-selected="false" style="color: black;">Conexión a Directiva<br><small>Ts</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivo6-tab" data-toggle="pill" href="#pills-subirarchivo6" role="tab" aria-controls="pills-subirarchivo6" aria-selected="false" style="color: black;">Limpiar Pantalla<br><small>Ts</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivo7-tab" data-toggle="pill" href="#pills-subirarchivo7" role="tab" aria-controls="pills-subirarchivo7" aria-selected="false" style="color: black;">Cargar a Firebase +<br>Funcionamiento <small>de subida</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-subirarchivo8-tab" data-toggle="pill" href="#pills-subirarchivo8" role="tab" aria-controls="pills-subirarchivo8" aria-selected="false" style="color: black;">Mostrar<br>imágenes</a>
+    </li>
+    <button class="btn btn-success m-2" [routerLink]="['/firebase']">Atras Firebase</button>
+    <button class="btn btn-dark m-2" [routerLink]="['/angular']">Atras Angular</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-subirarchivos" role="tabpanel" aria-labelledby="pills-subirarchivos-tab">
+        
+        <pre>
+        <b>export class FileItem{{c}}
+
+            public archivo: File;</b>                           //Metemos en la variable (archivo) la propiedad File (Lleva el peso del archivo, nombre, tipo...)
+            <b>public nombreArchivo: string;</b>                   //Aunque en File ya lo tiene, pero es para acceder mejor
+            <b>public url: string;</b>                             //Contiene la dirección de la imagen cuando esté subida a firebase
+            <b>public estaSubiendo: boolean;</b>                   //Nos dirá si la imagen se está subiendo en ese momento o pendiente de subir
+            <b>public progreso: number;</b>                        //Manejaremos el porcentaje de la subida
+        
+            <b>constructor( archivo2: File ){{c}}     </b>              //Recibimos un archivo
+        
+                <b>this.archivo = archivo2;</b>                    //Metemos la variable archivo la variable archivo
+                <b>this.nombreArchivo = archivo2.name;</b>         /*Metemos en la variable (nombreArchivo) el nombre (name) de la variable (archivo2), 
+                                                            que nos da la opción al identificarlo por el tipo File*/
+                <b>this.estaSubiendo = false;</b>                  /*Metemos en la variable (estaSubiendo) el valor de false para iniciar la subida, 
+                                                            ya que si está en true, significa que está subiendo y de ese modo reiniciamos*/
+                <b>this.progreso = 0; </b>                         //Metemos en la variable (progreso) el valor de 0 para iniciar el progreso de subida
+        
+           <b> }
+        
+        }</b></pre>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-subirarchivos0" role="tabpanel" aria-labelledby="pills-subirarchivos0-tab">
+        
+        <a class="enlace" [routerLink]="['/proyecto']"><u><b>1º Crear proyecto</b></u></a>
+    <br>
+    <u><b>2º Cloud Firestore</b></u> (<a class="enlace" href="https://firebase.google.com/?pli=1"><u><b>Web Firebase</b></u></a> -> Ir a consola -> Proyecto -> Cloud Firestore -> Crear base de datos)
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">1º Paso</th>
+                <th scope="col">2º Paso</th>
+                <th scope="col">3º Paso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>Elegir una de las 2 opciones (Da igual ya que luego se cambia las reglas):
+    <li><pre><b>Empezar con el modo de prueba,</b> <small>De forma predeterminada, se podrá acceder libremente a tus datos para agilizar la configuración. 
+                                        Si no actualizas las reglas de seguridad, dejarán de concederse los accesos de lectura y 
+                                        escritura de cliente dentro de 30 días.Cualquier usuario que tenga la referencia de tu base de datos 
+                                        podrá ver, editar y eliminar todos los datos de la base de datos durante 30 días</small></pre></li>
+    <li><pre><b>Empezar en modo de producción,</b> <small>se podrá acceder libremente a tus datos para agilizar la configuración. Si no actualizas las reglas 
+                                        de seguridad, dejarán de concederse los accesos de lectura y escritura de cliente dentro de 30 días.Cualquier usuario 
+                                        que tenga la referencia de tu base de datos podrá ver, editar y eliminar todos los datos de la base de datos durante 
+                                        30 días</small></pre></li>
+<br><b>Siguiente</b>
+</ul>
+                </td>
+                <td><pre>
+La opción de ubicación indica dónde se 
+guardarán los datos de Cloud Firestore. 
+
+<b>Ubicación de Cloud Firestore </b>
+
+Elegimos -> <b>eur3 (europe-west)</b> 
+
+<b>Habilitar</b></pre></td>
+                <td>
+                    <pre><b>Reglas sin modificar</b>
+rules_version = '2';
+service cloud.firestore {{c}}
+  match /databases/{{c}}database}/documents {{c}}
+    match /{{c}}document=**} {{c}}
+      allow read, write: if false;
+    }
+  }
+}
+
+<b>O</b>
+
+rules_version = '2';
+service cloud.firestore {{c}}
+  match /databases/{{c}}database}/documents {{c}}
+    match /{{c}}document=**} {{c}}
+      allow read, write: if
+          request.time 
+    }
+  }
+}
+
+<b>Reglas modificada</b>
+service cloud.firestore {{c}}
+  match /databases/{{c}}database}/documents {{c}}
+    match /{{c}}document=**} {{c}}
+    //Se cambia a true para permitir (allow) la lectura y escritura
+      allow read, write: if true;  
+    }
+  }
+}
+
+<b>Publicar</b></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <u><b>3º Storage</b></u>
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">1º Paso</th>
+                <th scope="col">2º Paso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <b>Siguiente</b> -><br><br><b>Listo</b></td>
+                <td>
+                    <pre><b>Reglas sin modificar</b>
+rules_version = '2';
+service firebase.storage {{c}}
+  match /b/{{c}}bucket}/o {{c}}
+    match /{{c}}allPaths=**} {{c}}
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+<b>Reglas modificada</b>
+service firebase.storage {{c}}
+  match /b/{{c}}bucket}/o {{c}}
+    match /{{c}}allPaths=**} {{c}}
+      allow read, write: if request.auth == null;
+    }
+  }
+}
+
+<b>Publicar</b></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <u><b>4º Obtener SDK</b></u> (<a class="enlace" href="https://firebase.google.com/?pli=1"><u><b>Web Firebase</b></u></a> -> Ir a la consola -> Proyecto -> Configuración -> Configuración del proyecto -> Tus aplicaciones -> COPIAMOS SDK
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">SDK + Environment.ts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+  
+  <b>firebaseConfig <b>=</b> {{c}}      
+  apiKey: "AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg",
+  authDomain: "sodertweb.firebaseapp.com",
+  databaseURL: "https://sodertweb.firebaseio.com",
+  projectId: "sodertweb",
+  storageBucket: "sodertweb.appspot.com",
+  messagingSenderId: "254566057470",
+};</b></pre>
+
+<br>Y lo pegamos en Environment.ts <b>cambiando = por :</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-subirarchivos1" role="tabpanel" aria-labelledby="pills-subirarchivos1-tab">
+        
+    <pre>
+                export const environment = {{c}}
+                production: false,                                         
+                <b>firebaseConfig: {{c}}
+                    apiKey: "AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg",
+                    authDomain: "sodertweb.firebaseapp.com",
+                    databaseURL: "https://sodertweb.firebaseio.com",
+                    projectId: "sodertweb",
+                    storageBucket: "sodertweb.appspot.com",
+                    messagingSenderId: "254566057470"
+                }</b>
+                };
+</pre>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-subirarchivos2" role="tabpanel" aria-labelledby="pills-subirarchivos2-tab">
+        
+    <pre>
+        //Por defecto
+        import {{c}} BrowserModule } from '@angular/platform-browser';
+        import {{c}} NgModule } from '@angular/core';
+        
+        import {{c}} AppComponent } from './app.component';
+        
+        //Conexión con app.routing.ts - Enlazar páginas
+        import {{c}} routing, appRoutingProviders } from './app.routing';
+        
+        //Componentes - Páginas añadir después de crearlas
+        import {{c}} HomeComponent } from './paginas/home/home.component';
+        import {{c}} ErrorComponent } from './componentes/error/error.component';
+        import {{c}} PieComponent } from './componentes/pie/pie.component';
+        import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+        
+      
+        //Conexión con firebase
+        <b>import {{c}} AngularFireModule } from '@angular/fire';
+        import {{c}} AngularFirestoreModule } from '@angular/fire/firestore';</b>
+        
+        //Environment - Lo pide abajo en el imports por AngularFireModule
+        <b>import {{c}} environment } from 'src/environments/environment'; </b>             
+      
+        //Directiva - Añadida <b>automáticamente</b> al instalarlo
+        <b>import {{c}} DirectivasubidaDirective } from './paginas/programacion/angular/subirarchivos/directivasubida/directiva/directivasubida.directive';</b>
+      
+        @NgModule({{c}}
+            declarations: [
+            //Por defecto
+            AppComponent,
+            //Componentes - Páginas añadir después de crearlas
+            HomeComponent,
+            ErrorComponent,
+            PieComponent,
+            CabeceraComponent,
+            //Directiva - Añadida automáticamente
+            DirectivasubidaDirective
+            ],
+            imports: [
+            //Por defecto
+            BrowserModule,
+            //Conexión con app.routing.ts - Enlazar páginas
+            routing,
+            /*Conexión con firebase
+              Puede ser firebase o firebaseConfig, depende lo que hayamos puesto en 
+              environment.ts -> firebaseConfig: {{c}} apiKey: "AIzaSyBXBZUhEffME9i58aVvigv...*/
+            <b>AngularFireModule.initializeApp(environment.firebaseConfig),   
+              AngularFirestoreModule</b>
+          ],
+          providers: [
+            //Conexión con app.routing.ts - Enlazar páginas
+        appRoutingProviders
+          ],
+          //Por defecto - Librería
+          bootstrap: [AppComponent]
+        })
+        //Por defecto
+        export class AppModule {{c}} }
+
+
+
+    </pre>
+    </div>
+
+    <div class="tab-pane fade" id="pills-subirarchivos3" role="tabpanel" aria-labelledby="pills-subirarchivos3-tab">
+        
+        <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Ts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>
+import {{c}} Injectable } from '@angular/core';
+
+//Conexión con firebase
+<b>import {{c}} AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import * as firebase from 'firebase';
+import {{c}} FileItem } from '../model/fileitem.model';</b>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciodesubidaService {{c}}
+
+    /*Variable (CARPETA_IMAGENES) lugar donde pondremos (img) las 
+      imágenes (referencia de la imagen y la propia imagen)*/
+    <b>private CARPETA_IMAGENES = 'img';</b>                                        
+
+  //Variable (db) dodne metemos el servicio (AngularFirestore)
+  constructor( <b>private db: AngularFirestore </b>) {{c}} }                        
+
+  /*Método para guardar en firebase, recibimos una imagen (imagen) y 
+    dentro especificamos el nombre (nombre) y la imagen (url) en sí*/
+<b>private guardarImagen( imagen: {{c}} nombre: string, url: string } ) {{c}}</b>   
+    /*Grabarlo a firebase. Metemos en la variable (this.db) del servicio(AngularFirestore), 
+      hacemos una colección (collection) y especificamos el lugar donde lo quiero guardar 
+      (`/${{c}} this.CARPETA_IMAGENES }`). add -> Añadir la imagen a la carpeta*/
+    <b>this.db.collection(`/${{c}} this.CARPETA_IMAGENES }`).add( imagen );</b>     
+<b>}</b>                                        
+
+  /*Carga imágenes con conexión a Firebase, es llamada por el componente.ts que a su vez 
+    llama al componente.ts el componente.html. Lo mete en la variable (imagenes) de 
+    tipo/model (FileItem)*/
+<b>cargarImagenesFirebase ( imagenes:FileItem[] ) {{c}}</b> 
+    //Ver en consola las imágenes cargadas                       
+    <b>console.log(imagenes);</b> 
+<b>}</b>
+}</pre>
+                    </td>
+                    <td><pre>
+import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} FileItem } from '../model/fileitem.model';
+import {{c}} ServiciodesubidaService } from '../servicio/serviciodesubida.service';</b>
+
+@Component({{c}}
+  selector: 'app-subida',
+  templateUrl: './subida.component.html',
+  styleUrls: ['./subida.component.css']
+})
+export class SubidaComponent implements OnInit {{c}}
+
+  /*Variable (archivos) que mete dentro el model (FileItem) 
+    en forma de arreglo ( [] = [] )*/
+  <b>archivos: FileItem[] = [];</b> 
+
+              //Metemos en la variable (_cargaImagenes) el servicio.ts 
+  constructor( <b>public _cargaImagenes: ServiciodesubidaService</b> ) {{c}} }  
+
+  ngOnInit(): void {{c}}
+  }
+
+  //Función llamada en el html y esta llama al servidor para cargar las imágenes
+  <b>cargarImagenes(){{c}}</b>             
+    /*Mete en la variable del servicio(_cargaImagenes) la función (cargarImagenesFirebase) 
+      que se encuentra en el servicio y mandamos la variable del model (this.archivos) 
+      a la función del servicio nombrado*/
+    <b>this._cargaImagenes.cargarImagenesFirebase( this.archivos );        
+  }</b>
+
+}
+</pre></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+       
+    
+        </div>
+
+        <div class="tab-pane fade" id="pills-subirarchivos4" role="tabpanel" aria-labelledby="pills-subirarchivos4-tab">
+        
+            <div class="table-responsive-md">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Controla elemento - Llegada/Ida</th>
+                        <th scope="col">Validaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre>
+/*EventEmitter -> Hablar con el padre. ElementRef -> Relaciona directamente con el componente.html. 
+  HostListener -> Escucha cuando el ratón (drop o drap) está encima entre otras cosas. Input -> 
+  Recibir información del padre. Output -> Relacionado con EventEmitter y le dice al padre, tengo 
+  algo aquí haz algo con ello*/
+<b>import {{c}} Directive, EventEmitter, ElementRef, HostListener, Input, Output } from '@angular/core';</b>    
+
+@Directive({{c}}
+  //Cogemos el appNgDropFiles para añadirlo en el html y así usarlo
+  selector: '<b>[appDirectivasubida]</b>'
+})
+export class DirectivasubidaDirective {{c}}
+
+  /*Para hablar con el padre (@Output()), ponemos un nombre a un elemento 
+    (mouseSobre) de tipo EventEmitter, que emite un boolean*/
+  <b>@Output() mouseSobre: EventEmitter{{b}} = new EventEmitter(); </b> 
+
+  constructor() {{c}} }
+
+  /*Emite cuando llega elemento Cuando suceda el dragover (Se está arrastrando algo sobre el 
+    elemento), esto va a disparar un elemento ($event)*/
+  <b>@HostListener('dragover', ['$event']) </b> 
+      /*Función (onDragEnter) que recibe el elemento (event) de tipo any, disparamos una 
+        notificación cuando el ratón esté encima del drop pero para hablar con el padre o el 
+        elemento que lo contiene debemos hacer @Output()*/                   
+      <b>public onDragEnter ( event: any ){{c}}</b>        
+      //Mete en el elemento (mouseSobre) lo que queremos emitir (emit), true         
+      <b>this.mouseSobre.emit( true );                      
+  }</b>
+  
+  /*Emite cuando se va el elemento
+    Cuando suceda el dragleave (Se saca fuera el elemento), esto va a disparar un elemento 
+    ($event)*/
+  <b>@HostListener('dragleave', ['$event'])  </b> 
+  /*Función (onDragLeave) que recibe el elemento (event) de tipo any, disparamos una notificación 
+    cuando el ratón está fuera del drop pero para hablar con el padre o el elemento que lo 
+    contiene debemos hacer @Output()*/              
+  <b>public onDragLeave ( event: any ){{c}}                 
+    this.mouseSobre.emit( false );
+  }</b>
+
+}
+
+</pre></td>
+                        <td>
+                            <pre>
+import {{c}} Directive, EventEmitter, ElementRef, HostListener, Input, Output } from '@angular/core';    
+<b>import {{c}} FileItem } from '../model/fileitem.model';</b>
+
+@Directive({{c}}
+  //Cogemos el appNgDropFiles para añadirlo en el html y así usarlo
+  selector: '[appDirectivasubida]'
+})
+export class DirectivasubidaDirective {{c}}
+
+  @Output() mouseSobre: EventEmitter{{b}} = new EventEmitter(); 
+  
+  /*Relaciona con la directiva (NgDropFilesDirective) la variable (archivos) que se encuentra en 
+    componente.ts(SubirarchivoComponent) llamado y usado por la función (cargarImagenes) que a su 
+    vez llama al servicio.ts(cargarImagenesFirebase) y es un model (FileItem) formado en arreglo 
+    ([] = [])*/
+  <b>@Input() archivos: FileItem[] = [];</b>                       
+
+  constructor() {{c}} }
+
+  @HostListener('dragover', ['$event'])  
+      public onDragEnter ( event: any ){{c}}        
+      this.mouseSobre.emit( true );  
+      //Función (_prevenirDetener ()) y recibimos un elemento (event) 
+      <b>this._prevenirDetener( event ); </b>                              
+  }
+  
+  @HostListener('dragleave', ['$event'])                
+  public onDragLeave ( event: any ){{c}}                 
+    this.mouseSobre.emit( false );
+  }
+
+    //Cuando suelta el elemento sobre el drop, para recibirlo
+    <b>@HostListener('drop', ['$event'])                            
+        public onDrop ( event: any ){{c}}</b>
+
+    //Mejora la compatibilidad del drop entre navegadores
+      Mete en la constante (transferencia) lo que obtenemos de la función (_getTransferencia) con 
+      el elemento (event) recibido. En transferencia tenemos los datos que queremos tener*/
+        <b>const transferencia = this._getTransferencia( event );</b>   
+
+        //Sino existe datos en transferencia provoca un return
+        <b>if ( !transferencia ){{c}} 
+            return;
+        }</b>
+
+        /*Si hay información que emitir, llamo a la función (_extraerArchivos) y esos archivos que 
+          extraigo se encuentra en la constante creada (transferencia) punto (.) de tipo files*/
+        <b>this._extraerArchivos( transferencia.files );</b>
+
+        //No abra todo
+        <b>this._prevenirDetener( event );</b>                    
+
+        <b>this.mouseSobre.emit( false );
+
+    }</b>
+
+    /*Mejora la compatibilidad del drop entre navegadores
+      Función (_getTransferencia) donde recibimos el evento (event) de tipo any. Mejora la compatibilidad del drop entre navegadores*/
+        <b>private _getTransferencia ( event: any ){{c}}</b>   
+    /*Devuelve (return) el evento (event) y de él quiero el dataTransfer, si lo hay (?) usalo (event.dataTransfer) pero sino (:) otros 
+      navegadores tienen la información en (event.originalEvent.dataTransfer)*/                                            
+        <b>return event.dataTransfer ? event.dataTransfer : event.originalEvent.dataTransfer;     
+        }</b>
+
+    //Extraer archivo
+    /*Metemos en la función (_extraerArchivos) la variable (archivosLista) de tipo (FileList). FileList es un objeto que recibe todos 
+      los archivos que hemos hecho en drag and drop*/
+        <b>private _extraerArchivos( archivosLista: FileList ){{c}}                                   
+            console.log(archivosLista);</b>
+
+        /*Extraer los datos que necesitamos sobre los archivosLista conseguidos - Si da error, deshabilitar la regla forin en esta parte, 
+          sobre la bombilla.
+          For para coger cada elemento, mete en la constante (propiedad) la propiedad/efecto del Object.getOwnPropertyNames que hace es 
+          poner los datos en arreglo ([]) los datos (archivosLista). Si da error, deshabilitar la regla forin en esta parte, sobre la bombilla*/
+        <b>for ( const propiedad in Object.getOwnPropertyNames( archivosLista) ){{c}}</b>   
+          /*Metemos en la constante (archivoTemporal) los archivos (archivosLista) en arreglo ([propiedad]). Si da error, deshabilitar la regla 
+            forin en esta parte, sobre la bombilla*/          
+            <b>const archivoTemporal = archivosLista[propiedad]; </b>                                 
+
+            //Si el archivo puede ser cargado
+            <b>if (this._archivoPuedeSerCargado ( archivoTemporal )){{c}}</b>                         
+
+                //Constante (nuevoArchivo) es igual que new FileItem que recibe un archivo (archivoTemporal)
+                <b>const nuevoArchivo = new FileItem ( archivoTemporal );                        
+                    this.archivos.push( nuevoArchivo );
+
+            }
+        }
+
+        console.log(this.archivos);
+    }</b>
+
+
+
+    //VALIDACIONES
+
+    /*Validaciones si es dropeado (_archivoYaFueDroppeado) y si es una imagen(SoloImagen) -> Combina ambas condiones
+      Crea función/variable (_archivoPuedeSerCargado) que recibe una variable del model (variableArchivo) de tipo (File), 
+      debiendo regresar un boolean*/
+    <b>private _archivoPuedeSerCargado ( archivo: File ): boolean{{c}}</b> 
+    /*Si (if) el archivo (archivo.name) ya fue dropeado (!this._archivoYaFueDroppeado) y (&&) es una imagen (this._esImagen) 
+      y recibo/mando el tipo (type). Si cumple devuelve (return) true, sino (else) false*/                                
+        <b>if ( !this._archivoYaFueDroppeado( archivo.name ) && this._esImagen ( archivo.type)){{c}}   
+            return true;
+        }else{{c}}
+            return false;
+        }
+    }</b>
+
+
+    //Validaciones privadas porque no salen del archivo directiva.ts - Evita que la imagen se abra al hacer el drop
+    <b>private _prevenirDetener ( event ){{c}}</b>
+    //Evita que la imagen se abra al hacer el drop
+       <b> event.preventDefault();                                                                 
+        event.stopPropagation();                                                                
+    }</b>
+
+
+    /*Validaciones si es dropeado (_archivoYaFueDroppeado) y si es una imagen(SoloImagen) -> Combina ambas condiones
+      Función (_archivoYaFueDroppeado) para detectar si el archivo (variableNombreArchivo) ya fue dropeado y regresamos 
+      un boolean (true/false)*/
+    <b>private _archivoYaFueDroppeado( nombreArchivo: string ): boolean {{c}} //Se manda como dirección (nombreArchivo) </b>
+    //For para recorrer todos los elementos del model (FileItem) del archivo (archivos) y lo metemos en una constante (archivo)     
+        <b>for ( const archivo of this.archivos ){{c}} </b>                                                                      
+
+            /*Si (if) el archivo local creado en el for (archivo) punto (.) subvariable rela/directo del model del nombre del 
+              archivo (nombreArchivo) es igual (==) a la variable nueva recibida (variableNombreArchivo)*/
+           <b> if( archivo.nombreArchivo === nombreArchivo ){{c}}                                                            
+              console.log('El archivo ' + nombreArchivo + ' ya esta agregado');</b>
+              //Devuelve true si es igual (Ya está dropeado/agregado), sino devuelve un return false (No lo está)
+              <b>return true;                                                                                                
+            }
+        }
+        return false;
+    }</b>
+
+
+    /*Validaciones privadas - Solo recibir imágenes (En otras ocaciones, también vídeos, doc...)
+      Creamos función ()_esImagen()) donde recibimos el tipo del archivo (tipoArchivo) y regresa un boolean, devolviendo (return)...*/
+   <b> private _esImagen ( tipoArchivo: string ): boolean{{c}}</b>
+    /*En vez de 'image' puede ser 'video'. Devuelve (return) si el tipo del archivo, variable (tipoArchivo) es igual (===) a vacío ('') 
+      o (||) es indefinido (undefined) devuelve false (? false), es decir no lo coge*/
+        <b>return ( tipoArchivo === '' || tipoArchivo === undefined ) ? false: tipoArchivo.startsWith('image');</b>              
+
+    //Para vídeos - NO USADO PERO FUNCIONA LLAMANDO A ESTE MÉTODO EN VEZ DEL OTRO, O CAMBIANDO IMAGE POR VIDEO EN EL ANTERIOR
+    /*private _esImagen ( tipoArchivo: string ): boolean{{c}}
+        /*En vez de 'image' puede ser 'video. Condición para saber si es una imagen, si el tipo de archivo contiene el nombre image. 
+        En vez de 'image' puede ser 'video''*/
+       <b> return ( tipoArchivo === '' || tipoArchivo === undefined ) ? false: tipoArchivo.startsWith('video');   </b>           
+    }*/
+
+    <b>}</b>
+
+}
+
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        
+            </div>
+
+                    <div class="tab-pane fade" id="pills-subirarchivo5" role="tabpanel" aria-labelledby="pills-subirarchivo5-tab">
+        <pre>
+                    import {{c}} Component, OnInit } from '@angular/core';
+                    import {{c}} FileItem } from '../model/fileitem.model';
+                    import {{c}} ServiciodesubidaService } from '../servicio/serviciodesubida.service';
+
+                    @Component({{c}}
+                    selector: 'app-subida',
+                    templateUrl: './subida.component.html',
+                    styleUrls: ['./subida.component.css']
+                    })
+                    export class SubidaComponent implements OnInit {{c}}
+
+                        archivos: FileItem[] = [];
+                        
+                        //Variable (estaSobreElemento) que contiene valor boolean (false)
+                        <b>estaSobreElemento = false; </b>                                      
+
+                        constructor( public _cargaImagenes: ServiciodesubidaService ) {{c}} }  
+
+                        ngOnInit(): void {{c}}
+                        }
+
+                        cargarImagenes(){{c}}             
+                            this._cargaImagenes.cargarImagenesFirebase( this.archivos );        
+                        }
+
+                        //Recibimos un elemento (event). Cuando usamos {{v}} en el html
+                        /*<b>pruebaSobreElemento( event ){{c}}                           
+                            console.log(event);
+                        }</b>*/
+
+                    }
+</pre>
+            
+        
+            </div>
+            <div class="tab-pane fade" id="pills-subirarchivo6" role="tabpanel" aria-labelledby="pills-subirarchivo6-tab">
+            
+                                        <pre>
+                        import {{c}} Component, OnInit } from '@angular/core';
+                        import {{c}} FileItem } from '../models/file-item';
+                        import {{c}} ServiciodesubidaService } from '../servicio/serviciodesubida.service';
+
+                        @Component({{c}}
+                        selector: 'app-componentetssubida',
+                        templateUrl: './componentetssubida.component.html',
+                        styleUrls: ['./componentetssubida.component.css']
+                        })
+                        export class ComponentetssubidaComponent implements OnInit {{c}}
+
+                        archivos: FileItem[] = [];                                               
+
+                        estaSobreElemento = false;                                       
+
+                        constructor( public _cargaImagenes: ServiciodesubidaService ) {{c}} }  
+
+                        ngOnInit(): void {{c}}
+                        }
+
+                        cargarImagenes(){{c}}                                                  
+                            this._cargaImagenes.cargarImagenesFirebase( this.archivos );        
+                        }
+                        
+                        /*pruebaSobreElemento( event ){{c}}                        
+                                console.log(event);
+                            }*/
+
+                                //Función llamada en el componente.html para limpiar los archivos que muestra
+                                <b>limpiarArchivos(){{c}}</b>
+                                //Inicializa a vacío ([]) la variable declarada (archivos) en el componente.ts que proviene del model (FileItem)                                    
+                            <b>this.archivos = [];</b>                                
+                        <b>}</b>
+
+                        }</pre>
+
+            </div>
+
+            <div class="tab-pane fade" id="pills-subirarchivo7" role="tabpanel" aria-labelledby="pills-subirarchivo7-tab">
+                <div class="table-responsive-md">
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Html</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import * as firebase from 'firebase';
+import {{c}} FileItem } from '../model/fileitem.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciodesubidaService {{c}}
+
+    private CARPETA_IMAGENES = 'img';                                        
+
+  constructor( private db: AngularFirestore ) {{c}} }                        
+
+private guardarImagen( imagen: {{c}} nombre: string, url: string } ) {{c}}   
+
+    this.db.collection(`/${{c}} this.CARPETA_IMAGENES }`).add( imagen );     
+}                                        
+
+cargarImagenesFirebase ( imagenes:FileItem[] ) {{c}}                      
+    console.log(imagenes); 
+
+    /*Referencia al storage
+      Creamos una constante (storageRef) para hacer referencia con función (.ref()) 
+      al storage con función (.storage()) de firebase. Hacer uso de la API y de todas 
+      las cosas configuradas con relación a firebase*/
+    <b>const storageRef = firebase.storage().ref();</b>                     
+
+        /*Barrido de todas las imágenes que tenemos aquí
+          Recorremos con for las variables que cargaremos (imagenes) y metemos una a 
+          una en una variable local (item)*/
+     <b>for ( const item of imagenes ){{c}}</b>     
+             /*La variable local (item) punto (.) subvariable (estaSubiendo) es true, 
+               es decir, si se está subiendo*/                        
+            <b>item.estaSubiendo = true;</b>                                
+
+            //Si la variable local (item) punto (.) subvariable (progreso) es mayor o igual a 100, que continue (continue;)
+            <b>if( item.progreso >= 100 ){{c}}</b>                          
+            <b>continue;
+            }</b>
+
+            /*Si no se ha subido del todo
+              Constante (UploadTask) que se le da el tipo de datos de firebase (firebase.storage.UploadTask), 
+              para almacenar algo en un sitio (storageRef.child), la almacenamos en la carpeta (`${{c}} this.CARPETA_IMAGENES }/) 
+              con el nombre del archivo (${{c}} item.nombreArchivo }`), para subirlo (put) el archivo (item.archivos) con el nombre, los megas...*/
+         <b> const UploadTask: firebase.storage.UploadTask = storageRef.child(`${{c}} this.CARPETA_IMAGENES }/${{c}} item.nombreArchivo }`).put( item.archivo );</b>      
+
+            //Ejecutar la tare anterior (Si no se ha subido del todo, lo subimos)
+            //Que se dispare firebase.storage.TaskEvent cada vez que el estado cambie y haga
+        <b>UploadTask.on( firebase.storage.TaskEvent.STATE_CHANGED,</b>    
+            /*Metemos en la variable snapshot (snapshot) el tipado de firebase storage (firebase.storage.UploadTaskSnapshot), usamos la variable que coge el 
+              model (item) punto (.) subvariable (progreso) es igual (=) a la variable Snapshot con los bytes transferido (snapshot.bytesTransferred) dividido 
+              por el total de bytes (.totalBytes), lo multiplicamos por 100 (*100) para sacar el procentaje*/   
+            <b>( snapshot: firebase.storage.UploadTaskSnapshot ) => item.progreso = ( snapshot.bytesTransferred / snapshot.totalBytes ) * 100,</b>  
+            /*Manejamos el error, si comete un error lo muestra en rojo (console.error) y muestra el error que nos regresa firebase 
+              (console.error('Error al subir', error ))*/                      
+            <b>( error ) => console.error('Error al subir', error ),</b> 
+            //Ponemos un coba cuando sale correcto     
+            <b>() => {{c}}</b>                                                
+                <b>console.log('Imagen cargada correctamente');
+                //Para que no de error y coja en el firebase
+                UploadTask.snapshot.ref.getDownloadURL().then((url) =>{{c}}</b>
+                /*Se mete en la variable del model (item) especialmente dentro del subvariable (.url) la dirección completo que nos 
+                  regresa firebase (UploadTask.snapshot.downloadURL)*/   
+                <b>item.url = url;</b>           
+                //Ponemos que la variable del model (item) en especial la subvariable (.estaSubiendo) es false porque ya se ha subido                             
+                <b>item.estaSubiendo = false;</b>                             
+                //Guardar nombre anterior imagen, referencia en Realtime Database
+                /*Cogemos de la función (guardarImagen()) el nombre (nombre) y el url (url) obtenido de dicha función private 
+                  guardarImagen( imagen: {{c}} nombre: string, url: string } )*/
+               <b>this.guardarImagen({{c}}</b>  
+                /*nombreArchivo y url proviene de la función guardarImagen descrita arriba 
+                  (private guardarImagen( imagen: {{c}} nombreArchivo: string, urlImagen: string }))*/                              
+                  <b>nombre: item.nombreArchivo, 
+                  url: item.url
+                });
+            });
+        });
+        }</b>
+}
+}</pre>
+                                </td>
+                                <td><pre>{{a}}<b>{{a0}}</b>{{a1}}<b>{{a2}}</b>{{a3}}<b>{{a4}}</b>{{a5}}<b>{{a6}}</b>{{a7}}<b>{{a8}}</b>{{a9}}<b>{{a10}}</b>{{a11}}<b>{{a12}}</b>{{a13}}<b>{{a14}}</b>{{a15}}</pre></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="table-responsive-md">
+                        <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                      <th scope="col">Css</th>
+                                      <th scope="col">Funcionamiento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><pre>
+/*Usada en el HTML para la DIRECTIVA*/
+<b>.clase_especial_creada_por_mi {{c}}         
+  border: red dotted 3px;
+}</b>
+
+/*Usada en el HTML para CAMBIAR COLOR al CARGAR*/
+<b>.text-green {{c}}
+  color: green; 
+}</b>
+
+</pre></td>
+                                        <td><app-subidafire></app-subidafire></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                            <div class="tab-pane fade" id="pills-subirarchivo8" role="tabpanel" aria-labelledby="pills-subirarchivo8-tab">
+                <div class="table-responsive-md">
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Ts</th>
+                                <th scope="col">Html</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a class="enlace" href="https://github.com/angular/angularfire/blob/master/docs/firestore/collections.md"><u><b>Web donde cogemos los códigos</b></u></a><br><hr>
+<pre>
+import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import {{c}} Observable } from 'rxjs';</b>
+
+//Exportamos la interface (Item) sacando dos variable (nombre y url)
+<b>export interface Item {{c}} nombre: string; url:string; }</b>                
+
+@Component({{c}}
+  selector: 'app-componentesubida2',
+  templateUrl: './componentesubida2.component.html',
+  styleUrls: ['./componentesubida2.component.css']
+})
+export class Componentesubida2Component implements OnInit {{c}}
+
+//Cogido de angular/firebase
+<b>  private itemsCollection: AngularFirestoreCollection{{it}};                 
+    items: Observable{{it2}};</b>                                               
+
+  constructor( <b>private afs: AngularFirestore </b>) {{c}}
+
+        //Cambiamos 'items' por 'img' que es donde tenemos la carpeta, si fuera video, sería 'video'
+        <b>this.itemsCollection = afs.collection{{it}}('img');</b>             
+        <b>this.items = this.itemsCollection.valueChanges();</b>
+
+    }
+
+  ngOnInit(): void {{c}}
+  }
+
+}
+
+
+</pre></td>
+                                <td><pre>{{d}}<b>{{d0}}</b>{{d1}}<b>{{d2}}</b>{{d3}}<b>{{d4}}</b>{{d5}}</pre></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="table-responsive-md">
+                      <table class="table table-bordered">
+                              <thead class="thead-light">
+                                  <tr>
+                                      <th colspan="2">Funcionamiento</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td colspan="2"><app-mostrar></app-mostrar></td>
+                                  </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                </div>
+</div>

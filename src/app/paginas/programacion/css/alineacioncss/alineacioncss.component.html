@@ -1,0 +1,718 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-alineacioncss-tab" data-toggle="pill" href="#pills-alineacioncss" role="tab" aria-controls="pills-alineacioncss" aria-selected="true" style="color: black;"><u>Margin</u><br><small>Margen exterior</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-alineacioncss0-tab" data-toggle="pill" href="#pills-alineacioncss0" role="tab" aria-controls="pills-alineacioncss0" aria-selected="false" style="color: black;"><u>Padding</u><br><small>Margen interior</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-alineacioncss2-tab" data-toggle="pill" href="#pills-alineacioncss2" role="tab" aria-controls="pills-alineacioncss2" aria-selected="false" style="color: black;">Posición</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-alineacioncss" role="tabpanel" aria-labelledby="pills-alineacioncss-tab">
+      
+      <h3>Margin en TODO</h3>
+      <div id="a1">Con Margin top + Bottom + Left + Right (Igual valor)</div>
+      <div id="OtroModo_a1">Con Margin top + Bottom + Left + Right (Diferentes valores)</div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div id="a1">Con Margin top + Bottom + Left + Right (Igual valor){{co}}/div>
+      {{co}}div id="OtroModo_a1">Con Margin top + Bottom + Left + Right (Diferentes valores){{co}}/div>
+      </b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#a1{{c}}
+        <b>margin: 50px;</b>       /*Con Margin top + Bottom + Left + Right*/
+}
+
+#OtroModo_a1{{c}}
+      <b>margin: 50px 20px 5px 10px;</b>       /*Con Margin top + Bottom + Left + Right*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+<br>
+<h3>Margin Centrar</h3>
+<div id="a2">Con Margin 0 para centrar</div>
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="a2">Con Margin 0 para centrar{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#a2{{c}}
+  <b>margin: 0 auto;</b>       /*Con Margin 0 para centrar*/
+  <b>width</b>: 200px;         /*Necesario para centrar, da igual el valor*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+<h3>Margin DERECHO</h3>
+<div id="a3">Con Margin Right</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="a3">Con Margin Right{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#a3{{c}}
+    <b>margin-right</b>: 50px;       /*Right*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<h3>Margin IZQUIERDO</h3>
+<div id="a4">Con Margin Left</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="a4">Con Margin Left{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#a4{{c}}
+    <b>margin-left</b>: 50px;       /*Left*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+<br>
+<h3>Margin ARRIBA</h3>
+<div id="a5">Con Margin Top</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="a5">Con Margin Top{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#a5{{c}}
+    <b>margin-top</b>: 50px;       /*Top*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+<br>
+<h3>Margin ABAJO</h3>
+<div id="a6">Con Margin Bottom</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="a6">Con Margin Bottom{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#a6{{c}}
+    <b>margin-bottom</b>: 50px;       /*Bottom*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-alineacioncss0" role="tabpanel" aria-labelledby="pills-alineacioncss0-tab">
+      
+      <h3>Padding en TODO</h3>
+      <div id="b1">Con Padding top + Bottom + Left + Right (Igual valor)</div>
+      <div id="OtroModo_b1">Con Padding top + Bottom + Left + Right (Diferentes valores)</div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div id="b1">Con Padding top + Bottom + Left + Right (Igual valor){{co}}/div>
+      {{co}}div id="OtroModo_b1">Con Padding top + Bottom + Left + Right (Diferentes valores){{co}}/div>
+      </b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">#b1{{c}}
+        <b>padding: 50px;</b>       /*Con Padding top + Bottom + Left + Right*/
+}
+
+#OtroModo_b1{{c}}
+      <b>padding: 50px 20px 5px 10px;</b>       /*Con Padding top + Bottom + Left + Right*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+<br>
+<h3>Padding DERECHO</h3>
+<div id="b3">Con Padding Right</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="b3">Con Padding Right{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#b3{{c}}
+    <b>padding-right</b>: 50px;       /*Right*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<h3>Padding IZQUIERDO</h3>
+<div id="b4">Con Padding Left</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="b4">Con Padding Left{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#b4{{c}}
+    <b>padding-left</b>: 50px;       /*Left*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+<br>
+<h3>Padding ARRIBA</h3>
+<div id="b5">Con Padding Top</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="b5">Con Padding Top{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#b5{{c}}
+    <b>padding-top</b>: 50px;       /*Top*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+<br>
+<h3>Padding ABAJO</h3>
+<div id="b6">Con Padding Bottom</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div id="b6">Con Padding Bottom{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#b6{{c}}
+    <b>padding-bottom</b>: 50px;       /*Bottom*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+      
+      
+</div>
+
+    <div class="tab-pane fade" id="pills-alineacioncss2" role="tabpanel" aria-labelledby="pills-alineacioncss2-tab">
+      
+ <h3>Absolute</h3>
+ <div class="posicionabsoluta">Position absolute</div>    
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="posicionabsoluta">Position absolute{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.posicionabsoluta{{c}}
+    <b>position: absolute;</b>         /*Absolute: Depende de la posicion del padre. USADO especialmente para LEFT y RIGHT*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+      
+      
+      
+<h3>Static</h3>
+<div class="posicionestatica">Position static</div>  
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="posicionestatica">Position static{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.posicionestatica{{c}}
+    <b>position: static;</b>           /*Static: Se coloca siguientdo los patrones de la web: top, right, left, bottom*/
+    width: 100px;
+    height: 100px;
+    <b>left</b>: 50%;
+    margin-left: -50px;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+      
+      
+      
+      
+      
+<h3>Fixed</h3>
+<div class="posicionfixed">Position fixed</div> 
+Position fixed debe quedarse fijo en una posición aunque haga scroll, probado y funcionaba
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="posicionfixed">Position fixed{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.posicionfixed{{c}}
+    <b>position: fixed;</b>            /*Fixed: Siempre mismo sitio aunque se haga scroll.*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+<br>
+<h3>Relative</h3>
+<div class="posicionrelative">Position relative</div>      
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="posicionrelative">Position relative{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.posicionrelative{{c}}
+    <b>position: relative;</b>         /*Relative: Se usa top, right, left, bottom, para colocarlo, se va donde digamos*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+      
+    
+
+<h3>Float</h3>
+<div class="posicionfloatleft">Position float left</div>
+<div class="posicionfloatright">Position float right</div> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="posicionfloatleft">Position float left{{co}}/div>
+    {{co}}div class="posicionfloatright">Position float right{{co}}/div>
+    </b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.posicionfloatleft{{c}}     
+    <b>float: left;</b>            /*Float: Toma valores como <b>left</b> o right*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.posicionfloatright{{c}}     
+    <b>float: right; </b>           /*Float: Toma valores como left o <b>right</b>*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<h3>Top-Bottom-Left-Right</h3>
+<button class="btn btn-info m-2" [routerLink]="['/trlb']">Ver</button>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div id="top">Top - Arriba del todo{{co}}/div>
+    {{co}}br>
+    {{co}}div id="top2">Top - Arriba a 100px{{co}}/div>
+    {{co}}br>
+    {{co}}div id="rigth">Right - Derecha del todo{{co}}/div>
+    {{co}}br>
+    {{co}}div id="rigth2">Right - Derecha a 100px{{co}}/div>
+    {{co}}br>
+    {{co}}div id="left">Left - Izquierda del todo{{co}}/div>
+    {{co}}br>
+    {{co}}div id="left2">Left - Izquierda a 100px{{co}}/div>
+    {{co}}br>
+    {{co}}div id="bottom">Bottom - Abajo del todo{{co}}/div>
+    {{co}}br>
+    {{co}}div id="bottom2">Bottom - Abajo a 100px{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#top{{c}}
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el top*/
+ <b>   top: 0; </b>               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más alto*/
+}
+
+#top2{{c}}
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el top*/
+    <b>top: 100px; </b>               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más alto*/
+}
+
+#rigth{{c}}
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el right*/
+    <b>right: 0;  </b>             /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la derecha*/
+}
+
+#rigth2{{c}}
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el right*/
+    <b>right: 100px;</b>               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la derecha*/
+}
+
+#left{{c}}
+    background: lightgreen;
+    position: absolute;     /*Necesario para que se ejecute el left*/
+    <b>left: 0; </b>               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la izquierda*/
+}
+
+#left2{{c}}
+    background: lightgreen;
+    position: absolute;         /*Necesario para que se ejecute el left*/
+    <b>left: 100px; </b>               /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya totalmente a la izquierda*/
+}
+
+#bottom{{c}}
+    background: lightgreen;
+    position: absolute;        /*Necesario para que se ejecute el bottom*/
+  <b>  bottom: 0;  </b>              /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más abajo*/
+}
+
+#bottom2{{c}}
+    background: lightgreen;
+    position: absolute;            /*Necesario para que se ejecute el bottom*/
+    <b>bottom: 100px;</b>                /*Funciona con % o px. RECOMENDABLE px. Ponemos 0 para que vaya a lo más abajo*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+  
+  </div>
+

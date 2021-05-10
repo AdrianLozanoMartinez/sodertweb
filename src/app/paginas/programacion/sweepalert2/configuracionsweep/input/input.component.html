@@ -1,0 +1,266 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-input-tab" data-toggle="pill" href="#pills-input" role="tab" aria-controls="pills-input" aria-selected="true" style="color: black;"><b>input:</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-input0-tab" data-toggle="pill" href="#pills-input0" role="tab" aria-controls="pills-input0" aria-selected="false" style="color: black;">Text</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-input1-tab" data-toggle="pill" href="#pills-input1" role="tab" aria-controls="pills-input1" aria-selected="false" style="color: black;">Email </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-input2-tab" data-toggle="pill" href="#pills-input2" role="tab" aria-controls="pills-input2" aria-selected="false" style="color: black;">Password</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-input3-tab" data-toggle="pill" href="#pills-input3" role="tab" aria-controls="pills-input3" aria-selected="true" style="color: black;">Number</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-input4-tab" data-toggle="pill" href="#pills-input4" role="tab" aria-controls="pills-input4" aria-selected="false" style="color: black;">Tel</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-input5-tab" data-toggle="pill" href="#pills-input5" role="tab" aria-controls="pills-input5" aria-selected="false" style="color: black;">Range</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input6-tab" data-toggle="pill" href="#pills-input6" role="tab" aria-controls="pills-input6" aria-selected="false" style="color: black;">Textarea</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input7-tab" data-toggle="pill" href="#pills-input7" role="tab" aria-controls="pills-input7" aria-selected="false" style="color: black;">Select</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input8-tab" data-toggle="pill" href="#pills-input8" role="tab" aria-controls="pills-input8" aria-selected="false" style="color: black;">Radio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input9-tab" data-toggle="pill" href="#pills-input9" role="tab" aria-controls="pills-input9" aria-selected="false" style="color: black;">Checkbox</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input10-tab" data-toggle="pill" href="#pills-input10" role="tab" aria-controls="pills-input10" aria-selected="false" style="color: black;">File</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-input11-tab" data-toggle="pill" href="#pills-input11" role="tab" aria-controls="pills-input11" aria-selected="false" style="color: black;">Url</a>
+      </li>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-input" role="tabpanel" aria-labelledby="pills-input-tab">
+    
+    </div>
+  
+    <div class="tab-pane fade" id="pills-input0" role="tabpanel" aria-labelledby="pills-input0-tab">
+        Ejemplo:
+        <pre>const ipAPI = '//api.ipify.org?format=json'
+
+const inputValue = fetch(ipAPI)
+.then(response => response.json())
+.then(data => data.ip)
+
+const {{c}} value: ipAddress } = await Swal.fire({{c}}
+title: 'Enter your IP address',
+input: 'text',
+inputValue: inputValue,
+showCancelButton: true,
+inputValidator: (value) => {{c}}
+if (!value) {{c}}
+return 'You need to write something!'
+}
+}
+})
+
+if (ipAddress) {{c}}
+Swal.fire(`Your IP address is ${{c}}ipAddress}`)
+}</pre>       
+    </div>
+  
+    <div class="tab-pane fade" id="pills-input1" role="tabpanel" aria-labelledby="pills-input1-tab">
+<pre>const {{c}} value: email } = await Swal.fire({{c}}
+  title: 'Input email address',
+  input: 'email',
+  inputPlaceholder: 'Enter your email address'
+  })
+  
+  if (email) {{c}}
+  Swal.fire(`Entered email: ${{c}}email}`)
+  }</pre>  
+    </div>
+
+    <div class="tab-pane fade" id="pills-input2" role="tabpanel" aria-labelledby="pills-input2-tab">
+<pre>const {{c}} value: password } = await Swal.fire({{c}}
+  title: 'Enter your password',
+  input: 'password',
+  inputPlaceholder: 'Enter your password',
+  inputAttributes: {{c}}
+  maxlength: 10,
+  autocapitalize: 'off',
+  autocorrect: 'off'
+  }
+  })
+  
+  if (password) {{c}}
+  Swal.fire(`Entered password: ${{c}}password}`)
+  }</pre>
+    </div>
+
+    <div class="tab-pane fade" id="pills-input3" role="tabpanel" aria-labelledby="pills-input3-tab">
+        Número
+    </div>
+    <div class="tab-pane fade" id="pills-input4" role="tabpanel" aria-labelledby="pills-input4-tab">
+        (No me funciona por ahora bien)
+    </div>
+
+    <div class="tab-pane fade" id="pills-input5" role="tabpanel" aria-labelledby="pills-input5-tab">
+Línea desplazable con número
+                            <pre>Swal.fire({{c}}
+  title: 'How old are you?',
+  icon: 'question',
+  input: 'range',
+  inputAttributes: {{c}}
+  min: 8,
+  max: 120,
+  step: 1
+  },
+  inputValue: 25
+  })</pre>
+    </div>
+    <div class="tab-pane fade" id="pills-input6" role="tabpanel" aria-labelledby="pills-input6-tab">
+Cuadro grande modificable
+<pre>const {{c}} value: text } = await Swal.fire({{c}}
+  input: 'textarea',
+  inputPlaceholder: 'Type your message here...',
+  inputAttributes: {{c}}
+  'aria-label': 'Type your message here'
+  },
+  showCancelButton: true
+  })
+  
+  if (text) {{c}}
+  Swal.fire(text)
+  }</pre>
+    </div>
+    <div class="tab-pane fade" id="pills-input7" role="tabpanel" aria-labelledby="pills-input7-tab">
+<b><u>Estructura</u></b>
+<pre>input: 'select',
+  inputOptions: {{c}}
+  'Título1': {{c}}
+  opcion1: 'Opción 1',
+  Opción2: 'Opción 2'
+  },
+  'OpcionTitulo': 'Opción como título'
+  },
+  inputPlaceholder: 'Seleccionar una opción'
+
+<b><u>Ejemplo</u></b>
+const {{c}} value: fruit } = await Swal.fire({{c}}
+  title: 'Select field validation',
+  input: 'select',
+  inputOptions: {{c}}
+  'Fruits': {{c}}
+  apples: 'Apples',
+  bananas: 'Bananas',
+  grapes: 'Grapes',
+  oranges: 'Oranges'
+  },
+  'Vegetables': {{c}}
+  potato: 'Potato',
+  broccoli: 'Broccoli',
+  carrot: 'Carrot'
+  },
+  'icecream': 'Ice cream'
+  },
+  inputPlaceholder: 'Select a fruit',
+  showCancelButton: true,
+  inputValidator: (value) => {{c}}
+  return new Promise((resolve) => {{c}}
+  if (value === 'oranges') {{c}}
+  resolve()
+  } else {{c}}
+  resolve('You need to select oranges :)')
+  }
+  })
+  }
+  })
+  
+  if (fruit) {{c}}
+  Swal.fire(`You selected: ${{c}}fruit}`)
+  }</pre>
+
+    </div>
+    <div class="tab-pane fade" id="pills-input8" role="tabpanel" aria-labelledby="pills-input8-tab">
+(No me funciona por ahora)
+<pre>/* inputOptions can be an object or Promise */
+  const inputOptions = new Promise((resolve) => {{c}}
+  setTimeout(() => {{c}}
+  resolve({{c}}
+  '#ff0000': 'Red',
+  '#00ff00': 'Green',
+  '#0000ff': 'Blue'
+  })
+  }, 1000)
+  })
+  
+  const {{c}} value: color } = await Swal.fire({{c}}
+  title: 'Select color',
+  input: 'radio',
+  inputOptions: inputOptions,
+  inputValidator: (value) => {{c}}
+  if (!value) {{c}}
+  return 'You need to choose something!'
+  }
+  }
+  })
+  
+  if (color) {{c}}
+  Swal.fire({{c}} html: `You selected: ${{c}}color}` })
+  }</pre>
+    </div>
+    <div class="tab-pane fade" id="pills-input9" role="tabpanel" aria-labelledby="pills-input9-tab">
+Cuadro de chequeo
+ <pre>const {{c}} value: accept } = await Swal.fire({{c}}
+  title: 'Terms and conditions',
+  input: 'checkbox',
+  inputValue: 1,
+  inputPlaceholder:
+  'I agree with the terms and conditions',
+  confirmButtonText:
+  'Continue{{flecha}}',
+  inputValidator: (result) => {{c}}
+  return !result && 'You need to agree with T&C'
+  }
+  })
+  
+  if (accept) {{c}}
+  Swal.fire('You agreed with T&C :)')
+  }</pre>
+    </div>
+    <div class="tab-pane fade" id="pills-input10" role="tabpanel" aria-labelledby="pills-input10-tab">
+Seleccionar archivo
+<pre>const {{c}} value: file } = await Swal.fire({{c}}
+  title: 'Select image',
+  input: 'file',
+  inputAttributes: {{c}}
+  'accept': 'image/*',
+  'aria-label': 'Upload your profile picture'
+  }
+  })
+  
+  if (file) {{c}}
+  const reader = new FileReader()
+  reader.onload = (e) => {{c}}
+  Swal.fire({{c}}
+  title: 'Your uploaded picture',
+  imageUrl: e.target.result,
+  imageAlt: 'The uploaded picture'
+  })
+  }
+  reader.readAsDataURL(file)
+  }</pre>
+    </div>
+    <div class="tab-pane fade" id="pills-input11" role="tabpanel" aria-labelledby="pills-input11-tab">
+Dirección (Da error por ahora ponga lo que ponga)
+<pre>const {{c}} value: url } = await Swal.fire({{c}}
+  input: 'url',
+  inputPlaceholder: 'Enter the URL'
+  })
+  
+  if (url) {{c}}
+  Swal.fire(`Entered URL: ${{c}}url}`)
+  }</pre>
+    </div>

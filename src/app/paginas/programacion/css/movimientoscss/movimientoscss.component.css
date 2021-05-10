@@ -1,0 +1,812 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+
+p{                  /*Para que se vea el efecto*/
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: rgb(0, 255, 85);
+}
+
+
+#translate:hover{                                  /*Se traslada de Izquierda-Arriba a Derecha-Abajo*/
+    transform: translate(20px, 20px);           /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: translate(20px, 20px);       /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#translatenegativo:hover{                          /*Se traslada de Derecha-Abajo a Izquierda-Arriba*/
+    transform: translate(-20px, -20px);         /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/  
+    -ms-transform: translate(-20px, -20px);     /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotate:hover{                                /*Gira en sentido del reloj*/
+    transform: rotate(30deg);                   /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+    -ms-transform: rotate(30deg);               /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotatenegativo:hover{                        /*Gira en sentido contrario del reloj*/
+    transform: rotate(-30deg);                  /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+    -ms-transform: rotate(-30deg);              /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateZ:hover{                                /*Gira en sentido del reloj*/
+    transform: rotateZ(120deg);                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+    -ms-transform: rotateZ(120deg);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateZnegativo:hover{                        /*Gira en sentido contrario del reloj*/
+    transform: rotateZ(-120deg);                /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/ 
+    -ms-transform: rotateZ(-120deg);            /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#rotateY:hover{                                /*Se estrecha*/
+    transform: rotateY(120deg);                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: rotateY(120deg);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scale:hover{                                /*Aumenta de tamaño. Admite decimales pero poniendo punto (.)*/
+    transform: scale(2, 3.2);                   /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: scale(2, 3.2);               /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scalenegativo:hover{                        /*Aumenta de tamaño en otra dirección. Admite decimales pero poniendo punto (.)*/
+    transform: scale(-2, -3.2);                 /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: scale(-2, -3.2);             /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleX:hover{                                /*Aumenta de tamaño en horizontal*/
+    transform: scaleX(2);                       /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: scaleX(2);                   /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleXnegativo:hover{                        /*Aumenta de tamaño en horizontal en otra dirección*/
+    transform: scaleX(-2);                       /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: scaleX(-2);                   /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#scaleY:hover{                                /*Aumenta de tamaño en vertical*/
+    transform: scaleY(2);                        /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: scaleY(2);                    /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewX:hover{                                /*Dobla sobre su eje en horizontal hacia la izquierda*/
+    transform: skewX(20deg);                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skewX(20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewXnegativo:hover{                        /*Dobla sobre su eje en horizontal hacia la derecha*/
+    transform: skewX(-20deg);                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skewX(-20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewY:hover{                                /*Dobla sobre su eje en vertical hacia la izquierda*/
+    transform: skewY(20deg);                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skewY(20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewYnegativo:hover{                        /*Dobla sobre su eje en vertical hacia la derecha*/
+    transform: skewY(-20deg);                    /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skewY(-20deg);                /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skew:hover{                               /*Dobla sobre su eje en horizontal y vertical hacia la izquierda*/
+    transform: skew(40deg, 30deg);              /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skew(40deg, 30deg);          /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#skewnegativo:hover{                       /*Dobla sobre su eje en horizontal y vertical hacia la derecha*/
+    transform: skew(-40deg, -30deg);            /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: skew(-40deg, -30deg);        /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+#matrix:hover{                               /*Transformaciones en 3D. Orden (scalex,skewy,skewx,scaley,translatex,translatey*/
+    transform: matrix(1,-0.3,0,2,20,20);        /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/
+    -ms-transform: matrix(1,-0.3,0,2,20,20);    /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/
+}
+
+/*Existen ademas: matrix3d(matriz de 4x4), translate 3d, scale3d que hay que investigar*/
+
+
+
+#transro:hover{                  /*Se traslada de Derecha-Abajo a Izquierda-Arriba y Gira en sentido del reloj*/
+    transform: translate(-20px, -20px) rotate(30deg);         /*Compatible con todos menos i9. Es necesario incluir los 2 codigos para que sean compatibles*/  
+    -ms-transform: translate(-20px, -20px) rotate(30deg);     /*Compatible con i9 y en todos los codigos. Es necesario incluir los 2 codigos para que sean compatibles*/               
+}
+
+
+
+#lento:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease;       /*Lento, rápido y lento*/
+}
+
+#comienzolento:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease-in;       /*Comienzo lento*/
+}
+
+#mismavelocidad:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: linear;       /*Misma velocidad siempre*/
+}
+
+#final:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease-out;       /*Misma velocidad siempre*/
+}
+
+#union:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease-in-out;       /*Union de los dos*/
+}
+
+#libre:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);       /*Te permite definir como lo quieres*/
+}
+
+
+
+
+#retraso:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-delay: 1s;                   /*Retraso antes de empezar, secuencia continua, no termina*/
+}
+
+
+
+
+
+
+
+
+#inherit:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease;                    
+    transition-duration: inherit;           /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}
+
+#unset:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease;                    
+    transition-duration: unset;           /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}
+
+#initial:hover{                          
+    width: 500px;                           /*Ancho que coge al moverse*/
+    transform: rotate(30deg);               /*Gira en sentido del reloj al tocarlo*/
+    transition: width 2s, transform 2s;     /*Tiempo de transformación del tamaño (width), del giro (rotate), de otros efectos (Pestaña movimiento sin tiempo)...*/
+    transition-timing-function: ease;                    
+    transition-duration: initial;           /*No va poco a poco, cambia del tirón, depende el que pongamos (inherit, unset, initial) se ve de diferente forma*/
+}
+
+
+
+
+
+
+#especificar{
+    animation-name: primera;                /*Nombre a elegir para que se haga el efecto abajo descrito (keyframes)*/
+    animation-duration: 5s;                 /*Duración*/
+    animation-delay: 2s;                    /*Retraso*/
+    animation-iteration-count: 2;           /*Veces que lo realiza antes de parar, puede usarse infinite*/
+    animation-direction: normal;            /*Dirección*/
+    animation-timing-function: ease;        /*Velocidad*/
+    animation-fill-mode: both;              /*Como acaba*/
+}
+
+@keyframes primera{                         /*Ponemos mismo nombre que animation-name*/
+    from{                                   /*Desde: px o 0%, 25%, 50% 100%*/
+            width: 200px;
+        }
+    to{                                     /*Hasta: px o 0%, 25%, 50% 100%*/
+            width: 300px;
+        }
+}
+
+
+
+
+
+
+#repeticion{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           /*Veces que lo realiza antes de parar*/
+    animation-direction: normal;            
+    animation-timing-function: ease;        
+    animation-fill-mode: both;              
+}
+
+@keyframes primera{                         
+    from{                                   
+            width: 200px;
+        }
+    to{                                     
+            width: 300px;
+        }
+}
+
+#repeticioninfinito{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: infinite;           /*Se repite siempre, no termina*/
+    animation-direction: normal;            
+    animation-timing-function: ease;        
+    animation-fill-mode: both;              
+}
+
+@keyframes primera{                         
+    from{                                   
+            width: 200px;
+        }
+    to{                                     
+            width: 300px;
+        }
+}
+
+
+#repeticionunica{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: inherit;           /*No se repite*/
+    animation-direction: normal;            
+    animation-timing-function: ease;        
+    animation-fill-mode: both;              
+}
+
+@keyframes primera{                         
+    from{                                   
+            width: 200px;
+        }
+    to{                                     
+            width: 300px;
+        }
+}
+
+
+#repeticionunica2{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: initial;           /*No se repite*/
+    animation-direction: normal;            
+    animation-timing-function: ease;        
+    animation-fill-mode: both;              
+}
+
+@keyframes primera{                         
+    from{                                   
+            width: 200px;
+        }
+    to{                                     
+            width: 300px;
+        }
+}
+
+
+#repeticionunica3{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: unset;           /*No se repite*/
+    animation-direction: normal;            
+    animation-timing-function: ease;        
+    animation-fill-mode: both;              
+}
+
+@keyframes primera{                         
+    from{                                   
+            width: 200px;
+        }
+    to{                                     
+            width: 300px;
+        }
+}
+
+
+#direnormal{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: normal;           /*Izquierda a derecha*/
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#reverse{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: reverse;           /*Derecha a izquierda*/
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#alternate{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: alternate;       /*Izquierda a derecha y derecha a izquierda*/     
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+#alternate-reverse{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: alternate-reverse;            /*Derecha a izquierda y Izquierda a derecha*/
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#linear{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#ease{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+#ease-in{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#ease-out{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#ease-in-out{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+#cubic-bezier{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: both;
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+#none{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: none;          /*No cambia nada al terminar*/
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+
+#forwards{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;      /*Retiene estilos del ultimo frame*/
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+
+
+#backwards{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;     /*Retiene estilos del primer frame*/
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+
+#both{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;              /*Ambas*/
+}
+
+@keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+}
+
+
+#direnormal{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: normal;           /*Izquierda a derecha*/
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #reverse{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: reverse;           /*Derecha a izquierda*/
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #alternate{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: alternate;       /*Izquierda a derecha y derecha a izquierda*/     
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  
+  #alternate-reverse{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;           
+    animation-direction: alternate-reverse;            /*Derecha a izquierda y Izquierda a derecha*/
+    animation-timing-function: ease;/*
+                               linear 
+                               ease-in 
+                               ease-out 
+                               ease-in-out 
+                               cubic-bezier (n,n,n,n)*/
+    animation-fill-mode: both;/*Como acaba*/
+                       /*none - no cambia nada al terminar
+                         fowards - retiene estilos del ultimo frame
+                         backwards -retiene estilos del primer frame*/
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+
+
+
+
+  #linear{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #ease{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+  animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  
+  #ease-in{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+  animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #ease-out{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+  animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #ease-in-out{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+  animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }
+  
+  #cubic-bezier{
+    animation-name: primera;                
+    animation-duration: 5s;                 
+    animation-delay: 2s;                    
+    animation-iteration-count: 2;
+    animation-direction: normal;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: both;
+  }
+  
+  @keyframes primera{
+    from{
+            width: 200px;
+        }
+    to{
+            width: 300px;
+        }
+  }

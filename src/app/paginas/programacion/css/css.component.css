@@ -1,0 +1,176 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link, button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+
+.fondoAzul{
+    background: lightblue !important;
+  }
+
+
+  #hidden{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: hidden;       /*Recorta el contenido y no se muestran barras de posición*/
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+#visible{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: visible;      /*No se recorta*/
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+
+#scroll{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;       /*Se recorta y se usa las barras de desplazamiento, recortado o no*/
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+#auto{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: auto;         /*Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente*/
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+
+#nowrap{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: nowrap;    /*Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar*/
+  text-overflow: clip;
+}
+
+#normal{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: normal;    /*Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar*/
+  text-overflow: clip;
+}
+
+#pre{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: pre;    /*Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar*/
+  text-overflow: clip;
+}
+
+#prewrap{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: pre-wrap;    /*Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea*/
+  text-overflow: clip;
+}
+
+#preline{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: pre-line;    /*Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea*/
+  text-overflow: clip;
+}
+
+
+#clip{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: nowrap; 
+  text-overflow: clip;    /*Corta sin símbolos*/
+}
+
+#ellipsis{
+  width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+  overflow: scroll;
+  white-space: nowrap; 
+  text-overflow: ellipsis;    /*Corta con ...*/
+}
+
+#yscroll{
+  width: 100px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#xscroll{
+  width: 100px;
+  height: 200px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+
+
+table, td{                          /*Responsive-Hijo/Padre*/
+  border-collapse: collapse;          /*Que se una los marcos*/
+  }
+  
+  tr:hover{                           /*Al pasar el ratón. Pisa a nth-child (se ilumine alternadamente)*/
+      background-color: aqua;
+  }
+  
+  tr:nth-child(odd){                  /*Hijos. Odd Impares. Even: par*/
+      background-color: chartreuse;
+  }
+  
+  div{                                /*Tabla responsive (Se crea dentro de un div)*/
+      overflow-x:auto;                /*Barra de desplazamiento si no cabe en toda la pagina*/
+  }
+  
+  div>table{                          /*Si la tabla es menor (tabla<width), es decir, menor que el cuadro div, que se haga lo de dentro*/
+      width: 100%;
+      border-collapse: collapse;      /*Que se una los marcos*/
+  }
+
+
+
+
+  /*MANTENER ORDEN DE EFECTOS*/
+#color:link{        /*Sin visitar*/
+  color:black;
+}
+#color:visited{     /*Visitado*/
+  color: blue;
+}
+#color:hover{       /*Ratón encima del link*/
+  color: green;
+}
+#color:active{      /*Seleccionado*/
+  color:red;
+}
+
+
+
+#noLinea{
+  text-decoration: none;      /*No aparece la raya de abajo al pasar ratón*/
+}
+
+
+
+@font-face{
+  font-family: FuenteEspecial;                                            /*Ponemos un nombre que luego elegimos a lo que queramos aplicar*/
+  src: url("../../../../libreria/FuenteGoogle/Roboto/Roboto-Black.ttf");  /*Dirección de la fuente descargada*/
+}
+#descargada{
+  font-family: Fuente especial;                                           /*Nombre definido arriba para ser usado mediante la id o class*/
+}
+
+
+#online{
+  font-family: 'Comic Neue', cursive;
+}
+
+
+#azul{
+  color: #3abcf8;
+}
+
+a{
+  color: black;
+}

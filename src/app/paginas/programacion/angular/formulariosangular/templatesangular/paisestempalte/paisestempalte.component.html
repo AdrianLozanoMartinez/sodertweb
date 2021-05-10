@@ -1,0 +1,72 @@
+<form autocomplete="off" (ngSubmit)="guardartemplate(variableLocalTemplate)" #variableLocalTemplate="ngForm">
+    <div>
+    
+      <div class="form-group row">
+          <label class="col-2 col-form-label">Nombre</label>
+          <div class="col-8">
+              <input class="form-control" [class.is-invalid]="(nombreLocal.invalid && nombreLocal.touched) || (nombreLocal.invalid && variableLocalTemplate.submitted)" #nombreLocal="ngModel"type="text" name="nombre" [(ngModel)]="usuario.nombre" required minlength="5" placeholder="Nombre">
+            <small *ngIf="nombreLocal.invalid && nombreLocal.touched" class="form-text text-danger">El nombre es obligatorio y tiene que tener 5 letras</small>
+      </div>
+    </div>
+    
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido</label>
+        <div class="col-8">
+          <input class="form-control" [class.is-invalid]="(apellidoLocal.invalid && apellidoLocal.touched) || (apellidoLocal.invalid && variableLocalTemplate.submitted)" #apellidoLocal="ngModel" type="text" name="apellido" [(ngModel)]="usuario.apellido" required minlength="5" placeholder="Apellido">
+         <small *ngIf="apellidoLocal.invalid && apellidoLocal.touched" class="form-text text-danger">El apellido es obligatorio y tiene que tener 5 letras</small>
+        </div>
+      </div>
+    
+    </div>
+    
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Correo</label>
+        <div class="col-8">
+          <input class="form-control" [class.is-invalid]="(emailLocal.invalid && emailLocal.touched) || (emailLocal.invalid && variableLocalTemplate.submitted)" #emailLocal="ngModel" type="email" name="email" [(ngModel)]="usuario.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" required placeholder="Correo electrónico">
+         <small *ngIf="emailLocal.invalid && emailLocal.touched" class="form-text text-danger">El correo es obligatorio y debe tener el formato correo@correo.com</small>
+      </div>
+    </div>
+    
+      <div class="form-group row mt-5">
+          <label class="col-2 col-form-label">País</label>
+      <div class="col-8">
+    
+    <select class="form-control" name="pais" [disabled]="variablePaises2.length === 0" [class.is-invalid]="paisLocal.invalid && paisLocal.touched" [(ngModel)]="usuario.pais" required #paisLocal="ngModel">
+<!-- Select: para elegir opciones de un listado, en este caso de la API de la Web de países (JSON) 
+                                              Disabled: Deshabilitar si no tenemos datos (length === 0), en la variablePaises2 tenemos los datos del JSOn de países-->
+      <option *ngFor="let paisFor of variablePaises2" [value]="paisFor.codigo">
+         <!-- *ngFor: Campo de opciones sacada a través de un for, metemos en la variable nueva (paisFor) el contenido sacado a través de la variable definida en el TS (variablePaises2) 
+                      que a su vez llama a la API de la Web (JSON) 
+                                                       Value: Coge el valor (value) de la variable definida en el for (paisFor) relacionada con la variablePaises2 que está relacionada con variablePaises, 
+                                                              donde se mete la función (getPaises) que llamamos del servicio a través de la variable declarada en el TS (paisService). Devuelve el codigo 
+                                                              (codigo: variablepais.alpha3Code) y el nombre (nombre: variablepais.name) que cogemos por la función (getPaises)-->
+          {{ paisFor.nombre }}
+      </option>
+    </select>    
+    
+    
+    <div class="form-group row mt-5">
+    <label class="col-2 col-form-label">Género</label>
+    <div class="col-8">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" [(ngModel)]="usuario.genero" value="M" required name="genero" #genero="ngModel" [class.is-invalid]="genero.invalid && genero.touched">
+            <label class="form-check-label">Masculino</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" [(ngModel)]="usuario.genero" value="F" required name="genero" #genero="ngModel" [class.is-invalid]="genero.invalid && genero.touched">
+            <label class="form-check-label">Femenino</label>
+        </div>
+    </div>
+    </div>
+            
+      </div>
+    </div>
+    
+      <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary btn-block">Guardar</button>
+        </div>
+      </div>
+    
+    </form>

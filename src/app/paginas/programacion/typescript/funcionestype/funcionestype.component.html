@@ -1,0 +1,257 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-funcionestype-tab" data-toggle="pill" href="#pills-funcionestype" role="tab" aria-controls="pills-funcionestype" aria-selected="true" style="color: black;">Normal</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype8-tab" data-toggle="pill" href="#pills-funcionestype8" role="tab" aria-controls="pills-funcionestype8" aria-selected="false" style="color: black;">Meter en<br>Variable</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype0-tab" data-toggle="pill" href="#pills-funcionestype0" role="tab" aria-controls="pills-funcionestype0" aria-selected="false" style="color: black;">Cálculos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype1-tab" data-toggle="pill" href="#pills-funcionestype1" role="tab" aria-controls="pills-funcionestype1" aria-selected="false" style="color: black;">Texto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype4-tab" data-toggle="pill" href="#pills-funcionestype4" role="tab" aria-controls="pills-funcionestype4" aria-selected="false" style="color: black;">Il/Else</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype2-tab" data-toggle="pill" href="#pills-funcionestype2" role="tab" aria-controls="pills-funcionestype2" aria-selected="false" style="color: black;">Objeto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype3-tab" data-toggle="pill" href="#pills-funcionestype3" role="tab" aria-controls="pills-funcionestype3" aria-selected="false" style="color: black;">Flecha</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionestype5-tab" data-toggle="pill" href="#pills-funcionestype5" role="tab" aria-controls="pills-funcionestype5" aria-selected="false" style="color: black;">Arreglos<br>Tupla</a>
+    </li>
+    <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="pills-funcionestype" role="tabpanel" aria-labelledby="pills-funcionestype-tab">
+
+            <div class="card-group">
+                <div class="card text-dark bg-primary m-3">
+                    <div class="card-body">
+                        <pre class="card-text">let nombre_variable='Resultado';
+<b>function nombreFuncion(){{c}}
+	return nombre_variable;
+}</b>
+
+console.log(nombre_variable);</pre>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype8" role="tabpanel" aria-labelledby="pills-funcionestype8-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">let nombre_variable='Resultado';
+<b>let variableFuncion</b> = function(){{c}}
+	return nombre_variable;
+}
+
+console.log(variableFuncion());
+<hr>let nombre_variable='Resultado';
+
+function nombreFuncion(){{c}}
+	return nombre_variable;
+}
+<b>const variable_todo = `${{c}}nombreFuncion}`;</b>
+
+console.log(nombreFuncion());</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype0" role="tabpanel" aria-labelledby="pills-funcionestype0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">function getNombre_Variable() {{c}}
+    <b>return 100 + 100;</b>
+}
+
+console.log(`${{c}}getNombre_Variable()}`);</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype1" role="tabpanel" aria-labelledby="pills-funcionestype1-tab">
+       
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">function nombre_funcion( <b>nombre_parametro_obligatorio: string, 
+                            nombre_parametro_opcional?: string, 
+                            nombre_parametro_por_defecto: string = 'texto_por-defecto'</b> ) {{c}}    //Orden de los parámetros: 1º Obligatorios, 2º Opcionales, 3º Por defectos
+
+            console.log (`<b>${{c}} nombre_parametro_obligatorio }</b>, <b>${{c}} nombre_parametro_opcional</b> } y <b>${{c}} nombre_parametro_por_defecto</b> }`);
+}
+
+<b>nombre_funcion ('texto-que-ponemos-al-instante');</b>
+O
+<b>nombre_funcion ('texto-que-ponemos-al-instante', 'texto-que-sustituye-el-por-fecto');</b>     
+O
+<b>nombre_funcion ('texto-que-ponemos-al-instante', 'texto-opcional', 'texto-que-sustituye-el-por-fecto');</b> -> //Orden igual que los parámetros de arriba</pre>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype4" role="tabpanel" aria-labelledby="pills-funcionestype4-tab">
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">function nombre_funcion( nombre_parametro_obligatorio: string, 
+                        nombre_parametro_opcional?: string, 
+                        nombre_parametro_por_defecto: string = 'texto_por-defecto' ) {{c}}   
+
+                    <b>if ( nombre_parametro_opcional ) {{c}}</b>       //Si se cumple lo que hay dentro del paréntesis muestra lo que hay dentro
+                        <b>console.log (`${{c}} nombre_parametro_obligatorio }, ${{c}} nombre_parametro_opcional } y ${{c}} nombre_parametro_por_defecto }`);
+                    }
+                    else{{c}}</b>                                           //Si no se cumple la condición del if muestra lo que hay dentro
+                        <b>console.log (`${{c}} nombre_parametro_obligatorio } y ${{c}} nombre_parametro_opcional }`);
+                    }</b>
+                         
+        nombre_funcion ('texto-que-ponemos-al-instante');</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype3" role="tabpanel" aria-labelledby="pills-funcionestype3-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">const nombre_funcion = <b>( nombre_parametro: string ) => nombre_parametro;</b>
+           console.log(nombre_funcion ('Texto'));<hr>En función sin flecha sería:
+<small>const nombre_funcion = <b>function ( nombre_parametro: string ) {{c}}
+    return nombre_parametro;
+    }</b>
+    console.log(nombre_funcion ('Texto'));</small></pre>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h4>Objeto (Destructurado)</h4>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>const nombre_variable = {{c}}       
+	nombre_parametro: 'Texto',
+	nombre_parametro2: 'Texto2'
+    }
+
+	const nombre_funcion = ({{c}} nombre_parametro, nombre_parametro2 }: any ) => {{c}}</b>  //Metemos los parámetros de arriba, no es necesario especificar porque las => traspasa y no es necesario
+		
+        <b>console.log (nombre_parametro);
+        console.log (nombre_parametro2);
+     }
+
+     nombre_funcion (nombre_variable);</b>  //Llamamos a la función que a su vez coge los parámetros de la variable de arriba, por ello se llama a la variable</pre>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        <h4>Tiempo de tardanza en ejecutarse (Objeto)</h4>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">const variable_funcion = {{c}}       //Función de OBJETO
+                        nombre_parametro: 'Texto',
+                        nombre_funcion() {{c}}
+                        
+                        <b>setTimeout ( () => {{c}}</b>   //La flecha hace que el this. se traspase y pueda coger el valor de arriba del parámetro (nombre_parametro)
+                        
+                        console.log (`${{c}} this.nombre_parametro } en un tiempo de 1000`);    
+                        
+                        <b>}, 1000 );</b>            //Tiempo que tarda antes de ejecutarse
+                    }
+                }
+                
+                variable_funcion.nombre_funcion();</pre>
+            </div>
+        </div>
+    </div>
+    
+    
+    <hr>
+    <h4>Operaciones</h4>
+    <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body">
+                <pre class="card-text"><h5>Mayúscula</h5>
+    const nombre_funcion = ( nombre_parametro: string ) => nombre_parametro<b>.toUpperCase()</b>;
+    console.log (nombre_funcion ('Texto') );  -> Sale TEXTO<hr><h5>Cálculo</h5>
+    const variable_nombre = ( nombre_parametro1:number, nombre_parametro2:number ) => <b>nombre_parametro1 + nombre_parametro2;</b>
+    
+    console.log(variable_nombre(2,4));  //Ponemos los números que queremos que sume</pre>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+    <div class="tab-pane fade" id="pills-funcionestype2" role="tabpanel" aria-labelledby="pills-funcionestype2-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <pre class="card-body"><b>const variable_funcion = {{c}}
+	nombre_parametro: 'Texto',
+	nombre_funcion() {{c}}</b>
+	
+		console.log (`${{c}} this.nombre_parametro } y más texto`);
+	}
+}
+
+<b>variable_funcion.nombre_funcion();</b></pre>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-funcionestype5" role="tabpanel" aria-labelledby="pills-funcionestype5-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <pre class="card-body"><h4>Estructurado</h4><ul><li>const nombre_variable_arreglo: string[] = ['parametro1', 'parametro2', 'parametro3'];
+
+<b>const nombre_funcion = (nombre_variable_arreglo: string[]) => {{c}}</b>
+
+    console.log(<b>nombre_variable_arreglo[0], nombre_variable_arreglo[1], nombre_variable_arreglo[2]</b>);
+}
+
+<b>nombre_funcion ( nombre_variable_arreglo )</b>;</li><hr><h4>Destructurado</h4>
+<li>const nombre_variable_arreglo: string[] = ['parametro1', 'parametro2', 'parametro3'];
+
+const nombre_funcion = ( <b>[coge_el_parametro1, coge_el_parametro2, coge_el_parametro3]: string[]</b> ) => {{c}}
+
+    console.log(<b>coge_el_parametro1, coge_el_parametro2, coge_el_parametro3</b>);
+}
+
+<b>nombre_funcion ( nombre_variable_arreglo );</b></li></ul></pre>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

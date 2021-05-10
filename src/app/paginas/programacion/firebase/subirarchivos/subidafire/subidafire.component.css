@@ -1,0 +1,9 @@
+/*Usada en el HTML para la DIRECTIVA*/
+.clase_especial_creada_por_mi {         
+    border: red dotted 3px;
+  }
+  
+  /*Usada en el HTML para CAMBIAR COLOR al CARGAR*/
+  .text-green {
+    color: green; 
+  }

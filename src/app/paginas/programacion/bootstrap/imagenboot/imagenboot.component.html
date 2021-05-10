@@ -1,0 +1,278 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-imagenboot-tab" data-toggle="pill" href="#pills-imagenboot" role="tab" aria-controls="pills-imagenboot" aria-selected="true" style="color: black;">Posición</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-imagenboot0-tab" data-toggle="pill" href="#pills-imagenboot0" role="tab" aria-controls="pills-imagenboot0" aria-selected="false" style="color: black;">Borde</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-imagenboot1-tab" data-toggle="pill" href="#pills-imagenboot1" role="tab" aria-controls="pills-imagenboot1" aria-selected="false" style="color: black;">Título/Subtítulo<br>Descripción/Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-imagenboot2-tab" data-toggle="pill" href="#pills-imagenboot2" role="tab" aria-controls="pills-imagenboot2" aria-selected="false" style="color: black;">Descripción</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-imagenboot3-tab" data-toggle="pill" href="#pills-imagenboot3" role="tab" aria-controls="pills-imagenboot3" aria-selected="false" style="color: black;">Dentro de<br>cuadro de texto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-imagenboot4-tab" data-toggle="pill" href="#pills-imagenboot4" role="tab" aria-controls="pills-imagenboot4" aria-selected="false" style="color: black;">Carousel</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-imagenboot" role="tabpanel" aria-labelledby="pills-imagenboot-tab">
+
+<div class="container">
+    <u>Imagen fluída</u>
+    <br>
+    <img src="../../../../../assets/imagenes/01.jpg" class="img-fluid">
+    <br>
+    <u>Imagen a la izquierda</u>
+    <br>
+    <img src="../../../../../assets/imagenes/01.jpg" class="rounded float-left">
+    <br>
+    <u style="right: 200px; position: absolute;">Imagen a la derecha</u>
+    <br>
+    <img src="../../../../../assets/imagenes/01.jpg" class="rounded float-right">
+    <br>
+    <u>Imagen centrada</u>
+    <br>
+    <img src="../../../../../assets/imagenes/01.jpg" class="rounded mx-auto d-block">
+</div>
+
+<div class="card-group">
+  <div class="card text-dark m-3" id="lila2">
+      <div class="card-body" id="lila2">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head>                                                                                        
+        {{co}}meta charset="UTF-8">                                                                    
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+        {{co}}title>Título en pestaña de la web{{co}}/title>
+        {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{co}}/head>                                                                                       
+    {{co}}body>    
+        <b>
+          {{co}}div class="container">
+            {{co}}u>Imagen fluída{{co}}/u>
+            {{co}}br>
+            {{co}}img src="../../../../../assets/imagenes/01.jpg" class="img-fluid">
+            {{co}}br>
+            {{co}}u>Imagen a la izquierda{{co}}/u>
+            {{co}}br>
+            {{co}}img src="../../../../../assets/imagenes/01.jpg" class="rounded float-left">
+            {{co}}br>
+            {{co}}u style="right: 200px; position: absolute;">Imagen a la derecha{{co}}/u>
+            {{co}}br>
+            {{co}}img src="../../../../../assets/imagenes/01.jpg" class="rounded float-right">
+            {{co}}br>
+            {{co}}u>Imagen centrada{{co}}/u>
+            {{co}}br>
+            {{co}}img src="../../../../../assets/imagenes/01.jpg" class="rounded mx-auto d-block">
+        {{co}}/div>
+      </b>                                                                                                                                                                   
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+    {{co}}/body>                                                                                       
+{{co}}/html></pre>
+      </div>
+    </div>
+</div>
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-imagenboot0" role="tabpanel" aria-labelledby="pills-imagenboot0-tab">
+
+      <u>Borde a la imagen</u>
+    <br>
+    <img src="../../../../../assets/imagenes/01.jpg" class="img-thumbnail">
+
+      <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}u>Borde a la imagen{{co}}/u>
+                {{co}}br>
+                {{co}}img src="../../../../../assets/imagenes/01.jpg" class="img-thumbnail">
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+      </div>
+    
+    </div>
+
+    <div class="tab-pane fade" id="pills-imagenboot1" role="tabpanel" aria-labelledby="pills-imagenboot1-tab">
+
+      <div class="container">
+        <div class="card" style="width:200px">
+            <img class="card-img-top" src="../../../../../assets/imagenes/01.jpg" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Titulo</h4>
+                <p class="card-subtittle">Subtítulo</p>      
+                <p class="card-text">Descripcion</p>
+                <p class="card-link"><a href="www.google.es">Ir a la web</a></p>      
+            </div>
+        </div>
+    </div>
+
+      <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="container">
+                  {{co}}div class="card" style="width:200px">
+                      {{co}}img class="card-img-top" src="../../../../../assets/imagenes/01.jpg" alt="">
+                      {{co}}div class="card-body">
+                          {{co}}h4 class="card-title">Titulo{{co}}/h4>
+                          {{co}}p class="card-subtittle">Subtítulo{{co}}/p>      
+                          {{co}}p class="card-text">Descripcion{{co}}/p>
+                          {{co}}p class="card-link">{{co}}a href="www.google.es">Ir a la web{{co}}/a>{{co}}/p>      
+                      {{co}}/div>
+                  {{co}}/div>
+              {{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+      </div>
+      
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-imagenboot2" role="tabpanel" aria-labelledby="pills-imagenboot2-tab">
+               
+      <div class="container">
+        <figure class="figure">
+            <img src="../../../../../assets/imagenes/01.jpg" class="figure-img img-fluid rounded">
+                                                                <!--Figure-img: Coge la imagen-->
+            <figcaption class="figure-caption text-right"> Descripción</figcaption>     
+                           <!--Figure-caption: Recoge la imagen -->
+        </figure>
+     </div>
+
+      <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="container">
+                  {{co}}figure class="figure">
+                      {{co}}img src="../../../../../assets/imagenes/01.jpg" class="figure-img img-fluid rounded">
+                                                                          {{co}}!--Figure-img: Coge la imagen-->
+                      {{co}}figcaption class="figure-caption text-right"> Descripción{{co}}/figcaption>     
+                                     {{co}}!--Figure-caption: Recoge la imagen -->
+                  {{co}}/figure>
+               {{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-imagenboot3" role="tabpanel" aria-labelledby="pills-imagenboot3-tab">
+       
+      <div class="container">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">      <!--Quita los padding y margin-->
+            <div class="col-md-4">
+              <img src="../../../../../assets/imagenes/01.jpg" class="card-img" alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-tittle">Imagen a la izquierda y texto en el centro al lado de la imagen</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="container">
+                    {{co}}div class="card mb-3" style="max-width: 540px;">
+                      {{co}}div class="row no-gutters">      {{co}}!--Quita los padding y margin-->
+                        {{co}}div class="col-md-4">
+                          {{co}}img src="../../../../../assets/imagenes/01.jpg" class="card-img" alt="">
+                        {{co}}/div>
+                        {{co}}div class="col-md-8">
+                          {{co}}div class="card-body">
+                            {{co}}h5 class="card-tittle">Imagen a la izquierda y texto en el centro al lado de la imagen{{co}}/h5>
+                          {{co}}/div>
+                        {{co}}/div>
+                      {{co}}/div>
+                    {{co}}/div>
+                {{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+      </div>
+
+
+
+</div>
+
+<div class="tab-pane fade" id="pills-imagenboot4" role="tabpanel" aria-labelledby="pills-imagenboot4-tab"><app-carouselboot></app-carouselboot></div>
+
+  </div>

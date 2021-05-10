@@ -1,0 +1,45 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-instalaciontype-tab" data-toggle="pill" href="#pills-instalaciontype" role="tab" aria-controls="pills-instalaciontype" aria-selected="true" style="color: black;">NodeJS<br><small>(Programa necesario)</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalaciontype0-tab" data-toggle="pill" href="#pills-instalaciontype0" role="tab" aria-controls="pills-instalaciontype0" aria-selected="false" style="color: black;">Typescript</a>
+    </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade show active" id="pills-instalaciontype" role="tabpanel" aria-labelledby="pills-instalaciontype-tab">
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b><a href="https://nodejs.org/es/"><u>Descargar</u></a></b> <small> -> La más recomendable (14.9.0 Actual)</small> e <b>Instalar</b> -> <small>(node-v14.9.0-x64.msi)</small></li>
+<li><b>Ver versión</b>: Terminal/MSDOS -> <b>node –v</b></li>
+<li><b>Si tenemos problema</b> -> En el buscador de windows ponemos -> <abbr title="o simplemente ponemos variable y nos aparecerá lo escrito aquí">Edita las variables de entorno del sistema</abbr>:
+        <em>Opciones avanzada</em> -> <em>Variable de entorno</em>
+        <em>Path</em> -> <em>Editar</em> -> <em>Nuevo</em> -> Escribimos la dirección donde esté el <i>bin</i> del <i>NodeJS</i></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+        <app-instalaciontypelinuxmac></app-instalaciontypelinuxmac>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-instalaciontype0" role="tabpanel" aria-labelledby="pills-instalaciontype0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b> npm install -g typescript</b> <small>   (<abbr title="Global - Afecta a TODOS los proyectos">-g</abbr> / <abbr title="Local - Afecta SOLO al proyecto">Sin -g</abbr> -> Necesita ejecutar administrador en consola)</small></li>
+<li><b>tsc</b> -> Comprobar si está bien instalado, <abbr title="Nos saldrá comandos que se podrá usar">Bien instalado</abbr> / <abbr title="Instalarlo en otra dirección o con otro terminal (Duplicar o MSDOS u otros)">No instalado</abbr> </li>
+<li><b>tsc --version</b> -> Ver versión instalada</li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+        <app-instalaciontypelinuxmac2></app-instalaciontypelinuxmac2>
+    </div>
+
+
+</div>

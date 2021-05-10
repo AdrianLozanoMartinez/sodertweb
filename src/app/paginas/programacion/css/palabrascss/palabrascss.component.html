@@ -1,0 +1,966 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-palabrascss-tab" data-toggle="pill" href="#pills-palabrascss" role="tab" aria-controls="pills-palabrascss" aria-selected="true" style="color: black;">Color</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascssa-tab" data-toggle="pill" href="#pills-palabrascssa" role="tab" aria-controls="pills-palabrascssa" aria-selected="true" style="color: black;">Sombra</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascssb-tab" data-toggle="pill" href="#pills-palabrascssb" role="tab" aria-controls="pills-palabrascssb" aria-selected="true" style="color: black;">Alineación</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascssc-tab" data-toggle="pill" href="#pills-palabrascssc" role="tab" aria-controls="pills-palabrascssc" aria-selected="true" style="color: black;">Sangrado<br>1º línea</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss0-tab" data-toggle="pill" href="#pills-palabrascss0" role="tab" aria-controls="pills-palabrascss0" aria-selected="false" style="color: black;">Separación<br>Línea/Palabra</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss1-tab" data-toggle="pill" href="#pills-palabrascss1" role="tab" aria-controls="pills-palabrascss1" aria-selected="false" style="color: black;">Mayúscula<br>Minúscula</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss2-tab" data-toggle="pill" href="#pills-palabrascss2" role="tab" aria-controls="pills-palabrascss2" aria-selected="false" style="color: black;">Tamaño</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss3-tab" data-toggle="pill" href="#pills-palabrascss3" role="tab" aria-controls="pills-palabrascss3" aria-selected="false" style="color: black;">Tipo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss4-tab" data-toggle="pill" href="#pills-palabrascss4" role="tab" aria-controls="pills-palabrascss4" aria-selected="false" style="color: black;">Estilo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss5-tab" data-toggle="pill" href="#pills-palabrascss5" role="tab" aria-controls="pills-palabrascss5" aria-selected="false" style="color: black;">Bordes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-palabrascss6-tab" data-toggle="pill" href="#pills-palabrascss6" role="tab" aria-controls="pills-palabrascss6" aria-selected="false" style="color: black;">Cortar<br>contenido</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-palabrascssextra-tab" data-toggle="pill" href="#pills-palabrascssextra" role="tab" aria-controls="pills-palabrascssextra" aria-selected="false" style="color: black;">Lista</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-palabrascss" role="tabpanel" aria-labelledby="pills-palabrascss-tab">
+    
+        <p id="color">Color</p>
+        
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="color">Color{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#color{{c}}
+    <b>color</b>: rgb(238, 0, 186);
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascssa" role="tabpanel" aria-labelledby="pills-palabrascssa-tab">
+
+        <p id="sombra">Sombra más <b>cercana</b>, <b>números </b> <b>pequeños</b> (px) tanto en <b>horizontal</b> como <b>vertical</b></p>
+<p id="sombra2">Sombra2 más <b>alejada</b>, <b>números </b> <b>grandes</b> (px) tanto en <b>horizontal</b> como <b>vertical</b></p>
+<p id="sombra3">Sombra3 más <b>difuminada</b>, en vez de 2 números son <b>3 números (px)</b></p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="sombra">Sombra más cercana, números  pequeños (px) tanto en horizontal como vertical{{co}}/p>
+        {{co}}p id="sombra2">Sombra2 más alejada, números  grandes (px) tanto en horizontal como vertical{{co}}/p>
+        {{co}}p id="sombra3">Sombra3 más difuminada, en vez de 2 números son 3 números (px){{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#sombra{{c}}
+    color: green;
+    <b>text-shadow: 5px 10px blue;</b>  
+        /*<b>Horizontal Vertical</b>*/        
+}
+
+#sombra2{{c}}
+    color: green;
+    <b>text-shadow: 20px 15px blue;</b>   
+        /*<b>Horizontal Vertical</b>*/         
+}
+
+#sombra3{{c}}
+    color: green;
+    <b>text-shadow: 15px 5px 10px blue;</b>   
+        /*<b>Horizontal Vertical</b> ?*/         
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascssb" role="tabpanel" aria-labelledby="pills-palabrascssb-tab">
+
+        <p id="start">start</p>
+<p id="top">top</p>
+<p id="right">right</p>
+<p id="left">left</p>
+<p id="justify">justify</p>
+<p id="center">center</p>
+<p id="bottom">bottom</p>
+<p id="end">end</p> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="start">start{{co}}/p>
+        {{co}}p id="top">top{{co}}/p>
+        {{co}}p id="right">right{{co}}/p>
+        {{co}}p id="left">left{{co}}/p>
+        {{co}}p id="justify">justify{{co}}/p>
+        {{co}}p id="center">center{{co}}/p>
+        {{co}}p id="bottom">bottom{{co}}/p>
+        {{co}}p id="end">end{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#start{{c}}
+    <b>text-align: start;</b>
+}
+
+#top{{c}}
+    <b>text-align: top;</b>
+}
+
+#right{{c}}
+    <b>text-align: right;</b>
+}
+
+#left{{c}}
+    <b>text-align: left;</b>
+}
+
+#justify{{c}}
+    <b>text-align: justify;</b>
+}
+
+#center{{c}}
+    <b>text-align: center;</b>
+}
+
+#bottom{{c}}
+    <b>text-align: bottom;</b>
+}
+
+#end{{c}}
+    <b>text-align: end;</b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascssc" role="tabpanel" aria-labelledby="pills-palabrascssc-tab">
+ 
+        <pre id="sangrado">Sangrado Positivo. 1º
+            Típico sangrado de inicio de párrafo</pre>
+            <pre id="sangradonegativo">Sangrado Negativo. 2º
+            Sangrado de inicio de párrafo al contrario de lo normal</pre> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}pre id="sangrado">Sangrado Positivo. 1º
+        Típico sangrado de inicio de párrafo{{co}}/pre>
+        {{co}}pre id="sangradonegativo">Sangrado Negativo. 2º
+        Sangrado de inicio de párrafo al contrario de lo normal{{co}}/pre></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#sangrado{{c}}
+    <b>text-indent: 25px;</b>       
+}
+
+#sangradonegativo{{c}}
+    <b>text-indent: -5px; </b>     
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-palabrascss0" role="tabpanel" aria-labelledby="pills-palabrascss0-tab">
+
+        <p id="letrahori">Separación de letras en horizontal</p>
+<p id="letrahorinega">Juntar letras en horizontal</p>
+<p id="letraverti">Separación de líneas en vertical. Ejemplo: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam, libero nulla modi ea autem ipsam corporis repudiandae, soluta amet perferendis consequatur voluptate iste eveniet? Dicta incidunt quam enim excepturi!</p>
+<p id="pala">Separación de palabras</p>
+<p id="palanega">Juntar las palabras</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="letrahori">Separación de letras en horizontal{{co}}/p>
+        {{co}}p id="letrahorinega">Juntar letras en horizontal{{co}}/p>
+        {{co}}p id="letraverti">Separación de líneas en vertical. Ejemplo: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam, libero nulla modi ea autem ipsam corporis repudiandae, soluta amet perferendis consequatur voluptate iste eveniet? Dicta incidunt quam enim excepturi!{{co}}/p>
+        {{co}}p id="pala">Separación de palabras{{co}}/p>
+        {{co}}p id="palanega">Juntar las palabras{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#letrahori{{c}}
+    <b>letter-spacing: 10px;</b>
+}
+
+#letrahorinega{{c}}
+    <b>letter-spacing: -2px;</b>
+}
+
+#letraverti{{c}}
+    <b>line-height: 50px;</b>
+}
+
+#pala{{c}}
+    <b>word-spacing: 10px;</b>
+}
+
+#palanega{{c}}
+    <b>word-spacing: -10px;</b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascss1" role="tabpanel" aria-labelledby="pills-palabrascss1-tab">
+
+        <p id="mayuscula">Mayúscula</p>
+<p id="primeramayuscula">primera letra mayúscula</p>
+<p id="minuscula">Minúscula</p> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="mayuscula">Mayúscula{{co}}/p>
+        {{co}}p id="primeramayuscula">primera letra mayúscula{{co}}/p>
+        {{co}}p id="minuscula">Minúscula{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#primeramayuscula{{c}}
+    <b>text-transform: capitalize;</b>
+}
+
+#mayuscula{{c}}
+    <b>text-transform: uppercase;</b>
+}
+
+#minuscula{{c}}
+    <b>text-transform: lowercase;</b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascss2" role="tabpanel" aria-labelledby="pills-palabrascss2-tab">
+
+<p id="numeropeque">numeropeque</p>
+<p id="numerogrande">numerogrande</p>
+<p id="xx-small">xx-small</p>
+<p id="x-small">x-small</p>
+<p id="smaller">smaller</p>
+<p id="small">small</p>
+<p id="medium">medium</p>
+<p id="large">large</p>
+<p id="larger">larger</p>
+<p id="x-large">x-large</p>
+<p id="xx-large">xx-large</p>
+<p id="initial">initial</p>
+<p id="inherit">inherit</p>
+<p id="unset">unset</p>
+<p id="numero">Número 5px</p>
+<p id="numero2">Número 5em</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="numeropeque">numeropeque{{co}}/p>
+        {{co}}p id="numerogrande">numerogrande{{co}}/p>
+        {{co}}p id="xx-small">xx-small{{co}}/p>
+        {{co}}p id="x-small">x-small{{co}}/p>
+        {{co}}p id="smaller">smaller{{co}}/p>
+        {{co}}p id="small">small{{co}}/p>
+        {{co}}p id="medium">medium{{co}}/p>
+        {{co}}p id="large">large{{co}}/p>
+        {{co}}p id="larger">larger{{co}}/p>
+        {{co}}p id="x-large">x-large{{co}}/p>
+        {{co}}p id="xx-large">xx-large{{co}}/p>
+        {{co}}p id="initial">initial{{co}}/p>
+        {{co}}p id="inherit">inherit{{co}}/p>
+        {{co}}p id="unset">unset{{co}}/p>
+        {{co}}p id="numero">Número 5px{{co}}/p>
+        {{co}}p id="numero2">Número 5em{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#numeropeque{{c}}
+    <b>font-size: 5px; </b>
+}
+#numerogrande{{c}}
+    <b>font-size: 20px;</b> 
+}
+
+#xx-small{{c}}
+    <b>font-size: xx-small;</b> 
+}
+#x-small{{c}}
+    <b>font-size: x-small;</b> 
+}
+#smaller{{c}}
+    <b>font-size: smaller;</b> 
+}
+#small{{c}}
+    <b>font-size: small; </b>
+}
+
+#medium{{c}}
+    <b>font-size: medium;</b>
+}
+
+#large{{c}}
+    <b>font-size: large;</b> 
+}
+#larger{{c}}
+    <b>font-size: larger;</b> 
+}
+#x-large{{c}}
+    <b>font-size: x-large;</b> 
+}
+#xx-large{{c}}
+    <b>font-size: xx-large; </b>
+}
+
+#initial{{c}}
+    <b>font-size: initial;</b> 
+}
+#inherit{{c}}
+    <b>font-size: inherit;</b> 
+}
+#unset{{c}}
+    <b>font-size: unset; </b>
+}
+#numero{{c}}
+    <b>font-size: 5px; </b>
+}
+#numero2{{c}}
+    <b>font-size: 5em; </b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascss3" role="tabpanel" aria-labelledby="pills-palabrascss3-tab">
+
+        <p>Sin especificar tipo de letra</p>
+<p id="tipo">Tipo de letra (comic-sans)</p>
+<p id="tipo2">3 Tipos de letras. Si no una la siguiente (Arial, Helvetica, comic-sans)</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p>Sin especificar tipo de letra{{co}}/p>
+        {{co}}p id="tipo">Tipo de letra (comic-sans){{co}}/p>
+        {{co}}p id="tipo2">3 Tipos de letras. Si no una la siguiente (Arial, Helvetica, comic-sans){{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#tipo{{c}}
+    <b>font-family: comic-sans;</b>
+}
+ 
+#tipo2{{c}}
+    <b>font-family: Arial, Helvetica, comic-sans;</b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascss4" role="tabpanel" aria-labelledby="pills-palabrascss4-tab">
+
+        <p id="normal">Normal</p>
+<p id="italic">Italic</p>
+<p id="oblique">Oblique</p>
+<p id="initial">Initial</p>
+<p id="Inherit">Inherit</p>
+<p id="Unset">Unset</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="normal">Normal{{co}}/p>
+        {{co}}p id="italic">Italic{{co}}/p>
+        {{co}}p id="oblique">Oblique{{co}}/p>
+        {{co}}p id="initial">Initial{{co}}/p>
+        {{co}}p id="Inherit">Inherit{{co}}/p>
+        {{co}}p id="Unset">Unset{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#normal{{c}}
+    <b>font-style: normal; </b>    
+}
+
+#italic{{c}}
+     <b>font-style: italic; </b>   /*Cursiva*/
+}
+
+#oblique{{c}}
+    <b>font-style: oblique;</b> 
+}
+
+#initial{{c}}
+    <b>font-style: initial;</b> 
+}
+
+#inherit{{c}}
+    <b>font-style: inherit;</b> 
+}
+
+#unset{{c}}
+    <b>font-style: unset; </b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-palabrascss5" role="tabpanel" aria-labelledby="pills-palabrascss5-tab">
+
+        <p id="bordes">Bordes</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="bordes">Bordes{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text"><b>#bordes{{c}}</b>
+    <b>border-style: double;
+    border-top-style: dashed;
+    border-width: 5px 12px 1px 50px;
+    border-color: red blue darkcyan lightblue;</b>
+    background-color: rebeccapurple;
+    <b>border-radius: 50px 4%;</b>
+    width: 300px;/*Auto, inherit como en margin. También en Height*/
+<b>}</b></pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-palabrascss6" role="tabpanel" aria-labelledby="pills-palabrascss6-tab">
+
+        <p id="hidden">Hidden: Recorta el contenido y no se muestran barras de posición</p>
+<p id="visible">Visible: Se ve todo sin cortar nada de nada este texto</p>
+<p id="auto">Auto: Corta con una barra de desplazamiento por la parte inferior. Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente</p>
+<p id="scroll">Scroll: Corta con dos barra de desplazamiento una por la parte de abajo y otra por la parte derecha</p>
+<p id="nowrap">Nowrap: Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar</p>
+<p id="normal">Normal: Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar</p>
+<p id="pre">Pre: Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar</p>
+<p id="prewrap">Prewrap: Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea</p>
+<p id="preline">Preline: Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea</p>
+<p id="clip">text-overflow-clip: Corta sin símbolos, sin puntos consecutivos</p>
+<p id="ellipsis">text-overflow-ellipsis: Corta con tres puntos consecutivos</p>
+<p id="yscroll">x hidden - Horizontal escondemos barra. y scroll - Vertical mostramos barra. Podemos mostrar u ocultar en ambos a la vez</p>
+<p id="xscroll">y hidden - Horizontal mostramos barra. y scroll - Vertical ocultamos barra. Podemos mostrar u ocultar en ambos a la vez</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}p id="hidden">Hidden: Recorta el contenido y no se muestran barras de posición{{co}}/p>
+        {{co}}p id="visible">Visible: Se ve todo sin cortar nada de nada este texto{{co}}/p>
+        {{co}}p id="auto">Auto: Corta con una barra de desplazamiento por la parte inferior. Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente{{co}}/p>
+        {{co}}p id="scroll">Scroll: Corta con dos barra de desplazamiento una por la parte de abajo y otra por la parte derecha{{co}}/p>
+        {{co}}p id="nowrap">Nowrap: Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar{{co}}/p>
+        {{co}}p id="normal">Normal: Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar{{co}}/p>
+        {{co}}p id="pre">Pre: Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar{{co}}/p>
+        {{co}}p id="prewrap">Prewrap: Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea{{co}}/p>
+        {{co}}p id="preline">Preline: Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea{{co}}/p>
+        {{co}}p id="clip">text-overflow-clip: Corta sin símbolos, sin puntos consecutivos{{co}}/p>
+        {{co}}p id="ellipsis">text-overflow-ellipsis: Corta con tres puntos consecutivos{{co}}/p>
+        {{co}}p id="yscroll">x hidden - Horizontal escondemos barra. y scroll - Vertical mostramos barra. Podemos mostrar u ocultar en ambos a la vez{{co}}/p>
+        {{co}}p id="xscroll">y hidden - Horizontal mostramos barra. y scroll - Vertical ocultamos barra. Podemos mostrar u ocultar en ambos a la vez{{co}}/p></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#hidden{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: hidden;</b>       /*Recorta el contenido y no se muestran barras de posición*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#visible{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: visible;</b>      /*No se recorta*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#scroll{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: scroll;</b>       /*Se recorta y se usa las barras de desplazamiento, recortado o no*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#auto{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: auto;</b>         /*Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#nowrap{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: nowrap;</b>    /*Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#normal{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: normal;</b>    /*Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#pre{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre;</b>    /*Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#prewrap{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre-wrap;</b>    /*Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+#preline{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre-line;</b>    /*Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+
+#clip{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    <b>text-overflow: clip;</b>    /*Corta sin símbolos*/
+}
+
+#ellipsis{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    <b>text-overflow: ellipsis;</b>    /*Corta con ...*/
+}
+
+#yscroll{{c}}
+    width: 100px;
+    height: 200px;
+   <b> overflow-x: hidden;
+    overflow-y: scroll;</b>
+}
+
+#xscroll{{c}}
+    width: 100px;
+    height: 200px;
+    <b>overflow-x: scroll;
+    overflow-y: hidden;</b>
+}</pre>
+      </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      </div>
+
+      <div class="tab-pane fade" id="pills-palabrascssextra" role="tabpanel" aria-labelledby="pills-palabrascssextra-tab">
+
+<h3>Tipos</h3>
+<ul class="cuadro">
+    <li>Square (Cuadro)</li>
+</ul>
+<ul class="circulo">
+    <li>Circle (Círculo blanco)</li>
+</ul>
+<ul class="disc">
+    <li>Disc (Círculo negro)</li>
+</ul>
+<ul class="leadingzero">
+    <li>Leading-zero (Círculo negro)</li>
+</ul>
+<ul class="decimal">
+    <li>Decimal (Número)</li>
+</ul>
+<ul class="lowerroman">
+    <li>Lower-roman (Número romano minúscula)</li>
+</ul>
+<ul class="upperroman">
+    <li>Upper-roman (Número romano mayúscula)</li>
+</ul>
+<ul class="lowerlatin">
+    <li>Lower-latin (Letra minúscula)</li>
+</ul>
+<ul class="url">
+    <li>Url (Imagen 10px por 10px)</li>
+</ul>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}ul class="cuadro">
+            {{co}}li>Square (Cuadro){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="circulo">
+            {{co}}li>Circle (Círculo blanco){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="disc">
+            {{co}}li>Disc (Círculo negro){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="leadingzero">
+            {{co}}li>Leading-zero (Círculo negro){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="decimal">
+            {{co}}li>Decimal (Número){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="lowerroman">
+            {{co}}li>Lower-roman (Número romano minúscula){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="upperroman">
+            {{co}}li>Upper-roman (Número romano mayúscula){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="lowerlatin">
+            {{co}}li>Lower-latin (Letra minúscula){{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="url">
+            {{co}}li>Url (Imagen 10px por 10px){{co}}/li>
+        {{co}}/ul></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.cuadro{{c}}
+    <b>list-style: square;</b>
+}
+
+.circulo{{c}}
+    <b>list-style: circle;</b>
+}
+
+.disc{{c}}
+    <b>list-style: disc;</b>
+}
+
+.leadingzero{{c}}
+    <b>list-style: leading-zero;</b>
+}
+
+.decimal{{c}}
+    <b>list-style: decimal;</b>
+}
+
+
+.lowerroman{{c}}
+    <b>list-style: lower-roman;</b>
+}
+
+.upperroman{{c}}
+    <b>list-style: upper-roman;</b>
+}
+
+.lowerroman{{c}}
+    <b>list-style: lower-roman;</b>
+}
+
+.lowerlatin{{c}}
+    <b>list-style: lower-latin;</b>
+}
+
+.url{{c}}
+    <b>list-style-image: url("../../../../../assets/imagenes/p2.jpg");</b>         /*Tamaño: <b>10px por 10px</b>*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+        
+<h3>Posición</h3>  
+<ul class="inside">
+    <li>Inside: Dentro el punto</li>
+</ul>
+<ul class="outside">
+    <li>Outside: Fuera del punto</li>
+</ul> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+        {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+        {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}ul class="inside">
+            {{co}}li>Inside: Dentro el punto{{co}}/li>
+        {{co}}/ul>
+        {{co}}ul class="outside">
+            {{co}}li>Outside: Fuera del punto{{co}}/li>
+        {{co}}/ul></b> 
+    {{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.inside{{c}}
+    list-style: square;
+    l<b>ist-style-position: inside;</b>        /*<b>Dentro el punto</b>*/
+}
+
+.outside{{c}}
+    list-style: square;
+    <b>list-style-position: outside;</b>        /*<b>Fuera del punto</b>*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+        </div>
+  </div>

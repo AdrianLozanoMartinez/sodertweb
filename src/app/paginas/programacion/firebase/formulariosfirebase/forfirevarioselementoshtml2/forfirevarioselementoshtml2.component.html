@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col text-right">
+        <button class="btn btn-primary" routerLink="/unelemento5/nuevo"><i class="fa fa-plus"></i>Agregar (Ir al componente de un elemento)</button>
+    </div>
+</div>
+<table>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Poderes</th>
+            <th scope="col">Vivo</th>
+            <th scope="col">Herramientas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todosloselementos of unomodel2; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{todosloselementos.nombre}}</td>
+            <td>{{todosloselementos.poder}}</td>
+            <td><label *ngIf="todosloselementos.vivo" class="badge badge-success">Vivo</label>
+                <label *ngIf="!todosloselementos.vivo" class="badge badge-danger">Muerto</label>
+            </td>
+            <td><button class="btn btn-info mr-1" [routerLink]="['/unelemento5', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+                <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  <div>
+  <h4 class="alert-heading">Cargando</h4>
+  <p>
+      <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+  </p>
+  <p class="mb-0">Espere por favor</p>
+  </div>
+
+  <div>
+  <h4 class="alert-heading">No hay registro</h4>
+  <p>
+      <i class="fa fa-exclamation fa-3x fa-fw"></i>
+  </p>
+  </div>

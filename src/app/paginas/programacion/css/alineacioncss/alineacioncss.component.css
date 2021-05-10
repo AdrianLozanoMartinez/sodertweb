@@ -1,0 +1,122 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link, button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+#a1{
+    margin: 50px;       /*Con Margin top + Bottom + Left + Right*/
+}
+
+#OtroModo_a1{
+    margin: 50px 20px 5px 10px;       /*Con Margin top + Bottom + Left + Right*/
+}
+
+
+#a2{
+    margin: 0 auto;       /*Con Margin 0 para centrar*/
+    width: 200px;         /*Necesario para centrar, da igual el valor*/
+  }
+
+#a3{
+    margin-right: 50px;       /*Right*/
+}
+
+#a4{
+    margin-left: 50px;       /*Left*/
+}
+
+
+#a5{
+    margin-top: 50px;       /*Top*/
+}
+
+#a6{
+    margin-bottom: 50px;       /*Bottom*/
+}
+
+
+#b1{
+    padding: 50px;       /*Con Padding top + Bottom + Left + Right*/
+}
+
+#OtroModo_b1{
+    padding: 50px 20px 5px 10px;       /*Con Padding top + Bottom + Left + Right*/
+}
+
+
+#b2{
+    padding: 0 auto;       /*Con Padding 0 para centrar*/
+    width: 200px;         /*Necesario para centrar, da igual el valor*/
+  }
+
+#b3{
+    padding-right: 50px;       /*Right*/
+}
+
+#b4{
+    padding-left: 50px;       /*Left*/
+}
+
+
+#b5{
+    padding-top: 50px;       /*Top*/
+}
+
+#b6{
+    padding-bottom: 50px;       /*Bottom*/
+}
+
+.posicionabsoluta{
+    position: absolute;         /*Absolute: Depende de la posicion del padre. USADO especialmente para LEFT y RIGHT*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.posicionestatica{
+    position: static;           /*Static: Se coloca siguientdo los patrones de la web: top, right, left, bottom*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.posicionfixed{
+    position: fixed;           /*Fixed: Siempre mismo sitio aunque se haga scroll.*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.posicionrelative{
+    position: relative;         /*Relative: Se usa top, right, left, bottom, para colocarlo, se va donde digamos*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+
+
+.posicionfloatleft{     
+    float: left;            /*Float: Toma valores como left o right*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.posicionfloatright{     
+    float: right;            /*Float: Toma valores como left o right*/
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+
+

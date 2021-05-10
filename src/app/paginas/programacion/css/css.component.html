@@ -1,0 +1,917 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css-tab" data-toggle="pill" href="#pills-css" role="tab" aria-controls="pills-css" aria-selected="true" style="color: black;">Estructura</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css0-tab" data-toggle="pill" href="#pills-css0" role="tab" aria-controls="pills-css0" aria-selected="false" style="color: black;">Responsive</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css2-tab" data-toggle="pill" href="#pills-css2" role="tab" aria-controls="pills-css2" aria-selected="false" style="color: black;">Heredar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css4-tab" data-toggle="pill" href="#pills-css4" role="tab" aria-controls="pills-css4" aria-selected="false" style="color: black;">Id<br>Class</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css5-tab" data-toggle="pill" href="#pills-css5" role="tab" aria-controls="pills-css5" aria-selected="false" style="color: black;">!Important</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-cssextra-tab" data-toggle="pill" href="#pills-cssextra" role="tab" aria-controls="pills-cssextra" aria-selected="false" style="color: black;">Cuadro <small>limitador o no<br>Con/sin barra</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css6-tab" data-toggle="pill" href="#pills-css6" role="tab" aria-controls="pills-css6" aria-selected="false" style="color: black;">Alineación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css7-tab" data-toggle="pill" href="#pills-css7" role="tab" aria-controls="pills-css7" aria-selected="false" style="color: black;">Color</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css8-tab" data-toggle="pill" href="#pills-css8" role="tab" aria-controls="pills-css8" aria-selected="false" style="color: black;">Bordes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css9-tab" data-toggle="pill" href="#pills-css9" role="tab" aria-controls="pills-css9" aria-selected="false" style="color: black;">Letras</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css10-tab" data-toggle="pill" href="#pills-css10" role="tab" aria-controls="pills-css10" aria-selected="false" style="color: black;">Tablas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css11-tab" data-toggle="pill" href="#pills-css11" role="tab" aria-controls="pills-css11" aria-selected="false" style="color: black;">Imagen</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css12-tab" data-toggle="pill" href="#pills-css12" role="tab" aria-controls="pills-css12" aria-selected="false" style="color: black;">Movimientos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css13-tab" data-toggle="pill" href="#pills-css13" role="tab" aria-controls="pills-css13" aria-selected="false" style="color: black;">Enlaces</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css14-tab" data-toggle="pill" href="#pills-css14" role="tab" aria-controls="pills-css14" aria-selected="false" style="color: black;">Google Fonts</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+
+
+    <div class="tab-pane fade" id="pills-css" role="tabpanel" aria-labelledby="pills-css-tab">
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         <b>{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">      {{co}}!--1º FORMA Archivo CSS APARTE--></b>
+      {{co}}/head>
+      {{co}}body>
+               <b>{{co}}style>                                            {{co}}!--2º FORMA Forma GENERAL. PRIORIDAD sobre ArchivoAparte.css a EXCEPCIÓN de que en el ArchivoAparte.css PONGA !IMPORTANT-->
+                p{{c}}
+                  background-color: aliceblue;
+                }
+            {{co}}/style>
+    
+            {{co}}p style="color:blue">Texo en color{{co}}/p>               {{co}}!--3º FORMA Forma ESPECÍFICO. PRIORIDAD sobre ArchivoAparte.css a EXCEPCIÓN de que en el ArchivoAparte.css PONGA !IMPORTANT--></b>
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text"><b>*{{c}}</b>    /*Aplica a <b>toda la página</b>*/
+  <b>margin: 0px;
+  padding: 0px;
+}
+
+
+body{{c}}</b>                 /*Aplica a <b>todo el cuerpo</b>*/
+  <b>margin: 0px;
+  padding: 0px;
+}
+
+p{{c}}</b>                    /*Aplica a <b>etiqueta html</b>: small o h1 o pre o ...*/
+  <b>margin: 0px;
+  padding: 0px;
+}
+
+#nombre{{c}}</b>              /*<b>id</b> único en toda la página.html -> Usado en el html como <u>div id="nombre"></u>*/
+  <b>margin: 0px;
+  padding: 0px;
+}
+
+.nombre{{c}}</b>              /*<b>class</b> se puede repetir en toda la página.html -> Usado en el html como <u>div class="nombre"></u>*/
+  <b>margin: 0px;
+  padding: 0px;
+}</b>
+
+<u>Versión <b>reducida</b></u>
+<b>body{{c}}
+background: green url("../../../../../assets/imagenes/01.jpg") repeat-x left;</b>     /*En la misma fila pone todo sobre el background (color, dirección imagen, repetir, posición)*/
+<b>}</b></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-css0" role="tabpanel" aria-labelledby="pills-css0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+                INFORMACIÓN VISIBLE 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text"><b>@media screen and (min-width: 480px){{c}}   /*Con un mínimo de 480px de pantalla*/</b>
+  body{{c}}
+      background-color: red;            /*Se pone en rojo el fondo*/
+  }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-css2" role="tabpanel" aria-labelledby="pills-css2-tab">
+        <hr>
+        <app-padrehijo></app-padrehijo>
+    </div>
+
+    <div class="tab-pane fade" id="pills-css4" role="tabpanel" aria-labelledby="pills-css4-tab">
+        <hr>
+        <app-idclass></app-idclass>
+    </div>
+
+    <div class="tab-pane fade" id="pills-css5" role="tabpanel" aria-labelledby="pills-css5-tab">
+
+        <div class="fondoAzul">Se ve fondo azul aunque haya otro fondo al tener !important</div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+          <b>{{co}}div class="fondoAzul">Se ve fondo azul aunque haya otro fondo al tener !important{{co}}/div></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">.fondoAzul{{c}}
+  background: lightblue <b>!important</b>;
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-cssextra" role="tabpanel" aria-labelledby="pills-cssextra-tab">
+
+        <p id="hidden">Hidden: Recorta el contenido y no se muestran barras de posición</p>
+        <p id="visible">Visible: Se ve todo sin cortar nada de nada este texto</p>
+        <p id="auto">Auto: Corta con una barra de desplazamiento por la parte inferior. Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente</p>
+        <p id="scroll">Scroll: Corta con dos barra de desplazamiento una por la parte de abajo y otra por la parte derecha</p>
+        <p id="nowrap">Nowrap: Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar</p>
+        <p id="normal">Normal: Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar</p>
+        <p id="pre">Pre: Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar</p>
+        <p id="prewrap">Prewrap: Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea</p>
+        <p id="preline">Preline: Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea</p>
+        <p id="clip">text-overflow-clip: Corta sin símbolos, sin puntos consecutivos</p>
+        <p id="ellipsis">text-overflow-ellipsis: Corta con tres puntos consecutivos</p>
+        <p id="yscroll">x hidden - Horizontal escondemos barra. y scroll - Vertical mostramos barra. Podemos mostrar u ocultar en ambos a la vez</p>
+        <p id="xscroll">y hidden - Horizontal mostramos barra. y scroll - Vertical ocultamos barra. Podemos mostrar u ocultar en ambos a la vez</p>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p id="hidden">Hidden: Recorta el contenido y no se muestran barras de posición{{co}}/p>
+            {{co}}p id="visible">Visible: Se ve todo sin cortar nada de nada este texto{{co}}/p>
+            {{co}}p id="auto">Auto: Corta con una barra de desplazamiento por la parte inferior. Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente{{co}}/p>
+            {{co}}p id="scroll">Scroll: Corta con dos barra de desplazamiento una por la parte de abajo y otra por la parte derecha{{co}}/p>
+            {{co}}p id="nowrap">Nowrap: Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar{{co}}/p>
+            {{co}}p id="normal">Normal: Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar{{co}}/p>
+            {{co}}p id="pre">Pre: Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar{{co}}/p>
+            {{co}}p id="prewrap">Prewrap: Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea{{co}}/p>
+            {{co}}p id="preline">Preline: Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea{{co}}/p>
+            {{co}}p id="clip">text-overflow-clip: Corta sin símbolos, sin puntos consecutivos{{co}}/p>
+            {{co}}p id="ellipsis">text-overflow-ellipsis: Corta con tres puntos consecutivos{{co}}/p>
+            {{co}}p id="yscroll">x hidden - Horizontal escondemos barra. y scroll - Vertical mostramos barra. Podemos mostrar u ocultar en ambos a la vez{{co}}/p>
+            {{co}}p id="xscroll">y hidden - Horizontal mostramos barra. y scroll - Vertical ocultamos barra. Podemos mostrar u ocultar en ambos a la vez{{co}}/p></b> 
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">#hidden{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: hidden;</b>       /*Recorta el contenido y no se muestran barras de posición*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#visible{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: visible;</b>      /*No se recorta*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#scroll{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: scroll;</b>       /*Se recorta y se usa las barras de desplazamiento, recortado o no*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#auto{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    <b>overflow: auto;</b>         /*Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#nowrap{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: nowrap;</b>    /*Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#normal{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: normal;</b>    /*Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#pre{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre;</b>        /*Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#prewrap{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre-wrap;</b>   /*Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+#preline{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    <b>white-space: pre-line;</b>   /*Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+
+#clip{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    <b>text-overflow: clip;</b>    /*Corta sin símbolos*/
+}
+
+#ellipsis{{c}}
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    <b>text-overflow: ellipsis;</b>    /*Corta con ...*/
+}
+
+#yscroll{{c}}
+    width: 100px;
+    height: 200px;
+    <b> overflow-x: hidden;
+    overflow-y: scroll;</b>
+}
+
+#xscroll{{c}}
+    width: 100px;
+    height: 200px;
+    <b>overflow-x: scroll;
+    overflow-y: hidden;</b>
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-css6" role="tabpanel" aria-labelledby="pills-css6-tab">
+        <hr>
+        <app-alineacioncss></app-alineacioncss>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-css7" role="tabpanel" aria-labelledby="pills-css7-tab">
+        <hr>
+        <app-colorcss></app-colorcss>
+    </div>
+
+    <div class="tab-pane fade" id="pills-css8" role="tabpanel" aria-labelledby="pills-css8-tab">
+        <hr>
+        <app-cssborde></app-cssborde>
+    </div>
+
+    <div class="tab-pane fade" id="pills-css9" role="tabpanel" aria-labelledby="pills-css9-tab">
+        <hr>
+        <app-palabrascss></app-palabrascss>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-css10" role="tabpanel" aria-labelledby="pills-css10-tab">
+
+        <table>
+            <!--Responsive-Hijo/Padre-->
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <tr>
+                <td>Tabla</td>
+                <td>Tabla</td>
+                <td>Tabla</td>
+            </tr>
+            <div>
+                <!--Responsive (Se crea dentro de un div)-->
+                <table>
+                    <tr>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                    </tr>
+                    <tr>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                    </tr>
+                    <tr>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                        <td>Tabla</td>
+                    </tr>
+                </table>
+            </div>
+        </table>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}table>                   {{co}}!--Responsive-Hijo/Padre-->
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+{{co}}tr>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+    {{co}}td>Tabla{{co}}/td>
+{{co}}/tr>
+  {{co}}div>                   {{co}}!--Responsive (Se crea dentro de un div)-->
+      {{co}}table>
+          {{co}}tr>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+          {{co}}/tr>
+          {{co}}tr>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+          {{co}}/tr>
+          {{co}}tr>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+              {{co}}td>Tabla{{co}}/td>
+          {{co}}/tr>
+      {{co}}/table>
+  {{co}}/div>
+{{co}}/table></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">table, td{{c}}                          /*Responsive-Hijo/Padre*/
+border-collapse: <b>collapse</b>;          /*Que se <b>una los marcos</b>*/
+}
+
+tr<b>:hover</b>{{c}}                           /*Al <b>pasar el ratón</b>. <b>Pisa a nth-child</b> (se <b>ilumine alternadamente</b>)*/
+    background-color: aqua;
+}
+
+tr<b>:nth-child(odd)</b>{{c}}                  /*Hijos. <b>Odd Impares. Even: par</b>*/
+    background-color: chartreuse;
+}
+
+div{{c}}                                /*Tabla <b>responsive</b> (Se crea <b>dentro de un div</b>)*/
+    <b>overflow-x:auto</b>;                /*<b>Barra de desplazamiento</b> si no cabe en toda la pagina*/
+}
+
+<b>div>table</b>{{c}}                          /*Si la <b>tabla es menor</b> (tabla{{w}}), es decir, menor que el cuadro div, <b>que se haga lo de dentro</b>*/
+    width: 100%;
+    border-collapse: <b>collapse</b>;      /*Que se <b>una los marcos</b>*/
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-css11" role="tabpanel" aria-labelledby="pills-css11-tab">
+        <hr>
+        <app-imagencss></app-imagencss>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-css12" role="tabpanel" aria-labelledby="pills-css12-tab">
+        <hr>
+        <app-movimientoscss></app-movimientoscss>
+    </div>
+
+    <div class="tab-pane fade" id="pills-css13" role="tabpanel" aria-labelledby="pills-css13-tab">
+
+        <h3>Cambia de color</h3>
+        <a id="color" href="http://www.google.com">Link cambia de color al pasar el ratón por encima</a>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+  {{co}}meta charset="UTF-8">
+   {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {{co}}title>Título de pestaña{{co}}/title>
+   {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}a id="color" href="http://www.google.com">Link cambia de color al pasar el ratón por encima{{co}}/a></b> 
+{{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">/*MANTENER ORDEN DE EFECTOS*/
+#color<b>:link</b>{{c}}        /*Sin visitar*/
+    color:black;
+}
+#color<b>:visited</b>{{c}}     /*Visitado*/
+    color: blue;
+}
+#color<b>:hover</b>{{c}}       /*Ratón encima del link*/
+    color: green;
+}
+#color<b>:active</b>{{c}}      /*Seleccionado*/
+    color:red;
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <br><br>
+        <h3>Quitar raya</h3>
+        <a id="noLinea" href="https://www.google.com">Link sin raya</a>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body> 
+      <b>{{co}}a id="noLinea"href="https://www.google.com">Link sin raya{{co}}/a></b> 
+{{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">#noLinea{{c}}
+    <b>text-decoration: none;</b>      /*No aparece la raya de abajo al pasar ratón*/
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-css14" role="tabpanel" aria-labelledby="pills-css14-tab">
+
+        <div id="descargada">
+            <p>Fuente descargada</p>
+        </div>
+        <div id="online">
+            <p>Fuente online</p>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Html</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+  {{co}}meta charset="UTF-8">
+   {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {{co}}title>Título de pestaña{{co}}/title>
+   {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+      <b>{{co}}div id="descargada">{{co}}p>Fuente descargada{{co}}/p>{{co}}/div>
+      {{co}}div id="online">{{co}}p>Fuente online{{co}}/p>{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-info m-3">
+                <div class="card-header" style="text-align: center;">
+                    <h4><b>Css</b></h4>
+                </div>
+                <div class="card-body">
+                    <pre class="card-text">@font-face{{c}}
+    <b>font-family: FuenteEspecial;</b>                                            /*Ponemos un nombre que luego elegimos a lo que queramos aplicar*/
+    <b>src: url</b>("../../../../libreria/FuenteGoogle/Roboto/Roboto-Black.ttf");  /*Dirección de la fuente descargada*/
+}
+#descargada{{c}}
+    <b>font-family: Fuente especial; </b>                                          /*Nombre definido arriba para ser usado mediante la id o class*/
+}
+
+#online{{c}}
+    <b>font-family: 'Comic Neue', cursive;</b>
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+</div>
+<b id="azul" style="margin-left: 25%;">Web de Ayuda:   </b><abbr title="Manual Html"><b><a target="_black" href="https://www.w3schools.com/css/default.asp">W3schools</a></b></abbr>
+<img src="../../../../assets/imagenes/css.png" style="width: 300px;">
+<button class="btn btn-info m-2" [routerLink]="['/programacion']">Atras</button>
+
+
+<br><br>

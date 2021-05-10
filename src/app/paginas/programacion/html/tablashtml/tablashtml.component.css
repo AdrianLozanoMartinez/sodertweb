@@ -1,0 +1,10 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #fc5c00 !important;
+    color: white !important;
+}
+
+/* table, th, td, tr{
+    border: black 1px solid;
+} */

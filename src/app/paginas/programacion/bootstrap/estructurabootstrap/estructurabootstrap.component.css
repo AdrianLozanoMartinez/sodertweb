@@ -1,0 +1,37 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link, button{
+    background: #9400a1 !important;
+    color: white !important;
+}
+
+
+
+#lila{
+    color: #9400a1;
+  }
+  
+  a{
+    color: black;
+  }
+
+#lila2{
+  background-color: #9400a1;
+}
+
+.col{
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{
+  padding:0;
+  margin:0;
+}
+
+.row{
+    background: lightblue;
+    border: 5px red;
+    height: 100px;
+}

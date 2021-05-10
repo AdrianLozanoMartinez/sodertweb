@@ -1,0 +1,97 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-promesatype-tab" data-toggle="pill" href="#pills-promesatype" role="tab" aria-controls="pills-promesatype" aria-selected="true" style="color: black;">Configurar<br>tsconfig.json</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-promesatype8-tab" data-toggle="pill" href="#pills-promesatype8" role="tab" aria-controls="pills-promesatype8" aria-selected="false" style="color: black;">Con tiempo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-promesatype0-tab" data-toggle="pill" href="#pills-promesatype0" role="tab" aria-controls="pills-promesatype0" aria-selected="false" style="color: black;">Correcto<br>Error</a>
+    </li>
+    <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+     <div class="tab-pane fade show active" id="pills-promesatype" role="tabpanel" aria-labelledby="pills-promesatype-tab">
+         
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><small>"compilerOptions": {{c}}
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    /* Basic Options */
+    // "incremental": true,                         
+    <b>"target": "es6",</b> </small> //Cambiamos al es6 para que acepte las promesas                             
+    <small>.....    //Y el resto de código</small></pre>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+    <div class="tab-pane fade" id="pills-promesatype8" role="tabpanel" aria-labelledby="pills-promesatype8-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">console.log('Inicio');
+
+const nombre_promesa <b>= new Promise (( resolve, reject )</b> => {{c}}
+
+    setTimeout(() => {{c}}
+        <b>resolve</b> ('Se terminó el timeout, en 1 seg');  //O usamos <b>reject</b>. Acaba después del mensaje Fin
+    }, 1000);
+
+});
+
+
+nombre_promesa<b>.then (mensaje_No_Error => console.log( mensaje_No_Error ))
+            .catch (mensaje_error => console.log( mensaje_error ));</b>
+  
+
+    console.log('Fin');</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-promesatype0" role="tabpanel" aria-labelledby="pills-promesatype0-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">const <b>nombre_funcion = ( nombre_parametro: number ): Promise{{co}}number></b> => {{c}}  //Definimos que es una promesa del tipo que usemos, en este caso estamos trabajando en el catch y then con números, por ello es number
+
+
+      <b>let variable_inicial = 1000;</b>                                   //Valor <b>inicial</b> que <b>comparamos</b> con el valor <b>introducido</b> (nombre_parametro)
+  
+
+      return <b>new Promise ( (resolve, reject ) => {{c}}</b>               //Creamos promesa para usar then/catch y función de flechas para coger valores sin interferencias
+          
+
+          if ( <b>nombre_parametro > variable_inicial</b> ){{c}}            //Si el valor introducido es mayor que el inicial, entra en el if
+              <b>reject</b> ('No hay suficientes fondo');                   //Devuelve el mensaje cuando es llamado por el <b>.catch</b>
+          }else{{c}}                                                        //Si el valor introducido es menor o igual que el inicial, entra en el else
+              // <b>variable_inicial = variable_inicial - nombre_parametro;</b>    //Opción compleja
+                 <b>variable_inicial -= nombre_parametro;</b>               //Opción reducida (ambas hacen lo mismo)
+                 <b>resolve (variable_inicial);</b>                         //Devuelve el resultado de la resta para mostrarlo cuando es llamado por el <b>.then</b>                   
+          }
+
+
+      });
+  }
+  
+  nombre_funcion ( <b>200</b> )                                                                        //Ponemos el precio que <b>entrará como nombre_parametro</b> en el if o else
+                        <b>.then ( correcto => console.log(`Me queda ${{c}} correcto }`))</b>        //Resultado <b>.then</b> -> <b>correcto</b> (U otro nombre), manda mensaje con el resultado definido en el <b>else</b>
+                                                                                                    //Al poner el <b>tipo</b> arriba de la <b>promesa</b>, nos permite elegir <b>funciones</b> a ejecutar <b>en las variables</b>
+                        //<b>.catch ( error => console.warn( error ))</b>                               //Resultado <b>.catch</b> -> <b>error</b> (U otro nombre), manda mensaje error definido en el <b>if</b>
+                        <b>.catch ( console.warn)</b>                               //Resultado <b>.catch</b> -> <b>error</b> (U otro nombre), manda mensaje error definido en el <b>if</b></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

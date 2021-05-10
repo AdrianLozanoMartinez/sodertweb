@@ -1,0 +1,54 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link, button{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+
+.cuadro-principal-container-PADRE0{/*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;/*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO0{/*está dentro de cuadro-principal-container-PADRE*/
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    display: block;/*Hace que el comportamiento del elemento sea como un bloque*/
+}
+
+
+
+.cuadro-principal-container-PADRE1{/*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;/*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO1{/*está dentro de cuadro-principal-container-PADRE*/
+    background-color: rgb(94, 255, 0);
+    width: 100px;
+    height: 150px;
+    display: inline;/*El elemento se renderizará en línea con otros elementos*/
+}
+
+
+
+.cuadro-principal-container-PADRE{/*Dentro de él se encuentra cuadro-dentro-de-principal-HIJO*/
+    text-align: center;/*Alinea lo que hay en su iterior, al hijo*/
+}
+.cuadro-dentro-de-principal-HIJO{/*está dentro de cuadro-principal-container-PADRE*/
+    background-color: rgb(0, 174, 255);
+    width: 100px;
+    height: 150px;
+    display: inline-block;/*El elemento tendrá un comportamiento mezcla entre los dos anteriores. Se centra*/
+}
+
+
+
+/*ORDEN PARA QUE FUNCIONE*/
+div>p{                  /*Si el parrafo esta dentro del div. Solo a sus hijos directos - Párrafo Padre*/
+    color:yellow;
+}
+div~p{                  /*Todos los párrafos restantes - Párrafos restantes*/
+    color: green;
+}
+div+p{                  /*Despues del div el párrafo continuo (mismo padre), los siguientes no - Párrafo Hijo*/
+    color:red;
+}

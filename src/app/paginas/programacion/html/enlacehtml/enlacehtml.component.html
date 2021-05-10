@@ -1,0 +1,143 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-htmlenlace-tab" data-toggle="pill" href="#pills-htmlenlace" role="tab" aria-controls="pills-htmlenlace" aria-selected="true" style="color: black;">Ir a Web</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-htmlenlace0-tab" data-toggle="pill" href="#pills-htmlenlace0" role="tab" aria-controls="pills-htmlenlace0" aria-selected="false" style="color: black;">Ir punto concreto<br>dentro de la página</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-htmlenlace1-tab" data-toggle="pill" href="#pills-htmlenlace1" role="tab" aria-controls="pills-htmlenlace1" aria-selected="false" style="color: black;">Ir punto concreto<br>en otra página</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-htmlenlaceConsejo-tab" data-toggle="pill" href="#pills-htmlenlaceConsejo" role="tab" aria-controls="pills-htmlenlaceConsejo" aria-selected="false" style="color: black;">Consejo</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade show active" id="pills-htmlenlace" role="tabpanel" aria-labelledby="pills-htmlenlace-tab">
+
+        <a href= "https://www.google.com" title="Nombre opcional" target="_top">Enlace</a>
+        <!--"./misma_carpeta.html o ../otra_carpeta.html" Target: Comportamiento del link:
+                                                                _blank: Abre en una nueva pestaña
+                                                                _self:  Abre en la misma página
+                                                                _parent: Abre en el marco primario
+                                                                _top: Abre en el cuerpo completo de la ventana-->
+
+         <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}a href= "https://www.google.com" title="Nombre opcional" target="_top">Enlace{{co}}/a>
+            {{co}}!--"./misma_carpeta.html o ../otra_carpeta.html"     Target: Comportamiento del link:
+                                                                            _blank: Abre en una nueva pestaña
+                                                                            _self:  Abre en la misma página
+                                                                            _parent: Abre en el marco primario
+                                                                            _top: Abre en el cuerpo completo de la ventana--></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div>  
+ 
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-htmlenlace0" role="tabpanel" aria-labelledby="pills-htmlenlace0-tab">
+
+<a href="#Ir_a">Este enlace se pone en la parte superior o viceversas y va a la parte de abajo dentro de esta web</a>  
+<br><br><br><!--CONTENIDO-->
+<a id="Ir_a">Este enlace u otra etiqueta se pone en la parte inferior o viceversas y va al pulsar el enlace de arriba</a>
+<h1 id="Ir_a">Este título u otra etiqueta se pone en la parte inferior o viceversas y va al pulsar el enlace de arriba</h1>
+<a name="Ir_a">Name no se suele usar aquí, pero es otra opción. Este enlace u otra etiqueta se pone en la parte inferior o viceversas y va al pulsar el enlace de arriba</a>
+
+         <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}a href="#Ir_a">Este enlace se pone en la parte superior o viceversas y va a la parte de abajo dentro de esta web{{co}}/a>
+
+        !--CONTENIDO-->
+
+        {{co}}a id="Ir_a">Este enlace u otra etiqueta se pone en la parte inferior o viceversas y va al pulsar el enlace de arriba{{co}}/a>
+        {{co}}h1 id="Ir_a">Este título u otra etiqueta se pone en la parte inferior o viceversas y va al pulsar el enlace de arriba{{co}}/h1></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-htmlenlace1" role="tabpanel" aria-labelledby="pills-htmlenlace1-tab">
+
+<!--Una web-->
+<a href="./otraWeb.html#Ir_a">Este enlace se pone en la parte superior de una web y va a la parte de abajo de otra web</a>
+<!--Otra web-->
+<a id="Ir_a">Este enlace u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página</a>
+<h1 id="Ir_a">Este título u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página</h1>
+<a name="Ir_a">Name no se suele usar aquí, pero es otra opción. Este enlace u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página</a>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>
+        {{co}}!--Una web-->
+        {{co}}a href="./otraWeb.html#Ir_a">Este enlace se pone en la parte superior de una web y va a la parte de abajo de otra web{{co}}/a>
+
+
+        {{co}}!--Otra web-->
+        {{co}}a id="Ir_a">Este enlace u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página{{co}}/a>
+        {{co}}h1 id="Ir_a">Este título u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página{{co}}/h1>
+        {{co}}a name="Ir_a">Name no se suele usar aquí, pero es otra opción. Este enlace u otra etiqueta se pone en la parte inferior o viceversas de la otra página y va al pulsar el enlace de arriba a la otra página{{co}}/a></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+
+</div>
+
+    <div class="tab-pane fade" id="pills-htmlenlaceConsejo" role="tabpanel" aria-labelledby="pills-htmlenlaceConsejo-tab">
+<ul>
+    <li>Mantener si escribe en mayúscula o minúscula</li>
+    <li>Evitar caracteres extraños</li>
+    <li>Sólo alfabeto inglés, números, -, _</li>
+    <li>No poner direcciones locales (C:/documentos/pag...) sino web (www.google.es)</li>
+</ul>
+
+    </div>
+
+
+
+  
+
+</div>
+
+
+

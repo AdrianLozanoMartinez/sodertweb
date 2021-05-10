@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sodertweb"
+  },
+  "targets": {
+    "sodertweb": {
+      "hosting": {
+        "Sodert": [
+          "sodertweb"
+        ]
+      }
+    }
+  }
+}

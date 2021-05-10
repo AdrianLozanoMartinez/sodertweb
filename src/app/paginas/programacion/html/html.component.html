@@ -1,0 +1,253 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html-tab" data-toggle="pill" href="#pills-html" role="tab" aria-controls="pills-html" aria-selected="true" style="color: black;">Estructura<br>básica</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html0-tab" data-toggle="pill" href="#pills-html0" role="tab" aria-controls="pills-html0" aria-selected="false" style="color: black;">Dividir<br>web</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html1-tab" data-toggle="pill" href="#pills-html1" role="tab" aria-controls="pills-html1" aria-selected="false" style="color: black;">Refresco<br>web</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html2-tab" data-toggle="pill" href="#pills-html2" role="tab" aria-controls="pills-html2" aria-selected="false" style="color: black;">Salto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html3-tab" data-toggle="pill" href="#pills-html3" role="tab" aria-controls="pills-html3" aria-selected="false" style="color: black;">Línea de<br>Separación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html4-tab" data-toggle="pill" href="#pills-html4" role="tab" aria-controls="pills-html4" aria-selected="false" style="color: black;">Letras</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html6-tab" data-toggle="pill" href="#pills-html6" role="tab" aria-controls="pills-html6" aria-selected="false" style="color: black;">Tablas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html7-tab" data-toggle="pill" href="#pills-html7" role="tab" aria-controls="pills-html7" aria-selected="false" style="color: black;">Imagen</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html8-tab" data-toggle="pill" href="#pills-html8" role="tab" aria-controls="pills-html8" aria-selected="false" style="color: black;">Botón</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html9-tab" data-toggle="pill" href="#pills-html9" role="tab" aria-controls="pills-html9" aria-selected="false" style="color: black;">Enlace</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html10-tab" data-toggle="pill" href="#pills-html10" role="tab" aria-controls="pills-html10" aria-selected="false" style="color: black;">Iframe</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-html11-tab" data-toggle="pill" href="#pills-html11" role="tab" aria-controls="pills-html11" aria-selected="false" style="color: black;">Formulario</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-html" role="tabpanel" aria-labelledby="pills-html-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+
+                <div class="card-body">
+                    <pre class="card-text"><b>{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+        {{co}}head></b>                                                                                        {{co}}!--Abre cabecera, NO SE VE en el HTML--> 
+            <b>{{co}}meta charset="UTF-8"></b>                                                                    {{co}}!--ESPAÑOL, reconoce ñ y acentos-->
+            <b>{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0"></b>                    {{co}}!--Como ADAPTARSE a moviles y tablets-->
+            <b>{{co}}title></b>Título en pestaña de la web<b>{{co}}/title></b>
+            <b>{{co}}link rel="icon" type="image/x-icon" href="favicon.ico"></b>                                  {{co}}!--Icono de españa. 16×16 y 32×32 píxeles-->                                                 <!--Título de la pestaña de la web-->
+        <b>{{co}}/head></b>                                                                                       {{co}}!--Cierra cabecera-->
+        <b>{{co}}body></b>                                                                                        {{co}}!--Abre cuerpo, NO SE VE en el HTML-->
+            INFORMACIÓN VISIBLE 
+        <b>{{co}}/body></b>                                                                                       {{co}}!--Abre cuerpo, NO SE VE en el HTML-->
+    <b>{{co}}/html></b></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-html0" role="tabpanel" aria-labelledby="pills-html0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+      {{co}}/head>
+      {{co}}body>
+        <b>{{co}}div></b>                                                                                       {{co}}!--Divide en partes-->
+            INFORMACIÓN A RELLENAR
+        <b>{{co}}/div></b>
+        <b>{{co}}section></b>                                                                                   {{co}}!--Divide en partes-->
+            INFORMACIÓN A RELLENAR
+        <b>{{co}}/section></b>
+        <b>{{co}}article></b>                                                                                   {{co}}!--Divide en partes-->
+            INFORMACIÓN A RELLENAR
+        <b>{{co}}/article>
+        {{co}}p> </b>                                                                                        {{co}}!--Divide en partes más pequeñas-->
+            <b>{{co}}span></b>INFORMACIÓN A RELLENAR<b>{{co}}/span>
+        {{co}}/p></b>
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-html1" role="tabpanel" aria-labelledby="pills-html1-tab">
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+      {{co}}head> 
+        {{co}}meta charset="UTF-8">
+         {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {{co}}title>Título de pestaña{{co}}/title>
+         <b>{{co}}meta http-equiv="refresh" content="PonemosElTiempoEnNúmero;https://www.direccion.com"></b>    {{co}}!--REFRESCA la PÁGINA en número de segundos, Si ponemos web nos lleva a la web -->
+      {{co}}/head>
+      {{co}}body>
+               INFORMACIÓN VISIBLE
+      {{co}}/body>
+    {{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-html2" role="tabpanel" aria-labelledby="pills-html2-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}br></b>
+    {{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-html3" role="tabpanel" aria-labelledby="pills-html3-tab">
+
+        <hr>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}hr></b>
+    {{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-html4" role="tabpanel" aria-labelledby="pills-html4-tab">
+        <hr>
+        <app-letrashtml></app-letrashtml>
+    </div>
+
+    <div class="tab-pane fade" id="pills-html6" role="tabpanel" aria-labelledby="pills-html6-tab">
+        <hr>
+        <app-tablashtml></app-tablashtml>
+    </div>
+
+    <div class="tab-pane fade" id="pills-html7" role="tabpanel" aria-labelledby="pills-html7-tab">
+        <hr>
+        <app-imagen></app-imagen>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-html8" role="tabpanel" aria-labelledby="pills-html8-tab">
+        <hr>
+        <app-botonhtml></app-botonhtml>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-html9" role="tabpanel" aria-labelledby="pills-html9-tab">
+        <hr>
+        <app-enlacehtml></app-enlacehtml>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-html10" role="tabpanel" aria-labelledby="pills-html10-tab">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WMTzARz7Lus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="50%" height="300"></iframe>
+        <!--Cuadro con web (El puesto es insertado de youtube, por eso es tan largo y con tantos detalles)-->
+        <iframe src="./archivo.html o www.web.com" name="frame" width="50%" height="300"></iframe>
+        <!--Cuadro con web
+                                                        width: Ancho y height: Largo-->
+        <br>
+        <a href="https://as.com" target="frame"><button>Cambiar frame/web</button></a>
+        <!--Botón cambia web anterior por esta web, no vuelve a la anterior-->
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}iframe width="560" height="315" src="https://www.youtube.com/embed/WMTzARz7Lus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="50%" height="300">{{co}}/iframe> {{co}}!--Cuadro con web (El puesto es insertado de youtube, por eso es tan largo y con tantos detalles)-->
+        {{co}}iframe src="./archivo.html o www.web.com" name="frame" width="50%" height="300">{{co}}/iframe>  {{co}}!--Cuadro con web
+                                                                width: Ancho y height: Largo-->
+        {{co}}br>
+        {{co}}a href="https://as.com" target="frame">{{co}}button>Cambiar frame/web{{co}}/button>{{co}}/a>  {{co}}!--Botón cambia web anterior por esta web, no vuelve a la anterior--></b>
+    {{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-html11" role="tabpanel" aria-labelledby="pills-html11-tab">
+        <hr>
+        <app-formulariohtml></app-formulariohtml>
+    </div>
+
+
+</div>
+<br>
+<br>
+<br>
+<b id="naranja" style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Página para crear pattern (Contraseña, teléfono, correo, otros)"><b><a target="_black" href="https://regexr.com/">Regexr</a></b></abbr> -
+<abbr title="Manual Html"><b><a target="_black" href="https://www.w3schools.com/html/default.asp">W3schools</a></b></abbr>
+<img src="../../../../assets/imagenes/html.png" style="width: 300px;">
+<button class="btn btn-warning m-2" [routerLink]="['/programacion']">Atras</button>
+<br>
+<br>
+<br>

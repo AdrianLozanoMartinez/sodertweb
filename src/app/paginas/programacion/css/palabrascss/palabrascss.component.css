@@ -1,0 +1,362 @@
+/*Cambiar de color del botón activo*/
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #3abcf8 !important;
+    color: white !important;
+}
+
+#color{
+    color: rgb(238, 0, 186);
+}
+
+#sombra{
+    color: green;
+    text-shadow: 5px 10px blue;  
+        /*Horizontal Vertical*/        
+}
+
+#sombra2{
+    color: green;
+    text-shadow: 20px 15px blue;   
+        /*Horizontal Vertical*/         
+}
+
+#sombra3{
+    color: green;
+    text-shadow: 15px 5px 10px blue;   
+        /*Horizontal Vertical ?*/         
+}
+
+
+#start{
+    text-align: start;
+}
+
+#top{
+    text-align: top;
+}
+
+#right{
+    text-align: right;
+}
+
+#left{
+    text-align: left;
+}
+
+#justify{
+    text-align: justify;
+}
+
+#center{
+    text-align: center;
+}
+
+#bottom{
+    text-align: bottom;
+}
+
+#end{
+    text-align: end;
+}
+
+
+#sangrado{
+    text-indent: 25px;       
+}
+
+#sangradonegativo{
+    text-indent: -5px;      
+}
+
+
+
+
+#letrahori{
+    letter-spacing: 10px;
+}
+
+#letrahorinega{
+    letter-spacing: -2px;
+}
+
+#letraverti{
+    line-height: 50px;
+}
+
+#pala{
+    word-spacing: 10px;
+}
+
+#palanega{
+    word-spacing: -10px;
+}
+
+
+
+#primeramayuscula{
+    text-transform: capitalize;
+}
+
+#mayuscula{
+    text-transform: uppercase;
+}
+
+#minuscula{
+    text-transform: lowercase;
+}
+
+
+
+#numeropeque{
+    font-size: 5px; 
+}
+#numerogrande{
+    font-size: 20px; 
+}
+
+#xx-small{
+    font-size: xx-small; 
+}
+#x-small{
+    font-size: x-small; 
+}
+#smaller{
+    font-size: smaller; 
+}
+#small{
+    font-size: small; 
+}
+
+#medium{
+    font-size: medium;
+}
+
+#large{
+    font-size: large; 
+}
+#larger{
+    font-size: larger; 
+}
+#x-large{
+    font-size: x-large; 
+}
+#xx-large{
+    font-size: xx-large; 
+}
+
+#initial{
+    font-size: initial; 
+}
+#inherit{
+    font-size: inherit; 
+}
+#unset{
+    font-size: unset; 
+}
+
+#numero{
+    font-size: 5px; 
+}
+
+#numero2{
+    font-size: 5em; 
+}
+
+#tipo{
+   font-family: comic-sans;
+}
+
+#tipo2{
+    font-family: Arial, Helvetica, comic-sans;
+}
+
+
+#normal{
+    font-style: normal;     
+}
+
+#italic{
+     font-style: italic;    /*Cursiva*/
+}
+
+#oblique{
+    font-style: oblique; 
+}
+
+#initial{
+    font-style: initial; 
+}
+
+#inherit{
+    font-style: inherit; 
+}
+
+#unset{
+    font-style: unset; 
+}
+
+#bordes{
+    border-style: double;
+    border-top-style: dashed;
+    border-width: 5px 12px 1px 50px;
+    border-color: red blue darkcyan lightblue;
+    background-color: rebeccapurple;
+    border-radius: 50px 4%;
+    width: 300px;/*Auto, inherit como en margin. También en Height*/
+}
+
+
+
+
+#hidden{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: hidden;       /*Recorta el contenido y no se muestran barras de posición*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#visible{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: visible;      /*No se recorta*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#scroll{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;       /*Se recorta y se usa las barras de desplazamiento, recortado o no*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+#auto{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: auto;         /*Depende de los navegadores pueden proveen barras de desplazamiento si hay contenido excedente*/
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#nowrap{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap;    /*Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#normal{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: normal;    /*Igual que em NOWRAP pero sin suprimir saltos de línea de origen, solo como espacio en blanco. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#pre{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: pre;    /*Lineas son solo rotas en caracteres de saltos de linea y br. Deben ir juntos con overflow para recortar*/
+    text-overflow: clip;
+}
+
+#prewrap{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: pre-wrap;    /*Lineas son rotas en caracteres de saltos de linea, br y agrega saltos necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+#preline{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: pre-line;    /*Reduce espacios en blanco. Lineas son rotas en caracteres de salto de linea, br y los necesarios para rellenar los cuadros de linea*/
+    text-overflow: clip;
+}
+
+
+#clip{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    text-overflow: clip;    /*Corta sin símbolos*/
+}
+
+#ellipsis{
+    width: 200px;           /*Si ocupa más del ancho del width se corta a través de overflow, white-space y text-overflow*/
+    overflow: scroll;
+    white-space: nowrap; 
+    text-overflow: ellipsis;    /*Corta con ...*/
+}
+
+#yscroll{
+    width: 100px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#xscroll{
+    width: 100px;
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+
+
+
+.cuadro{
+    list-style: square;
+}
+
+.circulo{
+    list-style: circle;
+}
+
+.disc{
+    list-style: disc;
+}
+
+.leadingzero{
+    list-style: leading-zero;
+}
+
+.decimal{
+    list-style: decimal;
+}
+
+
+.lowerroman{
+    list-style: lower-roman;
+}
+
+.upperroman{
+    list-style: upper-roman;
+}
+
+.lowerroman{
+    list-style: lower-roman;
+}
+
+.lowerlatin{
+    list-style: lower-latin;
+}
+
+.url{
+    list-style-image: url("../../../../../assets/imagenes/p2.jpg");         /*Tamaño: 10px por 10px*/
+}
+
+
+
+
+
+.inside{
+    list-style: square;
+    list-style-position: inside;        /*Dentro el punto*/
+}
+
+.outside{
+    list-style: square;
+    list-style-position: outside;        /*Fuera del punto*/
+}

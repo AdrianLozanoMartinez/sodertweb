@@ -1,0 +1,36 @@
+<br><button class="btn btn-success" routerLink="/empresaid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+<button class="btn btn-dark" routerLink="/empleo">Atrás</button><br><br>
+<div class="row">
+  <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos2 of EmpresaModel; let i = index">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">{{todosloselementos2.empresa}}</h5>
+        <a target="_black" href="{{todosloselementos2.direccion1}}" *ngIf=todosloselementos2.direccion1>Empleo Público</a>
+        <hr *ngIf=todosloselementos2.direccion1>
+        <a target="_black" href="{{todosloselementos2.direccion2}}" *ngIf=todosloselementos2.direccion2>Empleo Público</a>
+        <hr *ngIf=todosloselementos2.direccion2>
+        <a target="_black" href="{{todosloselementos2.direccion3}}" *ngIf=todosloselementos2.direccion3>Empleo Público</a>
+        <label *ngIf="todosloselementos2.curriculum" class="badge badge-warning">Currículum echado</label>
+        <label *ngIf="!todosloselementos2.curriculum" class="badge badge-danger">Currículum no echado</label>
+        <br>
+        <label *ngIf="todosloselementos2.seleccionado" class="badge badge-success">Seleccionado</label>
+        <label *ngIf="!todosloselementos2.seleccionado" class="badge badge-danger">No seleccionado</label>
+        <hr>
+        <p style="color: black;" *ngIf=todosloselementos2.fechacurriculum>Fecha currículum: {{todosloselementos2.fechacurriculum}}</p>
+        <hr *ngIf=todosloselementos2.fechacurriculum>
+        <p style="color: black;" *ngIf=todosloselementos2.puesto>Puesto: {{todosloselementos2.puesto}}</p>
+        <hr *ngIf=todosloselementos2.puesto>
+        <p style="color: black;" *ngIf=todosloselementos2.jornada>Jornada: {{todosloselementos2.jornada}}</p>
+        <hr *ngIf=todosloselementos2.jornada>
+        <p style="color: black;" *ngIf=todosloselementos2.tipo>Tipo: {{todosloselementos2.tipo}}</p>
+        <hr *ngIf=todosloselementos2.tipo>
+        <p *ngIf=todosloselementos2.informacion>Información extra: <br> {{todosloselementos2.informacion}}</p>
+        <hr *ngIf=todosloselementos2.informacion>
+        <button class="btn btn-success mr-1" [routerLink]="['/empresaid', todosloselementos2.id ]"><i class="fa fa-pencil"></i> </button>
+        <button class="btn btn-danger" (click)="borrarUnElemento2(todosloselementos2, i)"><i class="fa fa-trash"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-success" routerLink="/empresaid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+<button class="btn btn-dark" routerLink="/empleo">Atrás</button><br><br>

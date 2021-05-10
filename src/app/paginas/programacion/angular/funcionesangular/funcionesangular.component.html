@@ -1,0 +1,218 @@
+<h6><u><b>Angular - Funciones</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-funcionesangular-tab" data-toggle="pill" href="#pills-funcionesangular" role="tab" aria-controls="pills-funcionesangular" aria-selected="true" style="color: black;">Fecha</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-funcionesangular0-tab" data-toggle="pill" href="#pills-funcionesangular0" role="tab" aria-controls="pills-funcionesangular0" aria-selected="false" style="color: black;">*ngIf</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionesangular1-tab" data-toggle="pill" href="#pills-funcionesangular1" role="tab" aria-controls="pills-funcionesangular1" aria-selected="false" style="color: black;">*ngFor</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/angular']">Atras</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-funcionesangular" role="tabpanel" aria-labelledby="pills-funcionesangular-tab">
+
+        <div class="table-responsive-md">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Ts</th>
+                        <th scope="col">Html</th>
+                        <th scope="col">Funcionamiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <pre>import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+selector: 'app-home',
+templateUrl: './home.component.html',
+styleUrls: ['./home.component.css']
+})
+
+export class HomeComponent implements OnInit {{c}}
+
+    //Fecha
+    <b>variable_ano: number;
+    variable_ano2: number;</b>
+
+    constructor(  ) {{c}}
+
+        <b>this.variable_ano = new Date().getFullYear();</b>      //Resultado: 2020
+        <b>this.variable_ano2 = new Date().getFullYear()+1;</b>   //Añadimos +1 al año actual. Resultado: 2021
+    }
+
+    ngOnInit(): void {{c}}
+    }
+
+}</pre></td>
+                        <td> <pre>
+Estamos en el año: <b>{{v}}</b>
+Estamos en el año: <b>{{v2}}</b>
+</pre></td>
+                        <td><pre>@Estamos en el año: <b>{{variable_ano}}</b>
+Estamos en el año: <b>{{variable_ano2}}</b></pre></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-funcionesangular0" role="tabpanel" aria-labelledby="pills-funcionesangular0-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Ts</th>
+                    <th scope="col">Html</th>
+                    <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+selector: 'app-home',
+templateUrl: './home.component.html',
+styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {{c}}
+
+    //If
+    <b>variable_if_boolean = false</b>; //true (Inicia mostrando el contenido)
+                                  //false(Inicia no mostrando el resultado)
+                                  /*<b><u>Explicación</u></b>: 
+                                  Declaramos variable que usamos en el html
+                                  la inicializamos según como queremos que aparezca,
+                                  si queremos que muestre (true) o que esté oculta (false)
+    constructor(  ) {{c}}}
+
+    ngOnInit(): void {{c}}}
+    }
+}</pre></td>
+                    <td><pre>{{d}}<b>*ngIf="variable_if_boolean"</b> class="card text-white bg-dark mb-3" style="width: 100%"><b style="color: rebeccapurple;">Texto a mostrar</b>{{dd}}
+<ul><b><u>Explicación:</u></b>
+<b>*ngIf=</b>: Para <b>funcionar</b> con el <b>botón</b>. Si la variable es true (muestra) sino, false (oculta)
+<b>"variable_if_boolean"</b>: Variable boolean declarada en TS, <b>"false" (Oculta)</b> O <b>"true" (Muestra)</b> en el <b>html inicialmente sin usar botón</b>
+</ul>
+{{b}}<b>(click)="variable_if_boolean = !variable_if_boolean"</b> class="btn btn-outline-primary btn-block">Botón mostrar/ocultar{{bb}}
+<ul><b><u>Explicación:</u></b>
+<b>(click)</b>: Realiza la función ("variable_if_boolean = !variable_if_boolean") al pulsar el botón
+<b>"variable_if_boolean = !variable_if_boolean"</b>: Variable (variable_if_boolean=true/false) declarada en TS, que al <b>pulsar cambie el valor (=!), 
+                                  de true (Valor_variable) a false (=!Valor_variable) y viceversa</b>
+</ul></pre></td>
+                    <td><div *ngIf="variable_if_boolean" class="card text-white mb-3" style="width: 100%"><b style="color: rebeccapurple; background: white;"><pre>Texto a mostrar</pre></b></div>
+                      <button (click)="variable_if_boolean = !variable_if_boolean" class="btn btn-outline-dark">
+                      Botón mostrar/ocultar
+                      </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+  <div class="tab-pane fade" id="pills-funcionesangular1" role="tabpanel" aria-labelledby="pills-funcionesangular1-tab">
+    <h6>For</h6>
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Ts</th>
+                    <th scope="col">Html</th>
+                    <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <pre>import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+selector: 'app-home',
+templateUrl: './home.component.html',
+styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {{c}}
+
+    //For - Variable en forma de arreglo [] donde contiene el contenido que será mostrado en el 
+            componente.html con el for
+    <b>variableTS: string[] = ['1º Contenido', '2º Contenido', '3º Contenido', 'más contenidos'];</b>
+
+    constructor(  ) {{c}} }
+
+    ngOnInit(): void {{c}}
+    }
+}
+</pre></td>
+<td><pre>{{f}}<b> {{fo}}</b>  
+        /*Recorre (*ngFor) el contenido de la variable (variableTS) 
+        que se encuentra en el componente.ts como arreglo [], lo mete 
+        en una variable temporal (variableTemporal) para coger cada 
+        parte de la variable del ts nombrada 
+        ['1º Contenido', '2º Contenido', '3º Contenido', 'más contenidos']
+        {{e}} debe estar dentro del listado del for, muestra el 
+        contenido de la variableTemporal*/
+{{for}}</pre></td>
+                    <td><ul>
+                      <li *ngFor="let variableTemporal of variableTS">{{variableTemporal}}</li>
+                  </ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h6>For + index</h6>
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Ts</th>
+                  <th scope="col">Html</th>
+                  <th scope="col">Funcionamiento</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><pre>import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+selector: 'app-home',
+templateUrl: './home.component.html',
+styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {{c}}
+
+    //For
+    <b>variableTS: string[] = ['1º Contenido', '2º Contenido', '3º Contenido', 'más contenidos'];</b>
+
+    constructor(  ) {{c}} }
+
+    ngOnInit(): void {{c}}
+    }
+}</pre></td>
+                  <td><pre>{{f}}{{in}}<b>{{di}}</b>     
+      /*Recorre (*ngFor) el contenido de la variable (index) que es el índice, 
+      lo mete en una variable temporal (i) para coger cada índice, 0,1,2,3...*/
+
+      <b>{{g}}</b>
+          /*Debe estar dentro del listado del for, muestra el contenido de la i 
+          y variableTemporal, añadiendo un (.) para diferenciarlo*/
+{{for}}</pre></td>
+                  <td>        
+                    <ul>
+                        <li *ngFor="let variableTemporal of variableTS; let i = index">{{i}}. {{variableTemporal}}</li>
+                    </ul></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</div>
+
+</div>

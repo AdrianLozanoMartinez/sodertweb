@@ -1,0 +1,471 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-ayuntamiento_andalucia-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia" role="tab" aria-controls="pills-ayuntamiento_andalucia" aria-selected="true" style="color: black;">Málaga</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-ayuntamiento_andalucia0-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia0" role="tab" aria-controls="pills-ayuntamiento_andalucia0" aria-selected="false" style="color: black;">Cádiz</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-ayuntamiento_andalucia1-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia1" role="tab" aria-controls="pills-ayuntamiento_andalucia1" aria-selected="false" style="color: black;">Granada</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-ayuntamiento_andalucia2-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia2" role="tab" aria-controls="pills-ayuntamiento_andalucia2" aria-selected="false" style="color: black;">Jaén</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-ayuntamiento_andalucia3-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia3" role="tab" aria-controls="pills-ayuntamiento_andalucia3" aria-selected="false" style="color: black;">Córdoba</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-ayuntamiento_andalucia4-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia4" role="tab" aria-controls="pills-ayuntamiento_andalucia4" aria-selected="false" style="color: black;">Almería</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-ayuntamiento_andalucia5-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia5" role="tab" aria-controls="pills-ayuntamiento_andalucia5" aria-selected="false" style="color: black;">Huelva</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-ayuntamiento_andalucia6-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia6" role="tab" aria-controls="pills-ayuntamiento_andalucia6" aria-selected="false" style="color: black;">Sevilla</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-ayuntamiento_andalucia7-tab" data-toggle="pill" href="#pills-ayuntamiento_andalucia7" role="tab" aria-controls="pills-ayuntamiento_andalucia7" aria-selected="false" style="color: black;">Otros</a>
+    </li>
+</ul>
+<button class="btn btn-primary" routerLink="/ayuntamientoid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+<button class="btn btn-dark" routerLink="/empleo">Atrás</button><br><br>
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+  <div class="tab-pane fade show active" id="pills-ayuntamiento_andalucia" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia-tab">
+    
+<div class="row">
+  <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+    <div class="card" *ngIf=todosloselementos.malaga>
+      <div class="card-body" >
+        <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+        <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+        <hr *ngIf=todosloselementos.direccion1>
+        <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+        <hr *ngIf=todosloselementos.direccion2>
+        <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+        <hr *ngIf=todosloselementos.direccion3>
+        <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+        <hr *ngIf=todosloselementos.direccion4>
+        <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+        <hr *ngIf=todosloselementos.sedeelectronica>
+        <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+        <hr *ngIf=todosloselementos.distancia>
+        <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+        <hr *ngIf=todosloselementos.tiempo>
+        <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+        <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+        <br>
+        <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+        <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+        <hr>
+        <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+        <hr *ngIf=todosloselementos.tipo1>
+        <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+        <hr *ngIf=todosloselementos.tipo2>
+        <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+        <hr *ngIf=todosloselementos.tipo3>
+        <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+        <hr *ngIf=todosloselementos.tipo4>
+        <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+        <hr *ngIf=todosloselementos.fechainstancia>
+        <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+        <hr *ngIf=todosloselementos.informacion>
+        <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+        <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="tab-pane fade" id="pills-ayuntamiento_andalucia0" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia0-tab">
+   
+    <div class="row">
+      <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+        <div class="card" *ngIf=todosloselementos.cadiz>
+          <div class="card-body" >
+            <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+            <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+            <hr *ngIf=todosloselementos.direccion1>
+            <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+            <hr *ngIf=todosloselementos.direccion2>
+            <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+            <hr *ngIf=todosloselementos.direccion3>
+            <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+            <hr *ngIf=todosloselementos.direccion4>
+            <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+            <hr *ngIf=todosloselementos.sedeelectronica>
+            <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+            <hr *ngIf=todosloselementos.distancia>
+            <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+            <hr *ngIf=todosloselementos.tiempo>
+            <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+            <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+            <br>
+            <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+            <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+            <hr>
+            <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+            <hr *ngIf=todosloselementos.tipo1>
+            <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+            <hr *ngIf=todosloselementos.tipo2>
+            <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+            <hr *ngIf=todosloselementos.tipo3>
+            <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+            <hr *ngIf=todosloselementos.tipo4>
+            <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+            <hr *ngIf=todosloselementos.fechainstancia>
+            <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+            <hr *ngIf=todosloselementos.informacion>
+            <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+            <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia1" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia1-tab">
+      
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.granada>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia2" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia2-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.jaen>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia3" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia3-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.cordoba>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia4" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia4-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.almeria>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia5" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia5-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.huelva>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia6" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia6-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.sevilla>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ayuntamiento_andalucia7" role="tabpanel" aria-labelledby="pills-ayuntamiento_andalucia7-tab">
+      <div class="row">
+        <div class="col-5 col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let todosloselementos of MunicipiosModel; let i = index">
+          <div class="card" *ngIf=todosloselementos.provincia>
+            <div class="card-body" >
+              <h5 class="card-title">{{todosloselementos.municipio}}</h5>
+              <a target="_black" href="{{todosloselementos.direccion1}}" *ngIf=todosloselementos.direccion1>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion1>
+              <a target="_black" href="{{todosloselementos.direccion2}}" *ngIf=todosloselementos.direccion2>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion2>
+              <a target="_black" href="{{todosloselementos.direccion3}}" *ngIf=todosloselementos.direccion3>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion3>
+              <a target="_black" href="{{todosloselementos.direccion4}}" *ngIf=todosloselementos.direccion4>Empleo Público</a>
+              <hr *ngIf=todosloselementos.direccion4>
+              <a target="_black" href="{{todosloselementos.sedeelectronica}}" *ngIf=todosloselementos.sedeelectronica>Sede electrónica</a>
+              <hr *ngIf=todosloselementos.sedeelectronica>
+              <p style="color: black;" *ngIf=todosloselementos.distancia>Distancia desde Marbella: {{todosloselementos.distancia}}</p>
+              <hr *ngIf=todosloselementos.distancia>
+              <p style="color: black;" *ngIf=todosloselementos.tiempo>Tiempo desde Marbella: {{todosloselementos.tiempo}}</p>
+              <hr *ngIf=todosloselementos.tiempo>
+              <label *ngIf="todosloselementos.bolsaechada" class="badge badge-warning">Bolsa echada</label>
+              <label *ngIf="!todosloselementos.bolsaechada" class="badge badge-danger">Bolsa no echada</label>
+              <br>
+              <label *ngIf="todosloselementos.seleccionado" class="badge badge-success">Seleccionado</label>
+              <label *ngIf="!todosloselementos.seleccionado" class="badge badge-danger">No seleccionado</label>
+              <hr>
+              <p *ngIf=todosloselementos.tipo1>{{todosloselementos.tipo1}}: {{todosloselementos.puesto1}}</p>
+              <hr *ngIf=todosloselementos.tipo1>
+              <p *ngIf=todosloselementos.tipo2>{{todosloselementos.tipo2}}: {{todosloselementos.puesto2}}</p>
+              <hr *ngIf=todosloselementos.tipo2>
+              <p *ngIf=todosloselementos.tipo3>{{todosloselementos.tipo3}}: {{todosloselementos.puesto3}}</p>
+              <hr *ngIf=todosloselementos.tipo3>
+              <p *ngIf=todosloselementos.tipo4>{{todosloselementos.tipo4}}: {{todosloselementos.puesto4}}</p>
+              <hr *ngIf=todosloselementos.tipo4>
+              <p *ngIf=todosloselementos.fechainstancia>{{todosloselementos.fechainstancia}}</p>
+              <hr *ngIf=todosloselementos.fechainstancia>
+              <p *ngIf=todosloselementos.informacion>Información extra: <br> {{todosloselementos.informacion}}</p>
+              <hr *ngIf=todosloselementos.informacion>
+              <button class="btn btn-info mr-1" [routerLink]="['/ayuntamientoid', todosloselementos.id ]"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-danger" (click)="borrarUnElemento(todosloselementos, i)"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+<div *ngIf="cargando" class="alert aler-info text-center mt-3">
+ <h4 class="alert-heading">Cargando</h4>
+ <p>
+     <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+ </p>
+ <p class="mb-0">Espere por favor</p>
+ </div>
+
+ <div *ngIf="!cargando && MunicipiosModel.length === 0" class="alert aler-warnin text-center mt-3">
+ <h4 class="alert-heading">No hay registro</h4>
+ <p>
+     <i class="fa fa-exclamation fa-3x fa-fw"></i>
+ </p>
+ </div>
+ 
+ <button class="btn btn-primary" routerLink="/ayuntamientoid/nuevo"><i class="fa fa-plus"></i>Agregar</button>
+ <button class="btn btn-dark" routerLink="/empleo">Atrás</button><br><br>

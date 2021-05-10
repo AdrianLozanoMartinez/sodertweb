@@ -1,0 +1,487 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-estructurabootstrap-tab" data-toggle="pill" href="#pills-estructurabootstrap" role="tab" aria-controls="pills-estructurabootstrap" aria-selected="true" style="color: black;">Llamar a <br>Bootstrap</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-estructurabootstrap0-tab" data-toggle="pill" href="#pills-estructurabootstrap0" role="tab" aria-controls="pills-estructurabootstrap0" aria-selected="false" style="color: black;">Simple</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-estructurabootstrap1-tab" data-toggle="pill" href="#pills-estructurabootstrap1" role="tab" aria-controls="pills-estructurabootstrap1" aria-selected="false" style="color: black;">Anidada</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-estructurabootstrap2-tab" data-toggle="pill" href="#pills-estructurabootstrap2" role="tab" aria-controls="pills-estructurabootstrap2" aria-selected="false" style="color: black;">Salto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-estructurabootstrap3-tab" data-toggle="pill" href="#pills-estructurabootstrap3" role="tab" aria-controls="pills-estructurabootstrap3" aria-selected="false" style="color: black;">Orden</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-estructurabootstrap4-tab" data-toggle="pill" href="#pills-estructurabootstrap4" role="tab" aria-controls="pills-estructurabootstrap4" aria-selected="false" style="color: black;">Responsive</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-estructurabootstrap5-tab" data-toggle="pill" href="#pills-estructurabootstrap5" role="tab" aria-controls="pills-estructurabootstrap5" aria-selected="false" style="color: black;">Css</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-estructurabootstrap" role="tabpanel" aria-labelledby="pills-estructurabootstrap-tab">
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                <b>{{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            {{co}}!--LLAMA a BOOTSTRAP 1/4. El RESTO está al FINAL del BODY--></b>
+            {{co}}/head>                                                                                       
+            {{co}}body>      
+
+                INFORMACIÓN VISIBLE
+                
+                <b>{{co}}!--Squery-->                                                                                                                                                                                                
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}!--Popper-->
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}!--Bootstrap-->
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   </b>
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                    </div>
+                  </div>
+          </div>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-estructurabootstrap0" role="tabpanel" aria-labelledby="pills-estructurabootstrap0-tab">
+
+      <div class="container">                              <!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+        <div class="row">                            <!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                <div class="col">                    <!--COLUMNA de la Fila [[Sino especificamos, son 12 columnas (col-número)]]-->
+                        <p>Párrafo de muestra</p>
+                </div>
+        </div>
+</div>
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                    <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>  
+
+                <b>{{co}}div class="container">                              {{co}}!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+                        {{co}}div class="row">                            {{co}}!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                                {{co}}div class="col">                    {{co}}!--COLUMNA de la Fila [[Sino especificamos, son 12 columnas (col-número)]]-->
+                                        {{co}}p>Párrafo de muestra{{co}}/p>
+                                {{co}}/div>
+                        {{co}}/div>
+                {{co}}/div></b>
+                                                                                                                                                                                    
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                    </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+<br>
+
+    </div>
+
+  <div class="tab-pane fade" id="pills-estructurabootstrap1" role="tabpanel" aria-labelledby="pills-estructurabootstrap1-tab">
+
+    <div class="container">                              <!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+      <div class="row">                            <!--1º FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+              <div class="col">                    <!--1º COLUMNA de la 1º Fila [[Sino especificamos, son 12 columnas (col-número)]]-->
+                      <p>Párrafo 1</p>
+              </div>
+              <div class="row">                    <!--2º FILA-->
+                      <div class="col-9">          <!--1ºCOLUMNA de la 2ºFila-->
+                              <p>Párrafo2</p>
+                      <div class="col-6">          <!--2ºCOLUMNA dentro de la 1º columna de la 2ºFila-->
+                              <p>Párrafo3</p>
+                      </div>
+                      </div>
+              </div>
+      </div>
+  </div>     
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                        <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>                                                                                        
+                
+<b>                        {{co}}div class="container">                              {{co}}!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+                                {{co}}div class="row">                            {{co}}!--1º FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                                        {{co}}div class="col">                    {{co}}!--1º COLUMNA de la 1º Fila [[Sino especificamos, son 12 columnas (col-número)]]-->
+                                                {{co}}p>Párrafo de muestra{{co}}/p>
+                                        {{co}}/div>
+                                        {{co}}div class="row">                    {{co}}!--2º FILA-->
+                                                {{co}}div class="col-9">          {{co}}!--1ºCOLUMNA de la 2ºFila-->
+                                                        {{co}}p>Párrafo de muestra 2{{co}}/p>
+                                                {{co}}div class="col-6">          {{co}}!--2ºCOLUMNA dentro de la 1º columna de la 2ºFila-->
+                                                        {{co}}p>Párrafo de muestra 3{{co}}/p>
+                                                {{co}}/div>
+                                                {{co}}/div>
+                                        {{co}}/div>
+                                {{co}}/div>
+                        {{co}}/div>    </b>     
+
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                    </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+              <br>
+             
+</div>
+
+  <div class="tab-pane fade" id="pills-estructurabootstrap2" role="tabpanel" aria-labelledby="pills-estructurabootstrap2-tab">
+
+    <div class="container">                              <!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+      <div class="row">                            <!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+              <div class="col-9 offset-2">         <!--Offset-número: Salta las columnas que marca, luego se comienza en la siguiente columna o offset-selector-num_cols-->
+                      <p>Párrafo de muestra</p>
+              </div>
+      </div>
+    </div>
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                        <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>                                                                                        
+                
+               <b> {{co}}div class="container">                              {{co}}!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+                        {{co}}div class="row">                            {{co}}!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                                {{co}}div class="col-9 offset-2">         {{co}}!--Offset-número: Salta las columnas que marca, luego se comienza en la siguiente columna o offset-selector-num_cols-->
+                                        {{co}}p>Párrafo de muestra{{co}}/p>
+                                {{co}}/div>
+                        {{co}}/div>
+                {{co}}/div></b>
+
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                    </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+              <br>
+     
+  </div>
+  <div class="tab-pane fade" id="pills-estructurabootstrap3" role="tabpanel" aria-labelledby="pills-estructurabootstrap3-tab">
+
+    <div class="container"> 
+      <div class="row">                            <!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+        <div class="col-2 order-5">          <!--Orden en aparecer: 1-5. 1 Primero en aparecer y 5 Último en aparecer-->
+                <p>Párrafo de muestra</p>
+        </div>
+      </div>   
+    </div>
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                        <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>                                                                                        
+               
+                <b>{{co}}div class="container"> 
+                        {{co}}div class="row">                            {{co}}!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                        {{co}}div class="col-2 order-5">          {{co}}!--Orden en aparecer: 1-5. 1 Primero en aparecer y 5 Último en aparecer-->
+                                {{co}}p>Párrafo de muestra{{co}}/p>
+                        {{co}}/div>
+                        {{co}}/div>   
+                {{co}}/div></b>
+                                                                                                                                                                                                            
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                   </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+              <br>
+ 
+
+  </div>
+
+  <div class="tab-pane fade" id="pills-estructurabootstrap4" role="tabpanel" aria-labelledby="pills-estructurabootstrap4-tab">
+
+    <div class="container">                              <!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+      <div class="row">                            <!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+              <div class="col-12 col-xs-1 col-sm-2 col-md-3 col-lg-5 col-xl-6">           <!--Columnas según el tamaño de pantalla, son el tamaño de las columnas, si ocupan mucho habrá menos columnas y viceversas, estará compuesta por ningún tamaño especificado.
+                                                                                      Compuesto por: COL: ningún especifico, COL-XS: anchura máxima ninguna, auto, COL-SM: anchura max 60px, COL-MD: anchura max 78px, COL-LG: anchura max95px.
+                                                                                      12 ocupa todo, 1 ocupa el 12% 2 el 24%..., sino cabe hay que reducir el número o aumentar si necesitamos más espacio-->
+                      <p>Párrafo de muestra</p>
+              </div>
+      </div>
+    </div>
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                        <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>                                                                                        
+                
+                <b>{{co}}div class="container">                              {{co}}!--Contenedor:Menú, pie... Misma clase, mismo efecto a todo el div-->
+                        {{co}}div class="row">                            {{co}}!--FILA [[Cada fila coge 12 columna, si se pone más, se van a otra fila las columnas sobrantes]]-->
+                                {{co}}div class="col-12 col-xs-1 col-sm-2 col-md-3 col-lg-5 col-xl-6">           {{co}}!--Columnas según el tamaño de pantalla, son el tamaño de las columnas, si ocupan mucho habrá menos columnas y viceversas, estará compuesta por ningún tamaño especificado.
+                                                                                                        Compuesto por: COL: ningún especifico, COL-XS: anchura máxima ninguna, auto, COL-SM: anchura max 60px, COL-MD: anchura max 78px, COL-LG: anchura max95px.
+                                                                                                        12 ocupa todo, 1 ocupa el 12% 2 el 24%..., sino cabe hay que reducir el número o aumentar si necesitamos más espacio-->
+                                        {{co}}p>Párrafo de muestra{{co}}/p>
+                                {{co}}/div>
+                        {{co}}/div>
+                {{co}}/div></b>
+                                                                                                                                                                                                            
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                   </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+    <br>
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-estructurabootstrap5" role="tabpanel" aria-labelledby="pills-estructurabootstrap5-tab">
+
+      <!--Container sin fluid: Te coge un trozo -->
+      <div class="container" style="background-color: aqua; height: 50px;">
+        <div class="row">
+                <div class="col-12">
+                        <p>Párrafo de muestra</p>
+                </div>
+        </div>
+      </div>
+
+      <!--Container-fluid: Te coge el 100% del width de la web-->
+      <div class="container-fluid" style="background-color: red; height: 50px;">
+        <div class="row">
+                <div class="col-12">
+                        <p>Párrafo de muestra 2</p>
+                </div>
+        </div>
+      </div>  
+
+        <div class="card-group">
+                <div class="card text-dark m-3" id="lila2">
+                        <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                    <div class="card-body" id="lila2">
+                      <pre class="card-text">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+            {{co}}/head>                                                                                       
+            {{co}}body>                                                                                        
+             
+                <b>{{co}}!--Container sin fluid: Te coge un trozo -->
+                {{co}}div class="container" style="background-color: aqua; height: 50px;">
+                        {{co}}div class="row">
+                                {{co}}div class="col-12">
+                                        {{co}}p>Párrafo de muestra{{co}}/p>
+                                {{co}}/div>
+                        {{co}}/div>
+                {{co}}/div>
+        
+                {{co}}!--Container-fluid: Te coge el 100% del width de la web-->
+                {{co}}div class="container-fluid" style="background-color: red; height: 50px;">
+                        {{co}}div class="row">
+                                {{co}}div class="col-12">
+                                        {{co}}p>Párrafo de muestra 2{{co}}/p>
+                                {{co}}/div>
+                        {{co}}/div>
+                {{co}}/div>  </b>
+                                                                                                                                                                                                       
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre>
+                    </div>
+                  </div>
+              <div class="card text-dark bg-info m-3" >
+                <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+                <div class="card-body">
+                  <pre class="card-text">.col{{c}}
+    background-color: aqua;
+    border:1px solid black;
+}
+
+.col,
+col p{{c}}
+  padding:0;
+  margin:0;
+}
+
+.row{{c}}
+    background: lightblue;
+    height: 100px;
+}</pre>
+                </div>
+              </div>
+          </div>
+
+<br>
+
+
+  </div>
+      
+</div>

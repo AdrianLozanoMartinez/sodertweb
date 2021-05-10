@@ -1,0 +1,1223 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-tablaboot-tab" data-toggle="pill" href="#pills-tablaboot" role="tab" aria-controls="pills-tablaboot" aria-selected="true" style="color: black;">Simple</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-tablaboot2-tab" data-toggle="pill" href="#pills-tablaboot2" role="tab" aria-controls="pills-tablaboot2" aria-selected="false" style="color: black;">Responsive</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-tablaboot0-tab" data-toggle="pill" href="#pills-tablaboot0" role="tab" aria-controls="pills-tablaboot0" aria-selected="false" style="color: black;">Color</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tablaboot1-tab" data-toggle="pill" href="#pills-tablaboot1" role="tab" aria-controls="pills-tablaboot1" aria-selected="false" style="color: black;">Bordes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-tablaboot3-tab" data-toggle="pill" href="#pills-tablaboot3" role="tab" aria-controls="pills-tablaboot3" aria-selected="false" style="color: black;">Activo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-tablaboot4-tab" data-toggle="pill" href="#pills-tablaboot4" role="tab" aria-controls="pills-tablaboot4" aria-selected="false" style="color: black;">Hover<br><small>Ilumina al pasar ratón</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tablabootpeque-tab" data-toggle="pill" href="#pills-tablabootpeque" role="tab" aria-controls="pills-tablabootpeque" aria-selected="false" style="color: black;">Tamaño<br><small>Pequeña</small></a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-tablaboot" role="tabpanel" aria-labelledby="pills-tablaboot-tab">
+
+        <div class="container">
+            <div class="table-responsive-md">            
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col">#</th>       <!--Th: Lo ponemos en NEGRO las letras-->
+                            <th scope="col">Nombre</th>  <!--Scope: Remarca al navegador que es cabecera-->
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Apodo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>                            
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          
+     <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">
+{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              <b>
+                {{co}}div class="container">
+                    {{co}}div class="table-responsive-md">            
+                        {{co}}table class="table">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>       {{co}}!--Th: Lo ponemos en NEGRO las letras-->
+                                    {{co}}th scope="col">Nombre{{co}}/th>  {{co}}!--Scope: Remarca al navegador que es cabecera-->
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>                            
+                                    {{co}}th scope="row">1{{co}}/th>
+                                    {{co}}td>Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                {{co}}/div>
+            </b>                                                                                                                                                                   
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+    </div>
+    
+    <br>
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-tablaboot0" role="tabpanel" aria-labelledby="pills-tablaboot0-tab"><app-colortablaboot></app-colortablaboot></div>
+
+    
+    <div class="tab-pane fade" id="pills-tablaboot1" role="tabpanel" aria-labelledby="pills-tablaboot1-tab">
+        <h3>Con bordes</h3>
+        <div class="container">
+            <div class="table-responsive-md">
+                <table class="table table-info table-bordered">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Apodo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+        <div class="card-group">
+            <div class="card text-dark m-3" id="lila2">
+                <div class="card-body" id="lila2">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+          {{co}}html lang="en">
+              {{co}}head>                                                                                        
+                  {{co}}meta charset="UTF-8">                                                                    
+                  {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                  {{co}}title>Título en pestaña de la web{{co}}/title>
+                  {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+              {{co}}/head>                                                                                       
+              {{co}}body>    
+                  
+                    {{co}}div class="container">
+                        {{co}}div class="table-responsive-md">
+                            {{co}}table class="<b>table table-info table-bordered</b>">
+                                {{co}}thead class="thead">
+                                    {{co}}tr>
+                                        {{co}}th scope="col">#{{co}}/th>
+                                        {{co}}th scope="col">Nombre{{co}}/th>
+                                        {{co}}th scope="col">Apellidos{{co}}/th>
+                                        {{co}}th scope="col">Apodo{{co}}/th>
+                                    {{co}}/tr>
+                                {{co}}/thead>
+                                {{co}}tbody>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">1{{co}}/th>
+                                        {{co}}td>Mark{{co}}/td>
+                                        {{co}}td>Otto{{co}}/td>
+                                        {{co}}td>@mdo{{co}}/td>
+                                    {{co}}/tr>
+                                        {{co}}tr>
+                                        {{co}}th scope="row">2{{co}}/th>
+                                        {{co}}td>Jacob{{co}}/td>
+                                        {{co}}td>Thornton{{co}}/td>
+                                        {{co}}td>@fat{{co}}/td>
+                                    {{co}}/tr>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">3{{co}}/th>
+                                        {{co}}td>Larry{{co}}/td>
+                                        {{co}}td>the Bird{{co}}/td>
+                                        {{co}}td>@twitter{{co}}/td>
+                                    {{co}}/tr>
+                                {{co}}/tbody>
+                            {{co}}/table>
+                        {{co}}/div>
+                    {{co}}/div>
+                                                                                                                                                                                   
+                    {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+              {{co}}/body>                                                                                       
+          {{co}}/html></pre>
+                </div>
+              </div>
+        </div>
+        
+        <br>
+
+
+<h3>Bordes solo horizontal</h3>
+<div class="container">
+    <div class="table-responsive-md">
+        <table class="table table-info">  
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+        <div class="card-group">
+            <div class="card text-dark m-3" id="lila2">
+                <div class="card-body" id="lila2">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+          {{co}}html lang="en">
+              {{co}}head>                                                                                        
+                  {{co}}meta charset="UTF-8">                                                                    
+                  {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                  {{co}}title>Título en pestaña de la web{{co}}/title>
+                  {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+              {{co}}/head>                                                                                       
+              {{co}}body>    
+                  
+                    {{co}}div class="container">
+                        {{co}}div class="table-responsive-md">
+                            {{co}}table class="<b>table table-info</b>">  
+                                {{co}}thead class="thead">
+                                    {{co}}tr>
+                                        {{co}}th scope="col">#{{co}}/th>
+                                        {{co}}th scope="col">Nombre{{co}}/th>
+                                        {{co}}th scope="col">Apellidos{{co}}/th>
+                                        {{co}}th scope="col">Apodo{{co}}/th>
+                                    {{co}}/tr>
+                                {{co}}/thead>
+                                {{co}}tbody>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">1{{co}}/th>
+                                        {{co}}td>Mark{{co}}/td>
+                                        {{co}}td>Otto{{co}}/td>
+                                        {{co}}td>@mdo{{co}}/td>
+                                    {{co}}/tr>
+                                        {{co}}tr>
+                                        {{co}}th scope="row">2{{co}}/th>
+                                        {{co}}td>Jacob{{co}}/td>
+                                        {{co}}td>Thornton{{co}}/td>
+                                        {{co}}td>@fat{{co}}/td>
+                                    {{co}}/tr>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">3{{co}}/th>
+                                        {{co}}td>Larry{{co}}/td>
+                                        {{co}}td>the Bird{{co}}/td>
+                                        {{co}}td>@twitter{{co}}/td>
+                                    {{co}}/tr>
+                                {{co}}/tbody>
+                            {{co}}/table>
+                        {{co}}/div>
+                    {{co}}/div>
+                                                                                                                                                                                    
+                    {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+              {{co}}/body>                                                                                       
+          {{co}}/html></pre>
+                </div>
+              </div>
+        </div>
+        
+        <br>
+
+
+
+<h3>Sin bordes</h3>
+<div class="container">
+    <div class="table-responsive-md">
+        <table class="table table-info table-borderless">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+        <div class="card-group">
+            <div class="card text-dark m-3" id="lila2">
+                <div class="card-body" id="lila2">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+          {{co}}html lang="en">
+              {{co}}head>                                                                                        
+                  {{co}}meta charset="UTF-8">                                                                    
+                  {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                  {{co}}title>Título en pestaña de la web{{co}}/title>
+                  {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+              {{co}}/head>                                                                                       
+              {{co}}body>    
+                  
+                    {{co}}div class="container">
+                        {{co}}div class="table-responsive-md">
+                            {{co}}table class="<b>table table-info table-borderless</b>">
+                                {{co}}thead class="thead">
+                                    {{co}}tr>
+                                        {{co}}th scope="col">#{{co}}/th>
+                                        {{co}}th scope="col">Nombre{{co}}/th>
+                                        {{co}}th scope="col">Apellidos{{co}}/th>
+                                        {{co}}th scope="col">Apodo{{co}}/th>
+                                    {{co}}/tr>
+                                {{co}}/thead>
+                                {{co}}tbody>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">1{{co}}/th>
+                                        {{co}}td>Mark{{co}}/td>
+                                        {{co}}td>Otto{{co}}/td>
+                                        {{co}}td>@mdo{{co}}/td>
+                                    {{co}}/tr>
+                                        {{co}}tr>
+                                        {{co}}th scope="row">2{{co}}/th>
+                                        {{co}}td>Jacob{{co}}/td>
+                                        {{co}}td>Thornton{{co}}/td>
+                                        {{co}}td>@fat{{co}}/td>
+                                    {{co}}/tr>
+                                    {{co}}tr>
+                                        {{co}}th scope="row">3{{co}}/th>
+                                        {{co}}td>Larry{{co}}/td>
+                                        {{co}}td>the Bird{{co}}/td>
+                                        {{co}}td>@twitter{{co}}/td>
+                                    {{co}}/tr>
+                                {{co}}/tbody>
+                            {{co}}/table>
+                        {{co}}/div>
+                    {{co}}/div>
+                                                                                                                                                                                   
+                    {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                    {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+              {{co}}/body>                                                                                       
+          {{co}}/html></pre>
+                </div>
+              </div>
+        </div>
+        
+        <br>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-tablaboot2" role="tabpanel" aria-labelledby="pills-tablaboot2-tab">
+        
+<h3>Pequeño</h3>
+<div class="container">
+    <div class="table-responsive-sm">
+        <table class="table table-danger">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+     <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">
+{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              
+                {{co}}div class="container">
+                    {{co}}div class="<b>table-responsive-sm</b>">
+                        {{co}}table class="table table-danger">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>
+                                    {{co}}th scope="col">Nombre{{co}}/th>
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>
+                                    {{co}}th scope="row">1{{co}}/th>
+                                    {{co}}td>Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                    {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                {{co}}/div>
+                                                                                                                                                                            
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+    </div>
+    
+    <br>
+
+
+
+  <h3>Medio</h3>
+  <div class="container">
+    <div class="table-responsive-md">
+        <table class="table table-danger">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+     <div class="card-group">
+        <div class="card text-dark m-3" id="lila2">
+            <div class="card-body" id="lila2">
+              <pre class="card-text">
+{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+        
+                {{co}}div class="container">
+                    {{co}}div class="<b>table-responsive-md</b>">
+                        {{co}}table class="table table-danger">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>
+                                    {{co}}th scope="col">Nombre{{co}}/th>
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>
+                                    {{co}}th scope="row">1{{co}}/th>
+                                    {{co}}td>Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                    {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                {{co}}/div>
+                                                                                                                                                                           
+                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+            </div>
+          </div>
+    </div>
+    
+    <br>
+
+
+
+  <h3>Grande</h3>
+  <div class="container">
+    <div class="table-responsive-lg">
+        <table class="table table-danger">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div class="card-group">
+     <div class="card text-dark m-3" id="lila2">
+         <div class="card-body" id="lila2">
+           <pre class="card-text">
+{{co}}!DOCTYPE html>
+   {{co}}html lang="en">
+       {{co}}head>                                                                                        
+           {{co}}meta charset="UTF-8">                                                                    
+           {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+           {{co}}title>Título en pestaña de la web{{co}}/title>
+           {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       {{co}}/head>                                                                                       
+       {{co}}body>    
+     
+             {{co}}div class="container">
+                {{co}}div class="<b>table-responsive-lg</b>">
+                    {{co}}table class="table table-danger">
+                        {{co}}thead class="thead">
+                            {{co}}tr>
+                                {{co}}th scope="col">#{{co}}/th>
+                                {{co}}th scope="col">Nombre{{co}}/th>
+                                {{co}}th scope="col">Apellidos{{co}}/th>
+                                {{co}}th scope="col">Apodo{{co}}/th>
+                            {{co}}/tr>
+                        {{co}}/thead>
+                        {{co}}tbody>
+                            {{co}}tr>
+                                {{co}}th scope="row">1{{co}}/th>
+                                {{co}}td>Mark{{co}}/td>
+                                {{co}}td>Otto{{co}}/td>
+                                {{co}}td>@mdo{{co}}/td>
+                            {{co}}/tr>
+                                {{co}}tr>
+                                {{co}}th scope="row">2{{co}}/th>
+                                {{co}}td>Jacob{{co}}/td>
+                                {{co}}td>Thornton{{co}}/td>
+                                {{co}}td>@fat{{co}}/td>
+                            {{co}}/tr>
+                            {{co}}tr>
+                                {{co}}th scope="row">3{{co}}/th>
+                                {{co}}td>Larry{{co}}/td>
+                                {{co}}td>the Bird{{co}}/td>
+                                {{co}}td>@twitter{{co}}/td>
+                            {{co}}/tr>
+                        {{co}}/tbody>
+                    {{co}}/table>
+                {{co}}/div>
+            {{co}}/div>
+                                                                                                                                                                        
+             {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+       {{co}}/body>                                                                                       
+   {{co}}/html></pre>
+         </div>
+       </div>
+ </div>
+ 
+ <br>
+
+
+
+    <h3>Más grande</h3>
+    <div class="container">
+        <div class="table-responsive-xl">
+            <table class="table table-danger">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Apodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+  <div class="card-group">
+     <div class="card text-dark m-3" id="lila2">
+         <div class="card-body" id="lila2">
+           <pre class="card-text">
+{{co}}!DOCTYPE html>
+   {{co}}html lang="en">
+       {{co}}head>                                                                                        
+           {{co}}meta charset="UTF-8">                                                                    
+           {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+           {{co}}title>Título en pestaña de la web{{co}}/title>
+           {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       {{co}}/head>                                                                                       
+       {{co}}body>    
+     
+             {{co}}div class="container">
+                {{co}}div class="<b>table-responsive-xl</b>">
+                    {{co}}table class="table table-danger">
+                        {{co}}thead class="thead">
+                            {{co}}tr>
+                                {{co}}th scope="col">#{{co}}/th>
+                                {{co}}th scope="col">Nombre{{co}}/th>
+                                {{co}}th scope="col">Apellidos{{co}}/th>
+                                {{co}}th scope="col">Apodo{{co}}/th>
+                            {{co}}/tr>
+                        {{co}}/thead>
+                        {{co}}tbody>
+                            {{co}}tr>
+                                {{co}}th scope="row">1{{co}}/th>
+                                {{co}}td>Mark{{co}}/td>
+                                {{co}}td>Otto{{co}}/td>
+                                {{co}}td>@mdo{{co}}/td>
+                            {{co}}/tr>
+                                {{co}}tr>
+                                {{co}}th scope="row">2{{co}}/th>
+                                {{co}}td>Jacob{{co}}/td>
+                                {{co}}td>Thornton{{co}}/td>
+                                {{co}}td>@fat{{co}}/td>
+                            {{co}}/tr>
+                            {{co}}tr>
+                                {{co}}th scope="row">3{{co}}/th>
+                                {{co}}td>Larry{{co}}/td>
+                                {{co}}td>the Bird{{co}}/td>
+                                {{co}}td>@twitter{{co}}/td>
+                            {{co}}/tr>
+                        {{co}}/tbody>
+                    {{co}}/table>
+                {{co}}/div>
+            {{co}}/div>
+                                                                                                                                                                        
+             {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+       {{co}}/body>                                                                                       
+   {{co}}/html></pre>
+         </div>
+       </div>
+ </div>
+ 
+ <br>
+
+
+
+    </div>
+
+<div class="tab-pane fade" id="pills-tablaboot3" role="tabpanel" aria-labelledby="pills-tablaboot3-tab">
+
+       <h3>Señala fila</h3>
+       <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-success">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Apodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row">1</th>            
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+  <div class="card-group">
+     <div class="card text-dark m-3" id="lila2">
+         <div class="card-body" id="lila2">
+           <pre class="card-text">
+{{co}}!DOCTYPE html>
+   {{co}}html lang="en">
+       {{co}}head>                                                                                        
+           {{co}}meta charset="UTF-8">                                                                    
+           {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+           {{co}}title>Título en pestaña de la web{{co}}/title>
+           {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       {{co}}/head>                                                                                       
+       {{co}}body>    
+     
+             {{co}}div class="container">
+                {{co}}div class="table-responsive-md">
+                    {{co}}table class="table table-success">
+                        {{co}}thead class="thead">
+                            {{co}}tr>
+                                {{co}}th scope="col">#{{co}}/th>
+                                {{co}}th scope="col">Nombre{{co}}/th>
+                                {{co}}th scope="col">Apellidos{{co}}/th>
+                                {{co}}th scope="col">Apodo{{co}}/th>
+                            {{co}}/tr>
+                        {{co}}/thead>
+                        {{co}}tbody>
+                            {{co}}tr class="<b>table-active</b>">
+                                {{co}}th scope="row">1{{co}}/th>            
+                                {{co}}td>Mark{{co}}/td>
+                                {{co}}td>Otto{{co}}/td>
+                                {{co}}td>@mdo{{co}}/td>
+                            {{co}}/tr>
+                            {{co}}tr>
+                                {{co}}th scope="row">2{{co}}/th>
+                                {{co}}td>Jacob{{co}}/td>
+                                {{co}}td>Thornton{{co}}/td>
+                                {{co}}td>@fat{{co}}/td>
+                            {{co}}/tr>
+                            {{co}}tr>
+                                {{co}}th scope="row">3{{co}}/th>
+                                {{co}}td>Larry{{co}}/td>
+                                {{co}}td>the Bird{{co}}/td>
+                                {{co}}td>@twitter{{co}}/td>
+                            {{co}}/tr>
+                        {{co}}/tbody>
+                    {{co}}/table>
+                {{co}}/div>
+            {{co}}/div>
+                                                                                                                                                                        
+             {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+             {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+       {{co}}/body>                                                                                       
+   {{co}}/html></pre>
+         </div>
+       </div>
+ </div>
+ 
+ <br>
+
+
+    
+    <h3>Señala celda</h3>
+    <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-success">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Apodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>                <!--Th: No aplicar table-active-->
+                        <td class="table-active">Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <div class="card-group">
+       <div class="card text-dark m-3" id="lila2">
+           <div class="card-body" id="lila2">
+             <pre class="card-text">
+  {{co}}!DOCTYPE html>
+     {{co}}html lang="en">
+         {{co}}head>                                                                                        
+             {{co}}meta charset="UTF-8">                                                                    
+             {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+             {{co}}title>Título en pestaña de la web{{co}}/title>
+             {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         {{co}}/head>                                                                                       
+         {{co}}body>    
+       
+               {{co}}div class="container">
+                    {{co}}div class="table-responsive-md">
+                        {{co}}table class="table table-success">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>
+                                    {{co}}th scope="col">Nombre{{co}}/th>
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>
+                                    {{co}}th scope="row">1{{co}}/th>                <b>{{co}}!--Th: No aplicar table-active--></b>
+                                    {{co}}td class="<b>table-active</b>">Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                    {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                    {{co}}/div>
+                                                                                                                                                                          
+               {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+         {{co}}/body>                                                                                       
+     {{co}}/html></pre>
+           </div>
+         </div>
+   </div>
+   
+   <br>
+
+
+
+</div>
+
+<div class="tab-pane fade" id="pills-tablaboot4" role="tabpanel" aria-labelledby="pills-tablaboot4-tab">
+
+    <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-hover table-warning">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Apodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <div class="card-group">
+       <div class="card text-dark m-3" id="lila2">
+           <div class="card-body" id="lila2">
+             <pre class="card-text">
+  {{co}}!DOCTYPE html>
+     {{co}}html lang="en">
+         {{co}}head>                                                                                        
+             {{co}}meta charset="UTF-8">                                                                    
+             {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+             {{co}}title>Título en pestaña de la web{{co}}/title>
+             {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         {{co}}/head>                                                                                       
+         {{co}}body>    
+       
+                {{co}}div class="container">
+                    {{co}}div class="table-responsive-md">
+                        {{co}}table class="table <b>table-hover</b> table-warning">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>
+                                    {{co}}th scope="col">Nombre{{co}}/th>
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>
+                                    {{co}}th scope="row">1{{co}}/th>
+                                    {{co}}td>Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                    {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                {{co}}/div>
+                                                                                                                                                                          
+               {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+         {{co}}/body>                                                                                       
+     {{co}}/html></pre>
+           </div>
+         </div>
+   </div>
+   
+   <br>
+
+</div>
+
+
+
+<div class="tab-pane fade" id="pills-tablabootpeque" role="tabpanel" aria-labelledby="pills-tablabootpeque-tab">
+
+    <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-danger table-sm">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Apodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <div class="card-group">
+       <div class="card text-dark m-3" id="lila2">
+           <div class="card-body" id="lila2">
+             <pre class="card-text">
+  {{co}}!DOCTYPE html>
+     {{co}}html lang="en">
+         {{co}}head>                                                                                        
+             {{co}}meta charset="UTF-8">                                                                    
+             {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+             {{co}}title>Título en pestaña de la web{{co}}/title>
+             {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         {{co}}/head>                                                                                       
+         {{co}}body>    
+       
+                {{co}}div class="container">
+                    {{co}}div class="table-responsive-md">
+                        {{co}}table class="table table-danger <b>table-sm</b>">
+                            {{co}}thead class="thead">
+                                {{co}}tr>
+                                    {{co}}th scope="col">#{{co}}/th>
+                                    {{co}}th scope="col">Nombre{{co}}/th>
+                                    {{co}}th scope="col">Apellidos{{co}}/th>
+                                    {{co}}th scope="col">Apodo{{co}}/th>
+                                {{co}}/tr>
+                            {{co}}/thead>
+                            {{co}}tbody>
+                                {{co}}tr>
+                                    {{co}}th scope="row">1{{co}}/th>
+                                    {{co}}td>Mark{{co}}/td>
+                                    {{co}}td>Otto{{co}}/td>
+                                    {{co}}td>@mdo{{co}}/td>
+                                {{co}}/tr>
+                                    {{co}}tr>
+                                    {{co}}th scope="row">2{{co}}/th>
+                                    {{co}}td>Jacob{{co}}/td>
+                                    {{co}}td>Thornton{{co}}/td>
+                                    {{co}}td>@fat{{co}}/td>
+                                {{co}}/tr>
+                                {{co}}tr>
+                                    {{co}}th scope="row">3{{co}}/th>
+                                    {{co}}td>Larry{{co}}/td>
+                                    {{co}}td>the Bird{{co}}/td>
+                                    {{co}}td>@twitter{{co}}/td>
+                                {{co}}/tr>
+                            {{co}}/tbody>
+                        {{co}}/table>
+                    {{co}}/div>
+                {{co}}/div>
+                                                                                                                                                                          
+               {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+               {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+         {{co}}/body>                                                                                       
+     {{co}}/html></pre>
+           </div>
+         </div>
+   </div>
+   
+   <br>
+
+
+
+</div>
+
+
+
+
+  </div>

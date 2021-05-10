@@ -1,0 +1,62 @@
+<form autocomplete="off" [formGroup]="variableFormGroup" (ngSubmit)="guardar()">
+
+<div>
+
+<div class="form-group row">
+    <label class="col-2 col-form-label">Nombre</label>
+    <div class="col-8">
+        <input class="form-control" type="text" placeholder="Nombre" formControlName="campoNombre" [class.is-invalid]="nombreNoValido">
+        <small *ngIf="nombreNoValido" class="text-danger">Ingrese al menos 5 letras</small>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="col-2 col-form-label">Apellido</label>
+    <div class="col-8">
+    <input class="form-control" type="text" placeholder="Apellido" formControlName="campoApellido" [class.is-invalid]="apellidoNoValido">
+    <small *ngIf="apellidoNoValido" class="text-danger">El apellido es obligatorio</small>
+    </div>
+</div>
+
+</div>
+
+<div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-8">
+    <input class="form-control" type="email" placeholder="Correo electrónico" formControlName="campoCorreo" [class.is-invalid]="correoNoValido">
+    <small *ngIf="correoNoValido" class="text-danger">Ingrese el correo</small>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="col-2 col-form-label">Prueba</label>
+    <div class="col-8">
+        <input class="form-control" type="text" placeholder="Prueba" formControlName="campoPrueba">
+    </div>
+</div>
+
+<div class="form-group row" formGroupName="direccion">
+    <label class="col-2 col-form-label">Dirección</label>
+    <div class="form-row col">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Distrito" formControlName="campoDistrito" [class.is-invalid]="distritoNoValido">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Ciudad" formControlName="campoCiudad" [class.is-invalid]="ciudadNoValido">
+        </div>
+    </div>
+</div>
+
+  <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+          <button type="submit" class="btn btn-outline-dark btn-block">Guardar</button>
+      </div>
+  </div>
+
+</form>
+
+<hr>
+<pre>Estado del formulario: {{ variableFormGroup.valid }}
+Status : {{ variableFormGroup.status }}
+{{ variableFormGroup.value | json }}</pre>

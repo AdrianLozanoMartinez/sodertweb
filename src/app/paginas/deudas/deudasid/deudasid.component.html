@@ -1,0 +1,111 @@
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/deudas"><i class="fa fa-arrow-left"></i>Regresas</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="guardar(variableFormulario)" #variableFormulario="ngForm">
+
+        <div class="form-group">
+            <label>Persona</label>
+            <input type="text" class="form-control" placeholder="persona" required name="persona" [(ngModel)]="DeudasModel.persona">
+        </div>
+
+        <div class="form-group">
+            <label>Tienda</label>
+            <input type="text" class="form-control" placeholder="Tienda" name="Tienda" [(ngModel)]="DeudasModel.tienda">
+        </div>
+
+        <div class="form-group">
+            <label>Artículo</label>
+            <input type="text" class="form-control" placeholder="Artículo" name="articulo" [(ngModel)]="DeudasModel.articulo">      
+            <input type="text" class="form-control" placeholder="Precio" name="precio" [(ngModel)]="DeudasModel.precio">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo">
+            <label>Artículo 2</label>
+            <input type="text" class="form-control" placeholder="Artículo 2" name="articulo2" [(ngModel)]="DeudasModel.articulo2">
+            <input type="text" class="form-control" placeholder="Precio 2" name="precio2" [(ngModel)]="DeudasModel.precio2">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo2">
+            <label>Artículo 3</label>
+            <input type="text" class="form-control" placeholder="Artículo 3" name="articulo3" [(ngModel)]="DeudasModel.articulo3">
+            <input type="text" class="form-control" placeholder="Precio 3" name="precio3" [(ngModel)]="DeudasModel.precio3">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo3">
+            <label>Artículo 4</label>
+            <input type="text" class="form-control" placeholder="Artículo 4" name="articulo4" [(ngModel)]="DeudasModel.articulo4">
+            <input type="text" class="form-control" placeholder="Precio 4" name="precio4" [(ngModel)]="DeudasModel.precio4">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo4">
+            <label>Artículo 5</label>
+            <input type="text" class="form-control" placeholder="Artículo 5" name="articulo5" [(ngModel)]="DeudasModel.articulo5">
+            <input type="text" class="form-control" placeholder="Precio 5" name="precio5" [(ngModel)]="DeudasModel.precio5">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo5">
+            <label>Artículo 6</label>
+            <input type="text" class="form-control" placeholder="Artículo 6" name="articulo6" [(ngModel)]="DeudasModel.articulo6">
+            <input type="text" class="form-control" placeholder="Precio 6" name="precio6" [(ngModel)]="DeudasModel.precio6">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo6">
+            <label>Artículo 7</label>
+            <input type="text" class="form-control" placeholder="Artículo 7" name="articulo7" [(ngModel)]="DeudasModel.articulo7">
+            <input type="text" class="form-control" placeholder="Precio 7" name="precio7" [(ngModel)]="DeudasModel.precio7">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo7">
+            <label>Artículo 8</label>
+            <input type="text" class="form-control" placeholder="Artículo 8" name="articulo8" [(ngModel)]="DeudasModel.articulo8">
+            <input type="text" class="form-control" placeholder="Precio 8" name="precio8" [(ngModel)]="DeudasModel.precio8">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo8">
+            <label>Artículo 9</label>
+            <input type="text" class="form-control" placeholder="Artículo 9" name="articulo9" [(ngModel)]="DeudasModel.articulo9">
+            <input type="text" class="form-control" placeholder="Precio 9" name="precio9" [(ngModel)]="DeudasModel.precio9">      
+        </div>
+
+        <div class="form-group" *ngIf="DeudasModel.articulo9">
+            <label>Artículo 10</label>
+            <input type="text" class="form-control" placeholder="Artículo 10" name="articulo10" [(ngModel)]="DeudasModel.articulo10">
+            <input type="text" class="form-control" placeholder="Precio 10" name="precio10" [(ngModel)]="DeudasModel.precio10">      
+        </div>
+
+
+        <div class="form-group">
+            <label>Fecha de pedido</label>
+            <input type="date" class="form-control" placeholder="Fecha pedido" name="fechaDepedido" [(ngModel)]="DeudasModel.fechaDepedido">      
+        </div>
+
+        <div class="form-group">
+            <button *ngIf="DeudasModel.pagado" (click)="DeudasModel.pagado = false" class="btn btn-outline-success w-50" type="button">Pagado</button>
+            <button *ngIf="!DeudasModel.pagado" (click)="DeudasModel.pagado = true" class="btn btn-outline-danger w-50" type="button">No pagado</button>     
+            <br>
+            <label>Fecha pagado</label>
+            <input type="date" class="form-control" placeholder="Fecha pagado" name="fechaPagado" [(ngModel)]="DeudasModel.fechaPagado">      
+            <br>
+            <button *ngIf="DeudasModel.formaDePagado" (click)="DeudasModel.formaDePagado = false" class="btn btn-outline-info w-50" type="button">Efectivo</button>
+            <button *ngIf="!DeudasModel.formaDePagado" (click)="DeudasModel.formaDePagado = true" class="btn btn-outline-primary w-50" type="button">Tarjeta</button>
+            <br><br>
+        </div>
+
+        <div class="form-group">
+            <label>Motivo</label>
+            <input type="text" class="form-control" placeholder="Motivo" name="motivo" [(ngModel)]="DeudasModel.motivo">      
+        </div>
+
+        <hr>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-dark w-25"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+        </form>
+  </div>
+</div>

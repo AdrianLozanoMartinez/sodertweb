@@ -1,0 +1,272 @@
+       <b><a href="https://sweetalert2.github.io/#examples">Ejemplos</a></b>
+          
+      <pre><b>Ejemplo 1º</b>
+      const Toast = Swal.mixin({{c}}
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      onOpen: (toast) => {{c}}
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+      })
+      
+      Toast.fire({{c}}
+      icon: 'success',
+      title: 'Signed in successfully'
+      })
+    
+      <b>Ejemplo 2º</b>
+      Swal.fire('Any fool can use a computer')
+    
+      <b>Ejemplo 3º</b>
+      Swal.fire(
+      'The Internet?',
+      'That thing is still around?',
+      'question'
+      )
+    
+    <b>Ejemplo 4º</b>
+      Swal.fire({{c}}
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href>Why do I have this issue?</a>'
+      })
+      
+      <b>Ejemplo 5º</b>
+      Swal.fire({{c}}
+      imageUrl: 'https://placeholder.pics/svg/300x1500',
+      imageHeight: 1500,
+      imageAlt: 'A tall image'
+      })
+      
+      <b>Ejemplo 6º</b>
+      Swal.fire({{c}}
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+      })
+      
+      <b>Ejemplo 7º</b>
+      Swal.fire({{c}}
+      title: 'Custom animation with Animate.css',
+      showClass: {{c}}
+      popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {{c}}
+      popup: 'animate__animated animate__fadeOutUp'
+      }
+      })
+    
+      <b>Ejemplo 8º</b>
+      Swal.fire({{c}}
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {{c}}
+      if (result.value) {{c}}
+      Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+      )
+      }
+      })
+      
+      <b>Ejemplo 9º</b>
+      const swalWithBootstrapButtons = Swal.mixin({{c}}
+      customClass: {{c}}
+      confirmButton: 'btn btn-success',
+      cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({{c}}
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+      }).then((result) => {{c}}
+      if (result.value) {{c}}
+      swalWithBootstrapButtons.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+      )
+      } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+      ) {{c}}
+      swalWithBootstrapButtons.fire(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+      )
+      }
+      })
+      
+      <b>Ejemplo 10º</b>
+      Swal.fire({{c}}
+      title: 'Sweet!',
+      text: 'Modal with a custom image.',
+      imageUrl: 'https://unsplash.it/400/200',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      })
+    
+      <b>Ejemplo 11º</b>
+      Swal.fire({{c}}
+      title: 'Custom width, padding, background.',
+      width: 600,
+      padding: '3em',
+      background: '#fff url(/images/trees.png)',
+      backdrop: `
+      rgba(0,0,123,0.4)
+      url("/images/nyan-cat.gif")
+      left top
+      no-repeat
+      `
+      })
+
+      <b>Ejemplo 12º</b>
+      let timerInterval
+      Swal.fire({{c}}
+      title: 'Auto close alert!',
+      html: 'I will close in milliseconds.',
+      timer: 2000,
+      timerProgressBar: true,
+      onBeforeOpen: () => {{c}}
+      Swal.showLoading()
+      timerInterval = setInterval(() => {{c}}
+      const content = Swal.getContent()
+      if (content) {{c}}
+      const b = content.querySelector('b')
+      if (b) {{c}}
+      b.textContent = Swal.getTimerLeft()
+      }
+      }
+      }, 100)
+      },
+      onClose: () => {{c}}
+      clearInterval(timerInterval)
+      }
+      }).then((result) => {{c}}
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {{c}}
+      console.log('I was closed by the timer')
+      }
+      })
+      
+      <b>Ejemplo 13º</b>
+      Swal.fire({{c}}
+      title: 'هل تريد الاستمرار؟',
+      icon: 'question',
+      iconHtml: '؟',
+      confirmButtonText: 'نعم',
+      cancelButtonText: 'لا',
+      showCancelButton: true,
+      showCloseButton: true
+      })
+      
+      <b>Ejemplo 14º</b>
+      Swal.fire({{c}}
+      title: 'Submit your Github username',
+      input: 'text',
+      inputAttributes: {{c}}
+      autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Look up',
+      showLoaderOnConfirm: true,
+      preConfirm: (login) => {{c}}
+      return fetch(`//api.github.com/users/${{c}}login}`)
+      .then(response => {{c}}
+      if (!response.ok) {{c}}
+      throw new Error(response.statusText)
+      }
+      return response.json()
+      })
+      .catch(error => {{c}}
+      Swal.showValidationMessage(
+      `Request failed: ${{c}}error}`
+      )
+      })
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+      }).then((result) => {{c}}
+      if (result.value) {{c}}
+      Swal.fire({{c}}
+      title: `${{c}}result.value.login}'s avatar`,
+      imageUrl: result.value.avatar_url
+      })
+      }
+      })
+      
+      <b>Ejemplo 15º</b>
+      Swal.mixin({{c}}
+      input: 'text',
+      {{co}}
+      showCancelButton: true,
+      progressSteps: ['1', '2', '3']
+      }).queue([
+      {{c}}
+      title: 'Question 1',
+      text: 'Chaining swal2 modals is easy'
+      },
+      'Question 2',
+      'Question 3'
+      ]).then((result) => {{c}}
+      if (result.value) {{c}}
+      const answers = JSON.stringify(result.value)
+      Swal.fire({{c}}
+      title: 'All done!',
+      html: `
+      Your answers:
+      {{co}}{{coo}}{{coop}}
+      `,
+      confirmButtonText: 'Lovely!'
+      })
+      }
+      })
+    
+      <b>Ejemplo 16º</b>
+      {{irracional}}
+    
+      <b>Ejemplo 17º</b>
+    const {{c}} value: formValues } = await Swal.fire({{c}}
+      title: 'Multiple inputs',
+      html:
+      {{vawe}}
+      focusConfirm: false,
+      preConfirm: () => {{c}}
+      return [
+      document.getElementById('swal-input1').value,
+      document.getElementById('swal-input2').value
+      ]
+      }
+      })
+      
+      if (formValues) {{c}}
+      Swal.fire(JSON.stringify(formValues))
+      }
+
+      <b>Ejemplo 18º</b>
+    Swal.fire({{c}}
+      {{mee}}
+      })</pre>
+
+      <button class="btn btn-dark m-2" [routerLink]="['/sweepalert2']">Atras</button>

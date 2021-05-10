@@ -1,0 +1,805 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-cssborde-tab" data-toggle="pill" href="#pills-cssborde" role="tab" aria-controls="pills-cssborde" aria-selected="true" style="color: black;">Simple</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cssborde0-tab" data-toggle="pill" href="#pills-cssborde0" role="tab" aria-controls="pills-cssborde0" aria-selected="false" style="color: black;">Estilo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-cssborde1-tab" data-toggle="pill" href="#pills-cssborde1" role="tab" aria-controls="pills-cssborde1" aria-selected="false" style="color: black;">Posición</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cssbordeextra-tab" data-toggle="pill" href="#pills-cssbordeextra" role="tab" aria-controls="pills-cssbordeextra" aria-selected="false" style="color: black;">Tamaño</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cssbordeextra2-tab" data-toggle="pill" href="#pills-cssbordeextra2" role="tab" aria-controls="pills-cssbordeextra2" aria-selected="false" style="color: black;">Color</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cssborde2-tab" data-toggle="pill" href="#pills-cssborde2" role="tab" aria-controls="pills-cssborde2" aria-selected="false" style="color: black;">Separación<br>entre bordes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cssborde5-tab" data-toggle="pill" href="#pills-cssborde5" role="tab" aria-controls="pills-cssborde5" aria-selected="false" style="color: black;">Separación bordes exterior<br>con fondo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-cssborde3-tab" data-toggle="pill" href="#pills-cssborde3" role="tab" aria-controls="pills-cssborde3" aria-selected="false" style="color: black;">Redondeados</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-cssborde4-tab" data-toggle="pill" href="#pills-cssborde4" role="tab" aria-controls="pills-cssborde4" aria-selected="false" style="color: black;">Imagen<br><small>como borde</small></a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-cssborde" role="tabpanel" aria-labelledby="pills-cssborde-tab">
+
+      <div class="simple">Borde</div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div class="simple">Borde{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">.simple{{c}}
+    <b>border: 5px limegreen solid;  </b>      
+          /*Grosor Color  Estilo*/
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-cssborde0" role="tabpanel" aria-labelledby="pills-cssborde0-tab">
+      
+      <h3>Normal</h3>
+      <div class="solid">Borde solid - recto contínuo</div>
+<br>
+<div class="dashed">Borde dashed - recto discontínuo</div>
+<br>
+<div class="dotted">Borde dotted - puntos discontínuo</div>
+<br>
+<div class="double">Borde double - recto doble</div>
+<br>
+<div class="dos">Dos tipos de bordes</div>
+<br>
+<div class="tres">Tres tipos de bordes</div>
+<br>
+<div class="cuatro">Cuatro tipos de bordes</div>
+<br>
+<div class="topp">Borde top</div>
+<br>
+<div class="bottomm">Borde bottom</div>
+<br>
+<div class="leftt">Border left</div>
+<br>
+<div class="rightt">Border right</div>  
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div class="solid">Borde solid - recto contínuo{{co}}/div>
+      {{co}}br>
+      {{co}}div class="dashed">Borde dashed - recto discontínuo{{co}}/div>
+      {{co}}br>
+      {{co}}div class="dotted">Borde dotted - puntos discontínuo{{co}}/div>
+      {{co}}br>
+      {{co}}div class="double">Borde double - recto doble{{co}}/div>
+      {{co}}br>
+      {{co}}div class="dos">Dos tipos de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="tres">Tres tipos de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="cuatro">Cuatro tipos de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="topp">Borde top{{co}}/div>
+      {{co}}br>
+      {{co}}div class="bottomm">Borde bottom{{co}}/div>
+      {{co}}br>
+      {{co}}div class="leftt">Border left{{co}}/div>
+      {{co}}br>
+      {{co}}div class="rightt">Border right{{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">.solid{{c}}
+    border: 5px rgb(50, 187, 205) <b>solid</b>;        
+         /*Grosor      Color    Recto - línea*/
+}
+
+.dashed{{c}}
+    border: 5px rgb(50, 187, 205) <b>dashed</b>;        
+         /*Grosor      Color    Recto - discontínuo*/
+}
+
+.dotted{{c}}
+    border: 5px rgb(50, 187, 205) <b>dotted</b>;        
+         /*Grosor      Color    Punto - discontínuo*/
+}
+
+.double{{c}}
+    border: 5px rgb(50, 187, 205) <b>double</b>;        
+         /*Grosor      Color    Recto - doble*/
+}
+
+#dos{{c}}
+    border: 5px rgb(50, 187, 205) double;
+    border<b>-style</b>: <b>dashed dotted</b>;
+            /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+#tres{{c}}
+    border: 5px rgb(50, 187, 205) double;
+    border<b>-style</b>: <b>dashed dotted</b> <b>double</b>;
+            /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+#cuatro{{c}}
+    border: 5px rgb(50, 187, 205) double;        
+    border<b>-style</b>: <b>dashed dotted</b> <b>double solid</b>;
+            /*Arriba, Derecha, Abajo, Izquierda*/
+}
+
+.topp{{c}}
+    border: firebrick 5px;
+    border<b>-top-style: dashed;</b>
+}
+
+.bottomm{{c}}
+    border: firebrick 5px;
+    border<b>-bottom-style: dashed;</b>
+}
+
+.leftt{{c}}
+    border: firebrick 5px;
+    border<b>-left-style: dashed;</b>
+}
+
+.rightt{{c}}
+    border: firebrick 5px;
+    border<b>-right-style: dashed;</b>
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+      
+ <br>     
+<h3>Relieve</h3>
+<div class="groove">Borde groove - relieve - Se ve dependiendo el color</div>
+<br>
+<div class="ridge">Borde ridge - relieve - Se ve dependiendo el color</div>
+<br>
+<div class="inset">Borde inset - relieve - Se ve dependiendo el color</div>
+<br>
+<div class="outset">Borde outset - relieve - Se ve dependiendo el color</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+<b>{{co}}div class="groove">Borde groove - relieve - Se ve dependiendo el color{{co}}/div>
+  {{co}}br>
+  {{co}}div class="ridge">Borde ridge - relieve - Se ve dependiendo el color{{co}}/div>
+  {{co}}br>
+  {{co}}div class="inset">Borde inset - relieve - Se ve dependiendo el color{{co}}/div>
+  {{co}}br>
+  {{co}}div class="outset">Borde outset - relieve - Se ve dependiendo el color{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.groove{{c}}
+    border: 5px white <b>groove</b>;        
+         /*Grosor Color Relieve*/
+}
+
+.ridge{{c}}
+    border: 5px white <b>ridge</b>;        
+         /*Grosor Color Relieve*/
+}
+
+.inset{{c}}
+    border: 5px white <b>inset</b>;        
+         /*Grosor Color Relieve*/
+}
+
+.outset{{c}}
+    border: 5px white <b>outset</b>;        
+         /*Grosor Color Relieve*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+      </div>
+
+    <div class="tab-pane fade" id="pills-cssborde1" role="tabpanel" aria-labelledby="pills-cssborde1-tab">
+
+<h3>Una línea</h3>
+<div class="top">Borde top</div>
+<div class="bottom">Borde bottom</div>
+<div class="left">Borde left</div>
+<div class="right">Borde right</div> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="top">Borde top{{co}}/div>
+    {{co}}div class="bottom">Borde bottom{{co}}/div>
+    {{co}}div class="left">Borde left{{co}}/div>
+    {{co}}div class="right">Borde right{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.top {{c}}
+    <b>border-top</b>: red 5px solid;
+}
+.bottom {{c}}
+    <b>border-bottom</b>: red 5px solid;
+}
+.left {{c}}
+    <b>border-left</b>: red 5px solid;
+}
+.right {{c}}
+    <b>border-right</b>: red 5px solid;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+      
+      
+      
+    <br>  
+<h3>Varias líneas</h3>
+<div class="maslineas">Más líneas</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="maslineas">Más líneas{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.maslineas{{c}}
+    <b>border-top</b>: red 5px solid;
+    <b>border-bottom</b>: rgb(157, 255, 0) 15px dashed;
+    <b>border-left</b>: rgb(0, 102, 255) 10px dotted;
+    <b>border-right</b>: rgb(255, 0, 128) 20px double;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<h3>Especificando</h3>
+<div class="todo">Todas las líneas</div>
+<br>
+<div class="dos">Líneas Top-Bottom y Right-Left</div>
+<br>
+<div class="tres">Líneas Arriba, Abajo y Right-Left</div>
+<br>
+<div class="cuatro">Líneas Arriba, Abajo, Right y Left</div> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="todo">Todas las líneas{{co}}/div>
+    {{co}}br>
+    {{co}}div class="dos">Líneas Top-Bottom y Right-Left{{co}}/div>
+    {{co}}br>
+    {{co}}div class="tres">Líneas Arriba, Abajo y Right-Left{{co}}/div>
+    {{co}}br>
+    {{co}}div class="cuatro">Líneas Arriba, Abajo, Right y Left{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.todo{{c}}
+  <b>border-color</b>: rgb(0, 255, 221);
+  <b>border-width</b>: 10px;
+  <b>border-style</b>: dashed;
+}
+
+.dos{{c}}
+    border-color: <b>rgb(0, 255, 221) rgb(94, 85, 4)</b>;
+    border-width: <b>10px 5px</b>;
+    border-style: <b>dashed solid</b>;
+}
+
+.tres{{c}}
+    border-color: <b>rgb(0, 255, 221) rgb(94, 85, 4) red</b>;
+    border-width: <b>10px 5px 3px</b>;
+    border-style: <b>dashed solid double</b>;
+}
+
+.cuatro{{c}}
+    border-color: <b>rgb(0, 255, 221) rgb(94, 85, 4) red lightseagreen</b>;
+    border-width: <b>10px 5px 3px 15px</b>;
+    border-style: <b>dashed solid double dotted</b>;
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+</div>
+
+    <div class="tab-pane fade" id="pills-cssborde2" role="tabpanel" aria-labelledby="pills-cssborde2-tab">
+
+      <div class="separacion">Bordes con separación</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="separacion">Bordes con separación{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.separacion{{c}}
+  border: 5px dotted rgb(233, 166, 20);   /*Borde más cercano al contenido*/
+  margin: 30px;                             /*Para que se vean los bordes*/
+  <b>outline</b>: 5px solid rgb(0, 255, 136);   /*Borde más lejos al contenido*/
+  <b>outline-offset</b>: 5px;                     /*Distancia de separación entre bordes, necesita el anterior outline*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+        
+    </div>
+
+    <div class="tab-pane fade" id="pills-cssborde3" role="tabpanel" aria-labelledby="pills-cssborde3-tab">
+
+      <p id="c1"></p>
+<p id="c10"></p>
+<p id="c2"></p>
+<p id="c3"></p>
+<p id="c4"></p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}p id="c1">{{co}}/p>
+    {{co}}p id="c10">{{co}}/p>
+    {{co}}p id="c2">{{co}}/p>
+    {{co}}p id="c3">{{co}}/p>
+    {{co}}p id="c4">{{co}}/p></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">p{{c}}       /*USADO PARA QUE SE VEA EL EFECTO, <b>NO NECESARIO</b>*/
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+  margin-top: 25px;
+  background-color: green;
+  position: relative;
+  display: inline-flex;       /*Posición horizontal de los cuadros*/
+  top: 0;
+  left: 20px;
+}
+
+#c1{{c}}
+  <b>border-radius: 10px;</b>        /*<b>Todas</b> las esquinas*/
+}
+
+#c10{{c}}
+  <b>border-radius: 50%;</b>        /*50% o 50px o más para ponerlo <b>redondo</b>*/
+}
+
+#c2{{c}}
+  <b>border-radius: 50% 35px;</b>   /*<b>2</b> Esquinas*/       
+               /*50% -> arriba-izquierda/abajo-derecha
+                      35px -> arriba-derecha/abajo-izquierda*/
+}
+
+#c3{{c}}
+ <b> border-radius: 50% 35px 45px;</b>  /*<b>3</b> Esquinas*/
+               /*50% -> arriba-izquierda
+                      35px -> arriba-derecha y abajo-izquierda
+                           45px -> abajo-derecha*/
+}
+
+#c4{{c}}
+  <b>border-radius: 50% 35px 45px 75px;</b> /*<b>4</b> Esquinas*/
+               /*50% -> arriba-izquierda
+                      35px -> arriba-derecha
+                           45px -> abajo-derecha
+                                75px -> abajo-izquierda*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+<pre></pre>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-cssborde4" role="tabpanel" aria-labelledby="pills-cssborde4-tab">
+
+      <div id="b1">Borde de imágen</div> 
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div id="b1">Borde de imágen{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#b1{{c}}
+  <b>padding: 20px;</b>                                                      /*Necesario para introducir datos*/
+  <b>border: 1px solid black;</b>                                          /*Necesario para que salga el borde de imagen*/
+  <b>border-image-source: url("../../../../../assets/imagenes/01.jpg");</b>  /*Usar imagen como borde*/
+  <b>border-image-width: 25px;</b>                                           /*Grosor del borde de la imagen*/
+  <b>border-image-repeat: no-repeat;</b>                                     /*Se repita o no la imagen en el borde*/
+                      /*<b>repear</b>*/
+  <b>border-image-slice: 35%;</b>                                            /*Es la forma de cortar la imagen como marco, en este caso se corta en 9 partes , admite % y números*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-cssborde5" role="tabpanel" aria-labelledby="pills-cssborde5-tab">
+
+      <p id="paddingbox">Padding-box</p>
+<p id="borderbox">Border-box</p>
+<p id="contentbox">Content-box</p>
+<p id="initial">Initial</p>
+<p id="inherit">Inherit</p>
+
+<div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}p id="paddingbox">Padding-box{{co}}/p>
+    {{co}}p id="borderbox">Border-box{{co}}/p>
+    {{co}}p id="contentbox">Content-box{{co}}/p>
+    {{co}}p id="initial">Initial{{co}}/p>
+    {{co}}p id="inherit">Inherit{{co}}/p></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">#paddingbox{{c}}
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: padding-box;</b>                     /*Arriba-izquierda del padding*/                               
+}
+
+#borderbox{{c}}
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: border-box</b>;                     /*Se origina a partir de la esquina arriba-izquierda*/                                  
+}
+
+#contentbox{{c}}
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: content-box;</b>                     /*Arriba-Izquierda del contenido*/                             
+}
+
+#initial{{c}}
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: initial;</b>                     /*No se ve efecto, <b>investigar</b> más adelante*/                             
+}
+
+#inherit{{c}}
+  border: rgb(245, 0, 0) 10px dotted;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  <b>background-clip: inherit;</b>                     /*No se ve efecto, <b>investigar</b> más adelante*/                              
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+      </div>
+  
+
+      <div class="tab-pane fade" id="pills-cssbordeextra" role="tabpanel" aria-labelledby="pills-cssbordeextra-tab">
+ 
+        <div class="todos">Todos los tamaños de bordes</div>
+        <br>
+        <div class="dos">Dos tamaños de bordes</div>
+        <br>
+        <div class="tres">Tres tamaños de bordes</div>
+        <br>
+        <div class="cuatro">Cuatro tamaños de bordes</div>
+
+ <div class="card-group">
+  <div class="card text-dark bg-warning m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+{{co}}head> 
+{{co}}meta charset="UTF-8">
+{{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{co}}title>Título de pestaña{{co}}/title>
+{{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+{{co}}/head>
+{{co}}body>
+    <b>{{co}}div class="todos">Todos los tamaños de bordes{{co}}/div>
+    {{co}}br>
+    {{co}}div class="dos">Dos tamaños de bordes{{co}}/div>
+    {{co}}br>
+    {{co}}div class="tres">Tres tamaños de bordes{{co}}/div>
+    {{co}}br>
+    {{co}}div class="cuatro">Cuatro tamaños de bordes{{co}}/div></b> 
+{{co}}/body>
+{{co}}/html></pre>
+      </div>
+    </div>
+    <div class="card text-dark bg-info m-3" >
+      <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+      <div class="card-body">
+        <pre class="card-text">.todos{{c}}
+  border: rgb(50, 187, 205) double;        
+  <b>border-width: 5px;</b>
+}
+
+.dos{{c}}
+  border: rgb(50, 187, 205) double;        
+  <b>border-width: 5px 12px;</b>
+          /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+.tres{{c}}
+  border: rgb(50, 187, 205) double;        
+  <b>border-width: 5px 12px 1px;</b>
+          /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+.cuatro{{c}}
+  border: rgb(50, 187, 205) double;        
+  <b>border-width: 5px 12px 1px 50px;</b>
+          /*Arriba, Derecha, Abajo, Izquierda*/
+}</pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+<div class="tab-pane fade" id="pills-cssbordeextra2" role="tabpanel" aria-labelledby="pills-cssbordeextra2-tab">
+
+  <div class="todos2">Todos los colores de bordes</div>
+<br>
+<div class="dos2">Dos colores de bordes</div>
+<br>
+<div class="tres2">Tres colores de bordes</div>
+<br>
+<div class="cuatro2">Cuatro colores de bordes</div>
+
+  <div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+  {{co}}head> 
+  {{co}}meta charset="UTF-8">
+  {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{co}}title>Título de pestaña{{co}}/title>
+  {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}div class="todos2">Todos los colores de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="dos2">Dos colores de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="tres2">Tres colores de bordes{{co}}/div>
+      {{co}}br>
+      {{co}}div class="cuatro2">Cuatro colores de bordes{{co}}/div></b> 
+  {{co}}/body>
+  {{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">.todos2{{c}}
+  border: 5px double;        
+  <b>border-color:rgb(92, 0, 128);</b>
+}
+
+.dos2{{c}}
+  border: 5px double;        
+  <b>border-color: rgb(92, 0, 128) blue;</b>
+              /*Arriba-Abajo, Derecha-Izquierda*/
+}
+
+.tres2{{c}}
+  border: 5px double;        
+  <b>border-color:  rgb(92, 0, 128) blue lightgreen;</b>
+                   /*Arriba, Derecha-Izquierda, Abajo*/
+}
+
+.cuatro2{{c}}
+  border: 5px double;        
+  <b>border-color: rgb(92, 0, 128)  blue lightgreen darkmagenta;</b>
+                      /*Arriba,    Derecha,    Abajo,     Izquierda*/
+}</pre>
+        </div>
+      </div>
+  </div>
+  
+
+</div>
+
+  </div>

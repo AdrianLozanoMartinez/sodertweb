@@ -1,0 +1,78 @@
+<b><u>Comprobar si funciona</u>: Entrar en <a href="https://firebase.google.com">Firebase</a> -> Proyecto elegido -> Cloud Firestore -> Le damos a la carpeta creada y le damos a la imagen obtenemos el url del almacenamiento de la imagen y luego copiamos el contenido de valor</b>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-4">
+  
+      <h3>Seleccione archivos</h3>
+
+      <!--1º Opción - Muchos códigos no recomendado -->
+      <!-- <div appDirectivasubida (mouseSobre)="pruebaSobreElemento($event)" [ngClass]="{ 'clase_especial_creada_por_mi': estaSobreElemento }"> -->
+                              <!-- (mouseSobre)="pruebaSobreElemento($event)": Llamamos a la directiva a través del elemento(mouseSobre) y del 
+                                                                               componente.ts a través de la función (pruebaSobreElemento($event)) -->
+      <!--2º Opción - Más recomendado -->
+      <div appDirectivasubida [archivos]="archivos" (mouseSobre)="estaSobreElemento = $event" [ngClass]="{ 'clase_especial_creada_por_mi': estaSobreElemento }">
+  <!-- div appDirectivasubida: Ponemos el selector de la directiva (selector: '[appDirectivasubida]' -> appDirectivasubida). Se pone en el cuadro que queremos 
+                               que arrastrando se cargue el archivo, en este caso un div y dentro una imagen -->
+                         <!-- [archivos]: Proviene del @Input (@Input() archivos: FileItem[] = [];) de la directiva.ts (NgDropFilesDirective) -->
+                                    <!-- ="archivos": : Proviene del componente.ts (archivos: FileItem[] = [];) -->
+                                               <!-- (mouseSobre)="estaSobreElemento = $event": Igual que anterior pero en vez de usar la función del componente.ts 
+                                                                                               y la directiva.ts usamos la variable que creamos en componente.ts 
+                                                                                               (estaSobreElemento) -->
+                                                                                          <!--[ngClass]="{{c}} 'clase_especial_creada_por_mi': estaSobreElemento }": 
+                                                                                              Llama a la clase ([ngClass]) una que pongamos 
+                                                                                              (clase_especial_creada_por_mi) creada en componente.css 
+                                                                                              (.clase_especial_creada_por_mi {{c}} border: red dotted 3px; }) -->
+                                                                                              
+
+          <h4>Deje caer aquí los archivos</h4>
+          <img src="../../../../../../assets/imagenes/drop-images.png" width="100px" height="100px">
+      </div>
+  </div>
+  
+  <div class="col-md-8">
+  
+      <h4>Cargar archivos</h4>
+  
+      <button class="btn btn-success"(click)="cargarImagenes()" [disabled]="archivos.length == 0">Cargar a Firebase</button>
+      <button class="btn btn-danger" (click)="limpiarArchivos()">Limpiar</button>
+                                <!-- (click)="limpiarArchivos()": : Al hacer click llame a la función ("limpiarArchivos()") del componente.ts -->
+  
+      <table class="table">
+          <thead class="thead=dark">
+              <tr>
+                  <th>Nombre archivo</th>
+                  <th>Tamaño</th>
+                  <th>Progreso</th>
+              </tr>
+          </thead>
+      
+          <tbody>
+              <tr *ngFor="let archivo of archivos">
+              <!--*ngFor="let archivo of archivos": Recorremos con For cada archivo del arreglo (archivos) sacado del componente.ts 
+                                                    (archivos: FileItem[] = [];) y lo metemos en la variable local (archivo) -->
+                  <td [ngClass]="{ 'text-green': archivo.progreso >= 100 }">{{archivo.nombreArchivo}}</td>
+                  <!--[ngClass]="{ 'text-green': archivo.progreso >= 100 }": Llama al componente.css ([ngClass]), la clase de ponerlo en verde las 
+                                                                             letras ('text-green') cuando la variable local (archivo) punto (.) 
+                                                                             subvariable (progreso) sea mayor o igual (>=) a 100% -->
+                                                                         <!-- archivo.nombreArchivo: Sacamos cada archivo por la variable local (archivo) el nombre 
+                                                                                                     del archivo (nombreArchivo) que es sacado del model (FileItem) -->
+                  <td>{{archivo.archivo.size / 1024 / 1024 | number: '.2-2'}} MB</td>
+                   <!-- archivo.archivo.size / 1024 / 1024 | number: '.2-2': Sacamos cada archivo por la variable local (archivo) el archivo (archivo) que es sacado 
+                                                                             del model (FileItem) y se saca el tamaño ( size) aunque lo saca en Byte. Lo dividimos 2 
+                                                                             veces por 1024 para pasarlo a MB y lo pasamos a través de un pipe a 2 decimales numéricos 
+                                                                             (| number: '.2-2') -->
+                  <td>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': archivo.progreso + '%' }"></div>
+                                                                 <!--[ngStyle]="{ 'width': archivo.progreso + '%' }": Modificamos el style del progress. Para ejecutar 
+                                                                                           style ([ngStyle]) con modificación del width según la variable local (archivo) 
+                                                                                           especialmente la subvariable (progreso), el número más el porcentaje -->
+                    </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

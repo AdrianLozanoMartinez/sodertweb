@@ -1,0 +1,84 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-instalacionangular-tab" data-toggle="pill" href="#pills-instalacionangular" role="tab" aria-controls="pills-instalacionangular" aria-selected="true" style="color: black;">NodeJS<br><small>(Programa necesario)</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular0-tab" data-toggle="pill" href="#pills-instalacionangular0" role="tab" aria-controls="pills-instalacionangular0" aria-selected="false" style="color: black;">Angular</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular1-tab" data-toggle="pill" href="#pills-instalacionangular1" role="tab" aria-controls="pills-instalacionangular1" aria-selected="false" style="color: black;">Upgrade /<br>Downgrade</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular2-tab" data-toggle="pill" href="#pills-instalacionangular2" role="tab" aria-controls="pills-instalacionangular2" aria-selected="false" style="color: black;">Compartir</a>
+    </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade show active" id="pills-instalacionangular" role="tabpanel" aria-labelledby="pills-instalacionangular-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b><a href="https://nodejs.org/es/"><u>Descargar</u></a></b> <small> -> La más recomendable (14.9.0 Actual)</small> e <b>Instalar</b> -> <small>(node-v14.9.0-x64.msi)</small></li>
+<li><b>Ver versión</b>: Terminal/MSDOS -> <b>node –v</b></li>
+<li><b>Si tenemos problema</b> -> En el buscador de windows ponemos -> <abbr title="o simplemente ponemos variable y nos aparecerá lo escrito aquí">Edita las variables de entorno del sistema</abbr>:
+    <em>Opciones avanzada</em> -> <em>Variable de entorno</em>
+    <em>Path</em> -> <em>Editar</em> -> <em>Nuevo</em> -> Escribimos la dirección donde esté el <i>bin</i> del <i>NodeJS</i></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-instalacionangular0" role="tabpanel" aria-labelledby="pills-instalacionangular0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><u>Última versión</u> <b> -> npm install -g @angular/cli</b> <small>   (<abbr title="Global - Afecta a TODOS los proyectos">-g</abbr> / <abbr title="Local - Afecta SOLO al proyecto">Sin -g</abbr> -> Necesita ejecutar administrador en consola)</small></li>
+    <li><u>Elegir versión</u> <b> -> npm install –g @angular/cli@número</b> <small>(número = 7.3.9 u 8 o 9 o ...)</small></li>
+</ul><ul><b>VER VERSIÓN</b>
+    <li><u>Sin detalles</u><b> -> npm –v</b><small> (Actualmente 6.14.8)</small></li>
+    <li><u>Con detalles</u><b> -> ng --version</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-instalacionangular1" role="tabpanel" aria-labelledby="pills-instalacionangular1-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><u>Upgrade</u> <b> -> ng update @angular/cli@número @angular/core@número</b> <small>(número = 10 o ...)</small></li>
+<li><u>Downgrade</u>
+    <ol><li><u>Desinstalar</u> <b> -> npm uninstall -g @angular/cli</b></li>
+        <li><u>Verificar</u> <b> -> npm cache verify</b></li>
+        <li><u>Instalar</u> <b> -> npm install –g @angular/cli@número</b> <small>(número = 7.3.9 u 8 o 9 o ...)</small></li></ol></li></ul>
+<ul><b>VER VERSIÓN</b><li><u>Sin detalles</u><b> -> npm –v</b><small> (Actualmente 6.14.8)</small></li>
+<li><u>Con detalles</u><b> -> ng --version</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-instalacionangular2" role="tabpanel" aria-labelledby="pills-instalacionangular2-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ol><li><b>Emisor</b> envía el proyecto <u>sin</u> el <b>node_module</b> <small>. Porque pesa mucho</small></li>
+<li><b>Receptor</b> recibe el proyecto y ejecuta <u>dentro del proyecto</u> <b> npm install</b> para <u>obtener</u> el <b>node_module</b></li></ol></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

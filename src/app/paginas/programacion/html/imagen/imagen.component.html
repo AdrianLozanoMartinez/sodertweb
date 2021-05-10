@@ -1,0 +1,119 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-htmlimagen-tab" data-toggle="pill" href="#pills-htmlimagen" role="tab" aria-controls="pills-htmlimagen" aria-selected="true" style="color: black;">Imagen</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-htmlimagen0-tab" data-toggle="pill" href="#pills-htmlimagen0" role="tab" aria-controls="pills-htmlimagen0" aria-selected="false" style="color: black;">Responsive</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-htmlimagen1-tab" data-toggle="pill" href="#pills-htmlimagen1" role="tab" aria-controls="pills-htmlimagen1" aria-selected="false" style="color: black;">Mapeo de<br>imágenes</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-htmlimagen" role="tabpanel" aria-labelledby="pills-htmlimagen-tab">
+
+        <img src="../../../../../assets/imagenes/01.jpg" alt="Descripción " width="50px" height="50px">
+         <!--Src: imagen.jpg / jpeg / gif / png          Alt=Descripción, no sale en html  
+                                                                            Width=Ancho  Height=Largo-->
+
+        <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}img src="../../../../../assets/imagenes/01.jpg" alt="Descripción " width="50px" height="50px">
+         {{co}}!--Src: imagen.jpg / jpeg / gif / png          Alt=Descripción, no sale en html  
+                                                                            Width=Ancho  Height=Largo--></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-htmlimagen0" role="tabpanel" aria-labelledby="pills-htmlimagen0-tab">
+
+        <picture>
+            <source media="(min-width: 650px)" srcset="../../../../../assets/imagenes/01.jpg"><!-- Sale desde 650 o más px -->
+            <source media="(min-width: 450px)" srcset="../../../../../assets/imagenes/fondoestrellas.gif"><!-- Sale entre 450 a 650 px -->
+            <img scr="../../../../../assets/imagenes/drop-images.png"><!-- Sale si no cumple las medidas, en este caso, si es menos de 450 -->
+        </picture>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}picture>
+            {{co}}source media="(min-width: 650px)" srcset="../../../../../assets/imagenes/01.jpg">                 {{co}}!-- Sale desde 650 o más px -->
+            {{co}}source media="(min-width: 450px)" srcset="../../../../../assets/imagenes/fondoestrellas.gif">     {{co}}!-- Sale entre 450 a 650 px -->
+            {{co}}img scr="../../../../../assets/imagenes/drop-images.png">                                         {{co}}!-- Sale si no cumple las medidas, en este caso, si es menos de 450 -->
+        {{co}}/picture></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-htmlimagen1" role="tabpanel" aria-labelledby="pills-htmlimagen1-tab">
+
+        <img src="../../../../../assets/imagenes/01.jpg" usemap="#mapa" width="300px" height="300px">
+<map name="mapa"><!--NAME igual nombre que USEMAP pero con #-->
+    <area shape="rect" coords="34,44,80,80" alt="Google" href="https://www.google.es">  <!--Cuadrado. Coordenadas,  x,y->x2,y2. Esquina superior izquierda y la esquina inferior derecha-->
+    <area shape="circle" coords="180, 180,20" alt="As" href="https://as.com">  <!--Círculo. Coordenadas      x,   y, radio. Centro de la circunferencia y radio-->
+    <area shape="poly" coords="148,59,142,49,135,41,128,38,121,34,125,25,135,16,155,11,177,19,188,27,187,36,177,39" alt="Tutorial de css" href="/archivo.html">  <!--Todo. Coordenadas       x1,y1, x2,y2.....x1=xN, y1=yN. No hay límites, del 1 hasta N. Si falta algún hueco el navegador se encarga en rellenarlo-->
+    <area shape="default" href="https://www.youtube.com">  <!--Default: Para llenar los espacios que no se han llenado-->
+</map>
+
+<div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}img src="../../../../../assets/imagenes/01.jpg" usemap="#mapa" width="300px" height="300px">
+            {{co}}map name="mapa">                                                                       {{co}}!--NAME igual nombre que USEMAP pero con #-->
+                {{co}}area shape="rect" coords="34,44,80,80" alt="Google" href="https://www.google.es">  {{co}}!--Cuadrado. Coordenadas,  x,y->x2,y2. Esquina superior izquierda y la esquina inferior derecha-->
+                {{co}}area shape="circle" coords="180, 180,20" alt="As" href="https://as.com">           {{co}}!--Círculo. Coordenadas      x,   y, radio. Centro de la circunferencia y radio-->
+                {{co}}area shape="poly" coords="148,59,142,49,135,41,128,38,121,34,125,25,135,16,155,11,177,19,188,27,187,36,177,39" alt="Tutorial de css" href="/archivo.html">  {{co}}!--Todo. Coordenadas       x1,y1, x2,y2.....x1=xN, y1=yN. No hay límites, del 1 hasta N. Si falta algún hueco el navegador se encarga en rellenarlo-->
+                {{co}}area shape="default" href="https://www.youtube.com">                               {{co}}!--Default: Para llenar los espacios que no se han llenado-->
+            {{co}}/map></b>
+    {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+      </div> 
+
+
+
+    </div>
+
+</div>

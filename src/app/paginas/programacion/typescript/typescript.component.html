@@ -1,0 +1,327 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript-tab" data-toggle="pill" href="#pills-tpscript" role="tab" aria-controls="pills-tpscript" aria-selected="true" style="color: black;">Instalación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript8-tab" data-toggle="pill" href="#pills-tpscript8" role="tab" aria-controls="pills-tpscript8" aria-selected="false" style="color: black;">Configuración</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript4-tab" data-toggle="pill" href="#pills-tpscript4" role="tab" aria-controls="pills-tpscript4" aria-selected="false" style="color: black;">Evitar<br>archivo.js</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript0-tab" data-toggle="pill" href="#pills-tpscript0" role="tab" aria-controls="pills-tpscript0" aria-selected="false" style="color: black;">Funcionamiento</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript1-tab" data-toggle="pill" href="#pills-tpscript1" role="tab" aria-controls="pills-tpscript1" aria-selected="false" style="color: black;">Variables</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript3-tab" data-toggle="pill" href="#pills-tpscript3" role="tab" aria-controls="pills-tpscript3" aria-selected="false" style="color: black;">Funciones</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript5-tab" data-toggle="pill" href="#pills-tpscript5" role="tab" aria-controls="pills-tpscript5" aria-selected="false" style="color: black;">Promesa</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript2-tab" data-toggle="pill" href="#pills-tpscript2" role="tab" aria-controls="pills-tpscript2" aria-selected="false" style="color: black;">Mostrar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript6-tab" data-toggle="pill" href="#pills-tpscript6" role="tab" aria-controls="pills-tpscript6" aria-selected="false" style="color: black;">Interfaces</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript7-tab" data-toggle="pill" href="#pills-tpscript7" role="tab" aria-controls="pills-tpscript7" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript9-tab" data-toggle="pill" href="#pills-tpscript9" role="tab" aria-controls="pills-tpscript9" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript10-tab" data-toggle="pill" href="#pills-tpscript10" role="tab" aria-controls="pills-tpscript10" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript11-tab" data-toggle="pill" href="#pills-tpscript11" role="tab" aria-controls="pills-tpscript11" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript12-tab" data-toggle="pill" href="#pills-tpscript12" role="tab" aria-controls="pills-tpscript12" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="pills-tpscript" role="tabpanel" aria-labelledby="pills-tpscript-tab"><hr><app-instalaciontype></app-instalaciontype></div>
+
+    <div class="tab-pane fade" id="pills-tpscript8" role="tabpanel" aria-labelledby="pills-tpscript8-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><h4>tsc --init</h4></li>
+<li><b>Obtenemos</b>:
+{{c}}
+  "compilerOptions": {{c}}
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Basic Options */
+    // "incremental": true,                         /* Enable incremental compilation */
+    <b>"target": "<abbr title="es6, 2020, ... Pero usamos es5 porque es la más estable">es5</abbr>"</b>,                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    // "lib": [],                                   /* Specify library files to be included in the compilation. */
+    // "allowJs": true,                             /* Allow javascript files to be compiled. */
+    // <b>"<abbr title="Permite que de (true) o no (false) fallo en archivos .js">checkJs": true</abbr>,</b>                             /* Report errors in .js files. */
+    // "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
+    // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    // "sourceMap": true,                           /* Generates corresponding '.map' file. */
+    // <b>"<abbr title="Donde queremos que salga el archivo">outFile</abbr>": "<abbr title="Por defecto la raíz donde se encuentra el archivo">./</abbr>",</b>                             /* Concatenate and emit output to single file. */
+    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "composite": true,                           /* Enable project compilation */
+    // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
+    // "removeComments": true,                      /* Do not emit comments to output. */
+    // "noEmit": true,                              /* Do not emit outputs. */
+    // "importHelpers": true,                       /* Import emit helpers from 'tslib'. */
+    // "downlevelIteration": true,                  /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    // "isolatedModules": true,                     /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+
+    /* Strict Type-Checking Options */
+    "strict": true,                                 /* Enable all strict type-checking options. */
+    // <b><abbr title="Da error (true) sino se especifica el tipo (string, number...) es decir es any (cualquiera)">"noImplicitAny": true,</abbr></b>                       /* Raise error on expressions and declarations with an implied 'any' type. */
+    // <b><abbr title="Da error (true) si da null">"strictNullChecks": true,</abbr></b>                    /* Enable strict null checks. */
+    // "strictFunctionTypes": true,                 /* Enable strict checking of function types. */
+    // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
+    // "noImplicitThis": true,                      /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
+    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
+    // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
+    // "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
+
+    /* Module Resolution Options */
+    // "moduleResolution": "node",                  /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    // "baseUrl": "./",                             /* Base directory to resolve non-absolute module names. */
+    // "paths": {{c}}},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "typeRoots": [],                             /* List of folders to include type definitions from. */
+    // "types": [],                                 /* Type declaration files to be included in compilation. */
+    // "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,                        /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,                    /* Do not resolve the real path of symlinks. */
+    // "allowUmdGlobalAccess": true,                /* Allow accessing UMD globals from modules. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                            /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                               /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,                     /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                       /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
+
+    /* Advanced Options */
+    "skipLibCheck": true,                           /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
+  }
+}</li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-tpscript0" role="tabpanel" aria-labelledby="pills-tpscript0-tab"><hr><app-funcionamientotype></app-funcionamientotype></div>
+
+    <div class="tab-pane fade" id="pills-tpscript1" role="tabpanel" aria-labelledby="pills-tpscript1-tab"><hr><app-variabletype></app-variabletype></div>
+
+    <div class="tab-pane fade" id="pills-tpscript4" role="tabpanel" aria-labelledby="pills-tpscript4-tab">
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{c}}
+
+  <b>"exclude": ["<abbr title="Para no sacar nombre.js">Directorio_Que_No_Queremos_Que_Compile"],</abbr></b>
+  <small>"compilerOptions": {{c}}
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Basic Options */
+    // "incremental": true,                         /* Enable incremental compilation */
+    "target": "es5",                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    // "lib": [],                                   /* Specify library files to be included in the compilation. */
+    // "allowJs": true,                             /* Allow javascript files to be compiled. */
+    // "checkJs": true,                             /* Report errors in .js files. */
+    // "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
+    // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    // "sourceMap": true,                           /* Generates corresponding '.map' file. */
+    // "outFile": "./",                             /* Concatenate and emit output to single file. */
+    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "composite": true,                           /* Enable project compilation */
+    // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
+    // "removeComments": true,                      /* Do not emit comments to output. */
+    // "noEmit": true,                              /* Do not emit outputs. */
+    // "importHelpers": true,                       /* Import emit helpers from 'tslib'. */
+    // "downlevelIteration": true,                  /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    // "isolatedModules": true,                     /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+
+    /* Strict Type-Checking Options */
+    "strict": true,                                 /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                       /* Raise error on expressions and declarations with an implied 'any' type. */
+    // "strictNullChecks": true,                    /* Enable strict null checks. */
+    // "strictFunctionTypes": true,                 /* Enable strict checking of function types. */
+    // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
+    // "noImplicitThis": true,                      /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
+    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
+    // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
+    // "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
+
+    /* Module Resolution Options */
+    // "moduleResolution": "node",                  /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    // "baseUrl": "./",                             /* Base directory to resolve non-absolute module names. */
+    // "paths": {{c}}},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "typeRoots": [],                             /* List of folders to include type definitions from. */
+    // "types": [],                                 /* Type declaration files to be included in compilation. */
+    // "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,                        /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,                    /* Do not resolve the real path of symlinks. */
+    // "allowUmdGlobalAccess": true,                /* Allow accessing UMD globals from modules. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                            /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                               /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,                     /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                       /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
+
+    /* Advanced Options */
+    "skipLibCheck": true,                           /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
+  }
+}</small></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-tpscript2" role="tabpanel" aria-labelledby="pills-tpscript2-tab">
+        
+        <h3>En el terminal</h3>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b>console.log (nombre_variable);</b></li>
+<li>console<b>.warn</b> (nombre_variable);          //Para que el mensaje salga en amarillo (warning)</li>
+<li>console.log (<b>"Texto" + " " + nombre_variable + " " + 36</b>);</li>
+<li>console.log(<b>`${{c}}getNombre_Variable()}`</b>);</li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <h3>En el navegador</h3>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-tpscript3" role="tabpanel" aria-labelledby="pills-tpscript3-tab"><hr><app-funcionestype></app-funcionestype></div>
+
+    <div class="tab-pane fade" id="pills-tpscript5" role="tabpanel" aria-labelledby="pills-tpscript5-tab"><hr><app-promesastype></app-promesastype></div>
+
+    <div class="tab-pane fade" id="pills-tpscript6" role="tabpanel" aria-labelledby="pills-tpscript6-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>interface nombre_interface {{c}}</b>   //Como van a ir definido obligatoriamente (string, number, boolean...)
+    <b>nombre_por_dentro: string;
+    numero_por_dentro: number;
+    nombre2_por_dentro?: string;</b>    //Opcional <b>?</b>
+  <b>}</b>
+
+  const nombre_funcion = ( nombre_parametro<b>: nombre_interface</b> ) => {{c}}
+
+    console.log(`Le damos interface al ${{c}} <b>nombre_parametro.nombre_por_dentro</b> } que cojamos`);
+  }
+
+  <b>const nombre_utilizar: nombre_interface = {{c}}</b>   //Superhéroe
+    <b>nombre_por_dentro: 'Nombre',
+    numero_por_dentro: 30
+  }</b>
+
+  nombre_funcion ( <b>nombre_utilizar</b> );</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-tpscript7" role="tabpanel" aria-labelledby="pills-tpscript7-tab">x</div>
+
+
+
+
+    <div class="tab-pane fade" id="pills-tpscript9" role="tabpanel" aria-labelledby="pills-tpscript9-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-tpscript10" role="tabpanel" aria-labelledby="pills-tpscript10-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-tpscript11" role="tabpanel" aria-labelledby="pills-tpscript11-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-tpscript12" role="tabpanel" aria-labelledby="pills-tpscript12-tab">x</div>
+
+
+</div>
+<br><br>
+
+<b id="azul" style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Typescript"><b><a target="_black" href="https://www.typescriptlang.org/">Typescript</a></b></abbr>
+<img src="../../../../assets/imagenes/typescript.png" style="margin-left: 2%; width: 300px;">
+<button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>
+
+
+
+
+<ul>
+    <li><b>Variables</b>
+        <ul>
+            <li><b>Operadores</b>
+                <ul>
+                    <li><b>&&</b> (Y - Conjunción): Si se cumple cada condición se muestra <small>Ej: nombre_de_mi_variable && nombre_de_mi_variable2</small></li>
+                    <li><b>||</b> (O - Disyunción: Si se cumple una condición se muestra <small>Ej: nombre_de_mi_variable || nombre_de_mi_variable2</small></li>
+                </ul>
+            </li>
+            <li><b>Métodos</b>
+                <ul>
+                    <li><b>valueOf()</b> Nos da el valor de la variable <small>Ej: nombre_de_mi_variable.valueOf()</small></li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <br><br>

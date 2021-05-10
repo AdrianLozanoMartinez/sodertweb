@@ -1,0 +1,1032 @@
+<h6><u><b>Firebase - Login - Angular</b></u></h6>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-firebaselogin-tab" data-toggle="pill" href="#pills-firebaselogin" role="tab" aria-controls="pills-firebaselogin" aria-selected="true" style="color: black;">___Web___<br>(Firebase)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaselogin0-tab" data-toggle="pill" href="#pills-firebaselogin0" role="tab" aria-controls="pills-firebaselogin0" aria-selected="false" style="color: black;">App.module.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaselogin1-tab" data-toggle="pill" href="#pills-firebaselogin1" role="tab" aria-controls="pills-firebaselogin1" aria-selected="false" style="color: black;">Conexión a Firebase<br><small>Servicio</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-firebaselogin2-tab" data-toggle="pill" href="#pills-firebaselogin2" role="tab" aria-controls="pills-firebaselogin2" aria-selected="false" style="color: black;">Verificar existencia<br>de usuario</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaselogin3-tab" data-toggle="pill" href="#pills-firebaselogin3" role="tab" aria-controls="pills-firebaselogin3" aria-selected="false" style="color: black;">Token<small><br>(Saber si está longeado)</small><br><small>Servicio</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaselogin4-tab" data-toggle="pill" href="#pills-firebaselogin4" role="tab" aria-controls="pills-firebaselogin4" aria-selected="false" style="color: black;">Mensaje de conexión<br><small>SweetAlert2 </small> + <br> Salir del Login al Longearse</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaselogin5-tab" data-toggle="pill" href="#pills-firebaselogin5" role="tab" aria-controls="pills-firebaselogin5" aria-selected="false" style="color: black;">Recordar usuario</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebaselogin6-tab" data-toggle="pill" href="#pills-firebaselogin6" role="tab" aria-controls="pills-firebaselogin6" aria-selected="false" style="color: black;">Guard - Proteger +<br>Logout</a>
+    </li>
+    <button class="btn btn-success m-2" [routerLink]="['/firebase']">Atras</button>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-firebaselogin" role="tabpanel" aria-labelledby="pills-firebaselogin-tab">
+       <a class="enlace" [routerLink]="['/proyecto']"><u><b>1º Crear proyecto</b></u></a>
+    <br>
+    <u><b>2º Login</b></u> (<a class="enlace" href="https://firebase.google.com/?pli=1"><u><b>Web Firebase</b></u></a> -> Ir a consola -> Proyecto -> Authentication)
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Habilitar correo autentificación</th>
+                <th scope="col">Enlaces de conexión</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://firebase.google.com"><b>Web Firebase</b></a> -> <b>Ir a la consola</b> -> <b>Proyecto</b> -> <b>Authentication</b>
+      <ol>
+          <li><b>Sign-in method (Método de acceso)</b> -> <u>Correo electrónico/contraseña</u> -> <u>Habilitar</u> (Permite a los usuarios registrarse con su dirección de correo electrónico y contraseña. Nuestros SDK también proporcionan la verificación de la dirección de correo, la recuperación de contraseñas y las primitivas de cambio de dirección de correo) y el <u>otro Habilitar no habilitar</u> -> <u>Guardar</u></li>
+          <li><b>Users</b> (Vemos los usuarios que existen y los conectados)</li>
+      </ol></td>
+                <td><a href="https://firebase.google.com/docs/reference/rest/auth#top_of_page"><b>Web Firebase (API REST firebase de autentificación)</b></a> -> <b>Opción lateral</b>
+  <ul>
+      <li><a href="https://firebase.google.com/docs/reference/rest/auth#section-create-email-password"><b>Crear usuario</b></a>: Inscribirse con el correo electrónico / contraseña (Sign up with email / password):<pre>
+              <b>https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]</b></pre></li>
+      <li><a href="https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password"><b>Iniciar usuario</b></a>: Inicia sesión con el correo electrónico / contraseña (Sign in with email / password):<pre>
+              <b>https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]</b></pre></li>
+  </ul></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Obtener APIKEY</th>
+                  <th scope="col">Crear usuario/contraseña directamente</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><a href="https://firebase.google.com"><b>Web Firebase</b></a> -> <b>Ir a la consola</b> -> <b>Proyecto</b> -> <b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey</b></td>
+                  <td><a href="https://firebase.google.com"><b>Web Firebase</b></a> -> <b>Ir a la consola</b> -> <b>Proyecto</b> -> <b>Authentication</b> -> <b>Users</b> -> <b>Añadir usuario</b>   </td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </div>
+  
+    <div class="tab-pane fade" id="pills-firebaselogin0" role="tabpanel" aria-labelledby="pills-firebaselogin0-tab">
+<pre>
+        import {{c}} BrowserModule } from '@angular/platform-browser';
+        import {{c}} NgModule } from '@angular/core';
+
+        import {{c}} AppComponent } from './app.component';
+
+        import {{c}} routing, appRoutingProviders } from './app.routing';
+
+        import {{c}} HomeComponent } from './paginas/home/home.component';
+        import {{c}} ErrorComponent } from './componentes/error/error.component';
+        import {{c}} PieComponent } from './componentes/pie/pie.component';
+        import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+        import {{c}} FormsModule } from '@angular/forms';
+
+        //Servicio Http - Conexión con Firebase
+        <b>import {{c}} HttpClientModule } from '@angular/common/http';</b>
+
+        @NgModule({{c}}
+            declarations: [
+            AppComponent,
+            HomeComponent,
+              ErrorComponent,
+              PieComponent,
+              CabeceraComponent
+            ],
+            imports: [
+            BrowserModule,
+            routing,
+            FormsModule<b>,</b>
+            //Servicio Http - Conexión con Firebase
+            <b>HttpClientModule</b>
+          ],
+          providers: [
+            appRoutingProviders
+          ],
+          bootstrap: [AppComponent]
+        })
+        export class AppModule {{c}} }
+      
+      
+      </pre>
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaselogin1" role="tabpanel" aria-labelledby="pills-firebaselogin1-tab">
+      <pre>
+        import {{c}} Injectable } from '@angular/core';
+        //Servicio Http - Conexión con Firebase
+        <b>import {{c}} HttpClient } from '@angular/common/http';</b>
+        //Model - Estructura de datos
+        <b>import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';</b>
+
+        @Injectable({{c}}
+          providedIn: 'root'
+        })
+        export class FireservicioService {{c}}
+        //<b>Crear usuario</b> - Copiamos la parte que se repite y lo metemos en la variable url
+        //<b>https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY] </b> 
+
+        //<b>Login usuario</b> - Copiamos la parte que se repite y lo metemos en la variable url
+        //<b>https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY] </b> 
+
+            <b>private url = 'https://identitytoolkit.googleapis.com/v1/accounts:sign';</b>
+
+            //<b>Cambia API_KEY por proyecto</b>
+            <b>private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';  </b>               
+
+
+          constructor(  
+
+          //Servicio Http - Conexión con Firebase    
+        <b> private http: HttpClient</b> ) {{c}} } 
+
+        }
+      
+      
+      </pre>
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaselogin2" role="tabpanel" aria-labelledby="pills-firebaselogin2-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Ts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class FireservicioService {{c}}
+//Crear usuario
+//https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]  
+
+//Login usuario
+//https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]  
+
+    private url = 'https://identitytoolkit.googleapis.com/v1/accounts:sign';
+
+    //Cambia API_KEY por proyecto
+    private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';                 
+
+
+  constructor(  
+  
+  private http: HttpClient ) {{c}} } 
+
+  <b>login (usuario: UsuarioModel){{c}}</b>
+
+    ///////////Opción 1/////////////////
+    /*Metemos en la variable (variable_login) los datos del model (UsuarioModel), 
+      ESPECIFICANDO los campos*/
+    /*<b>const variable_login = {{c}}                      
+        email: usuario.email,
+        password: usuario.password,
+        returnSecureToken: true
+      };</b>*/
+    ///////////Opción 2/////////////////
+    /*Metemos en la variable (variable_login) los datos del model (UsuarioModel), 
+    TODOS (...)*/
+    <b>const variable_login = {{c}}                     
+        ...usuario,
+        returnSecureToken: true
+      };</b>
+    
+    
+      ///////////Opción A/////////////////
+    /*Metemos en la variable del servicio (http) la dirección  en formato POST, 
+      para que no se vea la información en la barra de direcciones*/
+    //<b>return this.http.post(</b>   
+        /*Variable (url) que contiene la dirección igual que registro + InWithPassword?key= 
+          (Especial del login) + variable (apikey) especial de cada proyecto*/          
+     /*<b>`${{c}} this.url }InWithPassword?key=${{c}} this.apikey }`,       
+        variable_login
+      )</b>*/
+      ///////////Opción B/////////////////
+      /*Metemos en la variable del servicio (http) la dirección  en formato POST, 
+        para que no se vea la información en la barra de direcciones*/
+    <b>return this.http.post(this.url + 'InWithPassword?key=' + this.apikey, variable_login); </b>  
+                   /*Variable (url) que contiene la dirección igual que registro + InWithPassword?key= 
+                     (Especial del login) + variable (apikey) especial de cada proyecto*/   
+    <b>}</b>
+
+}
+      </pre></td>
+                    <td><pre>
+                      
+import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';                         
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';
+//Conexión con el servicio.ts creado para conectar con Firebase           
+<b>import {{c}} FireservicioService } from '../servicio/fireservicio.service';</b>   
+
+@Component({{c}}
+  selector: 'app-existencia',
+  templateUrl: './existencia.component.html',
+  styleUrls: ['./existencia.component.css']
+})
+export class ExistenciaComponent implements OnInit {{c}}
+
+  usuario: UsuarioModel = new UsuarioModel ();     
+
+              //Conexión con el servicio.ts creado para conectar con Firebase
+  constructor( <b>private servicefire: FireservicioService</b> ) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  login (form:NgForm){{c}}                                              
+    if(form.invalid){{c}}                                               
+    return;
+    }
+
+    console.log(this.usuario);                                         
+    console.log('Imprimir si el formulario es válido');
+
+    /*Conexión con el servicio.ts creado para conectar con Firebase
+      Meter en la variable del servicio (servicefire.ts) lo que 
+      obtenemos de la función (login) del servicio (servicefire.ts), 
+      lo subscribimso en la respuesta(resp)*/
+    <b>this.servicefire.login( this.usuario ).subscribe( resp => {{c}}</b>  
+    //resp u otro nombre 
+    <b>console.log (resp);</b>                                          
+    //err u otro nombre. Otra forma (err u otro nombre). Sacamos e error
+    <b>}, (err) => {{c}}</b>                                                 
+    
+        <b>console.log (err);
+          console.log (err.error.error.message);
+      
+        });</b>
+  }
+
+}
+                    
+                    </pre></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive-md">
+        <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Html</th>
+                      <th scope="col">Funcionamiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td><pre>{{a}}<b>{{a0}}</b>{{a1}}<b>{{a2}}</b>{{a3}}<b>{{a4}}</b>{{a5}}<b>{{a6}}</b>{{a7}}<b>{{a8}}</b>{{a9}}</pre></td>
+                      <td><pre><app-existencia></app-existencia></pre></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaselogin3" role="tabpanel" aria-labelledby="pills-firebaselogin3-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Servicio</th>
+                      <th scope="col">Funcionamiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td><pre>
+        import {{c}} Injectable } from '@angular/core';
+        import {{c}} HttpClient } from '@angular/common/http';
+        import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';
+        //Token - map
+        <b>import {{c}} map } from 'rxjs/operators';</b>
+        
+        @Injectable({{c}}
+          providedIn: 'root'
+        })
+        export class FireservicioService {{c}}
+        //Crear usuario
+        //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]  
+        
+        //Login usuario
+        //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]  
+        
+            private url = 'https://identitytoolkit.googleapis.com/v1/accounts:sign';
+        
+            //Cambia API_KEY por proyecto
+            private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';                 
+        
+            <b>usartoken: string;</b>
+        
+          constructor(  
+          
+          private http: HttpClient ) {{c}} 
+
+          //Lo ponemos en el constructor para nada más inicial ver si lo está leyendo
+          <b>this.leertoken();</b>
+        } 
+        
+          login (usuario: UsuarioModel){{c}}
+        
+            ///////////Opción 1/////////////////
+            /*const variable_login = {{c}}                      
+                email: usuario.email,
+                password: usuario.password,
+                returnSecureToken: true
+              };*/
+            ///////////Opción 2/////////////////
+            const variable_login = {{c}}                     
+                ...usuario,
+                returnSecureToken: true
+              };
+            
+            
+              ///////////Opción A/////////////////
+            /*return this.http.post(           
+             `${{c}} this.url }InWithPassword?key=${{c}} this.apikey }`,       
+                variable_login
+              )<b>.pipe(map( resp => {{c}}
+                console.log ('Entro en el mapa del RXJS');
+                this.guardartoken( resp['idToken'] );
+                return resp;
+              })
+              );</b>*/
+              ///////////Opción B/////////////////
+            /*Si no da error se ejecuta la función de abajo. Pipe -> Puede usar el operador map. CatchError -> Para 
+              atrapar el error. Proviene igual que el map del rxjs. Se pone entre el pipe y el map (pipe(catchError map...)). 
+              En este caso no lo usamos.
+              Map -> Permite obtener la respuesta del post y pasarla por el map (puede transformar, servir como intermediario 
+              solamente o regresar lo que queramos...). Almacenar el token. Si hay un error el map nunca se dispara. 
+              map( resp => {{c}}: Obtendríamos la respuesta
+              Guardamos de la respuesta (resp) el 'idToken'*/
+            return this.http.post(this.url + 'InWithPassword?key=' + this.apikey, variable_login)<b>.pipe(map( resp => {{c}}        
+              console.log ('Entro en el mapa del RXJS');                                                                       
+              this.guardartoken( resp['idToken'] );                                                                            
+              return resp;
+                })
+                );</b>     
+            }
+
+            <b>private guardartoken (idToken: string){{c}}</b>
+              //idToken -> Lo que estamos recibiendo en este momento                            
+              <b>this.usartoken = idToken;</b>
+              /*Llamamos al localStorage (almacen que se observa en el navegador -> aplicación) y lo almacenamos en la propiedad 
+                llamada 'token' (Puede ser otro nombre, pero es donde se almacena el token y en logout se llamará igual) y el 
+                valor que almacenamos (idToken) en string*/
+              <b>localStorage.setItem('token', idToken);</b>                                 
+              
+              //Metemos en la variable hoy la fecha actual
+              <b>let hoy = new Date();</b> 
+              //Sacamos 1h después de la hora actual                                                 
+              <b>hoy.setSeconds( 3600 );</b>  
+              /*Metemos en la variableExpira cuando expira (hoy.getTime() -> variable 
+                hoy cogemos la fecha con la función getTime) y lo pasamos a string (.toString()) 
+                para que no de error*/                                               
+              <b>localStorage.setItem('variableExpira', hoy.getTime().toString() );      
+              }
+              
+              leertoken(){{c}}
+                if (localStorage.getItem('token')){{c}}</b>
+                  //Metemos en usartoken la obtención del token
+                  <b>this.usartoken=localStorage.getItem('token');                        
+                  }else{{c}}</b>
+                  //Lo inicializamos como vacío
+                  <b>this.usartoken='';                                                    
+                  }
+                return this.usartoken;
+                }</b>
+        
+        }</pre></td>
+                      <td><pre><app-existencia></app-existencia>
+<u>DEBE VERSE EN CONSOLA:</u>
+    {{c}}kind: "identitytoolkit#VerifyPasswordResponse", localId: "e5ealxyHhAPRLWcpM1RGhQpjUpm2", 
+    email: "adrianlm1985@gmail.com", displayName: "", idToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6IjU1N
+    GE3NTQ3Nzg1ODdjOT…YtX_v7mzOnALm_vkS0a6u_J8STvIzobyL5xQRigg7AJt6exYw", …}
+    displayName: ""
+    email: "adrianlm1985@gmail.com"
+    expiresIn: "3600"
+    idToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6IjU1NGE3NTQ3Nzg1ODdjOTRjMTY3M2U4ZWEyNDQ2MTZjMGMwNDNjYmMi
+              LCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY....................."
+    kind: "identitytoolkit#VerifyPasswordResponse"
+    localId: "e5ealxyHhAPRLWcpM1RGhQpjUpm2"
+    refreshToken: "AE0u-NdI3LkpmRDLX_GAt0NMcZlXZU3mUh9qffLAwAPWoeLmY9XGdcjVRrUnYXkTffKTQPBcb7GblEfj
+    4oBvpAoox6xraVljiTonTSs4TM9BOm289uM6OTjsT4_QS232jadzBQn0lfZJGOdLhFcrH0e0tUWkNvTpnii6H3ywg0-i-V9
+    d61NjNmbs2z99IfnSwEcKFqRZgtDIrHq7SRsM_tcGoCnCvg9cFw"
+    registered: true
+    __proto__: Object
+    Dentro de consola -> expiresIn: "3600": Tiempo que expira el login, cada sitio tiene un tiempo, 
+    firebase marca 3600seg es decir 1h. De este modo podemos programar la autentificación en ese tiempo</pre></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+     
+    </div>
+    <div class="tab-pane fade" id="pills-firebaselogin4" role="tabpanel" aria-labelledby="pills-firebaselogin4-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                  <th scope="col">Ts</th>
+                  <th scope="col">Funcionamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>
+import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';                         
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';      
+import {{c}} FireservicioService } from '../servicio/fireservicio.service'; 
+<b>import Swal from 'sweetalert2'; </b> 
+//Redirigir a otra página
+<b>import {{c}} Router } from '@angular/router';</b>                
+
+@Component({{c}}
+  selector: 'app-existencia',
+  templateUrl: './existencia.component.html',
+  styleUrls: ['./existencia.component.css']
+})
+export class ExistenciaComponent implements OnInit {{c}}
+
+  usuario: UsuarioModel = new UsuarioModel ();     
+
+  constructor( private servicefire: FireservicioService<b>,</b>
+                  //Redirigir a otra página
+               <b>private router: Router</b> ) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  login (form:NgForm){{c}}                                              
+    if(form.invalid){{c}}                                               
+    return;
+    }
+
+    //Personalizar y crear de carga
+    <b>Swal.fire({{c}} </b>           
+      /*Para no poder cerrar ventana si hace click fuera del mensaje. 
+        Sino se pone si se quita*/                                      
+      <b>allowOutsideClick: false, </b>                                      
+      <b>icon: 'info',</b>      //Otros iconos: success, error, warning, info, question
+     <b> text: 'Espere por favor'
+    });
+      
+      Swal.showLoading();  </b>
+
+    console.log(this.usuario);                                         
+    console.log('Imprimir si el formulario es válido');
+
+    this.servicefire.login( this.usuario ).subscribe( resp => {{c}}  
+    console.log (resp); 
+    
+    //Cierra mensaje al cargar
+    <b>Swal.close();  </b>  
+
+    //Redirigir a otra página una vez que haya cargado usuario, puede ser home o la parte privada u otras
+    <b>this.router.navigateByUrl('/home'); </b>                    
+
+    }, (err) => {{c}}                                                 
+    
+        console.log (err);
+        console.log (err.error.error.message);
+      
+        //Personalizar y crear de error
+        <b>Swal.fire({{c}}                                             
+          icon: 'error',</b>   //Otros iconos: success, error, warning, info, question
+        /*allowOutsideClick: false, -> No se pone para poder cerrar ventana si hace 
+            click fuera del mensaje. Sino se pone si se quita*/
+          <b>title: 'Error al autenticar',                               
+          text: err.error.error.message
+        });</b>
+
+        });
+  }
+
+}
+                    
+                    </pre></td>
+                    <td><app-mensajecargaerror></app-mensajecargaerror></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaselogin5" role="tabpanel" aria-labelledby="pills-firebaselogin5-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                  <th scope="col">Ts</th>
+                  <th scope="col">Html</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>
+import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';                         
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';      
+import {{c}} FireservicioService } from '../servicio/fireservicio.service'; 
+import Swal from 'sweetalert2';  
+import {{c}} Router } from '@angular/router';                
+
+@Component({{c}}
+  selector: 'app-existencia',
+  templateUrl: './existencia.component.html',
+  styleUrls: ['./existencia.component.css']
+})
+export class ExistenciaComponent implements OnInit {{c}}
+
+  usuario: UsuarioModel = new UsuarioModel (); 
+  
+  /*Recordar usuario, false para que no aparezca marcado en el inicio 
+  y se cambie luego por el usuario si se quiere recordar*/
+ <b> botonRecordar = false; </b>
+
+  constructor( private servicefire: FireservicioService,
+               private router: Router ) {{c}} }
+
+  ngOnInit() {{c}}
+
+  //Si en el localStorage existe el email
+  <b>if( localStorage.getItem('email') ){{c}}</b>      
+    //El usuario.email definido en el modelo es igual que el está en el localStorage              
+    <b>this.usuario.email = localStorage.getItem('email');</b>   
+    //Si se cumple ponemos la casilla de recordar activada  
+    <b>this.botonRecordar = true;                              
+    }
+  </b>
+  }
+
+
+  login (form:NgForm){{c}}                                              
+    if(form.invalid){{c}}                                               
+    return;
+    }
+
+    Swal.fire({{c}}                                             
+      allowOutsideClick: false,                                       
+      icon: 'info',      //Otros iconos: success, error, warning, info, question
+      text: 'Espere por favor'
+    });
+      
+      Swal.showLoading();  
+
+      //Cuando botonRecordar está en true, se hace lo de dentro
+      <b>if( this.botonRecordar ){{c}} </b>             
+        //Guarda (setItem) en el localStorage (almacen que se observa en el navegador -> aplicación) el email del usuario          
+        <b>localStorage.setItem('email', this.usuario.email);   
+        }</b>
+
+    console.log(this.usuario);                                         
+    console.log('Imprimir si el formulario es válido');
+
+    this.servicefire.login( this.usuario ).subscribe( resp => {{c}}  
+    console.log (resp); 
+    
+    Swal.close();    
+
+    this.router.navigateByUrl('/home');                     
+
+    }, (err) => {{c}}                                                 
+    
+        console.log (err);
+        console.log (err.error.error.message);
+      
+        Swal.fire({{c}}                                             
+          icon: 'error',   //Otros iconos: success, error, warning, info, question
+          title: 'Error al autenticar',                               
+          text: err.error.error.message
+        });
+
+        });
+  }
+
+}
+                    
+                    </pre></td>
+                    <td><pre>{{re}}<b>{{cor}}</b>{{dar}}</pre></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                      <th colspan="2">Funcionamiento</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td colspan="2"><pre>Se ve si el navegador no tenemos puesto que guarde usuario/contraseña</pre><app-recordar></app-recordar></td>
+                  </tr>
+          </tbody>
+      </table>
+  </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-firebaselogin6" role="tabpanel" aria-labelledby="pills-firebaselogin6-tab">
+      <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                  <th scope="col">Servicio</th>
+                  <th scope="col">Guard.ts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre>
+import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';
+import {{c}} map } from 'rxjs/operators';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class FireservicioService {{c}}
+//Crear usuario
+//https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]  
+
+//Login usuario
+//https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]  
+
+    private url = 'https://identitytoolkit.googleapis.com/v1/accounts:sign';
+
+    //Cambia API_KEY por proyecto
+    private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';                 
+
+    usartoken: string;
+
+  constructor(  
+  
+  private http: HttpClient ) {{c}} 
+
+  this.leertoken();
+} 
+
+  login (usuario: UsuarioModel){{c}}
+
+    ///////////Opción 1/////////////////
+    /*const variable_login = {{c}}                      
+        email: usuario.email,
+        password: usuario.password,
+        returnSecureToken: true
+      };*/
+    ///////////Opción 2/////////////////
+    const variable_login = {{c}}                     
+        ...usuario,
+        returnSecureToken: true
+      };
+    
+    
+      ///////////Opción A/////////////////
+    /*return this.http.post(           
+      `${{c}} this.url }InWithPassword?key=${{c}} this.apikey }`,       
+        variable_login
+      ).pipe(map( resp => {{c}}
+        console.log ('Entro en el mapa del RXJS');
+        this.guardartoken( resp['idToken'] );
+        return resp;
+      })
+      );*/
+      ///////////Opción B/////////////////
+    return this.http.post(this.url + 'InWithPassword?key=' + this.apikey, variable_login).pipe(map( resp => {{c}}
+      console.log ('Entro en el mapa del RXJS');                                                                       
+      this.guardartoken( resp['idToken'] );                                                                            
+      return resp;
+        })
+        );     
+    }
+
+    /*La variable del token debe ser llamado igual que el que pusimos en 
+      private guardartoken (idToken: string) -> localStorage.setItem
+      ('token', idToken). En este caso lo llamamos token*/
+<b>    logout(){{c}}
+          localStorage.removeItem('token');                                   
+        }</b>
+
+    private guardartoken (idToken: string){{c}} 
+      this.usartoken = idToken;
+      localStorage.setItem('token', idToken);  
+      
+      let hoy = new Date();  
+      hoy.setSeconds( 3600 );  
+      localStorage.setItem('variableExpira', hoy.getTime().toString() );      
+      }
+      
+      leertoken(){{c}}
+        if (localStorage.getItem('token')){{c}}
+          this.usartoken=localStorage.getItem('token');     
+          }else{{c}}
+          this.usartoken='';       
+          }
+        return this.usartoken;
+        }
+
+        /*Método para saber si estamos autentificado a través del token 
+          (Nivel básico de controlar). Regresa un boolean para saber si 
+          o no se hace la condición de abajo*/
+        <b>guardEstaAutentificado(): boolean{{c}} </b>  
+        /*Si el token es menor de 2 o no existe, devuelve false, sale de 
+          la función. Return this.usartoken.length > 2: Si el token que 
+          recoge es mayor de 2 caracteres lo devuelve. El usartoken se 
+          encuentra en el servicio ServiciofirebaseService en la función 
+          guardartoken (Saca el token, email almacenado en el localStorage */  
+            <b>      {{o}}                               
+              return false;
+          }</b>
+        
+          /*Transformamos en número el token que teníamos en string en private 
+            guardartoken. Lo metemos en const para no poderlo cambiar el valor*/
+          <b>const variableExpira = Number (localStorage.getItem('variableExpira'));</b> 
+          /*Metemos en la variable variableExpira2 el día/hora actual. Lo metemos 
+            en const para no poderlo cambiar el valor*/    
+          <b>const variableExpira2 = new Date(); </b>            
+          //Comparamos la expiración actual (variableExpira2) con la expiración futura de 1h (variableExpira)
+            <b>variableExpira2.setTime(variableExpira);</b>                                    
+        
+            //Si el tiempo actual (variableExpira2) es mayor que el actual (new Date)
+              <b>if ( variableExpira2 > new Date() ){{c}}</b>  
+              //No expiró aún                                 
+                <b>return true;          
+                  }else{{c}}</b>
+                  //En caso contrario, si expiró el tiempo
+              <b>return false;                                                           
+            }
+        }</b>
+        
+}</pre></td>
+                    <td>
+                      <pre>import {{c}} Injectable } from '@angular/core';
+import {{c}} CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree<b>, Router</b> } from '@angular/router';
+import {{c}} Observable } from 'rxjs';
+//Servicio.ts creado para conectar firebase al proyecto 
+<b>import {{c}} FireservicioService } from '../login/fireservicio/fireservicio.service';</b>         
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ElgranguardianGuard implements CanActivate {{c}}
+
+                //Manejo del servicio
+<b>constructor( private variableServicio: FireservicioService,</b>  
+                //Enlaces de páginas
+                <b>private router: Router){{c}}}</b>                
+
+  canActivate(
+    //Ruta que el usuario quiere navegar, podemos imprimir en consola, tiene nombre de la ruta, los argumentos...Se puede omitir
+    next: ActivatedRouteSnapshot,
+    //Ruta actual. Se puede omitir
+    state: RouterStateSnapshot): Observable{{coco}} | boolean | UrlTree {{c}}   
+    //Puede retornar un observable, promesa (promise) o un booleano normal        
+    <b>//return true;</b> -> Se elimina o se comenta (//)                               
+
+    //Si estamos autentificados entramos en el componente protegido
+    <b>if(this.variableServicio.guardEstaAutentificado()){{c}}</b>       
+        //guardEstaAutentificado() función del servicio.ts                      
+        <b>return true;</b>                                                                    
+        <b>}else{{c}}</b>
+        //Si no estamos longeado nos manda al login
+        <b>this.router.navigateByUrl('/login');</b>                                               
+      <b>}</b>
+
+  }
+
+  
+}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive-md">
+      <table class="table table-bordered">
+              <thead class="thead-light">
+                  <tr>
+                    <th scope="col">App.routing.ts</th>
+                    <th scope="col">Componente protegido.ts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td><pre>//Conexión con app.module.ts - Enlazar páginas
+import {{c}} ModuleWithProviders } from '@angular/core';
+//DEBE IR DE ESTE MODO, TODO JUNTO, SINO NO FUNCIONA BIEN, NO PUEDE IR SEPARADO
+<b>import {{c}} Routes, RouterModule, CanActivate } from '@angular/router';</b>  
+
+//Guard - tipo
+<b>import {{c}} ElguardianGuard } from './paginas/programacion/angular/login/guardexplica/elguardian.guard';</b>   
+
+//Login - Páginas protegidas                                                                    
+<b>import {{c}} ProtegidoguardfirebaseComponent } from './paginas/programacion/angular/login/protegidoguardfirebase/protegidoguardfirebase.component';</b>  
+
+//Componentes - Especiales
+import {{c}} AppComponent } from './app.component';
+
+//Componentes - Páginas añadir después de crearlas
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+export const appRoutes: Routes = [
+  /*Componentes - Páginas añadir después de crearlas
+    Siempre va a HomeComponent cuando da errores los botones*/
+  {{c}} path: '', component: HomeComponent },  
+  //Va al HomeComponent, se usa en enlaces (home)                                   
+  {{c}} path: 'home', component: HomeComponent},      
+  //Va al PieComponent, se usa en enlaces (pie)               
+  {{c}} path: 'pie', component: PieComponent},      
+  //Va al CabeceraComponent, se usa en enlaces (cabecera)                 
+  {{c}} path: 'cabecera', component: CabeceraComponent},      
+  /*Archivo protegido que vemos al longearnos, Elguardian(nombre del guardian)
+    Guard(es la extensión del guardián) -> [ElguardianGuard]*/       
+  <b>{{c}} path: 'protegidoguardfirebase', component: ProtegidoguardfirebaseComponent, canActivate: [ElguardianGuard]},</b>   
+  //Componentes - Especiales
+  {{c}} path: 'appcomponente', component: AppComponent },
+  /*Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+    Si introducimos mal en la barra de direcciones nos va al ErrorComponent (**)*/
+  {{c}} path: '**', component: ErrorComponent},                      
+  /*Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+    Si introducimos mal en la barra de direcciones nos va al HomeComponent (home)*/
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},           
+  /*Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+    Si introducimos mal en la barra de direcciones nos va al HomeComponent (**)*/
+  {{c}} path: '**', component: HomeComponent }                       
+];
+
+
+//Conexión con app.module.ts - Enlazar páginas
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre></td>
+                    <td><pre>
+                      import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} FireservicioService } from '../servicio/fireservicio.service';
+import {{c}} Router } from '@angular/router';</b>
+
+@Component({{c}}
+  selector: 'app-protegidoguardfirebase',
+  templateUrl: './protegidoguardfirebase.component.html',
+  styleUrls: ['./protegidoguardfirebase.component.css']
+})
+export class ProtegidoguardfirebaseComponent implements OnInit {{c}}
+
+  constructor( <b>private servicefire: FireservicioService,
+               private router: Router</b> ) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>salir(){{c}}
+    this.servicefire.logout();
+    this.router.navigateByUrl('/home');   //  /login o /home u /otro
+  }</b>
+
+}
+                    </pre></td>
+                  </tr>
+          </tbody>
+      </table>
+  </div>
+  <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+              <th scope="col">Ts</th>
+              <th scope="col">Funcionamiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><pre>
+import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';                         
+import {{c}} UsuarioModel } from '../../../angular/loginangular/model/usuario.model';        
+import {{c}} FireservicioService } from '../servicio/fireservicio.service';
+import Swal from 'sweetalert2'; 
+import {{c}} Router } from '@angular/router';
+
+@Component({{c}}
+  selector: 'app-protegidoguardfirebaselogin',
+  templateUrl: './protegidoguardfirebaselogin.component.html',
+  styleUrls: ['./protegidoguardfirebaselogin.component.css']
+})
+export class ProtegidoguardfirebaseloginComponent implements OnInit {{c}}
+  usuario: UsuarioModel = new UsuarioModel ();     
+
+  botonRecordar = false;                                  
+
+  constructor( private servicefire: FireservicioService, private router: Router ) {{c}} }
+
+  ngOnInit() {{c}}
+
+    if( localStorage.getItem('email') ){{c}}                   
+        this.usuario.email = localStorage.getItem('email');     
+        this.botonRecordar = true;                              
+      }
+      
+  }
+
+
+  login (form:NgForm){{c}}                                              
+    if(form.invalid){{c}}                                               
+    return;
+  }
+
+  Swal.fire({{c}}                                              
+    allowOutsideClick: false,                                       
+    icon: 'info',      //Otros iconos: success, error, warning, info, question
+    text: 'Espere por favor'
+  });
+
+  Swal.showLoading();  
+
+  console.log(this.usuario);                                         
+  console.log('Imprimir si el formulario es válido');
+
+  this.servicefire.login( this.usuario ).subscribe( resp => {{c}}  
+  console.log (resp); 
+
+  Swal.close();   
+
+  if( this.botonRecordar ){{c}}                      
+      localStorage.setItem('email', this.usuario.email);   
+    }
+
+  /*Aquí cambiamos al archivo protegido, para cuando nos 
+  longeamos nos lleve a ese protegido (Es opcional, se 
+  puede acceder por otros medios como enlaces...)*/
+  <b>this.router.navigateByUrl('/protegidoguardfirebase'); </b>
+
+  }, (err) => {{c}}                                                 
+
+  console.log (err);
+  console.log (err.error.error.message);
+
+  Swal.fire({{c}}                                             
+    icon: 'error',   //Otros iconos: success, error, warning, info, question
+    title: 'Error al autenticar',                               
+    text: err.error.error.message
+  });
+
+  });
+  }
+
+}
+                </pre></td>
+                <td><pre><b>Se ve al longearnos, nos lleva a la web protegida 
+(Si intentamos acceder sin longearnos no carga nos lleva al login)</b><br><app-protegidoguardfirebaselogin></app-protegidoguardfirebaselogin></pre></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="table-responsive-md">
+  <table class="table table-bordered">
+      <thead class="thead-light">
+          <tr>
+            <th scope="col">Componente protegido.html</th>
+            <th scope="col">Funcionamiento</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><pre>{{prote}}<b>{{gi}}</b>{{do}}</pre></td>
+              <td><pre>Visualización del archivo protegido (Se ve solo al longearse, 
+aquí se muestra aunque no esté longeado, para probarlo bien el de arriba)<app-protegidoguardfirebase></app-protegidoguardfirebase></pre></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+    </div>
+
+</div>

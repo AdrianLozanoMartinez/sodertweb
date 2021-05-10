@@ -1,0 +1,127 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-idclass-tab" data-toggle="pill" href="#pills-idclass" role="tab" aria-controls="pills-idclass" aria-selected="true" style="color: black;">Id</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-idclass0-tab" data-toggle="pill" href="#pills-idclass0" role="tab" aria-controls="pills-idclass0" aria-selected="false" style="color: black;">Class</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-idclass1-tab" data-toggle="pill" href="#pills-idclass1" role="tab" aria-controls="pills-idclass1" aria-selected="false" style="color: black;">Id / Class<br><small>Div, P, h1...</small></a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-idclass" role="tabpanel" aria-labelledby="pills-idclass-tab">
+
+      <p id="nombreId">ID: Solo uno por pag web</p>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}p id="nombreId">ID: Solo uno por pag web{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text"><b>#nombreId</b>{{c}}
+  color: pink;
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-idclass0" role="tabpanel" aria-labelledby="pills-idclass0-tab">
+    
+      <p class="nombreClass">CLASS: Más de uno por pag web</p>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}p class="nombreClass">CLASS: Más de uno por pag web{{co}}/p></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text"><b>.nombreClass</b>{{c}}
+  color: orange;
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-idclass1" role="tabpanel" aria-labelledby="pills-idclass1-tab">
+
+      <h1>Título H1 - Mismo efecto que el id y class de abajo</h1>
+<div id="idNombre">#idNombre (ID) - Mismo efecto que H1 de arriba y Class de abajo</div>
+<div class="classNombre">.classNombre (Clase) - Mismo efecto </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-warning m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+  {{co}}head> 
+    {{co}}meta charset="UTF-8">
+     {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{co}}title>Título de pestaña{{co}}/title>
+     {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+  {{co}}/head>
+  {{co}}body>
+      <b>{{co}}h1>Título H1 - Mismo efecto que el id y class de abajo{{co}}/h1>
+      {{co}}div id="idNombre">#idNombre (ID) - Mismo efecto que H1 de arriba y Class de abajo{{co}}/div>
+      {{co}}div class="classNombre">.classNombre (Clase) - Mismo efecto {{co}}/div></b> 
+  {{co}}/body>
+{{co}}/html></pre>
+            </div>
+          </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+            <div class="card-body">
+              <pre class="card-text"><b>h1, #idNombre, .classNombre</b>{{c}}
+  font-size: 60px;
+}</pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
