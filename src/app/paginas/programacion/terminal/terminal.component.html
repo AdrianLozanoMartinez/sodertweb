@@ -3,16 +3,19 @@
         <a class="nav-link" id="pills-terminal-tab" data-toggle="pill" href="#pills-terminal" role="tab" aria-controls="pills-terminal" aria-selected="true" style="color: black;">Windows<br><small>MSDOS</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-terminal0-tab" data-toggle="pill" href="#pills-terminal0" role="tab" aria-controls="pills-terminal0" aria-selected="false" style="color: black;">Linux</a>
+        <a class="nav-link" id="pills-terminal0-tab" data-toggle="pill" href="#pills-terminal0" role="tab" aria-controls="pills-terminal0" aria-selected="false" style="color: black;">Linux<br><small>Script</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-terminal1-tab" data-toggle="pill" href="#pills-terminal1" role="tab" aria-controls="pills-terminal1" aria-selected="false" style="color: black;">Editor<br>de texto<br>Instalar</a>
+        <a class="nav-link" id="pills-terminal1-tab" data-toggle="pill" href="#pills-terminal1" role="tab" aria-controls="pills-terminal1" aria-selected="false" style="color: black;">Editor<br>de texto<br><small>Instalar</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-terminal2-tab" data-toggle="pill" href="#pills-terminal2" role="tab" aria-controls="pills-terminal2" aria-selected="false" style="color: black;">Editor<br>de texto<br>Online</a>
+        <a class="nav-link" id="pills-terminal2-tab" data-toggle="pill" href="#pills-terminal2" role="tab" aria-controls="pills-terminal2" aria-selected="false" style="color: black;">Editor<br>de texto<br><small>Online</small></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-terminal3-tab" data-toggle="pill" href="#pills-terminal3" role="tab" aria-controls="pills-terminal3" aria-selected="false" style="color: black;">Navegador</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-terminal4-tab" data-toggle="pill" href="#pills-terminal4" role="tab" aria-controls="pills-terminal4" aria-selected="false" style="color: black;">Comandos<br>Buenas prácticas</a>
     </li>
     <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
 </ul>
@@ -23,7 +26,66 @@
 
     <div class="tab-pane fade" id="pills-terminal0" role="tabpanel" aria-labelledby="pills-terminal0-tab"><app-linux></app-linux></div>
 
-    <div class="tab-pane fade" id="pills-terminal1" role="tabpanel" aria-labelledby="pills-terminal1-tab"><app-editorinstalar></app-editorinstalar></div>
+    <div class="tab-pane fade" id="pills-terminal1" role="tabpanel" aria-labelledby="pills-terminal1-tab">
+        
+        <div class="card-group">
+
+            <div class="card text-dark bg-dark m-3">
+                <div class="card-header">
+                    <h4 style="color: white;"><a target="_black" href="https://code.visualstudio.com/download"><b>Visual studio code</b></a></h4>
+                </div>
+                <div class="card-body"><b>Plugins / Extensiones</b>
+                    <pre class="card-text"><ul>
+<li>Angular 2 TypeScript Emmet</li>
+<li>Angular Language Service</li>
+<li>Angular v5 Snippets</li>
+<li>Angular2-inline</li>
+<li>Bootstrap 4 & Font Awesome snippets</li>
+<li>HTML CSS Support</li>
+<li>JavaScript (ES6) code snippets</li>
+<li>JS-CSS-HTML Formatter</li>
+<li>JSHint</li>
+<li>Material Icon Theme</li>
+<li>Prettier – Code Formatter</li>
+<li>Terminal</li>
+<li>TSLint</li>
+<li>TypeScript Hero </li>
+<li>TypeScript Importer</li></ul></pre>
+                </div>
+            </div>
+
+            <div class="card text-dark bg-dark m-3 border-0">
+                <div class="card-header">
+                    <h4 style="color: white;"><a target="_black" href="https://www.sublimetext.com/"><b>Sublime text</b></a></h4>
+                </div>
+                <div class="card-header">
+                    <h4 style="color: white;"><a target="_black" href="http://www.pspad.com/es/download.htm"><b>Pspad</b></a></h4>
+                </div>
+                <div class="card-header">
+                    <h4 style="color: white;"><a target="_black" href="https://www.vim.org/download.php"><b>Vim<br></b></a><small>(Sin interfaz gráfica)</small></h4>
+                </div>
+                <div class="card-body bg-white"></div>
+            </div>
+
+            <div class="card text-dark bg-dark m-3 border-0">
+                <div class="card-header">
+                    <h4 style="color: white;"><a target="_black" href="https://atom.uptodown.com/windows/descargar"><b>Atom</b></a></h4>
+                </div>
+                <div class="card-body"><b><abbr title="Atom -> Preferencias -> Instalar">Plugins / Extensiones</abbr></b>
+                    <pre class="card-text"><ul>
+<li>Angular 2 Type Script Snippets</li>
+<li>Atom Bootstrap3</li>
+<li>Atom Typescript</li>
+<li>File Icons</li>
+<li>Platformio Ide Terminal</li>
+<li>V Bootstrap4</li></ul></pre>
+                </div>
+                <div class="card-body bg-white"></div>
+            </div>
+
+        </div>
+        
+ </div>
 
     <div class="tab-pane fade" id="pills-terminal2" role="tabpanel" aria-labelledby="pills-terminal2-tab">
 
@@ -38,7 +100,30 @@
 
     </div>
 
-    <div class="tab-pane fade" id="pills-terminal2" role="tabpanel" aria-labelledby="pills-terminal2-tab">F12 o Ctrl+shift+i</div>
+    <div class="tab-pane fade" id="pills-terminal3" role="tabpanel" aria-labelledby="pills-terminal3-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-dark m-3" >
+                <div class="card-body">
+                  <pre class="card-text">F12 o Ctrl+shift+i</pre>
+                </div>
+              </div>
+          </div>
+          
+    </div>
+
+    <div class="tab-pane fade" id="pills-terminal4" role="tabpanel" aria-labelledby="pills-terminal4-tab">
+        
+        <div class="card text-dark bg-dark m-3 border-0">
+            <div class="card-body">
+                <pre style="color: white;"><ul><li><b>Seleccionamos una palabra + Control d</b> -> Pulsamos las veces necesaria la d para ir eligiendo las palabras que se sustituirá</li>
+<li>Poner $ a la variable indica que es un observable (no obligatorio)</li></ul></pre>
+            </div>
+        </div>
+          
+    </div>
+
+
 
 </div>
 

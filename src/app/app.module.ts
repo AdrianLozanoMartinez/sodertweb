@@ -195,7 +195,6 @@ import { VariabletypeComponent } from './paginas/programacion/typescript/variabl
 import { FuncionestypeComponent } from './paginas/programacion/typescript/funcionestype/funcionestype.component';
 import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
-import { EditorinstalarComponent } from './paginas/programacion/terminal/editorinstalar/editorinstalar.component';
 
 
 
@@ -375,8 +374,7 @@ import { EditorinstalarComponent } from './paginas/programacion/terminal/editori
     VariabletypeComponent,
     FuncionestypeComponent,
     FuncionamientotypeComponent,
-    PromesastypeComponent,
-    EditorinstalarComponent
+    PromesastypeComponent
   ],
   imports: [
     //Por defecto
