@@ -35,12 +35,6 @@
     <li class="nav-item">
         <a class="nav-link" id="pills-tpscript10-tab" data-toggle="pill" href="#pills-tpscript10" role="tab" aria-controls="pills-tpscript10" aria-selected="false" style="color: black;">Decoradores</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript11-tab" data-toggle="pill" href="#pills-tpscript11" role="tab" aria-controls="pills-tpscript11" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript12-tab" data-toggle="pill" href="#pills-tpscript12" role="tab" aria-controls="pills-tpscript12" aria-selected="false" style="color: black;">x</a>
-    </li>
     <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
 </ul>
 
@@ -300,6 +294,9 @@
         <h2 style="text-align: center;">Classe</h2>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <h4 style="color: white;">nombre.class.ts</h4>
+                </div>
                 <div class="card-body"><h3>Se <b>exporta a</b> otro lugar</h3>
                     <pre class="card-text"><b>export class nombre_Clase {{c}}</b>
 
@@ -319,6 +316,9 @@
                 </div>
             </div>
             <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <h4 style="color: white;">nombre2.class.ts</h4>
+                </div>
                 <div class="card-body"><h3>Se <b>importa de</b> otro lugar</h3>
                     <pre class="card-text"><b>import {{c}} nombre_Clase } from './classes/nombre_Clase';</b>
 
@@ -404,7 +404,7 @@
     // "inlineSources": true,                       /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
 
     /* Experimental Options */
-    // "experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+     <b>"experimentalDecorators": true,</b>              /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
@@ -416,10 +416,17 @@
             </div>
             <div class="card text-dark bg-primary m-3">
                 <div class="card-header">
-                    <h4 style="color: white;">x</h4>
+                    <h4 style="color: white;">nombre.class.ts</h4>
                 </div>
                 <div class="card-body">
-                    <pre class="card-text">x</pre>
+                    <pre class="card-text"><b><abbr title="una funcion que se ejecuta en la clase u otro lado, añade caracteristica y funcionalidades propias">function</abbr> nombre_Funcion ( nombre_parametro_clase: Function ) </b>{{c}}
+  console.log( nombre_parametro_clase );
+}
+
+<b><abbr title="añade funcionalidad a la clase (servicios...)">@nombre_Funcion</abbr></b>
+export class nombre_Clase {{c}}
+  //Lo que haya dentro
+}</pre>
                 </div>
             </div>
         </div>
@@ -428,36 +435,11 @@
     </div>
 
 
-    <div class="tab-pane fade" id="pills-tpscript11" role="tabpanel" aria-labelledby="pills-tpscript11-tab">x</div>
-
-    <div class="tab-pane fade" id="pills-tpscript12" role="tabpanel" aria-labelledby="pills-tpscript12-tab">x</div>
-
-
 </div>
 <br><br>
 
 <b id="azul" style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Typescript"><b><a target="_black" href="https://www.typescriptlang.org/">Typescript</a></b></abbr>
 <img src="../../../../assets/imagenes/typescript.png" style="margin-left: 2%; width: 300px;">
 <button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>
-
-
-
-
-<ul>
-    <li><b>Variables</b>
-        <ul>
-            <li><b>Operadores</b>
-                <ul>
-                    <li><b>&&</b> (Y - Conjunción): Si se cumple cada condición se muestra <small>Ej: nombre_de_mi_variable && nombre_de_mi_variable2</small></li>
-                    <li><b>||</b> (O - Disyunción: Si se cumple una condición se muestra <small>Ej: nombre_de_mi_variable || nombre_de_mi_variable2</small></li>
-                </ul>
-            </li>
-            <li><b>Métodos</b>
-                <ul>
-                    <li><b>valueOf()</b> Nos da el valor de la variable <small>Ej: nombre_de_mi_variable.valueOf()</small></li>
-                </ul>
-            </li>
-        </ul>
-
 
         <br><br>
