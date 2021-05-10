@@ -64,7 +64,6 @@
     <b><abbr title="Estado del archivo">git</abbr> status</b> (<small><abbr title="Visual Studio - Nos informa que están listo para hacer git commit (para subirlo al Local Repository)" style="color: green;">Añadido (git add)</abbr> / <abbr title="Visual Studio - Nos informa que no están listo y debemos hacer git add (para meterlo en Staging Area)" style="color: red;">No añadido (no git add)</abbr> -> Si <b>modificamos</b> archivos se pondrá en <u>verde</u> la <u>parte </u><u>anterior</u> y en <u>rojo lo <b>nuevo</b></u> el mismo archivo, hasta que hagamos git add</small>)</li>
 <li><b><abbr title="Añadimos comentario del Directorio de trabajo al Reposición local o Directorio de Git">git</abbr> commit -m "Comentario" // <abbr title="Si no ponemos -m Comentario">git</abbr> commit</b> (<abbr title="Área de preparación. Solo está a la espera que se le avise para enviar del directorio de trabajo al directorio de Git">Staging Area</abbr> -> nos abre el <b>editor de texto</b> -> Podemos escribir dentro, para salir y guardar (<b>ESC + :wq!</b>) (<abbr title="Ejem: Quien se encarga de coordinar cuando está listo las piezas del muñeco (piernas, brazos...) o programa y si lo está se envía a Local Repository">Pasar a Local Repository</abbr>))</li>
     <b><abbr title="Estado del archivo. Visual Studio - Nos informa que se ha hecho git commit y está subido al Local Repository)">git </abbr>log</b> -> <abbr title="commit 703c756a581589863bc8bb242c7ec65c34162786 (HEAD -> master) - Identificador (Y que estamos en el directorio maestro)">Log</abbr> (<abbr title="Author: Adrian Lozano {{co}}adrianlm1985@gmail.com>">Autor</abbr> / <abbr title="Date:   Mon May 3 22:32:57 2021 +0200">Día y hora</abbr> / <abbr title="Comentario">Comentario escrito</abbr> -> Arriba (Los más nuevo) - Abajo)(Lo más viejos)
-    <li><b>git branch -M main</b></li>
     <li><b>git remote add nombreDelRepositorio <a href="https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git">https://github.com/usuario/nombre-del-proyecto</a></b> -> (nombreDelRepositorio o <abbr title="1º nombre que se suele usar">origin</abbr> o <abbr title="2º nombre que se suele usar">upstream</abbr>). <abbr title="Reposición local o Directorio de Git"><b>Local Repository</b></abbr>: <abbr title="Ejem: Se recibe todas las piezas del muñeco o programa">Ejemplo</abbr>
     <b>git remote -v</b> -> <abbr title="origin  https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git (fetch)
 origin  https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git (push)">Comprobar si está bien subido</abbr></li>
@@ -90,6 +89,16 @@ origin  https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git (push)">Com
                 </div>
             </div>
         </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-dark m-3">
+                <div class="card-body">
+                    <pre class="card-text"><abbr title="Para no usar la raíz"><a href="https://rogerdudler.github.io/git-guide/index.es.html"><h3>Crear rama</h3></a></abbr><b>X. git pull nombreDelRepositorio master</b> -> Obtener archivos de Github de otros usuarios que trabajan en el mismo proyecto o modificados por uno mismo desde la web</pre>
+                </div>
+            </div>
+        </div>
+
+        <li><b>git branch -M main</b></li>
 
         <div class="card-group">
             <div class="card text-dark bg-dark m-3">
@@ -123,5 +132,7 @@ Comprobar en el <a href="https://github.com/AdrianLozanoMartinez/Prueba-Curso-Gi
 </div>
 <br><br>
 
+<b id="azul" style="margin-left: 10%;">Web de Ayuda</b>: <abbr title="Manual Github/Git"><b><a target="_black" href="https://rogerdudler.github.io/git-guide/index.es.html">Manual</a></b></abbr> || <abbr title="Manual Angular"><b><a target="_black" href="https://github.com/angular/angular-cli">Github</a></b></abbr>||
+<abbr title="Manual versión subida/bajada"><a href="https://update.angular.io"><b>Upgrade/Downgrade</b></a></abbr>
 <img src="../../../../assets/imagenes/github.png" style="margin-left: 40%; width: 300px;">
 <button class="btn btn-info m-2" [routerLink]="['/programacion']">Atras</button>
