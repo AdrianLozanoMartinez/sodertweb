@@ -1,5 +1,5 @@
-a{
-    color: black;
+a, ul, li{
+    color: white;
 }
 
 /*Cambiar de color del botón activo*/

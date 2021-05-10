@@ -12,9 +12,6 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
 //Programacion
 import { ProgramacionComponent } from './paginas/programacion/programacion.component';
-import { InicioComponent } from './paginas/programacion/inicio/inicio.component';
-import { EditoresComponent } from './paginas/programacion/inicio/editores/editores.component';
-import { TerminalesComponent } from './paginas/programacion/inicio/terminales/terminales.component';
 import { GitComponent } from './paginas/programacion/git/git.component';
 import { TerminalComponent } from './paginas/programacion/terminal/terminal.component';
 //Programacion - Html
@@ -156,9 +153,6 @@ export const appRoutes: Routes = [
   { path: 'appcomponente', component: AppComponent},
   //Programacion
   { path: 'programacion', component: ProgramacionComponent},
-  { path: 'inicio', component: InicioComponent},
-  { path: 'editores', component: EditoresComponent},
-  { path: 'terminales', component: TerminalesComponent},
   { path: 'git', component: GitComponent},
   { path: 'terminal', component: TerminalComponent},
   //Programacion - Html

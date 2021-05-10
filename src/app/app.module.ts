@@ -15,9 +15,6 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
 //Programacion
 import { ProgramacionComponent } from './paginas/programacion/programacion.component';
-import { InicioComponent } from './paginas/programacion/inicio/inicio.component';
-import { EditoresComponent } from './paginas/programacion/inicio/editores/editores.component';
-import { TerminalesComponent } from './paginas/programacion/inicio/terminales/terminales.component';
 import { GitComponent } from './paginas/programacion/git/git.component';
 import { TerminalComponent } from './paginas/programacion/terminal/terminal.component';
 import { WindowsComponent } from './paginas/programacion/terminal/windows/windows.component';
@@ -198,6 +195,7 @@ import { VariabletypeComponent } from './paginas/programacion/typescript/variabl
 import { FuncionestypeComponent } from './paginas/programacion/typescript/funcionestype/funcionestype.component';
 import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
+import { EditorinstalarComponent } from './paginas/programacion/terminal/editorinstalar/editorinstalar.component';
 
 
 
@@ -215,9 +213,6 @@ import { PromesastypeComponent } from './paginas/programacion/typescript/promesa
     CabeceraComponent,
     //Programacion
     ProgramacionComponent,
-    InicioComponent,
-    EditoresComponent,
-    TerminalesComponent,
     GitComponent,
     TerminalComponent,
     WindowsComponent,
@@ -380,7 +375,8 @@ import { PromesastypeComponent } from './paginas/programacion/typescript/promesa
     VariabletypeComponent,
     FuncionestypeComponent,
     FuncionamientotypeComponent,
-    PromesastypeComponent
+    PromesastypeComponent,
+    EditorinstalarComponent
   ],
   imports: [
     //Por defecto
