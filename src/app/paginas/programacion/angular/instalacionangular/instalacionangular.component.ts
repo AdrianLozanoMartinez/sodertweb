@@ -12,4 +12,7 @@ export class InstalacionangularComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Html
+  c=`{`;
+  co=`<`;
 }

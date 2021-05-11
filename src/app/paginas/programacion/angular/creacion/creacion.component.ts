@@ -14,6 +14,4 @@ export class CreacionComponent implements OnInit {
 //Html
 c=`{`;
 base=`<base href="/">`;
-componente=`(cabecera (<app-cabecera></app-cabecera>), pie (<app-pie></app-pie>), home (nada o <app-home></app-home>)...)`;
-ro=`<router-outlet></router-outlet>`;
 }

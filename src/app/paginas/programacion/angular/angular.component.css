@@ -14,3 +14,7 @@ a {
 #rojo {
     color: red;
 }
+
+pre, h3{
+    color: white;
+}

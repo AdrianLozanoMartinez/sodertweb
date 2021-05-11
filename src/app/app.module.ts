@@ -195,6 +195,7 @@ import { VariabletypeComponent } from './paginas/programacion/typescript/variabl
 import { FuncionestypeComponent } from './paginas/programacion/typescript/funcionestype/funcionestype.component';
 import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
+import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
 
 
 
@@ -374,7 +375,8 @@ import { PromesastypeComponent } from './paginas/programacion/typescript/promesa
     VariabletypeComponent,
     FuncionestypeComponent,
     FuncionamientotypeComponent,
-    PromesastypeComponent
+    PromesastypeComponent,
+    ExtensionesComponent
   ],
   imports: [
     //Por defecto

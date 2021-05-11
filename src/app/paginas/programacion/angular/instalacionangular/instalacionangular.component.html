@@ -6,7 +6,10 @@
         <a class="nav-link" id="pills-instalacionangular0-tab" data-toggle="pill" href="#pills-instalacionangular0" role="tab" aria-controls="pills-instalacionangular0" aria-selected="false" style="color: black;">Angular</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-instalacionangular1-tab" data-toggle="pill" href="#pills-instalacionangular1" role="tab" aria-controls="pills-instalacionangular1" aria-selected="false" style="color: black;">Upgrade /<br>Downgrade</a>
+        <a class="nav-link" id="pills-instalacionangular3-tab" data-toggle="pill" href="#pills-instalacionangular3" role="tab" aria-controls="pills-instalacionangular3" aria-selected="false" style="color: black;"><abbr title="Crear un proyecto para trabajar (Componentes básicos: module, principal componente, index, angular.json, etc">Proyecto</abbr></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular4-tab" data-toggle="pill" href="#pills-instalacionangular4" role="tab" aria-controls="pills-instalacionangular4" aria-selected="false" style="color: black;">Extensiones</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-instalacionangular2-tab" data-toggle="pill" href="#pills-instalacionangular2" role="tab" aria-controls="pills-instalacionangular2" aria-selected="false" style="color: black;">Compartir</a>
@@ -39,31 +42,32 @@
                     <pre class="card-text"><ul><li><b>npm install -g @angular/cli</b> -> <u>Última versión</u><small>   (<abbr title="Global - Afecta a TODOS los proyectos">-g</abbr> / <abbr title="Local - Afecta SOLO al proyecto">Sin -g</abbr> -> Necesita ejecutar administrador en consola)</small></li>
     <li><b>npm install –g @angular/cli@número</b> -> <u>Elegir versión</u> <small>(número = 7.3.9 u 8 o 9 o ...)</small></li>
 </ul><ul><b>VER VERSIÓN</b>
-    <li><b>npm –v</b> -> <u>Sin detalles</u><small> (Actualmente 6.14.8)</small></li>
-    <li><b>ng --version</b> -> <u>Con detalles</u></li></ul></pre>
+    <li><b>ng --version</b> o <b>ng version</b> o <b>ng v</b> -> <u>Ver versión</u></li></ul></pre>
                 </div>
             </div>
         </div>
 
 
-
-    </div>
-
-    <div class="tab-pane fade" id="pills-instalacionangular1" role="tabpanel" aria-labelledby="pills-instalacionangular1-tab">
-
         <div class="card-group">
             <div class="card text-dark bg-danger m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><abbr title="Manual versión subida/bajada"><a href="https://update.angular.io"><b>Web</b></a></abbr><li><b>ng update @angular/cli@número @angular/core@número</b> -> <u>Upgrade</u> <small>(número = 10 o ...)</small></li>
-<li><u>Downgrade</u>
-    <ol><li><b>npm uninstall -g @angular/cli</b> -> <u>Desinstalar</u></li>
-        <li><b>npm cache verify</b> -> <u>Verificar</u></li>
-        <li><b>npm install –g @angular/cli@número</b> -> <u>Instalar</u><small>(número = 7.3.9 u 8 o 9 o ...)</small></li></ol></li></ul>
-<ul><b>VER VERSIÓN</b><li><b>npm –v</b> -> <u>Sin detalles</u><small> (Actualmente 6.14.8)</small></li>
+                <div class="card-body"><h3>Actualizar (<abbr title="Manual versión subida/bajada"><a href="https://update.angular.io">Web</a></abbr>)</h3>
+                    <pre class="card-text"><ul><li><b>ng update @angular/cli@número @angular/core@número</b> -> <u>Upgrade</u> <small>(número = 10 o ...)</small></li>
 <li><b>ng --version</b> -> <u>Con detalles</u></li></ul></pre>
                 </div>
             </div>
         </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Desactualizar (<abbr title="Manual versión subida/bajada"><a href="https://update.angular.io">Web</a></abbr>)</h3>
+                    <pre class="card-text"><ol><li><b>npm uninstall -g @angular/cli</b> -> <u>Desinstalar</u></li>
+<li><b>npm cache verify</b> -> <u>Verificar</u></li>
+<li><b>npm install –g @angular/cli@número</b> -> <u>Instalar</u><small>(número = 7.3.9 u 8 o 9 o ...)</small></li></ol>
+<ul><li><b>ng --version</b> -> <u>Ver versión</u></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
@@ -80,5 +84,43 @@
 
 
     </div>
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular4" role="tabpanel" aria-labelledby="pills-instalacionangular4-tab"><app-extensiones></app-extensiones></div>
+
+    <div class="tab-pane fade" id="pills-instalacionangular3" role="tabpanel" aria-labelledby="pills-instalacionangular3-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ol><li><b>ng new</b> Nombre_proyecto (Incluye node_modules)</li>
+<li><b>routing</b> (n (No queremos que sea automático)</li>
+<li><b>CSS</b></li></ol></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Detalles de la instalación</h4>
+                    <pre class="card-text"><b>npm audit</b></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Solucionar errores</h4>
+                    <pre class="card-text"><ol><li><b>PoweShell como administrador</b></li>
+<li><b>Set-ExecutionPolicy Unrestricted</b></li>
+<li>s (si)</li>
+<li>intro</li></ol></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
 
 </div>

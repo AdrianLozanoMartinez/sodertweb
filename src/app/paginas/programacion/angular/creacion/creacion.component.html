@@ -1,11 +1,5 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-creacionangular-tab" data-toggle="pill" href="#pills-creacionangular" role="tab" aria-controls="pills-creacionangular" aria-selected="true" style="color: black;">Solucionar<br>errores</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-creacionangular0-tab" data-toggle="pill" href="#pills-creacionangular0" role="tab" aria-controls="pills-creacionangular0" aria-selected="false" style="color: black;">Proyecto</a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link" id="pills-creacionangular1-tab" data-toggle="pill" href="#pills-creacionangular1" role="tab" aria-controls="pills-creacionangular1" aria-selected="false" style="color: black;">Componentes</a>
     </li>
     <li class="nav-item">
@@ -13,9 +7,6 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-creacionangular3-tab" data-toggle="pill" href="#pills-creacionangular3" role="tab" aria-controls="pills-creacionangular3" aria-selected="false" style="color: black;">App.module.ts<br><small>Centro de unión<br>componentes/directivas/servicios...</small></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-creacionangular4-tab" data-toggle="pill" href="#pills-creacionangular4" role="tab" aria-controls="pills-creacionangular4" aria-selected="false" style="color: black;">Ya creados<br>Añadir</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-creacionangular5-tab" data-toggle="pill" href="#pills-creacionangular5" role="tab" aria-controls="pills-creacionangular5" aria-selected="false" style="color: black;">Servicios.ts</a>
@@ -29,23 +20,9 @@
     <li class="nav-item">
       <a class="nav-link" id="pills-creacionangular8-tab" data-toggle="pill" href="#pills-creacionangular8" role="tab" aria-controls="pills-creacionangular8" aria-selected="false" style="color: black;">Directiva.ts</a>
     </li>
-    <button class="btn btn-dark m-2" [routerLink]="['/angular']">Atras</button>
 </ul>
   
 <div class="tab-content cuadro" id="pills-tabContent">
-  
-    <div class="tab-pane fade show active" id="pills-creacionangular" role="tabpanel" aria-labelledby="pills-creacionangular-tab">
-<ul>
-    <li>Al ejecutar -> <b>PoweShell</b> como <u>administrador</u> -> <b>Set-ExecutionPolicy Unrestricted</b> -> <u>s</u> (si) -> intro</li>
-</ul>
-    </div>
-  
-    <div class="tab-pane fade" id="pills-creacionangular0" role="tabpanel" aria-labelledby="pills-creacionangular0-tab">
-<ul>
-    <li>Instalar -> <b>ng new</b> Nombre_proyecto (Incluye node_modules) -> <u>routing</u> (n (No queremos que sea automático) o s (Se haga automático todo)) -> <u>CSS</u></li>
-    <li>Ver detalles instalación -> <b>npm audit</b> (<u>Ejecutar dentro del proyecto</u>)</li>
-</ul>
-    </div>
 
   <div class="tab-pane fade" id="pills-creacionangular1" role="tabpanel" aria-labelledby="pills-creacionangular1-tab">
 <ul>
@@ -174,143 +151,6 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);
     export class AppModule {{c}} }</pre>
 
     </div>
-
-  <div class="tab-pane fade" id="pills-creacionangular4" role="tabpanel" aria-labelledby="pills-creacionangular4-tab">
-<ul>
-    <li><b>Index.html</b>: <b>{{base}}</b>: Raíz del proyecto. Se <u>cambia</u> para <u>usarlo</u> en <u>servidores</u> <u>locales</u></li>
-    <li><b>Style.css</b>: Estilo en todo el proyecto</li>
-    <li><b>App.component</b>: <ul>
-        <li><b>Unión</b> de todas las páginas, se pone la <b>llamada</b> de lo que queremos que aparezca <u>{{componente}}</u></li>
-        <li>Para que <b>funcione</b> los <b>enlaces</b>: <u>{{ro}}</u></li>
-        <li><b>Css</b> del component: <u>Menos importante que style.css</u> pero <u>más que</u> los <u>componentes</u> normales</li></ul></li>
-    <li><b>Favicon.ico</b>: Tamaño <u>32x32</u>. <u>Icono</u> de la <u>pestaña</u>. Coger cualquier imagen, ponerle mismo nombre y extensión, luego reemplazarlo</li>
-    <li><b>Assets</b>: <u>Almacen</u> de documento, foto...</li>
-    <li><b>Angular.json</b>: <pre>{{c}}
-"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-"version": 1,
-"newProjectRoot": "projects",
-"projects": {{c}}
-"Sodert": {{c}}
-"projectType": "application",
-"schematics": {{c}}},
-"root": "",
-"sourceRoot": "src",
-"prefix": "app",
-"architect": {{c}}
-  "build": {{c}}
-    "builder": "@angular-devkit/build-angular:browser",
-    "options": {{c}}
-      "outputPath": "dist/Sodert",
-      <b>"index": "src/index.html",</b>
-      "main": "src/main.ts",
-      "polyfills": "src/polyfills.ts",
-      "tsConfig": "tsconfig.app.json",
-      "aot": true,
-      "assets": [
-        <b>"src/favicon.ico",</b>        //<u>Icono de pestaña</u>
-        <b>"src/assets"</b>              //<u>Almacen</u> de archivos
-      ],
-      "styles": [
-        "src/styles.css"
-      ],
-      "scripts": []
-    },
-    "configurations": {{c}}
-      "production": {{c}}
-        "fileReplacements": [
-          {{c}}
-            "replace": "src/environments/<b>environment.ts</b>",        //<u>Desarrollo</u>
-            "with": "src/environments/<b>environment.prod.ts</b>"        //<u>Producción</u>
-          }
-        ],
-        "optimization": true,
-        "outputHashing": "all",
-        "sourceMap": false,
-        "extractCss": true,
-        "namedChunks": false,
-        "extractLicenses": true,
-        "vendorChunk": false,
-        "buildOptimizer": true,
-        "budgets": [
-          {{c}}
-            "type": "initial",
-            "maximumWarning": "2mb",
-            "maximumError": "5mb"
-          },
-          {{c}}
-            "type": "anyComponentStyle",
-            "maximumWarning": "6kb",
-            "maximumError": "10kb"
-          }
-        ]
-      }
-    }
-  },
-  "serve": {{c}}
-    "builder": "@angular-devkit/build-angular:dev-server",
-    "options": {{c}}
-      "browserTarget": "Sodert:build"
-    },
-    "configurations": {{c}}
-      "production": {{c}}
-        "browserTarget": "Sodert:build:production"
-      }
-    }
-  },
-  "extract-i18n": {{c}}
-    "builder": "@angular-devkit/build-angular:extract-i18n",
-    "options": {{c}}
-      "browserTarget": "Sodert:build"
-    }
-  },
-  "test": {{c}}
-    "builder": "@angular-devkit/build-angular:karma",
-    "options": {{c}}
-      "main": "src/test.ts",
-      "polyfills": "src/polyfills.ts",
-      "tsConfig": "tsconfig.spec.json",
-      "karmaConfig": "karma.conf.js",
-      "assets": [
-        "src/favicon.ico",
-        "src/assets"
-      ],
-      <b>"styles": [</b>             //Se <u>añade cuando se instale las extensiones</u>: <b>styles.css, Bootstrap, Font-awesome</b>
-        <b>"src/styles.css"</b>
-      <b>],
-        "scripts": []</b>           //Se <u>añade cuando se instale las extensiones</u>: <b>Bootstrap</b>
-    }
-  },
-  "lint": {{c}}
-    "builder": "@angular-devkit/build-angular:tslint",
-    "options": {{c}}
-      "tsConfig": [
-        "tsconfig.app.json",
-        "tsconfig.spec.json",
-        "e2e/tsconfig.json"
-      ],
-      "exclude": [
-        "**/node_modules/**"
-      ]
-    }
-  },
-  "e2e": {{c}}
-    "builder": "@angular-devkit/build-angular:protractor",
-    "options": {{c}}
-      "protractorConfig": "e2e/protractor.conf.js",
-      "devServerTarget": "Sodert:serve"
-    },
-    "configurations": {{c}}
-      "production": {{c}}
-        "devServerTarget": "Sodert:serve:production"
-      }
-    }
-  }
-}
-}},
-"defaultProject": "Sodert"
-}</pre></li>
-</ul>
-  </div>
 
   <div class="tab-pane fade" id="pills-creacionangular5" role="tabpanel" aria-labelledby="pills-creacionangular5-tab">
 <ul>
