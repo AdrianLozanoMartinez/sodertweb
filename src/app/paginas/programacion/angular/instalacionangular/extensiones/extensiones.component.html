@@ -1,13 +1,10 @@
 <div class="row">
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-ext-tab" data-toggle="pill" href="#v-pills-ext" role="tab" aria-controls="v-pills-ext" aria-selected="true">x</a>
-        <a class="nav-link" id="v-pills-ext0-tab" data-toggle="pill" href="#v-pills-ext0" role="tab" aria-controls="v-pills-ext0" aria-selected="true">x</a>
-        <a class="nav-link" id="v-pills-ext1-tab" data-toggle="pill" href="#v-pills-ext1" role="tab" aria-controls="v-pills-ext1" aria-selected="false">x</a>
-        <a class="nav-link" id="v-pills-ext2-tab" data-toggle="pill" href="#v-pills-ext2" role="tab" aria-controls="v-pills-ext2" aria-selected="false">x</a>
-        <a class="nav-link" id="v-pills-ext3-tab" data-toggle="pill" href="#v-pills-ext3" role="tab" aria-controls="v-pills-ext3" aria-selected="false">x</a>
-        <a class="nav-link" id="v-pills-ext4-tab" data-toggle="pill" href="#v-pills-ext4" role="tab" aria-controls="v-pills-ext4" aria-selected="false">x</a>
-        <a class="nav-link" id="v-pills-ext5-tab" data-toggle="pill" href="#v-pills-ext5" role="tab" aria-controls="v-pills-ext5" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-ext-tab" data-toggle="pill" href="#v-pills-ext" role="tab" aria-controls="v-pills-ext" aria-selected="true">Bootstrap</a>
+        <a class="nav-link" id="v-pills-ext0-tab" data-toggle="pill" href="#v-pills-ext0" role="tab" aria-controls="v-pills-ext0" aria-selected="true">Fontawesome</a>
+        <a class="nav-link" id="v-pills-ext1-tab" data-toggle="pill" href="#v-pills-ext1" role="tab" aria-controls="v-pills-ext1" aria-selected="false">Sweetalert2</a>
+        <a class="nav-link" id="v-pills-ext2-tab" data-toggle="pill" href="#v-pills-ext2" role="tab" aria-controls="v-pills-ext2" aria-selected="false">Toastr</a>
       </div>
     </div>
     <div class="col-10">
@@ -15,22 +12,34 @@
         <div class="tab-pane fade" id="v-pills-ext" role="tabpanel" aria-labelledby="v-pills-ext-tab">
 
             <div class="card-group">
-                <div class="card text-dark bg-danger m-3">
-                    <div class="card-body">x
-                        <pre class="card-text">x</pre>
+                <div class="card text-dark m-3" id="lila2">
+                    <div class="card-body" id="lila2"><h3>Instalación Automático</h3>
+                        <pre class="card-text" id="lila2"><ol><li>Instalar: <b>npm install bootstrap --save</b><br><b>+</b><br>Añadir en <b><u>angular.json</u></b>:<pre>"styles": [
+<b>"./node_modules/bootstrap/dist/css/bootstrap.min.css",
+"src/styles.css"</b>
+]</pre></li><li>Instalar: <b>npm install jquery --save</b>
+          <b>npm install popper.js --save</b><br><b>+</b><br>Añadir en <b><u>angular.json</u></b>:<pre>"scripts": [
+    <b>"./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/popper.js/dist/umd/popper.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.min.js"</b>
+]</pre></li></ol></pre>
                     </div>
                 </div>
-                <div class="card text-dark bg-danger m-3">
-                    <div class="card-body">x
-                        <pre class="card-text">x</pre>
-                    </div>
+                <div class="card text-dark m-3 border-0" id="lila2">
+                    <div class="card-body border-0" id="lila2"><h3>Descargada</h3>
+                        <pre class="card-text border-0" id="lila2">Lo que descargamos en la <a href="https://getbootstrap.com/docs/4.6/getting-started/download/" style="color: white;">web</a> lo metemos en:
+
+<b>src/assets/Bootstrap-4.5.0-Descargado/css</b>
+y en
+<b>src/assets/Bootstrap-4.5.0-Descargado/js</b></pre></div>
+                    <div class="card-body bg-white"></div>
                 </div>
             </div>
     
             <div class="card-group">
-                <div class="card text-dark bg-danger m-3">
-                    <div class="card-body">x
-                        <pre class="card-text">x</pre>
+                <div class="card text-dark m-3" id="lila2">
+                    <div class="card-body" id="lila2"><h3>Instalación Manual</h3>
+                        <pre class="card-text" id="lila2"><app-estructurabootstrap></app-estructurabootstrap></pre>
                     </div>
                 </div>
             </div>
@@ -71,45 +80,6 @@
               </div>
 
         </div>
-
-        <div class="tab-pane fade" id="v-pills-ext3" role="tabpanel" aria-labelledby="v-pills-ext3-tab">
-            
-                        <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
-
-        </div>
-
-
-        <div class="tab-pane fade" id="v-pills-ext4" role="tabpanel" aria-labelledby="v-pills-ext4-tab">
-            
-                        <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
-
-        </div>
-        
-
-        <div class="tab-pane fade" id="v-pills-ext5" role="tabpanel" aria-labelledby="v-pills-ext5-tab">
-            
-                        <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
-
-        </div>
-
 
   </div>
 

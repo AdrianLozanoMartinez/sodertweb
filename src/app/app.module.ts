@@ -77,7 +77,6 @@ import { InstalacionangularComponent } from './paginas/programacion/angular/inst
 import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { ExtensionesangularComponent } from './paginas/programacion/angular/extensionesangular/extensionesangular.component';
-import { BootstrapangularComponent } from './paginas/programacion/angular/extensionesangular/bootstrapangular/bootstrapangular.component';
 import { FontangularComponent } from './paginas/programacion/angular/extensionesangular/fontangular/fontangular.component';
 import { Sweetalert2angularComponent } from './paginas/programacion/angular/extensionesangular/sweetalert2angular/sweetalert2angular.component';
 import { VariablesangularComponent } from './paginas/programacion/angular/variablesangular/variablesangular.component';
@@ -275,7 +274,6 @@ import { ExtensionesComponent } from './paginas/programacion/angular/instalacion
     CreacionComponent,
     ArranqueangularComponent,
     ExtensionesangularComponent,
-    BootstrapangularComponent,
     FontangularComponent,
     Sweetalert2angularComponent,
     VariablesangularComponent,
