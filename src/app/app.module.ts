@@ -51,7 +51,6 @@ import { TablabootComponent } from './paginas/programacion/bootstrap/tablaboot/t
 import { ColortablabootComponent } from './paginas/programacion/bootstrap/tablaboot/colortablaboot/colortablaboot.component';
 import { CartasbootComponent } from './paginas/programacion/bootstrap/cartasboot/cartasboot.component';
 import { DisplaybootComponent } from './paginas/programacion/bootstrap/displayboot/displayboot.component';
-import { JumbotronComponent } from './paginas/programacion/bootstrap/jumbotron/jumbotron.component';
 import { NavbootComponent } from './paginas/programacion/bootstrap/navboot/navboot.component';
 import { ImagenbootComponent } from './paginas/programacion/bootstrap/imagenboot/imagenboot.component';
 import { FormulariobootComponent } from './paginas/programacion/bootstrap/formularioboot/formularioboot.component';
@@ -76,12 +75,7 @@ import { AngularComponent } from './paginas/programacion/angular/angular.compone
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
 import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
-import { ExtensionesangularComponent } from './paginas/programacion/angular/extensionesangular/extensionesangular.component';
-import { FontangularComponent } from './paginas/programacion/angular/extensionesangular/fontangular/fontangular.component';
-import { Sweetalert2angularComponent } from './paginas/programacion/angular/extensionesangular/sweetalert2angular/sweetalert2angular.component';
-import { VariablesangularComponent } from './paginas/programacion/angular/variablesangular/variablesangular.component';
 import { EnlacesangularComponent } from './paginas/programacion/angular/enlacesangular/enlacesangular.component';
-import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
 import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
@@ -156,7 +150,6 @@ import { GrowComponent } from './paginas/programacion/sweepalert2/configuracions
 import { EjemplossweepComponent } from './paginas/programacion/sweepalert2/ejemplossweep/ejemplossweep.component';
 import { MetodossweepComponent } from './paginas/programacion/sweepalert2/metodossweep/metodossweep.component';
 import { ImagenurlComponent } from './paginas/programacion/sweepalert2/configuracionsweep/imagenurl/imagenurl.component';
-import { InstalarsweepComponent } from './paginas/programacion/angular/extensionesangular/sweetalert2angular/instalarsweep/instalarsweep.component';
 //Programacion - Toastr
 import { ToastrComponent } from './paginas/programacion/toastr/toastr.component';
 
@@ -195,6 +188,7 @@ import { FuncionestypeComponent } from './paginas/programacion/typescript/funcio
 import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
 import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
+import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
 
 
 
@@ -248,7 +242,6 @@ import { ExtensionesComponent } from './paginas/programacion/angular/instalacion
     ColortablabootComponent,
     CartasbootComponent,
     DisplaybootComponent,
-    JumbotronComponent,
     NavbootComponent,
     ImagenbootComponent,
     FormulariobootComponent,
@@ -273,12 +266,7 @@ import { ExtensionesComponent } from './paginas/programacion/angular/instalacion
     InstalacionangularComponent,
     CreacionComponent,
     ArranqueangularComponent,
-    ExtensionesangularComponent,
-    FontangularComponent,
-    Sweetalert2angularComponent,
-    VariablesangularComponent,
     EnlacesangularComponent,
-    FuncionesangularComponent,
     FormulariosangularComponent,
     ReactivosangularComponent,
     TemplatesangularComponent,
@@ -342,7 +330,6 @@ import { ExtensionesComponent } from './paginas/programacion/angular/instalacion
     EjemplossweepComponent,
     MetodossweepComponent,
     ImagenurlComponent,
-    InstalarsweepComponent,
     //Programacion - Toastr
     ToastrComponent,
     //Programacion - C#
@@ -374,7 +361,8 @@ import { ExtensionesComponent } from './paginas/programacion/angular/instalacion
     FuncionestypeComponent,
     FuncionamientotypeComponent,
     PromesastypeComponent,
-    ExtensionesComponent
+    ExtensionesComponent,
+    FontsgoogleprincipalComponent
   ],
   imports: [
     //Por defecto

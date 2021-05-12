@@ -1,0 +1,20 @@
+<u>Html</u>
+ <pre>{{cc}}{{c0}}<b>{{descargada}}</b>{{c1}}<b>{{online}}</b>{{c2}}{{c4}}<b>{{fuentedescargada}}{{fuenteonline}}</b>{{c10}}</pre>
+<u>Css</u>
+<pre>@font-face{{c}}
+    <b>font-family: FuenteEspecial;</b>                                            /*Ponemos un nombre que luego elegimos a lo que queramos aplicar*/
+    <b>src: url</b>("../../../../libreria/FuenteGoogle/Roboto/Roboto-Black.ttf");  /*Dirección de la fuente descargada*/
+}
+#descargada{{c}}
+    <b>font-family: Fuente especial; </b>                                          /*Nombre definido arriba para ser usado mediante la id o class*/
+}
+
+#online{{c}}
+    <b>font-family: 'Comic Neue', cursive;</b>
+}</pre>
+
+<hr>
+<div id="descargada"><p>Fuente descargada</p></div>
+<div id="online"><p>Fuente online</p></div>
+
+<button class="btn btn-info m-2" [routerLink]="['/programacion']">Atras</button>

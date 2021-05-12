@@ -270,106 +270,89 @@
 
     <div class="tab-pane fade" id="pills-navboot1" role="tabpanel" aria-labelledby="pills-navboot1-tab">
 
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!--Se VE SIEMPRE-->
+        <a class="navbar-brand" href="#">Enlace</a>
+        <a class="navbar-brand" href="#"><img src="../../../../../assets/imagenes/01.jpg" width="30" alt="">Enlace2 + imagen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       
-<nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
-    <!--Se VE SIEMPRE-->
-      <a class="navbar-brand" href="#">Enlace</a>
-  
-      <a class="navbar-brand" href="#"><img src="../../../../../assets/imagenes/01.jpg" width="30" alt="">Enlace2 + imagen</a>
-     
-      <a class="navbar-brand" href="#"><img src="../../../../../assets/imagenes/01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">Enlace3 + imagen</a>
-  
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span></button>
-      
-      <!--NO se VE al REDUCIR NAVEGADOR, se esconde en cuadro con 3 líneas-->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Enlace4 <small>oculto al reducir</small><span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Enlace5 <small>oculto al reducir</small></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enlaces Multiples con Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Subenlace 1, Dentro de Enlaces Multiples Dropdown</a>
-              <a class="dropdown-item" href="#">Subenlace 2, Dentro de Enlaces Multiples Dropdown</a>
-              <div class="dropdown-divider"></div>   <!--Raya divisoria, Dentro de EnlacesMultiplesDropdown-->
-              <a class="dropdown-item" href="#">Subenlace Final, Dentro de Enlaces Multiples Dropdown</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled: Enlace deshabilitado</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Texto dentro del cuadrado de búsqueda" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-      </div>
-    </nav>
-
+         <!--NO se VE al REDUCIR NAVEGADOR, se esconde en cuadro con 3 líneas-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Enlace2 <small>oculto al reducir</small><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Enlace5 <small>oculto al reducir</small></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enlaces Multiples con Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Subenlace 1, Dentro de Enlaces Multiples Dropdown</a>
+                <a class="dropdown-item" href="#">Subenlace 2, Dentro de Enlaces Multiples Dropdown</a>
+                <div class="dropdown-divider"></div>   <!--Raya divisoria, Dentro de EnlacesMultiplesDropdown-->
+                <a class="dropdown-item" href="#">Subenlace Final, Dentro de Enlaces Multiples Dropdown</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled <small>Enlace deshabilitado</small></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
 
     <div class="card-group">
       <div class="card text-dark m-3" id="lila2">
           <div class="card-body" id="lila2">
-            <pre class="card-text">{{co}}!DOCTYPE html>
-    {{co}}html lang="en">
-        {{co}}head>                                                                                        
-            {{co}}meta charset="UTF-8">                                                                    
-            {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
-            {{co}}title>Título en pestaña de la web{{co}}/title>
-            {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        {{co}}/head>                                                                                       
-        {{co}}body>    
-            <b>
-              {{co}}nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
-                {{co}}!--Se VE SIEMPRE-->
-                  {{co}}a class="navbar-brand" href="#">Enlace{{co}}/a>
-              
-                  {{co}}a class="navbar-brand" href="#">{{co}}img src="../../../../../assets/imagenes/01.jpg" width="30" alt="">Enlace2 + imagen{{co}}/a>
-                 
-                  {{co}}a class="navbar-brand" href="#">{{co}}img src="../../../../../assets/imagenes/01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">Enlace3 + imagen{{co}}/a>
-              
-                  {{co}}button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  {{co}}span class="navbar-toggler-icon">{{co}}/span>{{co}}/button>
-                  
-                  {{co}}!--NO se VE al REDUCIR NAVEGADOR, se esconde en cuadro con 3 líneas-->
-                  {{co}}div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    {{co}}ul class="navbar-nav mr-auto">
-                      {{co}}li class="nav-item active">
-                        {{co}}a class="nav-link" href="#">Enlace4 {{co}}small>oculto al reducir{{co}}/small>{{co}}span class="sr-only">(current){{co}}/span>{{co}}/a>
-                      {{co}}/li>
-                      {{co}}li class="nav-item">
-                        {{co}}a class="nav-link" href="#">Enlace5 {{co}}small>oculto al reducir{{co}}/small>{{co}}/a>
-                      {{co}}/li>
-                      {{co}}li class="nav-item dropdown">
-                        {{co}}a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enlaces Multiples con Dropdown{{co}}/a>
-                        {{co}}div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          {{co}}a class="dropdown-item" href="#">Subenlace 1, Dentro de Enlaces Multiples Dropdown{{co}}/a>
-                          {{co}}a class="dropdown-item" href="#">Subenlace 2, Dentro de Enlaces Multiples Dropdown{{co}}/a>
-                          {{co}}div class="dropdown-divider">{{co}}/div>   {{co}}!--Raya divisoria, Dentro de EnlacesMultiplesDropdown-->
-                          {{co}}a class="dropdown-item" href="#">Subenlace Final, Dentro de Enlaces Multiples Dropdown{{co}}/a>
-                        {{co}}/div>
-                      {{co}}/li>
-                      {{co}}li class="nav-item">
-                        {{co}}a class="nav-link disabled" href="#">Disabled: Enlace deshabilitado{{co}}/a>
-                      {{co}}/li>
-                    {{co}}/ul>
-                    {{co}}form class="form-inline my-2 my-lg-0">
-                      {{co}}input class="form-control mr-sm-2" type="search" placeholder="Texto dentro del cuadrado de búsqueda" aria-label="Search">
-                      {{co}}button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar{{co}}/button>
-                    {{co}}/form>
-                  {{co}}/div>
-                {{co}}/nav>
-          </b>                                                                                                                                                                   
-              {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
-              {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
-              {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
-        {{co}}/body>                                                                                       
-    {{co}}/html></pre>
+            <pre class="card-text"><b>
+      {{co}}nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          {{co}}!--Se VE SIEMPRE-->
+          {{co}}a class="navbar-brand" href="#">Enlace{{co}}/a>
+          {{co}}a class="navbar-brand" href="#">{{co}}img src="../../../../../assets/imagenes/01.jpg" width="30" alt="">Enlace2 + imagen{{co}}/a>
+          {{co}}button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{co}}span class="navbar-toggler-icon">{{co}}/span>
+          {{co}}/button>
+        
+            {{co}}!--NO se VE al REDUCIR NAVEGADOR, se esconde en cuadro con 3 líneas-->
+          {{co}}div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {{co}}ul class="navbar-nav mr-auto">
+              {{co}}li class="nav-item active">
+                {{co}}a class="nav-link" href="#">Enlace2 {{co}}small>oculto al reducir{{co}}/small>{{co}}span class="sr-only">(current){{co}}/span>{{co}}/a>
+              {{co}}/li>
+              {{co}}li class="nav-item">
+                {{co}}a class="nav-link" href="#">Enlace5 {{co}}small>oculto al reducir{{co}}/small>{{co}}/a>
+              {{co}}/li>
+              {{co}}li class="nav-item dropdown">
+                {{co}}a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enlaces Multiples con Dropdown{{co}}/a>
+                {{co}}div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {{co}}a class="dropdown-item" href="#">Subenlace 1, Dentro de Enlaces Multiples Dropdown{{co}}/a>
+                  {{co}}a class="dropdown-item" href="#">Subenlace 2, Dentro de Enlaces Multiples Dropdown{{co}}/a>
+                  {{co}}div class="dropdown-divider">{{co}}/div>   {{co}}!--Raya divisoria, Dentro de EnlacesMultiplesDropdown-->
+                  {{co}}a class="dropdown-item" href="#">Subenlace Final, Dentro de Enlaces Multiples Dropdown{{co}}/a>
+                {{co}}/div>
+              {{co}}/li>
+              {{co}}li class="nav-item">
+                {{co}}a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled {{co}}small>Enlace deshabilitado{{co}}/small>{{co}}/a>
+              {{co}}/li>
+            {{co}}/ul>
+            {{co}}form class="form-inline my-2 my-lg-0">
+              {{co}}input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              {{co}}button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar{{co}}/button>
+            {{co}}/form>
+          {{co}}/div>
+      {{co}}/nav>
+      </b>                                                                                                                                                                   
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+    {{co}}/body>                                                                                       
+{{co}}/html></pre>
           </div>
         </div>
     </div>

@@ -11,6 +11,8 @@
       <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade" id="v-pills-ext" role="tabpanel" aria-labelledby="v-pills-ext-tab">
 
+          <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"><b>Página Oficial (v4)</b></a>
+
             <div class="card-group">
                 <div class="card text-dark m-3" id="lila2">
                     <div class="card-body" id="lila2"><h3>Instalación Automático</h3>
@@ -26,55 +28,125 @@
                     </div>
                 </div>
                 <div class="card text-dark m-3 border-0" id="lila2">
-                    <div class="card-body border-0" id="lila2"><h3>Descargada</h3>
-                        <pre class="card-text border-0" id="lila2">Lo que descargamos en la <a href="https://getbootstrap.com/docs/4.6/getting-started/download/" style="color: white;">web</a> lo metemos en:
+                    <div class="card-body border-0" id="lila2"><h3>Instalación Manual</h3>
+                        <pre class="card-text border-0" id="lila2">{{co}}!DOCTYPE html>
+        {{co}}html lang="en">
+            {{co}}head>                                                                                        
+                {{co}}meta charset="UTF-8">                                                                    
+                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+                {{co}}title>Título en pestaña de la web{{co}}/title>
+                <b>{{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            {{co}}!--LLAMA a BOOTSTRAP 1/4. El RESTO está al FINAL del BODY--></b>
+            {{co}}/head>                                                                                       
+            {{co}}body>      
+
+                INFORMACIÓN VISIBLE
+                
+                <b>{{co}}!--Squery-->                                                                                                                                                                                                
+                  {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+                  {{co}}!--Popper-->
+                  {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+                  {{co}}!--Bootstrap-->
+                  {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   </b>
+            {{co}}/body>                                                                                       
+        {{co}}/html></pre></div>
+                </div>
+            </div>
+
+
+            <div class="card-group">
+              <div class="card text-dark m-3" id="lila2">
+                  <div class="card-body" id="lila2"><h3>Descargada</h3>
+                      <pre class="card-text" id="lila2">Lo que <a href="https://getbootstrap.com/docs/4.6/getting-started/download/" style="color: white;"><u>descargamos en la web</u></a> y lo metemos en:
 
 <b>src/assets/Bootstrap-4.5.0-Descargado/css</b>
 y en
-<b>src/assets/Bootstrap-4.5.0-Descargado/js</b></pre></div>
-                    <div class="card-body bg-white"></div>
-                </div>
-            </div>
-    
-            <div class="card-group">
-                <div class="card text-dark m-3" id="lila2">
-                    <div class="card-body" id="lila2"><h3>Instalación Manual</h3>
-                        <pre class="card-text" id="lila2"><app-estructurabootstrap></app-estructurabootstrap></pre>
-                    </div>
-                </div>
-            </div>
+<b>src/assets/Bootstrap-4.5.0-Descargado/js</b></pre>
+                  </div>
+              </div>
+              <div class="card text-dark m-3 border-0">
+                  <div class="card-body border-0"><h3></h3>
+                      <pre class="card-text border-0"></pre></div>
+                  <div class="card-body bg-white"></div>
+              </div>
+          </div>
             
       </div>
 
         <div class="tab-pane fade" id="v-pills-ext0" role="tabpanel" aria-labelledby="v-pills-ext0-tab">
 
-            <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
-              
+          <a href="https://fontawesome.com/v4.7.0/icons/"><b>Página Oficial (v4.7)</b></a>
+
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-primary">
+                <div class="card-body"><h3>Instalación Automático</h3>
+                    <pre class="card-text"><ol><li><b>npm install font-awesome@4.7.0</b></li>
+<li>Añadir en <b>angular.json:</b></li>"styles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      <b>"node_modules/font-awesome/css/font-awesome.css",</b>
+  "src/styles.css"
+  ],
+  "scripts": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/popper.js/dist/umd/popper.min.js",
+      "node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ]</ol></pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-primary">
+                <div class="card-body"><h3>Instalación Manual</h3>
+                    <pre class="card-text" style="color: white;">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+    {{co}}head>                                                                                        
+      {{co}}meta charset="UTF-8">                                                                      
+       {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                     
+       {{co}}title>Fontawesome{{co}}/title>
+       {{co}}script src="https://kit.fontawesome.com/e0f3b21040.js"crossorigin="anonymous">{{co}}/script>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}i class="fa fa-user-circle" aria-hidden="true">{{co}}/i></b>
+    {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+                </div>
+           
+            </div>
+        </div>
+
         </div>
         <div class="tab-pane fade" id="v-pills-ext1" role="tabpanel" aria-labelledby="v-pills-ext1-tab">
 
-            <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
+          <a href="https://sweetalert2.github.io/#download"><b>Página Oficial</b></a>
+          
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-danger">
+                <div class="card-body"><h3>Instalación Automático</h3>
+                    <pre class="card-text"><b>npm install sweetalert2</b></pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-danger">
+                <div class="card-body"><h3>Instalación Manual</h3>
+                    <pre class="card-text" style="color: white;">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+    {{co}}head>                                                                                        
+      {{co}}meta charset="UTF-8">                                                                      
+       {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                     
+       {{co}}title>Sweepalert2{{co}}/title>                                                           
+    {{co}}/head>
+        <b>{{co}}script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">{{co}}/script></b>
+    {{co}}body>
+    {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+                </div>
+           
+            </div>
+        </div>
 
-            
         </div>
         <div class="tab-pane fade" id="v-pills-ext2" role="tabpanel" aria-labelledby="v-pills-ext2-tab">
             
             <div class="card-group">
                 <div class="card text-dark bg-dark m-3" >
                     <div class="card-body">
-                      <pre class="card-text">x</pre>
+                      <pre class="card-text"><b>Mensaje con estilo similar a bootstrap</b></pre>
                     </div>
                   </div>
               </div>

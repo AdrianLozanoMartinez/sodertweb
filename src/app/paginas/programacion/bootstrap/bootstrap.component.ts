@@ -14,4 +14,5 @@ export class BootstrapComponent implements OnInit {
 //Html visual
 c=`{`;
 co=`<`;
+copy=`&`;
 }

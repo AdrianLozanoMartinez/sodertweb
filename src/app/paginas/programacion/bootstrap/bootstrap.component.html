@@ -24,7 +24,7 @@
         <a class="nav-link" id="pills-bootstrap5-tab" data-toggle="pill" href="#pills-bootstrap5" role="tab" aria-controls="pills-bootstrap5" aria-selected="false" style="color: black;">Imagen</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-bootstrap6-tab" data-toggle="pill" href="#pills-bootstrap6" role="tab" aria-controls="pills-bootstrap6" aria-selected="false" style="color: black;">Botón<br>Enlace</a>
+        <a class="nav-link" id="pills-bootstrap6-tab" data-toggle="pill" href="#pills-bootstrap6" role="tab" aria-controls="pills-bootstrap6" aria-selected="false" style="color: black;">Botón/Enlace</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-bootstrap7-tab" data-toggle="pill" href="#pills-bootstrap7" role="tab" aria-controls="pills-bootstrap7" aria-selected="false" style="color: black;">Formulario</a>
@@ -33,7 +33,10 @@
         <a class="nav-link" id="pills-bootstrap9-tab" data-toggle="pill" href="#pills-bootstrap9" role="tab" aria-controls="pills-bootstrap9" aria-selected="false" style="color: black;">Cartas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-bootstrap10-tab" data-toggle="pill" href="#pills-bootstrap10" role="tab" aria-controls="pills-bootstrap10" aria-selected="false" style="color: black;">Nav</a>
+        <a class="nav-link" id="pills-bootstrap10-tab" data-toggle="pill" href="#pills-bootstrap10" role="tab" aria-controls="pills-bootstrap10" aria-selected="false" style="color: black;">Nav/Cabecera</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootstrap13-tab" data-toggle="pill" href="#pills-bootstrap13" role="tab" aria-controls="pills-bootstrap13" aria-selected="false" style="color: black;">Foot</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-bootstrap11-tab" data-toggle="pill" href="#pills-bootstrap11" role="tab" aria-controls="pills-bootstrap11" aria-selected="false" style="color: black;">Jumbotron</a>
@@ -154,13 +157,153 @@
 
 
     <div class="tab-pane fade" id="pills-bootstrap11" role="tabpanel" aria-labelledby="pills-bootstrap11-tab">
-        <hr>
-        <app-jumbotron></app-jumbotron>
+        <h3>Cuadro visible</h3>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-5">Título</h1>
+        <p class="lead"> Texto</p>
+        <hr class="my-4">
+        <p>Cuadro visible que engloba todo (jumbotron)</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Enlace</a>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark m-3" id="lila2">
+        <div class="card-body" id="lila2">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head>                                                                                        
+          {{co}}meta charset="UTF-8">                                                                    
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+          {{co}}title>Título en pestaña de la web{{co}}/title>
+          {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      {{co}}/head>                                                                                       
+      {{co}}body>    
+          <b>
+            {{co}}div class="container">
+                {{co}}div class="jumbotron">
+                    {{co}}h1 class="display-5">Título{{co}}/h1>
+                    {{co}}p class="lead"> Texto{{co}}/p>
+                    {{co}}hr class="my-4">
+                    {{co}}p>Cuadro visible que engloba todo (jumbotron){{co}}/p>
+                    {{co}}a class="btn btn-primary btn-lg" href="#" role="button">Enlace{{co}}/a>
+                {{co}}/div>
+            {{co}}/div>
+        </b>                                                                                                                                                                   
+            {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+      {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+        </div>
+      </div>
+  </div>
+
+
+<h3>Cuadro no visible</h3>
+<div class="container">
+    <div class="jumbotron-fluid">
+        <h1 class="display-5">Título</h1>
+        <p class="lead"> Texto</p>
+        <hr class="my-4">
+        <p>Cuadro no visible que engloba todo (jumbotron-fluid)</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Enlace</a>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark m-3" id="lila2">
+        <div class="card-body" id="lila2">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head>                                                                                        
+          {{co}}meta charset="UTF-8">                                                                    
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+          {{co}}title>Título en pestaña de la web{{co}}/title>
+          {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      {{co}}/head>                                                                                       
+      {{co}}body>    
+          <b>
+            {{co}}div class="container">
+                {{co}}div class="jumbotron-fluid">
+                    {{co}}h1 class="display-5">Título{{co}}/h1>
+                    {{co}}p class="lead"> Texto{{co}}/p>
+                    {{co}}hr class="my-4">
+                    {{co}}p>Cuadro no visible que engloba todo (jumbotron-fluid){{co}}/p>
+                    {{co}}a class="btn btn-primary btn-lg" href="#" role="button">Enlace{{co}}/a>
+                {{co}}/div>
+            {{co}}/div>
+        </b>                                                                                                                                                                   
+            {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+      {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+        </div>
+      </div>
+  </div>
     </div>
 
     <div class="tab-pane fade" id="pills-bootstrap12" role="tabpanel" aria-labelledby="pills-bootstrap12-tab">
         <hr>
         <app-alerta></app-alerta>
+    </div>
+
+    <div class="tab-pane fade" id="pills-bootstrap13" role="tabpanel" aria-labelledby="pills-bootstrap13-tab">
+        
+        <footer class="footer bg-dark text-center">
+            <div class="container">
+                <pre id="pie"><small>&copy Adrián Lozano</small></pre>
+            </div>
+        </footer>
+
+        
+          <div class="card-group">
+            <div class="card text-dark m-3" id="lila2">
+                <div class="card-header" style="text-align: center;"><h4><b>Bootstrap</b></h4></div>
+                <div class="card-body" id="lila2">
+                  <pre class="card-text">{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+        {{co}}head>                                                                                        
+            {{co}}meta charset="UTF-8">                                                                    
+            {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+            {{co}}title>Título en pestaña de la web{{co}}/title>
+            {{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            
+        {{co}}/head>                                                                                       
+        {{co}}body>  
+            <b>
+            {{co}}footer class="footer bg-dark text-center">
+                {{co}}div class="container">
+                    {{co}}pre>{{co}}small>&copy Adrián Lozano{{co}}/small>{{co}}/pre>
+                {{co}}/div>
+            {{co}}/footer></b>
+                                                                                                                                                                                
+            {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+            {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   
+        {{co}}/body>                                                                                       
+    {{co}}/html></pre>
+                </div>
+              </div>
+          <div class="card text-dark bg-info m-3" >
+            <div class="card-header" style="text-align: center;"><h4><b>Css <small>(Opcional)</small></b></h4></div>
+            <div class="card-body">
+              <pre class="card-text"><b>.footer {{c}}
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+}</b></pre>
+            </div>
+          </div>
+      </div>
+
+
+
+
+
     </div>
 
 

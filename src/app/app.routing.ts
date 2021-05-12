@@ -42,7 +42,6 @@ import { BotonbootComponent } from './paginas/programacion/bootstrap/botonboot/b
 import { TablabootComponent } from './paginas/programacion/bootstrap/tablaboot/tablaboot.component';
 import { CartasbootComponent } from './paginas/programacion/bootstrap/cartasboot/cartasboot.component';
 import { DisplaybootComponent } from './paginas/programacion/bootstrap/displayboot/displayboot.component';
-import { JumbotronComponent } from './paginas/programacion/bootstrap/jumbotron/jumbotron.component';
 import { NavbootComponent } from './paginas/programacion/bootstrap/navboot/navboot.component';
 import { ImagenbootComponent } from './paginas/programacion/bootstrap/imagenboot/imagenboot.component';
 import { FormulariobootComponent } from './paginas/programacion/bootstrap/formularioboot/formularioboot.component';
@@ -66,10 +65,7 @@ import { AngularComponent } from './paginas/programacion/angular/angular.compone
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
 import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
-import { ExtensionesangularComponent } from './paginas/programacion/angular/extensionesangular/extensionesangular.component';
-import { VariablesangularComponent } from './paginas/programacion/angular/variablesangular/variablesangular.component';
 import { EnlacesangularComponent } from './paginas/programacion/angular/enlacesangular/enlacesangular.component';
-import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
 import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
@@ -123,6 +119,10 @@ import { TypescriptComponent } from './paginas/programacion/typescript/typescrip
 
 //Programacion - Ionic
 import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
+
+//Fonts google
+import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
+
 
 //Empleo
 import { EmpleoComponent } from './paginas/empleo/empleo.component';
@@ -183,7 +183,6 @@ export const appRoutes: Routes = [
   { path: 'tablaboot', component: TablabootComponent},
   { path: 'cartasboot', component: CartasbootComponent},
   { path: 'displayboot', component: DisplaybootComponent},
-  { path: 'jumbotron', component: JumbotronComponent},
   { path: 'imagenboot', component: ImagenbootComponent},
   { path: 'formularioboot', component: FormulariobootComponent},
   { path: 'navboot', component: NavbootComponent},
@@ -207,10 +206,7 @@ export const appRoutes: Routes = [
   { path: 'instalacionangular', component: InstalacionangularComponent},
   { path: 'creacion', component: CreacionComponent},
   { path: 'arranqueangular', component: ArranqueangularComponent},
-  { path: 'extensionesangular', component: ExtensionesangularComponent},
-  { path: 'variablesangular', component: VariablesangularComponent},
   { path: 'enlacesangular', component: EnlacesangularComponent},
-  { path: 'funcionesangular', component: FuncionesangularComponent},
   { path: 'formulariosangular', component: FormulariosangularComponent},
   { path: 'templatesangular', component: TemplatesangularComponent},
   { path: 'reactivosangular', component: ReactivosangularComponent},
@@ -235,6 +231,8 @@ export const appRoutes: Routes = [
   { path: 'proyecto', component: ProyectoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'instalacionfirebase', component: InstalacionfirebaseComponent},
+  //Fonts google
+  { path: 'fontsgoogle', component: FontsgoogleprincipalComponent},
   /*Archivo protegido que vemos al longearnos, Elguardian(nombre del guardian)
     Guard(es la extensión del guardián) -> [ElguardianGuard]*/       
   { path: 'protegidoguardfirebase', component: ProtegidoguardfirebaseComponent, canActivate: [ElguardianGuard]},

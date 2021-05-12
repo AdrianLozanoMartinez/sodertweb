@@ -12,4 +12,7 @@ export class ExtensionesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Html
+  c=`{`;
+co=`<`;
 }

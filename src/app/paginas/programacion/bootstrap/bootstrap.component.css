@@ -18,3 +18,18 @@
 #lila2{
   background-color: #9400a1;
 }
+
+
+/*Provisional*/
+.footer {
+  color: white; 
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+}
+
+
+#pie{
+  color: white;
+}

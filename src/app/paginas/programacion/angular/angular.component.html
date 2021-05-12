@@ -6,13 +6,13 @@
         <a class="nav-link" id="pills-angularprincipal0-tab" data-toggle="pill" href="#pills-angularprincipal0" role="tab" aria-controls="pills-angularprincipal0" aria-selected="false" style="color: black;">Arranque</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-angularprincipal8-tab" data-toggle="pill" href="#pills-angularprincipal8" role="tab" aria-controls="pills-angularprincipal8" aria-selected="false" style="color: black;">Mostrar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularprincipal4-tab" data-toggle="pill" href="#pills-angularprincipal4" role="tab" aria-controls="pills-angularprincipal4" aria-selected="false" style="color: black;">*ngIf<br>*ngFor</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-angularprincipal1-tab" data-toggle="pill" href="#pills-angularprincipal1" role="tab" aria-controls="pills-angularprincipal1" aria-selected="false" style="color: black;">Información<br>adicional</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-angularprincipal8-tab" data-toggle="pill" href="#pills-angularprincipal8" role="tab" aria-controls="pills-angularprincipal8" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-angularprincipal4-tab" data-toggle="pill" href="#pills-angularprincipal4" role="tab" aria-controls="pills-angularprincipal4" aria-selected="false" style="color: black;">x</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-angularprincipal2-tab" data-toggle="pill" href="#pills-angularprincipal2" role="tab" aria-controls="pills-angularprincipal2" aria-selected="false" style="color: black;">x</a>
@@ -46,11 +46,9 @@
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-    <div class="tab-pane fade" id="pills-angularprincipal" role="tabpanel" aria-labelledby="pills-angularprincipal-tab">
-        <app-instalacionangular></app-instalacionangular>
-    </div>
+    <div class="tab-pane fade" id="pills-angularprincipal" role="tabpanel" aria-labelledby="pills-angularprincipal-tab"><hr><app-instalacionangular></app-instalacionangular></div>
 
-    <div class="tab-pane fade" id="pills-angularprincipal0" role="tabpanel" aria-labelledby="pills-angularprincipal0-tab"><app-arranqueangular></app-arranqueangular></div>
+    <div class="tab-pane fade" id="pills-angularprincipal0" role="tabpanel" aria-labelledby="pills-angularprincipal0-tab"><hr><app-arranqueangular></app-arranqueangular></div>
 
     <div class="tab-pane fade" id="pills-angularprincipal1" role="tabpanel" aria-labelledby="pills-angularprincipal1-tab">
 
@@ -62,7 +60,7 @@
     {{co}}head>
         {{co}}meta charset="utf-8">
         {{co}}title>MyApp{{co}}/title>
-        {{co}}base <abbr title="Raíz del proyecto. Se cambia para usarlo en servidores locales">href="/"</abbr>>
+        {{co}}base <abbr title="Raíz del proyecto. Se cambia para usarlo en servidores locales">href="/"</abbr>
         {{co}}meta name="viewport" content="width=device-width, initial-scale=1">
         {{co}}link rel="icon" type="image/x-icon" <abbr title="Archivo.ico que se encuentra en la misma raíz que este archivo. TAMAÑO 32x32. ICONO de la pestaña. Se puede cambiar manteniendo tamaño y nombre"><b>href="favicon.ico"</b></abbr>>
     {{co}}/head>
@@ -71,19 +69,32 @@
     {{co}}/body>
 {{co}}/html></pre>
                 </div>
-            </div>
+              </div>
+
             <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>Mostrar</h3>
-                    <pre class="card-text"><ul><li><b>Páginas</b><ul><li><b>{{co}}<abbr title="Se encuentra en el selector del componente.TS">app-ComponenteTS</abbr>>{{co}}/app-ComponenteTS></b> -> Funcione el enlace que muestra las páginas del proyecto</li></ul></li>
-<li><b>Texto del TS</b>:<ul><li><b><abbr title="Variable del TS que se muestra en el html">{{c}}{{c}} nombre_variable }}</abbr></b> -> En el Html</li>
-<li><b><abbr title="Variable que se define, para mostrar en el html">nombre_variable = 'Texto';</abbr></b> -> En el Ts</li></ul></li></ul></pre>
+                <div class="card-body"><h3>Componentes</h3>
+                    <pre class="card-text"><ul><li><b>Style.css</b>: Estilo en todo el proyecto</li>
+<li><b>App.component</b>: <ul><li>Unión de todas las páginas, se pone la llamada de lo que queremos que aparezca <b>(cabecera ({{co}}app-cabecera>{{co}}/app-cabecera>), pie ({{co}}app-pie>{{co}}/app-pie>), home (nada o {{co}}app-home>{{co}}/app-home>)...)</b></li>
+<li>Para que <b>funcione</b> los <b>enlaces</b>: <b>{{co}}router-outlet>{{co}}/router-outlet></b></li>
+<li><b>Css</b> del component: <u>Menos importante que style.css</u> pero <u>más que</u> los <u>componentes</u> normales</li></ul></li>
+<li><b>Assets</b>: <u>Almacen</u> de documento, foto...</li></ul></pre>
+                </div>
+            </div>
+    </div>
+    
+
+    <div class="card-group">
+            <div class="card text-dark bg-danger m-3 border-0">
+                <div class="card-header"><h3>Importar automáticamente <small>(Servicio u Otro)</small></h3>
+                    <pre class="card-text">Al declarar la variable se selecciona, a través de las sugerencias el servicio u otro</pre>
                 </div>
             </div>
         </div>
 
+
         <div class="card-group">
-            <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>Angular.json</h3>
+            <div class="card text-dark bg-danger m-3 border-0">
+                <div class="card-header"><h3>Angular.json</h3>
                     <pre class="card-text">{{c}}
 "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
 "version": 1,
@@ -210,22 +221,170 @@
 }</pre>
                 </div>
             </div>
+        </div>
 
-            <div class="card text-dark bg-danger m-3 border-0">
-                <div class="card-header"><h3>Componentes</h3>
-                    <pre class="card-text"><ul><li><b>Style.css</b>: Estilo en todo el proyecto</li>
-<li><b>App.component</b>: <ul><li>Unión de todas las páginas, se pone la llamada de lo que queremos que aparezca <b>(cabecera ({{co}}app-cabecera>{{co}}/app-cabecera>), pie ({{co}}app-pie>{{co}}/app-pie>), home (nada o {{co}}app-home>{{co}}/app-home>)...)</b></li>
-<li>Para que <b>funcione</b> los <b>enlaces</b>: <b>{{co}}router-outlet>{{co}}/router-outlet></b></li>
-<li><b>Css</b> del component: <u>Menos importante que style.css</u> pero <u>más que</u> los <u>componentes</u> normales</li></ul></li>
-<li><b>Assets</b>: <u>Almacen</u> de documento, foto...</li></ul></pre>
+  </div>
+
+    <div class="tab-pane fade" id="pills-angularprincipal8" role="tabpanel" aria-labelledby="pills-angularprincipal8-tab">
+      
+
+
+      <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Páginas</h3>
+                    <pre class="card-text"><b>{{co}}<abbr title="Se encuentra en el selector del componente.TS">app-ComponenteTS</abbr>{{co}}/app-ComponenteTS></b> -> Funcione el enlace que muestra las páginas del proyecto</pre>
                 </div>
-                <div class="card-body bg-white"></div>
+              </div>
+
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Container (Separar)</h3>
+                    <pre class="card-text">{{co}}router-outlet <b>class="container"</b>{{co}}/router-outlet> -> Este u otro etiqueta se añade container para separar de las otras partes (cabecera, pie, etc...)</pre>
+                </div>
             </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-danger m-3">
+            <div class="card-body"><h3>Texto/Función del Ts</h3>
+                <pre class="card-text"><ul><h4>Texto</h4><li><b><abbr title="Variable del TS que se muestra en el html">{{c}}{{c}} nombre_variable }}</abbr></b> -> En el Html</li>
+<li><b><abbr title="Variable que se define, para mostrar en el html">nombre_variable = 'Texto';</abbr></b> -> En el Ts</li></ul><hr><ul><h4>Función</h4><li><b><abbr title="Función del TS que se muestra en el html">{{c}}{{c}} nombre_variable }}</abbr></b>    -> En el Html</li><li><b><abbr title="Variable que se define, para mostrar en el html">nombre_variable</abbr>: number;</b>     -> En el Ts<b>
+      constructor(){{c}}
+          this.nombre_variable = <abbr title="Conseguimos el año actual">new Date().getFullYear()</abbr> + <abbr title="Añadimos 1 si queremos el siguiente año">1</abbr>;
+      }</b></li></ul></pre>
+            </div>
+          </div>
+
+        <div class="card text-dark bg-danger m-3" style="border-color: white;">
+            <div class="card-body"><h3>Público/Privado en el TS</h3>
+                <pre class="card-text"><ul><li><b>Public -> Se ve en el htlm las propiedades</b></li>
+<li><b>Private -> No se ve en el htlm las propiedades</b></li></ul></pre>
+            </div>
+              <div class="card-body bg-white"></div>
         </div>
 
     </div>
 
-    <div class="tab-pane fade" id="pills-angularprincipal4" role="tabpanel" aria-labelledby="pills-angularprincipal4-tab">x</div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-angularprincipal4" role="tabpanel" aria-labelledby="pills-angularprincipal4-tab">
+      
+      <h4>*ngIF</h4>
+      <div *ngIf="variable_if_boolean" class="card text-white bg-danger mb-3" style="width: 100%">{{frase.mensaje}}<br>{{frase.autor}}</div>
+      <button (click)="variable_if_boolean = !variable_if_boolean" class="btn btn-outline-danger btn-block">Botón mostrar/ocultar</button>
+
+      <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.css']
+})
+export class AngularComponent implements OnInit {{c}}
+
+    <b>variable_if_boolean = <abbr title="Inicia no mostrando el resultado">false</abbr>;     // o <abbr title="Inicia mostrando el contenido">true</abbr>
+    
+      frase: any = {{c}}
+        mensaje: 'Cualquier cosa',
+        autor: 'Adrián Lozano'
+      };</b>
+ 
+    constructor(  ) {{c}}
+
+    ngOnInit(): void {{c}}
+
+}</pre>
+                </div>
+              </div>
+
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Html</h3>
+                    <pre class="card-text"><b>{{co}}div <abbr title="Para funcionar con el botón. Si la variable es true (muestra) sino, false (oculta)">{{f}}ngIf</abbr>="<abbr title="Variable boolean declarada en TS, false (Oculta) O true (Muestra) en el html inicialmente sin usar botón">variable_if_boolean</abbr>" class="card text-white bg-dark mb-3" style="width: 100%">{{c}}{{c}}frase.mensaje}}{{co}}br>{{c}}{{c}}frase.autor}}{{co}}/div>
+{{co}}button {{p}}<abbr title="Realiza la función (variable_if_boolean = !variable_if_boolean) al pulsar el botón">click</abbr>)="<abbr title="Variable (variable_if_boolean=true/false) declarada en TS, que al pulsar cambie el valor (=!), de true (Valor_variable) a false (=!Valor_variable) y viceversa">variable_if_boolean</abbr> = !variable_if_boolean" class="btn btn-outline-primary btn-block">Botón mostrar/ocultar{{co}}/button></b></pre>
+                </div>
+            </div>
+        </div>
+
+<hr>
+
+<h4>*ngFor</h4>
+
+<ul>
+  <li *ngFor="let variableTemporal of variableTS">{{variableTemporal}}</li>
+</ul>
+
+      <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.css']
+})
+export class AngularComponent implements OnInit {{c}}
+
+    <b>variableTS: string[] = ['Contenido1', 'Contenido2', 'Contenido3', 'más contenidos'];</b>
+ 
+    constructor(  ) {{c}}
+
+    ngOnInit(): void {{c}}
+
+}</pre>
+                </div>
+              </div>
+
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Html</h3>
+                    <pre class="card-text"><b>{{co}}ul>
+    {{co}}li {{f}}ngFor="let variableTemporal of variableTS">{{co}}abbr title="Recorre (*ngFor) el contenido de la variable (variableTS) que se encuentra en el componente.ts como arreglo [], lo mete en una variable temporal (variableTemporal) para coger cada parte de la variable del ts nombrada. ['1º Contenido', '2º Contenido', '3º Contenido', 'más contenidos'] {{c}}{{c}}variableTemporal}} debe estar dentro del listado del for, muestra el contenido de la variableTemporal">{{c}}{{c}}variableTemporal}}{{co}}/abbr>{{co}}/li>
+{{co}}/ul></b></pre>
+                </div>
+            </div>
+        </div>
+
+        
+        <h4>*ngFor + <b>index</b></h4>
+
+<ul>
+  <li *ngFor="let variableTemporal of variableTS; let i = index">{{i}}. {{variableTemporal}}</li>
+</ul>
+
+      <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.css']
+})
+export class AngularComponent implements OnInit {{c}}
+
+    <b>variableTS: string[] = ['Contenido1', 'Contenido2', 'Contenido3', 'más contenidos'];</b>
+ 
+    constructor(  ) {{c}}
+
+    ngOnInit(): void {{c}}
+
+}</pre>
+                </div>
+              </div>
+
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Html</h3>
+                    <pre class="card-text"><b>{{co}}ul>
+  {{co}}li {{f}}ngFor="let variableTemporal of variableTS; let i = index"><abbr title="Recorre (*ngFor) el contenido de la variable (index) que es el índice, lo mete en una variable temporal (i) para coger cada índice, 0,1,2,3...Debe estar dentro del listado del for, muestra el contenido de la i y variableTemporal, añadiendo un (.) para diferenciarlo">{{c}}{{c}}i}}. {{c}}{{c}}variableTemporal}}</abbr>{{co}}/li>
+{{co}}/ul></b></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="tab-pane fade" id="pills-angularprincipal2" role="tabpanel" aria-labelledby="pills-angularprincipal2-tab">x</div>
 
@@ -238,7 +397,6 @@
     <div class="tab-pane fade" id="pills-angularprincipal7" role="tabpanel" aria-labelledby="pills-angularprincipal7-tab">x</div>
 
 
-    <div class="tab-pane fade" id="pills-angularprincipal8" role="tabpanel" aria-labelledby="pills-angularprincipal8-tab">x</div>
 
 
     <div class="tab-pane fade" id="pills-angularprincipal9" role="tabpanel" aria-labelledby="pills-angularprincipal9-tab">x</div>
@@ -267,19 +425,13 @@
         <div class="col align-self-center text-center">
             <h3 style="text-align: center;"><u><b>Angular 9</b></u></h3>
             <br><br>
-            <button class="btn btn-dark m-5" [routerLink]="['/arranqueangular']">Arranque</button>
             <button class="btn btn-dark m-5" [routerLink]="['/creacion']">Creación</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/extensionesangular']">Extensiones</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/variablesangular']">Variables</button>
             <button class="btn btn-dark m-5" [routerLink]="['/enlacesangular']">Enlaces</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/funcionesangular']">Funciones</button>
             <button class="btn btn-dark m-5" [routerLink]="['/serviciounovarias']">Servicio uno/varias página/s</button>
             <button class="btn btn-dark m-5" [routerLink]="['/formulariosangular']">Formularios</button>
             <button class="btn btn-dark m-5" [routerLink]="['/subirarchivos']">Subir archivos</button>
             <button class="btn btn-dark m-5" [routerLink]="['/loginangular']">Login</button>
             <button class="btn btn-dark m-5" [routerLink]="['/hostingangular']">Hosting</button>
-            <br><br>
-            <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
         </div>
     </div>
 </div>
