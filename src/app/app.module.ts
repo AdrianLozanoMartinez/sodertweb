@@ -75,7 +75,6 @@ import { AngularComponent } from './paginas/programacion/angular/angular.compone
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
 import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
-import { EnlacesangularComponent } from './paginas/programacion/angular/enlacesangular/enlacesangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
 import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
@@ -266,7 +265,6 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
     InstalacionangularComponent,
     CreacionComponent,
     ArranqueangularComponent,
-    EnlacesangularComponent,
     FormulariosangularComponent,
     ReactivosangularComponent,
     TemplatesangularComponent,

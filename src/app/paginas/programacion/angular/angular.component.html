@@ -9,13 +9,13 @@
         <a class="nav-link" id="pills-angularprincipal8-tab" data-toggle="pill" href="#pills-angularprincipal8" role="tab" aria-controls="pills-angularprincipal8" aria-selected="false" style="color: black;">Mostrar</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-angularprincipal2-tab" data-toggle="pill" href="#pills-angularprincipal2" role="tab" aria-controls="pills-angularprincipal2" aria-selected="false" style="color: black;">Enlaces</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-angularprincipal4-tab" data-toggle="pill" href="#pills-angularprincipal4" role="tab" aria-controls="pills-angularprincipal4" aria-selected="false" style="color: black;">*ngIf<br>*ngFor</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-angularprincipal1-tab" data-toggle="pill" href="#pills-angularprincipal1" role="tab" aria-controls="pills-angularprincipal1" aria-selected="false" style="color: black;">Información<br>adicional</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-angularprincipal2-tab" data-toggle="pill" href="#pills-angularprincipal2" role="tab" aria-controls="pills-angularprincipal2" aria-selected="false" style="color: black;">x</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-angularprincipal3-tab" data-toggle="pill" href="#pills-angularprincipal3" role="tab" aria-controls="pills-angularprincipal3" aria-selected="false" style="color: black;">x</a>
@@ -386,7 +386,19 @@ export class AngularComponent implements OnInit {{c}}
 
     </div>
 
-    <div class="tab-pane fade" id="pills-angularprincipal2" role="tabpanel" aria-labelledby="pills-angularprincipal2-tab">x</div>
+    <div class="tab-pane fade" id="pills-angularprincipal2" role="tabpanel" aria-labelledby="pills-angularprincipal2-tab">
+      
+      <div class="card-group">
+        <div class="card text-dark bg-danger m-3">
+            <div class="card-body">
+                <pre class="card-text"><ul><li><b>{{t}}routerLink]="{{t}}'/home']</b>(recomendado) o <b>routerLink="/home</b>      -> Enlace especial de Angular</li>
+<li><b>{{t}}routerLink]="{{t}}'/home','paginas','1','2']</b>                     -> Es igual a -> /home/paginas/1/2</li>
+<li><b>{{t}}routerLink]="{{t}}'/home',i]</b>                                     -> Para usar index hay que nombrarlo previamente en el for (let i of index) /home/index (0...)</li>
+<li><b>routerLinkActive="active"</b>                                     -> Se pone en cada enlace, dentro de una class de bootstrap o una creada, que queramos que se active (se ilumine) al pulsar el enlace/s</li></ul></pre>
+            </div>
+          </div>
+
+    </div>
 
     <div class="tab-pane fade" id="pills-angularprincipal3" role="tabpanel" aria-labelledby="pills-angularprincipal3-tab">x</div>
 
@@ -426,7 +438,6 @@ export class AngularComponent implements OnInit {{c}}
             <h3 style="text-align: center;"><u><b>Angular 9</b></u></h3>
             <br><br>
             <button class="btn btn-dark m-5" [routerLink]="['/creacion']">Creación</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/enlacesangular']">Enlaces</button>
             <button class="btn btn-dark m-5" [routerLink]="['/serviciounovarias']">Servicio uno/varias página/s</button>
             <button class="btn btn-dark m-5" [routerLink]="['/formulariosangular']">Formularios</button>
             <button class="btn btn-dark m-5" [routerLink]="['/subirarchivos']">Subir archivos</button>

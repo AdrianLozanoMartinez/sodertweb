@@ -6,10 +6,31 @@
         <a class="nav-link" id="pills-instalacionangular0-tab" data-toggle="pill" href="#pills-instalacionangular0" role="tab" aria-controls="pills-instalacionangular0" aria-selected="false" style="color: black;">Angular</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-instalacionangular3-tab" data-toggle="pill" href="#pills-instalacionangular3" role="tab" aria-controls="pills-instalacionangular3" aria-selected="false" style="color: black;"><abbr title="Crear un proyecto para trabajar (Componentes básicos: module, principal componente, index, angular.json, etc">Proyecto</abbr></a>
+        <a class="nav-link" id="pills-instalacionangular3-tab" data-toggle="pill" href="#pills-instalacionangular3" role="tab" aria-controls="pills-instalacionangular3" aria-selected="false" style="color: black;">Proyecto</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-instalacionangular4-tab" data-toggle="pill" href="#pills-instalacionangular4" role="tab" aria-controls="pills-instalacionangular4" aria-selected="false" style="color: black;">Extensiones</a>
+        <a class="nav-link" id="pills-instalacionangular5-tab" data-toggle="pill" href="#pills-instalacionangular5" role="tab" aria-controls="pills-instalacionangular5" aria-selected="false" style="color: black;">Componente</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular6-tab" data-toggle="pill" href="#pills-instalacionangular6" role="tab" aria-controls="pills-instalacionangular6" aria-selected="false" style="color: black;">App.routing<br>App.routes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular7-tab" data-toggle="pill" href="#pills-instalacionangular7" role="tab" aria-controls="pills-instalacionangular7" aria-selected="false" style="color: black;">App.modules</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular4-tab" data-toggle="pill" href="#pills-instalacionangular4" role="tab" aria-controls="pills-instalacionangular4" aria-selected="false" style="color: black;">Servicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular8-tab" data-toggle="pill" href="#pills-instalacionangular8" role="tab" aria-controls="pills-instalacionangular8" aria-selected="false" style="color: black;">Model</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular9-tab" data-toggle="pill" href="#pills-instalacionangular9" role="tab" aria-controls="pills-instalacionangular9" aria-selected="false" style="color: black;">Guard</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular10-tab" data-toggle="pill" href="#pills-instalacionangular10" role="tab" aria-controls="pills-instalacionangular10" aria-selected="false" style="color: black;">Directiva</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangular11-tab" data-toggle="pill" href="#pills-instalacionangular11" role="tab" aria-controls="pills-instalacionangular11" aria-selected="false" style="color: black;">Extensiones</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-instalacionangular2-tab" data-toggle="pill" href="#pills-instalacionangular2" role="tab" aria-controls="pills-instalacionangular2" aria-selected="false" style="color: black;">Compartir</a>
@@ -86,7 +107,7 @@
     </div>
 
 
-    <div class="tab-pane fade" id="pills-instalacionangular4" role="tabpanel" aria-labelledby="pills-instalacionangular4-tab"><app-extensiones></app-extensiones></div>
+    <div class="tab-pane fade" id="pills-instalacionangular11" role="tabpanel" aria-labelledby="pills-instalacionangular11-tab"><app-extensiones></app-extensiones></div>
 
     <div class="tab-pane fade" id="pills-instalacionangular3" role="tabpanel" aria-labelledby="pills-instalacionangular3-tab">
 
@@ -122,5 +143,276 @@
 
     </div>
 
+
+
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular5" role="tabpanel" aria-labelledby="pills-instalacionangular5-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b><ul><li>ng generate component nombre_carpeta/nombre_componente</li>
+<li>ng g c nombre_carpeta/nombre_componente</li></ul></b></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular6" role="tabpanel" aria-labelledby="pills-instalacionangular6-tab">
+
+<ul>
+    <li><u>Botón derecho</u> encima de app -> <u>New File</u> -> ponemos: app.routing.ts</li>
+    <li>{{co}}router-outlet>{{co}}/router-outlet>: Añadimos en app.component.html para que funcione los enlaces</li>
+</ul>
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción A <small>(Más usado - app.routing.ts)</small></h4>
+                    <pre class="card-text">//Conexión con app.module.ts - Enlazar páginas - Relacionado al final de este archivo
+<b>import {{c}} ModuleWithProviders } from '@angular/core';</b>
+
+//Conexión con app.module.ts - Enlazar páginas - Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º
+<b>import {{c}} Routes, RouterModule } from '@angular/router';</b>
+
+//Componentes - Automático
+<b>import {{c}} AppComponent } from './app.component';</b>
+
+//Componentes - Páginas añadir después de crearlas
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+
+//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
+
+<b>export const appRoutes: Routes = [</b>                                  //appRoutes: Relacionado con Routes especificado aquí y en el import
+  //Componentes - Páginas añadir después de crearlas
+  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
+  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
+  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
+  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  //Componentes - Especiales
+  <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+];
+
+
+//<b>Conexión con app.module.ts - Enlazar páginas</b>
+<b>export const appRoutingProviders: any[] = [];</b>                                    //appRoutingProviders: Relacionado en module.ts llamado con import
+<b>export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</b>    //routing: Relacionado en module.ts llamado con import / ModuleWithProviders y RouterModule: importado arriba / appRoutes: Usado en export 1º de arriba</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción B <small>(Menos usado - app.routes.ts)</small></h4>
+                    <pre class="card-text">//Conexión con app.module.ts - Enlazar páginas - Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º
+<b>import {{c}} Routes, RouterModule } from '@angular/router';</b>
+
+//Componentes - Automático
+<b>import {{c}} AppComponent } from './app.component';</b>
+
+//Componentes - Páginas añadir después de crearlas
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+
+//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
+
+<b>export const APP_ROUTES: Routes = [</b>                                  //appRoutes: Relacionado con Routes especificado aquí y en el import
+  //Componentes - Páginas añadir después de crearlas
+  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
+  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
+  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
+  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  //Componentes - Especiales
+  <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+];
+
+
+//<b>Conexión con app.module.ts - Enlazar páginas</b>                                   
+<b>export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES, {{c}} useHash:true });</b>    //APP_ROUTING: Relacionado en module.ts llamado con import / RouterModule: importado arriba / APP_ROUTES: Usado en export 1º de arriba</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular7" role="tabpanel" aria-labelledby="pills-instalacionangular7-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción A - con app.routing.ts</h4>
+                    <pre class="card-text">//<u><b>Ya creado</b>. Se <b>añade automáticamente</b> pero se <b>borra manualmente</b></u>
+  import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+
+  //Conexión con app.routing.ts - Enlazar páginas
+  <b>import {{c}} routing, appRoutingProviders } from './app.routing';</b>
+  
+  //Componentes - Automático
+  import {{c}} AppComponent } from './app.component';
+
+  //Componentes - Páginas añadir después de crearlas
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+  
+  @NgModule({{c}}
+      declarations: [
+        //Por defecto
+        AppComponent,
+        //Componentes - Páginas añadir después de crearlas
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        //Por defecto
+        BrowserModule,
+        //Conexión con app.routing.ts - Enlazar páginas
+        <b>routing</b>
+      ],
+       providers: [
+        //Conexión con app.routing.ts - Enlazar páginas
+        <b>appRoutingProviders</b>
+       ],
+        //Por <b>defecto</b> - Librería
+        bootstrap: [AppComponent]
+   })
+    //Por <b>defecto</b>
+    export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción B - con app.routes.ts</h4>
+                    <pre class="card-text">//<u><b>Ya creado</b>. Se <b>añade automáticamente</b> pero se <b>borra manualmente</b></u>
+  import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+
+  //Conexión con app.routes.ts - Enlazar páginas
+  <b>import {{c}} APP_ROUTING } from './app.routes';</b>
+  
+  //Componentes - Automático
+  import {{c}} AppComponent } from './app.component';
+
+  //Componentes - Páginas añadir después de crearlas
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+  
+  @NgModule({{c}}
+      declarations: [
+        //Por defecto
+        AppComponent,
+        //Componentes - Páginas añadir después de crearlas
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        //Por defecto
+        BrowserModule,
+        //Conexión con app.routes.ts - Enlazar páginas
+        <b>APP_ROUTING</b>
+      ],
+       providers: [
+        //Conexión con app.routes.ts - Enlazar páginas
+        <b>appRoutingProviders</b>
+       ],
+        //Por <b>defecto</b> - Librería
+        bootstrap: [AppComponent]
+   })
+    //Por <b>defecto</b>
+    export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular4" role="tabpanel" aria-labelledby="pills-instalacionangular4-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b>ng generate service nombreCarpeta/nombreServicio</b></li>
+<li><b>ng g s nombreCarpeta/nombreServicio</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular8" role="tabpanel" aria-labelledby="pills-instalacionangular8-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text">Crear Carpeta (model) -> dentro de ella archivo.model.ts</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular9" role="tabpanel" aria-labelledby="pills-instalacionangular9-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b>ng generate guard nombre_carpeta/nombre_servicio</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-instalacionangular10" role="tabpanel" aria-labelledby="pills-instalacionangular10-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 </div>
