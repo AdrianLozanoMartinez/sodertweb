@@ -63,7 +63,6 @@ import { PythonComponent } from './paginas/programacion/python/python.component'
 //Programacion - Angular
 import { AngularComponent } from './paginas/programacion/angular/angular.component';
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
-import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
@@ -203,7 +202,6 @@ export const appRoutes: Routes = [
   //Programacion - Angular
   { path: 'angular', component: AngularComponent},
   { path: 'instalacionangular', component: InstalacionangularComponent},
-  { path: 'creacion', component: CreacionComponent},
   { path: 'arranqueangular', component: ArranqueangularComponent},
   { path: 'formulariosangular', component: FormulariosangularComponent},
   { path: 'templatesangular', component: TemplatesangularComponent},

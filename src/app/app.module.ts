@@ -73,7 +73,6 @@ import { EstructuraphpComponent } from './paginas/programacion/php/estructuraphp
 //Programacion - Angular
 import { AngularComponent } from './paginas/programacion/angular/angular.component';
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
-import { CreacionComponent } from './paginas/programacion/angular/creacion/creacion.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
@@ -263,7 +262,6 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
     //Programacion - Angular
     AngularComponent,
     InstalacionangularComponent,
-    CreacionComponent,
     ArranqueangularComponent,
     FormulariosangularComponent,
     ReactivosangularComponent,
