@@ -91,6 +91,11 @@ import { DetectarcambiosComponent } from './paginas/programacion/angular/formula
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
 import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
+import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
+import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
+import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
+import { ServiceoneComponent } from './paginas/programacion/angular/serviciounovarias/serviceone/serviceone.component';
+import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 //Python
 import { PythonComponent } from './paginas/programacion/python/python.component';
 //Programación - Angular - Servicios/Formularios/Directivas/etc
@@ -159,6 +164,10 @@ import { TypescriptComponent } from './paginas/programacion/typescript/typescrip
 import { InstalaciontypeComponent } from './paginas/programacion/typescript/instalaciontype/instalaciontype.component';
 import { InstalaciontypelinuxmacComponent } from './paginas/programacion/typescript/instalaciontypelinuxmac/instalaciontypelinuxmac.component';
 import { Instalaciontypelinuxmac2Component } from './paginas/programacion/typescript/instalaciontypelinuxmac2/instalaciontypelinuxmac2.component';
+import { VariabletypeComponent } from './paginas/programacion/typescript/variabletype/variabletype.component';
+import { FuncionestypeComponent } from './paginas/programacion/typescript/funcionestype/funcionestype.component';
+import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
+import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
 
 //Programacion - Ionic
 import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
@@ -170,10 +179,6 @@ import { AyuntamientoComponent } from './paginas/empleo/ayuntamientoss/ayuntamie
 import { AyuntamientoidComponent } from './paginas/empleo/ayuntamientoss/ayuntamientoid/ayuntamientoid.component';
 import { EmpresaidComponent } from './paginas/empleo/empresas/empresaid/empresaid.component';
 
-//Biblioteca
-import { BibliotecaComponent } from './paginas/biblioteca/biblioteca.component';
-import { SubidaComponent } from './paginas/biblioteca/subida/subida.component';
-
 //Personal
 import { PersonalComponent } from './paginas/personal/personal.component';
 import { PersonalidComponent } from './paginas/personal/personalid/personalid.component';
@@ -181,16 +186,9 @@ import { PersonalidComponent } from './paginas/personal/personalid/personalid.co
 //Deudas
 import { DeudasComponent } from './paginas/deudas/deudas.component';
 import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component';
-import { VariabletypeComponent } from './paginas/programacion/typescript/variabletype/variabletype.component';
-import { FuncionestypeComponent } from './paginas/programacion/typescript/funcionestype/funcionestype.component';
-import { FuncionamientotypeComponent } from './paginas/programacion/typescript/funcionamientotype/funcionamientotype.component';
-import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
-import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
-import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
 
-
-
-
+//Servicios
+import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
 
 
 @NgModule({
@@ -280,6 +278,10 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
     HostingangularComponent,
     LoginangularComponent,
     ServiciounovariasComponent,
+    ExtensionesComponent,
+    FontsgoogleprincipalComponent,
+    FuncionesangularComponent,
+    ServiceoneComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -337,28 +339,25 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
     InstalaciontypeComponent,
     InstalaciontypelinuxmacComponent,
     Instalaciontypelinuxmac2Component,
+    VariabletypeComponent,
+    FuncionestypeComponent,
+    FuncionamientotypeComponent,
+    PromesastypeComponent,
+    //Programacion - Ionic
+    IonicComponent,
     //Empleo
     EmpleoComponent,
     EmpresasComponent,
     AyuntamientoComponent,
     AyuntamientoidComponent,
     EmpresaidComponent,
-    //Biblioteca
-    BibliotecaComponent,
-    SubidaComponent,
     //Personal
     PersonalComponent,
     PersonalidComponent,
     //Deudas
     DeudasComponent,
     DeudasidComponent,
-    IonicComponent,
-    VariabletypeComponent,
-    FuncionestypeComponent,
-    FuncionamientotypeComponent,
-    PromesastypeComponent,
-    ExtensionesComponent,
-    FontsgoogleprincipalComponent
+    Serviceone2Component,
   ],
   imports: [
     //Por defecto
@@ -377,7 +376,8 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
   ],
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas
-    appRoutingProviders
+    appRoutingProviders,
+    ServiciodepruebaService
   ],
   //Por defecto - Librería
   bootstrap: [AppComponent]

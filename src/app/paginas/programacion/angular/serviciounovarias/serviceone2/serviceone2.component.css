@@ -10,3 +10,12 @@ button {
 pre, h3{
     color: white;
 }
+
+a{
+    color: black;
+}
+
+
+.clase_por_mi_css{
+    width: 120px;
+}

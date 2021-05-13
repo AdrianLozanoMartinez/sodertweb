@@ -1,9 +1,9 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-arranqueangular0-tab" data-toggle="pill" href="#pills-arranqueangular0" role="tab" aria-controls="pills-arranqueangular0" aria-selected="false" style="color: black;">Simular servidor</a>
+      <a class="nav-link active" id="pills-arranqueangular0-tab" data-toggle="pill" href="#pills-arranqueangular0" role="tab" aria-controls="pills-arranqueangular0" aria-selected="false" style="color: black;">Simular</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-arranqueangular1-tab" data-toggle="pill" href="#pills-arranqueangular1" role="tab" aria-controls="pills-arranqueangular1" aria-selected="false" style="color: black;">Preparar para servidor</a>
+        <a class="nav-link" id="pills-arranqueangular1-tab" data-toggle="pill" href="#pills-arranqueangular1" role="tab" aria-controls="pills-arranqueangular1" aria-selected="false" style="color: black;">Preparar</a>
     </li>
 </ul>
   
@@ -25,22 +25,27 @@
         </div>
 
         <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Compila + Abre navegador</h3>
+                    <pre class="card-text"><ul><li><b>ng serve -o</b></li><li><b>ng serve --o</b></li><li><b>ng serve --open</b></li><li><b>npm start</b></li></ul></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3">
+              <div class="card-body"><h3>Compila + Puerto</h3>
+                  <pre class="card-text"><ul><li><b>ng serve --port 4200</b> (--port número_del_puerto_elegido)</li><li><b>ng serve --port 4200 -o</b>
+<li><b>ng serve --port 4200 --o</b>
+<li><b>ng serve --port 4200 --open</b></li></ul></pre>
+              </div>
+          </div>
+        </div>
+
+        <div class="card-group">
           <div class="card text-dark bg-danger m-3">
-              <div class="card-body"><h3>Compila + Abre navegador</h3>
-                  <pre class="card-text"><ul><li><b>ng serve -o</b></li><li><b>ng serve --o</b></li><li><b>ng serve --open</b></li><li><b>npm start</b></li></ul></pre>
+              <div class="card-body"><h3>Comprobar errores <small>Antes de subir en rama en Github</small></h3>
+                  <pre class="card-text"><b>npm test</b></pre>
               </div>
           </div>
       </div>
-
-      <div class="card-group">
-        <div class="card text-dark bg-danger m-3">
-            <div class="card-body"><h3>Compila + Puerto</h3>
-                <pre class="card-text"><ul><li><b>ng serve --port 4200</b> (--port número_del_puerto_elegido)</li><li><b>ng serve --port 4200 -o</b>
-<li><b>ng serve --port 4200 --o</b>
-<li><b>ng serve --port 4200 --open</b></li></ul></pre>
-            </div>
-        </div>
-    </div>
         
     </div>
 

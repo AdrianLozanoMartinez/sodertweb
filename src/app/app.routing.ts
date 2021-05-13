@@ -70,6 +70,7 @@ import { TemplatesangularComponent } from './paginas/programacion/angular/formul
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
 import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
+import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -128,10 +129,6 @@ import { EmpresasComponent } from './paginas/empleo/empresas/empresas.component'
 import { AyuntamientoComponent } from './paginas/empleo/ayuntamientoss/ayuntamiento/ayuntamiento.component';
 import { AyuntamientoidComponent } from './paginas/empleo/ayuntamientoss/ayuntamientoid/ayuntamientoid.component';
 import { EmpresaidComponent } from './paginas/empleo/empresas/empresaid/empresaid.component';
-
-//Biblioteca
-import { BibliotecaComponent } from './paginas/biblioteca/biblioteca.component';
-import { SubidaComponent } from './paginas/biblioteca/subida/subida.component';
 
 //Personal
 import { PersonalComponent } from './paginas/personal/personal.component';
@@ -209,6 +206,7 @@ export const appRoutes: Routes = [
   { path: 'hostingangular', component: HostingangularComponent},
   { path: 'loginangular', component: LoginangularComponent},
   { path: 'serviciounovarias', component: ServiciounovariasComponent},
+  { path: 'variable_html/:id', component: Serviceone2Component},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
@@ -263,10 +261,6 @@ export const appRoutes: Routes = [
   { path: 'ayuntamiento', component: AyuntamientoComponent},
   { path: 'ayuntamientoid/:id', component: AyuntamientoidComponent},
   { path: 'empresaid/:id', component: EmpresaidComponent},
-
-  //Biblioteca
-  { path: 'biblioteca', component: BibliotecaComponent},
-  { path: 'subida/:id', component: SubidaComponent},
 
   //Personal
   { path: 'personal', component: PersonalComponent},

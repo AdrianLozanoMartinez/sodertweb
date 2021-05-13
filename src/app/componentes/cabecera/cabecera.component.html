@@ -7,31 +7,17 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Programación
+            General
           </a>
           <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
             <a class="dropdown-item text-light" [routerLink]="['/terminal']">Terminal</a>
             <a class="dropdown-item text-light" [routerLink]="['/git']">Git</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light" [routerLink]="['/html']">Html</a>
-            <a class="dropdown-item text-light" [routerLink]="['/css']">Css</a>
-            <a class="dropdown-item text-light" [routerLink]="['/javascript']">JavaScript</a>
-            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']">Bootstrap</a>
-            <a class="dropdown-item text-light" [routerLink]="['/sql']">SQL</a>
-            <a class="dropdown-item text-light" [routerLink]="['/php']">PHP</a>
-            <a class="dropdown-item text-light" [routerLink]="['/python']">Python</a>
-            <a class="dropdown-item text-light" [routerLink]="['/typescript']">Typescript</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light" [routerLink]="['/angular']">Angular</a>
-            <a class="dropdown-item text-light" [routerLink]="['/ionic']">Ionic</a>
-            <div class="dropdown-divider"></div>
             <a class="dropdown-item text-light" [routerLink]="['/fontsgoogle']">Google Fonts</a>
             <a class="dropdown-item text-light" [routerLink]="['/fontawesome']">Fontawesome</a>
             <a class="dropdown-item text-light" [routerLink]="['/sweepalert2']">Sweepalert</a>
             <a class="dropdown-item text-light" [routerLink]="['/toast']">Toast o ?</a>
-            <div class="dropdown-divider"></div>           
-            <a class="dropdown-item text-light" [routerLink]="['/c']">C#</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider"></div>          
             <a class="dropdown-item text-light" [routerLink]="['/hostinggeneral']">Hosting</a>
             <a class="dropdown-item text-light" [routerLink]="['/firebase']">Firebase</a>
             <a class="dropdown-item text-light" [routerLink]="['/auth0']">Auth0</a>
@@ -40,19 +26,42 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Empleo
+            Front-End
           </a>
           <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text-light" [routerLink]="['/ayuntamientos']">Ayuntamientos</a>
+            <a class="dropdown-item text-light" [routerLink]="['/html']">Html</a>
+            <a class="dropdown-item text-light" [routerLink]="['/css']">Css</a>
+            <a class="dropdown-item text-light" [routerLink]="['/javascript']">JavaScript</a>
+            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']">Bootstrap</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light" [routerLink]="['/empresas']">Empresas</a>
+            <a class="dropdown-item text-light" [routerLink]="['/angular']">Angular</a>
+            <a class="dropdown-item text-light" [routerLink]="['/ionic']">Ionic</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="dropdown-item text-light" [routerLink]="['/personal']" style="margin-top: 3px;">Personal</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Back-End
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-light" [routerLink]="['/sql']">SQL</a>
+            <a class="dropdown-item text-light" [routerLink]="['/php']">PHP</a>
+            <a class="dropdown-item text-light" [routerLink]="['/python']">Python</a>
+            <a class="dropdown-item text-light" [routerLink]="['/typescript']">Typescript</a>
+            <a class="dropdown-item text-light" [routerLink]="['/c']">C#</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="dropdown-item text-light" [routerLink]="['/deudas']" style="margin-top: 3px;">Deudas</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Otros
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <p>Empleo</p>
+            <a class="dropdown-item text-light" [routerLink]="['/ayuntamientos']">Ayuntamientos</a>
+            <a class="dropdown-item text-light" [routerLink]="['/empresas']">Empresas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-light" [routerLink]="['/personal']" style="margin-top: 3px;">Personal</a>
+            <a class="dropdown-item text-light" [routerLink]="['/deudas']" style="margin-top: 3px;">Deudas</a>
+          </div>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

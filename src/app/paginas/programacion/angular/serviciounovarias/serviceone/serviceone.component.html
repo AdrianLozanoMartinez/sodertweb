@@ -1,0 +1,177 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-serviceone0-tab" data-toggle="pill" href="#v-pills-serviceone0" role="tab" aria-controls="v-pills-serviceone0" aria-selected="true">Variable/Interface</a>
+        <a class="nav-link" id="v-pills-serviceone1-tab" data-toggle="pill" href="#v-pills-serviceone1" role="tab" aria-controls="v-pills-serviceone1" aria-selected="false">Sacar Todos</a>
+        <a class="nav-link" id="v-pills-serviceone2-tab" data-toggle="pill" href="#v-pills-serviceone2" role="tab" aria-controls="v-pills-serviceone2" aria-selected="false">Sacar Uno</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade show active" id="v-pills-serviceone0" role="tabpanel" aria-labelledby="v-pills-serviceone0-tab">
+          
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3 border-0">
+                <div class="card-header"><h3>Servicio</h3>
+                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciodepruebaService {{c}}
+
+  <b>private nombre_variable_servicio: <abbr title="Le ponemos la interface a todo">nombre_interface_servicio</abbr>[] = [
+    {{c}}
+        VariableSecundaria1: "Datos1.1",
+        VariableSecundaria2: "Datos1.2",
+        DireccionImagen: "../../../../../../assets/imagenes/Angular.png",
+        VariableSecundaria3: "Datos1.3",
+        VariableSecundaria4:"html"
+    },
+    {{c}}
+        VariableSecundaria1: "Datos2.2",
+        VariableSecundaria2: "Datos2.2",
+        DireccionImagen: "../../../../../../assets/imagenes/typescript.png",
+        VariableSecundaria3: "Datos2.3",
+        VariableSecundaria4:"css"
+    }</b>
+    //Y se sigue repitiendo
+  <b>];</b>
+
+
+  constructor() {{c}} }
+}
+
+<b><abbr title="Para poder usarse">export</abbr> <abbr title="Dar las mismas condiciones a las variables, para que respeten la sintaxis que pongamos">interface</abbr> <abbr title="Nombre que tendrá la interface creada y la que pondremos donde queramos aplicarla">nombre_interface_servicio</abbr> {{c}}
+    VariableSecundaria1: <abbr title="Especificamos el tipo en cada variable">string</abbr>;
+    VariableSecundaria2: string;
+    DireccionImagen: string;
+    VariableSecundaria3: string;
+    VariableSecundaria4: string;
+};</b></pre>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-serviceone1" role="tabpanel" aria-labelledby="v-pills-serviceone1-tab">
+          
+          <div class="card" style="width: 18rem;" *ngFor="let variable_html of nombre_variable_ts, let i = index">
+            <!-- <img src="{{variable_html.DireccionImagen}}"class="card-img-top" alt="...">  NO RECOMENDABLE-->
+            <img [src]="variable_html.DireccionImagen" class="card-img-top" [alt]="variable_html.VariableSecundaria1">
+            <div class="card-body">
+              <h5 class="card-title">{{variable_html.VariableSecundaria2}}</h5>
+              <p class="card-text">{{variable_html.VariableSecundaria3}}</p>
+              <p class="card-text">{{variable_html.VariableSecundaria4}}</p>
+              <a [routerLink]="['/variable_html',i]" class="btn btn-outline-danger">Ir a Componente individual - Enlace</a>
+              <hr>
+              <button (click)="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-primary btn-block">Ir a Componente individual - Botón</button>
+            </div>
+          </div>
+
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Servicio</h3>
+                  <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciodepruebaService {{c}}
+
+  private nombre_variable_servicio: any[] = [
+    {{c}}
+        VariableSecundaria1: "Datos1.1",
+        VariableSecundaria2: "Datos1.2",
+        DireccionImagen: "../../../../../../assets/imagenes/Angular.png",
+        VariableSecundaria3: "Datos1.3",
+        VariableSecundaria4:"html"
+    },
+    {{c}}
+        VariableSecundaria1: "Datos2.2",
+        VariableSecundaria2: "Datos2.2",
+        DireccionImagen: "../../../../../../assets/imagenes/typescript.png",
+        VariableSecundaria3: "Datos2.3",
+        VariableSecundaria4:"css"
+    }
+    //Y se sigue repitiendo
+  ];
+
+
+<b><abbr title="Función para sacar todos los datos contenidos en variable_servicio_datos">getsacarDatosServicio</abbr>(){{c}}
+      return this.nombre_variable_servicio;
+}</b>
+
+  constructor() {{c}} }
+}</pre>
+                </div>
+              </div>
+
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} <abbr title="Importamos el servicio para usarlo">ServiciodepruebaService</abbr>, <abbr title="Importamos la interface para usarlo, ponemos en el mismo del sitio y dirección porque lo hemos incluido en el servicio">nombre_interface_servicio</abbr> } from '../serviciodeprueba.service';</b>
+<b>import {{c}} <abbr title="Para poder redirigir mediante función, mediante el Ts">Router</abbr> } from '@angular/router';</b>
+
+@Component({{c}}
+  selector: 'app-serviceone',
+  templateUrl: './serviceone.component.html',
+  styleUrls: ['./serviceone.component.css']
+})
+export class ServiceoneComponent implements OnInit {{c}}
+
+  <b><abbr title="Inicializamos en array porque en el servicio son datos en array">nombre_variable_ts</abbr>: <abbr title="Le damos interface a la variable para mantener la estructura que hemos marcado">nombre_interface_servicio</abbr>[] = [];</b>
+
+  constructor( <b><abbr title="Para que no salga del componente">private</abbr> <abbr title="Metemos en la variable el servicio y sus propiedades">_nombredelServicio</abbr>: ServiciodepruebaService,
+        private <abbr title="Metemos en la variable Router para poder usar la función del Ts">nombre_router</abbr>: Router</b> ) {{c}}
+
+   }
+
+  ngOnInit(): void {{c}}
+      <b><abbr title="Cogemos la variable ts y le metemos el valor de la variable del servicio con sus propiedades">this</abbr>.nombre_variable_ts = <abbr title="Elegimos para meterlo en la variable Ts la función get del servicio">this</abbr>._nombredelServicio.getsacarDatosServicio();</b>
+
+      <b>console.log( this.nombre_variable_ts );</b>
+  }
+
+  <abbr title="Función llamada en el html, en el botón para redirigir a una página con una posición concreta">VerComponenteMostrar1</abbr>(indice_recibido:Number ){{c}}
+    console.log(indice_recibido);
+
+    this.nombre_router.<abbr title="Parametro que redirige al lugar que pongamos">navigate</abbr>( [ '/variable_html',<abbr title="Índice recibido en la función, en el paréntesis, coge la posición">indice_recibido</abbr> ] )
+  }
+
+}</pre>
+                </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Html</h3>
+                    <pre class="card-text">{{co}}div class="card" style="width: 18rem;" <b>{{f}}ngFor="let variable_html of nombre_variable_ts, let i = index"</b>>
+  {{co}}!-- {{co}}img <abbr title="No recomendable">src</abbr>="{{c}}{{c}}variable_html.DireccionImagen}}"class="card-img-top" alt="..."> -->
+  {{co}}img <b><abbr title="Recomendable">{{t}}src]</abbr>="variable_html.DireccionImagen"</b> class="card-img-top" <b>{{t}}alt]="variable_html.VariableSecundaria1"</b>>
+  {{co}}div class="card-body">
+    {{co}}h5 class="card-title"><b><abbr title="A través de la variabl local definida en el for, llamamos a la variable que está en relación con el Ts que a su vez está relacionado con el servicio y por eso ponemos la subvariable definida en el servicio">{{c}}{{c}}variable_html.VariableSecundaria2}}</abbr></b>{{co}}/h5>
+    {{co}}p class="card-text"><b>{{c}}{{c}}variable_html.VariableSecundaria3}}</b>{{co}}/p>
+    {{co}}p class="card-text"><b>{{c}}{{c}}variable_html.VariableSecundaria4}}</b>{{co}}/p>
+    {{co}}a <b>{{t}}<abbr title="Enlace">routerLink</abbr> ]="['<abbr title="Variable local de los datos, ponemos / para que lo lea desde la raíz y funcione la redirección">/variable_html</abbr>',<abbr title="Variable local del índice, posición 0,1,2... al ser un arreglo">i</abbr> ]"</b> class="btn btn-outline-danger">Ir a Componente individual - Link{{co}}/a>
+    {{co}}hr>
+    {{co}}button <abbr title="Acción que manda la función VerComponenteMostrar1 al dar clic y envía la posición (i)">click</abbr>{{p}})="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-primary btn-block">Ir a Componente individual - Botón{{co}}/button>
+  {{co}}/div>
+{{co}}/div></pre>
+                </div>
+              </div>
+          </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-serviceone2" role="tabpanel" aria-labelledby="v-pills-serviceone2-tab"><app-serviceone2></app-serviceone2></div>
+
+  </div>
+
+
+  

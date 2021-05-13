@@ -367,6 +367,43 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
 <li><b>ng g s nombreCarpeta/nombreServicio</b></li></ul></pre>
                 </div>
             </div>
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Module.ts</h4>
+                    <pre class="card-text">import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+  import {{c}} routing, appRoutingProviders } from './app.routing';
+  import {{c}} AppComponent } from './app.component';
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+  
+  //Servicio
+  <b>import {{c}} NombreservicioService } from './componentes/programacion/angular/servicios/NombreservicioService.service';</b>
+
+
+  @NgModule({{c}}
+      declarations: [
+        AppComponent,
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        BrowserModule,
+        routing
+      ],
+       providers: [
+        appRoutingProviders<b>,</b>
+        //Servicio
+        <b>NombreservicioService</b>
+       ],
+        bootstrap: [AppComponent]
+   })
+    export class AppModule {{c}} }</pre>
+                </div>
+            </div>
         </div>
 
 

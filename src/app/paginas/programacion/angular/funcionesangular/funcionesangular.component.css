@@ -7,6 +7,6 @@ button {
     color: white !important;
 }
 
-pre, h3{
+h3, pre {
     color: white;
 }
