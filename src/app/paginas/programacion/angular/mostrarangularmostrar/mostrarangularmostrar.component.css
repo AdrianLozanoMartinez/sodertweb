@@ -7,6 +7,10 @@ button {
     color: white !important;
 }
 
-h3, pre, a {
+pre, h3{
     color: white;
+}
+
+a{
+    color: black;
 }

@@ -71,6 +71,7 @@ import { HostingangularComponent } from './paginas/programacion/angular/hostinga
 import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
 import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
+import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -121,7 +122,6 @@ import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
 
 //Fonts google
 import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
-
 
 //Empleo
 import { EmpleoComponent } from './paginas/empleo/empleo.component';
@@ -207,6 +207,7 @@ export const appRoutes: Routes = [
   { path: 'loginangular', component: LoginangularComponent},
   { path: 'serviciounovarias', component: ServiciounovariasComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},
+  { path: 'buscador/:termino_buscar', component: BuscadorComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
@@ -271,12 +272,12 @@ export const appRoutes: Routes = [
    { path: 'deudasid/:id', component: DeudasidComponent},
 
 
-  //Componentes Error - Opción 1
-  { path: '**', component: ErrorComponent},
-  //Componentes Error - Opción 2
-  { path: '**', pathMatch: 'full', redirectTo: 'home'},
-  //Componentes Error - Opción 2
-  { path: '**', component: HomeComponent }
+    //Componentes Error - Opción 1
+    { path: '**', component: ErrorComponent},
+    //Componentes Error - Opción 2
+    { path: '**', pathMatch: 'full', redirectTo: 'home'},
+    //Componentes Error - Opción 2
+    { path: '**', component: HomeComponent }
 ];
 //Conexión con app.module.ts - Enlazar páginas
 export const appRoutingProviders: any[] = [];

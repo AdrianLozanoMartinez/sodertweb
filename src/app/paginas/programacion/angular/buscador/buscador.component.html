@@ -1,0 +1,19 @@
+<h1>Buscando: <small>{{ palabra_a_buscar }}</small></h1>
+
+<hr>
+<div class="row" *ngIf="variable_array.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existe resultados con el término: {{ palabra_a_buscar }}
+        </div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;" *ngFor="let variable_html of variable_array, let i = index">
+    <img [src]="variable_html.DireccionImagen" class="card-img-top" [alt]="variable_html.VariableSecundaria1">
+    <div class="card-body">
+      <h5 class="card-title">{{variable_html.VariableSecundaria2}}</h5>
+      <p class="card-text">{{variable_html.VariableSecundaria3}}</p>
+      <p class="card-text">{{variable_html.VariableSecundaria4}}</p>
+    </div>
+  </div>

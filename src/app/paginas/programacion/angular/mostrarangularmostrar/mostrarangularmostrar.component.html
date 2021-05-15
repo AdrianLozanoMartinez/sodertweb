@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-dmostrarangularmostrar0-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar0" role="tab" aria-controls="v-pills-dmostrarangularmostrar0" aria-selected="true">Páginas</a>
+        <a class="nav-link" id="v-pills-dmostrarangularmostrar1-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar1" role="tab" aria-controls="v-pills-dmostrarangularmostrar1" aria-selected="false">Container (Separar)</a>
+        <a class="nav-link" id="v-pills-dmostrarangularmostrar2-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar2" role="tab" aria-controls="v-pills-dmostrarangularmostrar2" aria-selected="false">Público/Privado<br>en el TS</a>
+        <a class="nav-link" id="v-pills-dmostrarangularmostrar3-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar3" role="tab" aria-controls="v-pills-dmostrarangularmostrar3" aria-selected="true">Texto del Ts</a>
+        <a class="nav-link" id="v-pills-dmostrarangularmostrar4-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar4" role="tab" aria-controls="v-pills-dmostrarangularmostrar4" aria-selected="false">Función del Ts</a>
+        <a class="nav-link" id="v-pills-dmostrarangularmostrar5-tab" data-toggle="pill" href="#v-pills-dmostrarangularmostrar5" role="tab" aria-controls="v-pills-dmostrarangularmostrar5" aria-selected="false">Imágenes en Html</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade show active" id="v-pills-dmostrarangularmostrar0" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar0-tab">
+          
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body">
+                        <pre class="card-text"><b>{{co}}<abbr title="Se encuentra en el selector del componente.TS">app-ComponenteTS</abbr>{{co}}/app-ComponenteTS></b> -> Funcione el enlace que muestra las páginas del proyecto</pre>
+                    </div>
+                </div>
+              </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-dmostrarangularmostrar1" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar1-tab">
+          
+       
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                  <div class="card-body">
+                      <pre class="card-text">{{co}}router-outlet <b>class="container"</b>{{co}}/router-outlet> -> Este u otro etiqueta se añade container para separar de las otras partes (cabecera, pie, etc...)</pre>
+                  </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-dmostrarangularmostrar2" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar2-tab">
+
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3 border-0" style="border-color: white;">
+                    <div class="card-body">
+                        <pre class="card-text"><ul><li><b>Public -> Se ve en el htlm las propiedades. Se ve en otros componentes</b></li>
+        <li><b>Private -> No se ve en el htlm las propiedades. Solo se ve en el componente</b></li></ul></pre>
+                    </div>
+                      <div class="card-body bg-white"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-dmostrarangularmostrar3" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar3-tab">
+          
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body">
+                        <pre class="card-text"><ul><h4>Texto</h4><li><b><abbr title="Variable del TS que se muestra en el html">{{c}}{{c}} nombre_variable }}</abbr></b> -> En el Html</li>
+        <li><b><abbr title="Variable que se define, para mostrar en el html">nombre_variable = 'Texto';</abbr></b> -> En el Ts</li></ul></pre>
+                    </div>
+                </div>
+              </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-dmostrarangularmostrar4" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar4-tab">
+          
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body">
+                        <pre class="card-text"><ul><h4>Función</h4><li><b><abbr title="Función del TS que se muestra en el html">{{c}}{{c}} nombre_variable }}</abbr></b>    -> En el Html</li><li><b><abbr title="Variable que se define, para mostrar en el html">nombre_variable</abbr>: number;</b>     -> En el Ts<b>
+              constructor(){{c}}
+                  this.nombre_variable = <abbr title="Conseguimos el año actual">new Date().getFullYear()</abbr> + <abbr title="Añadimos 1 si queremos el siguiente año">1</abbr>;
+              }</b></li></ul></pre>
+                    </div>
+                </div>
+              </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-dmostrarangularmostrar5" role="tabpanel" aria-labelledby="v-pills-dmostrarangularmostrar5-tab">
+          
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body">
+                        <pre class="card-text"><ul><li>private <b>nombre_variable_servicio</b>: nombre_interface_servicio[] = [      -> En el TS
+            {{c}}
+                <b>DireccionImagen</b>: "../../../../../../assets/imagenes/Angular.png",
+            }
+          ];</li>
+        <hr><li><b>{{co}}img src="{{c}}{{c}}variable_html.DireccionImagen}}"class="card-img-top" alt="..."></b> -> En el Html. No recomendable</li>
+        <li><b>{{co}}img {{t}}src]="variable_html.DireccionImagen"class="card-img-top" alt="..."></b>  En el Html. Recomendable</li></ul></pre>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </div>
+
+  </div>

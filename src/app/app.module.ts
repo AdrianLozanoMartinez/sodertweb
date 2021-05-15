@@ -96,6 +96,8 @@ import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogl
 import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
 import { ServiceoneComponent } from './paginas/programacion/angular/serviciounovarias/serviceone/serviceone.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
+import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
+import { ServiciopadreehijoComponent } from './paginas/programacion/angular/serviciounovarias/serviciopadreehijo/serviciopadreehijo.component';
 //Python
 import { PythonComponent } from './paginas/programacion/python/python.component';
 //Programación - Angular - Servicios/Formularios/Directivas/etc
@@ -189,6 +191,9 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 
 //Servicios
 import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
+import { BuscadorprincipalComponent } from './paginas/programacion/angular/buscador/buscadorprincipal/buscadorprincipal.component';
+import { MostrarangularmostrarComponent } from './paginas/programacion/angular/mostrarangularmostrar/mostrarangularmostrar.component';
+
 
 
 @NgModule({
@@ -282,6 +287,8 @@ import { ServiciodepruebaService } from './paginas/programacion/angular/servicio
     FontsgoogleprincipalComponent,
     FuncionesangularComponent,
     ServiceoneComponent,
+    BuscadorComponent,
+    ServiciopadreehijoComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -358,6 +365,8 @@ import { ServiciodepruebaService } from './paginas/programacion/angular/servicio
     DeudasComponent,
     DeudasidComponent,
     Serviceone2Component,
+    BuscadorprincipalComponent,
+    MostrarangularmostrarComponent
   ],
   imports: [
     //Por defecto

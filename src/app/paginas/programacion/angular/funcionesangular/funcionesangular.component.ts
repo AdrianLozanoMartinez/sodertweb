@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-funcionesangular',
   templateUrl: './funcionesangular.component.html',
@@ -19,10 +21,17 @@ export class FuncionesangularComponent implements OnInit {
    variableTS: string[] = ['Contenido1', 'Contenido2', 'Contenido3', 'más contenidos'];
 
 
-  constructor() { }
+   //Pipes
+   variable_texto = 'TeXto';
+   variable_fecha = '1985-04-19';
+   variable_hora = '15:26';
+
+  constructor(  ) { }
 
   ngOnInit(): void {
   }
+
+
 
   //Html
 c=`{`;

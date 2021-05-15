@@ -11,7 +11,10 @@ export class ServiciounovariasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-//Html
-c=`{`;
-co=`<`;
+  //Html
+  c=`{`;
+  co=`<`;
+  f=`*`;
+  p=`(`;
+  t=`[`;
 }
