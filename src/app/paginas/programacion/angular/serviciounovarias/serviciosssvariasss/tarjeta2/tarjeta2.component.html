@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    <!-- <img src="{{variable_html.DireccionImagen}}"class="card-img-top" alt="...">  NO RECOMENDABLE-->
+    <img [src]="otra_variable2.DireccionImagen" class="card-img-top" [alt]="otra_variable2.VariableSecundaria1">
+    <div class="card-body">
+      <h5 class="card-title">{{otra_variable2.VariableSecundaria2}}</h5>
+      <p class="card-text">{{otra_variable2.VariableSecundaria3}}</p>
+      <p class="card-text">{{otra_variable2.VariableSecundaria4}}</p>
+
+      <button (click)="VerComponenteMostrar1()" type="button" class="btn btn-outline-primary btn-block">Ir a Componente individual - Botón</button>
+    </div>
+</div>

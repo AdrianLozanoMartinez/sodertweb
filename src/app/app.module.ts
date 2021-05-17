@@ -193,6 +193,8 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
 import { BuscadorprincipalComponent } from './paginas/programacion/angular/buscador/buscadorprincipal/buscadorprincipal.component';
 import { MostrarangularmostrarComponent } from './paginas/programacion/angular/mostrarangularmostrar/mostrarangularmostrar.component';
+import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
+import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
 
 
 
@@ -366,7 +368,9 @@ import { MostrarangularmostrarComponent } from './paginas/programacion/angular/m
     DeudasidComponent,
     Serviceone2Component,
     BuscadorprincipalComponent,
-    MostrarangularmostrarComponent
+    MostrarangularmostrarComponent,
+    TarjetaComponent,
+    Tarjeta2Component
   ],
   imports: [
     //Por defecto
