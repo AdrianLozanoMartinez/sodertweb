@@ -1,0 +1,663 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-pipes0-tab" data-toggle="pill" href="#v-pills-pipes0" role="tab" aria-controls="v-pills-pipes0" aria-selected="true">Texto</a>
+        <a class="nav-link" id="v-pills-pipes1-tab" data-toggle="pill" href="#v-pills-pipes1" role="tab" aria-controls="v-pills-pipes1" aria-selected="false">Números</a>
+        <a class="nav-link" id="v-pills-pipesx-tab" data-toggle="pill" href="#v-pills-pipesx" role="tab" aria-controls="v-pills-pipesx" aria-selected="false">Porcentajes</a>
+        <a class="nav-link" id="v-pills-pipes2-tab" data-toggle="pill" href="#v-pills-pipes2" role="tab" aria-controls="v-pills-pipes2" aria-selected="false">Monedas</a>
+        <a class="nav-link" id="v-pills-pipes3-tab" data-toggle="pill" href="#v-pills-pipes3" role="tab" aria-controls="v-pills-pipes3" aria-selected="false">Json</a>
+        <a class="nav-link" id="v-pills-pipes4-tab" data-toggle="pill" href="#v-pills-pipes4" role="tab" aria-controls="v-pills-pipes4" aria-selected="false">Asinc</a>
+        <a class="nav-link" id="v-pills-pipes5x-tab" data-toggle="pill" href="#v-pills-pipes5x" role="tab" aria-controls="v-pills-pipes5x" aria-selected="false">Fecha</a>
+        <a class="nav-link" id="v-pills-pipes5-tab" data-toggle="pill" href="#v-pills-pipes5" role="tab" aria-controls="v-pills-pipes5" aria-selected="false">Idioma</a>
+        <a class="nav-link" id="v-pills-pipes6-tab" data-toggle="pill" href="#v-pills-pipes6" role="tab" aria-controls="v-pills-pipes6" aria-selected="false">Personalizado Mayúscula</a>
+        <a class="nav-link" id="v-pills-pipes7-tab" data-toggle="pill" href="#v-pills-pipes7" role="tab" aria-controls="v-pills-pipes7" aria-selected="false">Personalizado Url seguro<br><small>Evitar fallo de ejecución</small></a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-pipes0" role="tabpanel" aria-labelledby="v-pills-pipes0-tab">
+
+                        Manual: <a href="https://angular.io/api/common/UpperCasePipe"><u>UpperCasePipe</u></a> | <a href="https://angular.io/api/common/LowerCasePipe"><u>LowerCasePipe</u></a> | <a href="https://angular.io/api/common/SlicePipe"><u>SlicePipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variable_texto = 'TeXto';</td>
+                        <td>{{c}}{{c}} variable_texto | uppercase }}</td>
+                        <td>{{ variable_texto | uppercase }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_texto = 'TeXto';</td>
+                        <td>{{c}}{{c}} variable_texto | lowercase }}</td>
+                        <td>{{ variable_texto | lowercase }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_texto = 'TeXto';</td>
+                        <td>{{c}}{{c}} variable_texto | <abbr title="Slice elimina de izquierda a derecha el número de posiciones (letras) que pongamos (3 en este caso)">slice:3</abbr> }}</td>
+                        <td>{{ variable_texto | slice:3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_texto = 'TeXto';</td>
+                        <td>{{c}}{{c}} variable_texto | <abbr title="Slice corta de izquierda a derecha el número de posiciones (letras) que pongamos desde la posición (0 en este caso) hasta la siguiente posición (3 en este caso) y elimina el resto">slice:0:3</abbr> }}</td>
+                        <td>{{ variable_texto | slice:0:3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_arreglo = [1,2,3,4,5,6,7,8,9,10];</td>
+                        <td>{{c}}{{c}} variable_arreglo | <abbr title="Slice corta de izquierda a derecha el número de posiciones del arreglo que pongamos desde la posición (1 en este caso) hasta la siguiente posición (5 en este caso) y elimina el resto. No aparece la 1º posición porque contamos desde la posición 1 y no 0. Podemos poner más posiciones que las que tenemos, no muestra pero tampoco da error, funcionaría cuando tengamos dichas posiciones">slice:1:5</abbr> }}</td>
+                        <td>{{ variable_arreglo | slice:1:5 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-pipes1" role="tabpanel" aria-labelledby="v-pills-pipes1-tab">
+
+            Manual: <a href="https://angular.io/api/common/DecimalPipe"><u>DecimalPipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><abbr title="Sacar el número Pi directamente mediante javascript">PI</abbr> = Math.PI;</td>
+                        <td>Sin PIPE -> {{c}}{{c}} PI }}</td>
+                        <td>{{ PI }}</td>
+                    </tr>
+                    <tr>
+                        <td>PI = Math.PI;</td>
+                        <td>{{c}}{{c}} PI | <abbr title="Lo transforma solo visualmente acortando el número y redondeando el último decimal">number</abbr> }}</td>
+                        <td>{{ PI | number }}</td>
+                    </tr>
+                    <tr>
+                        <td>PI = Math.PI;</td>
+                        <td>{{c}}{{c}} PI | number:'<abbr title="Sacar números enteros de decimales">1.0-0</abbr>' }}</td>
+                        <td>{{ PI | number:'1.0-0' }}</td>
+                    </tr>
+                    <tr>
+                        <td>PI = Math.PI;</td>
+                        <td>{{c}}{{c}} PI | number:'<abbr title="Sacar la cantidad de números enteros que pongamos, en este caso 3 enteros, al no tener tantos enteros se rellenan con 0 delante">3.0-0</abbr>' }}</td>
+                        <td>{{ PI | number:'3.0-0' }}</td>
+                    </tr>
+                    <tr>
+                        <td>PI = Math.PI;</td>
+                        <td>{{c}}{{c}} PI | number:'<abbr title="Sacar todos los enteros (No ponemos números delante del .) y dos (0-2) decimales">3.0-0</abbr>' }}</td>
+                        <td>{{ PI | number:'.0-2' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-pipesx" role="tabpanel" aria-labelledby="v-pills-pipesx-tab">
+
+            Manual: <a href="https://angular.io/api/common/PercentPipe"><u>PercentPipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>porcentaje = 0.234;</td>
+                        <td>{{c}}{{c}} porcentaje | <abbr title="Coge los dos números más cercano a la coma, es como si multiplicamos por 100. Al tener 3 números el 3º desaparece. Al ser menor de 5 se mantiene los números iguales, no se redondea">percent</abbr> }}</td>
+                        <td>{{ porcentaje | percent }}</td>
+                    </tr>
+                    <tr>
+                        <td>porcentaje2 = 0.235;</td>
+                        <td>{{c}}{{c}} porcentaje2 | <abbr title="Al ser igual o mayor de 5 se suma 1 en el número que se muestra, se redondea hacia arriba">percent</abbr> }}</td>
+                        <td>{{ porcentaje2 | percent }}</td>
+                    </tr>
+                    <tr>
+                        <td>porcentaje = 0.234;</td>
+                        <td>{{c}}{{c}} porcentaje | percent<abbr title="Sacar 2 decimales, sino hay suficiente le suman tanto ceros como marque">:'2.2-2'</abbr> }}</td>
+                        <td>{{ porcentaje | percent:'2.2-2' }}</td>
+                    </tr>
+                    <tr>
+                        <td>porcentaje = 0.234;</td>
+                        <td>{{c}}{{c}} porcentaje | percent<abbr title="Sacar 2 decimales, sino hay suficiente le suman tanto ceros como marque">:'2.2-2'</abbr> }}</td>
+                        <td>{{ porcentaje | percent:'2.2-2' }}</td>
+                    </tr>
+                    <tr>
+                        <td>porcentaje2 = 0.235;</td>
+                        <td>{{c}}{{c}} porcentaje2 | percent<abbr title="No hace redondeo como arriba porque muestra el número al añadir decimales">:'2.2-2'</abbr> }}</td>
+                        <td>{{ porcentaje2 | percent:'2.2-2' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-pipes2" role="tabpanel" aria-labelledby="v-pills-pipes2-tab">
+
+            Manual: <a href="https://angular.io/api/common/CurrencyPipe"><u>CurrencyPipe</u></a> | <a href="https://es.wikipedia.org/wiki/ISO_4217"><u>Código de países</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>moneda = 1234.5;</td>
+                        <td>{{c}}{{c}} moneda | <abbr title="Lo pasa a la moneda $ predeterminada">currency</abbr> }}</td>
+                        <td>{{ moneda | currency }}</td>
+                    </tr>
+                    <tr>
+                        <td>moneda = 1234.5;</td>
+                        <td>{{c}}{{c}} moneda | currency<abbr title="Le ponemos la moneda europea">:'EUR'</abbr> }}</td>
+                        <td>{{ moneda | currency:'EUR' }}</td>
+                    </tr>
+                    <tr>
+                        <td>moneda = 1234.5;</td>
+                        <td>{{c}}{{c}} moneda | currency:'EUR'<abbr title="Le quitamos decimales, .0-0">:'symbol':'.0-0'</abbr> }}</td>
+                        <td>{{ moneda | currency:'EUR':'symbol':'.0-0' }}</td>
+                    </tr>
+                    <tr>
+                        <td>moneda = 1234.5;</td>
+                        <td>{{c}}{{c}} moneda | currency:'EUR'<abbr title="Atributo que se suele dejar">:'symbol-narrow'</abbr>:'.0-0' }}</td>
+                        <td>{{ moneda | currency:'EUR':'symbol-narrow':'.0-0' }}</td>
+                    </tr>
+                    <tr>
+                        <td>moneda = 1234.5;</td>
+                        <td>{{c}}{{c}} moneda | currency<abbr title="Podemos poner una moneda inventada para juegos, etc">:'MonedaInventada'</abbr> }}</td>
+                        <td>{{ moneda | currency:'MonedaInventada':'symbol':'.0-0' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-pipes3" role="tabpanel" aria-labelledby="v-pills-pipes3-tab">
+
+                        Manual: <a href="https://angular.io/api/common/JsonPipe"><u>JsonPipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre style="color: black;">variable_objeto = {{c}}
+    subvariable_objeto_1: 'Texto 1',
+    subvariable_objeto_2: 'Texto 2',
+    subvariable_objeto_3: 500,
+    variable_dentro_de_variable:{{c}}
+      subvariable_objeto_4: 'Texto 4',
+      subvariable_objeto_5: 20
+    }
+  }</pre></td>
+                        <td>{{c}}{{c}} variable_objeto | json }}</td>
+                        <td><pre style="color: black;">{{ variable_objeto | json }}</pre></td>
+                    </tr>
+                    <tr>
+                        <td><pre style="color: black;">variable_promesa = new Promise{{co}}string>( (resolve) => {{c}}
+
+      setTimeout(() => {{c}}
+        resolve ('Llegó la información en 4 seg y medio');
+      }, 4500);
+
+});</pre></td>
+                        <td>{{c}}{{c}} <abbr title="Muestra la variable objeto más el valor que devuelve al pasar el tiempo">variable_promesa</abbr> | json }}</td>
+                        <td><pre style="color: black;">{{ variable_promesa | json }}</pre></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-pipes4" role="tabpanel" aria-labelledby="v-pills-pipes4-tab">
+
+                        Manual: <a href="https://angular.io/api/common/AsyncPipe"><u>AsyncPipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><pre style="color: black;">variable_promesa2 = new Promise{{co}}string>( (<abbr title="Devuelve si no da error, si diera error debemos poner reject">resolve</abbr> ) => {{c}}
+
+      setTimeout(() => {{c}}
+        resolve ('Llegó la información en 4 seg y medio');
+      }, 4500);
+
+});</pre></td>
+                        <td>{{c}}{{c}} variable_promesa2 | <abbr title="Muestra el resultado de la promesa después del tiempo marcado">async</abbr> }}</td>
+                        <td>{{ variable_promesa2 | async }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-pipes5x" role="tabpanel" aria-labelledby="v-pills-pipes5x-tab">
+
+                        Manual: <a href="https://angular.io/api/common/DatePipe"><u>DatePipe</u></a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | <abbr title="Fecha actual, con formato mes-día-año">date</abbr> }}</td>
+                        <td>{{ variable_fecha0 | date }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'medium' }}</td>
+                        <td>{{ variable_fecha0 | date:'medium' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'short' }}</td>
+                        <td>{{ variable_fecha0 | date:'short' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'long' }}</td>
+                        <td>{{ variable_fecha0 | date:'long' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'full' }}</td>
+                        <td>{{ variable_fecha0 | date:'full' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'shortDate' }}</td>
+                        <td>{{ variable_fecha0 | date:'shortDate' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'mediumDate' }}</td>
+                        <td>{{ variable_fecha0 | date:'mediumDate' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'longDate' }}</td>
+                        <td>{{ variable_fecha0 | date:'longDate' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'fullDate' }}</td>
+                        <td>{{ variable_fecha0 | date:'fullDate' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'shortTime' }}</td>
+                        <td>{{ variable_fecha0 | date:'shortTime' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'mediumTime' }}</td>
+                        <td>{{ variable_fecha0 | date:'mediumTime' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'longTime' }}</td>
+                        <td>{{ variable_fecha0 | date:'longTime' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'fullTime' }}</td>
+                        <td>{{ variable_fecha0 | date:'fullTime' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'y' }}</td>
+                        <td>{{ variable_fecha0 | date:'y' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'yy' }}</td>
+                        <td>{{ variable_fecha0 | date:'yy' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'M' }}</td>
+                        <td>{{ variable_fecha0 | date:'M' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'MM' }}</td>
+                        <td>{{ variable_fecha0 | date:'MM' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'MMM' }}</td>
+                        <td>{{ variable_fecha0 | date:'MMM' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'MMMM' }}</td>
+                        <td>{{ variable_fecha0 | date:'MMMM' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'d-MM-y' }}</td>
+                        <td>{{ variable_fecha0 | date:'d-MM-y' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'E' }}</td>
+                        <td>{{ variable_fecha0 | date:'E' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'EEEE' }}</td>
+                        <td>{{ variable_fecha0 | date:'EEEE' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_fecha0 = new <abbr title="Fecha actual">Date</abbr>();</td>
+                        <td>{{c}}{{c}} variable_fecha0 | date:'MMMM - dd':''<abbr title="Ponemos un idioma específico, en este caso francés">:'fr'</abbr> }}</td>
+                        <td>{{ variable_fecha0 | date:'MMMM - dd':'':'fr' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-pipes5" role="tabpanel" aria-labelledby="v-pills-pipes5-tab">
+
+<h3>Posición de moneda, fecha... en el idioma que pongamos</h3>
+            <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>ng add @angular/localize</b></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Module.ts</h4>
+                    <pre class="card-text">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule<b>, LOCALE_ID</b> } from '@angular/core';
+import {{c}} routing, appRoutingProviders } from './app.routing';
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} registerLocaleData } from '@angular/common';
+
+import <abbr title="Ponemos cualquier nombre, mientras que luego abajo pongamos el mismo">nombre_pipe_espanol</abbr> from '@angular/common/locales/<abbr title="Se pone del país donde estemos trabajando">es</abbr>';
+registerLocaleData(nombre_pipe_espanol);</b>
+
+<b>import <abbr title="Podemos añadir los idiomas que queramos mostrar">nombre_pipe_frances</abbr> from '@angular/common/locales/fr';
+registerLocaleData(nombre_pipe_frances);</b>
+
+@NgModule({{c}}
+    declarations: [
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    PieComponent,
+    CabeceraComponent
+    ],
+    imports: [
+    BrowserModule,
+    routing
+    ],
+    providers: [
+    appRoutingProviders,
+    <b>{{c}}
+        <abbr title="Español por defecto">provide</abbr>: <abbr title="Se improta arriba">LOCALE_ID</abbr> ,
+        useValue: 'es'
+    }</b>
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+        </div>
+
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>boton_idioma='<abbr title="Iniciado en un idioma, en este caso inglés">en</abbr>';</td>
+<td><pre style="color: black;">date:'MMMM - dd':'':'{{c}}{{c}} boton_idioma }}'
+{{co}}br>
+{{co}}button {{p}}click)="boton_idioma='es'" class="mr-1 btn btn-danger">Español{{co}}/button>
+{{co}}button {{p}}click)="boton_idioma='en'" class="mr-1 btn btn-secondary">Inglés{{co}}/button>
+{{co}}button {{p}}click)="boton_idioma='fr'" class="mr-1 btn btn-success">Francés{{co}}/button>
+{{co}}br>
+{{c}}{{c}} variable_fecha0 | date:'MMMM - dd':'':boton_idioma }}</pre></td>
+                        <td>date:'MMMM - dd':'':'{{ boton_idioma }}'
+                            <br>
+                            <button (click)="boton_idioma='es'" class="mr-1 btn btn-danger">Español</button>
+                            <button (click)="boton_idioma='en'" class="mr-1 btn btn-secondary">Inglés</button>
+                            <button (click)="boton_idioma='fr'" class="mr-1 btn btn-success">Francés</button>
+                            <br>
+                            {{ variable_fecha0 | date:'MMMM - dd':'':boton_idioma }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-pipes6" role="tabpanel" aria-labelledby="v-pills-pipes6-tab">
+
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body">
+                        <pre class="card-text"><ul><li><b>ng g p paginas/programacion/angular/mostrarangularmostrar/pipes/pipespersonalizar</b></li><li><b>ng generate pipe paginas/programacion/angular/mostrarangularmostrar/pipes/pipespersonalizar</b></li></ul></pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Pipe</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variable_personalizada_letra = 'AdRiAn LOzaNO MartíNEZ';</td>
+                        <td><b>{{c}}{{c}} variable_personalizada_letra | pipespersonalizar<abbr title="Podemos agregarle lo que queramos, como se muestra">:1:true:'hola'</abbr> }}</b></td>
+                        <td><pre style="color: black;">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+  name: '<abbr title="Palabra que usaremos en el PIPE (pipespersonalizar)">pipespersonalizar</abbr>'
+})
+export class PipespersonalizarPipe implements PipeTransform {{c}}
+
+  transform(<abbr title="Valor">value</abbr>: unknown, <abbr title="Une los demás argumentos">...args</abbr>: unknown[]): <abbr title="Que regresa, puede ser un string, arreglo de string (string[]) o número">unknown</abbr> {{c}}
+    
+            console.log(<b><abbr title="Nos sale en consola el valor">value</abbr></b>);
+            console.log(<b><abbr title="Argumento vacío que lo rellenaremos, nos sale en consola [], que al añadirle en el html :1:true:'hola' aparecerán rellenos de ello -> [1, true, 'hola']">args</abbr></b>);
+  
+        return '<b>Lo que voy a regresar en forma de texto (string)</b>';
+  }
+
+}
+</pre></td>
+                        <td>{{ variable_personalizada_letra | pipespersonalizar:1:true:'hola' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_personalizada_letra2 = 'AdRiAn LOzaNO MartíNEZ';</td>
+                        <td><b>{{c}}{{c}} variable_personalizada_letra2 | pipespersonalizar:1:true:'hola' }}</b></td>
+                        <td><pre style="color: black;">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+  name: 'pipespersonalizar'
+})
+export class PipespersonalizarPipe implements PipeTransform {{c}}
+
+  transform(value: unknown, <abbr title="Ponemos las variables que queramos, dicho nombre se mostrará como título. Ejemplo: edad:1, activo:true y mensaje:hola">edad</abbr>: number, activo: boolean, mensaje: string ): string {{c}}
+    
+            console.log(<b>value</b>);
+            console.log(<b>{{c}}edad, activo, mensaje }</b>);
+  
+        return '<b>Lo que voy a regresar en forma de texto (string)</b>';
+  }
+
+}
+</pre></td>
+                        <td>{{ variable_personalizada_letra3 | pipespersonalizar:1:true:'hola' }}</td>
+                    </tr>
+                    <tr>
+                        <td>variable_personalizada_letra3 = 'AdRiAn LOzaNO MartíNEZ';</td>
+                        <td><b>{{c}}{{c}} variable_personalizada_letra3 | pipespersonalizar:true }}<br><br>{{c}}{{c}} variable_personalizada_letra3 | pipespersonalizar2:false }}</b></td>
+                        <td><pre style="color: black;">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+  name: 'pipespersonalizar2'
+})
+export class pipespersonalizar2Pipe implements PipeTransform {{c}}
+
+transform(<b>value: string, variable_boolean: boolean = true</b> ): string {{c}} 
+    
+    <b>value = value.<abbr title="Para que me aparezca automático las opciones de string u otro como toLocaleLowerCase, debemos darle valor a value de arriba (string u otro)">toLocaleLowerCase</abbr>();
+
+        let variable_nombres = value.<abbr title="Arreglo de variable_nombres separado con espacio con split(' ')">split(' ');</abbr>
+
+            console.log(<abbr title="Muestra: [adrian, lozano, martínez]">variable_nombres </abbr>);
+  
+
+            if ( <abbr title="Si quiere que ponga en mayúscula todas las palabras, ya que variable_boolean está en true, si en el html es true es sí, si es false es un no">variable_boolean</abbr> ){{c}}   //
+                variable_nombres = variable_nombres.<abbr title="Tomamos el arreglo del variable_nombres, lo pasamos con el map">map</abbr>( variable_nombres => {{c}}    
+                  return <abbr title="en la posicion 0, primera letra">variable_nombres[0]</abbr>.<abbr title="lo pasamos a mayúscula">toUpperCase</abbr>() + <abbr title="Coge el resto desde la 2º posición, es decir desde la posición [1] de la misma variable">variable_nombres</abbr>.substr(1);
+
+                })
+                  console.log(<abbr title="Muestra [Adrian, Lozano, Martínez]">variable_nombres</abbr>);
+                  
+               
+               
+                }<abbr title="Si quiero poner mayúscula solo la primera">else</abbr> {{c}}   
+        
+                    <abbr title="En la primera palabra variable_nombres[0] metemos la mayúscula de la primera letra de la primera palabra variable_nombres[0] [0] y le sumamos el resto desde la posición [1]">variable_nombres[0]</abbr> = variable_nombres[0] [0].toUpperCase() + variable_nombres[0].substr(1)
+                    
+                    console.log(<abbr title="Muestra [Adrian, lozano, martínez]">variable_nombres</abbr>); 
+                  
+                  }</b>
+
+
+
+                return variable_nombres.<abbr title="Une todas las partes con el join y la separa con espacio con (' ') y lo muestra porfin en el Html">join</abbr>(' ');
+
+
+  }
+
+}
+</pre></td>
+                        <td>{{ variable_personalizada_letra3 | pipespersonalizar2:true }}<br><br>{{ variable_personalizada_letra3 | pipespersonalizar2:false }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+            <div class="tab-pane fade" id="v-pills-pipes7" role="tabpanel" aria-labelledby="v-pills-pipes7-tab">
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Pipe</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variable_videourl = 'https://www.youtube.com/embed/mEZ-3W75d-Q';</td>
+<td><pre style="color: black;">{{co}}iframe width="560" 
+    height="315" 
+    <b>{{t}}src]="variable_videourl | pipespersonalizadaurl" </b>
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; 
+           encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+{{co}}/iframe></pre></td>
+                        <td><pre style="color: black;">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+import {{c}} <abbr title="Coge el url y limpiarlo o validar">DomSanitizer</abbr>, SafeResourceUrl } from '@angular/platform-browser';
+
+@Pipe({{c}}
+  name: 'pipespersonalizadaurl'
+})
+export class PipespersonalizadaurlPipe implements PipeTransform {{c}}
+
+  constructor ( private variable_DomSanitizer: DomSanitizer) {{c}}}
+
+  transform(value: string, ...args: unknown[]): SafeResourceUrl {{c}}
+    return this.variable_DomSanitizer.<abbr title="Si confiamos en el url. Retorna un SafeResourceUrl, lo vemos al ponernos encima de bypassSecurityTrustResourceUrl. Nos permite pasar la seguridad de un url de confianza">bypassSecurityTrustResourceUrl</abbr>( value );
+  }
+
+}</pre></td>
+                        <td><b><u>En consola si da error es porque una extensión del navegador está activa, se desactiva y desaparecerá el error</u></b>
+                            <iframe width="560" 
+                                    height="315" 
+                                    [src]="variable_videourl | pipespersonalizadaurl" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>

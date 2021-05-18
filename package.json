@@ -17,10 +17,12 @@
     "@angular/core": "~9.1.12",
     "@angular/fire": "^6.0.2",
     "@angular/forms": "~9.1.12",
+    "@angular/localize": "^9.1.13",
     "@angular/platform-browser": "~9.1.12",
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",
     "bootstrap": "^4.5.2",
+    "firebase": "^7.13.1",
     "font-awesome": "^4.7.0",
     "install": "^0.13.0",
     "jquery": "^3.5.1",
@@ -29,8 +31,7 @@
     "rxjs": "~6.5.4",
     "sweetalert2": "^9.17.2",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "firebase": "^7.13.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.12",

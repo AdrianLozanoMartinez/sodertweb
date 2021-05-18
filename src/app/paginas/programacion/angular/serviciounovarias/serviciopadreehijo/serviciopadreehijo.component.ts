@@ -27,6 +27,14 @@ export class ServiciopadreehijoComponent implements OnInit {
     this.nombre_router.navigate( [ '/variable_html',indice_recibido ] )
   }
   
+
+
+  funcion_Buscar2( nombre_a_buscar:string ){
+    console.log(nombre_a_buscar);
+    this.nombre_router.navigate( ['/buscador2',nombre_a_buscar] );
+  }
+
+
 //Html
 c=`{`;
 co=`<`;

@@ -153,7 +153,6 @@ this.<abbr title="Para movernos y navegar a donde indiquemos">variable_router.na
 
     <div class="card text-dark bg-warning m-3">
         <div class="card-body"><h3>Html Buscador</h3>
-
             <pre class="card-text">{{co}}form class="form-inline my-2 my-lg-0">
 {{co}}input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" <b><abbr title="Actúa al hacer click">{{p}}keyup.enter)</abbr>="funcion_Buscar{{p}}<abbr title="Variable local definida luego con # añadiendo value">buscartexto</abbr>.value)" #buscartexto</b>>
 {{co}}button class="btn btn-outline-danger my-2 my-sm-0" type=<b>"<abbr title="Cambiamos a button para que no suba la acción sino que haga la acción solo de buscar">button</abbr>" <abbr title="Actúa al darle al botón">{{p}}click)</abbr>="funcion_Buscar{{p}}buscartexto.value)"</b>>Buscar{{co}}/button>
@@ -223,12 +222,12 @@ console.log(params['<b><abbr title="Mismo que en router. path: 'buscador/:termin
 {{co}}/div>
 
 {{co}}div class="card" style="width: 18rem;" <b>{{f}}ngFor="let variable_html of variable_array, let i = index"</b>>
-<b>{{co}}img {{t}}src]="variable_html.DireccionImagen"</b> class="card-img-top" {{t}}alt]="variable_html.VariableSecundaria1">
-{{co}}div class="card-body">
-{{co}}h5 class="card-title"><b>{{co}}{{co}}variable_html.VariableSecundaria2}}</b>{{co}}/h5>
-{{co}}p class="card-text"><b>{{co}}{{co}}variable_html.VariableSecundaria3}}</b>{{co}}/p>
-{{co}}p class="card-text"><b>{{co}}{{co}}variable_html.VariableSecundaria4}}</b>{{co}}/p>
-{{co}}/div>
+  <b>{{co}}img {{t}}src]="variable_html.DireccionImagen"</b> class="card-img-top" {{t}}alt]="variable_html.VariableSecundaria1">
+  {{co}}div class="card-body">
+    {{co}}h5 class="card-title"><b>{{co}}{{co}}variable_html.VariableSecundaria2}}</b>{{co}}/h5>
+    {{co}}p class="card-text"><b>{{co}}{{co}}variable_html.VariableSecundaria3}}</b>{{co}}/p>
+    {{co}}p class="card-text"><b>{{co}}{{co}}variable_html.VariableSecundaria4}}</b>{{co}}/p>
+  {{co}}/div>
 {{co}}/div></pre>
             </div>
         </div>

@@ -1,6 +1,6 @@
 //Por defecto
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -97,7 +97,22 @@ import { FuncionesangularComponent } from './paginas/programacion/angular/funcio
 import { ServiceoneComponent } from './paginas/programacion/angular/serviciounovarias/serviceone/serviceone.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
+import { BuscadorprincipalComponent } from './paginas/programacion/angular/buscador/buscadorprincipal/buscadorprincipal.component';
+import { MostrarangularmostrarComponent } from './paginas/programacion/angular/mostrarangularmostrar/mostrarangularmostrar.component';
+import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
+import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
+import { Buscador2Component } from './paginas/programacion/angular/buscador/buscador2/buscador2.component';
+import { PipesComponent } from './paginas/programacion/angular/pipes/pipes.component';
+import { PipespersonalizarPipe } from './paginas/programacion/angular/pipes/pipes/pipespersonalizar.pipe';
 import { ServiciopadreehijoComponent } from './paginas/programacion/angular/serviciounovarias/serviciopadreehijo/serviciopadreehijo.component';
+import { registerLocaleData } from '@angular/common';
+
+import nombre_pipe_espanol from '@angular/common/locales/es';
+registerLocaleData(nombre_pipe_espanol);
+
+import nombre_pipe_frances from '@angular/common/locales/fr';
+registerLocaleData(nombre_pipe_frances);
+
 //Python
 import { PythonComponent } from './paginas/programacion/python/python.component';
 //Programación - Angular - Servicios/Formularios/Directivas/etc
@@ -191,10 +206,9 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 
 //Servicios
 import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
-import { BuscadorprincipalComponent } from './paginas/programacion/angular/buscador/buscadorprincipal/buscadorprincipal.component';
-import { MostrarangularmostrarComponent } from './paginas/programacion/angular/mostrarangularmostrar/mostrarangularmostrar.component';
-import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
-import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
+import { Pipespersonalizar2Pipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizar2.pipe';
+import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizadaurl.pipe';
+
 
 
 
@@ -291,6 +305,14 @@ import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovar
     ServiceoneComponent,
     BuscadorComponent,
     ServiciopadreehijoComponent,
+    Serviceone2Component,
+    BuscadorprincipalComponent,
+    MostrarangularmostrarComponent,
+    TarjetaComponent,
+    Tarjeta2Component,
+    Buscador2Component,
+    PipesComponent,
+    PipespersonalizarPipe,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -366,11 +388,8 @@ import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovar
     //Deudas
     DeudasComponent,
     DeudasidComponent,
-    Serviceone2Component,
-    BuscadorprincipalComponent,
-    MostrarangularmostrarComponent,
-    TarjetaComponent,
-    Tarjeta2Component
+    Pipespersonalizar2Pipe,
+    PipespersonalizadaurlPipe
   ],
   imports: [
     //Por defecto
@@ -390,7 +409,11 @@ import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovar
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas
     appRoutingProviders,
-    ServiciodepruebaService
+    ServiciodepruebaService,
+    {
+        provide: LOCALE_ID,
+        useValue: 'es'
+    }
   ],
   //Por defecto - Librería
   bootstrap: [AppComponent]

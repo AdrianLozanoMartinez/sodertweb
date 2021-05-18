@@ -72,6 +72,9 @@ import { LoginangularComponent } from './paginas/programacion/angular/loginangul
 import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
+import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
+import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
+import { Buscador2Component } from './paginas/programacion/angular/buscador/buscador2/buscador2.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -138,8 +141,7 @@ import { PersonalidComponent } from './paginas/personal/personalid/personalid.co
 import { DeudasComponent } from './paginas/deudas/deudas.component';
 import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component';
 
-import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
-import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
+
 
 export const appRoutes: Routes = [
   //Componentes - Especiales
@@ -210,6 +212,7 @@ export const appRoutes: Routes = [
   { path: 'serviciounovarias', component: ServiciounovariasComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},
   { path: 'buscador/:termino_buscar', component: BuscadorComponent},
+  { path: 'buscador2/:termino_buscar', component: BuscadorComponent},
   { path: 'tarjeta', component: TarjetaComponent},
   { path: 'tarjeta2', component: Tarjeta2Component},
   //Programacion - Hosting
