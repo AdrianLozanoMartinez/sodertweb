@@ -58,6 +58,10 @@ export class PipesComponent implements OnInit {
 
     variable_videourl = 'https://www.youtube.com/embed/mEZ-3W75d-Q';
 
+
+    variable_activar = true;
+    variable_contrasena = 'Contraseña ver o ocultar al dar el botón';
+
   constructor() { }
 
   ngOnInit(): void {

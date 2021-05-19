@@ -105,6 +105,9 @@ import { Buscador2Component } from './paginas/programacion/angular/buscador/busc
 import { PipesComponent } from './paginas/programacion/angular/pipes/pipes.component';
 import { PipespersonalizarPipe } from './paginas/programacion/angular/pipes/pipes/pipespersonalizar.pipe';
 import { ServiciopadreehijoComponent } from './paginas/programacion/angular/serviciounovarias/serviciopadreehijo/serviciopadreehijo.component';
+
+
+
 import { registerLocaleData } from '@angular/common';
 
 import nombre_pipe_espanol from '@angular/common/locales/es';
@@ -187,7 +190,7 @@ import { FuncionamientotypeComponent } from './paginas/programacion/typescript/f
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
 
 //Programacion - Ionic
-import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
+
 
 //Empleo
 import { EmpleoComponent } from './paginas/empleo/empleo.component';
@@ -206,8 +209,14 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 
 //Servicios
 import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
+
+//Pipes
 import { Pipespersonalizar2Pipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizar2.pipe';
 import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizadaurl.pipe';
+import { PipespersonalizaocultarPipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizaocultar.pipe';
+import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
+import { IonicangularComponent } from './paginas/programacion/angular/ionicangular/ionicangular.component';
+import { InstalacionionicComponent } from './paginas/programacion/angular/ionicangular/instalacionionic/instalacionionic.component';
 
 
 
@@ -313,6 +322,9 @@ import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/
     Buscador2Component,
     PipesComponent,
     PipespersonalizarPipe,
+    Pipespersonalizar2Pipe,
+    PipespersonalizadaurlPipe,
+    PipespersonalizaocultarPipe,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -375,7 +387,7 @@ import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/
     FuncionamientotypeComponent,
     PromesastypeComponent,
     //Programacion - Ionic
-    IonicComponent,
+
     //Empleo
     EmpleoComponent,
     EmpresasComponent,
@@ -388,8 +400,9 @@ import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/
     //Deudas
     DeudasComponent,
     DeudasidComponent,
-    Pipespersonalizar2Pipe,
-    PipespersonalizadaurlPipe
+    IonicComponent,
+    IonicangularComponent,
+    InstalacionionicComponent
   ],
   imports: [
     //Por defecto

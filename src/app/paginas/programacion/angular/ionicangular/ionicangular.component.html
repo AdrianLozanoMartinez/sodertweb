@@ -1,0 +1,238 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c-tab" data-toggle="pill" href="#pills-c" role="tab" aria-controls="pills-c" aria-selected="true" style="color: black;">Instalación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c1-tab" data-toggle="pill" href="#pills-c1" role="tab" aria-controls="pills-c1" aria-selected="false" style="color: black;">Arranque</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c4-tab" data-toggle="pill" href="#pills-c4" role="tab" aria-controls="pills-c4" aria-selected="false" style="color: black;">Estructura</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c8-tab" data-toggle="pill" href="#pills-c8" role="tab" aria-controls="pills-c8" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c2-tab" data-toggle="pill" href="#pills-c2" role="tab" aria-controls="pills-c2" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c3-tab" data-toggle="pill" href="#pills-c3" role="tab" aria-controls="pills-c3" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c5-tab" data-toggle="pill" href="#pills-c5" role="tab" aria-controls="pills-c5" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c6-tab" data-toggle="pill" href="#pills-c6" role="tab" aria-controls="pills-c6" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c7-tab" data-toggle="pill" href="#pills-c7" role="tab" aria-controls="pills-c7" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c9-tab" data-toggle="pill" href="#pills-c9" role="tab" aria-controls="pills-c9" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c10-tab" data-toggle="pill" href="#pills-c10" role="tab" aria-controls="pills-c10" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c11-tab" data-toggle="pill" href="#pills-c11" role="tab" aria-controls="pills-c11" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c12-tab" data-toggle="pill" href="#pills-c12" role="tab" aria-controls="pills-c12" aria-selected="false" style="color: black;">x</a>
+    </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-c" role="tabpanel" aria-labelledby="pills-c-tab"><hr><app-instalacionionic></app-instalacionionic></div>
+
+    <div class="tab-pane fade" id="pills-c1" role="tabpanel" aria-labelledby="pills-c1-tab">
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Compila + Abre navegador</h3>
+                    <pre class="card-text"><b>ionic serve</b> - > (Necesita tener el <u>navegador iniciado</u>)</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+              <div class="card-body"><h3>Navegador</h3>
+                  <pre class="card-text"><ul>localhost:número_del_puerto_elegido/tipo_de_menú)<li><b>localhost:8100/tabs/tab1</b> (Con menú <u>tabs</u>)</li><li><b>localhost:8002/folder/Inbox (Con menú <u>sidemenu</u>)</b></li></ul></pre>
+              </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Compila + Abre navegador + Puerto</h3>
+                  <pre class="card-text"><ul><li><b>ionic serve --port 9000</b> (--port número_del_puerto_elegido)</li><li><b>ionic serve -p 9000</b> (--p número_del_puerto_elegido)</li></ul></pre>
+              </div>
+          </div>
+          <div class="card-body bg-white"></div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-c4" role="tabpanel" aria-labelledby="pills-c4-tab">
+
+        <h3 style="margin-left: 5px; color: black;">Menú Tabs       -       <a href="https://ionic.io/ionicons" target="_blank"><u>Ir a más</u></a><abbr title="(Solo copiar el nombre y sustituir)"> iconos</abbr></h3>
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h4>Tabs.page</h4>
+                    <pre class="card-text">{{co}}ion-tabs>
+
+  {{co}}ion-tab-bar slot="bottom">
+    
+    <b>{{co}}ion-tab-<abbr title="Botones, este es el 1º">button</abbr> tab="tab1"></b>
+      <b>{{co}}ion-icon name="<abbr title="Nombre del icono">triangle</abbr>">{{co}}/ion-icon></b>      
+      <b>{{co}}ion-label><abbr title="Nombre de los botones de abajo">Tab 1</abbr>{{co}}/ion-label></b>
+    {{co}}/ion-tab-button>
+
+    {{co}}ion-tab-button tab="tab2">
+      {{co}}ion-icon name="ellipse">{{co}}/ion-icon>
+      {{co}}ion-label>Tab 2{{co}}/ion-label>
+    {{co}}/ion-tab-button>
+
+    {{co}}ion-tab-button tab="tab3">
+      {{co}}ion-icon name="square">{{co}}/ion-icon>
+      {{co}}ion-label>Tab 3{{co}}/ion-label>
+    {{co}}/ion-tab-button>
+
+  {{co}}/ion-tab-bar>
+
+{{co}}/ion-tabs></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h4>TabNúmero.page</h4>
+                    <pre class="card-text">{{co}}ion-header <b>class="ion-no-<abbr title="Para modificar bordes, en este caso eliminar">border</abbr> "</b>>
+  {{co}}ion-toolbar>
+    {{co}}ion-title>
+      <b>Título superior</b>
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
+
+{{co}}ion-content {{t}}fullscreen]="true">
+
+        <b>Cuerpo</b>
+    
+  {{co}}/ion-header>
+
+  {{co}}app-explore-container name="Tab 1 page">{{co}}/app-explore-container>
+{{co}}/ion-content></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h4>App-routing.module.ts</h4>
+                    <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  <b>{{c}}
+    path: '',
+    loadChildren: () => import('<abbr title="Si modificamos las páginas, sobretodo la principal, hay que corregir aquí la dirección, recomendable organizar para quedar todo mejor ordenado. En este caso lo hemos metido dentro de la carpeta creada por nosotros llamada PAGE">./pages/tabs/tabs.module</abbr>').then(m => m.TabsPageModule)
+  }</b>
+];
+@NgModule({{c}}
+  imports: [
+    RouterModule.forRoot(routes, {{c}} preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {{c}}}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h4>Tabs-routing.module</h4>
+                    <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} RouterModule, Routes } from '@angular/router';
+import {{c}} TabsPage } from './tabs.page';
+
+const routes: Routes = [
+  {{c}}
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      <b>{{c}}
+        path: '<abbr title="Cuando ELIMINEMOS un componente debemos eliminar este entero desde { hasta el } o cuando AGREGEMOS debemos añadir uno igual pero con el nombre que corresponda con el componente y su dirección">tab1</abbr> ',
+        loadChildren: () => import('<abbr title="Ponemos la dirección correcta si se metiera en otras carpetas o fuera nueva">../tab1/tab1.module</abbr>').then(m => m.Tab1PageModule)
+      },
+      {{c}}
+        path: 'tab2',
+        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+      },
+      {{c}}
+        path: 'tab3',
+        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      },</b>
+      {{c}}
+        path: '',
+        redirectTo: '/tabs/tab1',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {{c}}
+    path: '',
+    redirectTo: '/tabs/tab1',
+    pathMatch: 'full'
+  }
+];
+
+@NgModule({{c}}
+  imports: [RouterModule.forChild(routes)],
+})
+export class TabsPageRoutingModule {{c}}}
+</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-c2" role="tabpanel" aria-labelledby="pills-c2-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="tab-pane fade" id="pills-c3" role="tabpanel" aria-labelledby="pills-c3-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-c5" role="tabpanel" aria-labelledby="pills-c5-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-c6" role="tabpanel" aria-labelledby="pills-c6-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-c7" role="tabpanel" aria-labelledby="pills-c7-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-c8" role="tabpanel" aria-labelledby="pills-c8-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-c9" role="tabpanel" aria-labelledby="pills-c9-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-c10" role="tabpanel" aria-labelledby="pills-c10-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-c11" role="tabpanel" aria-labelledby="pills-c11-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-c12" role="tabpanel" aria-labelledby="pills-c12-tab">x</div>
+
+
+</div>
+<br><br>
+
+<b style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Html"><b><a target="_black" href="https://ionicframework.com/">Oficial</a></b></abbr> | 
+<a href="https://ionicframework.com/signup?page_layout=split" target="_blank"><u>Registrar/Login</u></a>
+<img src="../../../../assets/imagenes/ionic.jpg" style=" width: 350px;">

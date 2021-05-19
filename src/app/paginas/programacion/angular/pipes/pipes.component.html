@@ -11,6 +11,7 @@
         <a class="nav-link" id="v-pills-pipes5-tab" data-toggle="pill" href="#v-pills-pipes5" role="tab" aria-controls="v-pills-pipes5" aria-selected="false">Idioma</a>
         <a class="nav-link" id="v-pills-pipes6-tab" data-toggle="pill" href="#v-pills-pipes6" role="tab" aria-controls="v-pills-pipes6" aria-selected="false">Personalizado Mayúscula</a>
         <a class="nav-link" id="v-pills-pipes7-tab" data-toggle="pill" href="#v-pills-pipes7" role="tab" aria-controls="v-pills-pipes7" aria-selected="false">Personalizado Url seguro<br><small>Evitar fallo de ejecución</small></a>
+        <a class="nav-link" id="v-pills-pipes8-tab" data-toggle="pill" href="#v-pills-pipes8" role="tab" aria-controls="v-pills-pipes8" aria-selected="false">Personalizado Ocultar datos</a>
       </div>
     </div>
     <div class="col-10">
@@ -655,6 +656,56 @@ export class PipespersonalizadaurlPipe implements PipeTransform {{c}}
                                     allowfullscreen>
                             </iframe>
                         </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+
+        <div class="tab-pane fade" id="v-pills-pipes8" role="tabpanel" aria-labelledby="v-pills-pipes8-tab">
+
+
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                       <th class="bg-danger">Ts</th>
+                        <th class="bg-danger">Html</th>
+                        <th class="bg-danger">Pipe</th>
+                        <th class="bg-danger">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>variable_activar</b> = true;<br><b>variable_contrasena</b> = 'Contraseña ver o ocultar al dar el botón';</td>
+<td><pre style="color: black;">{{co}}button <b>{{t}}click)="variable_activar = !variable_activar"</b> 
+        class="btn btn-outline-danger">Activar/Desactivar{{co}}/button>
+{{co}}br>
+El botón está en: {{c}}{{c}} variable_activar }}
+{{co}}br>
+{{c}}{{c}} variable_contrasena <b>| pipespersonalizaocultar: variable_activar</b> }}</pre></td>
+<td><pre style="color: black;">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+  name: 'pipespersonalizaocultar'
+})
+export class PipespersonalizaocultarPipe implements PipeTransform {{c}}
+
+  <b>transform( value: string, variable_mostrar: boolean = true ): string {{c}}
+    return ( <abbr title="si variable_mostrar es true voy a colocar * repitiendo por cada letra/elemento que tenga el valor (value.length)">variable_mostrar</abbr>) ? '*'.repeat( value.length ) <abbr title="En caso contrario (: value) mostramos el valor completo sin ocultar (sin *)">: value</abbr>; </b>
+  }
+
+}</pre></td>
+                        
+                        <td><button (click)="variable_activar = !variable_activar" class="btn btn-outline-danger">Activar/Desactivar</button>
+                            <br>
+                            El botón está en: {{ variable_activar }}
+                            <br>
+                            {{ variable_contrasena | pipespersonalizaocultar: variable_activar }}</td>
                     </tr>
                 </tbody>
             </table>
