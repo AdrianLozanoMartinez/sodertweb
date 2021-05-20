@@ -6,7 +6,10 @@
         <a class="nav-link" id="pills-c1-tab" data-toggle="pill" href="#pills-c1" role="tab" aria-controls="pills-c1" aria-selected="false" style="color: black;">Arranque</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-c4-tab" data-toggle="pill" href="#pills-c4" role="tab" aria-controls="pills-c4" aria-selected="false" style="color: black;">Estructura</a>
+        <a class="nav-link" id="pills-c4-tab" data-toggle="pill" href="#pills-c4" role="tab" aria-controls="pills-c4" aria-selected="false" style="color: black;">Estructura<br>inicial</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-c3-tab" data-toggle="pill" href="#pills-c3" role="tab" aria-controls="pills-c3" aria-selected="false" style="color: black;">Mostrar<br>lista</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-c8-tab" data-toggle="pill" href="#pills-c8" role="tab" aria-controls="pills-c8" aria-selected="false" style="color: black;">x</a>
@@ -14,9 +17,7 @@
     <li class="nav-item">
         <a class="nav-link" id="pills-c2-tab" data-toggle="pill" href="#pills-c2" role="tab" aria-controls="pills-c2" aria-selected="false" style="color: black;">x</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-c3-tab" data-toggle="pill" href="#pills-c3" role="tab" aria-controls="pills-c3" aria-selected="false" style="color: black;">x</a>
-    </li>
+
     <li class="nav-item">
         <a class="nav-link" id="pills-c5-tab" data-toggle="pill" href="#pills-c5" role="tab" aria-controls="pills-c5" aria-selected="false" style="color: black;">x</a>
     </li>
@@ -36,13 +37,13 @@
         <a class="nav-link" id="pills-c11-tab" data-toggle="pill" href="#pills-c11" role="tab" aria-controls="pills-c11" aria-selected="false" style="color: black;">x</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-c12-tab" data-toggle="pill" href="#pills-c12" role="tab" aria-controls="pills-c12" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-c12-tab" data-toggle="pill" href="#pills-c12" role="tab" aria-controls="pills-c12" aria-selected="false" style="color: black;">Complementos</a>
     </li>
 </ul>
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-    <div class="tab-pane fade" id="pills-c" role="tabpanel" aria-labelledby="pills-c-tab"><hr><app-instalacionionic></app-instalacionionic></div>
+    <div class="tab-pane fade" id="pills-c" role="tabpanel" aria-labelledby="pills-c-tab"><app-instalacionionic></app-instalacionionic></div>
 
     <div class="tab-pane fade" id="pills-c1" role="tabpanel" aria-labelledby="pills-c1-tab">
 
@@ -73,166 +74,150 @@
 
     </div>
 
-    <div class="tab-pane fade" id="pills-c4" role="tabpanel" aria-labelledby="pills-c4-tab">
+    <div class="tab-pane fade" id="pills-c4" role="tabpanel" aria-labelledby="pills-c4-tab"><app-estructuraionicangular></app-estructuraionicangular></div>
 
-        <h3 style="margin-left: 5px; color: black;">Menú Tabs       -       <a href="https://ionic.io/ionicons" target="_blank"><u>Ir a más</u></a><abbr title="(Solo copiar el nombre y sustituir)"> iconos</abbr></h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h4>Tabs.page</h4>
-                    <pre class="card-text">{{co}}ion-tabs>
+    <div class="tab-pane fade" id="pills-c3" role="tabpanel" aria-labelledby="pills-c3-tab">
+      
 
-  {{co}}ion-tab-bar slot="bottom">
+    <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Servicio</h3>
+                <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} <abbr title="Importamos/Llamamos al modelo lista para coger la misma estructura y funcionalidad inicial">Lista</abbr> } from '../models/lista.model';</b>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class DeseoService {{c}}
+
+
+  <b><abbr title="De tipo lista, del model creado (lista.model.ts). Inicializamos en vacío el arreglo, se hace arreglo para leer todas sus propiedades">variable_lista</abbr>: Lista[] = [];</b>
+
+  constructor() {{c}}
+
+    console.log('<abbr title="No se ejecuta varias veces, solo una vez aunque es llamado por varios componente, de ese modo es más rápido, solo carga una vez y se queda cargado">Servicio</abbr> igual en todo');
     
-    <b>{{co}}ion-tab-<abbr title="Botones, este es el 1º">button</abbr> tab="tab1"></b>
-      <b>{{co}}ion-icon name="<abbr title="Nombre del icono">triangle</abbr>">{{co}}/ion-icon></b>      
-      <b>{{co}}ion-label><abbr title="Nombre de los botones de abajo">Tab 1</abbr>{{co}}/ion-label></b>
-    {{co}}/ion-tab-button>
+      <b>const <abbr title="Creamos lista y metemos contenido en ella con la estructura marcada en el model de lista">variable_lista1</abbr> = new Lista('Una lista cualquiera 1');
+      const variable_lista2 = new Lista('Una lista cualquiera 2');
+  
+      this.variable_lista.<abbr title="Metemos en la variable_lista las otras dos variable_lista">push</abbr> (variable_lista1, variable_lista2);</b>
 
-    {{co}}ion-tab-button tab="tab2">
-      {{co}}ion-icon name="ellipse">{{co}}/ion-icon>
-      {{co}}ion-label>Tab 2{{co}}/ion-label>
-    {{co}}/ion-tab-button>
+      console.log(this.<abbr title="Se vería en la consola: (2) [Lista, Lista] 0: Lista {titulo: Una lista cualquiera 1, creadaFecha: Wed May 19 2021 20:46:10 GMT+0200 (hora de verano de Europa central), terminada: false, items: Array(0), id: 1621449970486}
+      1: Lista {titulo: Una lista cualquiera 2, creadaFecha: Wed May 19 2021 20:46:10 GMT+0200 (hora de verano de Europa central), terminada: false, items: Array(0), id: 1621449970486}
+      length: 2">variable_listas</abbr>);
 
-    {{co}}ion-tab-button tab="tab3">
-      {{co}}ion-icon name="square">{{co}}/ion-icon>
-      {{co}}ion-label>Tab 3{{co}}/ion-label>
-    {{co}}/ion-tab-button>
-
-  {{co}}/ion-tab-bar>
-
-{{co}}/ion-tabs></pre>
-                </div>
+   }
+}</pre>
             </div>
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h4>TabNúmero.page</h4>
-                    <pre class="card-text">{{co}}ion-header <b>class="ion-no-<abbr title="Para modificar bordes, en este caso eliminar">border</abbr> "</b>>
+        </div>
+        <div class="card bg-white border-0"></div>
+    </div>
+
+    <div class="card-group">
+      <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Tab1.page.Ts</h3>
+              <pre class="card-text">import {{c}} Component } from '@angular/core';
+<b>import {{c}} <abbr title="Llamamos/Importamos el servicio para poder usarse, dicho servicio se carga una sola vez en el sistema aunque se llame en varias tab/componentes">DeseoService</abbr> } from '../../services/deseo.service';</b>
+
+@Component({{c}}
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss']
+})
+export class <b>Tab1Page</b> {{c}}
+
+  constructor( <b><abbr title="Si no lo ponemos igualmente se queda en público">public</abbr> variable_servicio: DeseoService</b> ) {{c}}}
+
+}</pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+        <div class="card-body"><h3>Tab1.page.Html</h3>
+            <pre class="card-text">{{co}}ion-header <b>class="ion-no-<abbr title="Para modificar bordes, en este caso eliminar">border</abbr> "</b>>
   {{co}}ion-toolbar>
     {{co}}ion-title>
-      <b>Título superior</b>
+      <b><abbr title="Título del apartado, se situa en la parte superior">Pendientes</abbr></b>
     {{co}}/ion-title>
   {{co}}/ion-toolbar>
 {{co}}/ion-header>
 
 {{co}}ion-content {{t}}fullscreen]="true">
 
-        <b>Cuerpo</b>
-    
-  {{co}}/ion-header>
+    <b>{{co}}<abbr title="Es una lista, actúa como ul">ion-list</abbr>
 
-  {{co}}app-explore-container name="Tab 1 page">{{co}}/app-explore-container>
+    {{co}}<abbr title="Actúa como li">ion-item</abbr> <abbr title="Recorremos con el for la variable del Ts (variable_servicio) relacionada con el servicio, el servicio expulsa la variable (variable_lista) compuesta con ambas listas">{{f}}ngFor</abbr> ="let variable_local_lista of variable_servicio.variable_lista" <abbr title="Flecha en la parte derecha de la palabra (>) indicando que hay contenido o acceder">detail</abbr>>
+        {{co}}ion-label><b>{{c}}{{c}} variable_local_lista.titulo }}</b>{{co}}/ion-label>
+      {{co}}/ion-item>
+  
+    {{co}}/ion-list></b>
+
 {{co}}/ion-content></pre>
-                </div>
+        </div>
+    </div>
+  </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Tab2.page.Ts</h3>
+                <pre class="card-text">import {{c}} Component } from '@angular/core';
+<b>import {{c}} <abbr title="Llamamos/Importamos el servicio para poder usarse, dicho servicio se carga una sola vez en el sistema aunque se llame en varias tab/componentes">DeseoService</abbr> } from '../../services/deseo.service';</b>
+
+@Component({{c}}
+  selector: 'app-tab2',
+  templateUrl: 'tab2.page.html',
+  styleUrls: ['tab2.page.scss']
+})
+export class <b>Tab2Page</b> {{c}}
+
+constructor( <b><abbr title="Si no lo ponemos igualmente se queda en público">public</abbr> variable_servicio: DeseoService</b> ) {{c}}}
+
+}</pre>
             </div>
         </div>
+        <div class="card text-dark bg-warning m-3">
+          <div class="card-body"><h3>Tab2.page.Html</h3>
+              <pre class="card-text">{{co}}ion-header <b>class="ion-no-<abbr title="Para modificar bordes, en este caso eliminar">border</abbr> "</b>>
+  {{co}}ion-toolbar>
+    {{co}}ion-title>
+      <b><abbr title="Título del apartado, se situa en la parte superior">Título</abbr></b>
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
 
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h4>App-routing.module.ts</h4>
-                    <pre class="card-text">import {{c}} NgModule } from '@angular/core';
-import {{c}} PreloadAllModules, RouterModule, Routes } from '@angular/router';
+{{co}}ion-content {{t}}fullscreen]="true">
 
-const routes: Routes = [
-  <b>{{c}}
-    path: '',
-    loadChildren: () => import('<abbr title="Si modificamos las páginas, sobretodo la principal, hay que corregir aquí la dirección, recomendable organizar para quedar todo mejor ordenado. En este caso lo hemos metido dentro de la carpeta creada por nosotros llamada PAGE">./pages/tabs/tabs.module</abbr>').then(m => m.TabsPageModule)
-  }</b>
-];
-@NgModule({{c}}
-  imports: [
-    RouterModule.forRoot(routes, {{c}} preloadingStrategy: PreloadAllModules })
-  ],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {{c}}}</pre>
-                </div>
-            </div>
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h4>Tabs-routing.module</h4>
-                    <pre class="card-text">import {{c}} NgModule } from '@angular/core';
-import {{c}} RouterModule, Routes } from '@angular/router';
-import {{c}} TabsPage } from './tabs.page';
+    <b>Cuerpo</b>
 
-const routes: Routes = [
-  {{c}}
-    path: 'tabs',
-    component: TabsPage,
-    children: [
-      <b>{{c}}
-        path: '<abbr title="Cuando ELIMINEMOS un componente debemos eliminar este entero desde { hasta el } o cuando AGREGEMOS debemos añadir uno igual pero con el nombre que corresponda con el componente y su dirección">tab1</abbr> ',
-        loadChildren: () => import('<abbr title="Ponemos la dirección correcta si se metiera en otras carpetas o fuera nueva">../tab1/tab1.module</abbr>').then(m => m.Tab1PageModule)
-      },
-      {{c}}
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-      },
-      {{c}}
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      },</b>
-      {{c}}
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
-    ]
-  },
-  {{c}}
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
-  }
-];
-
-@NgModule({{c}}
-  imports: [RouterModule.forChild(routes)],
-})
-export class TabsPageRoutingModule {{c}}}
-</pre>
-                </div>
-            </div>
-        </div>
-
+{{co}}/ion-content></pre>
+          </div>
+      </div>
     </div>
 
-    <div class="tab-pane fade" id="pills-c2" role="tabpanel" aria-labelledby="pills-c2-tab">
-        
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">x</pre>
-                </div>
-            </div>
-        </div>
 
-        
     </div>
-
-    <div class="tab-pane fade" id="pills-c3" role="tabpanel" aria-labelledby="pills-c3-tab">x</div>
-
-    <div class="tab-pane fade" id="pills-c5" role="tabpanel" aria-labelledby="pills-c5-tab">x</div>
-
-    <div class="tab-pane fade" id="pills-c6" role="tabpanel" aria-labelledby="pills-c6-tab">x</div>
-
-    <div class="tab-pane fade" id="pills-c7" role="tabpanel" aria-labelledby="pills-c7-tab">x</div>
-
-
+    
     <div class="tab-pane fade" id="pills-c8" role="tabpanel" aria-labelledby="pills-c8-tab">x</div>
-
+    
+    <div class="tab-pane fade" id="pills-c2" role="tabpanel" aria-labelledby="pills-c2-tab">x</div>
+    
+    <div class="tab-pane fade" id="pills-c5" role="tabpanel" aria-labelledby="pills-c5-tab">x</div>
+    
+    <div class="tab-pane fade" id="pills-c6" role="tabpanel" aria-labelledby="pills-c6-tab">x</div>
+    
+    <div class="tab-pane fade" id="pills-c7" role="tabpanel" aria-labelledby="pills-c7-tab">x</div>
 
     <div class="tab-pane fade" id="pills-c9" role="tabpanel" aria-labelledby="pills-c9-tab">x</div>
 
-
     <div class="tab-pane fade" id="pills-c10" role="tabpanel" aria-labelledby="pills-c10-tab">x</div>
-
 
     <div class="tab-pane fade" id="pills-c11" role="tabpanel" aria-labelledby="pills-c11-tab">x</div>
 
-    <div class="tab-pane fade" id="pills-c12" role="tabpanel" aria-labelledby="pills-c12-tab">x</div>
+    <div class="tab-pane fade" id="pills-c12" role="tabpanel" aria-labelledby="pills-c12-tab"><app-complementosionicangular></app-complementosionicangular></div>
 
 
 </div>
 <br><br>
 
-<b style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Html"><b><a target="_black" href="https://ionicframework.com/">Oficial</a></b></abbr> | 
-<a href="https://ionicframework.com/signup?page_layout=split" target="_blank"><u>Registrar/Login</u></a>
+<b style="margin-left: 10%;">Web de Ayuda</b>: <abbr title="Manual Html"><b><a target="_black" href="https://ionicframework.com/">Oficial</a></b></abbr> | 
+<b><a href="https://ionicframework.com/signup?page_layout=split" target="_blank"><u>Registrar/Login</u></a>  |  <a href="https://ionicframework.com/docs/components" target="_blank"><u>Componentes/Alertas/...</u></a></b>
 <img src="../../../../assets/imagenes/ionic.jpg" style=" width: 350px;">

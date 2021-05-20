@@ -1,0 +1,171 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-estructuraionicangular-tab" data-toggle="pill" href="#v-pills-estructuraionicangular" role="tab" aria-controls="v-pills-estructuraionicangular" aria-selected="true">App-routing.module.ts</a>
+        <a class="nav-link" id="v-pills-estructuraionicangular0-tab" data-toggle="pill" href="#v-pills-estructuraionicangular0" role="tab" aria-controls="v-pills-estructuraionicangular0" aria-selected="true">Tabs-routing.module.ts</a>
+        <a class="nav-link" id="v-pills-estructuraionicangular1-tab" data-toggle="pill" href="#v-pills-estructuraionicangular1" role="tab" aria-controls="v-pills-estructuraionicangular1" aria-selected="false">Tabs.page.ts - Iconos</a>
+        <a class="nav-link" id="v-pills-estructuraionicangular2-tab" data-toggle="pill" href="#v-pills-estructuraionicangular2" role="tab" aria-controls="v-pills-estructuraionicangular2" aria-selected="false">Model.ts - Listas</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-estructuraionicangular" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  <b>{{c}}
+    path: '',
+    loadChildren: () => import('<abbr title="Si modificamos las páginas, sobretodo la principal, hay que corregir aquí la dirección, recomendable organizar para quedar todo mejor ordenado. En este caso lo hemos metido dentro de la carpeta creada por nosotros llamada PAGE">./pages/tabs/tabs.module</abbr>').then(m => m.TabsPageModule)
+  }</b>
+];
+@NgModule({{c}}
+  imports: [
+    RouterModule.forRoot(routes, {{c}} preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {{c}}}</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="tab-pane fade" id="v-pills-estructuraionicangular0" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular0-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                     <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} RouterModule, Routes } from '@angular/router';
+import {{c}} TabsPage } from './tabs.page';
+
+const routes: Routes = [
+  {{c}}
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      <b>{{c}}
+        path: '<abbr title="Cuando ELIMINEMOS un componente debemos eliminar este entero desde { hasta el } o cuando AGREGEMOS debemos añadir uno igual pero con el nombre que corresponda con el componente y su dirección">tab1</abbr> ',
+        loadChildren: () => import('<abbr title="Ponemos la dirección correcta si se metiera en otras carpetas o fuera nueva">../tab1/tab1.module</abbr>').then(m => m.Tab1PageModule)
+      },
+      {{c}}
+        path: 'tab2',
+        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+      },</b>
+      {{c}}
+        path: '',
+        redirectTo: '/tabs/tab1',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {{c}}
+    path: '',
+    redirectTo: '/tabs/tab1',
+    pathMatch: 'full'
+  }
+];
+
+@NgModule({{c}}
+  imports: [RouterModule.forChild(routes)],
+})
+export class TabsPageRoutingModule {{c}}}
+</pre>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-estructuraionicangular1" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular1-tab">
+            
+            <h3 style="margin-left: 5px; color: black;">Menú Tabs       -       <a href="https://ionic.io/ionicons" target="_blank"><u>Ir a más</u></a><abbr title="(Solo copiar el nombre y sustituir)"> iconos</abbr></h3>
+            <div class="card-group">
+                <div class="card text-dark bg-primary m-3">
+                    <div class="card-body">
+                       <pre class="card-text">{{co}}ion-tabs>
+
+  {{co}}ion-tab-bar slot="bottom">
+    
+    <b>{{co}}ion-tab-<abbr title="Botones, este es el 1º">button</abbr> tab="tab1"></b>
+      <b>{{co}}ion-icon name="<abbr title="Nombre del icono">clipboard-outline</abbr>">{{co}}/ion-icon></b>      
+      <b>{{co}}ion-label><abbr title="Nombre de los botones de abajo">Pendientes</abbr>{{co}}/ion-label></b>
+    {{co}}/ion-tab-button>
+
+    {{co}}ion-tab-button tab="tab2">
+      {{co}}ion-icon name="cloud-done-outline">{{co}}/ion-icon>
+      {{co}}ion-label>Terminados{{co}}/ion-label>
+    {{co}}/ion-tab-button>
+
+  {{co}}/ion-tab-bar>
+
+{{co}}/ion-tabs></pre>
+                  </div>
+              </div>
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-estructuraionicangular2" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular2-tab">
+            
+            <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Lista-item.model.ts</h3>
+                <pre class="card-text"><b><abbr title="Poder exportar/sacar y usarlo en otro componente, por ejemplo en en lista.model.ts">export</abbr> class ListaItem{{c}}
+
+    descripcion: string;
+    completado: boolean;
+
+    constructor ( descripcion_recibida: string ){{c}}
+
+        this.descripcion = descripcion_recibida;
+        this.completado = <abbr title="Se inicia como no completado">false</abbr>;
+    }
+
+}</b></pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Lista.model.ts</h3>
+              <pre class="card-text"><b>import {{c}} ListaItem } from './lista-item.model';  //Model creado
+
+<abbr title="Para ser usado fuera, en otro componente">export</abbr> class Lista {{c}}
+
+    id: number;
+    titulo: string;
+    creadaFecha: Date;
+    terminadaFecha: Date;
+    terminada: boolean;
+    <abbr title="Lista del model creado, en arreglo para coger todos los valores que contiene">items</abbr>: ListaItem[];   
+
+    constructor ( titulo_recibido: string ){{c}}
+
+        this.<abbr title="El título que tendremos será el introducido por nosotros">titulo</abbr> = titulo_recibido;
+
+        this.creadaFecha = <abbr title="Se inicia en el día actual cuando se crea">new Date()</abbr>;
+
+        this.terminada = <abbr title="En false para que no esté terminada hasta que la pongamos como tal">false</abbr>;
+
+        this.items = <abbr title="Cuando se inicie esté vacío la lista, para ser rellenada">[]</abbr>;       
+
+        this.<abbr title="Lo suyo una base de datos que guarde la ID. Aunque se hace así para guardar la fecha/hora de creación de forma de id porque no se va a crear dos id en el mismo momento">id</abbr> = new Date().getTime();
+
+    }
+
+}</b></pre>
+          </div>
+      </div>
+    </div>
+            
+            </div>
+
+
+    </div>

@@ -217,6 +217,8 @@ import { PipespersonalizaocultarPipe } from './paginas/programacion/angular/pipe
 import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
 import { IonicangularComponent } from './paginas/programacion/angular/ionicangular/ionicangular.component';
 import { InstalacionionicComponent } from './paginas/programacion/angular/ionicangular/instalacionionic/instalacionionic.component';
+import { EstructuraionicangularComponent } from './paginas/programacion/angular/ionicangular/estructuraionicangular/estructuraionicangular.component';
+import { ComplementosionicangularComponent } from './paginas/programacion/angular/ionicangular/complementosionicangular/complementosionicangular.component';
 
 
 
@@ -402,7 +404,9 @@ import { InstalacionionicComponent } from './paginas/programacion/angular/ionica
     DeudasidComponent,
     IonicComponent,
     IonicangularComponent,
-    InstalacionionicComponent
+    InstalacionionicComponent,
+    EstructuraionicangularComponent,
+    ComplementosionicangularComponent
   ],
   imports: [
     //Por defecto
