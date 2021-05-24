@@ -219,6 +219,7 @@ import { IonicangularComponent } from './paginas/programacion/angular/ionicangul
 import { InstalacionionicComponent } from './paginas/programacion/angular/ionicangular/instalacionionic/instalacionionic.component';
 import { EstructuraionicangularComponent } from './paginas/programacion/angular/ionicangular/estructuraionicangular/estructuraionicangular.component';
 import { ComplementosionicangularComponent } from './paginas/programacion/angular/ionicangular/complementosionicangular/complementosionicangular.component';
+import { AgregarionicangularComponent } from './paginas/programacion/angular/ionicangular/agregarionicangular/agregarionicangular.component';
 
 
 
@@ -406,7 +407,8 @@ import { ComplementosionicangularComponent } from './paginas/programacion/angula
     IonicangularComponent,
     InstalacionionicComponent,
     EstructuraionicangularComponent,
-    ComplementosionicangularComponent
+    ComplementosionicangularComponent,
+    AgregarionicangularComponent
   ],
   imports: [
     //Por defecto

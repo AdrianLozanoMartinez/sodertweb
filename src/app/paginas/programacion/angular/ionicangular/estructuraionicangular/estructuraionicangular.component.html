@@ -1,18 +1,31 @@
-<div class="row">
-    <div class="col-2">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-estructuraionicangular-tab" data-toggle="pill" href="#v-pills-estructuraionicangular" role="tab" aria-controls="v-pills-estructuraionicangular" aria-selected="true">App-routing.module.ts</a>
-        <a class="nav-link" id="v-pills-estructuraionicangular0-tab" data-toggle="pill" href="#v-pills-estructuraionicangular0" role="tab" aria-controls="v-pills-estructuraionicangular0" aria-selected="true">Tabs-routing.module.ts</a>
-        <a class="nav-link" id="v-pills-estructuraionicangular1-tab" data-toggle="pill" href="#v-pills-estructuraionicangular1" role="tab" aria-controls="v-pills-estructuraionicangular1" aria-selected="false">Tabs.page.ts - Iconos</a>
-        <a class="nav-link" id="v-pills-estructuraionicangular2-tab" data-toggle="pill" href="#v-pills-estructuraionicangular2" role="tab" aria-controls="v-pills-estructuraionicangular2" aria-selected="false">Model.ts - Listas</a>
-      </div>
-    </div>
-    <div class="col-10">
-      <div class="tab-content" id="v-pills-tabContent">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+      <a class="nav-link" id="pills-estructuraionicangular-tab" data-toggle="pill" href="#pills-estructuraionicangular" role="tab" aria-controls="pills-estructuraionicangular" aria-selected="true" style="color: black;">App-routing.module.ts</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-estructuraionicangular1-tab" data-toggle="pill" href="#pills-estructuraionicangular1" role="tab" aria-controls="pills-estructuraionicangular1" aria-selected="false" style="color: black;">Tabs-routing.module.ts</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-estructuraionicangular2-tab" data-toggle="pill" href="#pills-estructuraionicangular2" role="tab" aria-controls="pills-estructuraionicangular2" aria-selected="false" style="color: black;">Tabs.page.html<br>Iconos</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-estructuraionicangular3-tab" data-toggle="pill" href="#pills-estructuraionicangular3" role="tab" aria-controls="pills-estructuraionicangular3" aria-selected="false" style="color: black;">TabNÚMERO.page.html</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-estructuraionicangular4-tab" data-toggle="pill" href="#pills-estructuraionicangular4" role="tab" aria-controls="pills-estructuraionicangular4" aria-selected="false" style="color: black;">Model.ts - Listas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-estructuraionicangular5-tab" data-toggle="pill" href="#pills-estructuraionicangular5" role="tab" aria-controls="pills-estructuraionicangular5" aria-selected="false" style="color: black;">Global.scss</a>
+</li>
+</ul>
 
-        <div class="tab-pane fade" id="v-pills-estructuraionicangular" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular-tab">
 
-        <div class="card-group">
+<div class="tab-content cuadro" id="pills-tabContent">
+
+
+  <div class="tab-pane fade" id="pills-estructuraionicangular" role="tabpanel" aria-labelledby="pills-estructuraionicangular-tab">
+
+<div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                     <pre class="card-text">import {{c}} NgModule } from '@angular/core';
@@ -35,11 +48,12 @@ export class AppRoutingModule {{c}}}</pre>
             </div>
         </div>
 
-    </div>
+  </div>
 
-        <div class="tab-pane fade" id="v-pills-estructuraionicangular0" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular0-tab">
+  <div class="tab-pane fade" id="pills-estructuraionicangular1" role="tabpanel" aria-labelledby="pills-estructuraionicangular1-tab">
 
-        <div class="card-group">
+
+<div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                      <pre class="card-text">import {{c}} NgModule } from '@angular/core';
@@ -82,17 +96,18 @@ export class TabsPageRoutingModule {{c}}}
             </div>
         </div>
 
-        </div>
 
-        <div class="tab-pane fade" id="v-pills-estructuraionicangular1" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular1-tab">
-            
-            <h3 style="margin-left: 5px; color: black;">Menú Tabs       -       <a href="https://ionic.io/ionicons" target="_blank"><u>Ir a más</u></a><abbr title="(Solo copiar el nombre y sustituir)"> iconos</abbr></h3>
+  </div>
+
+  <div class="tab-pane fade" id="pills-estructuraionicangular2" role="tabpanel" aria-labelledby="pills-estructuraionicangular2-tab">
+
+<h3 style="margin-left: 5px; color: black;">Menú Tabs       -       <a href="https://ionic.io/ionicons" target="_blank"><u>Ir a más</u></a><abbr title="(Solo copiar el nombre y sustituir)"> iconos</abbr></h3>
             <div class="card-group">
                 <div class="card text-dark bg-primary m-3">
                     <div class="card-body">
                        <pre class="card-text">{{co}}ion-tabs>
 
-  {{co}}ion-tab-bar slot="bottom">
+  {{co}}ion-tab-bar slot="<abbr title="bottom (Abajo la botonera) O top (Arriba la botonera)">bottom</abbr>" <abbr title="Color de la parte baja de la aplicación, donde están todos los botones"> color="success"</abbr>>
     
     <b>{{co}}ion-tab-<abbr title="Botones, este es el 1º">button</abbr> tab="tab1"></b>
       <b>{{co}}ion-icon name="<abbr title="Nombre del icono">clipboard-outline</abbr>">{{co}}/ion-icon></b>      
@@ -112,11 +127,35 @@ export class TabsPageRoutingModule {{c}}}
             </div>
 
 
-        </div>
+  </div>
 
-        <div class="tab-pane fade" id="v-pills-estructuraionicangular2" role="tabpanel" aria-labelledby="v-pills-estructuraionicangular2-tab">
-            
-            <div class="card-group">
+  <div class="tab-pane fade" id="pills-estructuraionicangular3" role="tabpanel" aria-labelledby="pills-estructuraionicangular3-tab">
+
+<div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body">
+               <pre class="card-text">{{co}}ion-header <abbr title="Para modificar bordes, en este caso eliminar">class="ion-no-border"</abbr>>
+  {{co}}ion-toolbar <abbr title="Color de fondo/letra">color="success"</abbr>>
+    {{co}}ion-title <abbr title="Color de fondo/letra">color="danger"</abbr>>
+      <b><abbr title="Título del apartado, se situa en la parte superior">Pendientes</abbr></b>
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
+
+{{co}}ion-content {{t}}fullscreen]="true" <abbr title="Color de fondo/letra">color="success"</abbr>>
+ 
+  Cuerpo
+
+{{co}}/ion-content>{{co}}</pre>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="pills-estructuraionicangular4" role="tabpanel" aria-labelledby="pills-estructuraionicangular4-tab">
+
+      <div class="card-group">
         <div class="card text-dark bg-primary m-3">
             <div class="card-body"><h3>Lista-item.model.ts</h3>
                 <pre class="card-text"><b><abbr title="Poder exportar/sacar y usarlo en otro componente, por ejemplo en en lista.model.ts">export</abbr> class ListaItem{{c}}
@@ -164,8 +203,57 @@ export class TabsPageRoutingModule {{c}}}
           </div>
       </div>
     </div>
-            
-            </div>
+
+  </div>
 
 
+  <div class="tab-pane fade" id="pills-estructuraionicangular5" role="tabpanel" aria-labelledby="pills-estructuraionicangular5-tab">
+
+       <div class="card-group">
+      <div class="card text-dark bg-primary m-3">
+          <div class="card-body">
+             <pre class="card-text">/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+<b>//Css añadido manualmente - opcional
+<abbr title="Elemento cualquiera, en este caso es una lista">ion-list</abbr> {{c}}
+    background-color: #2fdf75 !important;
+}
+
+<abbr title="Botones principales, cuando son activos/pulsados">.tab-selected</abbr> {{c}}
+    color: white !important;
+}</b></pre>
+        </div>
     </div>
+  </div>
+
+  </div>
+
+
+
+</div>
+

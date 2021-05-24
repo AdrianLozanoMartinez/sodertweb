@@ -1,0 +1,959 @@
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+      <a class="nav-link" id="pills-agregarionicangular-tab" data-toggle="pill" href="#pills-agregarionicangular" role="tab" aria-controls="pills-agregarionicangular" aria-selected="true" style="color: black;"><b>Lista</b> - <u>No permanentes</u><br><small>(alert)</small></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-agregarionicangular1-tab" data-toggle="pill" href="#pills-agregarionicangular1" role="tab" aria-controls="pills-agregarionicangular1" aria-selected="false" style="color: black;"><b>Lista</b> - <u>Permanente</u><br><small>(Localstorage - alert)</small></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-agregarionicangular2-tab" data-toggle="pill" href="#pills-agregarionicangular2" role="tab" aria-controls="pills-agregarionicangular2" aria-selected="false" style="color: black;"><b>Item</b><br><small>(Dentro de Lista - Localstorage)</small></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-agregarionicangular3-tab" data-toggle="pill" href="#pills-agregarionicangular3" role="tab" aria-controls="pills-agregarionicangular3" aria-selected="false" style="color: black;"><b>Item - Selección </b><br><small>(Dentro de Lista - Localstorage)</small></a>
+  </li>
+</ul>
+
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+  
+  <div class="tab-pane fade" id="pills-agregarionicangular" role="tabpanel" aria-labelledby="pills-agregarionicangular-tab">
+      
+    <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Servicio</h3>
+              <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} Lista } from '../models/lista.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class DeseoService {{c}}
+
+
+  variable_listas: Lista[] = []; //De tipo lista, del model creado (lista.model.ts)
+
+  constructor() {{c}}
+
+     console.log('Servicio igual en todo'); //No se ejecuta varias veces, solo una vez aunque es llamado por varios componente, de ese modo es más rápido, solo carga una vez y se queda cargado
+    
+     const variable_lista1 = new Lista('Una lista cualquiera 1');
+     const variable_lista2 = new Lista('Una lista cualquiera 2');
+
+     this.variable_listas.push(variable_lista1, variable_lista2);
+
+     console.log(this.variable_listas);
+
+  }
+    
+
+
+    <b>crearLista ( titulo_recibido: string ){{c}}
+      
+        const <abbr title="Metemos el dato recibido en la variable_nuevaLista, para luego meterlo en la variable que une todas las listas (variable_listas), encima le damos formato de [] para agregar muchos datos diferentes">variable_nuevaLista</abbr> = new Lista( titulo_recibido );
+        this.<abbr title="Variable que engloba todo y se mete lo nuevo (variable_nuevaLista que almacena -> titulo_recibido)">variable_listas</abbr>.<abbr title="Para agregar sin eliminar los datos, para que se vaya sumando">push</abbr>( variable_nuevaLista );
+        
+        console.log(this.variable_listas);
+  }</b>
+  
+}
+</pre>
+            </div>
+        </div>
+      </div>
+
+
+
+ <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Tab1.page.Ts</h3>
+              <pre class="card-text">import {{c}} Component } from '@angular/core';
+import {{c}} Router } from '@angular/router';
+<b>import {{c}} <abbr title="Para aplicar las alertas">AlertController</abbr> } from '@ionic/angular';</b>
+import {{c}} DeseoService } from '../../services/deseo.service';
+
+@Component({{c}}
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss']
+})
+export class Tab1Page {{c}}
+
+  constructor( public variable_servicio: DeseoService,
+               private variable_router: Router<b>,
+               private <abbr title="Le damos el valor de las alertas a la variable, de ese modo coge funcionalidades como cancelar, titulos, etc">variable_alert</abbr>: AlertController</b> ) {{c}}}
+
+
+  <b><abbr title="Añadimos async para que no de error await, al convertirlo en promesa la función y usar async podemos usar la función como promesa fuera, si ponemos el nombre(). aparecerá las opciones">async</abbr> <abbr title="Función que llama alert con dos opciones, cancelar o agregar">agregarLista</abbr>() {{c}}
+    // this.variable_router.navigateByUrl('/tabs/tab1/agregar');
+
+    const variable_alert = <abbr title="Es una promesa, await dice que espere a que haga todo antes de nada y lo almacena en la variable alert">await</abbr> this.variable_alert.create({{c}}
+      // cssClass: 'my-custom-class',
+      header: 'Nueva lista',
+      inputs: [
+        {{c}}
+          name: 'titulo',
+          type: 'text',
+          placeholder: 'Nombre de la lista'
+        }
+      ],
+      // subHeader: 'Subtitle',
+      // message: 'This is an alert message.',
+      // buttons: ['OK']
+      buttons: [
+         {{c}}
+           text: 'Cancelar', //1ºBotón
+           role: '<abbr title="Acción predeterminada por ionic">cancel</abbr>',  
+           <abbr title="Acción que realizará, en este caso informar que se ha cancelado">handler</abbr>: () => {{c}}
+             console.log('Cancelar');
+           }
+         },
+        {{c}}
+          text: 'Crear',    //2º Botón
+          <abbr title="Acción que realizará, en este caso informar del dato obtenido">handler</abbr>: ( dato_recibido ) => {{c}}
+               console.log( dato );
+
+              if ( dato_recibido.<abbr title="titulo relacionado con el name del input, debe llevar el mismo nombre">titulo</abbr>.length === 0 ) {{c}} 
+                return;
+              }
+              
+              this.variable_servicio.<abbr title="Creamos lista sino es 0, se llama a la función del servidor, mandando el dato recibido en especial el titulo que es el que nos pide a introducir en la alerta. SINO PONEMOS el TITULO nos aparece pintado en el html OBJECT OBJECT">crearLista</abbr>( dato_recibido.titulo );
+            
+              console.log(dato_recibido.titulo);
+              
+            }
+        }
+      ]
+    });
+
+
+    <abbr title="Saca el resultado de la función">variable_alert</abbr>.present();
+
+  }
+
+
+}</b></pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Tab1.page.Html</h3>
+              <pre class="card-text">{{co}}ion-header class="ion-no-border">
+  {{co}}ion-toolbar color="success">
+    {{co}}ion-title>
+      Pendientes
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
+
+{{co}}ion-content {{t}}fullscreen]="true" color="success">
+ 
+  {{co}}ion-list color="success">
+
+    {{co}}ion-item {{f}}ngFor="let variable_listaLocal of variable_servicio.variable_listas" detail color="success">
+      {{co}}ion-label>{{c}}{{c}} variable_listaLocal.titulo }}{{co}}/ion-label>
+    {{co}}/ion-item>
+
+  {{co}}/ion-list>
+
+  {{co}}ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    {{co}}ion-fab-button color="tertiary" {{p}}click)="agregarLista()">
+      {{co}}ion-icon name="add">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+  {{co}}/ion-fab>
+  
+{{co}}/ion-content></pre>
+          </div>
+      </div>
+  </div>
+
+
+  </div>
+
+  <div class="tab-pane fade" id="pills-agregarionicangular1" role="tabpanel" aria-labelledby="pills-agregarionicangular1-tab">
+
+<div class="card-group">
+            <div class="card text-dark bg-primary m-3 border-0">
+                <div class="card-body"><h3>Tipos</h3>
+                     <pre class="card-text"><ul><li><b><abbr title="En formato de string, el que vamos a usar, se almacena sin encriptar, cualquier usuario puede verlo, posible modificar desde navegador, no meter información sensible, no importante">Local Storage</abbr></b></li><li><b><abbr title="Se borra al cerrar navegador, se suele usar para guardar mientras está la sección iniciada del usuario, que se borra al salir">Session Storage</abbr></b></li><li><b><abbr title="Menos usada, está limitada">Cookies</abbr></b></li></ul></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Servicio</h3>
+                     <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} Lista } from '../models/lista.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class DeseoService {{c}}
+
+
+  variable_listas: Lista[] = [];
+
+  constructor() {{c}}
+
+    <b><abbr title="Cargamos la función de cargar datos, lo ponemos aquí porque es lo primero que se carga">this.cargarStorage()</abbr>;   
+    </b>
+  }
+
+
+    crearLista ( titulo_recibido: string ){{c}}
+      
+      const variable_nuevaLista = new Lista( titulo_recibido );
+      this.variable_listas.push( variable_nuevaLista );
+      
+      console.log(this.variable_listas);
+
+      <abbr title="Llamamos a la función y de ese modo se ejecuta guardando al darle al botón">this.guardarStorage()</abbr>;
+  }
+
+
+  <b>guardarStorage(){{c}}      //SE VE EN en chrome en la parte de consola -> Aplicación
+
+    <abbr title="predeterminado en el navegaador, para guardar">localStorage</abbr>.<abbr title="Set = enviar / Item -> Dato">setItem</abbr>('<abbr title="Parametro de referencia, ponemos el nombre que queramos, es lo que veremos en el localStorage">DatoStorage</abbr>', <abbr title="transforma en string porque el localStorage solo guarda en string y po eso debemos transformar la variable_listas en string">JSON.stringify</abbr>(this.variable_listas) );
+    
+  }
+
+
+  cargarStorage(){{c}}
+
+   <abbr title="Si coge (get) algún dato del Storage se ejecuta abajo, lo muestra">if</abbr> ( localStorage.getItem('DatoStorage') ) {{c}}
+
+      this.variable_listas = <abbr title="Pasar string a arreglo. Si no tenemos nada dara error, porque hace una evaluación y sino hay nada da null, por eso lo metemos en if">JSON.parse</abbr>( localStorage.<abbr title="Get = obtener / Item -> Dato">getItem</abbr>('DatoStorage') );
+
+    }
+    <abbr title="En caso contrario muestra arreglo vacío, en teoría si lo hemos inicializado arriba en vacío no es necesario">else</abbr>{{c}}   
+      this.variable_listas = [];
+    }
+
+  }</b>
+  
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Tab1.page.Ts</h3>
+              <pre class="card-text">import {{c}} Component } from '@angular/core';
+import {{c}} Router } from '@angular/router';
+<b>import {{c}} <abbr title="Para aplicar las alertas">AlertController</abbr> } from '@ionic/angular';</b>
+import {{c}} DeseoService } from '../../services/deseo.service';
+
+@Component({{c}}
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss']
+})
+export class Tab1Page {{c}}
+
+  constructor( public variable_servicio: DeseoService,
+               private variable_router: Router<b>,
+               private <abbr title="Le damos el valor de las alertas a la variable, de ese modo coge funcionalidades como cancelar, titulos, etc">variable_alert</abbr>: AlertController</b> ) {{c}}}
+
+
+  <b><abbr title="Añadimos async para que no de error await, al convertirlo en promesa la función y usar async podemos usar la función como promesa fuera, si ponemos el nombre(). aparecerá las opciones">async</abbr> <abbr title="Función que llama alert con dos opciones, cancelar o agregar">agregarLista</abbr>() {{c}}
+    // this.variable_router.navigateByUrl('/tabs/tab1/agregar');
+
+    const variable_alert = <abbr title="Es una promesa, await dice que espere a que haga todo antes de nada y lo almacena en la variable alert">await</abbr> this.variable_alert.create({{c}}
+      // cssClass: 'my-custom-class',
+      header: 'Nueva lista',
+      inputs: [
+        {{c}}
+          name: 'titulo',
+          type: 'text',
+          placeholder: 'Nombre de la lista'
+        }
+      ],
+      // subHeader: 'Subtitle',
+      // message: 'This is an alert message.',
+      // buttons: ['OK']
+      buttons: [
+         {{c}}
+           text: 'Cancelar', //1ºBotón
+           role: '<abbr title="Acción predeterminada por ionic">cancel</abbr>',  
+           <abbr title="Acción que realizará, en este caso informar que se ha cancelado">handler</abbr>: () => {{c}}
+             console.log('Cancelar');
+           }
+         },
+        {{c}}
+          text: 'Crear',    //2º Botón
+          <abbr title="Acción que realizará, en este caso informar del dato obtenido">handler</abbr>: ( dato_recibido ) => {{c}}
+               console.log( dato );
+
+              if ( dato_recibido.<abbr title="titulo relacionado con el name del input, debe llevar el mismo nombre">titulo</abbr>.length === 0 ) {{c}} 
+                return;
+              }
+              
+              this.variable_servicio.<abbr title="Creamos lista sino es 0, se llama a la función del servidor, mandando el dato recibido en especial el titulo que es el que nos pide a introducir en la alerta. SINO PONEMOS el TITULO nos aparece pintado en el html OBJECT OBJECT">crearLista</abbr>( dato_recibido.titulo );
+            
+              console.log(dato_recibido.titulo);
+              
+            }
+        }
+      ]
+    });
+
+
+    <abbr title="Saca el resultado de la función">variable_alert</abbr>.present();
+
+  }
+
+
+}</b></pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Tab1.page.Html</h3>
+              <pre class="card-text">{{co}}ion-header class="ion-no-border">
+  {{co}}ion-toolbar color="success">
+    {{co}}ion-title>
+      Pendientes
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
+
+{{co}}ion-content {{t}}fullscreen]="true" color="success">
+ 
+  {{co}}ion-list color="success">
+
+    {{co}}ion-item {{f}}ngFor="let variable_listaLocal of variable_servicio.variable_listas" detail color="success">
+      {{co}}ion-label>{{c}}{{c}} variable_listaLocal.titulo }}{{co}}/ion-label>
+    {{co}}/ion-item>
+
+  {{co}}/ion-list>
+
+  {{co}}ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    {{co}}ion-fab-button color="tertiary" {{p}}click)="agregarLista()">
+      {{co}}ion-icon name="add">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+  {{co}}/ion-fab>
+  
+{{co}}/ion-content></pre>
+          </div>
+      </div>
+  </div>
+
+  </div>
+
+
+
+
+  <div class="tab-pane fade" id="pills-agregarionicangular2" role="tabpanel" aria-labelledby="pills-agregarionicangular2-tab">
+
+
+<div class="card-group">
+            <div class="card text-dark bg-primary m-3 border-0">
+                <div class="card-body"><h3>Tabs1-routing.module.ts</h3>
+                     <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} RouterModule, Routes } from '@angular/router';
+import {{c}} Tab1Page } from './tab1.page';
+
+const routes: Routes = [
+  {{c}}
+    path: '',
+    component: Tab1Page,
+  },
+  <b>{{c}}
+    path: 'agregar<abbr title="Para poder meter un parámetro cuando nos redirige a la zona, en este caso cogemos la Id que es única y que sea el dato específico">/:listaId</abbr>',
+    loadChildren: () => import('../agregar/agregar.module').then( m => m.AgregarPageModule)
+  },</b>
+];
+
+@NgModule({{c}}
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class Tab1PageRoutingModule {{c}}}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Servicio</h3>
+                     <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} Lista } from '../models/lista.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class DeseoService {{c}}
+
+
+  variable_listas: Lista[] = [];
+
+  constructor() {{c}}
+
+    this.cargarStorage();  
+
+  }
+
+    crearLista ( titulo_recibido: string ){{c}}
+      
+      const variable_nuevaLista = new Lista( titulo_recibido );
+      this.variable_listas.push( variable_nuevaLista );
+      
+      console.log(this.variable_listas);
+
+      this.guardarStorage(); 
+
+<b>      <abbr title="Devolvemos la id de los elemntos creado">return</abbr> variable_nuevaLista.id;  </b> 
+  }
+
+
+<b>obtenerLista( <abbr title="id recibido es un número o un string">id_recibido</abbr>: string | number ){{c}}
+
+  id_recibido = <abbr title="Sabemos que es un number, por eso especificamos">Number</abbr>(id_recibido);
+
+  //Opción larga
+    //return this.variable_listas.find( listaGuardada => {{c}}   
+    //return listaGuardada.id === id_recibido; 
+  //});
+
+//Opción corta
+ <abbr title="La lista que teníamos y hemos guardado, lo pasamos al comando find (buscar) para poder comparar en la lista guardada el Id con el Id que recibimos. Si son iguales el id guardado con el id que recibimos se devuelve el id que utilizaremos para mostrar los datos">return</abbr> this.variable_listas.find( listaGuardada => listaGuardada.id === id_recibido);
+ 
+}</b>
+
+
+  guardarStorage(){{c}}   
+
+    localStorage.setItem('DatoStorage', JSON.stringify(this.variable_listas) ); 
+
+  }
+
+
+  cargarStorage(){{c}}
+
+    if ( localStorage.getItem('DatoStorage') ) {{c}} 
+      this.variable_listas = JSON.parse( localStorage.getItem('DatoStorage') );
+    }
+    else{{c}}   
+      this.variable_listas = [];
+    }
+
+  }
+  
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Tab1.page.ts</h3>
+              <pre class="card-text">import {{c}} Component } from '@angular/core';
+import {{c}} Router } from '@angular/router';
+import {{c}} AlertController } from '@ionic/angular';
+import {{c}} DeseoService } from '../../services/deseo.service';
+
+@Component({{c}}
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss']
+})
+export class Tab1Page {{c}}
+
+  constructor( public variable_servicio: DeseoService,
+               private variable_router: Router,
+               private variable_alert: AlertController ) {{c}}}
+
+
+  async agregarLista() {{c}}    
+
+    const variable_alert = await this.variable_alert.create({{c}}   
+      header: 'Nueva lista',
+      inputs: [
+        {{c}}
+          name: 'titulo',
+          type: 'text',
+          placeholder: 'Nombre de la lista'
+        }
+      ],
+      buttons: [
+         {{c}}
+           text: 'Cancelar', //1ºBotón
+           role: 'cancel',   
+           handler: () => {{c}} 
+             console.log('Cancelar');
+           }
+         },
+        {{c}}
+          text: 'Crear',    //2º Botón
+          handler: ( dato_recibido ) => {{c}}   
+
+              if ( dato_recibido.titulo.length === 0 ) {{c}}   
+                return;
+              }
+              
+              <b><abbr title="Mete en la variable listaId la id">const listaId</abbr> =</b> this.variable_servicio.crearLista( dato_recibido.titulo );
+            
+              <b>this.<abbr title="Redigire a la página agregar agregando la id">variable_router.navigateByUrl</abbr>(`/tabs/tab1/agregar/<abbr title="Coge la id y la manda a la página, donde aparecerá en el URL de dicha página">${{c}} listaId }</abbr>`);</b>
+            
+              console.log(dato_recibido.titulo);
+              
+            }
+        }
+      ]
+    });
+
+
+    variable_alert.present();
+
+  }
+
+
+}</pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Tab1.page.html</h3>
+              <pre class="card-text">{{co}}ion-header class="ion-no-border">
+  {{co}}ion-toolbar color="success">
+    {{co}}ion-title>
+      Pendientes
+    {{co}}/ion-title>
+  {{co}}/ion-toolbar>
+{{co}}/ion-header>
+
+{{co}}ion-content {{t}}fullscreen]="true" color="success">
+ 
+  {{co}}ion-list color="success">
+
+    {{co}}ion-item {{f}}ngFor="let variable_listaLocal of variable_servicio.variable_listas" detail color="success">
+      {{co}}ion-label>{{c}}{{c}} variable_listaLocal.titulo }}{{co}}/ion-label>
+    {{co}}/ion-item>
+
+  {{co}}/ion-list>
+
+  {{co}}ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    {{co}}ion-fab-button color="tertiary" {{p}}click)="agregarLista()">
+      {{co}}ion-icon name="add">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+  {{co}}/ion-fab>
+  
+{{co}}/ion-content></pre>
+          </div>
+      </div>
+</div>
+
+
+              <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Agregar.ts</h3>
+              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} <abbr title="Movernos entre páginas">ActivatedRoute</abbr> } from '@angular/router';
+import {{c}} <abbr title="Servicio para ejecutar acciones, guardar, mostrar, etc...">DeseoService</abbr> } from '../../services/deseo.service';
+import {{c}} Lista } from '../../models/lista.model';
+import {{c}} ListaItem } from '../../models/lista-item.model';</b>
+
+@Component({{c}}
+  selector: 'app-agregar',
+  templateUrl: './agregar.page.html',
+  styleUrls: ['./agregar.page.scss'],
+})
+export class AgregarPage implements OnInit {{c}}
+
+  <b>variableDeAgregarLISTA: <abbr title="Model">Lista</abbr>;
+    <abbr title="Se usará en el html con ngModel para coger el dato que introducimos">Variable_nombreItem</abbr> = '';</b>
+
+  constructor( <b>private variable_servicio: DeseoService,
+               private variable_route: ActivatedRoute</b> ) {{c}} 
+
+    //Leemos del url
+     <b> const variableListaID = this.variable_route.<abbr title="evitar hacer un observable">snapshot.paramMap</abbr>.<abbr title="coger la id qo parámetro que metemos en el ('dato o id')">get</abbr>('<abbr title="listaId es el parámetro que tenemos en tab1-routing.module.ts ( path: 'agregar/:listaId',)">listaId</abbr>');     </b>
+      console.log(variableListaID);
+
+
+      <b>this.variableDeAgregarLISTA = this.variable_servicio.obtenerLista( variableListaID );</b>
+      
+      console.log(this.variableDeAgregarLISTA);
+
+  }
+
+  ngOnInit() {{c}}
+  }
+
+
+  <b>agregarItem(){{c}}
+
+   <abbr title="Sino escribimos nada no se guarde, se salga">if</abbr> ( this.Variable_nombreItem.length === 0 ){{c}}
+      return;
+    }
+    
+      const variable_NUEVO_Item = new <abbr title="Se añade este model porque es un item particular, no el conjunto como el otro model">ListaItem</abbr> ( this.<abbr title="lo metemos en variable_NUEVO_Item con la estructura del model (ListaItem)">Variable_nombreItem</abbr>  );
+
+      this.<abbr title="Cogemos la variable (variableDeAgregarLISTA) donde está el contenido de todo, eligiendo un apartado del model (items) para insertar (push) el nuevo dato introducido (variable_NUEVO_Item)">variableDeAgregarLISTA</abbr>.items.push( variable_NUEVO_Item );
+
+      this.<abbr title="Lo volvemos a inicializar vacío, para limpiarlo y poder escribir uno nuevo">Variable_nombreItem = '';</abbr>
+      
+      <abbr title="Llama a la función del servicio para guardar permanentemente en el storage">this.variable_servicio.guardarStorage();</abbr>
+    }</b>
+
+}
+</pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Agregar.html</h3>
+              <pre class="card-text">{{c}}ion-header class="ion-no-border">
+  {{c}}ion-toolbar color="success">
+
+    {{c}}ion-buttons slot="start">
+        {{c}}ion-back-button color="dark" defaultHref="/">{{c}}/ion-back-button>
+    {{c}}/ion-buttons>
+
+{{c}}ion-title><b>{{c}}{{c}} variableDeAgregarLISTA.titulo }}</b>{{c}}/ion-title>
+  {{c}}/ion-toolbar>
+{{c}}/ion-header>
+
+{{c}}ion-content color="success">
+
+{{c}}ion-list color="success">
+  {{c}}ion-item color="success">
+    {{c}}ion-label position="floating">Nuevo item{{c}}/ion-label>
+    {{c}}ion-input type="text" <b><abbr title="[ -> Escucha lo que recibe y ( -> Emite lo que pongamos. ngModel -> Emite/Escucha evento">{{t}}(ngModel)]</abbr>="<abbr title="Variable del Ts">Variable_nombreItem</abbr>" <abbr title="Al pulsar intro ejecuta función">{{p}}keyup.enter)</abbr>="agregarItem()"</b>>{{c}}/ion-input>
+  {{c}}/ion-item>
+{{c}}/ion-list>
+
+
+
+
+{{c}}ion-list>
+
+  {{c}}ion-list-header color="success">
+    {{c}}ion-label>Tareas por hacer{{c}}/ion-label>
+  {{c}}/ion-list-header>
+
+
+  {{c}}ion-item color="success" <b><abbr title="Para ir viendo todos los elementos almacenados">{{f}}ngFor</abbr>="let variable_local_item of <abbr title="Procede del Ts donde almacenamos y mostramos los datos que el servicio nos manda">variableDeAgregarLISTA</abbr>.<abbr title="Procede del model gracias al servicio">items</abbr>" class="<abbr title="Animación con efecto de caída, lo implementamos en el Global.scss">animated fadeInDown</abbr>"</b>>
+    {{c}}ion-checkbox slot="start" color="success" <b>{{t}}(ngModel)]="variable_local_item.completado"</b>>{{c}}/ion-checkbox>
+    {{c}}ion-label><b>{{c}}{{c}} variable_local_item.descripcion }}</b>{{c}}/ion-label>
+  {{c}}/ion-item>
+
+
+{{c}}/ion-list>
+
+{{c}}/ion-content></pre>
+          </div>
+      </div>
+</div>
+
+
+
+<div class="card-group">
+  <div class="card text-dark bg-info m-3">
+      <div class="card-body"><h3>Global.scss</h3>
+        <pre class="card-text">/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+//Css añadido manualmente - opcional
+ion-list {{c}}
+    background-color: #2fdf75 !important;
+}
+
+.tab-selected{{c}}
+    color: white !important;
+}
+
+
+
+<b>// Fuente: https://daneden.github.io/animate.css/
+
+.<abbr title="Animación especial, efecto caída al introducir datos y guardar">animated</abbr> {{c}}
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {{c}}
+    from {{c}}
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {{c}}
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {{c}}
+    from {{c}}
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {{c}}
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {{c}}
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }</b></pre>
+      </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div class="tab-pane fade" id="pills-agregarionicangular3" role="tabpanel" aria-labelledby="pills-agregarionicangular3-tab">
+    
+    
+              <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Agregar.ts</h3>
+              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ActivatedRoute } from '@angular/router';
+import {{c}} DeseoService } from '../../services/deseo.service';
+import {{c}} Lista } from '../../models/lista.model';
+import {{c}} ListaItem } from '../../models/lista-item.model';
+
+@Component({{c}}
+  selector: 'app-agregar',
+  templateUrl: './agregar.page.html',
+  styleUrls: ['./agregar.page.scss'],
+})
+export class AgregarPage implements OnInit {{c}}
+
+  variableDeAgregarLISTA: Lista;
+    Variable_nombreItem = '';
+
+  constructor( private variable_servicio: DeseoService,
+               private variable_route: ActivatedRoute ) {{c}} 
+
+    //Leemos del url
+      const variableListaID = this.variable_route.snapshot.paramMap.get('listaId');    
+      console.log(variableListaID);
+
+
+      this.variableDeAgregarLISTA = this.variable_servicio.obtenerLista( variableListaID );
+      
+      console.log(this.variableDeAgregarLISTA);
+
+  }
+
+  ngOnInit() {{c}}
+  }
+
+
+  agregarItem(){{c}}
+
+   if ( this.Variable_nombreItem.length === 0 ){{c}}
+      return;
+    }
+    
+      const variable_NUEVO_Item = new ListaItem ( this.Variable_nombreItem  );
+
+      this.variableDeAgregarLISTA.items.push( variable_NUEVO_Item );
+
+      this.Variable_nombreItem = '';
+      
+      this.variable_servicio.guardarStorage();
+    }
+
+
+
+
+    <b>cambioCheck( item_recibido ){{c}}
+      
+      console.log( <abbr title="Vemos que al seleccionar sale true y al deseleccionar sale false">item_recibido</abbr>  );</b>
+      
+
+        //Versión larga e incompleta
+        //const item_pendientes = this.variableDeAgregarLISTA.items.filter( todos_los_items =>{{c}}  
+         // return !todos_los_items.completado;
+        //})
+
+          //Versión corta y completa
+          <b>const <abbr title="Metemos en la variable el listado de items">item_pendientes</abbr> = this.variableDeAgregarLISTA.items.<abbr title="Devuelve los elementos que cumplan una condición que la ponemos en el return">filter</abbr>( todos_los_items => <abbr title="Devuelve las listas que este en false">!todos_los_items.completado</abbr>).<abbr title="Dice cuantos elementos hay">length</abbr>  
+
+          console.log({{c}}<abbr title="Al ponerlo entre {} nos sale el nombre de la variable como texto + : + los que nos falta por completar, si está todo completo nos sale 0">item_pendientes</abbr>}); 
+          
+    
+         <abbr title="Si los items está todos seleccionado, a acabado la lista">if</abbr> ( item_pendientes === 0 ){{c}}   
+              this.<abbr title="Se graba en terminadaFecha la fecha">variableDeAgregarLISTA</abbr>.terminadaFecha = new Date();
+              this.<abbr title="Se cambia de false a true, porque ha acabado, de ese modo sale que está completado o no y la fecha de terminado">variableDeAgregarLISTA</abbr>.terminada = true;
+          }
+          <abbr title="Si se quita una selección o no está terminada">else</abbr>{{c}}
+            this.<abbr title="La fecha se pone en null, si tenía fecha de acabado se quita al quitar la selección">variableDeAgregarLISTA</abbr>.terminadaFecha = null;
+            this.<abbr title="Si estaba en true se cambia a false porque ya no está completado">variableDeAgregarLISTA</abbr>.terminada = false;
+          }
+
+
+          this.variable_servicio.<abbr title="Guardamos permanentemente">guardarStorage</abbr>();
+
+          console.log(this.variable_servicio.variable_listas);
+          
+
+    }</b>
+}</pre>
+          </div>
+      </div>
+      <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Agregar.html</h3>
+              <pre class="card-text">{{c}}ion-header class="ion-no-border">
+  {{c}}ion-toolbar color="success">
+
+    {{c}}ion-buttons slot="start">
+        {{c}}ion-back-button color="dark" defaultHref="/">{{c}}/ion-back-button>
+    {{c}}/ion-buttons>
+
+{{c}}ion-title>{{c}}{{c}} variableDeAgregarLISTA.titulo }}{{c}}/ion-title>
+  {{c}}/ion-toolbar>
+{{c}}/ion-header>
+
+{{c}}ion-content color="success">
+
+{{c}}ion-list color="success">
+  {{c}}ion-item color="success">
+    {{c}}ion-label position="floating">Nuevo item{{c}}/ion-label>
+    {{c}}ion-input type="text" {{t}}(ngModel)]="Variable_nombreItem" {{p}}keyup.enter)="agregarItem()">{{c}}/ion-input>
+  {{c}}/ion-item>
+{{c}}/ion-list>
+
+
+
+
+{{c}}ion-list>
+
+  {{c}}ion-list-header color="success">
+    {{c}}ion-label>Tareas por hacer{{c}}/ion-label>
+  {{c}}/ion-list-header>
+
+
+  {{c}}ion-item color="success" {{f}}ngFor="let variable_local_item of variableDeAgregarLISTA.items" class="animated fadeInDown">
+    {{c}}ion-checkbox slot="start" color="success" {{t}}(ngModel)]="variable_local_item.completado" <b>{{p}}<abbr title="Se dispara cuando algo cambia, en este caso cuando señalamos el check y por eso llama a la funcion"> ionChange</abbr> )="cambioCheck(variable_local_item)"</b>>{{c}}/ion-checkbox>
+    {{c}}ion-label>{{c}}{{c}} variable_local_item.descripcion }}{{c}}/ion-label>
+  {{c}}/ion-item>
+
+
+{{c}}/ion-list>
+
+{{c}}/ion-content></pre>
+          </div>
+      </div>
+</div>
+    
+    
+    
+    <div class="card-group">
+      <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Servicio</h3>
+            <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} Lista } from '../models/lista.model';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class DeseoService {{c}}
+
+
+  variable_listas: Lista[] = [];
+
+  constructor() {{c}}
+
+    this.cargarStorage();  
+
+  }
+
+    crearLista ( titulo_recibido: string ){{c}}
+      
+      const variable_nuevaLista = new Lista( titulo_recibido );
+      this.variable_listas.push( variable_nuevaLista );
+      
+      console.log(this.variable_listas);
+
+      this.guardarStorage(); 
+
+      return variable_nuevaLista.id; 
+  }
+
+
+  obtenerLista( id_recibido: string | number ){{c}}
+
+        id_recibido = Number(id_recibido);
+
+      return this.variable_listas.find( listaGuardada => listaGuardada.id === id_recibido);
+ 
+  }
+
+
+  guardarStorage(){{c}}   
+
+    localStorage.setItem('DatoStorage', JSON.stringify(this.variable_listas) ); 
+
+  }
+
+
+  cargarStorage(){{c}}
+
+    if ( localStorage.getItem('DatoStorage') ) {{c}} 
+      this.variable_listas = JSON.parse( localStorage.getItem('DatoStorage') );
+    }
+    else{{c}}   
+      this.variable_listas = [];
+    }
+
+  }
+  
+}</pre>
+          </div>
+      </div>
+    </div>
+
+    
+
+    </div>
+
+
+</div>
+
+
+
+        
+
+    

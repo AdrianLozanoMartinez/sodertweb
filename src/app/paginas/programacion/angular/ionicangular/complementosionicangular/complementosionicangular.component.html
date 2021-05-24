@@ -1,14 +1,23 @@
 <div class="row">
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-complementosionicangular-tab" data-toggle="pill" href="#v-pills-complementosionicangular" role="tab" aria-controls="v-pills-complementosionicangular" aria-selected="true">Iconos</a>
+        <a class="nav-link" id="v-pills-complementosionicangularx-tab" data-toggle="pill" href="#v-pills-complementosionicangularx" role="tab" aria-controls="v-pills-complementosionicangularx" aria-selected="true">Click/Intro</a>
         <a class="nav-link" id="v-pills-complementosionicangular1-tab" data-toggle="pill" href="#v-pills-complementosionicangular1" role="tab" aria-controls="v-pills-complementosionicangular1" aria-selected="false">Flecha selección</a>
+        <a class="nav-link" id="v-pills-complementosionicangular3-tab" data-toggle="pill" href="#v-pills-complementosionicangular3" role="tab" aria-controls="v-pills-complementosionicangular3" aria-selected="false">Menú tab - Botones principales</a>
+        <a class="nav-link" id="v-pills-complementosionicangular-tab" data-toggle="pill" href="#v-pills-complementosionicangular" role="tab" aria-controls="v-pills-complementosionicangular" aria-selected="true">Iconos</a>
+        <a class="nav-link" id="v-pills-complementosionicangular2-tab" data-toggle="pill" href="#v-pills-complementosionicangular2" role="tab" aria-controls="v-pills-complementosionicangular2" aria-selected="false">Color</a>
         <a class="nav-link" id="v-pills-complementosionicangular0-tab" data-toggle="pill" href="#v-pills-complementosionicangular0" role="tab" aria-controls="v-pills-complementosionicangular0" aria-selected="false">Listas</a>
-        <a class="nav-link" id="v-pills-complementosionicangular2-tab" data-toggle="pill" href="#v-pills-complementosionicangular2" role="tab" aria-controls="v-pills-complementosionicangular2" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-complementosionicangular4-tab" data-toggle="pill" href="#v-pills-complementosionicangular4" role="tab" aria-controls="v-pills-complementosionicangular4" aria-selected="false">Botones</a>
+        <a class="nav-link" id="v-pills-complementosionicangular5-tab" data-toggle="pill" href="#v-pills-complementosionicangular5" role="tab" aria-controls="v-pills-complementosionicangular5" aria-selected="false">Input</a>
+        <a class="nav-link" id="v-pills-complementosionicangular6-tab" data-toggle="pill" href="#v-pills-complementosionicangular6" role="tab" aria-controls="v-pills-complementosionicangular6" aria-selected="false">Checkbox</a>
+        <a class="nav-link" id="v-pills-complementosionicangular7-tab" data-toggle="pill" href="#v-pills-complementosionicangular7" role="tab" aria-controls="v-pills-complementosionicangular7" aria-selected="false">Alert</a>
+        <a class="nav-link" id="v-pills-complementosionicangular8-tab" data-toggle="pill" href="#v-pills-complementosionicangular8" role="tab" aria-controls="v-pills-complementosionicangular8" aria-selected="false">Deslizar botones</a>
       </div>
     </div>
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
+
+        <a href="https://ionicframework.com/docs/components" target="_blank"><u>Web</u></a>
 
         <div class="tab-pane fade" id="v-pills-complementosionicangular" role="tabpanel" aria-labelledby="v-pills-complementosionicangular-tab">
 
@@ -24,12 +33,14 @@
 
         <div class="tab-pane fade" id="v-pills-complementosionicangular0" role="tabpanel" aria-labelledby="v-pills-complementosionicangular0-tab">
 
+          <a href="https://ionicframework.com/docs/api/list"><b><u>Ir a web</u></b></a>
+
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                      <pre class="card-text"><b>{{co}}<abbr title="Es una lista, actúa como ul">ion-list</abbr> >
 
-      {{co}}<abbr title="Actúa como li">ion-item</abbr>>
+    {{co}}<abbr title="Actúa como li">ion-item</abbr>>
         {{co}}ion-label>Título de la lista 1{{co}}/ion-label>
     {{co}}/ion-item>
 
@@ -58,21 +69,483 @@
         </div>
 
         <div class="tab-pane fade" id="v-pills-complementosionicangular2" role="tabpanel" aria-labelledby="v-pills-complementosionicangular2-tab">
-            
+
+            <a href="https://ionicframework.com/docs/theming/colors"><b><u>Ir a web</u></b></a>
+
             <div class="card-group">
         <div class="card text-dark bg-primary m-3">
-            <div class="card-body"><h3>x</h3>
-                <pre class="card-text">x</pre>
+            <div class="card-body"><h3>Uso</h3>
+                <pre class="card-text"><ul><li><b>color="<abbr title="Color predeterminado por el sistema">nombre_del_color</abbr> o <abbr title="Color agregado">nombre_elegido</abbr>"</b> -> Dentro de etiqueta</li>
+<li><b>Líneas divisorias u otro componente</b> -> <b>global.scss</b>:
+<abbr title="Elemento lista, se puede poner otro">ion-list</abbr> {{c}}
+    <abbr title="Color de fondo">background</abbr>-color: <abbr title="Para que sea igual que el fondo nos vamos a theme -> variable.scss -> body y copiamos el primero, si queremos poner otro cogemos otro número o otro color en inglés">#2fdf75</abbr> <abbr title="Necesario para que se ejecute">!important</abbr>;
+}</li><li><b>Botones principales activo</b>
+<b>.tab-selected</b>{{c}}
+    color: white !important;
+}
+</li></ul></pre>
             </div>
         </div>
         <div class="card text-dark bg-primary m-3">
-          <div class="card-body"><h3>x</h3>
-              <pre class="card-text">x</pre>
+          <div class="card-body"><h3>Opciones</h3>
+              <pre class="card-text"><ul><li><b>Predeterminados</b>: "primary","secondary","tertiary","success","warning","danger","light","medium","dark"</li><li><b>Modificar</b> <small>(theme -> variables.scss)</small>:
+:root {{c}}
+  --ion-color-secondary: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>#006600</b></abbr> ;
+  --ion-color-secondary-rgb: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>0,102,0</b></abbr> ;
+  --ion-color-secondary-contrast: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>#ffffff</b></abbr> ;
+  --ion-color-secondary-contrast-rgb: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>255,255,255</b></abbr> ;
+  --ion-color-secondary-shade: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>#005a00</b></abbr> ;
+  --ion-color-secondary-tint: <abbr title="Ponemos el valor que queramos para verse otro de modo"><b>#1a751a</b></abbr> ;
+}</li><li><b>Agregar</b> <small>(theme -> variables.scss)</small>:<ol><li>
+:root {{c}}
+  --ion-color-<b>nombre_elegido</b>: <abbr title="Color que elijamos poner"><b>#69bb7b;</b></abbr>
+  --ion-color-<b>nombre_elegido</b>-rgb: <abbr title="Color que elijamos poner"><b>105,187,123;</b></abbr>
+  --ion-color-<b>nombre_elegido</b>-contrast: <abbr title="Color que elijamos poner"><b>#ffffff;</b></abbr>
+  --ion-color-<b>nombre_elegido</b>-contrast-rgb: <abbr title="Color que elijamos poner"><b>255,255,255;</b></abbr>
+  --ion-color-<b>nombre_elegido</b>-shade: <abbr title="Color que elijamos poner"><b>#5ca56c;</b></abbr>
+  --ion-color-<b>nombre_elegido</b>-tint: <abbr title="Color que elijamos poner"><b>#78c288;</b></abbr>
+}
+</li><li>
+.ion-color-<b>nombre_elegido</b> {{c}}
+  --ion-color-base: var(--ion-color-<b>nombre_elegido</b>);
+  --ion-color-base-rgb: var(--ion-color-<b>nombre_elegido</b>-rgb);
+  --ion-color-contrast: var(--ion-color-<b>nombre_elegido</b>-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-<b>nombre_elegido</b>-contrast-rgb);
+  --ion-color-shade: var(--ion-color-<b>nombre_elegido</b>-shade);
+  --ion-color-tint: var(--ion-color-<b>nombre_elegido</b>-tint);
+}
+</li></ol></li>
+</ul></pre>
           </div>
       </div>
     </div>
+
             
-            </div>
+</div>
+
+    <div class="tab-pane fade" id="v-pills-complementosionicangular3" role="tabpanel" aria-labelledby="v-pills-complementosionicangular3-tab">
+            
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                   <pre class="card-text"><b>{{co}}ion-tab-bar slot="bottom"></b> -> <b>bottom</b> (Botones abajo) o <b>top</b> (Botones arriba)</pre>
+              </div>
+          </div>
+        </div>
 
 
     </div>
+
+
+
+    <div class="tab-pane fade" id="v-pills-complementosionicangular4" role="tabpanel" aria-labelledby="v-pills-complementosionicangular4-tab">
+            
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3><b>ion-button</b> <small>(Normales)</small>  -   <u><a href="https://ionicframework.com/docs/api/button" style="color: white;">Ir a web</a></u></h3>
+                   <pre class="card-text"><ul><li><b>Normal</b>: {{co}}<b>ion-button</b>>Normal{{co}}/ion-button></li>
+<li><b>Enlace</b>: {{co}}ion-button <b>href="#"</b>>Enlace{{co}}/ion-button></li>
+<li><b>Color</b>: <ul><li>{{co}}ion-button fill="<b>outline</b>"><b>Sin fondo</b>{{co}}/ion-button></li><li>{{co}}ion-button <b>color="color_que_pongamos"</b>>color_que_pongamos{{co}}/ion-button> -> "primary","secondary","tertiary","success","warning","danger","light","medium","dark"</li></ul></li>
+<li><b>Forma</b>: <ul><li>{{co}}ion-button shape="<b>round</b>">Esquinas <b>Más redondeadas</b>{{co}}/ion-button></li><li>{{co}}ion-button expand="<b>block</b>">Esquinas <b>redondeadas</b>{{co}}/ion-button></li><li>{{co}}ion-button expand="<b>full</b>">Esquinas <b>cuadradas</b>{{co}}/ion-button></li></ul>    </li>
+<li><b>Icono</b>: <ul><li><b>Izquierda</b>: {{co}}ion-button>{{co}}ion-icon slot="<abbr title="Indica la posición, star = inicio del botón, es decir izquierda"><b>start</b></abbr>" name="star">{{co}}/ion-icon>Icono a la izquierda{{co}}/ion-button></li><li><b>Derecha</b>: {{co}}ion-button>{{co}}ion-icon slot="<abbr title="Indica la posición, end = final del botón, es decir derecha"><b>end</b></abbr>" name="star">{{co}}/ion-icon>Icono a la derecha{{co}}/ion-button></li><li><b>Solo icono</b>: {{co}}ion-button>{{co}}ion-icon slot="<abbr title="Indica que solo se mostrará icono y no ponemos texto"><b>icon-only</b></abbr>" name="star">{{co}}/ion-icon>{{co}}/ion-button></li></ul>
+<li><b>Tamaño</b>: <ul><li><b>Grande</b>: {{co}}ion-button size="<b>large</b>"><b>Grande</b>{{co}}/ion-button></li><li><b>Pequeño</b>: {{co}}ion-button size="<b>small</b>"><b>Pequeño</b>{{co}}/ion-button></li></ul></li></ul></pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3><b>ion-fab</b> <small>(Contenedor que contienen uno o más botones)</small>  -   <u><a href="https://ionicframework.com/docs/api/fab" style="color: white;">Ir a web</a></u></h3>
+               <pre class="card-text"><ul><li><b>Posición</b>
+{{co}}ion-fab <b><abbr title="Alineación vertical">vertical</abbr></b>="<b><abbr title="top (Arriba) - bottom (Abajo) - center (Centro)">top</abbr></b>" <b><abbr title="Alineación en horizontal">horizontal</abbr></b>="<b><abbr title="end (Derecha) - start (Izquierda) - center (Centro)">end</abbr> </b>" slot="<b><abbr title="Se quede fijo y no se mueva al hacer scroll, si queremos que se mueva se elimina">fixed</abbr></b>">
+    {{co}}ion-fab-button>
+      {{co}}ion-<b>icon</b> name="add">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+  {{co}}/ion-fab></li>
+<li><b>Varios botones dentro de uno</b>
+  {{co}}ion-fab vertical="center" horizontal="center" slot="fixed">
+
+    {{co}}ion-fab-button>
+      {{co}}ion-icon name="share">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+
+    {{co}}ion-fab-list side="<b><abbr title="Arriba">top</abbr></b>">
+      {{co}}ion-fab-button>{{co}}ion-icon name="logo-vimeo">{{co}}/ion-icon>{{co}}/ion-fab-button>
+    {{co}}/ion-fab-list>
+
+    {{co}}ion-fab-list side="<b><abbr title="Abajo">bottom</abbr></b>">
+      {{co}}ion-fab-button>{{co}}ion-icon name="logo-facebook">{{co}}/ion-icon>{{co}}/ion-fab-button>
+    {{co}}/ion-fab-list>
+
+    {{co}}ion-fab-list side="<b><abbr title="Izquierda">start</abbr></b>">
+      {{co}}ion-fab-button>{{co}}ion-icon name="logo-instagram">{{co}}/ion-icon>{{co}}/ion-fab-button>
+    {{co}}/ion-fab-list>
+
+    {{co}}ion-fab-list side="<b><abbr title="Derecha">end</abbr></b>">
+      {{co}}ion-fab-button>{{co}}ion-icon name="logo-twitter">{{co}}/ion-icon>{{co}}/ion-fab-button>
+    {{co}}/ion-fab-list>
+
+  {{co}}/ion-fab></li></ul></pre>
+          </div>
+      </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <div class="tab-pane fade" id="v-pills-complementosionicangular5" role="tabpanel" aria-labelledby="v-pills-complementosionicangular5-tab">
+            
+      <h4 style="color: black;">Es recomendable meterlo en una lista ({{co}}ion-list>) <small>para que podamos movernos con el scroll si tenemos mucha información</small></h4>
+      <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-body"><h3>Textarea   -   <u><a href="https://ionicframework.com/docs/api/textarea" style="color: white;">Ir a web</a></u></h3>
+                 <pre class="card-text"><ul><li><b>Estructura mínima</b>
+{{co}}ion-item>
+  {{co}}ion-textarea>{{co}}/ion-textarea>
+{{co}}/ion-item></li>
+<li><b>Texto en el cuadro</b> de escritura
+{{co}}ion-item>
+  {{co}}ion-textarea <b>placeholder</b>="Aquí podemos escribir mucho">{{co}}/ion-textarea>
+{{co}}/ion-item></li>
+<li><b>Título</b>
+{{co}}ion-item>
+  {{co}}ion-<b>label</b>>Título del textarea{{co}}/ion-label>
+  {{co}}ion-textarea>{{co}}/ion-textarea>
+{{co}}/ion-item></li>
+<li><b>Título</b> de <b>grande a pequeño</b> al pulsar
+{{co}}ion-item>
+  {{co}}ion-label <b>position="floating"</b>>Título en grande, pequeño al pulsar y escribir{{co}}/ion-label>
+  {{co}}ion-textarea>{{co}}/ion-textarea>
+{{co}}/ion-item></li>
+<li><b>Título</b> <u>permanente</u> con <u>cuadro</u> <b>pequeño</b>
+{{co}}ion-item>
+  {{co}}ion-label>Título permanente{{co}}/ion-label>
+  {{co}}ion-textarea <b>clearOnEdit="true"</b>>{{co}}/ion-textarea>
+{{co}}/ion-item></li>
+<li><b>Título</b> <u>permanente</u> con <u>cuadro</u> <b>grande</b>
+{{co}}ion-item>
+  {{co}}ion-label>Notes{{co}}/ion-label>
+  {{co}}ion-textarea <b>rows="6" cols="20"</b> placeholder="Elegimos las columnas y filas que queremos que ocupe, de ese modo puede ser más grande o más pequeño">{{co}}/ion-textarea>
+{{co}}/ion-item></li></ul></pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Input   -   <u><a href="https://ionicframework.com/docs/api/input" style="color: white;">Ir a web</a></u></h3>
+             <pre class="card-text"><ul><li>INPUT<ul><li><b>Estructura mínima</b> 
+  {{co}}<abbr title="Inpunt que no se ve nada pero al pulsar en la zona podemos escribir"><b>ion-input</b></abbr>>{{co}}/ion-input></li>
+<li><b>Texto en el cuadro</b> de escritura 
+  {{co}}ion-input <b>placeholder</b>="Escrito en el placeholder">{{co}}/ion-input></li>
+<li><b>Con algo escrito</b> <small>Puede borrarse</small> 
+  {{co}}ion-input <b>value="Escrito por defecto..."</b>>{{co}}/ion-input></li>
+<li><b>Con algo escrito</b> <small>Puede borrarse</small> con <b>X</b> para <b>borrar todo</b> 
+  {{co}}ion-input <b>clearInput</b> <b>value="Texto que puede borrarse al pulsar el botón X"</b>>{{co}}/ion-input></li>
+<li><b><b>Tipo</b> de lo que introducimos 
+  {{co}}ion-input <b><abbr title="none, text, tel, url, email, numeric, decimal, and search">type</abbr>="number" value="Tipo que puede introducirse, otro no es permitido"</b>>{{co}}/ion-input></b></li>
+<li><b>Deshabilitar</b> 
+  {{co}}ion-input value="Deshabilitar input" <b>disabled</b>>{{co}}/ion-input></li></ul></li>
+<li><u>TÍTULO</u><ul><li><b>Normal</b> 
+
+{{co}}ion-item>
+  <b>{{co}}ion-label>Título normal{{co}}/ion-label></b>
+  {{co}}ion-input>{{co}}/ion-input>
+{{co}}/ion-item></li>
+
+<li><b><u>Posición</u></b>
+
+{{co}}ion-item>
+  {{co}}ion-label position="<b>floating</b>">Texto grande que al pulsar se pone pequeño y arriba{{co}}/ion-label>
+  {{co}}ion-input>{{co}}/ion-input>
+{{co}}/ion-item>
+
+{{co}}ion-item>
+  {{co}}ion-label position="<b>fixed</b>">Texto grande que se mantiene y se escribe al lado{{co}}/ion-label>
+  {{co}}ion-input>{{co}}/ion-input>
+{{co}}/ion-item>
+
+{{co}}ion-item>
+  {{co}}ion-label position="<b>stacked</b>">Texto pequeño que se mantiene arriba y se escribe abajo{{co}}/ion-label>
+  {{co}}ion-input>{{co}}/ion-input>
+{{co}}/ion-item></li></ul></li></ul></pre>
+        </div>
+    </div>
+      </div>
+
+</div>
+
+
+
+    <div class="tab-pane fade" id="v-pills-complementosionicangular6" role="tabpanel" aria-labelledby="v-pills-complementosionicangular6-tab">
+            
+      <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-body"><u><a href="https://ionicframework.com/docs/api/checkbox" style="color: white;">Ir a web</a></u>
+                 <pre class="card-text"><ul><li><b>Solo cuadro</b>
+{{co}}ion-<b>checkbox</b>>{{co}}/ion-checkbox></li>
+<li><b>Deshabilitar</b> (true) o no (false)
+{{co}}ion-checkbox <b>disabled="true"</b>>{{co}}/ion-checkbox></li>
+<li><b>Marcado (true) o no (false) desde el inicio</b>
+{{co}}ion-checkbox <b>checked="true"</b>>{{co}}/ion-checkbox></li></ul></pre>
+            </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+<div class="tab-pane fade" id="v-pills-complementosionicangular7" role="tabpanel" aria-labelledby="v-pills-complementosionicangular7-tab">
+  
+  <u><a href="https://ionicframework.com/docs/api/alert" style="color: white;">Ir a web</a></u>
+  <h3 style="color: black;">Instalación</h3>
+  <div class="card-group">
+      <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Página.ts</h3>
+             <pre class="card-text"><b>import {{c}} AlertController } from '@ionic/angular';
+import {{c}} DeseoService } from '../../services/deseo.service';</b>
+
+constructor( <b>public variable_servicio: DeseoService,
+              private variable_alert: AlertController</b> ) {{c}}
+
+ <b><abbr title="Añadimos async para que no de error await, al convertirlo en promesa la función y usar async podemos usar la función como promesa fuera, si ponemos el nombre(). aparecerá las opciones">async</abbr> <abbr title="Función que llama alert con dos opciones, cancelar o agregar">agregarLista</abbr>() {{c}}
+
+    const variable_alert = <abbr title="Es una promesa, await dice que espere a que haga todo antes de nada y lo almacena en la variable alert">await</abbr> this.variable_alert.create({{c}}
+      // cssClass: 'my-custom-class',
+      header: 'Nombre del cuadro',
+      inputs: [
+        {{c}}
+          <abbr title="Dato que cogemos">name</abbr>: 'titulo',
+          type: 'text',
+          placeholder: 'Nombre de la lista'
+        }
+      ],
+      // subHeader: 'Subtitle',
+      // message: 'This is an alert message.',
+      // buttons: ['OK']
+      buttons: [
+         {{c}}
+           text: 'Cancelar', //1ºBotón
+           role: '<abbr title="Acción predeterminada por ionic">cancel</abbr>',  
+           <abbr title="Acción que realizará, en este caso informar que se ha cancelado">handler</abbr>: () => {{c}}
+             console.log('Cancelar');
+           }
+         },
+        {{c}}
+          text: 'Crear',    //2º Botón
+          <abbr title="Acción que realizará, en este caso informar del dato obtenido">handler</abbr>: ( dato_recibido ) => {{c}}
+               console.log( dato );
+
+              if ( dato_recibido.<abbr title="titulo relacionado con el name del input, debe llevar el mismo nombre">titulo</abbr>.length === 0 ) {{c}} 
+                return;
+              }
+              
+              this.variable_servicio.<abbr title="Creamos lista sino es 0, se llama a la función del servidor, mandando el dato recibido en especial el titulo que es el que nos pide a introducir en la alerta. SINO PONEMOS el TITULO nos aparece pintado en el html OBJECT OBJECT">crearLista</abbr>( dato_recibido.titulo );
+            
+              console.log(dato_recibido.titulo);
+              
+            }
+        }
+      ]
+    });
+
+
+    <abbr title="Saca el resultado de la función">variable_alert</abbr>.present();
+
+  }</b></pre>
+        </div>
+    </div>
+          <div class="card text-dark bg-warning m-3">
+          <div class="card-body"><h3>Página.html <small>(Botón)</small></h3>
+             <pre class="card-text">{{co}}ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    {{co}}ion-fab-<b>button</b> color="tertiary" <b>{{p}}click)="agregarLista()"</b>>
+      {{co}}ion-icon name="add">{{co}}/ion-icon>
+    {{co}}/ion-fab-button>
+  {{co}}/ion-fab></pre>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-body"><h3>Servicio</h3>
+           <pre class="card-text"><b>import {{c}} <abbr title="Model con la estructura de los datos (string, number, boolean..)">Lista</abbr> } from '../models/lista.model';
+
+<abbr title="Variable que le metemos la estructura del model (Lista) en forma de arreglo [] = []">variable_listas</abbr>: Lista[] = [];
+
+crearLista ( titulo_recibido: string ){{c}}
+      
+  const <abbr title="Metemos en la variable lo que introducimos (titulo_recibido), con la estructura del model (Lista)">variable_nuevaLista</abbr>= new Lista( titulo_recibido );
+  this.<abbr title="Metemos (push) en la variable lo que hay dentro de la variable (variable_nuevaLista)">variable_listas</abbr>.push( variable_nuevaLista );
+  
+  console.log(this.variable_listas);
+}</b>
+        </pre>
+        </div>
+    </div>
+  </div>
+
+
+
+  <h3 style="color: black;">Tipos</h3>
+<div class="card-group">
+  <div class="card text-dark bg-primary m-3">
+      <div class="card-body">
+         <pre class="card-text"><ul><li><b>header</b>: 'Nombre del cuadro',</li>
+<li><b>subHeader</b>: 'Subtítulo del cuadro',</li>
+<li><b>message</b>: '<strong>Mensaje del cuadro, puede contener códigos html</strong>',</li>
+<li><b>buttons</b>: ['Botón de texto']<ul><li><b>Predeterminados</b>: 'ok','Cancel', 'Open Modal', 'Delete'</li>
+<li><b>Ok o Cancelar</b>:
+  buttons: [
+  {{c}}
+    text: 'Cancel',
+    role: '<b>cancel</b>',
+    cssClass: 'secondary',
+    <b>handler: (blah) => </b>{{c}}
+      console.log('Confirm Cancel: blah');
+    }
+  }, {{c}}
+    text: 'Okay',
+    <b>handler: () =></b> {{c}}
+      console.log('Confirm Okay');
+    }
+  }
+]</li></ul></li>
+<li><b>type</b>: 'text', o 'textarea', o 'url', o <abbr title="Se puede poner un min: '2017-03-01', y un max: '2018-01-12'">'date'</abbr>, <abbr title="Se puede poner un min: '-5', y un max: '10'">'number'</abbr>,<abbr title="attributes: { maxlength: 4, inputmode: 'decimal'}">'password'</abbr>,</li>
+<li>id: 'nombre_del_id',</li>
+<li><b>value</b>: 'Texto que aparece donde escribimos, se puede borrar',</li>
+<li><b>placeholder</b>: 'Texto que aparece por defecto en claro y se quita al escribir'</li>
+<li><b>min</b>: '2017-03-01',</li>
+<li><b>max</b>: '2017-03-01',</li>
+<li><b>attributes {{c}} }</b>: Añadimos atributos ->  <abbr title="Tamaño máximo">maxlength</abbr>: 4, inputmode: 'decimal'</li></ul></pre>
+      </div>
+  </div>
+</div>
+
+
+</div>
+
+<div class="tab-pane fade" id="v-pills-complementosionicangularx" role="tabpanel" aria-labelledby="v-pills-complementosionicangularx-tab">
+
+  <div class="card-group">
+      <div class="card text-dark bg-primary m-3">
+          <div class="card-body">
+              <pre class="card-text"><ul><li><b>Intro</b>: <b>{{p}}keyup.enter)</b>="funcion(con_o_sin_VARIABLE.con_o_sin_VALUE_u_OTRO)"</li><li><b>{{p}}click)</b>="funcion(con_o_sin_VARIABLE.con_o_sin_VALUE_u_OTRO)"</li></ul></pre>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+ <div class="tab-pane fade" id="v-pills-complementosionicangular8" role="tabpanel" aria-labelledby="v-pills-complementosionicangular8-tab">
+
+            <a href="https://ionicframework.com/docs/api/item-sliding"><b><u>Ir a web</u></b></a>
+
+            <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>3 Botones (2 Izquierda - 1 Derecha)</h3>
+                <pre class="card-text">{{co}}ion-item-sliding>
+  {{co}}ion-item-options <b>side="<abbr title="Botones-Izquierda">start</abbr>"</b>>
+    {{co}}ion-item-option <b><abbr title="Al hacer click nos lleva a la función que pongamos en el Ts en relación con el servicio">{{p}}click)</abbr> ="favorite{{p}}item)"</b>>Favorite{{co}}/ion-item-option>
+    {{co}}ion-item-option color="danger" <b><abbr title="Al hacer click nos lleva a la función que pongamos en el Ts en relación con el servicio">{{p}}click)</abbr> ="share{{p}}item)"</b>>Share{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+
+  {{co}}ion-item>
+    {{co}}ion-label>Item Options{{co}}/ion-label>
+  {{co}}/ion-item>
+
+  {{co}}ion-item-options <b>side="<abbr title="Botón-Derecha">end</abbr>"</b>>
+    {{co}}ion-item-option <b><abbr title="Al hacer click nos lleva a la función que pongamos en el Ts en relación con el servicio">{{p}}click)</abbr> ="unread(item)"</b>>Unread{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+{{co}}/ion-item-sliding></pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Expandir</h3>
+              <pre class="card-text">{{co}}ion-item-sliding>
+  {{co}}ion-item-options side="start">
+    {{co}}ion-item-option {{p}}click) ="favorite{{p}}item)" <b><abbr title="Expande el botón">expandable</abbr></b>>Favorite{{co}}/ion-item-option>
+    {{co}}ion-item-option color="danger" {{p}}click) ="share{{p}}item)" <b><abbr title="Expande el botón">expandable</abbr></b>>Share{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+
+  {{co}}ion-item>
+    {{co}}ion-label>Item Options{{co}}/ion-label>
+  {{co}}/ion-item>
+
+  {{co}}ion-item-options side="end">
+    {{co}}ion-item-option {{p}}click) ="unread(item)" <b><abbr title="Expande el botón">expandable</abbr></b>>Unread{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+{{co}}/ion-item-sliding></pre>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+     <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Nota en pequeño</h3>
+                <pre class="card-text">{{co}}ion-item-sliding>
+  {{co}}ion-item-options side="start">
+    {{co}}ion-item-option {{p}}click) ="favorite{{p}}item)">Favorite{{co}}/ion-item-option>
+    {{co}}ion-item-option color="danger" {{p}}click) ="share{{p}}item)">Share{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+
+  {{co}}ion-item>
+    {{co}}ion-label>Item Options{{co}}/ion-label>
+    <b>{{co}}ion-note slot="<abbr title="end (derecha) - start (izquierda)">end</abbr>">
+      10:45 AM
+    {{co}}/ion-note></b>
+  {{co}}/ion-item>
+
+  {{co}}ion-item-options side="end">
+    {{co}}ion-item-option {{p}}click) ="unread(item)">Unread{{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+{{co}}/ion-item-sliding></pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-primary m-3">
+          <div class="card-body"><h3>Icono - Posición</h3>
+              <pre class="card-text">{{co}}ion-item-sliding>
+    {{co}}ion-item>
+      {{co}}ion-label>
+        Sliding Item, Icons <abbr title="start (izquierda) - end (derecha) - top (arriba) - bottom (abajo)">Start</abbr>
+      {{co}}/ion-label>
+    {{co}}/ion-item>
+    {{co}}ion-item-options>
+      {{co}}ion-item-option color="primary">
+        {{co}}ion-icon slot="<abbr title="start (izquierda) - end (derecha) - top (arriba) - bottom (abajo)">start</abbr>" ios="ellipsis-horizontal" md="ellipsis-vertical">{{co}}/ion-icon>
+        More
+      {{co}}/ion-item-option>
+      {{co}}ion-item-option color="secondary">
+        {{co}}ion-icon slot="<abbr title="start (izquierda) - end (derecha) - top (arriba) - bottom (abajo)">start</abbr>" name="archive">{{co}}/ion-icon>
+        Archive
+      {{co}}/ion-item-option>
+    {{co}}/ion-item-options>
+  {{co}}/ion-item-sliding></pre>
+          </div>
+      </div>
+    </div>
+
+            
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

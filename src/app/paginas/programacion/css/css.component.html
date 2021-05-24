@@ -44,6 +44,9 @@
     <li class="nav-item">
         <a class="nav-link" id="pills-css14-tab" data-toggle="pill" href="#pills-css14" role="tab" aria-controls="pills-css14" aria-selected="false" style="color: black;">Google Fonts</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-css15-tab" data-toggle="pill" href="#pills-css15" role="tab" aria-controls="pills-css15" aria-selected="false" style="color: black;">Librerías</a>
+    </li>
     <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
 </ul>
 
@@ -901,11 +904,101 @@ div{{c}}                                /*Tabla <b>responsive</b> (Se crea <b>de
             </div>
         </div>
 
+</div>
 
 
 
+        <div class="tab-pane fade" id="pills-css15" role="tabpanel" aria-labelledby="pills-css15-tab">
+    
+            <div class="card-group">
+                <div class="card text-dark bg-info m-3">
+                    <div class="card-header" style="text-align: center;">
+                        <h4><b>Animated <abbr title="Se puede usar web/app">(Especial Web)</abbr></b></h4>
+                    </div>
+                    <div class="card-body">
+                        <pre class="card-text"><b>.animated {{c}}
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
-    </div>
+.fast {{c}}
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {{c}}
+  from {{c}}
+    opacity: 0;
+  }
+
+  to {{c}}
+    opacity: 1;
+  }
+}
+
+.fadeIn {{c}}
+  animation-name: fadeIn;
+}</b></pre>
+                    </div>
+                </div>
+                <div class="card text-dark bg-info m-3">
+                    <div class="card-header" style="text-align: center;">
+                        <h4><b>Animated <abbr title="Se puede usar web/app">(Especial App)</abbr></b></h4>
+                    </div>
+                    <div class="card-body">
+                        <pre class="card-text">// Fuente: https://daneden.github.io/animate.css/
+
+<b>.animated {{c}}
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {{c}}
+    from {{c}}
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {{c}}
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {{c}}
+    from {{c}}
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {{c}}
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {{c}}
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }</b></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+</div>
+
 
 
 </div>
