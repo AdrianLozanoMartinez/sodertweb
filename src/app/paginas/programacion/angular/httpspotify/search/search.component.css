@@ -1,0 +1,23 @@
+/*Cambiar de color del botón activo*/
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link {
+    background: #d80303 !important;
+    color: white !important;
+}
+
+a {
+    color: black;
+}
+
+#lila2{
+    background-color: #9400a1;
+  }
+
+pre, h3{
+    color: white;
+}
+
+i{
+    color: black;
+}

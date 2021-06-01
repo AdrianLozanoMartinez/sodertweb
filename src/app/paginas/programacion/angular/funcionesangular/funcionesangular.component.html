@@ -29,9 +29,10 @@
         <div class="card-group">
             <div class="card text-dark bg-danger m-3">
                 <div class="card-body">
-                    <pre class="card-text"><ul><li><b>{{t}}routerLink]="{{t}}'/home']"</b> (recomendado) o <b>routerLink="/home"</b>      -> Enlace especial de Angular</li>
-    <li><b>{{t}}routerLink]="{{t}}'/home','paginas','1','2']"</b>                     -> Es igual a -> /home/paginas/1/2</li>
-    <li><b>{{t}}routerLink]="{{t}}'/home',i]"</b>                                     -> Para usar index hay que nombrarlo previamente en el for (let i of index) /home/index (0...)</li>
+                    <pre class="card-text"><ul><li><b>{{t}}routerLink]="{{t}}'/home']"</b> (recomendado)       -> Enlace especial de Angular</li>
+    <li><b>routerLink="nombre_componente" o <b>routerLink="/home"</b></b></li>
+    <li><b>{{t}}routerLink]="{{t}}'/nombre_componente','nombre_componente','1','2']"</b>                     -> Es igual a -> /home/paginas/1/2</li>
+    <li><b>{{t}}routerLink]="{{t}}'/nombre_componente',i]"</b>                                     -> Para usar index hay que nombrarlo previamente en el for (let i of index) /home/index (0...)</li>
     <li><b>routerLinkActive="active"</b>                                     -> Se pone en cada enlace, dentro de una class de bootstrap o una creada, que queramos que se active (se ilumine) al pulsar el enlace/s</li></ul></pre>
                 </div>
             </div>

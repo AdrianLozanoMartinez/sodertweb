@@ -24,6 +24,9 @@
         <a class="nav-link" id="pills-instalacionangular8-tab" data-toggle="pill" href="#pills-instalacionangular8" role="tab" aria-controls="pills-instalacionangular8" aria-selected="false" style="color: black;">Model</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-instalacionangularx-tab" data-toggle="pill" href="#pills-instalacionangularx" role="tab" aria-controls="pills-instalacionangularx" aria-selected="false" style="color: black;">Pipe</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-instalacionangular9-tab" data-toggle="pill" href="#pills-instalacionangular9" role="tab" aria-controls="pills-instalacionangular9" aria-selected="false" style="color: black;">Guard</a>
     </li>
     <li class="nav-item">
@@ -255,6 +258,46 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
         </div>
 
 
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción C <small>(app.routes.ts - Solo rutas - Menos lioso)</small></h4>
+                    <pre class="card-text">//Conexión con app.module.ts - Enlazar páginas - Routes: Relacionado en el 1º export
+<b>import {{c}} Routes } from '@angular/router';</b>
+
+//Componentes - Automático
+<b>import {{c}} AppComponent } from './app.component';</b>
+
+//Componentes - Páginas añadir después de crearlas
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+
+//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
+
+<b>export const ROUTES: Routes = [</b>                                  //ROUTES relacionado con module.ts
+  //Componentes - Páginas añadir después de crearlas
+  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
+  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
+  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
+  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  //Componentes - Especiales
+  <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
+  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
+  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+];</pre>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 
@@ -355,6 +398,53 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
         </div>
 
 
+         <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h4>Opción C - con app.routes.ts (Menos lioso)</h4>
+                    <pre class="card-text">//<u><b>Ya creado</b>. Se <b>añade automáticamente</b> pero se <b>borra manualmente</b></u>
+  import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+
+  //Conexión con app.routes.ts - Enlazar páginas<b>
+  import {{c}} RouterModule } from '@angular/router';
+  import {{c}} ROUTES } from './app.routes';
+  </b>
+  
+  //Componentes - Automático
+  import {{c}} AppComponent } from './app.component';
+
+  //Componentes - Páginas añadir después de crearlas
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+  
+  @NgModule({{c}}
+      declarations: [
+        //Por defecto
+        AppComponent,
+        //Componentes - Páginas añadir después de crearlas
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        //Por defecto
+        BrowserModule,
+        //Conexión con app.routes.ts - Enlazar páginas
+        <b>RouterModule.forRoot( ROUTES, {{c}} useHash: true } )</b>
+      ],
+       providers: [],
+        //Por <b>defecto</b> - Librería
+        bootstrap: [AppComponent]
+   })
+    //Por <b>defecto</b>
+    export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -454,6 +544,21 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
                 <div class="card-body">
                     <pre class="card-text"><ul><li><b>ng generate directive nombreCarpeta/nombreDirectiva</b></li>
 <li><b>ng g d nombreCarpeta/nombreDirectiva</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-instalacionangularx" role="tabpanel" aria-labelledby="pills-instalacionangularx-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b>ng generate pipe nombreCarpeta/nombrePipe</b></li>
+<li><b>ng g p nombreCarpeta/nombrePipe</b></li></ul></pre>
                 </div>
             </div>
         </div>

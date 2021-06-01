@@ -1,0 +1,347 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-mostrarhttpspotifyx-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyx" role="tab" aria-controls="v-pills-mostrarhttpspotifyx" aria-selected="false">Servicio / Componente.Ts</a>
+        <a class="nav-link" id="v-pills-mostrarhttpspotifyy-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyy" role="tab" aria-controls="v-pills-mostrarhttpspotifyy" aria-selected="false">SIN PIPE / Componente.Html</a>
+        <a class="nav-link" id="v-pills-mostrarhttpspotifyz-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyz" role="tab" aria-controls="v-pills-mostrarhttpspotifyz" aria-selected="false">CON PIPE / Componente.Html</a>
+        <a class="nav-link" id="v-pills-mostrarhttpspotifygato-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifygato" role="tab" aria-controls="v-pills-mostrarhttpspotifygato" aria-selected="false">Centralizamos <small>iguales códigos<br>(Componente.Html - Con tarjetas)</small></a>
+        <a class="nav-link" id="v-pills-mostrarhttpspotifyperro-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyperro" role="tab" aria-controls="v-pills-mostrarhttpspotifyperro" aria-selected="false">Loading / - Componente.Ts/Html</a>
+        <a class="nav-link" id="v-pills-mostrarhttpspotify2-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotify2" role="tab" aria-controls="v-pills-mostrarhttpspotify2" aria-selected="false">Resultado</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyx" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyx-tab">
+          
+          <div class="card-group">
+                <div class="card text-dark m-3 bg-danger">
+                    <div class="card-body"><h3>Servicio </h3>
+                        <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders } from '@angular/common/http';
+<b>import {{c}} <abbr title="Actúa como un aspersor, coge toda la información y saca solo lo que necesitamos">map</abbr> } from 'rxjs/operators';</b>
+
+@Injectable({{c}}
+  providedIn: 'root   
+})
+export class ServiciospotifyService {{c}}
+
+  constructor( private variable_http: HttpClient ) {{c}}
+
+    get_spotify () {{c}}
+
+
+        const headers = new HttpHeaders({{c}}
+            'Authorization ': 'Bearer BQCKjX5LOkOb1dKNgl3NniZL1TrPfkebiEQQV31gpWS5boKxjzPilXIYSpdy7NFVl39SoOezsJzIaXUmD6A'
+        });
+
+        <u><b>//Sin map</b></u>
+        //<b><abbr title="Sino lo ponemos, no podremos llamar al subscribe en el componente.Ts y de ese modo no darle más uso a los datos recibido">return</abbr> </b> this.variable_http.get('https://api.spotify.com/v1/browse/new-releases?limit=20', {{c}} headers })<b>;</b>
+ <b>      // .subscribe( dato_recibido => {{c}}     //LO QUITAMOS porque así lo ponemos en el Ts y lo controlamos mejor
+    // console.log(dato_recibido);
+  //  })</b> 
+ // }
+
+        <u><b>//Con map (DEBE USARSE)</b></u>
+       <b> return this.variable_http.get('https://api.spotify.com/v1/browse/new-releases?limit=20', {{c}} headers })</b>
+
+<b>        //Forma larga
+              // .pipe ( map (datoEnBruto => {{c}}
+              //   return datoEnBruto['albums'].items;
+              // }));
+
+        //Forma corta</b>
+              <b>.<abbr title="transforma la información">pipe</abbr> ( <abbr title="filtra la información. Recibe map una función o dato en bruto, retornamos la información que queremos sacar del dato en bruto, como los items de los albums">map</abbr> (datoEnBruto =>  datoEnBruto['<abbr title="Busque una propiedad en los datos que ponga albums y dentro del albums los items">albums</abbr>'].items));</b>
+ }
+}</pre>
+                    </div>
+                </div>
+                <div class="card text-dark m-3 bg-primary">
+                    <div class="card-body"><h3>Componente.Ts</h3>
+                        <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';</b>
+
+
+@Component({{c}}
+  selector: 'app-mostrarhttpspotify',
+  templateUrl: './mostrarhttpspotify.component.html',
+  styleUrls: ['./mostrarhttpspotify.component.css']
+})
+export class MostrarhttpspotifyComponent implements OnInit {{c}}
+
+
+  <b>nuevasCanciones: any[] = [];</b>
+
+  constructor( <b>private variable_servicio: ServiciospotifyService</b> ) {{c}}
+
+      <b>this.variable_servicio.get_spotify()
+                            <abbr title="Se pone aquí el subscribe por ejemplo para controlar cuando acabe el loagin se acabe de subscribir...">.subscribe</abbr>( (datoRecibido: any) => {{c}}
+
+            console.log(<abbr title="albums e items hay que ponerlo tal cual porque sino da error y no muestra. Lo cogemos de la consola cuando vemos lo que recibimos y observamos como nos llega los datos, ejemplo: albums: el nombre del disco...depende lo que queramos obtener">datoRecibido</abbr>.albums.items);
+            
+            //Sin map
+            //this.nuevasCanciones = datoRecibido.albums.items;
+
+            //Con map
+            this.nuevasCanciones = datoRecibido;
+      });</b>
+
+   }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+
+
+}</pre>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyy" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyy-tab">
+          
+
+ <div class="card-group">
+                <div class="card text-dark m-3 bg-warning">
+                    <div class="card-body"><h3>Componente.Html SIN PIPE <small>(Error al intentar mostrar imágenes cuando no hay)</small></h3>
+                        <pre class="card-text" style="color: white;">{{co}}div  class="card-columns">
+    {{co}}div <b>{{f}}ngFor="let cancionesLocal of <abbr title="Cogido del Ts">nuevasCanciones</abbr>"</b> class="card">
+      {{co}}img class="card-img-top" <b>{{t}}src]="cancionesLocal.<abbr title="Se obtiene de la consola cuando realizamos get entre Ts y servidor, podemos coger los datos que queramos, imagen y ubicación dodne se encuentra para mostrar. El [número] es la posición de la imagen, ya que en este caso hay 3 imágenes iguales pero de diferente tamaño">images[0].url</abbr>"</b> alt="Card image cap">
+      {{co}}div class="card-body">
+        {{co}}h5 class="card-title"><b>{{c}}{{c}} cancionesLocal.<abbr title="Cogido de la consola al hacer get con Ts y servidor al spotify, nombre de la canción">name</abbr> }}</b>{{co}}/h5>
+        {{co}}p class="card-text">{{c}}span <b>{{f}}ngFor="let <abbr title="Variable local 2º, para coger este segundo for">artista</abbr> of <abbr title="Cogemos de la variable local declarada arriba">cancionesLocal</abbr>.<abbr title="Como es llamado el artista que se encuentra en el listado de la API spotify que obtenemos">artists</abbr>"</b> class="badge badge-secondary"><b>{{c}}{{c}} artista.name }}</b>{{co}}/span>{{c}}/p>
+      {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+                    </div>
+                </div>
+             </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyz" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyz-tab">
+          
+
+          <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-body"><h3>Pipe</h3>
+                        <pre class="card-text">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+  name: '<abbr title="Nombre que se usa cuando llamemos a este PIPE -> Expresión | pipespotify"><b>pipespotify</b></abbr> '
+})
+export class PipespotifyPipe implements PipeTransform {{c}}
+
+  <b>transform( <abbr title="Da igual el nombre que pongamos mientras el resto pongamos el mismo nombre, este nombre es el que sale y se relaciona con el PIPE y la expresión">variables_images</abbr>: any[] ): string {{c}}
+   
+   
+    if ( !<abbr title="Si no hay imágenes">variables_images</abbr> ) {{c}}
+         return '<abbr title="Ruta igual a como la tenemos, en este caso no es necesario ../../ porque lo coge de raíz">assets/imagenes/noimage.png</abbr> ';
+    }
+    
+    if ( <abbr title="Si hay más de 0 imagen, es decir, haya una. Porque se refiere length al tamaño, que haya más de 0 archivo">variables_images</abbr>.length > 0 ) {{c}}
+         return <abbr title="Si lo hay muestra la primera imagen y si queremos otra [1] u otra [2] donde en este caso cambia solo el tamaño">variables_images</abbr>[0].url;
+    }
+ 
+    else{{c}} 
+         <abbr title="Si no cumple ninguna acción anterior, es decir no existe imágenes, se ejecuta">return</abbr>'assets/imagenes/noimage.png';
+    }</b>
+   
+  }
+
+}</pre>
+                    </div>
+                </div>
+                <div class="card text-dark bg-warning m-3">
+                    <div class="card-body"><h3>Componente.Html CON PIPE <small>(No hay error cuando no hay imágenes)</small></h3>
+                        <pre class="card-text">{{co}}div  class="card-columns">
+                {{co}}div {{f}}ngFor="let cancionesLocal of nuevasCanciones" class="card">
+                  {{co}}img class="card-img-top" {{t}}src]="cancionesLocal.<b>images <abbr title="Quitamos la posición de la imagen y el url porque ya lo tenemos definido en el PIPE y lo pasamos por la tubería | al PIPE para que se aplique las condiciones que hace que tengamos una imagen de spotify o una local nuestra que diga que no hay imagen">| pipespotify</abbr>"</b> alt="Card image cap">
+                  {{co}}div class="card-body">
+                    {{co}}h5 class="card-title">{{c}}{{c}} cancionesLocal.name }}{{co}}/h5>
+                    {{co}}p class="card-text">{{co}}span {{f}}ngFor="let artista of cancionesLocal.artists" class="badge badge-secondary">{{c}}{{c}} artista.name }}{{co}}/span>{{co}}/p>
+                  {{co}}/div>
+                {{co}}/div>
+            {{co}}/div></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-mostrarhttpspotify2" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotify2-tab">
+
+
+                 <!--Loading-->
+            <app-loadingspotify *ngIf="variable_loading"></app-loadingspotify>
+            
+
+            <div *ngIf="variable_error" class="alert alert-danger">
+              <h3>Error</h3>
+              <p>{{ variable_mensaje_error }}</p>
+            </div>
+
+
+            <app-tarjetasspotify [dato_entre_tarjeta_mostrar]="nuevasCanciones"></app-tarjetasspotify>
+        
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-mostrarhttpspotifygato" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifygato-tab">
+
+            <div class="card-group">
+              <div class="card text-dark bg-warning m-3">
+                  <div class="card-body"><h3>Componente.Html</h3>
+                    <pre class="card-text">ELIMINAMOS:
+{{co}}div  class="card-columns">
+    {{co}}div {{f}}ngFor="let cancionesLocal of nuevasCanciones" class="card">
+      {{co}}img class="card-img-top" {{t}}src]="cancionesLocal.<b>images <abbr title="Quitamos la posición de la imagen y el url porque ya lo tenemos definido en el PIPE y lo pasamos por la tubería | al PIPE para que se aplique las condiciones que hace que tengamos una imagen de spotify o una local nuestra que diga que no hay imagen">| pipespotify</abbr>"</b> alt="Card image cap">
+      {{co}}div class="card-body">
+        {{co}}h5 class="card-title">{{c}}{{c}} cancionesLocal.name }}{{co}}/h5>
+        {{co}}p class="card-text">{{co}}span {{f}}ngFor="let artista of cancionesLocal.artists" class="badge badge-secondary">{{c}}{{c}} artista.name }}{{co}}/span>{{co}}/p>
+      {{co}}/div>
+    {{co}}/div>
+{{co}}/div>
+
+PONEMOS:
+
+<b>{{co}}<abbr title="Llamamos a la tarjeta">app</abbr>-tarjetasspotify [[t]]<abbr title="Metemos entre llaves una variable que deberá tener MISMO NOMBRE en TARJETA.HTML Y TARJETA.TS">dato_entre_tarjeta_mostrar</abbr> ]="<abbr title="Mismo nombre que la variable declarada en el TS y usada con el servidor para usarlo con Spotify">nuevasCanciones</abbr>">{{co}}/app-tarjetasspotify></b></pre>
+                  </div>
+              </div>
+          </div>
+  
+  
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Componente_Tarjeta.Ts <small>Igual que en buscar</small></h3>
+                  <pre class="card-text">import {{c}} Component, OnInit, <b><abbr title="Para poder usar la variable tanto en el html como en otros componentes, sacar la variable de aquí y a su vez obtener datos de otros componentes">Input</abbr> </b> } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-tarjetasspotify',
+  templateUrl: './tarjetasspotify.component.html',
+  styleUrls: ['./tarjetasspotify.component.css']
+})
+export class TarjetasspotifyComponent implements OnInit {{c}}
+
+ <b> @Input() dato_entre_tarjeta_mostrar: any[] = [];</b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+                </div>
+            </div>
+          <div class="card text-dark bg-warning m-3">
+              <div class="card-body"><h3>Componente_Tarjeta.Html <small>Igual que en buscar</small></h3>
+                <pre class="card-text">{{co}}div  class="card-columns m-5">
+    {{co}}div <b>{{f}}ngFor="let cancionesLocal of <abbr title="Variable que pusimos en donde queremos que aparezca esta tarjeta y en el TS de este componente">dato_entre_tarjeta_mostrar</abbr> "</b> class="card">
+      {{co}}img class="card-img-top" <b>{{t}}src]="cancionesLocal.images | pipespotify"</b> alt="Card image cap">
+      {{co}}div class="card-body">
+        {{co}}h5 class="card-title"><b>{{c}}{{c}} cancionesLocal.name }}</b>{{co}}/h5>
+        {{co}}p class="card-text">{{co}}span <b>{{f}}ngFor="let artista of cancionesLocal.artists"</b> class="badge badge-secondary"><b>{{c}}{{c}} artista.name }}</b>{{co}}/span>{{co}}/p>
+      {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+              </div>
+          </div>
+      </div>
+  
+  
+  
+          </div>
+
+
+
+          <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyperro" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyperro-tab">
+
+            <div class="card-group">
+              <div class="card text-dark bg-warning m-3">
+                  <div class="card-body"><h3>Loading.Html</h3>
+                    <pre class="card-text">{{co}}div class="row text-center">
+    {{co}}div class="col">
+        <b>{{co}}i class="fa fa-refresh fa-spin fa-3x fa-fw">{{co}}/i></b>
+    {{co}}/div>
+{{co}}/div></pre>
+                  </div>
+              </div>
+          </div>
+  
+  
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Componente.Ts</h3>
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+
+@Component({{c}}
+  selector: 'app-mostrarhttpspotify',
+  templateUrl: './mostrarhttpspotify.component.html',
+  styleUrls: ['./mostrarhttpspotify.component.css']
+})
+export class MostrarhttpspotifyComponent implements OnInit {{c}}
+
+  <b><abbr title="Definimos variable que cogemos para que en el ngIf muestre o no">variable_loading</abbr>: boolean;</b>
+
+  nuevasCanciones: any[] = [];
+
+  constructor( private variable_servicio: ServiciospotifyService) {{c}}
+
+    <b>this.variable_loading = <abbr title="True para que lo muestre y se pone aquí para que sea antes de cargar los datos que se realiza con this.variable_servicio.get_spotify()...">true</abbr>;</b>
+
+
+      this.variable_servicio.get_spotify()
+                            .subscribe( (datoRecibido: any) => {{c}}
+
+            console.log(datoRecibido);
+            this.nuevasCanciones = datoRecibido;
+
+            <b>this.variable_loading = <abbr title="False para que desaparezca cuando acabe de cargar -> this.variable_servicio.get_spotify().subscribe...">false</abbr> ;</b>
+      });
+
+   }
+
+  ngOnInit(): void {{c}}
+  }
+
+}
+</pre>
+                </div>
+            </div>
+          <div class="card text-dark bg-warning m-3">
+              <div class="card-body"><h3>Componente.Html</h3>
+                <pre class="card-text">{{co}}app-loadingspotify <b>{{f}}<abbr title="Al no poner ! significa que mientras sea correcto, se mostrará hasta que no lo sea, es decir, en Ts se define con true y false cuando ocurre esto">ngIf</abbr>="variable_loading"</b>>{{co}}/app-loadingspotify>
+            
+{{co}}app-tarjetasspotify {{t}}dato_entre_tarjeta_mostrar]="nuevasCanciones">{{co}}/app-tarjetasspotify></pre>
+              </div>
+          </div>
+      </div>
+  
+  
+  
+          </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+ </div>
+</div>
+

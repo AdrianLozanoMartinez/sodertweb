@@ -142,6 +142,9 @@ import { DeudasComponent } from './paginas/deudas/deudas.component';
 import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component';
 
 
+import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
+
+
 
 export const appRoutes: Routes = [
   //Componentes - Especiales
@@ -215,6 +218,7 @@ export const appRoutes: Routes = [
   { path: 'buscador2/:termino_buscar', component: BuscadorComponent},
   { path: 'tarjeta', component: TarjetaComponent},
   { path: 'tarjeta2', component: Tarjeta2Component},
+  { path: 'artist/:id', component: ArtistaComponent },
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

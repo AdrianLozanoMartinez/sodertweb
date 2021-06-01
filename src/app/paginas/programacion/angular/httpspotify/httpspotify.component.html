@@ -1,0 +1,635 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify0-tab" data-toggle="pill" href="#pills-angularspotify0" role="tab" aria-controls="pills-angularspotify0" aria-selected="false" style="color: black;">Petición Http<br><small>País</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify-tab" data-toggle="pill" href="#pills-angularspotify" role="tab" aria-controls="pills-angularspotify" aria-selected="true" style="color: black;">Web -><br><small>Spotify</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify8-tab" data-toggle="pill" href="#pills-angularspotify8" role="tab" aria-controls="pills-angularspotify8" aria-selected="false" style="color: black;">Conexión<br><small>Spotify</small></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-angularspotify5-tab" data-toggle="pill" href="#pills-angularspotify5" role="tab" aria-controls="pills-angularspotify5" aria-selected="false" style="color: black;">Mostrar Todo<br><small>Map - Observable - Pipe</small></a>
+  </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify2-tab" data-toggle="pill" href="#pills-angularspotify2" role="tab" aria-controls="pills-angularspotify2" aria-selected="false" style="color: black;">Búsqueda<br><small>Map - Observable - Pipe</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify4-tab" data-toggle="pill" href="#pills-angularspotify4" role="tab" aria-controls="pills-angularspotify4" aria-selected="false" style="color: black;">Mostrar Uno <br><small>(Artista)</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify1-tab" data-toggle="pill" href="#pills-angularspotify1" role="tab" aria-controls="pills-angularspotify1" aria-selected="false" style="color: black;">Mostrar Uno - TOP tracks<br>de un artista</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify3-tab" data-toggle="pill" href="#pills-angularspotify3" role="tab" aria-controls="pills-angularspotify3" aria-selected="false" style="color: black;">Mostrar Uno - Widgets</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify22-tab" data-toggle="pill" href="#pills-angularspotify22" role="tab" aria-controls="pills-angularspotify22" aria-selected="false" style="color: black;">Manejo de errores</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify12-tab" data-toggle="pill" href="#pills-angularspotify12" role="tab" aria-controls="pills-angularspotify12" aria-selected="false" style="color: black;">Css<br><small>Opcional</small></a>
+    </li>
+    <button class="btn btn-danger m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-angularspotify" role="tabpanel" aria-labelledby="pills-angularspotify-tab">
+        
+        <div class="card-group">
+          <div class="card text-dark bg-success m-3 border-0">
+              <div class="card-header"><h3>Spotify <a href="https://developer.spotify.com/" style="color: white;"><u>Web</u></a></h3>
+                  <pre class="card-text"><ul><li><h4>Registrar/Longearse</h4><ol><li><b><a href="https://developer.spotify.com/dashboard/" style="color: white;"><u>API (Dashboard)</u></a></b></li><li><b>Log in</b> -> <b>Create an app</b><ul><li><b>App name</b>: Nombre de aplicación</li><li><b>App description</b>: Descripción</li><li>Aceptar - I understand that I will need permission from Spotify before using this app in a commercial project</li><li>Aceptar -I  understand and agree with Spotify's Developer Terms of Service and Branding Guidelines</li></ul></li><li>Create</li><li>Client ID <b>7b868e5b655447c8b6ab2331f6747ae4</b>
+Client Secret <b>2b6838cfce5b4f8791cb774ad88f454e</b> </li></ol></li>
+<li><h4>Uso <a href="https://developer.spotify.com/documentation/" style="color: white;"><u>Web</u></a></h4><ul><li><b><a href="https://developer.spotify.com/documentation/web-api/" style="color: white;"><u>Web API</u></a></b> -> <a href="https://developer.spotify.com/documentation/web-api/guides/" style="color: white;"><u>Guía</u></a> -> <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" style="color: white;"><u>Authorization Guide</u></a>
+<ol><li><a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" style="color: white;"><u>Client Credentials Flow</u> - <b>GENERAR el TOKEN</b>   |   <b>WEB + POSTMAN</b></a><ul><li><b>Copiamos: https://accounts.spotify.com/api/token</b> y <b>Pegamos en: POSTMAN</b> como <b>POST</b></li><li><b>Body</b> -> <b>x-www-form-urlencoded</b></li><li>Key -> <b>grant_type</b>    |     Value -> <b>client_credentials</b></li><li>Key -> <b>client_id</b>    |     Value -> <b>7b868e5b655447c8b6ab2331f6747ae4</b></li><li>Key -> <b>client_secret</b>    |     Value -> <b>2b6838cfce5b4f8791cb774ad88f454e</b><li><b>Send</b>: Resultado -> {{c}}"access_token":"BQDrA1AAT0D3TBVT-pfZ_q7TO6wWxNo4Kn5JSU0-pHj03xNW678TFtu7prj9Igbb3clDgkWhmg1sJpG7KTQ","token_type":"Bearer","expires_in":<b><abbr title="Expira en una hora">3600</abbr></b>}</li><li><b>Save</b></li></ul></li>
+<li><b>Spotify nos DA el TOKEN</b> - <b>CONEXIÓN con Spotify</b>  |   <b>Web</b><ol><li><b><a href="https://developer.spotify.com/console/" style="color: white;"><u>Web console</u></a></b> -> <a href="https://developer.spotify.com/console/browse/" style="color: white;"><u>Browse</u></a> -> Tenemos varias opciones, dependiendo lo que queramos usar</li><li><b>Get   <a href="/v1/browse/new-releases" style="color: white;">/v1/browse/new-releases</a> </b> -> Podemos dar clic sobre el enlace y nos lleva a una página para hacer pruebas
+<ul><li>En la web<ul><li><b>country</b> -> Especificar país</li><li><b>limit</b> -> Límite de registro (En este caso 20)</li><li><b>offset</b> -> Cuanto registro a partir del que indiquemos</li><li><b>OAuth Token</b> -> Get token -> Request token -> Acepto -> <b>BQCJSheAQlmVyasTRZjdD6f-af0eS7bHIOsq7L8X_6CZtSHs5ddwgL0rHRaRSHhV8xJsU_4ER-f7JIIoxYaYmTSureoQwgwZ4GebmopW1c0M9Xre2eUWE71S9I9eVVEP1OqxiX0BIfDXRl3dzxxD_wQ4uqiCil4</b> -> Try it</li></ul></li>
+<li>En el Postman<ul><li>Copiamos <b>https://api.spotify.com/v1/browse/new-releases</b> -> Pegamos en <b>Postman</b> -> <b>GET https://api.spotify.com/v1/browse/new-releases</b></li><li>Headers</li><li>Key -> <b>Authorization</b></li><li>Value -> <b>Bearer BQClx5JCtIH2JCfxI8LEW6yjOmd1XeOLMRKJlLlCrw45c2hSYhvSWu4tWQi3KFOBJyDli_4L5XNlRg_DCqM</b> (Bearer+espacio+token -> El token caduca a la hora, se puede volver a generar)</li><li><b>Send</b> -> Vemos el resultado:{{c}}
+    "albums": {{c}}
+        "href": "https://api.spotify.com/v1/browse/new-releases?offset=0&limit=20",     -> <b>Servicio que se acaba de llamar, 20 registros</b>
+	"items":[...
+ 	],
+        "limit": 20,
+        "next": "https://api.spotify.com/v1/browse/new-releases?offset=20&limit=20",     -> <b>Siguiente servicio que se va a llamar, siguientes 20 registros</b>
+        "offset": 0,
+        "previous": null,
+        "total": 100    -> <b>Total de registros</b>
+   	 }
+}</li></ul></li></ul></ol></li>
+<li><b>USAMOS el TOKEN y la INFORMACIÓN que nos DE el cliente</b></li>
+<li><b>Spotify nos DEVUELVE información en JSON</b></li></ol></li>
+<li><b><a href="https://developer.spotify.com/documentation/widgets/" style="color: white;"><u>Widgets</u></a></b></li></ul></li></ul></pre>
+              </div>
+          </div>
+      </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-angularspotify0" role="tabpanel" aria-labelledby="pills-angularspotify0-tab"><app-peticionhttp></app-peticionhttp></div>
+    
+    
+    <div class="tab-pane fade" id="pills-angularspotify8" role="tabpanel" aria-labelledby="pills-angularspotify8-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3 border-0">
+                <div class="card-header"><h3>App.module.ts</h3>
+                    <pre class="card-text">//Ya creado. Se añade automáticamente pero se borra manualmente
+  import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
+
+  //Conexión con app.routing.ts - Enlazar páginas
+  import {{c}} routing, appRoutingProviders } from './app.routing';
+  
+  //Componentes - Automático
+  import {{c}} AppComponent } from './app.component';
+
+  //Componentes - Páginas añadir después de crearlas
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+  //Servicio
+  <b>import {{c}} ServiciospotifyService } from './paginas/programacion/angular/httpspotify/servicio/serviciospotify.service';   //NO ES NECESARIO si en el servicio se incluye <u>providedIn: 'root'</u></b>
+  
+  @NgModule({{c}}
+      declarations: [
+        //Por defecto
+        AppComponent,
+        //Componentes - Páginas añadir después de crearlas
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        //Por defecto
+        BrowserModule,
+        //Conexión con app.routing.ts - Enlazar páginas
+        routing
+      ],
+       providers: [
+        //Conexión con app.routing.ts - Enlazar páginas
+        appRoutingProviders<b>,</b>
+        //Servicio
+        <b>ServiciospotifyService       //NO ES NECESARIO si en el servicio se incluye <u>providedIn: 'root'</u></b>
+       ],
+        //Por defecto - Librería
+        bootstrap: [AppComponent]
+   })
+    //Por defecto
+    export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3 border-0">
+                <div class="card-header"><h3>Servicio</h3>
+                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} <abbr title="Importamos los servicios http, para la conexión con la API de spotify">HttpClient</abbr>, <abbr title="Existen API que piden que se le envíe un Token u otra cosa, en este caso el Headers que ya vimos en el Postman antes">HttpHeaders</abbr> } from '@angular/common/http';</b>
+
+@Injectable({{c}}<b>
+  <abbr title="Si lo quitamos tenemos que añadir el servicio en el app.module.ts. Versiones antiguas de Angular no venía">providedIn: 'root'</abbr>    
+})</b>
+export class ServiciospotifyService {{c}}
+
+  constructor( <b>private <abbr title="Metemos en la variable las funciones del http">variable_http</abbr>: HttpClient</b> ) {{c}}
+
+<b>  <abbr title="Función creada para coger los datos de la API de spotify, usando para ello el get">get_spotify</abbr> () {{c}}
+
+
+    const <abbr title="Creamos constante, debe tener el mismo nombre, ya que he probado otro y da error. Sirve para meter el servicio HttpHeader en la constante, es decir, Authorization y Bearer que veíamos en el Postman">headers</abbr> = new HttpHeaders({{c}}
+        '<abbr title="En el Postman lo poníamos en la key">Authorization</abbr> ': '<abbr title="Este y el código largo lo poníamos en el Postman en el Value">Bearer</abbr> <abbr title="Este código cambia a la hora, lo hemos sacado en la secuencia que hicimos con el Postman, en la pestaña Web -> Client Credentials Flow - GENERAR el TOKEN">BQCKjX5LOkOb1dKNgl3NniZL1TrPfkebiEQQV31gpWS5boKxjzPilXIYSpdy7NFVl39SoOezsJzIaXUmD6A</abbr>'
+      });
+
+    this.variable_http.get('https://api.spotify.com/v1/browse/new-releases?limit=20', {{c}} <abbr title="Aquí es donde metemos el headers definido como constante arriba, con los códigos">headers</abbr> })
+    .<abbr title="Nos subscribimos para obtener los datos de la API">subscribe</abbr>( dato_recibido => {{c}}
+      console.log(dato_recibido);
+    })
+  }}</b>
+
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3 border-0">
+                <div class="card-header"><h3>Componente.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} <abbr title="Insertamos el servicio para conectarnos al API de spotify">ServiciospotifyService</abbr> } from './servicio/serviciospotify.service';</b>
+
+@Component({{c}}
+  selector: 'app-httpspotify',
+  templateUrl: './httpspotify.component.html',
+  styleUrls: ['./httpspotify.component.css']
+})
+export class HttpspotifyComponent implements OnInit {{c}}
+
+  constructor( <b>private variable_servicio: ServiciospotifyService</b> ) {{c}} 
+    <b>this.variable_servicio.get_spotify();</b>
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    
+    <div class="tab-pane fade" id="pills-angularspotify5" role="tabpanel" aria-labelledby="pills-angularspotify5-tab"><app-mostrarhttpspotify></app-mostrarhttpspotify></div>
+
+
+    <div class="tab-pane fade" id="pills-angularspotify2" role="tabpanel" aria-labelledby="pills-angularspotify2-tab"><app-search></app-search></div>
+    
+    <div class="tab-pane fade" id="pills-angularspotify4" role="tabpanel" aria-labelledby="pills-angularspotify4-tab"><app-artistaguia></app-artistaguia></div>
+    
+    
+    <div class="tab-pane fade" id="pills-angularspotify1" role="tabpanel" aria-labelledby="pills-angularspotify1-tab">
+        
+       <u> <a href="https://developer.spotify.com/console/" style="color: black;">Console</a> -> <a href="https://developer.spotify.com/console/artists/" style="color: black;">Artist</a> -> <a href="https://developer.spotify.com/console/get-artist-top-tracks/" style="color: black;">Get an Artist's Top Tracks</a></u> -> 1º Probar en Postman
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Servicio</h3>
+                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders } from '@angular/common/http';
+import {{c}} map } from 'rxjs/operators';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciospotifyService {{c}}
+
+  constructor( private variable_http: HttpClient ) {{c}}}
+
+
+   getQuery_UnificarDatos( variable_query: string ){{c}}
+
+    const url = `https://api.spotify.com/v1/${{c}} variable_query }`;
+
+    const headers = new HttpHeaders({{c}}
+      'Authorization': 'Bearer BQBbojHw3cXQIp82IyMYdSXJh-jfYw-f4O_skp-nxOiI0bdkfeE3PE9p-DODXzU8KWygJlOEavglWTQeIDk'
+    });
+
+    return this.variable_http.get(url, {{c}} headers });
+
+   }
+
+
+   get_spotify() {{c}}
+
+      return this.getQuery_UnificarDatos('browse/new-releases?limit=20')
+                              .pipe ( map (datoEnBruto =>  datoEnBruto['albums'].items)); 
+    }
+
+
+   getArtista( terminoRecibido: String ) {{c}}
+
+    return this.getQuery_UnificarDatos(`search?q=${{c}}terminoRecibido}&type=artist&offset=15`)
+                               .pipe ( map (datoEnBruto =>  datoEnBruto['artists'].items)); 
+   }
+
+
+
+   getArtistaUNartista( id: String ) {{c}}    //https://api.spotify.com/v1/artists/{{c}}id} 
+
+    return this.getQuery_UnificarDatos(`artists/${{c}}id}`);
+   }
+
+
+   <b>getTopTracks( id: String ) {{c}}    
+
+    return this.getQuery_UnificarDatos(`artists/${{c}}id}/top-tracks<abbr title="hay que añadir el idioma, lo suyo es probar primero en la web y copiar la dirección como vemos aquí">?market=ES</abbr>`)
+                              .pipe ( map (datoFiltradoPorMapPipe =>  datoFiltradoPorMapPipe['<abbr title="Como viene en spotify que lo vemos en consola"></abbr>']));
+   }</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Artista.Css</h3>
+                    <pre class="card-text">.img-thumb{{c}}
+    width: 50px;
+    height: 50px;
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Artista.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ActivatedRoute } from '@angular/router';   
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+
+@Component({{c}}
+  selector: 'app-artista',
+  templateUrl: './artista.component.html',
+  styleUrls: ['./artista.component.css']
+})
+export class ArtistaComponent implements OnInit {{c}}
+
+  loadingArtist: boolean;
+
+  artista_variable_Arreglo: any = {{c}}};
+
+  <b>topTracks_variable: any[] = [];</b>
+
+  constructor( private variable_activaterouter: ActivatedRoute,
+               private servicio_spotify: ServiciospotifyService ) {{c}} 
+
+    this.variable_activaterouter.params.subscribe ( variableRecibido =>{{c}}
+
+
+      this.loadingArtist = true;
+
+      console.log(variableRecibido);
+
+      console.log(variableRecibido ['id']);  
+   
+
+
+      
+      this.getUNSOLOartista ( variableRecibido['id'] );
+
+      
+      <b>this.<abbr title="Coge el tracks específico (id)">getTopTracksTs</abbr>( variableRecibido['id'] );</b>
+      
+   
+   
+    });
+
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  getUNSOLOartista ( recibir_ID: string ){{c}}   
+
+
+    this.loadingArtist = true;
+
+
+    this.servicio_spotify.getArtistaUNartista( recibir_ID )   
+                         .subscribe ( respuesta_artista => {{c}}
+                            console.log(respuesta_artista);
+                            
+                            this.artista_variable_Arreglo = respuesta_artista;  
+                      
+                            this.loadingArtist = false;
+                      
+                      
+                      
+                          });
+  }
+
+
+  <b>getTopTracksTs ( id: string ){{c}}
+    this.servicio_spotify.getTopTracks( id )
+                        .<abbr title="Nos subscribimos para coger los datos">subscribe</abbr>( recibirtoptracks => {{c}}
+                          console.log(recibirtoptracks);
+                          
+                          this.<abbr title="Metemos en la variable los tracks recibidos">topTracks_variable</abbr> = recibirtoptracks;
+                        });
+  }</b>
+
+}
+</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Artista.Html</h3>
+                    <pre class="card-text">{{co}}div class="row m-5">
+
+  {{co}}div class="col">
+
+    {{co}}div class="table">
+
+      {{co}}thead>
+
+        {{co}}tr>
+          {{co}}th>Foto{{co}}/th>
+          {{co}}th>Album{{co}}/th>
+          {{co}}th>Canción{{co}}/th>
+          {{co}}th>Vista Previa{{co}}/th>
+        {{co}}/tr>
+
+      {{co}}/thead>
+
+      {{co}}tbody>
+
+        <b>{{co}}tr {{f}}ngFor="let variable_local_Tracks of <abbr title="Variable del Ts">topTracks_variable</abbr>">
+            {{co}}td>
+              {{co}}img {{t}}src]="variable_local_Tracks.<abbr title="Definido por spotify en consola lo vemos">album.images</abbr> | <abbr title="Pipe">pipespotify</abbr>" class="<abbr title="Css poner imagen chica">img-thumb</abbr>">
+            {{co}}/td>
+            {{co}}td>{{c}}{{c}} variable_local_Tracks.<abbr title="Definido por spotify en consola lo vemos">album.name</abbr> }}{{co}}/td>
+            {{co}}td>{{c}}{{c}} variable_local_Tracks.<abbr title="Definido por spotify en consola lo vemos">name</abbr> }}{{co}}/td>
+            {{co}}td>
+              {{co}}audio {{t}}src]="variable_local_Tracks.<abbr title="Definido por spotify en consola lo vemos">preview_url</abbr>" controls>{{co}}/audio></b>
+          {{co}}/td>
+        {{co}}/tr>
+
+      {{co}}/tbody>
+
+    {{co}}/div>
+
+  {{co}}/div>
+
+{{co}}/div></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-angularspotify3" role="tabpanel" aria-labelledby="pills-angularspotify3-tab">
+        
+        <u> <a href="https://developer.spotify.com/documentation/" style="color: black;">Doc</a> -> <a href="https://developer.spotify.com/documentation/widgets/" style="color: black;">Widgets</a> -> <a href="https://developer.spotify.com/documentation/widgets/guides/adding-a-widget/" style="color: black;">Adding a Widget</a> -> <a href="https://developer.spotify.com/documentation/widgets/guides/adding-a-widget/#standard-html-pages" style="color: black;">Standard HTML Pages</a> -> <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" style="color: black;">Spotify Embed</a></u> -> Elegimos: Compact (default) -> Copiamos iframe
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Pipe</h3>
+                    <pre class="card-text">import {{c}} Pipe, PipeTransform } from '@angular/core';
+<b>import {{c}} <abbr title="Coge el url y limpiarlo o validar">DomSanitizer</abbr> } from '@angular/platform-browser';</b>
+
+@Pipe({{c}}
+  name: '<b>pipeDomSeguro</b>'
+})
+export class PipeDomSeguroPipe implements PipeTransform {{c}}
+
+  constructor ( <b>private variable_DomSanitizer: DomSanitizer</b>) {{c}}}
+
+
+  <b>transform(<abbr title="Uri de spotify, lo obtenemos en la dirección de arriba">value</abbr>: string): any {{c}}
+
+    const <abbr title="Obtenemos de spotify, de la dirección de arriba">url</abbr>= 'https://open.spotify.com/embed?uri=';
+
+    return this.variable_DomSanitizer.<abbr title="Si confiamos en el url. Retorna un SafeResourceUrl, lo vemos al ponernos encima de bypassSecurityTrustResourceUrl. Nos permite pasar la seguridad de un url de confianza">bypassSecurityTrustResourceUrl</abbr> ( <abbr title="Concatenamos url + value para que coja la dirección fija más la de cada elemento en el for del html, ese elemento que se coge se ve en consola al llamar spotify">url + value</abbr> );
+  }</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Artista.Html</h3>
+                    <pre class="card-text">{{co}}div class="row m-5">
+
+  {{co}}div class="col">
+
+    {{co}}div class="table">
+
+      {{co}}thead>
+
+        {{co}}tr>
+          {{co}}th>Foto{{co}}/th>
+          {{co}}th>Album{{co}}/th>
+          {{co}}th>Canción{{co}}/th>
+          {{co}}th>Vista Previa{{co}}/th>
+        {{co}}/tr>
+
+      {{co}}/thead>
+
+      {{co}}tbody>
+
+        {{co}}tr {{f}}ngFor="let variable_local_Tracks of topTracks_variable">
+          {{co}}td>
+            {{co}}img {{t}}src]="variable_local_Tracks.album.images | pipespotify" class="img-thumb">
+          {{co}}/td>
+          {{co}}td>{{co}}{{co}} variable_local_Tracks.album.name }}{{co}}/td>
+          {{co}}td>{{co}}{{co}} variable_local_Tracks.name }}{{co}}/td>
+          {{co}}td>
+            <b>{{co}}!-- {{co}}<abbr title="Funciona, pero es etiqueta más fea, html5">audio</abbr> {{t}}src]="variable_local_Tracks.preview_url" controls>{{co}}/audio> -->
+              {{co}}!-- https://open.spotify.com/embed<abbr title="Cambiamos /album/ por ?uri=">/album/</abbr><abbr title="Lo eliminamos porque lo cogemos con el PIPE">1DFixLWuPkv3KT3TnV35m3</abbr>
+              {{co}}iframe {{t}}src]="variable_local_Tracks.<abbr title="uri lo manda spotify y lo vemos en la consola, es la dirección específica">uri</abbr> | <abbr tittle="Llama al pipe para llamar a la dirección, fija + de cada uno">pipeDomSeguro</abbr>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">{{co}}/iframe></b>
+          {{co}}/td>
+        {{co}}/tr>
+
+      {{co}}/tbody>
+
+    {{co}}/div>
+
+  {{co}}/div>
+
+{{co}}/div></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-angularspotify12" role="tabpanel" aria-labelledby="pills-angularspotify12-tab">
+      
+        <div class="card-group">
+            <div class="card text-dark bg-info m-3 border-0">
+                <div class="card-header">
+                    <pre class="card-text">/* You can add global styles to this file, and also import other style files */
+
+body {{c}}
+    background-color: black;
+    color: white !important;
+}
+
+hr {{c}}
+    border-color: white;
+}
+
+<b>.puntero {{c}}
+    cursor: pointer;
+}</b>
+
+<b>.img-circle {{c}}
+  border-radius: 100%;
+  width: 150px;
+}</b>
+
+.card-title,
+.card-text {{c}}
+    color: black;
+}
+
+.badge {{c}}
+    margin-left: 5px;
+}
+
+.btn-outline-success {{c}}
+    margin-left: 5px;
+}
+
+<b>.img-thumb {{c}}
+  width: 50px;
+  height: 50px;
+}</b>
+
+
+/* Animaciones */
+
+.animated {{c}}
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {{c}}
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {{c}}
+    from {{c}}
+        opacity: 0;
+    }
+    to {{c}}
+        opacity: 1;
+    }
+}
+
+.fadeIn {{c}}
+    animation-name: fadeIn;
+}</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-angularspotify22" role="tabpanel" aria-labelledby="pills-angularspotify22-tab">
+        
+                <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Mostrar.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+
+@Component({{c}}
+  selector: 'app-mostrarhttpspotify',
+  templateUrl: './mostrarhttpspotify.component.html',
+  styleUrls: ['./mostrarhttpspotify.component.css']
+})
+export class MostrarhttpspotifyComponent implements OnInit {{c}}
+
+  variable_loading: boolean;
+
+  nuevasCanciones: any[] = [];
+
+  <b>variable_error: boolean;</b>   //
+
+  <b>variable_mensaje_error: string;</b> //
+
+  constructor( private variable_servicio: ServiciospotifyService) {{c}}
+
+    this.variable_loading = true;
+
+    <b>this.variable_error = false;</b>  //
+
+      this.variable_servicio.get_spotify()
+                            <b>.subscribe</b>( (datoRecibido: any) => {{c}}     //Subscribe tiene dos funciones, la 1º es lo correcto y la segunda el error
+
+            console.log(datoRecibido);    //<b>Correcto</b>
+            this.nuevasCanciones = datoRecibido;
+            this.variable_loading = false;
+      }<b>, ( error_recibido ) => {{c}} //Error
+  
+        this.variable_error = true; //
+
+        this.variable_loading = false; //
+        
+        console.log(error_recibido);  //
+
+        console.log(error_recibido.error.error.message);  //Si miramos en consola veremos (HttpErrorResponse {{c}}headers: HttpHeaders, status...) dentro de él error, y dentro de este error, vemos message -> El mensaje que sale es: Only valid bearer authentication supported (Porque para ver el error hemos quitado la B del token en el servidor, para ver el mensaje error)
+        
+        this.variable_mensaje_error = error_recibido.error.error.message;  //Lo metemos en variable para msotrarlo en html
+      }    </b>
+
+      );
+
+   }
+
+  ngOnInit(): void {{c}}
+  }
+
+}
+</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Mostrar.Html</h3>
+                    <pre class="card-text">{{co}}app-loadingspotify {{f}}ngIf="variable_loading">{{co}}/app-loadingspotify>
+            
+
+{{co}}div {{f}}ngIf="<abbr title="Si es true, es decir, si hay error, muestra este mensaje">variable_error</abbr>" class="alert alert-danger">
+  {{co}}h3>Error{{co}}/h3>
+  {{co}}p>{{c}}{{c}} <abbr title="Mostramos el error que nos sale en consola, gracias a la variable declarada y sacado error en el Ts">variable_mensaje_error</abbr> }}{{co}}/p>
+{{co}}/div>
+
+
+{{co}}app-tarjetasspotify {{t}}dato_entre_tarjeta_mostrar]="nuevasCanciones">{{co}}/app-tarjetasspotify></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+

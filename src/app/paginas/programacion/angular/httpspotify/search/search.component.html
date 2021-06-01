@@ -1,0 +1,440 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-searchspotify1-tab" data-toggle="pill" href="#v-pills-searchspotify1" role="tab" aria-controls="v-pills-searchspotify1" aria-selected="false">Web</a>
+        <a class="nav-link" id="v-pills-searchspotify2-tab" data-toggle="pill" href="#v-pills-searchspotify2" role="tab" aria-controls="v-pills-searchspotify2" aria-selected="false">Servicio</a>
+        <a class="nav-link" id="v-pills-searchspotify3-tab" data-toggle="pill" href="#v-pills-searchspotify3" role="tab" aria-controls="v-pills-searchspotify3" aria-selected="false">Componente.Ts</a>
+        <a class="nav-link" id="v-pills-searchspotify4-tab" data-toggle="pill" href="#v-pills-searchspotify4" role="tab" aria-controls="v-pills-searchspotify4" aria-selected="false">SIN PIPE / Componente.Html</a>
+        <a class="nav-link" id="v-pills-searchspotify5-tab" data-toggle="pill" href="#v-pills-searchspotify5" role="tab" aria-controls="v-pills-searchspotify5" aria-selected="false">CON PIPE / Componente.Html</a>
+        <a class="nav-link" id="v-pills-searchspotify6-tab" data-toggle="pill" href="#v-pills-searchspotify6" role="tab" aria-controls="v-pills-searchspotify6" aria-selected="false">Centralizamos <small>iguales códigos<br>(Componente.Html - Con tarjetas)</small></a>
+        <a class="nav-link" id="v-pills-searchspotify7-tab" data-toggle="pill" href="#v-pills-searchspotify7" role="tab" aria-controls="v-pills-searchspotify7" aria-selected="false">Loading / - Componente.Ts/Html</a>
+        <a class="nav-link" id="v-pills-searchspotify0-tab" data-toggle="pill" href="#v-pills-searchspotify0" role="tab" aria-controls="v-pills-searchspotify0" aria-selected="false">Resultado</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-searchspotify0" role="tabpanel" aria-labelledby="v-pills-searchspotify0-tab">
+
+
+                <!-- BUSCADOR -->
+ <div class="row">
+  <div class="col">
+      <input type="text" #terminoBuscar (keyup)="buscar(terminoBuscar.value)" class="form-control m-5" placeholder="Buscar artista..." style="width: 500px;">
+      <!-- value coge el valor de lo que introducimos, # convierte en variable local y coge el termino escrito y lo metemos en la función para realizar la búsqueda -->
+  </div>
+</div>
+
+                <br>
+
+                <h3 style="color: black;">Mostrar búsqueda</h3>                
+
+
+                <!--Loading-->
+                <app-loadingspotify *ngIf="variable_LoadingBuscar"></app-loadingspotify>
+
+
+                <!-- MOSTRAR RESULTADO -->
+                <app-tarjetasspotify *ngIf="!variable_LoadingBuscar" [dato_entre_tarjeta_mostrar]="artistas_variable"></app-tarjetasspotify>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-searchspotify1" role="tabpanel" aria-labelledby="v-pills-searchspotify1-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-success m-3">
+                <div class="card-body"><h3>Web</h3>
+                    <pre class="card-text"><ul><li><a href="https://developer.spotify.com/console/search/"><u>Web</u></a><ul><li><a href="https://developer.spotify.com/console/get-search-item/"><u>Prueba en web</u></a>
+<b>q *</b> -> Eminem <small>(Artista)</small>
+<b>type *</b> -> Artist <small>(Tipo de información que buscamos)</small>
+<b>limit</b> -> 15 <small>(Límite que queremos que salga)</small>
+<b>offset</b> -> 0 <small>(A partir de que posición mostrar)</small>
+<b>OAuth Token</b> -> BQDrKyfuha01eR6Yq9VL4Zy3Dlj1Y8WgjWYHxey1ErcVvFQAQyKsRBVBbwn5GeHYPiQTldhinLGQWtWmtI0GuBqCwGiPE3hJYwd4TvjwZxmp05qwalMTb_mTVYFu5NDhbjCxa7zAkbgfTpNNQrBh9uGX2s8JF-0 <small>(Token generado, si da error hay que volver a generar -> <b>Get token -> Request Token -> Acepto</b>)</small>
+<b>Try it</b></li></ul></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify2" role="tabpanel" aria-labelledby="v-pills-searchspotify2-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Servicio <small>Más extenso | NO RECOMENDABLE</small></h3>
+                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders } from '@angular/common/http';
+<b>import {{c}} <abbr title="Actúa como un aspersor, coge toda la información y saca solo lo que necesitamos">map</abbr> } from 'rxjs/operators';</b>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciospotifyService {{c}}
+
+  constructor( private variable_http: HttpClient ) {{c}}
+
+   }
+
+   get_spotify() {{c}}
+
+    const headers = new HttpHeaders({{c}}
+      'Authorization': 'Bearer BQCDrgKGuHULrqCArynUaeDRdxgw2iJaq4xp_AIBCrooV1oLJB4B-uX8qUyNpxUWwSfCgWxbC8yWLj4wE8Q'
+    });
+
+    <b> return this.variable_http.get('https://api.spotify.com/v1/browse/new-releases?limit=20', {{c}} headers })</b>
+
+                  <b>.<abbr title="transforma la información">pipe</abbr> ( <abbr title="filtra la información. Recibe map una función o dato en bruto, retornamos la información que queremos sacar del dato en bruto, como los items de los albums">map</abbr> (datoEnBruto =>  datoEnBruto['<abbr title="Busque una propiedad en los datos que ponga albums y dentro del albums los items">albums</abbr>'].items));</b>
+   }
+
+
+  <b> getArtista( terminoRecibido: String ) {{c}}
+
+    const headers = new HttpHeaders({{c}}
+      'Authorization': 'Bearer <abbr title="Esto va cambiando cada hora, hasta que lo pongamos que lo haga automático, ahora lo vamos cambiando con el Postman como mostramos en la pestaá Web">BQCDrgKGuHULrqCArynUaeDRdxgw2iJaq4xp_AIBCrooV1oLJB4B-uX8qUyNpxUWwSfCgWxbC8yWLj4wE8Q</abbr>'
+    });
+
+     return this.variable_http.get(`https://api.spotify.com/v1/search?q=<abbr title="Quitamos Eminen que es lo que pusimos en la búsqueda de la web y ponemos el ${{c}}terminoRecibido}">${{c}}terminoRecibido}</abbr><abbr title="Tipo, en este caso artista">&type</abbr>=artist&offset=<abbr title="Número que se va a mostrar">15</abbr>`, {{c}} headers })
+
+     <b>.<abbr title="transforma la información">pipe</abbr> ( <abbr title="filtra la información. Recibe map una función o dato en bruto, retornamos la información que queremos sacar del dato en bruto, como los items de los artists">map</abbr> (datoEnBruto =>  datoEnBruto['<abbr title="Busque una propiedad en los datos que ponga artists y dentro del artists los items">artists</abbr>'].items));</b>
+   }</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-danger">
+                    <div class="card-body"><h3>Servicio <small>Centralizar/Simplificar | RECOMENDABLE</small></h3>
+                        <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders } from '@angular/common/http';
+<b>import {{c}} <abbr title="Actúa como un aspersor, coge toda la información y saca solo lo que necesitamos">map</abbr> } from 'rxjs/operators';</b>
+
+@Injectable({{c}}
+  providedIn: 'root   
+})
+export class ServiciospotifyService {{c}}
+
+  constructor( private variable_http: HttpClient ) {{c}}
+
+
+  <b><abbr title="Centralizamos en esta función todo lo que sea igual de las demás funciones o próximas funciones">getQuery_UnificarDatos</abbr> ( variable_query: string ){{c}}
+
+    const <abbr title="Metemos la dirección igual en todas y que no varía, y ponemos una variable para la parte diferente, de ese modo la variable url sirve para todo">url</abbr> = `https://api.spotify.com/v1/${{c}} variable_query }`;
+
+    const headers = new HttpHeaders({{c}}
+    'Authorization': 'Bearer <abbr title="Esto va cambiando cada hora, hasta que lo pongamos que lo haga automático, ahora lo vamos cambiando con el Postman como mostramos en la pestaá Web">BQCDrgKGuHULrqCArynUaeDRdxgw2iJaq4xp_AIBCrooV1oLJB4B-uX8qUyNpxUWwSfCgWxbC8yWLj4wE8Q</abbr>'
+    });
+
+    return this.<abbr title="La variable saca lo que obtenemos del url (la dirección + la parte diferente que se verá en cada función) y la función headers para usarlo en las funciones de abajo (get_spotify y getArtista">variable_http</abbr>.get(url, {{c}} headers });
+
+   }</b>
+
+
+     get_spotify() {{c}}
+
+    <b> return this.<abbr title="Llama a la función de arriba, incluye la parte igual y hace token a spotify">getQuery_UnificarDatos</abbr> ('<abbr title="Parte diferente que se une al que es igual">browse/new-releases?limit=20</abbr>')</b>
+                  <b>.<abbr title="transforma la información">pipe</abbr> ( <abbr title="filtra la información. Recibe map una función o dato en bruto, retornamos la información que queremos sacar del dato en bruto, como los items de los albums">map</abbr> (datoEnBruto =>  datoEnBruto['<abbr title="Busque una propiedad en los datos que ponga albums y dentro del albums los items">albums</abbr>'].items));</b>
+   }
+
+
+  <b> getArtista( terminoRecibido: String ) {{c}}
+
+     return this.<abbr title="Llama a la función de arriba, incluye la parte igual y hace token a spotify">getQuery_UnificarDatos</abbr> (`<abbr title="Parte diferente que se une al que es igual">search?q=</abbr><abbr title="Quitamos Eminen que es lo que pusimos en la búsqueda de la web y ponemos el ${{c}}terminoRecibido}">${{c}}terminoRecibido}</abbr><abbr title="Tipo, en este caso artista">&type</abbr>=artist&offset=<abbr title="Número que se va a mostrar">15</abbr>`)
+                <b>.<abbr title="transforma la información">pipe</abbr> ( <abbr title="filtra la información. Recibe map una función o dato en bruto, retornamos la información que queremos sacar del dato en bruto, como los items de los artists">map</abbr> (datoEnBruto =>  datoEnBruto['<abbr title="Busque una propiedad en los datos que ponga artists y dentro del artists los items">artists</abbr>'].items));</b>
+   }</b>
+
+}</pre>
+                    </div>
+                </div>
+        </div>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify3" role="tabpanel" aria-labelledby="v-pills-searchspotify3-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Componente.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} <abbr title="Llama al servicio, para hacer conexión con Spotify">ServiciospotifyService</abbr> } from '../servicio/serviciospotify.service';</b>
+
+@Component({{c}}
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
+})
+export class SearchComponent implements OnInit {{c}}
+
+  <b><abbr title="Para manejar los artistas, en arreglo para sacar varios">artistas_variable</abbr>:any[] = [];</b>
+
+  constructor( <b>private variable_servicio: ServiciospotifyService</b>) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+ <b> buscar( terminoRecibido: string ){{c}}
+
+      console.log(terminoRecibido);
+
+      this.variable_servicio.<abbr title="Llamamos a la función que se encuentra en el servicio">getArtista</abbr>( terminoRecibido )
+                            .<abbr title="Nos subscribimos para obtener y mostrar los datos">subscribe</abbr>( (datoRecibido:any) => {{c}}
+                              console.log(datoRecibido.artists.items);
+
+                              //Sin map
+                              this.<abbr title="Metemos en la variable los datos recibido de la función del servidorm en esperial metemos los items de los artistas">artistas_variable</abbr>= datoRecibido.artists.items;
+
+                              //Con map
+                              this.<abbr title="Metemos en la variable los datos recibido de la función del servidorm en esperial metemos los items de los artistas">artistas_variable</abbr>= datoRecibido;
+                            });
+  }</b>
+
+
+}</pre>
+                </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify4" role="tabpanel" aria-labelledby="v-pills-searchspotify4-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Componente.Html SIN PIPE<small>(Error al intentar mostrar imágenes cuando no hay)</small></h3>
+                    <pre class="card-text">{{co}}!-- BUSCADOR -->
+{{co}}div class="row">
+    {{co}}div class="col">
+<b>        {{co}}input type="text" <abbr title="# convierte en variable local y coge el termino escrito y lo metemos en la función para realizar la búsqueda">#terminoBuscar</abbr> {{p}}keyup)="buscar(terminoBuscar.<abbr title="coge el valor de lo que introducimos">value</abbr>)" class="form-control" placeholder="Buscar artista..."></b>
+    {{co}}/div>
+{{co}}/div>
+
+{{co}}br>
+
+{{co}}h3>Mostrar búsqueda{{co}}/h3>
+
+{{co}}!-- MOSTRAR RESULTADO -->
+{{co}}div  class="card-columns m-5">
+    {{co}}div <b>{{f}}ngFor="let artistaLocal of <abbr title="Variable del Ts para sacar los artistas">artistas_variable</abbr>"</b> class="card">
+        {{co}}img class="card-img-top" <b>{{t}}src]="<abbr title="Variable local que coge la imagen y la dirección donde se encuentra, [número] escogemos el tamaño de la imagen">artistaLocal</abbr>.images[0].url"</b> alt="Card image cap">
+        {{co}}div class="card-body">
+        {{co}}h5 class="card-title"><b>{{c}}{{c}} artistaLocal.<abbr title="Nombre del artista">name</abbr> }}</b>{{co}}/h5>
+        {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify5" role="tabpanel" aria-labelledby="v-pills-searchspotify5-tab">
+
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body"><h3>Pipe</h3>
+                    <pre class="card-text">import {{c}} Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({{c}}
+name: '<abbr title="Nombre que se usa cuando llamemos a este PIPE -> Expresión | pipespotify"><b>pipespotify</b></abbr> '
+})
+export class PipespotifyPipe implements PipeTransform {{c}}
+
+<b> transform( <abbr title="Da igual el nombre que pongamos mientras el resto pongamos el mismo nombre, este nombre es el que sale y se relaciona con el PIPE y la expresión">variables_images</abbr>: any[] ): string {{c}}</b>
+
+
+<b>if ( !<abbr title="Si no hay imágenes">variables_images</abbr> ) {{c}}
+    return '<abbr title="Ruta igual a como la tenemos, en este caso no es necesario ../../ porque lo coge de raíz">assets/imagenes/noimage.png</abbr> ';
+}
+
+if ( <abbr title="Si hay más de 0 imagen, es decir, haya una. Porque se refiere length al tamaño, que haya más de 0 archivo">variables_images</abbr>.length > 0 ) {{c}}
+    return <abbr title="Si lo hay muestra la primera imagen y si queremos otra [1] u otra [2] donde en este caso cambia solo el tamaño">variables_images</abbr>[0].url;
+}
+
+else{{c}} 
+    <abbr title="Si no cumple ninguna acción anterior, es decir no existe imágenes, se ejecuta">return</abbr>'assets/imagenes/noimage.png';
+}</b>
+
+}
+
+}</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Componente.Html CON PIPE <small>(No hay error cuando no hay imágenes)</small></h3>
+                <pre class="card-text">{{co}}div  class="card-columns m-5">
+                {{co}}div {{f}}ngFor="let artistaLocal of artistas_variable" class="card">
+                  {{co}}img class="card-img-top" {{t}}src]="artistaLocal.<b>images <abbr title="Quitamos la posición de la imagen y el url porque ya lo tenemos definido en el PIPE y lo pasamos por la tubería | al PIPE para que se aplique las condiciones que hace que tengamos una imagen de spotify o una local nuestra que diga que no hay imagen">| pipespotify</abbr>"</b> alt="Card image cap">
+                  {{co}}div class="card-body">
+                    {{co}}h5 class="card-title">{{c}}{{c}} artistaLocal.name }}{{co}}/h5>
+                  {{co}}/div>
+                {{co}}/div>
+            {{co}}/div></pre>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify6" role="tabpanel" aria-labelledby="v-pills-searchspotify6-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Componente.Html</h3>
+                  <pre class="card-text">ELIMINAMOS:
+
+{{co}}div  class="card-columns m-5">
+  {{co}}div {{f}}ngFor="let artistaLocal of artistas_variable" class="card">
+    {{co}}img class="card-img-top" {{t}}src]="artistaLocal.<b>images <abbr title="Quitamos la posición de la imagen y el url porque ya lo tenemos definido en el PIPE y lo pasamos por la tubería | al PIPE para que se aplique las condiciones que hace que tengamos una imagen de spotify o una local nuestra que diga que no hay imagen">| pipespotify</abbr>"</b> alt="Card image cap">
+    {{co}}div class="card-body">
+      {{co}}h5 class="card-title">{{c}}{{c}} artistaLocal.name }}{{co}}/h5>
+    {{co}}/div>
+  {{co}}/div>
+{{co}}/div>
+        
+PONEMOS:
+
+<b>{{co}}<abbr title="Llamamos a la tarjeta">app</abbr>-tarjetasspotify [[t]]<abbr title="Metemos entre llaves una variable que deberá tener MISMO NOMBRE en TARJETA.HTML Y TARJETA.TS">dato_entre_tarjeta_mostrar</abbr> ]="<abbr title="Mismo nombre que la variable declarada en el TS y usada con el servidor para usarlo con Spotify">artistas_variable</abbr>">{{co}}/app-tarjetasspotify></b></pre>
+                </div>
+            </div>
+        </div>
+
+
+       <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Componente_Tarjeta.Ts <small>Igual que en buscar</small></h3>
+                  <pre class="card-text">import {{c}} Component, OnInit, <b><abbr title="Para poder usar la variable tanto en el html como en otros componentes, sacar la variable de aquí y a su vez obtener datos de otros componentes">Input</abbr> </b> } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-tarjetasspotify',
+  templateUrl: './tarjetasspotify.component.html',
+  styleUrls: ['./tarjetasspotify.component.css']
+})
+export class TarjetasspotifyComponent implements OnInit {{c}}
+
+ <b> @Input() dato_entre_tarjeta_mostrar: any[] = [];</b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+                </div>
+            </div>
+          <div class="card text-dark bg-warning m-3">
+              <div class="card-body"><h3>Componente_Tarjeta.Html <small>Igual que en buscar</small></h3>
+                <pre class="card-text">{{co}}div  class="card-columns m-5">
+    {{co}}div <b>{{f}}ngFor="let cancionesLocal of <abbr title="Variable que pusimos en donde queremos que aparezca esta tarjeta y en el TS de este componente">dato_entre_tarjeta_mostrar</abbr> "</b> class="card">
+      {{co}}img class="card-img-top" <b>{{t}}src]="cancionesLocal.images | pipespotify"</b> alt="Card image cap">
+      {{co}}div class="card-body">
+        {{co}}h5 class="card-title"><b>{{c}}{{c}} cancionesLocal.name }}</b>{{co}}/h5>
+        {{co}}p class="card-text">{{co}}span <b>{{f}}ngFor="let artista of cancionesLocal.artists"</b> class="badge badge-secondary"><b>{{c}}{{c}} artista.name }}</b>{{co}}/span>{{co}}/p>
+      {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+              </div>
+          </div>
+      </div>
+
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-searchspotify7" role="tabpanel" aria-labelledby="v-pills-searchspotify7-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Loading.Html</h3>
+                  <pre class="card-text">{{co}}div class="row text-center">
+    {{co}}div class="col">
+        <b>{{co}}i class="fa fa-refresh fa-spin fa-3x fa-fw">{{co}}/i></b>
+    {{co}}/div>
+{{co}}/div></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-body"><h3>Componente.Ts</h3>
+                <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+@Component({{c}}
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
+})
+export class SearchComponent implements OnInit {{c}}
+
+  artistas_variable:any[] = [];
+
+  <b><abbr title="Definimos variable que cogemos para que en el ngIf muestre o no">variable_LoadingBuscar</abbr>: boolean;</b>
+
+  constructor( private variable_servicio: ServiciospotifyService) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  buscar( terminoRecibido: string ){{c}}
+
+      console.log(terminoRecibido);
+
+     <b> this.variable_LoadingBuscar = <abbr title="True para que lo muestre y se pone aquí para que sea antes de cargar los datos que se realiza con this.variable_servicio.get_spotify()...">true</abbr>;</b>
+
+      this.variable_servicio.getArtista( terminoRecibido )
+                            .subscribe( (datoRecibido:any) => {{c}}
+                              console.log(datoRecibido);
+                              this.artistas_variable = datoRecibido;
+
+                              <b>this.variable_LoadingBuscar = <abbr title="False para que desaparezca cuando acabe de cargar -> this.variable_servicio.get_spotify().subscribe...">false</abbr>;</b>
+                            });
+  }
+
+
+}
+</pre>
+              </div>
+          </div>
+        <div class="card text-dark bg-warning m-3">
+            <div class="card-body"><h3>Componente.Html</h3>
+              <pre class="card-text">{{co}}div class="row">
+  {{co}}div class="col">
+      {{co}}input type="text" #terminoBuscar {{p}}keyup)="buscar(terminoBuscar.value)" class="form-control m-5" placeholder="Buscar artista..." style="width: 500px;">
+  {{co}}/div>
+{{co}}/div>
+
+{{co}}br>
+
+{{co}}h3 style="color: black;">Mostrar búsqueda{{co}}/h3>                
+
+{{co}}app-loadingspotify {{f}}ngIf=<abbr title="Se muestra cuando los datos aún no están cargados">"variable_LoadingBuscar</abbr> ">{{co}}/app-loadingspotify>
+
+{{co}}app-tarjetasspotify {{f}}ngIf="<abbr title="Se muestra cuando los datos están cargados/cargandose">!variable_LoadingBuscar</abbr>" {{t}}dato_entre_tarjeta_mostrar]="artistas_variable">{{co}}/app-tarjetasspotify></pre>
+            </div>
+        </div>
+    </div>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+</div>

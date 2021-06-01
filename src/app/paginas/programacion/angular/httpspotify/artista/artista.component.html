@@ -1,0 +1,70 @@
+
+<app-loadingspotify *ngIf="loadingArtist"></app-loadingspotify>
+
+<div class="row" *ngIf="!loadingArtist">
+    <div class="col-2">
+      <img [src]="artista_variable_Arreglo.images | pipespotify" class="img-thumbnail img-circle">   <!-- COPIAR Y EXPLICAR ESTO -->
+
+      <!-- img-circle -> CSs dado por herrera que hace pequeña imagen y redonda -->
+    </div>
+
+    <div class="col">
+      
+      <h3>{{ artista_variable_Arreglo.name }}</h3>
+    
+      
+      <p><a [href]="artista_variable_Arreglo.external_urls.spotify" target="_blank">Ir a la página del artista</a></p>  <!-- COPIAR Y EXPLICAR ESTO -->
+<!-- Da fallo hasta que pongamos loading porque la propiedad external_urls no se carga de inmediato-->
+<!-- external_urls y spotify lo cogemos de la API en la consola al coger los datos, esta dentro de las canciones, external_urls dentro de este spotify y dentro de este la dirección del artista -->
+    </div>
+
+    <div class="col-4 text-right">
+
+        <button routerLink="/angular" class="btn btn-outline-danger">Regresar</button>
+
+
+    </div>
+</div>
+
+
+
+<div class="row m-5">
+
+  <div class="col">
+
+    <div class="table">
+
+      <thead>
+
+        <tr>
+          <th>Foto</th>
+          <th>Album</th>
+          <th>Canción</th>
+          <th>Vista Previa</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let variable_local_Tracks of topTracks_variable">
+          <td>
+            <img [src]="variable_local_Tracks.album.images | pipespotify" class="img-thumb">
+            <!-- img-thumb -> Css poner imagen chica -->
+          </td>
+          <td>{{ variable_local_Tracks.album.name }}</td>
+          <td>{{ variable_local_Tracks.name }}</td>
+          <td>
+            <!-- <audio [src]="variable_local_Tracks.preview_url" controls></audio> -->
+            <!-- https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3 -> Cambiamos /album/ por ?uri=. Eliminamos -> 1DFixLWuPkv3KT3TnV35m3 porque lo cogemos con el PIPE -->
+            <iframe [src]="variable_local_Tracks.uri | pipeDomSeguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </div>
+
+  </div>
+
+</div>

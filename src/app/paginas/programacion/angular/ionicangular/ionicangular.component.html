@@ -21,7 +21,7 @@
         <a class="nav-link" id="pills-ionicangular5-tab" data-toggle="pill" href="#pills-ionicangular5" role="tab" aria-controls="pills-ionicangular5" aria-selected="false" style="color: black;">Borrar<br>dato</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ionicangular6-tab" data-toggle="pill" href="#pills-ionicangular6" role="tab" aria-controls="pills-ionicangular6" aria-selected="false" style="color: black;">Redirigir <small>con elemento seleccionado</small><br>Mostrar cantidad <small>items sin entrar</small></a>
+        <a class="nav-link" id="pills-ionicangular6-tab" data-toggle="pill" href="#pills-ionicangular6" role="tab" aria-controls="pills-ionicangular6" aria-selected="false" style="color: black;">Redirigir <br><small>con elemento seleccionado</small><br>Mostrar cantidad <br><small>items sin entrar</small></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-ionicangular7-tab" data-toggle="pill" href="#pills-ionicangular7" role="tab" aria-controls="pills-ionicangular7" aria-selected="false" style="color: black;">Reutilizar códigos<br><small>componente, servicio...<br>Usando module.ts</small></a>
@@ -30,14 +30,15 @@
         <a class="nav-link" id="pills-ionicangular9-tab" data-toggle="pill" href="#pills-ionicangular9" role="tab" aria-controls="pills-ionicangular9" aria-selected="false" style="color: black;">Borrar<br>lista</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ionicangular10-tab" data-toggle="pill" href="#pills-ionicangular10" role="tab" aria-controls="pills-ionicangular10" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-ionicangular10-tab" data-toggle="pill" href="#pills-ionicangular10" role="tab" aria-controls="pills-ionicangular10" aria-selected="false" style="color: black;">Pipe <small>- Divide página<br>según sus funciones<br>con mismo código</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ionicangular11-tab" data-toggle="pill" href="#pills-ionicangular11" role="tab" aria-controls="pills-ionicangular11" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-ionicangular11-tab" data-toggle="pill" href="#pills-ionicangular11" role="tab" aria-controls="pills-ionicangular11" aria-selected="false" style="color: black;">Editar</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-ionicangular12-tab" data-toggle="pill" href="#pills-ionicangular12" role="tab" aria-controls="pills-ionicangular12" aria-selected="false" style="color: black;">Complementos</a>
     </li>
+    <button class="btn btn-primary" [routerLink]="['/programacion']">Atras</button>
 </ul>
 
 <div class="tab-content cuadro" id="pills-tabContent">
@@ -634,7 +635,7 @@ export class Tab1Page {{c}}
       
       <div class="card-group">
         <div class="card text-dark bg-primary m-3">
-            <div class="card-body"><h3>Modulo_de_componentes.Ts </h3><small style="color: white;">(Al usarse este módulo en otro lado, se incorpora y usa lo que hay en su interior - servicios, componentes...)</small>
+            <div class="card-body"><h3>Modulo_de_componentes.Ts </h3><small style="color: white;">(Se crea para englobar los componentes. Al usarse este módulo en otro lado, se incorpora y usa lo que hay en su interior - servicios, componentes...)</small>
                 <pre class="card-text">
 
 import {{c}} NgModule } from '@angular/core';
@@ -1125,9 +1126,312 @@ export class NombreComponenteComponent implements OnInit {{c}}
 
     </div>
 
-    <div class="tab-pane fade" id="pills-ionicangular10" role="tabpanel" aria-labelledby="pills-ionicangular10-tab">x</div>
+    <div class="tab-pane fade" id="pills-ionicangular10" role="tabpanel" aria-labelledby="pills-ionicangular10-tab">
 
-    <div class="tab-pane fade" id="pills-ionicangular11" role="tabpanel" aria-labelledby="pills-ionicangular11-tab">x</div>
+      <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-body"><h3>Nombre_module_ParaPipe.module.ts</h3><small>(Se crea module para pipe porque se debe crear en ionic para cada funcionalidad, para englobar los pipes)</small>
+                  <pre class="card-text">import {{c}} NgModule } from '@angular/core';
+import {{c}} FiltroPipe } from './filtro.pipe';
+// import {{c}} <abbr title="Podemos quitarlo porque no vamos a usar ngif ni ngfor etc...">CommonModule</abbr> } from '@angular/common';
+
+
+
+@NgModule({{c}}
+  declarations: [FiltroPipe],
+<b> <abbr title="Para usarse fuera de aquí, en otros componentes">exports</abbr>: [FiltroPipe] </b>
+  // imports: [
+  //   CommonModule
+  // ]
+})
+export class PipesModule {{c}} }</pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Nombre_pipe_Filtro.pipe.ts</h3>
+                <pre class="card-text">import {{c}} Pipe, PipeTransform } from '@angular/core';
+<b>import {{c}} <abbr title="Importamos el model">Lista</abbr> } from '../models/lista.model';</b>
+
+@Pipe({{c}}
+  name: 'filtro'<b>,
+    <abbr title="Ponemos pure y en false para que esté pendiente a los cambios y actualice si va a completado o pendiente u otra condición que hayamos marcado abajo, hace una actualización instantánea sin actualizar página">pure</abbr>: false    </b>
+})
+
+export class FiltroPipe implements PipeTransform {{c}}
+
+  transform(<b><abbr title="Queremos coger toda la lista y filtrarla, para ello usamos otra variable llamada listaCompletada que la prediponemos de true inicialmente, todo lo ponemos que lleve el model Lista en forma de arreglo">todasListas</abbr>: Lista[], listaCompletada: boolean = true): Lista[] </b>{{c}}
+    
+    
+    <b><abbr title="Retornamos/devolvemos del pipe la función de flecha">return</abbr> todasListas.<abbr title="Devuelve toda la lista que esté terminada, se obtiene al comparar la que recibimos con la que tenemos.terminada">filter</abbr> (listaRecibida => listaRecibida.terminada === listaCompletada); </b>
+
+  }
+
+}</pre>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Modulo-de-componente.module.ts</h3>
+                <pre class="card-text">import {{c}} NgModule, Pipe } from '@angular/core';
+import {{c}} CommonModule } from '@angular/common';
+import {{c}} NombreComponenteComponent } from './nombre-componente/nombre-componente.component';
+import {{c}} IonicModule } from '@ionic/angular';
+<b>import {{c}} <abbr title="Incluimos modulo de pipe para ser usado el pipe en el componente creado que tenga relación el module">PipesModule</abbr> } from '../pipes/pipes.module';</b>
+
+
+@NgModule({{c}}
+  declarations: [
+    NombreComponenteComponent
+  ],
+  exports: [
+    NombreComponenteComponent   
+  ],
+  imports: [
+    CommonModule,
+    IonicModule,
+    <b>PipesModule</b> 
+  ]
+})
+export class ModuloDeComponenteModule {{c}} }</pre>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>nombre-componente.component.Ts</h3>
+                <pre class="card-text">import {{c}} Component, <b>Input</b>, OnInit } from '@angular/core';
+import {{c}} Router } from '@angular/router';
+import {{c}} Lista } from '../../models/lista.model';
+import {{c}} DeseoService } from '../../services/deseo.service';
+
+@Component({{c}}
+  selector: 'app-nombre-componente',
+  templateUrl: './nombre-componente.component.html',
+  styleUrls: ['./nombre-componente.component.scss'],
+})
+export class NombreComponenteComponent implements OnInit {{c}}
+
+  <b>@Input() terminada_html_ts = true;</b>
+
+  constructor(public variable_servicio: DeseoService,
+              private variable_router: Router) {{c}} }
+
+  ngOnInit() {{c}}}
+
+
+  listaSeleccionada ( variable_listaLocal:Lista ){{c}}
+
+    if ( this.terminada_html_ts ){{c}}
+        this.variable_router.navigateByUrl(`/tabs/tab2/agregar/${{c}} variable_listaLocal.id }`);
+        console.log(variable_listaLocal);
+      }
+    else{{c}}
+        console.log(variable_listaLocal);
+        this.variable_router.navigateByUrl(`/tabs/tab1/agregar/${{c}} variable_listaLocal.id }`);  
+    }
+  }
+
+
+  borrarLista( Lista_recibida_html: Lista){{c}}
+    this.variable_servicio.borrarListaServidor(Lista_recibida_html);
+  }
+}
+</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-warning m-3">
+          <div class="card-body"><h3>nombre-componente.component.Html</h3>
+              <pre class="card-text">{{co}}ion-list color="success">
+
+  {{co}}ion-item-sliding {{f}}ngFor="let variable_listaLocal of 
+                              variable_servicio.variable_listas<b> | <abbr title="Pipe creado">filtro</abbr>:<abbr title="Cogido del ts para que haga referencia y lo transforme según dicho boolean">terminada_html_ts</abbr>"</b>>   
+
+    
+    {{co}}ion-item  detail 
+               color="success"
+               {{p}}click)="listaSeleccionada (variable_listaLocal)">
+      {{co}}ion-label>{{c}}{{c}} variable_listaLocal.titulo }}{{co}}/ion-label>
+  
+      {{co}}ion-note slot="end" color="primary">{{c}}{{c}} variable_listaLocal.items.length }} items{{co}}/ion-note>
+    {{co}}/ion-item>
+
+
+    {{co}}!--Botón sliding-->
+  {{co}}ion-item-options side="end">   {{co}}!--Derecha-->
+    {{co}}ion-item-option {{p}}click)="borrarLista(variable_listaLocal)" color="danger">
+      {{co}}ion-icon slot="icon-only" name="close">{{co}}/ion-icon>
+    {{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+
+
+
+  {{co}}/ion-item-sliding>
+
+{{co}}/ion-list></pre>
+          </div>
+      </div>
+    </div>
+
+
+    
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-ionicangular11" role="tabpanel" aria-labelledby="pills-ionicangular11-tab">
+      
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>nombre-componente.component.Ts</h3>
+                <pre class="card-text">import {{c}} Component, Input, OnInit, <b>ViewChild</b> } from '@angular/core';
+import {{c}} Router } from '@angular/router';
+import {{c}} <b>AlertController</b>, <b>IonList</b> } from '@ionic/angular';
+import {{c}} Lista } from '../../models/lista.model';
+import {{c}} DeseoService } from '../../services/deseo.service';
+
+@Component({{c}}
+  selector: 'app-nombre-componente',
+  templateUrl: './nombre-componente.component.html',
+  styleUrls: ['./nombre-componente.component.scss'],
+})
+export class NombreComponenteComponent implements OnInit {{c}}
+
+<b>@ViewChild( <abbr title="Etiqueta html sin > y llamado especialmente por ionic, normalmente llamado igual que en etiqueta pero pegado sin - y dividiendolo en mayúscula la 1º">Etiqueta_html</abbr> ) variableViexchildLista: Etiqueta_html;
+
+  @ViewChild( <abbr title="Si cogemos una #variable_local_del_html, que lleve #">'Variable_local_html'</abbr> ) variableViexchildLista: Etiqueta_html;</b>
+  
+  
+  @Input() terminada_html_ts = true;
+
+  constructor(public variable_servicio: DeseoService,
+              private variable_router: Router<b>,
+                private alert_variable: AlertController</b>) {{c}} }
+
+  ngOnInit() {{c}}}
+
+
+  listaSeleccionada ( variable_listaLocal:Lista ){{c}}
+
+    if ( this.terminada_html_ts ){{c}}
+        this.variable_router.navigateByUrl(`/tabs/tab2/agregar/${{c}} variable_listaLocal.id }`);
+        console.log(variable_listaLocal);
+      }
+    else{{c}}
+        console.log(variable_listaLocal);
+        this.variable_router.navigateByUrl(`/tabs/tab1/agregar/${{c}} variable_listaLocal.id }`);   
+    }
+  }
+
+
+  borrarLista( Lista_recibida_html: Lista){{c}}
+    this.variable_servicio.borrarListaServidor(Lista_recibida_html);
+  }
+
+
+//Podríamos centralizar todo (eje: alert) en un modulo y solo llamarlo
+
+  <b>async editarLista( Lista_recibida_html )</b> {{c}}    
+  
+      <b>const variable_alert = await this.alert_variable.create</b>({{c}}   
+        header: '<b>Editar lista</b>',
+        inputs: [
+          {{c}}
+            name: 'titulo',
+            type: 'text',
+            <b><abbr title="Le damos el valor (value) de Lista_recibida_html para recibir de la lista el .titulo, de ese modo podemos retocar sobre lo que hay">value</abbr> : Lista_recibida_html.titulo,</b>
+            placeholder: 'Nombre de la lista'
+          }
+        ],
+        buttons: [
+           {{c}}
+             text: 'Cancelar', //1ºBotón
+             role: 'cancel',   
+             handler: () => {{c}}  
+               console.log('Cancelar');
+               <b><abbr title="Cierra botón después de ser pulsado el Cancelar">this.variableViexchildLista.closeSlidingItems();</abbr></b>
+             }
+           },
+          {{c}}
+            text: 'Actualizar',    //2º Botón
+            handler: ( dato_recibido ) => {{c}}   
+  
+                if ( dato_recibido.titulo.length === 0 ) {{c}}  
+                  return;
+                }
+    
+                
+                Lista_recibida_html.titulo = dato_recibido.titulo;
+              
+                console.log(dato_recibido.titulo);
+
+                
+                  <b>this.variable_servicio.<abbr title="Guardamos el cambio">guardarStorage</abbr>();</b>
+                  <b><abbr title="Cierra botón después de ser pulsado el Actualizar">this.variableViexchildLista.closeSlidingItems();</abbr></b>
+                
+              }
+          }
+        ]
+      });
+  
+  
+      variable_alert.present();
+  }
+}
+</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-warning m-3">
+          <div class="card-body"><h3>nombre-componente.component.Html</h3>
+              <pre class="card-text">{{co}}ion-list color="success">
+
+  {{co}}ion-item-sliding {{f}}ngFor="let variable_listaLocal of variable_servicio.variable_listas | filtro:terminada_html_ts">   
+
+    {{co}}!-- filtro -> 
+        terminada_html_ts -> Cogido del ts para que haga referencia y lo transforme según dicho boolean -->
+
+    
+    {{co}}ion-item  detail 
+               color="success"
+               {{p}}click)="listaSeleccionada {{p}}variable_listaLocal)">
+      {{co}}ion-label>{{c}}{{c}} variable_listaLocal.titulo }}{{co}}/ion-label>
+  
+      {{co}}ion-note slot="end" color="primary">{{c}}{{c}} variable_listaLocal.items.length }} items{{co}}/ion-note>
+    {{co}}/ion-item>
+
+
+    {{co}}!--Botón sliding-->
+    {{co}}ion-item-options side="start">   {{co}}!--Derecha-->
+      {{co}}ion-item-option <b>{{p}}<abbr title="Llamamos a la función que se encuentra en el Ts para modificar y le enviamos el elemento seleccionado">click</abbr>)="editarLista{{p}}variable_listaLocal)"</b> color="primary">
+        {{co}}ion-icon slot="icon-only" name="create-<b>outline</b>">{{co}}/ion-icon>
+      {{co}}/ion-item-option>
+    {{co}}/ion-item-options>
+
+
+
+    {{co}}!--Botón sliding-->
+  {{co}}ion-item-options side="end">   {{co}}!--Derecha-->
+    {{co}}ion-item-option {{p}}click)="borrarLista(variable_listaLocal)" color="danger">
+      {{co}}ion-icon slot="icon-only" name="close">{{co}}/ion-icon>
+    {{co}}/ion-item-option>
+  {{co}}/ion-item-options>
+
+
+
+  {{co}}/ion-item-sliding>
+
+{{co}}/ion-list></pre>
+          </div>
+      </div>
+    </div>
+
+
+    </div>
 
     <div class="tab-pane fade" id="pills-ionicangular12" role="tabpanel" aria-labelledby="pills-ionicangular12-tab"><hr><app-complementosionicangular></app-complementosionicangular></div>
 
@@ -1138,3 +1442,4 @@ export class NombreComponenteComponent implements OnInit {{c}}
 <b style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Html"><b><a target="_black" href="https://ionicframework.com/">Oficial</a></b></abbr> | 
 <b><a href="https://ionicframework.com/signup?page_layout=split" target="_blank"><u>Registrar/Login</u></a></b>
 <img src="../../../../assets/imagenes/ionic.jpg" style=" width: 350px;">
+<button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>

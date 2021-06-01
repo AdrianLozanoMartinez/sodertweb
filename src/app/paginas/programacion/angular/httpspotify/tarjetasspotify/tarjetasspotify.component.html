@@ -1,0 +1,11 @@
+
+
+<div  class="card-columns m-5">
+    <div *ngFor="let cancionesLocal of dato_entre_tarjeta_mostrar" (click)="VerArtista( cancionesLocal )" class="card puntero">
+      <img class="card-img-top" [src]="cancionesLocal.images | pipespotify" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ cancionesLocal.name }}</h5>
+        <p class="card-text"><span *ngFor="let artista of cancionesLocal.artists" class="badge badge-secondary">{{ artista.name }}</span></p>
+      </div>
+    </div>
+</div>

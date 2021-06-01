@@ -105,8 +105,11 @@ import { Buscador2Component } from './paginas/programacion/angular/buscador/busc
 import { PipesComponent } from './paginas/programacion/angular/pipes/pipes.component';
 import { PipespersonalizarPipe } from './paginas/programacion/angular/pipes/pipes/pipespersonalizar.pipe';
 import { ServiciopadreehijoComponent } from './paginas/programacion/angular/serviciounovarias/serviciopadreehijo/serviciopadreehijo.component';
-
-
+import { HttpspotifyComponent } from './paginas/programacion/angular/httpspotify/httpspotify.component';
+import { SearchComponent } from './paginas/programacion/angular/httpspotify/search/search.component';
+import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
+import { PeticionhttpComponent } from './paginas/programacion/angular/httpspotify/peticionhttp/peticionhttp.component';
+import { MostrarhttpspotifyComponent } from './paginas/programacion/angular/httpspotify/mostrarhttpspotify/mostrarhttpspotify.component';
 
 import { registerLocaleData } from '@angular/common';
 
@@ -120,7 +123,7 @@ registerLocaleData(nombre_pipe_frances);
 import { PythonComponent } from './paginas/programacion/python/python.component';
 //Programación - Angular - Servicios/Formularios/Directivas/etc
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  //Formulario Template, Reactivo
-import { HttpClientModule } from '@angular/common/http';  //Servicio API Países (Json)
+import { HttpClientModule, HttpClient } from '@angular/common/http';  //Servicio API Países (Json)
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -190,7 +193,12 @@ import { FuncionamientotypeComponent } from './paginas/programacion/typescript/f
 import { PromesastypeComponent } from './paginas/programacion/typescript/promesastype/promesastype.component';
 
 //Programacion - Ionic
-
+import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
+import { IonicangularComponent } from './paginas/programacion/angular/ionicangular/ionicangular.component';
+import { InstalacionionicComponent } from './paginas/programacion/angular/ionicangular/instalacionionic/instalacionionic.component';
+import { AgregarionicangularComponent } from './paginas/programacion/angular/ionicangular/agregarionicangular/agregarionicangular.component';
+import { ComplementosionicangularComponent } from './paginas/programacion/angular/ionicangular/complementosionicangular/complementosionicangular.component';
+import { EstructuraionicangularComponent } from './paginas/programacion/angular/ionicangular/estructuraionicangular/estructuraionicangular.component';
 
 //Empleo
 import { EmpleoComponent } from './paginas/empleo/empleo.component';
@@ -209,18 +217,18 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 
 //Servicios
 import { ServiciodepruebaService } from './paginas/programacion/angular/serviciounovarias/serviciodeprueba.service';
+import { ServiciospotifyService } from './paginas/programacion/angular/httpspotify/servicio/serviciospotify.service';
 
 //Pipes
 import { Pipespersonalizar2Pipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizar2.pipe';
 import { PipespersonalizadaurlPipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizadaurl.pipe';
 import { PipespersonalizaocultarPipe } from './paginas/programacion/angular/pipes/pipes/mostraragnularmostrar/pipespersonalizaocultar.pipe';
-import { IonicComponent } from './paginas/programacion/ionic/ionic.component';
-import { IonicangularComponent } from './paginas/programacion/angular/ionicangular/ionicangular.component';
-import { InstalacionionicComponent } from './paginas/programacion/angular/ionicangular/instalacionionic/instalacionionic.component';
-import { EstructuraionicangularComponent } from './paginas/programacion/angular/ionicangular/estructuraionicangular/estructuraionicangular.component';
-import { ComplementosionicangularComponent } from './paginas/programacion/angular/ionicangular/complementosionicangular/complementosionicangular.component';
-import { AgregarionicangularComponent } from './paginas/programacion/angular/ionicangular/agregarionicangular/agregarionicangular.component';
+import { PipespotifyPipe } from './paginas/programacion/angular/httpspotify/pipe/pipespotify.pipe';
+import { TarjetasspotifyComponent } from './paginas/programacion/angular/httpspotify/tarjetasspotify/tarjetasspotify.component';
+import { LoadingspotifyComponent } from './paginas/programacion/angular/httpspotify/loadingspotify/loadingspotify.component';
+import { ArtistaguiaComponent } from './paginas/programacion/angular/httpspotify/artistaguia/artistaguia.component';
 
+import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pipe/pipe-dom-seguro.pipe';
 
 
 
@@ -324,10 +332,11 @@ import { AgregarionicangularComponent } from './paginas/programacion/angular/ion
     Tarjeta2Component,
     Buscador2Component,
     PipesComponent,
-    PipespersonalizarPipe,
-    Pipespersonalizar2Pipe,
-    PipespersonalizadaurlPipe,
-    PipespersonalizaocultarPipe,
+    HttpspotifyComponent,
+    SearchComponent,
+    ArtistaComponent,
+    PeticionhttpComponent,
+    MostrarhttpspotifyComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -390,7 +399,12 @@ import { AgregarionicangularComponent } from './paginas/programacion/angular/ion
     FuncionamientotypeComponent,
     PromesastypeComponent,
     //Programacion - Ionic
-
+    IonicComponent,
+    IonicangularComponent,
+    InstalacionionicComponent,
+    EstructuraionicangularComponent,
+    ComplementosionicangularComponent,
+    AgregarionicangularComponent,
     //Empleo
     EmpleoComponent,
     EmpresasComponent,
@@ -403,12 +417,16 @@ import { AgregarionicangularComponent } from './paginas/programacion/angular/ion
     //Deudas
     DeudasComponent,
     DeudasidComponent,
-    IonicComponent,
-    IonicangularComponent,
-    InstalacionionicComponent,
-    EstructuraionicangularComponent,
-    ComplementosionicangularComponent,
-    AgregarionicangularComponent
+    //Pipes
+    PipespersonalizarPipe,
+    Pipespersonalizar2Pipe,
+    PipespersonalizadaurlPipe,
+    PipespersonalizaocultarPipe,
+    PipespotifyPipe,
+    TarjetasspotifyComponent,
+    LoadingspotifyComponent,
+    ArtistaguiaComponent,
+    PipeDomSeguroPipe
   ],
   imports: [
     //Por defecto
@@ -428,6 +446,7 @@ import { AgregarionicangularComponent } from './paginas/programacion/angular/ion
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas
     appRoutingProviders,
+    ServiciospotifyService,
     ServiciodepruebaService,
     {
         provide: LOCALE_ID,

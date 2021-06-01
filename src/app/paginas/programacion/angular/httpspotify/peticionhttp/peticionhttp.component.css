@@ -1,15 +1,16 @@
-.amarillo{
-    color: lightskyblue !important;
-}
-
 /*Cambiar de color del botón activo*/
 
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link,
 button {
-    background: #03add8 !important;
+    background: #d80303 !important;
     color: white !important;
 }
+
+pre, h3{
+    color: white;
+}
+
 
 a{
     color: black;

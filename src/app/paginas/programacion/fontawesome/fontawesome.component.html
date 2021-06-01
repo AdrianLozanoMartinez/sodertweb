@@ -1,13 +1,22 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col align-self-center text-center">
-            <h3 style="text-align: center;"><u><b>Fontawesome</b></u></h3>
-            <p style="text-align: center;"><a href="https://fontawesome.com/v4.7.0/icons/"><b>Web</b></a></p>
-            <br>
-            <button class="btn btn-warning m-5" [routerLink]="['/instalacionfont']">Instalación</button>
-            <button class="btn btn-warning m-5" [routerLink]="['/configuracionfont']">Configuración</button>
-            <br><br>
-            <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
-        </div>
-    </div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-fontawesome-tab" data-toggle="pill" href="#pills-fontawesome" role="tab" aria-controls="pills-fontawesome" aria-selected="true" style="color: black;">Instalación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-fontawesome0-tab" data-toggle="pill" href="#pills-fontawesome0" role="tab" aria-controls="pills-fontawesome0" aria-selected="false" style="color: black;">Configuración</a>
+    </li>
+    <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-fontawesome" role="tabpanel" aria-labelledby="pills-fontawesome-tab"><hr><app-instalacionfontawesome></app-instalacionfontawesome></div>
+
+    <div class="tab-pane fade" id="pills-fontawesome0" role="tabpanel" aria-labelledby="pills-fontawesome0-tab"><hr><app-configuracionfont></app-configuracionfont></div>
+
 </div>
+<br><br>
+
+<b id="amarillo" style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Web oficial"><b><a target="_black" href="https://fontawesome.com/v4.7.0/icons/">Font awesome</a></b></abbr>
+<img src="../../../../assets/imagenes/fontawesome.png" style="width: 300px;" class="ml-3">
+<button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>

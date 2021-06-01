@@ -1,0 +1,418 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-artistaspotifyx-tab" data-toggle="pill" href="#v-pills-artistaspotifyx" role="tab" aria-controls="v-pills-artistaspotifyx" aria-selected="true">Obtener ID para redirigir <small>a la ficha del artista</small></a>
+        <a class="nav-link" id="v-pills-artistaspotifyx0-tab" data-toggle="pill" href="#v-pills-artistaspotifyx0" role="tab" aria-controls="v-pills-artistaspotifyx0" aria-selected="true">Obtener ID para mostrar <small>en la ficha del artista</small></a>
+        <a class="nav-link" id="v-pills-artistaspotifyx1-tab" data-toggle="pill" href="#v-pills-artistaspotifyx1" role="tab" aria-controls="v-pills-artistaspotifyx1" aria-selected="false">Mostrar</a>
+        <a class="nav-link" id="v-pills-artistaspotifyx3-tab" data-toggle="pill" href="#v-pills-artistaspotifyx3" role="tab" aria-controls="v-pills-artistaspotifyx3" aria-selected="false">Mostrar - Loading<br><small>Eliminar error en consola</small></a>
+        <a class="nav-link" id="v-pills-artistaspotifyx2-tab" data-toggle="pill" href="#v-pills-artistaspotifyx2" role="tab" aria-controls="v-pills-artistaspotifyx2" aria-selected="false">Resultado -> Mostrar -> Clickear sobre 1 elemento</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <a href="https://developer.spotify.com/console/artists/">Web</a>
+
+        <div class="tab-pane fade show active" id="v-pills-artistaspotifyx" role="tabpanel" aria-labelledby="v-pills-artistaspotifyx-tab">
+
+            <div class="card-group">
+                <div class="card text-dark m-3 bg-danger">
+                    <div class="card-body "><h3>App.routing.ts</h3>
+                        <pre class="card-text ">import {{c}} ModuleWithProviders } from '@angular/core';
+
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Spotify
+<b>import {{c}} ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';</b>
+
+export const appRoutes: Routes = [
+  {{c}} path: '', component: HomeComponent },
+  {{c}} path: 'home', component: HomeComponent},
+  {{c}} path: 'pie', component: PieComponent},
+  {{c}} path: 'cabecera', component: CabeceraComponent},
+  {{c}} path: 'appcomponente', component: AppComponent },
+  //Spotify
+  <b>{{c}} path: 'artist/:<abbr title="Para poder coger la id, especificar el items o elemento que queremos coger y así poder redirigir a sus propiedades, borrar, etc">id</abbr>', component: ArtistaComponent },</b>
+  {{c}} path: '**', component: ErrorComponent},
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},
+  {{c}} path: '**', component: HomeComponent }
+];
+
+
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+                    </div>
+                </div>
+                <div class="card text-dark m-3 bg-info">
+                    <div class="card-body "><h3>Tarjeta.Css</h3>
+                        <pre class="card-text ">.puntero {{c}}
+    cursor: <abbr title="Convierte el puntero en una mano al pasar el ratón encima del elemento">pointer</abbr>;
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <div class="card text-dark m-3 bg-primary">
+                    <div class="card-body "><h3>Tarjeta.Ts</h3>
+                        <pre class="card-text ">import {{c}} Component, OnInit, Input } from '@angular/core';
+<b>import {{c}} Router } from '@angular/router';</b>
+
+
+@Component({{c}}
+  selector: 'app-tarjetasspotify',
+  templateUrl: './tarjetasspotify.component.html',
+  styleUrls: ['./tarjetasspotify.component.css']
+})
+export class TarjetasspotifyComponent implements OnInit {{c}}
+
+  @Input() dato_entre_tarjeta_mostrar: any[] = [];
+
+  constructor( private variable_router: Router ) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>VerArtista( <abbr title="Elemento recibido en el Html por su variable local cancionesLocal mandada a través de la función por el click">itemMandado</abbr>:any ){{c}}
+    console.log(<abbr title="Muestra todos los datos de un elemento específico"> itemMandado</abbr> );
+
+    let artistaId;
+
+    <abbr title="Si el artista que recibimos es igual que el typo artist, metemos el valor de la id recibido a la variable artistaId">if</abbr> ( itemMandado.type === 'artist' ){{c}}
+      artistaId = itemMandado.id;
+    }
+    <abbr title="Si no es igual, cogemos el primer elemento [0] que tengamos de artists de los elementos recibido, su id y lo metemos en la variable artistaId">else</abbr>{{c}}
+      artistaId = itemMandado.artists[0].id;
+    }
+
+    console.log(<abbr title="Muestra la ID de un elemento específico">artistaId</abbr> );
+
+
+    this.<abbr title="Vamos a la página del artista con la ID del artista para usarla ahí, donde la cogerá la la página del artista.ts">variable_router</abbr>.navigate([ '/artist', artistaId ]);
+
+  }</b>
+
+}</pre>
+                    </div>
+                </div>
+                <div class="card text-dark m-3 bg-warning">
+                    <div class="card-body "><h3>Tarjeta.Html</h3>
+                        <pre class="card-text ">{{c}}div  class="card-columns m-5">
+    {{c}}div {{f}}ngFor="let cancionesLocal of dato_entre_tarjeta_mostrar" <b>{{p}}<abbr title="Llama a la función que está en el Ts y con ella coge la Id seleccionado">click</abbr> )="VerArtista( <abbr title="Metemos la variable local, porque es la que podemos coger el elemento específico">cancionesLocal</abbr> )" class="card <abbr title="Css opcional que hace que al ponerse encima de un elemento se ponga una mano">puntero</abbr>"</b>>
+      {{c}}img class="card-img-top" {{t}}src]="cancionesLocal.images | pipespotify" alt="Card image cap">
+      {{c}}div class="card-body">
+        {{c}}h5 class="card-title">{{c}}{{c}} cancionesLocal.name }}{{c}}/h5>
+        {{c}}p class="card-text">{{c}}span {{f}}ngFor="let artista of cancionesLocal.artists" class="badge badge-secondary">{{c}}{{c}} artista.name }}{{c}}/span>{{c}}/p>
+      {{c}}/div>
+    {{c}}/div>
+{{c}}/div></pre>
+                    </div>
+                </div>
+            </div>
+
+      </div>
+
+        <div class="tab-pane fade" id="v-pills-artistaspotifyx0" role="tabpanel" aria-labelledby="v-pills-artistaspotifyx0-tab">
+
+
+            <div class="card-group">
+                <div class="card text-dark m-3 bg-primary">
+                    <div class="card-body "><h3>Artista.Componente.Ts</h3>
+                        <pre class="card-text ">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} <abbr title="Saber la ruta activa">ActivatedRoute</abbr> } from '@angular/router';</b>
+
+
+@Component({{c}}
+  selector: 'app-artista',
+  templateUrl: './artista.component.html',
+  styleUrls: ['./artista.component.css']
+})
+export class ArtistaComponent implements OnInit {{c}}
+
+  constructor( <b>private variable_activaterouter: ActivatedRoute</b> ) {{c}}
+
+    <b>this.variable_activaterouter.<abbr title="parametros recibidos por el url">params</abbr>.subscribe ( <abbr title="Del parámetro recibido por el url (la id que mandamos a través de la tarjeta) lo metemos en la variableRecibido, y por ello podemos seleccionar id u otro elemento">variableRecibido</abbr> =>{{c}}
+
+      console.log(variableRecibido);
+
+      console.log(<abbr title="Se ve la id del elemento seleccionado, de este modo observamos que estamos cogiendo y podemos operar con la id, IMPORTANTE Lo que va entre corchete -> ['debe ser igual de como nos lo manda la API, en este caso spotify']">variableRecibido</abbr> ['id']);
+
+
+    });
+  }</b>
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-artistaspotifyx1" role="tabpanel" aria-labelledby="v-pills-artistaspotifyx1-tab">
+
+
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-danger">
+                <div class="card-body"><h3>Servicio</h3>
+                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders } from '@angular/common/http';
+import {{c}} map } from 'rxjs/operators';
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciospotifyService {{c}}
+
+  constructor( private variable_http: HttpClient ) {{c}}}
+
+
+   getQuery_UnificarDatos( variable_query: string ){{c}}
+
+    const url = `https://api.spotify.com/v1/${{c}} variable_query }`;
+
+    const headers = new HttpHeaders({{c}}
+      'Authorization': 'Bearer BQCnc_8-rNBhtvyRJnu7HtZx5VDcoMcMdhlHTiLq8tC90Qinbj2uj5cBUavvMbzpbTwqoLBRHHccFuBSJpE'
+    });
+
+    return this.variable_http.get(url, {{c}} headers });
+
+   }
+
+
+   get_spotify() {{c}}
+
+      return this.getQuery_UnificarDatos('browse/new-releases?limit=20')
+                              .pipe ( map (datoEnBruto =>  datoEnBruto['<abbr title="Lo que va entre corchete -> ['debe ser igual de como nos lo manda la API, en este caso spotify']">albums</abbr>'].items));
+    }
+
+
+   getArtista( terminoRecibido: String ) {{c}}
+
+    return this.getQuery_UnificarDatos(`search?q=${{c}}terminoRecibido}&type=artist&offset=15`)
+                               .pipe ( map (datoEnBruto =>  datoEnBruto['<abbr title="Lo que va entre corchete -> ['debe ser igual de como nos lo manda la API, en este caso spotify']">artists</abbr>'].items));
+   }
+
+
+   <b>getArtistaUNartista( id: String ) {{c}}    //https://api.spotify.com/v1/artists/{{c}}id} -> Dirección para conseguir un artista. Lo simplificamos como ya lo tenemos en las otras funciones, la id se puede poner otro nombre, ya que es el dato que recibimos
+
+    return this.getQuery_UnificarDatos(`artists/${{c}}<abbr title="Lo que va entre corchete -> ['debe ser igual de como nos lo manda la API, en este caso spotify']">id</abbr>}`);
+                              //  .pipe ( map (datoEnBruto =>  datoEnBruto['artists'].items));  //No es necesario porque ya viene definida la información, incluso en este momento me da fallo
+   }</b>
+
+}
+</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-info">
+                <div class="card-body"><h3>Componente_Artista.Css</h3>
+                    <pre class="card-text"><b>.img-circle {{c}}
+    border-radius: 100%;
+    width: 150px;
+}</b></pre>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-primary">
+                <div class="card-body"><h3>Componente_Artista.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ActivatedRoute } from '@angular/router';   //Saber la ruta activa
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+
+@Component({{c}}
+  selector: 'app-artista',
+  templateUrl: './artista.component.html',
+  styleUrls: ['./artista.component.css']
+})
+export class ArtistaComponent implements OnInit {{c}}
+
+
+  <b><abbr title="Variable en forma de arreglo {} para luego compararlo con el que recibimos al escribir y seleccionar">artista_variable_Arreglo</abbr>: any = {{c}}}</b>
+
+  constructor( private variable_activaterouter: ActivatedRoute,
+               <b>private <abbr title="Insertamos servicio">servicio_spotify</abbr>: ServiciospotifyService</b> ) {{c}}
+
+    this.variable_activaterouter.params.subscribe ( variableRecibido =>{{c}}
+
+      console.log(variableRecibido);
+
+      console.log(variableRecibido ['<abbr title="Se ve la id del elemento seleccionado, de este modo observamos que estamos cogiendo y podemos operar con la id. Lo que va ['debe ser igual de como nos lo manda la API, en este caso spotify']">id</abbr>']);
+
+
+      <b>this.<abbr title="Llamamos a la función de abajo para que se ejecute lo primero (Al meterlo en el constructor, lo que va ['debe ser igual de como nos lo manda la API, en este caso spotify']">getUNSOLOartista</abbr>( variableRecibido['id'] );</b>
+
+
+    });
+
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  <b><abbr title="Coge un solo artista">getUNSOLOartista</abbr> ( recibir_ID: string ){{c}}
+
+    this.servicio_spotify.<abbr title="Llama a la función un artista del servicio y le manda la id que seleccionamos al clickear">getArtistaUNartista</abbr>( recibir_ID )
+                         .subscribe ( respuesta_artista => {{c}}
+                            console.log(respuesta_artista);
+
+                            <abbr title="Hacemos que sea igual el artista definido arriba como arreglo al que recibimos al clickear">this</abbr>.artista_variable_Arreglo = respuesta_artista;
+                         });
+  }</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-warning">
+                <div class="card-body"><h3>Componente_Artista.Html</h3>
+                    <pre class="card-text">{{co}}div class="row">
+    {{co}}div class="col-2">
+      {{co}}img {{t}}src]="artista_variable_Arreglo.images | pipespotify" class="<b><abbr title="Para reducir imagen a estilo bootstrap">img-thumbnail</abbr> </b><abbr title="CSs dado por herrera que hace pequeña imagen y redonda"><b>img-circle</b></abbr>">
+
+    {{co}}/div>
+
+    {{co}}div class="col">
+
+      {{co}}h3>{{c}}{{c}} artista_variable_Arreglo.name }}{{co}}/h3>
+
+
+      {{co}}p>{{co}}a <b>{{t}}href]="artista_variable_Arreglo.</b><abbr title="Lo cogemos de la API en la consola al coger los datos, esta dentro de las canciones, EXTERNAL_URLS dentro de este SPOTIFY y dentro de este la dirección del artista"><b>external_urls.spotify</b></abbr>" target="_blank">Ir a la página del artista{{co}}/a>{{co}}/p>
+
+{{co}}!-- Da fallo hasta que pongamos loading porque la propiedad external_urls no se carga de inmediato-->
+
+    {{co}}/div>
+
+    {{co}}div class="col-4 text-right">
+
+        {{co}}button routerLink="/angular" class="btn btn-outline-danger">Regresar{{co}}/button>
+
+
+    {{co}}/div>
+{{co}}/div></pre>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="tab-pane fade" id="v-pills-artistaspotifyx3" role="tabpanel" aria-labelledby="v-pills-artistaspotifyx3-tab">
+
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-primary">
+                <div class="card-body"><h3>Componente_Artista.Ts</h3>
+                    <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} ActivatedRoute } from '@angular/router';   //Saber la ruta activa
+import {{c}} ServiciospotifyService } from '../servicio/serviciospotify.service';
+
+
+@Component({{c}}
+  selector: 'app-artista',
+  templateUrl: './artista.component.html',
+  styleUrls: ['./artista.component.css']
+})
+export class ArtistaComponent implements OnInit {{c}}
+
+  <b><abbr title="Varoable declarada para mostrar el loading o los datos si se han cargado o no">loadingArtist</abbr>: boolean;</b>
+
+  artista_variable_Arreglo: any = {{c}}}
+
+  constructor( private variable_activaterouter: ActivatedRoute,
+              private servicio_spotify: ServiciospotifyService ) {{c}}
+
+    this.variable_activaterouter.params.subscribe ( variableRecibido =>{{c}}
+
+    <b><abbr title="Lo ponemos aquí para que se ejecute lo primero, para que salga el símbolo de cargar desde que está cargando y abajo para cuando acabe de cargar">this</abbr>.loadingArtist = true;</b>
+
+      console.log(variableRecibido);
+
+      console.log(variableRecibido ['id']);
+
+
+      this.getUNSOLOartista( variableRecibido['id'] );
+
+
+    });
+
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  getUNSOLOartista ( recibir_ID: string ){{c}}
+
+  <b><abbr title="Lo ponemos aquí para que se ejecute lo primero, para que salga el símbolo de cargar desde que está cargando y abajo para cuando acabe de cargar">this</abbr>.loadingArtist = true;</b>
+
+    this.servicio_spotify.getArtistaUNartista( recibir_ID )
+                         .subscribe ( respuesta_artista => {{c}}
+                            console.log(respuesta_artista);
+
+                            this.artista_variable_Arreglo = respuesta_artista;
+
+
+    <b><abbr title="Lo ponemos aquí para que NO se ejecute al cargar, para que NO salga el símbolo de cargar desde que está cargando y arriba para cuando empiece a cargar">this</abbr>.loadingArtist = false;</b>
+                         });
+  }
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-warning">
+                <div class="card-body"><h3>Componente_Artista.Html</h3>
+                    <pre class="card-text"><b>{{co}}app-loadingspotify {{f}}ngIf="<abbr title="Si es true en Ts se muestra el loading">loadingArtist</abbr>">{{co}}/app-loadingspotify></b>
+                      
+{{co}}div class="row" <b>{{f}}ngIf="!<abbr title="Si es false en Ts se muestra los datos">loadingArtist</abbr>"</b>>
+    {{co}}div class="col-2">
+      {{co}}img {{t}}src]="artista_variable_Arreglo.images | pipespotify" class="img-thumbnail img-circle">
+
+    {{co}}/div>
+
+    {{co}}div class="col">
+
+      {{co}}h3>{{c}}{{c}} artista_variable_Arreglo.name }}{{co}}/h3>
+
+
+      {{co}}p>{{co}}a {{t}}href]="artista_variable_Arreglo.external_urls.spotify" target="_blank">Ir a la página del artista{{co}}/a>{{co}}/p>
+
+{{co}}!-- Da fallo hasta que pongamos loading porque la propiedad external_urls no se carga de inmediato-->
+
+    {{co}}/div>
+
+    {{co}}div class="col-4 text-right">
+
+        {{co}}button routerLink="/angular" class="btn btn-outline-danger">Regresar{{co}}/button>
+
+
+    {{co}}/div>
+{{co}}/div></pre>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-artistaspotifyx2" role="tabpanel" aria-labelledby="v-pills-artistaspotifyx2-tab">Se ve en la pestaña MOSTRAR TODO -> Clickear sobre un elemento</div>
+
+
+    </div>
+</div>
