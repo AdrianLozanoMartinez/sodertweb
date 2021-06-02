@@ -1,17 +1,135 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col align-self-center text-center">
-            <h3 style="text-align: center;"><u><b>JavaScript</b></u></h3>
-            <br><br>
-            <button class="btn btn-dark m-5" [routerLink]="['/webjavascript']">Web</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/instalacionjavascript']">Instalación</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/extensionesjavascript']">Extensiones de Visual Studio Code</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/ejecutarjavascript']">Ejecutar</button>
-            <button class="btn btn-dark m-5" [routerLink]="['/estructurajavascript']">Enlazar con Html</button>
-            <br><br>
-            <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
-        </div>
-    </div>
-</div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript0-tab" data-toggle="pill" href="#pills-javascript0" role="tab" aria-controls="pills-javascript0" aria-selected="false" style="color: black;">Instalación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript1-tab" data-toggle="pill" href="#pills-javascript1" role="tab" aria-controls="pills-javascript1" aria-selected="false" style="color: black;">Enlazar con Html</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript2-tab" data-toggle="pill" href="#pills-javascript2" role="tab" aria-controls="pills-javascript2" aria-selected="false" style="color: black;">Ejecutar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript-tab" data-toggle="pill" href="#pills-javascript" role="tab" aria-controls="pills-javascript" aria-selected="true" style="color: black;">Variables</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript3-tab" data-toggle="pill" href="#pills-javascript3" role="tab" aria-controls="pills-javascript3" aria-selected="false" style="color: black;">Funciones<br><small>Flechas</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript4-tab" data-toggle="pill" href="#pills-javascript4" role="tab" aria-controls="pills-javascript4" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript5-tab" data-toggle="pill" href="#pills-javascript5" role="tab" aria-controls="pills-javascript5" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript6-tab" data-toggle="pill" href="#pills-javascript6" role="tab" aria-controls="pills-javascript6" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript7-tab" data-toggle="pill" href="#pills-javascript7" role="tab" aria-controls="pills-javascript7" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript8-tab" data-toggle="pill" href="#pills-javascript8" role="tab" aria-controls="pills-javascript8" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript9-tab" data-toggle="pill" href="#pills-javascript9" role="tab" aria-controls="pills-javascript9" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript10-tab" data-toggle="pill" href="#pills-javascript10" role="tab" aria-controls="pills-javascript10" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript11-tab" data-toggle="pill" href="#pills-javascript11" role="tab" aria-controls="pills-javascript11" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascript12-tab" data-toggle="pill" href="#pills-javascript12" role="tab" aria-controls="pills-javascript12" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <button class="btn btn-warning m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+</ul>
 
-https://modernizr.com/ -> Web que detecta si el Código Html5 y Css3 son compatibles en el navegador que estemos y con la librería Polyfills (https://es.javascript.info/polyfills)
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-javascript0" role="tabpanel" aria-labelledby="pills-javascript0-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul><li><b><a href="https://nodejs.org/es/">Descargar</a> NodeJS</b> -> La más recomendable (número Actual)</li><li><b>Instalar</b> -> node-v14.9.0-x64.msi</li><li><b>Ver versión</b> -> Terminal/MSDOS -> <b>node –v</b></li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-javascript1" role="tabpanel" aria-labelledby="pills-javascript1-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+      {{co}}html lang="en">
+          {{co}}head>                                                                                        
+              {{co}}meta charset="UTF-8">                                                                    
+              {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+              {{co}}title>Título en pestaña de la web{{co}}/title>
+              <b>{{co}}<abbr title="Llama al archivo de JavaScript">script</abbr> src="JAVASCRIPT.js">{{co}}/script></b>                                
+          {{co}}/head>                                                                                       
+          {{co}}body>    
+              
+                CONTENIDO              
+
+          {{co}}/body>                                                                                       
+      {{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascript2" role="tabpanel" aria-labelledby="pills-javascript2-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text"><ul> <li><b>Html</b><ul><li><b>Navegador</b> -> Se ve en la pantalla</li><li><b>Consola del navegador</b> -> <b>Ctrl + Mayúscula + i</b> Se ve en la consola del navegador, no en pantalla</li></ul></li>
+                        <li><b>Js</b> -> <b>node nombreDelArchivoJavaScript.js</b> -> Se ve en MSDOS / Terminales / Consola del navegador</li>
+                    </ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascript" role="tabpanel" aria-labelledby="pills-javascript-tab"><hr><app-variablejavascript></app-variablejavascript></div>
+
+    <div class="tab-pane fade" id="pills-javascript3" role="tabpanel" aria-labelledby="pills-javascript3-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascript4" role="tabpanel" aria-labelledby="pills-javascript4-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascript5" role="tabpanel" aria-labelledby="pills-javascript5-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascript6" role="tabpanel" aria-labelledby="pills-javascript6-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascript7" role="tabpanel" aria-labelledby="pills-javascript7-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascript8" role="tabpanel" aria-labelledby="pills-javascript8-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascript9" role="tabpanel" aria-labelledby="pills-javascript9-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascript10" role="tabpanel" aria-labelledby="pills-javascript10-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascript11" role="tabpanel" aria-labelledby="pills-javascript11-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascript12" role="tabpanel" aria-labelledby="pills-javascript12-tab">x</div>
+
+
+</div>
+<br><br>
+
+<b style="margin-left: 10%;">Web de Ayuda</b>: <abbr title="Manual JavaScript"><b><a target="_black" href="https://www.w3schools.com/js/default.asp" style="color: black;">W3schools</a>    ||      <a target="_black" href="https://bluuweb.github.io/javascript/fundamentos/#var-vs-let-vs-const" style="color: black;">Javascript bluuweb</a>||      <a target="_black" href="https://regexone.com/" style="color: black;">Regexone</a></b></abbr>
+<img src="../../../../assets/imagenes/javascript.svg" style=" width: 300px;">
+<button class="btn btn-warning m-2" [routerLink]="['/programacion']">Atras</button>

@@ -47,11 +47,7 @@ import { ImagenbootComponent } from './paginas/programacion/bootstrap/imagenboot
 import { FormulariobootComponent } from './paginas/programacion/bootstrap/formularioboot/formularioboot.component';
 //Programacion - JavaScript
 import { JavascriptComponent } from './paginas/programacion/javascript/javascript.component';
-import { EstructurajavascriptComponent } from './paginas/programacion/javascript/estructurajavascript/estructurajavascript.component';
-import { EjecutarjavascriptComponent } from './paginas/programacion/javascript/ejecutarjavascript/ejecutarjavascript.component';
-import { InstalacionjavascriptComponent } from './paginas/programacion/javascript/instalacionjavascript/instalacionjavascript.component';
 import { WebjavascriptComponent } from './paginas/programacion/javascript/webjavascript/webjavascript.component';
-import { ExtensionesjavascriptComponent } from './paginas/programacion/javascript/extensionesjavascript/extensionesjavascript.component';
 //Programacion - SQL
 import { SqlComponent } from './paginas/programacion/sql/sql.component';
 import { BasededatosComponent } from './paginas/programacion/sql/basededatos/basededatos.component';
@@ -74,7 +70,6 @@ import { Serviceone2Component } from './paginas/programacion/angular/serviciouno
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
 import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
 import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
-import { Buscador2Component } from './paginas/programacion/angular/buscador/buscador2/buscador2.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -189,11 +184,7 @@ export const appRoutes: Routes = [
   { path: 'navboot', component: NavbootComponent},
   //Programacion - JavaScript
   { path: 'javascript', component: JavascriptComponent},
-  { path: 'estructurajavascript', component: EstructurajavascriptComponent},
-  { path: 'ejecutarjavascript', component: EjecutarjavascriptComponent},
-  { path: 'instalacionjavascript', component: InstalacionjavascriptComponent},
   { path: 'webjavascript', component: WebjavascriptComponent},
-  { path: 'extensionesjavascript', component: ExtensionesjavascriptComponent},
   //Programacion - SQL
   { path: 'sql', component: SqlComponent},
   { path: 'basededatos', component: BasededatosComponent},

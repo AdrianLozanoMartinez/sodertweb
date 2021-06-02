@@ -1,0 +1,105 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-variablejavascript-tab" data-toggle="pill" href="#pills-variablejavascript" role="tab" aria-controls="pills-variablejavascript" aria-selected="true" style="color: black;">Tipos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-variablejavascript0-tab" data-toggle="pill" href="#pills-variablejavascript0" role="tab" aria-controls="pills-variablejavascript0" aria-selected="false" style="color: black;">Condiciones</a>
+    </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-variablejavascript" role="tabpanel" aria-labelledby="pills-variablejavascript-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Var - <small><small>General - No recomendable <br>(<small>Igual que Let, <b>excepto</b> se puede declarar <b>más</b> veces <b>donde sea</b></small>)</small></small></h3>
+                    <pre class="card-text"><hr>
+<b>var</b> edad = <abbr title="Primer valor">10;</abbr>
+<b>var</b> edad = <abbr title="Segundo valor, sustituye al anterior">20;</abbr>
+
+console.log( <abbr title="Daría 20. Muestra la último variable declarada">edad</abbr> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Let - <small><small>Local <br>(<small>Igual que Const, <b>excepto</b> se puede declarar <b>más</b> veces en <b>diferentes</b> condiciones y <b>cambiar valor</b></small>)</small></small></h3>
+                    <pre class="card-text"><hr>
+<b>let</b> edad = 10;
+<abbr title="Si no se usa let no da error con la misma variable para dar otro valor, se reutiliza con el último valor, solo se declara una vez. Si le ponemos más de 1 CONST con la misma variable da error dentro de la misma condición, en otra se permite">edad</abbr> = 20;
+
+console.log( <abbr title="Daría 20. Muestra la último variable declarada">edad</abbr> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Const - <small><small>Local <br>(<small>Igual que Let, <b>excepto</b> <b> no</b> se puede declarar <b>más</b> veces, <b>ni cambiar valor</b> en la misma condición, <b>excepto</b> en <b>array</b> y <b>objetos</b></small>)</small></small></h3>
+                    <pre class="card-text"><hr>
+<abbr title="No se declarada const con la misma variable de nuevo para dar otro valor, se reutiliza con el último valor, solo se declara una vez. Si le ponemos más de 1 CONST con la misma variable da error"><b>const</b></abbr> edad = 10;
+
+console.log( <abbr title="Daría 20. Muestra la último variable declarada">edad</abbr> );</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-variablejavascript0" role="tabpanel" aria-labelledby="pills-variablejavascript0-tab">
+        
+            <div class="card-group">
+                <div class="card text-dark bg-warning m-3 border-0">
+                    <div class="card-body"><h3>Var</h3>
+                        <pre class="card-text"><hr>
+<b>var</b> edad = 10;
+
+<b>if</b> (true) {{c}}
+    <b>var</b> edad = 20;
+    console.log( '<b>Dentro</b> del If: ', <abbr title="20 -> Si entrara en la condición se coge el último dato y muestra este mensaje">edad</abbr> );
+}
+
+console.log( '<b>Fuera</b> del If: ', <abbr title="20 -> Si entrara en la condición se coge el segundo dato y muestra el anterior mensaje y este también. 10 -> Sino entrara en la condición coge el primer dato y muestra solo este mensaje">edad</abbr> );</pre>
+                    </div>
+                    <div class="card-body bg-white"></div>
+                </div>
+                <div class="card text-dark bg-warning m-3">
+                    <div class="card-body"><h3>Let</h3>
+                        <pre class="card-text"><hr>
+<b><abbr title="Si se declara fuera serviría y se muestra para todo el código">let</abbr></b> edad = 10;
+
+<b>if</b> (true) {{c}}
+    <b><abbr title="Let es local, lo que significa que su valor solo se ejecuta y se muestra donde se declara, dentro de esta condición">let</abbr> edad = 20;</b>
+    console.log( '<b>Dentro</b> del If: ', <abbr title="20 -> Si entrara en la condición se coge el dato que está dentro del if y muestra este mensaje">edad</abbr> );
+}
+
+console.log( '<b>Fuera</b> del If: ', <abbr title="10 -> Entre o no en la condición, se muestra el valor y el mensaje que está fuera de la condición -> 10">edad</abbr> );
+<hr>
+<b>let</b> edad = 10;
+
+<b>if</b> (true) {{c}}
+    <b> edad = 20;</b>
+    console.log( '<b>Dentro</b> del If: ', <abbr title="20 -> Se cambia el valor si entra en la condición, al no tener let (no se declara de nuevo la variable) por ello el valor se cambia también fuera de la condición">edad</abbr> );
+}
+
+console.log( '<b>Fuera</b> del If: ', <abbr title="10 -> Si no entra en la condición se queda el primer valor. 20 -> Si entra en la condición muestra en este mensaje el segundo valor">edad</abbr> );</pre>
+                    </div>
+                </div>
+                <div class="card text-dark bg-warning m-3 border-0">
+                    <div class="card-body"><h3>Const</h3>
+                        <pre class="card-text"><hr>
+<b><abbr title="Si se declara fuera serviría y se muestra para todo el código">const</abbr></b> edad = 10;
+
+<b>if</b> (true) {{c}}
+    <b><abbr title="Const es local, lo que significa que su valor solo se ejecuta y se muestra donde se declara, dentro de esta condición">const</abbr> edad = 20;</b>
+    console.log( '<b>Dentro</b> del If: ', <abbr title="20 -> Si entrara en la condición se coge el dato que está dentro del if y muestra este mensaje">edad</abbr> );
+}
+
+console.log( '<b>Fuera</b> del If: ', <abbr title="10 -> Entre o no en la condición, se muestra el valor y el mensaje que está fuera de la condición -> 10">edad</abbr> );</pre>
+                    </div>
+                    <div class="card-body bg-white"></div>
+                </div>
+            </div>
+
+
+    </div>
+
+
+</div>

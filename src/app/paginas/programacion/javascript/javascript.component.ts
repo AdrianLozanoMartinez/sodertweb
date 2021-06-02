@@ -11,5 +11,10 @@ export class JavascriptComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+//Html
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
 }

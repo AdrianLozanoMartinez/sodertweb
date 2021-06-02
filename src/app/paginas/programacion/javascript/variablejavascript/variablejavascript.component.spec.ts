@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EjecutarjavascriptComponent } from './ejecutarjavascript.component';
+import { VariablejavascriptComponent } from './variablejavascript.component';
 
-describe('EjecutarjavascriptComponent', () => {
-  let component: EjecutarjavascriptComponent;
-  let fixture: ComponentFixture<EjecutarjavascriptComponent>;
+describe('VariablejavascriptComponent', () => {
+  let component: VariablejavascriptComponent;
+  let fixture: ComponentFixture<VariablejavascriptComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EjecutarjavascriptComponent ]
+      declarations: [ VariablejavascriptComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EjecutarjavascriptComponent);
+    fixture = TestBed.createComponent(VariablejavascriptComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

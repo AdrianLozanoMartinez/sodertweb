@@ -59,11 +59,7 @@ import { Carouselboot2Component } from './paginas/programacion/bootstrap/imagenb
 import { Colortabla2bootComponent } from './paginas/programacion/bootstrap/tablaboot/colortabla2boot/colortabla2boot.component';
 //Programacion - JavaScript
 import { JavascriptComponent } from './paginas/programacion/javascript/javascript.component';
-import { EstructurajavascriptComponent } from './paginas/programacion/javascript/estructurajavascript/estructurajavascript.component';
-import { EjecutarjavascriptComponent } from './paginas/programacion/javascript/ejecutarjavascript/ejecutarjavascript.component';
-import { InstalacionjavascriptComponent } from './paginas/programacion/javascript/instalacionjavascript/instalacionjavascript.component';
 import { WebjavascriptComponent } from './paginas/programacion/javascript/webjavascript/webjavascript.component';
-import { ExtensionesjavascriptComponent } from './paginas/programacion/javascript/extensionesjavascript/extensionesjavascript.component';
 //Programacion - SQL
 import { SqlComponent } from './paginas/programacion/sql/sql.component';
 import { BasededatosComponent } from './paginas/programacion/sql/basededatos/basededatos.component';
@@ -229,6 +225,8 @@ import { LoadingspotifyComponent } from './paginas/programacion/angular/httpspot
 import { ArtistaguiaComponent } from './paginas/programacion/angular/httpspotify/artistaguia/artistaguia.component';
 
 import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pipe/pipe-dom-seguro.pipe';
+import { VariablejavascriptComponent } from './paginas/programacion/javascript/variablejavascript/variablejavascript.component';
+import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/funcionesjavascript/funcionesjavascript.component';
 
 
 
@@ -287,11 +285,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
     Colortabla2bootComponent,
     //Programacion - JavaScript
     JavascriptComponent,
-    EstructurajavascriptComponent,
-    EjecutarjavascriptComponent,
-    InstalacionjavascriptComponent,
     WebjavascriptComponent,
-    ExtensionesjavascriptComponent,
     //Programacion - SQL
     SqlComponent,
     BasededatosComponent,
@@ -426,7 +420,9 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
     TarjetasspotifyComponent,
     LoadingspotifyComponent,
     ArtistaguiaComponent,
-    PipeDomSeguroPipe
+    PipeDomSeguroPipe,
+    VariablejavascriptComponent,
+    FuncionesjavascriptComponent
   ],
   imports: [
     //Por defecto
