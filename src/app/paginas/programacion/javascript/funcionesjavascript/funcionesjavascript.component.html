@@ -1,1 +1,206 @@
-<p>funcionesjavascript works!</p>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones0-tab" data-toggle="pill" href="#pills-javascriptfunciones0" role="tab" aria-controls="pills-javascriptfunciones0" aria-selected="false" style="color: black;">Normales <small>VS</small> Flechas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones1-tab" data-toggle="pill" href="#pills-javascriptfunciones1" role="tab" aria-controls="pills-javascriptfunciones1" aria-selected="false" style="color: black;">Flechas<br><small>Return + Meter datos en...</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones2-tab" data-toggle="pill" href="#pills-javascriptfunciones2" role="tab" aria-controls="pills-javascriptfunciones2" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones-tab" data-toggle="pill" href="#pills-javascriptfunciones" role="tab" aria-controls="pills-javascriptfunciones" aria-selected="true" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones3-tab" data-toggle="pill" href="#pills-javascriptfunciones3" role="tab" aria-controls="pills-javascriptfunciones3" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones4-tab" data-toggle="pill" href="#pills-javascriptfunciones4" role="tab" aria-controls="pills-javascriptfunciones4" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones5-tab" data-toggle="pill" href="#pills-javascriptfunciones5" role="tab" aria-controls="pills-javascriptfunciones5" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones6-tab" data-toggle="pill" href="#pills-javascriptfunciones6" role="tab" aria-controls="pills-javascriptfunciones6" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones7-tab" data-toggle="pill" href="#pills-javascriptfunciones7" role="tab" aria-controls="pills-javascriptfunciones7" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones8-tab" data-toggle="pill" href="#pills-javascriptfunciones8" role="tab" aria-controls="pills-javascriptfunciones8" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones9-tab" data-toggle="pill" href="#pills-javascriptfunciones9" role="tab" aria-controls="pills-javascriptfunciones9" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones10-tab" data-toggle="pill" href="#pills-javascriptfunciones10" role="tab" aria-controls="pills-javascriptfunciones10" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones11-tab" data-toggle="pill" href="#pills-javascriptfunciones11" role="tab" aria-controls="pills-javascriptfunciones11" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptfunciones12-tab" data-toggle="pill" href="#pills-javascriptfunciones12" role="tab" aria-controls="pills-javascriptfunciones12" aria-selected="false" style="color: black;">x</a>
+    </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones0" role="tabpanel" aria-labelledby="pills-javascriptfunciones0-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Normales</h3>
+                    <pre class="card-text"><b>function algo ()</b> {{c}}
+  console.log('Un dato');
+}
+<b><abbr title="Llamamos a la función llamada algo y muestra o ejecuta lo que hay dentro, en este caso el texto 'Un dato'">algo</abbr>()</b>;<hr>
+<h5>Con parámetros</h5>
+<b>function algo ( <abbr title="Dato recibido, en este caso cuando lo llamamos abajo que ponemos -> algo();">datos</abbr> )</b> {{c}}
+  console.log( <abbr title="Mostramos el contenido de datos">datos</abbr> );
+}
+<b><abbr title="Dato introducido, que lo mandamos a la función arriba y lo visualizamos en este caso en la consola">algo</abbr>('Ponemos un dato')</b>;
+</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Flechas</h3>
+                    <pre class="card-text"><b>const algo = () =></b> {{c}}          //<b>Siempre</b> debe llevar ()
+  console.log('Un dato');
+}
+<b><abbr title="Llamamos a la función de flecha llamada algo y muestra o ejecuta lo que hay dentro, en este caso el texto 'Un dato'">algo</abbr>()</b>,<hr><h5>Con parámetros</h5>
+<h6><u>UN parámetro</u></h6><b>const algo = <abbr title="1 Dato es opcional el (). Dato recibido, en este caso cuando lo llamamos abajo que ponemos -> algo();">datos</abbr> =></b> {{c}}           //<b>Opcional</b> llevar ()
+  console.log( <abbr title="Mostramos el contenido de datos">datos</abbr> );
+}
+<b><abbr title="Dato introducido, que lo mandamos a la función arriba y lo visualizamos en este caso en la consola">algo</abbr>('Ponemos un dato')</b>;
+
+
+<h6><u>2 o más parámetro</u></h6><b>const <abbr title="2 o más se pone los (). Dato recibido, en este caso cuando lo llamamos abajo que ponemos -> algo();">algo</abbr> = ( dato1, dato2 ) =></b> {{c}}           //<b>Siempre</b> debe llevar ()
+<abbr title="Sumamos las variables, para que se una si es texto o texto con números o se sume u otra operación si es números. Mostramos el contenido de datos">console.log</abbr>( <b>dato1 + dato2</b> );
+}
+<b><abbr title="Ponemos texto o número, lo que sea, mientras sean el mismo número de parámetros que recibe la función. Dato introducido, que lo mandamos a la función arriba y lo visualizamos en este caso en la consola">algo</abbr>("Ponemos un dato: ", 1985)</b>;
+</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones1" role="tabpanel" aria-labelledby="pills-javascriptfunciones1-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Sin recibir datos</h3>
+                    <pre class="card-text"><abbr title="No recibimos datos en la función">const</abbr> algo = <b>()</b> => <b>{{c}}
+    <abbr title="Devolvemos lo que pongamos, ya sea variable, número, texto...">return</abbr> 'Texto para sacar'</b>
+}
+
+<abbr title="Metemos en la variable que hemos llamado resultado el resultado de la función">const</abbr> resultado = algo<b>()</b>;
+console.log( <abbr title="Resultado: Texto para sacar">resultado</abbr> );
+
+<hr><h6>Simplificamos</h6>
+<abbr title="Quitamos los { } y el return">const</abbr> algo = <b>()</b> => <b>"Texto para sacar";</b>
+
+const resultado = algo<b>()</b>;
+console.log( <abbr title="Resultado: Texto para sacar">resultado</abbr> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Recibiendo un dato</h3>
+                    <pre class="card-text">const algo = <b>dato</b> => {{c}}
+  <b><abbr title="Devuelve el dato que recibimos más abajo que a su vez lo captura la función que está arriba declarada como constante, muestra la forma que quiere devolver">return</abbr> 'Texto de la ' + dato;</b>
+};
+
+const <abbr title="Metemos los datos que le pasamos a la función en una variable">resultado</abbr> = algo<b>( 'función' )</b>;
+console.log( <abbr title="Mostramos el contenido que hemos metido en la variable">resultado</abbr> );
+
+<hr><h6>Simplificamos</h6>
+<abbr title="Quitamos los { } y el return">const</abbr> algo = <b>dato => "Texto para " + dato;</b>
+
+const resultado = algo("sacar");
+console.log( <abbr title="Resultado: Texto para sacar">resultado</abbr> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Recibiendo datos</h3>
+                    <pre class="card-text">const algo = <b>( dato1, dato2 )</b> => {{c}}
+  <b><abbr title="Devuelve los datos que recibimos más abajo que a su vez lo captura la función que está arriba declarada como constante, muestra la forma que quiere devolver y si todo o una parte">return</abbr> dato1 + dato2;</b>
+};
+
+const <abbr title="Metemos los datos que le pasamos a la función en una variable">resultado</abbr> = algo<b>( "Ponemos un dato: ", 1985 )</b>;
+console.log( <abbr title="Mostramos el contenido que hemos metido en la variable">resultado</abbr> );
+
+<hr><h6>Simplificamos</h6>
+<abbr title="Quitamos los { } y el return">const</abbr> algo = (dato1, dato2) <b>=> (dato1 + dato2);</b>
+
+const resultado = algo("Ponemos un dato: ", 1985);
+console.log( <abbr title="Resultado: Ponemos un dato: 1985">resultado</abbr> );</pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Meter datos en Console.log</h3>
+                    <pre class="card-text">const algo = dato => {{c}}
+  <b><abbr title="En vez de número puede ser texto">console</abbr>.log( dato + 19 );</b>
+}
+
+<abbr title="Ponemos el dato que queramos">algo</abbr>(<b>10</b>);</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Meter datos en el Inicio</h3>
+                    <pre class="card-text"><abbr title="Si ponemos 0 o ninguno coge el valor de abajo, si ponemos otro número coge este número">const</abbr> algo = <b>( dato = 0)</b> => {{c}}
+  console.log( dato );
+}
+
+algo(10);</pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones2" role="tabpanel" aria-labelledby="pills-javascriptfunciones2-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones" role="tabpanel" aria-labelledby="pills-javascriptfunciones-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones3" role="tabpanel" aria-labelledby="pills-javascriptfunciones3-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones4" role="tabpanel" aria-labelledby="pills-javascriptfunciones4-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones5" role="tabpanel" aria-labelledby="pills-javascriptfunciones5-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones6" role="tabpanel" aria-labelledby="pills-javascriptfunciones6-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones7" role="tabpanel" aria-labelledby="pills-javascriptfunciones7-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones8" role="tabpanel" aria-labelledby="pills-javascriptfunciones8-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones9" role="tabpanel" aria-labelledby="pills-javascriptfunciones9-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones10" role="tabpanel" aria-labelledby="pills-javascriptfunciones10-tab">x</div>
+
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones11" role="tabpanel" aria-labelledby="pills-javascriptfunciones11-tab">x</div>
+
+    <div class="tab-pane fade" id="pills-javascriptfunciones12" role="tabpanel" aria-labelledby="pills-javascriptfunciones12-tab">x</div>
+
+
+</div>
