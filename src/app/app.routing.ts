@@ -145,7 +145,6 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
 
 
-
 export const appRoutes: Routes = [
   //Componentes - Especiales
   { path: '', component: HomeComponent },

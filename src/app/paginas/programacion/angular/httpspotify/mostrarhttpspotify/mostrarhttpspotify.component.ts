@@ -13,15 +13,15 @@ export class MostrarhttpspotifyComponent implements OnInit {
 
   nuevasCanciones: any[] = [];
 
-  variable_error: boolean;   //
+  variable_error: boolean;   
 
-  variable_mensaje_error: string; //
+  variable_mensaje_error: string; 
 
   constructor( private variable_servicio: ServiciospotifyService) {
 
     this.variable_loading = true;
 
-    this.variable_error = false;  //
+    this.variable_error = false;  
 
       this.variable_servicio.get_spotify()
                             .subscribe( (datoRecibido: any) => {     //Subscribe tiene dos funciones, la 1º es lo correcto y la segunda el error
@@ -31,15 +31,15 @@ export class MostrarhttpspotifyComponent implements OnInit {
             this.variable_loading = false;
       }, ( error_recibido ) => { //Error
   
-        this.variable_error = true; //
+        this.variable_error = true; 
 
-        this.variable_loading = false; //
+        this.variable_loading = false; 
         
-        console.log(error_recibido);  //
+        console.log(error_recibido);  
 
-        console.log(error_recibido.error.error.message);  //Si miramos en consola veremos (HttpErrorResponse {headers: HttpHeaders, status...) dentro de él error, y dentro de este error, vemos message -> El mensaje que sale es: Only valid bearer authentication supported (Porque para ver el error hemos quitado la B del token en el servidor, para ver el mensaje error)
+        console.log(error_recibido.error.error.message);  
         
-        this.variable_mensaje_error = error_recibido.error.error.message;  //Lo metemos en variable para msotrarlo en html
+        this.variable_mensaje_error = error_recibido.error.error.message; 
       }    
 
       );
@@ -49,7 +49,7 @@ export class MostrarhttpspotifyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //Se pone aquí el subscribe por ejemplo para controlar cuando acabe el loagin se acabe de subscribir...
+
 
 
 

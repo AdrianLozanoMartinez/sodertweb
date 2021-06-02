@@ -6,6 +6,7 @@
         <a class="nav-link" id="v-pills-mostrarhttpspotifyz-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyz" role="tab" aria-controls="v-pills-mostrarhttpspotifyz" aria-selected="false">CON PIPE / Componente.Html</a>
         <a class="nav-link" id="v-pills-mostrarhttpspotifygato-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifygato" role="tab" aria-controls="v-pills-mostrarhttpspotifygato" aria-selected="false">Centralizamos <small>iguales códigos<br>(Componente.Html - Con tarjetas)</small></a>
         <a class="nav-link" id="v-pills-mostrarhttpspotifyperro-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotifyperro" role="tab" aria-controls="v-pills-mostrarhttpspotifyperro" aria-selected="false">Loading / - Componente.Ts/Html</a>
+        <a class="nav-link" id="v-pills-automaticohttpspotify1-tab" data-toggle="pill" href="#v-pills-automaticohttpspotify1" role="tab" aria-controls="v-pills-automaticohttpspotify1" aria-selected="false">Servicio / Token automático<br><small>No funciona bien del todo</small></a>
         <a class="nav-link" id="v-pills-mostrarhttpspotify2-tab" data-toggle="pill" href="#v-pills-mostrarhttpspotify2" role="tab" aria-controls="v-pills-mostrarhttpspotify2" aria-selected="false">Resultado</a>
       </div>
     </div>
@@ -13,7 +14,7 @@
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
 
-        <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyx" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyx-tab">
+          <div class="tab-pane fade" id="v-pills-mostrarhttpspotifyx" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotifyx-tab">
           
           <div class="card-group">
                 <div class="card text-dark m-3 bg-danger">
@@ -180,7 +181,8 @@ export class PipespotifyPipe implements PipeTransform {{c}}
 
         <div class="tab-pane fade" id="v-pills-mostrarhttpspotify2" role="tabpanel" aria-labelledby="v-pills-mostrarhttpspotify2-tab">
 
-
+          ESTE ERROR ES PORQUE HEMOS IMPLEMENTADO PARTE DE TOKEN AUTOMÁTICO: PRIMERO HAY QUE BUSCAR PERSONAS -> ENTRAR -> LUEGO FUNCIONA MOSTRAR TODO (PENDIENTE DE ARREGLAR)
+<br><small>La solución es crear un servidor aparte u otros modos que tengo que investigar y aprender para implementarlo...pendiente cuando estudie Node.js</small>
                  <!--Loading-->
             <app-loadingspotify *ngIf="variable_loading"></app-loadingspotify>
             
@@ -333,7 +335,100 @@ export class MostrarhttpspotifyComponent implements OnInit {{c}}
           </div>
 
 
+          <div class="tab-pane fade" id="v-pills-automaticohttpspotify1" role="tabpanel" aria-labelledby="v-pills-automaticohttpspotify1-tab">
 
+            <div class="card-group">
+              <div class="card text-dark m-3 bg-danger">
+                  <div class="card-body"><h3>Servicio </h3>
+                      <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient, HttpHeaders<b>, HttpParams</b> } from '@angular/common/http';
+import {{c}} map } from 'rxjs/operators';
+
+@Injectable({{c}}
+providedIn: 'root   
+})
+export class ServiciospotifyService {{c}}
+
+<b>token_automatico:any = this.getToken();</b>
+
+constructor( private variable_http: HttpClient ) {{c}}
+
+      console.log('Servicio de Spotify, Listo!! ');
+      
+      <b>this.token_automatico = this.getToken()</b>
+}
+
+<b>async getToken() {{c}}
+
+  const clientId = '7b868e5b655447c8b6ab2331f6747ae4';
+
+  const clientSecret = '2b6838cfce5b4f8791cb774ad88f454e';
+
+  const body = new HttpParams()
+    .append('grant_type', 'client_credentials')
+    .append('client_id', clientId)
+    .append('client_secret', clientSecret);
+
+  return this.variable_http.post('https://accounts.spotify.com/api/token', body)
+          .toPromise()
+          .then( (token_recibido:any) => {{c}}
+              this.token_automatico = `Bearer ${{c}} token_recibido['access_token'] }`;
+            }, (err: any) => {{c}}
+             console.log(err);
+            });
+}</b>
+
+
+getQuery_UnificarDatos( variable_query: string ){{c}}
+
+    <b>const url = `https://api.spotify.com/v1/${{c}} variable_query }`;
+
+      const headers = new HttpHeaders({{c}}
+        'Authorization': `${{c}}this.token_automatico}`  //
+      });</b>
+
+    console.log( this.token_automatico, headers )
+
+ <b>   return this.variable_http.get(url, {{c}} headers });</b>
+
+   }
+
+
+   get_spotify() {{c}}
+
+      return this.getQuery_UnificarDatos('browse/new-releases?limit=20')
+                              .pipe ( map (datoEnBruto =>  datoEnBruto['albums'].items)); 
+    }
+
+
+   getArtista( terminoRecibido: String ) {{c}}
+
+    return this.getQuery_UnificarDatos(`search?q=${{c}}terminoRecibido}&type=artist&offset=15`)
+                               .pipe ( map (datoEnBruto =>  datoEnBruto['artists'].items)); 
+   }
+
+
+
+   getArtistaUNartista( id: String ) {{c}}    //https://api.spotify.com/v1/artists/{{c}}id} 
+
+    return this.getQuery_UnificarDatos(`artists/${{c}}id}`);
+   }
+
+
+   getTopTracks( id: String ) {{c}}    
+
+    return this.getQuery_UnificarDatos(`artists/${{c}}id}/top-tracks?market=ES`) //?market=ES hay que añadir el idioma, lo suyo es probar primero en la web y copiar la dirección como vemos aquí
+                              .pipe ( map (datoFiltradoPorMapPipe =>  datoFiltradoPorMapPipe['tracks']));
+   }
+
+
+}</pre>
+                  </div>
+              </div>
+            </div>
+
+
+          </div>
 
 
 
