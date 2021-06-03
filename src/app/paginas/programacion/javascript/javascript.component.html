@@ -15,16 +15,16 @@
         <a class="nav-link" id="pills-javascript3-tab" data-toggle="pill" href="#pills-javascript3" role="tab" aria-controls="pills-javascript3" aria-selected="false" style="color: black;">Funciones<br><small>Flechas</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-javascript4-tab" data-toggle="pill" href="#pills-javascript4" role="tab" aria-controls="pills-javascript4" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-javascript4-tab" data-toggle="pill" href="#pills-javascript4" role="tab" aria-controls="pills-javascript4" aria-selected="false" style="color: black;">Template String<br><small>Lógica - Flechas</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-javascript5-tab" data-toggle="pill" href="#pills-javascript5" role="tab" aria-controls="pills-javascript5" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-javascript5-tab" data-toggle="pill" href="#pills-javascript5" role="tab" aria-controls="pills-javascript5" aria-selected="false" style="color: black;">Objetos</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-javascript6-tab" data-toggle="pill" href="#pills-javascript6" role="tab" aria-controls="pills-javascript6" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-javascript6-tab" data-toggle="pill" href="#pills-javascript6" role="tab" aria-controls="pills-javascript6" aria-selected="false" style="color: black;">Destructuring<br>Objects</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-javascript7-tab" data-toggle="pill" href="#pills-javascript7" role="tab" aria-controls="pills-javascript7" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-javascript7-tab" data-toggle="pill" href="#pills-javascript7" role="tab" aria-controls="pills-javascript7" aria-selected="false" style="color: black;">Fetch API</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-javascript8-tab" data-toggle="pill" href="#pills-javascript8" role="tab" aria-controls="pills-javascript8" aria-selected="false" style="color: black;">x</a>
@@ -104,13 +104,197 @@
 
     <div class="tab-pane fade" id="pills-javascript3" role="tabpanel" aria-labelledby="pills-javascript3-tab"><hr><app-funcionesjavascript></app-funcionesjavascript></div>
 
-    <div class="tab-pane fade" id="pills-javascript4" role="tabpanel" aria-labelledby="pills-javascript4-tab">x</div>
+    <div class="tab-pane fade" id="pills-javascript4" role="tabpanel" aria-labelledby="pills-javascript4-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Normmal</h3>
+                    <pre class="card-text">const algo = ( <b>dato1, dato2</b> ) => {{c}}
+    return <b>`Texto en <abbr title="Podemos usar lógica (sumar,restar...) usando ${ dato } e incluir texto mientras, debe estar en comillas invertidas">template</abbr>: ${{c}} dato1 + dato2 }`</b>;
+}
+const resultado = algo( <b>10, 30</b> );
+console.log( <abbr title="Resultado: Texto en template: 40, que es el resultado de sumar los dos números introducido a lo último, el 10 y el 30">resultado</abbr> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Simplificamos</h3>
+                    <pre class="card-text">const algo = ( dato1, dato2 ) => <b>(`<abbr title="Al quitarle el return y {}, al ser más datos lo metemos en ()">Texto</abbr> en template: ${{c}} dato1 + dato2 }`);</b>
 
-    <div class="tab-pane fade" id="pills-javascript5" role="tabpanel" aria-labelledby="pills-javascript5-tab">x</div>
+const resultado = algo( 10, 30 );
+console.log( resultado );</pre>
+                </div>
+            </div>
+        </div>
 
-    <div class="tab-pane fade" id="pills-javascript6" role="tabpanel" aria-labelledby="pills-javascript6-tab">x</div>
 
-    <div class="tab-pane fade" id="pills-javascript7" role="tabpanel" aria-labelledby="pills-javascript7-tab">x</div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascript5" role="tabpanel" aria-labelledby="pills-javascript5-tab">
+        
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Normmal</h3>
+                    <pre class="card-text">const <abbr title="Objeto: Dentro de él ponemos las propiedades, desde 1 hasta muchas..."><b>algo</b></abbr> = {{c}}
+  <b>propiedad1:</b> 'Del objeto',
+  propiedad2: 19,
+  <abbr title="Array">propiedad4</abbr>: <b>['array1','array2']</b>,                     
+  <abbr title="La última propiedad o si hay solo una, no lleva ,">propiedad3</abbr>: true
+}
+
+console.log( <abbr title="Muestra: {propiedad1: Del objeto, propiedad2: 19, propiedad3: true}">algo</abbr> );
+console.log( <abbr title="Muestra: Del objeto. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos"><b>algo</b></abbr><b>.propiedad1</b> );
+console.log( <abbr title="Muestra: 19. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos">algo</abbr>.propiedad2 );
+console.log( <abbr title="Muestra: true. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos">algo</abbr><b>.propiedad3</b> );
+console.log( <abbr title="Muestra: [array1, array2]">algo</abbr><b>.propiedad4</b> );
+console.log( <abbr title="Muestra: array1. La primera posición del array">algo</abbr><b>.propiedad4[0]</b> );
+console.log( <abbr title="Muestra: array2. La siguiente posición del array">algo</abbr><b>.propiedad4[1]</b> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Añadimos</h3>
+                    <pre class="card-text">const algo = {{c}}
+  propiedad1: 'Del objeto',
+  propiedad2: 19,
+  propiedad4: ['array1','array2'],                     
+  propiedad3: true
+}
+
+console.log( algo );
+console.log( algo.propiedad1 );
+console.log( algo.propiedad2 );
+console.log( algo.propiedad3 );
+console.log( algo.propiedad4 );
+console.log( algo.propiedad4[0] );
+console.log( algo.propiedad4[1] );
+
+<b>algo.<abbr title="Se puede añadir o dentro del objeto o fuera. Ponemos el nombre de la propiedad que deseemos">propiedad5</abbr> = "<abbr title="Podemos poner texto, números, boolean, array...">Añadimos</abbr> propiedades";
+console.log(algo.<abbr title="Muestra: Añadimos propiedades">propiedad5</abbr> );</b></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Objeto dentro de otro objeto</h3>
+                    <pre class="card-text">const <abbr title="OBJETO">algo</abbr> = {{c}}
+  propiedad1: 'Del objeto',
+  propiedad2: <b>{{c}}
+    subpropiedad1: 'Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)',
+    subpropiedad2: 1985,
+    subpropiedad3: false
+  },</b>
+  propiedad3: <b>{{c}}
+    subpropiedad1: {{c}}
+      texto: 'Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)',
+      web: 'sodertweb.web.app',
+      youtube: 'www.youtube.com/channel/UCDKYrjnmZAhZHN4wttRLFug'
+    }
+  }</b>
+};
+
+<abbr title="Muestra: Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)">console</abbr>.log( <b>algo.propiedad2.subpropiedad1</b> );
+
+<abbr title="Muestra: Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)">console</abbr>.log( <b>algo.propiedad3.subpropiedad4.texto</b> );</pre>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascript6" role="tabpanel" aria-labelledby="pills-javascript6-tab">
+        
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Antes del Destructuring</h3>
+                    <pre class="card-text">const algo = {{c}}
+  propiedad1: "Del objeto",
+  propiedad2: 19,
+  propiedad3: true,
+  propiedad4: ["array1", "array2"]
+};
+
+<b>const <abbr title="Metemos en una variable una propiedad del objeto, para usarlo solo la variable y no algo.propiedad1">meterEnVariable</abbr> = algo.propiedad1;</b>
+console.log( <abbr title="Muestra: Del objeto. Muestra la propiedad sin tener que poner algo.popiedad1">meterEnVariable</abbr> );
+<hr><hr>
+const algo = {{c}}
+  propiedad1: 'Del objeto',
+  propiedad2: {{c}}
+    subpropiedad1: 'Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)',
+    subpropiedad2: 1985,
+    subpropiedad3: false
+  },
+  propiedad3: {{c}}
+    subpropiedad1: {{c}}
+      texto: 'Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)',
+      web: 'sodertweb.web.app',
+      youtube: 'www.youtube.com/channel/UCDKYrjnmZAhZHN4wttRLFug'
+    }
+  }
+};
+
+<b>const <abbr title="Metemos en la variable las propiedades/subpropiedades del objeto, en este caso sería la 2º subpropiedad dentro de una propiedad">variable_Objeto</abbr> = algo.propiedad3.subpropiedad1.subpropiedad1;
+console.log( variable_Objeto );</b></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Destructuring</h3>
+                    <pre class="card-text">const algo = {{c}}
+  propiedad1: "Del objeto",
+  propiedad2: 19,
+  propiedad3: true,
+  propiedad4: ["array1", "array2"]
+};
+
+<b>const {{c}} <abbr title="Sacamos la propiedad del objeto llamado algo y usarla como variable">propiedad1</abbr> } = <abbr title="Objeto">algo</abbr>;
+console.log( <abbr title="Muestra: Del objeto">propiedad1</abbr> );
+
+const {{c}} propiedad2, propiedad3 } = <abbr title="Podemos poner todas las propiedades para sacarlas y usarla como variable">algo</abbr> ;
+console.log (<abbr title="19">propiedad1</abbr>, <abbr title="Muestra: true">propiedad2</abbr> );</b>
+<hr><hr>
+const algo = {{c}}
+  propiedad1: 'Del objeto',
+  propiedad2: {{c}}
+    subpropiedad1: 'Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)',
+    subpropiedad2: 1985,
+    subpropiedad3: false
+  },
+  propiedad3: {{c}}
+    subpropiedad1: {{c}}
+      texto: 'Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)',
+      web: 'sodertweb.web.app',
+      youtube: 'www.youtube.com/channel/UCDKYrjnmZAhZHN4wttRLFug'
+    }
+  }
+};
+
+<b>const {{c}} <abbr title="Propiedad que está dentro de la subpropiedad1 y esta a su vez dentro de propiedad3, dentro del objeto llamado algo">subpropiedad1</abbr> } = algo.propiedad3.subpropiedad1;
+console.log( <abbr title="Propiedad que se extrae para usarla como variable">subpropiedad1</abbr> );
+
+<abbr title="Podemos sacar uno o más propiedades">const</abbr> {{c}} web, youtube } = algo.propiedad3.subpropiedad1;
+console.log(web, youtube);</b></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-javascript7" role="tabpanel" aria-labelledby="pills-javascript7-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>x</h3>
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>x</h3>
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
     <div class="tab-pane fade" id="pills-javascript8" role="tabpanel" aria-labelledby="pills-javascript8-tab">x</div>

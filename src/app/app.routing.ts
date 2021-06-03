@@ -47,7 +47,6 @@ import { ImagenbootComponent } from './paginas/programacion/bootstrap/imagenboot
 import { FormulariobootComponent } from './paginas/programacion/bootstrap/formularioboot/formularioboot.component';
 //Programacion - JavaScript
 import { JavascriptComponent } from './paginas/programacion/javascript/javascript.component';
-import { WebjavascriptComponent } from './paginas/programacion/javascript/webjavascript/webjavascript.component';
 //Programacion - SQL
 import { SqlComponent } from './paginas/programacion/sql/sql.component';
 import { BasededatosComponent } from './paginas/programacion/sql/basededatos/basededatos.component';
@@ -184,7 +183,6 @@ export const appRoutes: Routes = [
   { path: 'navboot', component: NavbootComponent},
   //Programacion - JavaScript
   { path: 'javascript', component: JavascriptComponent},
-  { path: 'webjavascript', component: WebjavascriptComponent},
   //Programacion - SQL
   { path: 'sql', component: SqlComponent},
   { path: 'basededatos', component: BasededatosComponent},

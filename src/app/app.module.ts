@@ -59,7 +59,6 @@ import { Carouselboot2Component } from './paginas/programacion/bootstrap/imagenb
 import { Colortabla2bootComponent } from './paginas/programacion/bootstrap/tablaboot/colortabla2boot/colortabla2boot.component';
 //Programacion - JavaScript
 import { JavascriptComponent } from './paginas/programacion/javascript/javascript.component';
-import { WebjavascriptComponent } from './paginas/programacion/javascript/webjavascript/webjavascript.component';
 //Programacion - SQL
 import { SqlComponent } from './paginas/programacion/sql/sql.component';
 import { BasededatosComponent } from './paginas/programacion/sql/basededatos/basededatos.component';
@@ -285,7 +284,6 @@ import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/
     Colortabla2bootComponent,
     //Programacion - JavaScript
     JavascriptComponent,
-    WebjavascriptComponent,
     //Programacion - SQL
     SqlComponent,
     BasededatosComponent,
