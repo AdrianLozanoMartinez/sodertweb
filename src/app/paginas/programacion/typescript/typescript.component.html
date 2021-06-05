@@ -30,7 +30,7 @@
         <a class="nav-link" id="pills-tpscript7-tab" data-toggle="pill" href="#pills-tpscript7" role="tab" aria-controls="pills-tpscript7" aria-selected="false" style="color: black;">Clases</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript9-tab" data-toggle="pill" href="#pills-tpscript9" role="tab" aria-controls="pills-tpscript9" aria-selected="false" style="color: black;">Importaciones<br>URL</a>
+        <a class="nav-link" id="pills-tpscript9-tab" data-toggle="pill" href="#pills-tpscript9" role="tab" aria-controls="pills-tpscript9" aria-selected="false" style="color: black;">Importaciones<br>URL - Classe</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-tpscript10-tab" data-toggle="pill" href="#pills-tpscript10" role="tab" aria-controls="pills-tpscript10" aria-selected="false" style="color: black;">Decoradores</a>
@@ -55,16 +55,16 @@
 
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
-    <b>"target": "<abbr title="es6, 2020, ... Pero usamos es5 porque es la más estable">es5</abbr>"</b>,                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    <b>"target": "es5"</b>,   <abbr title="es6, 2020, ... Pero usamos es5 porque es la más estable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
     "module": "commonjs",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
     // "lib": [],                                   /* Specify library files to be included in the compilation. */
     // "allowJs": true,                             /* Allow javascript files to be compiled. */
-    // <b>"<abbr title="Permite que de (true) o no (false) fallo en archivos .js">checkJs": true</abbr>,</b>                             /* Report errors in .js files. */
+    // <b>"checkJs": true,</b>   <abbr title="Permite que de (true) o no (false) fallo en archivos .js"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>                             /* Report errors in .js files. */
     // "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
     // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                           /* Generates corresponding '.map' file. */
-    // <b>"<abbr title="Donde queremos que salga el archivo">outFile</abbr>": "<abbr title="Por defecto la raíz donde se encuentra el archivo">./</abbr>",</b>                             /* Concatenate and emit output to single file. */
+    // <b>"outFile": "./",</b>   <abbr title="Donde queremos que salga el archivo. Por defecto la raíz ( / ) donde se encuentra el archivo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>                             /* Concatenate and emit output to single file. */
     // "outDir": "./",                              /* Redirect output structure to the directory. */
     // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                           /* Enable project compilation */
@@ -77,8 +77,8 @@
 
     /* Strict Type-Checking Options */
     "strict": true,                                 /* Enable all strict type-checking options. */
-    // <b><abbr title="Da error (true) sino se especifica el tipo (string, number...) es decir es any (cualquiera)">"noImplicitAny": true,</abbr></b>                       /* Raise error on expressions and declarations with an implied 'any' type. */
-    // <b><abbr title="Da error (true) si da null">"strictNullChecks": true,</abbr></b>                    /* Enable strict null checks. */
+    // <b>"noImplicitAny": true,</b>   <abbr title="Da error (true) sino se especifica el tipo (string, number...) es decir es any (cualquiera)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>                        /* Raise error on expressions and declarations with an implied 'any' type. */
+    // <b>"strictNullChecks": true,</b>   <abbr title="Da error (true) si da null"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>                    /* Enable strict null checks. */
     // "strictFunctionTypes": true,                 /* Enable strict checking of function types. */
     // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
     // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
@@ -138,7 +138,7 @@
                 <div class="card-body">
                     <pre class="card-text">{{c}}
 
-  <b>"exclude": ["<abbr title="Para no sacar nombre.js">Directorio_Que_No_Queremos_Que_Compile"],</abbr></b>
+  <b>"exclude": ["Directorio_Que_No_Queremos_Que_Compile"],</b>   <abbr title="Para no sacar nombre.js"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   <small>"compilerOptions": {{c}}
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
@@ -221,9 +221,7 @@
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                     <pre class="card-text"><ul><li><b>console.log (nombre_variable);</b></li>
-<li>console<b><abbr title="Para que el mensaje salga en amarillo (warning)">.warn</abbr></b> (nombre_variable);</li>
-<li>console.log (<b>"Texto" + " " + nombre_variable + " " + 36</b>);</li>
-<li>console.log(<b>`${{c}}getNombre_Variable()}`</b>);</li></ul></pre>
+<li>console<b>.warn</b> (nombre_variable);   <abbr title="Para que el mensaje salga en amarillo (warning)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
                 </div>
             </div>
         </div>
@@ -239,23 +237,26 @@
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><b><abbr title="Como van a ir definido obligatoriamente (string, number, boolean...)">interface</abbr> nombre_interface {{c}}</b>
-    <b>nombre_por_dentro: string;
-    numero_por_dentro: number;
-    nombre2_por_dentro<abbr title="Opcional">?:</abbr> string;</b>
+                    <pre class="card-text"><b>interface nombre_interfaz {{c}}</b>   <abbr title="Indicamos como van a ir definida la variable obligatoriamente (string, number, boolean...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>parametro1: string;
+    parametro2: number;
+    parametro3?: string;</b>   <abbr title="Opcional"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   <b>}</b>
 
-  const nombre_funcion = ( nombre_parametro<b>: nombre_interface</b> ) => {{c}}
 
-    console.log(`Le damos interface al ${{c}} <b>nombre_parametro.nombre_por_dentro</b> } que cojamos`);
-  }
-
-  <b>const <abbr title="Superhéroe">nombre_utilizar</abbr>: nombre_interface = {{c}}</b>
-    <b>nombre_por_dentro: 'Nombre',
-    numero_por_dentro: 30
+  <b>const nombre_utilizar: nombre_interfaz = {{c}}</b>   <abbr title="Metemos datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>parametro1: 'Nombre',
+    parametro2: 30
   }</b>
 
-  nombre_funcion ( <b>nombre_utilizar</b> );</pre>
+
+  const nombre_funcion = ( parametro<b>: nombre_interfaz</b> ) => {{c}}   <abbr title="Ejecutamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    console.log(`Le damos interface al ${{c}} <b>parametro.parametro1</b> } que cojamos`);
+  }
+
+
+  nombre_funcion ( <b>nombre_utilizar</b> );   <abbr title="Llamamos a la función"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
         </div>
@@ -269,46 +270,41 @@
                 <div class="card-body">
                     <pre class="card-text"><b>class nombreClase {{c}}
 
-       <abbr title="Metemos en el constructor las variables que vamos a usar">constructor</abbr> (
-            <abbr title="Public (Uso fuera de la clase), Private (Uso dentro de la clase)">public</abbr> nombre_parametro: string,</b>
-            <b>public <abbr title="Opcional">boolean_parametro?:</abbr> boolean,</b>
-            <b>public numero_parametro: number <abbr title="Podemos iniciarlo poniendo un valor. Ejemplo peleas ganadas o true/false en boolean o texto...">= 0</abbr> ){{c}}</b>
-        <b>}
-    }
-        
-        const nombre_variable = <abbr title="Inicializamos la variable con la clase y de paso le damos valor">new nombreClase('Nombre');</abbr></b>
+    constructor (   <abbr title="Metemos en el constructor las variables que vamos a usar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        public parametro1: string,</b>   <abbr title="Public (Uso fuera de la clase), Private (Uso dentro de la clase)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        <b>public parametro2?: boolean,</b>   <abbr title="Opcional"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        <b>public parametro3: number = 0 ){{c}}   <abbr title="Podemos iniciarlo poniendo un valor. Ejemplo peleas ganadas o true/false en boolean o texto..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
+
+    <b>}
+}
     
-    console.log(nombre_variable);</pre>
+    const variable = new nombreClase('Nombre');</b>   <abbr title="Inicializamos la variable con la clase y de paso le damos valor"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+console.log( variable );</pre>
                 </div>
             </div>
         </div>
-
         
     </div>
 
 
-
-
     <div class="tab-pane fade" id="pills-tpscript9" role="tabpanel" aria-labelledby="pills-tpscript9-tab">
-        
-        <h2 style="text-align: center;">Classe</h2>
+
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-header">
-                    <h4 style="color: white;">nombre.class.ts</h4>
-                </div>
-                <div class="card-body"><h3>Se <b>exporta a</b> otro lugar</h3>
+                <div class="card-body"><h3>nombre.class.ts - Se <b>exporta a</b> otro lugar</h3>
                     <pre class="card-text"><b>export class nombre_Clase {{c}}</b>
 
   constructor (
 
-    public nombre_parametro: string,
-    public nombre_parametro2: string
+    public parametro1: string,
+    public parametro2: string
 
   ){{c}}}
 
-  <abbr title="Función que se usará en el otro archivo por exporta/importar la clase"><b>funcion</b></abbr><b>Ver_EnConsola()</b>{{c}}
-    console.log(<b>`${{c}} <abbr title="Cogemos las variables declaradas en el constructor">this.</abbr>nombre_parametro } - ${{c}} this.nombre_parametro2 }`</b>);
+  <b>funcionVer_EnConsola()</b>{{c}}   <abbr title="Función que se usará en el otro archivo por exporta/importar la clase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log(<b>`${{c}} this.parametro1 } - ${{c}} this.parametro2 }`</b>);   <abbr title="Cogemos las variables declaradas en el constructor"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
    }
 
@@ -316,15 +312,12 @@
                 </div>
             </div>
             <div class="card text-dark bg-primary m-3">
-                <div class="card-header">
-                    <h4 style="color: white;">nombre2.class.ts</h4>
-                </div>
-                <div class="card-body"><h3>Se <b>importa de</b> otro lugar</h3>
+                <div class="card-body"><h3>nombre2.class.ts - Se <b>importa de</b> otro lugar</h3>
                     <pre class="card-text"><b>import {{c}} nombre_Clase } from './classes/nombre_Clase';</b>
 
-        const <abbr title="Metemos en la variable la clase, para poder llamar luego a sus características (funciones...)">nombre_variable</abbr> = <b>new nombre_Clase<abbr title="Dentro del paréntesis metemos los valores que se verán">'nombre_parametro', 'nombre_parametro2')</abbr>;</b>
+    const nombre_variable = <b>new nombre_Clase ('nombre_parametro', 'nombre_parametro2');</b>   <abbr title="Metemos en la variable la clase, para poder llamar luego a sus características (funciones...), Dentro del paréntesis metemos los valores que se verán"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-        <b>nombre_variable.<abbr title="Llama a la función que está en la clase">funcionVer_EnConsola();</abbr></b></pre>
+    <b>nombre_variable.funcionVer_EnConsola();</b>   <abbr title="Llama a la función que está en la clase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
         </div>
@@ -419,11 +412,11 @@
                     <h4 style="color: white;">nombre.class.ts</h4>
                 </div>
                 <div class="card-body">
-                    <pre class="card-text"><b><abbr title="una funcion que se ejecuta en la clase u otro lado, añade caracteristica y funcionalidades propias">function</abbr> nombre_Funcion ( nombre_parametro_clase: Function ) </b>{{c}}
+                    <pre class="card-text"><b>function nombre_Funcion ( nombre_parametro_clase: Function ) </b>{{c}}   <abbr title="Una funcion que se ejecuta en la clase u otro lado, añade caracteristica y funcionalidades propias"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   console.log( nombre_parametro_clase );
 }
 
-<b><abbr title="añade funcionalidad a la clase (servicios...)">@nombre_Funcion</abbr></b>
+<b>@nombre_Funcion</b>   <abbr title="Añade funcionalidad a la clase (servicios...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 export class nombre_Clase {{c}}
   //Lo que haya dentro
 }</pre>

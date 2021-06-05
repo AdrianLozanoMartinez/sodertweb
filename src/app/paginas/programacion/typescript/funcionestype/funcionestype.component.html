@@ -33,12 +33,13 @@
             <div class="card-group">
                 <div class="card text-dark bg-primary m-3">
                     <div class="card-body">
-                        <pre class="card-text">let nombre_variable='Resultado';
+                        <pre class="card-text">let variable='Resultado';
+
 <b>function nombreFuncion(){{c}}
-	return nombre_variable;
+	return variable;
 }</b>
 
-console.log(nombre_variable);</pre>
+console.log(variable);</pre>
                     </div>
                 </div>
             </div>
@@ -50,20 +51,26 @@ console.log(nombre_variable);</pre>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text">let nombre_variable='Resultado';
-<b>let variableFuncion</b> = function(){{c}}
-	return nombre_variable;
-}
+                    <pre class="card-text">let variable='Texto';
 
-console.log(variableFuncion());
-<hr>let nombre_variable='Resultado';
+<b>let nombreFuncion = function(){{c}}
+	<abbr title="Sacamos a fuera lo que la función realiza">return</abbr> variable;
+}</b>
 
-function nombreFuncion(){{c}}
-	return nombre_variable;
-}
-<b>const variable_todo = `${{c}}nombreFuncion}`;</b>
+console.log( <b><abbr title="Muestra: Texto">nombreFuncion</abbr><abbr title="Llama a la función">()</abbr></b> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text">let variable='Texto';
+        
+<b>function nombreFuncion(){{c}}
+	return variable;
+}</b>
+<b>const <abbr title="Metemos en la variable lo que sacamos de la función">variable2</abbr> = `${{c}}nombreFuncion}`;</b>
 
-console.log(nombreFuncion());</pre>
+console.log( <b><abbr title="Muestra: Texto">nombreFuncion</abbr>()</b> );
+                    </pre>
                 </div>
             </div>
         </div>
@@ -79,7 +86,9 @@ console.log(nombreFuncion());</pre>
     <b>return 100 + 100;</b>
 }
 
-console.log(`${{c}}getNombre_Variable()}`);</pre>
+console.log( <b>`${{c}}getNombre_Variable()}`</b> );   <abbr title="Muestra: 200"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+console.log( <b>getNombre_Variable()</b> );   <abbr title="Muestra: 200"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
         </div>
@@ -91,18 +100,18 @@ console.log(`${{c}}getNombre_Variable()}`);</pre>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text">function <abbr title="Orden de los parámetros: 1º Obligatorios, 2º Opcionales, 3º Por defectos">nombre_funcion</abbr>( <b>nombre_parametro_obligatorio: string, 
-                            nombre_parametro_opcional?: string, 
-                            nombre_parametro_por_defecto: string = 'texto_por-defecto'</b> ) {{c}}
-
-            console.log (`<b>${{c}} nombre_parametro_obligatorio }</b>, <b>${{c}} nombre_parametro_opcional</b> } y <b>${{c}} nombre_parametro_por_defecto</b> }`);
+                    <pre class="card-text">function nombre_funcion ( <b>parametro1: string,   <abbr title="Obligatorio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        parametro2?: string,   <abbr title="Opcional"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        parametro3: string = 'Texto por defecto'</b> ) {{c}}
+                     
+            console.log (`<b>${{c}} parametro1 }</b>, <b>${{c}} parametro2</b> } y <b>${{c}} parametro3</b> }`);
 }
 
-<b>nombre_funcion ('texto-que-ponemos-al-instante');</b>
+<b>nombre_funcion ('Texto');</b>   <abbr title="Texto que ponemos al momento"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 O
-<b>nombre_funcion ('texto-que-ponemos-al-instante', 'texto-que-sustituye-el-por-fecto');</b>     
+<b>nombre_funcion ('Texto', 'Texto3');</b>   <abbr title="Texto3 -> sustituye al que está por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>     
 O
-<b> <abbr title="Orden igual que los parámetros de arriba">nombre_funcion</abbr>('texto-que-ponemos-al-instante', 'texto-opcional', 'texto-que-sustituye-el-por-fecto');</b></pre>
+<b>nombre_funcion('Texto', 'Texto2', 'Texto3);</b>   <abbr title="Orden igual que los parámetros de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
         </div>
@@ -116,18 +125,18 @@ O
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text">function nombre_funcion( nombre_parametro_obligatorio: string, 
-                        nombre_parametro_opcional?: string, 
-                        nombre_parametro_por_defecto: string = 'texto_por-defecto' ) {{c}}   
+                    <pre class="card-text">function nombre_funcion( parametro1: string,   <abbr title="Obligatorio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        parametro2?: string,   <abbr title="Opcional"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        parametro3: string = 'Texto por defecto' ) {{c}}   
 
-                    <b><abbr title="Si se cumple lo que hay dentro del paréntesis muestra lo que hay dentro">if</abbr> ( nombre_parametro_opcional ) {{c}}</b>
-                        <b>console.log (`${{c}} nombre_parametro_obligatorio }, ${{c}} nombre_parametro_opcional } y ${{c}} nombre_parametro_por_defecto }`);
+                    <b>if ( parametro2 ) {{c}}</b>   <abbr title="Si se cumple lo que hay dentro del paréntesis muestra lo que hay dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        <b>console.log (`${{c}} parametro1 }, ${{c}} parametro2 } y ${{c}} parametro3 }`);
                     }
-                    <abbr title="Si no se cumple la condición del if muestra lo que hay dentro">else</abbr>{{c}}</b>
-                        <b>console.log (`${{c}} nombre_parametro_obligatorio } y ${{c}} nombre_parametro_opcional }`);
+                    else{{c}}</b>   <abbr title="Si no se cumple la condición del if muestra lo que hay dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        <b>console.log (`${{c}} parametro1 } y ${{c}} parametro2 }`);
                     }</b>
                          
-        nombre_funcion ('texto-que-ponemos-al-instante');</pre>
+        nombre_funcion ('Texto');</pre>
                 </div>
             </div>
         </div>
@@ -138,72 +147,71 @@ O
         
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">const nombre_funcion = <b>( nombre_parametro: string ) => nombre_parametro;</b>
-           console.log(nombre_funcion ('Texto'));<hr>En función sin flecha sería:
-<small>const nombre_funcion = <b>function ( nombre_parametro: string ) {{c}}
-    return nombre_parametro;
+                <div class="card-body"><h3>Normal</h3>
+                    <pre class="card-text">const nombre_funcion = <b>function ( parametro: string ) {{c}}
+    return parametro;
     }</b>
-    console.log(nombre_funcion ('Texto'));</small></pre>
+    console.log(nombre_funcion ('Texto'));</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Flecha</h3>
+                    <pre class="card-text">const nombre_funcion = <b>( parametro: string ) => parametro;</b>
+    console.log(nombre_funcion ('Texto'));</pre>
                 </div>
             </div>
         </div>
 
-        <hr>
-        <h4>Objeto (Destructurado)</h4>
+        
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><b>const nombre_variable = {{c}}       
-	nombre_parametro: 'Texto',
-	nombre_parametro2: 'Texto2'
+                <div class="card-body"><h3>Objeto (Destructurado)</h3>
+                    <pre class="card-text"><b>const nombre_objeto = {{c}}       
+	parametro1: 'Texto',
+	parametro2: 'Texto2'
     }
 
-	const <abbr title="Metemos los parámetros de arriba, no es necesario especificar porque las => traspasa y no es necesario">nombre_funcion</abbr> = ({{c}} nombre_parametro, nombre_parametro2 }: any ) => {{c}}</b>
+	const nombre_funcion = ({{c}} parametro1, parametro2 }: any ) => {{c}}   </b><abbr title="Metemos los parámetros de arriba, no es necesario especificar porque las => traspasa y no es necesario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 		
-        <b>console.log (nombre_parametro);
-        console.log (nombre_parametro2);
+        console.log ( parametro1 );
+        console.log ( parametro2 );
      }
 
-     <abbr title="Llamamos a la función que a su vez coge los parámetros de la variable de arriba, por ello se llama a la variable">nombre_funcion</abbr>(nombre_variable);</b></pre>
+     <b>nombre_funcion( nombre_variable );</b>   <abbr title="Llamamos a la función que a su vez coge los parámetros de la variable de arriba, por ello se llama a la variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
-        </div>
-        
-        <hr>
-        <h4>Tiempo de tardanza en ejecutarse (Objeto)</h4>
-        <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">const variable_funcion = {{c}}       //Función de OBJETO
-                        nombre_parametro: 'Texto',
-                        nombre_funcion() {{c}}
-                        
-                        <b>setTimeout ( () <abbr title="La flecha hace que el this. se traspase y pueda coger el valor de arriba del parámetro (nombre_parametro)">=></abbr> {{c}}</b>
-                        
-                        console.log (`${{c}} this.nombre_parametro } en un tiempo de 1000`);    
-                        
-                        <b>}, <abbr title="Tiempo que tarda antes de ejecutarse">1000</abbr> );</b>
-                    }
-                }
-                
-                variable_funcion.nombre_funcion();</pre>
+                <div class="card-body"><h3>Tiempo de tardanza en ejecutarse (Objeto)</h3>
+                    <pre class="card-text">const funcion_objeto = {{c}}
+            parametro: 'Texto',
+            nombre_funcion() {{c}}
+            
+            <b>setTimeout ( () => {{c}}</b>   <abbr title="La flecha hace que el this. se traspase y pueda coger el valor de arriba del parámetro (parametro)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            
+            console.log (`${{c}} this.parametro } en un tiempo de 1000`);    
+            
+            <b>}, 1000 );</b>   <abbr title="Tiempo que tarda antes de ejecutarse"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+    }
+    
+    funcion_objeto.nombre_funcion();</pre>
             </div>
         </div>
     </div>
     
-    
-    <hr>
-    <h4>Operaciones</h4>
     <div class="card-group">
         <div class="card text-dark bg-primary m-3">
-            <div class="card-body">
-                <pre class="card-text"><h5>Mayúscula</h5>
-    const nombre_funcion = ( nombre_parametro: string ) => nombre_parametro<b>.toUpperCase()</b>;
-    console.log (nombre_funcion ('Texto') );  -> Sale TEXTO<hr><h5>Cálculo</h5>
-    const variable_nombre = ( nombre_parametro1:number, nombre_parametro2:number ) => <b>nombre_parametro1 + nombre_parametro2;</b>
+            <div class="card-body"><h3>Operaciones - Letras</h3>
+                <pre class="card-text">const nombre_funcion = ( parametro: string ) => parametro<b>.toUpperCase()</b>;
+
+    console.log (nombre_funcion ( 'Texto' ) );   <abbr title="TEXTO"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Operaciones - Matemáticas</h3>
+                <pre class="card-text">const variable_nombre = ( parametro1:number, parametro2:number ) => <b>parametro1 + parametro2;</b>
     
-    console.log(variable_nombre(<abbr title="Ponemos los números que queremos que sume">2,4</abbr>));</pre>
+    console.log(variable_nombre( 2,4 ) );   <abbr title="Ponemos los números que queremos que sume"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
             </div>
         </div>
     </div>
@@ -215,10 +223,10 @@ O
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <pre class="card-body"><b>const variable_funcion = {{c}}
-	nombre_parametro: 'Texto',
+	parametro: 'Texto',
 	nombre_funcion() {{c}}</b>
 	
-		console.log (`${{c}} this.nombre_parametro } y más texto`);
+		console.log (`${{c}} this.parametro } y más texto`);
 	}
 }
 
@@ -232,26 +240,33 @@ O
         
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <pre class="card-body"><h4>Estructurado</h4><ul><li>const nombre_variable_arreglo: string[] = ['parametro1', 'parametro2', 'parametro3'];
+                <div class="card-body"><h3>Estructurado</h3>
+                    <pre class="card-text">const nombre_array: string[] = ['parametro1', 'parametro2', 'parametro3'];
 
-<b>const nombre_funcion = (nombre_variable_arreglo: string[]) => {{c}}</b>
+<b>const nombre_funcion = (nombre_array: string[]) => {{c}}</b>
 
-    console.log(<b>nombre_variable_arreglo[0], nombre_variable_arreglo[1], nombre_variable_arreglo[2]</b>);
+    console.log(<b>nombre_array[0], nombre_array[1], nombre_array[2]</b>);
 }
 
-<b>nombre_funcion ( nombre_variable_arreglo )</b>;</li><hr><h4>Destructurado</h4>
-<li>const nombre_variable_arreglo: string[] = ['parametro1', 'parametro2', 'parametro3'];
-
-const nombre_funcion = ( <b>[coge_el_parametro1, coge_el_parametro2, coge_el_parametro3]: string[]</b> ) => {{c}}
-
-    console.log(<b>coge_el_parametro1, coge_el_parametro2, coge_el_parametro3</b>);
-}
-
-<b>nombre_funcion ( nombre_variable_arreglo );</b></li></ul></pre>
+<b>nombre_funcion ( nombre_array )</b>;   <abbr title="Muestra: parametro1 parametro2 parametro3"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
             </div>
         </div>
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-body"><h3>Destructurado</h3>
+                <pre class="card-text">const nombre_array: string[] = ['parametro1', 'parametro2', 'parametro3'];
 
+const nombre_funcion = ( <b>[coge_parametro1, coge_parametro2, coge_parametro3]: string[]</b> ) => {{c}}
+
+    console.log(<b>coge_parametro1, coge_parametro2, coge_parametro3</b>);
+}
+
+<b>nombre_funcion ( nombre_array );</b>   <abbr title="Muestra: parametro1 parametro2 parametro3"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+            </div>
+        </div>
     </div>
+
+
+
 
 
 </div>

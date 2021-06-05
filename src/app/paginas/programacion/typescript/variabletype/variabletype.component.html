@@ -3,6 +3,12 @@
         <a class="nav-link" id="pills-variabletype-tab" data-toggle="pill" href="#pills-variabletype" role="tab" aria-controls="pills-variabletype" aria-selected="true" style="color: black;">Var/Let/Const</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-variabletype5-tab" data-toggle="pill" href="#pills-variabletype5" role="tab" aria-controls="pills-variabletype5" aria-selected="false" style="color: black;">['Array']</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-variabletype0-tab" data-toggle="pill" href="#pills-variabletype0" role="tab" aria-controls="pills-variabletype0" aria-selected="false" style="color: black;">{{c}}Objeto}</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-variabletype1-tab" data-toggle="pill" href="#pills-variabletype1" role="tab" aria-controls="pills-variabletype1" aria-selected="false" style="color: black;">Letras</a>
     </li>
     <li class="nav-item">
@@ -15,13 +21,7 @@
         <a class="nav-link" id="pills-variabletype3-tab" data-toggle="pill" href="#pills-variabletype3" role="tab" aria-controls="pills-variabletype3" aria-selected="false" style="color: black;">Día</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-variabletype8-tab" data-toggle="pill" href="#pills-variabletype8" role="tab" aria-controls="pills-variabletype8" aria-selected="false" style="color: black;">Any/Varias</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-variabletype0-tab" data-toggle="pill" href="#pills-variabletype0" role="tab" aria-controls="pills-variabletype0" aria-selected="false" style="color: black;">Objeto</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-variabletype5-tab" data-toggle="pill" href="#pills-variabletype5" role="tab" aria-controls="pills-variabletype5" aria-selected="false" style="color: black;">Arreglos<br>Tupla</a>
+        <a class="nav-link" id="pills-variabletype8-tab" data-toggle="pill" href="#pills-variabletype8" role="tab" aria-controls="pills-variabletype8" aria-selected="false" style="color: black;">Any/Pipe</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-variabletypexy-tab" data-toggle="pill" href="#pills-variabletypexy" role="tab" aria-controls="pills-variabletypexy" aria-selected="false" style="color: black;">Operadores</a>
@@ -31,85 +31,51 @@
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-    <div class="tab-pane fade" id="pills-variabletype" role="tabpanel" aria-labelledby="pills-variabletype-tab">
-
-        <h3>Var</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>Sustituye el valor de la variable con el mismo nombre, aunque esté dentro de un if o función</b></li></ul></pre>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <h3>Let</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>Diferente valor de la variable con el mismo nombre, aunque esté dentro y fuera del if o función</b></li></ul></pre>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <h3>Const</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>Valor único, no se cambia y se usa cuando deseamos su valor permanente, pesa poco y carga rápido</b></li></ul></pre>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <div class="tab-pane fade" id="pills-variabletype" role="tabpanel" aria-labelledby="pills-variabletype-tab"><app-tipo></app-tipo></div>
 
 
     <div class="tab-pane fade" id="pills-variabletype1" role="tabpanel" aria-labelledby="pills-variabletype1-tab">
 
-        <h3>Declarar</h3>
         <div class="card-group">
+            <div class="card text-dark bg-primary m-3 border-0">
+                <div class="card-body"><h3>Declarar</h3>
+                    <pre class="card-text"><ul><li>let variable<b>: string = `<abbr title="Podemos poner varios saltos de líneas">Texto</abbr>`</b>;          //<b><abbr title="Solo una línea">"Texto"</abbr>,<abbr title="Solo una línea">'Texto'</abbr></b>
+
+    console.log ( <abbr title="Texto">variable</abbr> );</li><hr>
+<li>let variable<b> =`<abbr title="Podemos poner varios saltos de líneas">Texto</abbr>`</b>;          //<b><abbr title="Solo una línea">"Texto"</abbr>,<abbr title="Solo una línea">'Texto'</abbr></b>
+
+    console.log ( <abbr title="Texto">variable</abbr> );</li></ul></pre>
+                </div>
+                <div class="card-body bg-white"></div>
+            </div>
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable<b>: string = "Texto"</b>; -> Solo una línea</li>
-                        <li>let nombre_de_mi_variable<b>: string = 'Texto'</b>; -> Solo una línea</li>
-                        <li>let nombre_de_mi_variable<b>: string = `Texto`</b>; -> Podemos poner varias líneas</li>
-                        <hr>
-                        <li>let nombre_de_mi_variable<b> = "Texto"</b>; -> Solo una línea</li>
-                        <li>let nombre_de_mi_variable<b> = 'Texto'</b>; -> Solo una línea</li>
-                        <li>let nombre_de_mi_variable<b> = `Texto`</b>; -> Podemos poner varias líneas</li></ul></pre>
+                <div class="card-body"><h3>Unión</h3>
+                    <pre class="card-text"><ul>let variable = true;<hr>
+<li>let <abbr title="Se une con el + y dejamos espacio entre palabras con comillas y espacios">variable2</abbr> = <b>variable + " " + `Texto ` + " ( " + 1985 + ')'</b>;
+     
+    console.log ( <abbr title="Muestra: true Texto 1985">variable2</abbr> );</li>
+
+
+<li>let <abbr title="Siempre con comillas inclinadas, no es necesario dejar espacio, se pone solo con variables">variable2</abbr> = <b>`Texto y ${{c}}variable}`</b>; 
+ 
+    console.log ( <abbr title="Muestra: Texto y true">variable2</abbr> );</li>
+
+
+<li>let <abbr title="\n Salto de líneas cuando no se usa las comillas inclinadas">variable2</abbr> = ` "Texto" <b>\n</b> ${{c}}variable} <b>\n</b> 36`;
+ 
+    console.log (variable2);</li></ul></pre>
                 </div>
             </div>
         </div>
-        <br>
 
-        <h3>Unión</h3>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>nombre_de_mi_variable + nombre_de_mi_variable + " Texto " + ' Texto ' + ` Texto `</b> -> Se <u>une</u> con <u>+</u> y debemos dejar <u>espacio</u> entre texto y comillas <u>para separar</u></li>
-<li><b>nombre_de_mi_variable_numero + nombre_de_mi_variable_texto + 37 + ' Texto '</b> -> Se <u>une</u> con <u>+</u> y debemos dejar <u>espacio</u> entre texto y comillas <u>para separar</u>, si ponemos <u>dos números seguidos con +</u> <b>sin , ni letras, ni variable,</b> se <b>sumará</b></li>
-<li><b>`Texto y $nombre_de_mi_variable`</b> -> Usando <u>comillas inclinadas</u>, <u>no</u> es <u>necesario</u> dejar <u>espacio</u> adicional, igual que en un texto, podemos <b><u>añadir variables</u></b></li>
-<li><b>nombre_variable_texto + " " + nombre_variable_texto + " ( " + nombre_variable_numero + " )";</b> -> Ponemos " " con espacio para separar variables y espacio entre paréntesis para que no esté pegados</li>
-<li><b>`${{c}}variable_texto} ${{c}} variable_texto } ( ${{c}}variable_numero } )`;</b> -> Ponemos ` para que coja los espacios que marcamos como en un editor de texto. El estacio entre {{c}} y la variable no se aprecia en el resultado, ya depende de como queramos ver el código</li><hr><li><b>const nombre_variable_todo = nombre_variable_texto + " " + nombre_variable_texto + " ( " + nombre_variable_numero + " )";</b> -> Metemos en la variable la unión</li>
-<li><b>const variable_todo = `${{c}}variable_texto} ${{c}} variable_texto } ( ${{c}}variable_numero } )`;</b> -> Metemos en variable</li><hr><li><b>const variable_todo=  = ` "Texto" \n ${{c}}nombre_variable} \n 36`;</b> -> \n son saltos de líneas</li>
-<li><b>const variable_todo=  = `"Texto"
-${{c}}nombre_variable} 
-36`;</b> -> Salto de líneas al darle al intro, se respetan solo con ` con las otras (" o ') no se respeta</li></ul></pre>
-                </div>
-            </div>
-        </div>
+                <div class="card-body"><h3>Operadores</h3>
+                    <pre class="card-text"><ul>let variable = '<b>Texto</b>';
 
-        <br>
-
-        <h3>Operadores</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>nombre_de_mi_variable.charAt(0)</b> -> <u>Coge</u> la <u>letra</u> que esté en la <u>posición</u>, en este caso en la 1º posición al poner 0</li>
-                                <li><b>nombre_de_mi_variable.toLocaleUpperCase</b> -> Lo pone <u>todo</u> en <u>mayúsculas</u></li></ul></pre>
+<li>let <b>variable2</b> = <b><abbr title="Coge la letra que esté en la posición, en este caso en la 1º posición al poner 0">variable</abbr>.charAt(0)</b>  ->  console.log ( <abbr title="Muestra: T"><b>variable2</b></abbr> );</li>
+<li>let <b>variable2</b> = <abbr title="Todo en mayúsculas">variable</abbr><b>.toLocaleUpperCase()</b>   //<b>toUpperCase()</b>  ->  console.log ( <abbr title="Muestra: TEXTO"><b>variable2</b></abbr> );</li>
+<li>let <b>variable2</b> = <b><abbr title="Todo en minúscula">variable</abbr>.toLocaleLowerCase()</b>    //<b>toLowerCase()</b>  ->  console.log ( <abbr title="Muestra: TEXTO"><b>variable2</b></abbr> );</li></ul></pre>
                 </div>
             </div>
         </div>
@@ -118,48 +84,22 @@ ${{c}}nombre_variable}
 
     <div class="tab-pane fade" id="pills-variabletype4" role="tabpanel" aria-labelledby="pills-variabletype4-tab">
 
-        <h3>Declarar</h3>
+       
         <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable<b>: number = 36</b>; <small>//Entero</small></li>
-                                    <li>let nombre_de_mi_variable<b>: number = 36.56</b>; <small>//Decimal</small></li>
-                                    <li>let nombre_de_mi_variable<b> = 36</b>; <small>//Entero</small></li>
-                                    <li>let nombre_de_mi_variable<b> = 36.56</b>; <small>//Decimal</small></li></ul></pre>
+            <div class="card text-dark bg-primary m-3 border-0">
+                <div class="card-body"><h3>Declarar</h3>
+                    <pre class="card-text"><ul><li>let variable<b>: number = <abbr title="Entero/Decimal">36</abbr></b>;</li><li>let variable<b> = <abbr title="Entero/Decimal">36.56</abbr></b>;</li></ul></pre>
                 </div>
+                <div class="card-body bg-white"></div>
             </div>
-        </div>
-        <br>
-
-
-        <h3>Unión</h3>
-        <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>nombre_de_mi_variable_numero + nombre_de_mi_variable_texto + 37 + ' Texto '</b> -> Se <u>une</u> con <u>+</u> y debemos dejar <u>espacio</u> entre texto y comillas <u>para separar</u>, si ponemos <u>dos números seguidos con +</u> <b>sin , ni letras, ni variable,</b> se <b>sumará</b></li>
-<li><b>`Texto y $nombre_de_mi_variable_numero`</b> -> Usando <u>comillas inclinadas</u>, <u>no</u> es <u>necesario</u> dejar <u>espacio</u> adicional, igual que en un texto, podemos <b><u>añadir variables</u></b></li>
-<li><b>nombre_variable_texto + " " + nombre_variable_texto + " ( " + nombre_variable_numero + " )";</b> -> Ponemos " " con espacio para separar variables y espacio entre paréntesis para que no esté pegados</li>
-<li><b>`${{c}}variable_texto} ${{c}} variable_texto } ( ${{c}}variable_numero } )`;</b> -> Ponemos ` para que coja los espacios que marcamos como en un editor de texto. El estacio entre {{c}} y la variable no se aprecia en el resultado, ya depende de como queramos ver el código</li><hr><li><b>const nombre_variable_todo = nombre_variable_texto + " " + nombre_variable_texto + " ( " + nombre_variable_numero + " )";</b> -> Metemos en la variable la unión</li>
-<li><b>const variable_todo = `${{c}}variable_texto} ${{c}} variable_texto } ( ${{c}}variable_numero } )`;</b> -> Metemos en variable</li><hr><li><b>const variable_todo=  = ` "Texto" \n ${{c}}nombre_variable} \n 36`;</b> -> \n son saltos de líneas</li>
-<li><b>const variable_todo=  = `"Texto"
-${{c}}nombre_variable} 
-36`;</b> -> Salto de líneas al darle al intro, se respetan solo con ` con las otras (" o ') no se respeta</li></ul></pre>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <h3>Operadores</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li>nombre_de_mi_variable - nombre_de_mi_variable  (Resta)</li>
-                        <li>nombre_de_mi_variable <b>+</b> nombre_de_mi_variable  (Suma)</li>
-                        <li>nombre_de_mi_variable <b>*</b> nombre_de_mi_variable  (Multiplicar)</li>
-                        <li>nombre_de_mi_variable <b>/</b> nombre_de_mi_variable  (Dividir)</li>
-                        <li>nombre_de_mi_variable <b>%</b> nombre_de_mi_variable  (Resto de la división)</li><hr><li>` Texto y <b>$nombre_de_mi_variable + 1</b>`  (Suma 1 al valor de la variable)</li>
-<li><b>`${{c}}nombre_variable_numero + 100}`</b>; -> Sumamos 100 al número de la variable</li></ul></pre>
+                <div class="card-body"><h3>Operadores <small>- <abbr title="Hay que meter todo en una función, constructor...">En Angular...</abbr></small></h3>
+                    <pre class="card-text"><ul><li>variable1 - variable2  (Resta)</li>
+                        <li>variable1 <b>+</b> variable2  (Suma)</li>
+                        <li>variable1 <b>*</b> variable2  (Multiplicar)</li>
+                        <li>variable1 <b>/</b> variable2  (Dividir)</li>
+                        <li>variable1 <b>%</b> variable2  (Resto de la división)
+                        <li>variable <b>-+...</b> 19</li></ul></pre>
                 </div>
             </div>
         </div>
@@ -171,8 +111,8 @@ ${{c}}nombre_variable}
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable<b>: boolean = true</b>;  //O false</li>
-                            <li>let nombre_de_mi_variable<b> = true</b>;  //O false</li></ul></pre>
+                    <pre class="card-text"><ul><li>let variable<b>: boolean = true</b>;  //<b>false</b></li>
+                            <li>let variable<b> = true</b>;  //<b>false</b></li></ul></pre>
                 </div>
             </div>
         </div>
@@ -184,8 +124,8 @@ ${{c}}nombre_variable}
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable_dia<b>: Date = new Date()</b>;  <small>//Almacena el día actual</small></li>
-                                <li>let nombre_de_mi_variable_dia<b> = new Date()</b>;</li></ul></pre>
+                    <pre class="card-text"><ul><li>let <abbr title="Almacena el día actual">variable</abbr><b>: Date = new Date()</b>;</li>
+                                <li>let variable<b> = new Date()</b>;</li></ul></pre>
                 </div>
             </div>
         </div>
@@ -194,32 +134,15 @@ ${{c}}nombre_variable}
 
     <div class="tab-pane fade" id="pills-variabletype8" role="tabpanel" aria-labelledby="pills-variabletype8-tab">
 
-        <h3>Any</h3>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><b>let nombre_variable_any;</b>  //Puede tener cualquier valor:
-
-nombre_variable_any = nombre_variable_<u>string</u>;        <small>//Letras</small>
-nombre_variable_any = nombre_variable_<u>number</u>;        <small>//Números</small>
-nombre_variable_any = nombre_variable_<u>booblean</u>;      <small>//True/False</small>
-nombre_variable_any = nombre_variable_<u>date</u>;          <small>//Día</small></pre>
+                <div class="card-body"><h3>Any</h3>
+                    <pre class="card-text"><ul><li>let <b><abbr title="Puede tener cualquier valor (string, number, booblean, date)">variable</abbr>:any;</b></li><li>let <b>variable;</b></li></ul></pre>
                 </div>
             </div>
-        </div>
-
-        <br>
-
-        <h3>Varias</h3>
-        <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">let nombre_variable_varias_definiciones<b>: string | number | otros...</b>;  //Puede tener los <abbr title="string | number">tipos</abbr> que declaramos y podemos añadir más con | (Pipe)
-
-nombre_variable_any = nombre_variable_string;       <small>//Sería aceptado en este ejemplo</small>
-nombre_variable_any = nombre_variable_number;       <small>//Sería aceptado en este ejemplo</small>
-nombre_variable_any = nombre_variable_booblean;     <small>//No sería aceptado en este ejemplo</small>
-nombre_variable_any = nombre_variable_date;         <small>//No sería aceptado en este ejemplo</small></pre>
+                <div class="card-body"><h3>Pipe | Varias clases</h3>
+                    <pre class="card-text">let <abbr title="Podemos poner los tipos de datos que queramos poner, desde 1 a todos. (string | number | otros...)">variable:</abbr><b>: string | number</b>;</pre>
                 </div>
             </div>
         </div>
@@ -228,33 +151,55 @@ nombre_variable_any = nombre_variable_date;         <small>//No sería aceptado 
 
     <div class="tab-pane fade" id="pills-variabletype0" role="tabpanel" aria-labelledby="pills-variabletype0-tab">
 
+
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><h5>Estructurado</h5>let <b>variable_objeto = {{c}}
-    variable_string: 'Texto',
-    variable_number: 36
-                    };</b>
-    console.log (<b>variable_objeto.variable_string</b>);
-    console.log (<b>variable_objeto.variable_number</b>);
-<hr>
-<small>variable_objeto = {{c}}          //Si queremos añadir más datos con la misma estructura, como ya la declaramos arriba no hace falta poner let
-    variable_string: 'Texto2',
-    variable_number: 37
-                        };
-    console.log (variable_objeto.variable_string);
-    console.log (variable_objeto.variable_number);</small><hr><h5>Destructurado</h5>
-    let variable_objeto = {{c}}
-        variable_string: 'Texto',
-        variable_number: 36
-                        };
+                <div class="card-body"><h3>Estructurado</h3>
+                    <pre class="card-text"><b>let <abbr title="Nombre del objeto">objeto</abbr> = {{c}}
+  parametro1: 'Texto',
+  parametro2: 36
+};</b>
 
-        <b>const {{c}} variable_string, variable_number } = variable_objeto;</b>
-
-        console.log (<b>variable_string</b>);
-        console.log (<b>variable_number</b>);</pre>
+  console.log ( <abbr title="Muestra: {parametro1: Texto, parametro2: 36}"><b>objeto</b></abbr> );
+  console.log ( <abbr title="Muestra: Texto "><b>objeto</b></abbr><b>.parametro1</b> );
+  console.log ( <abbr title="Muestra: 36"><b>objeto</b></abbr><b>.parametro2</b> );</pre>
                 </div>
             </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Destructurado</h3>
+                    <pre class="card-text"><b>let objeto = {{c}}
+  parametro1: 'Texto',
+  parametro2: 36
+};
+
+const {{c}} parametro1, parametro2 } = objeto;</b>
+
+console.log ( <b><abbr title="Muestra: {parametro1: Texto, parametro2: 36}">objeto</abbr></b> );
+console.log ( <b><abbr title="Muestra: Texto">parametro1</abbr></b> );
+console.log ( <b><abbr title="Muestra: 36">parametro2</abbr></b> );</pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Sustituir valor</h3>
+                    <pre class="card-text"><abbr tittle="Si queremos cambiar/añadir datos con la misma estructura, como ya la declaramos arriba no hace falta poner let"><b>objeto</b></abbr> = {{c}}
+    parametro1: <b>'Otro texto diferente'</b>,
+    parametro2: <b>37</b>
+};
+
+    console.log ( <b><abbr title="Muestra: {parametro1: Otro texto diferente, parametro2: 37}">objeto</abbr></b> );
+    console.log ( <b><abbr title="Muestra: Otro texto diferente">parametro1</abbr></b> );
+    console.log ( <b><abbr title="Muestra: 37">parametro2</abbr></b> );</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 border-0">
+                <div class="card-body">
+                    <pre class="card-text"></pre>
+                </div>
+            </div>    
         </div>
 
     </div>
@@ -263,61 +208,81 @@ nombre_variable_any = nombre_variable_date;         <small>//No sería aceptado 
 
     <div class="tab-pane fade" id="pills-variabletype5" role="tabpanel" aria-labelledby="pills-variabletype5-tab">
         
-        <h3>Declarar</h3>
+        
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable<b>: [number, string]</b>; 
-              nombre_de_mi_variable<b> = [2,'Texto'];</b></li>
-              <li>let nombre_de_mi_variable<b>: [string, number] = ['Texto', 36]</b></li>
-              <li>const nombre_variable_arreglo<b>: string[] = ['parametro1', 'parametro2']</b>;</li>
-              <li>let nombre_de_mi_variable <b>= ['Texto', 36]</b></li></ul></pre>
+                <div class="card-body"><h3>Declarar = Valor</h3>
+                    <pre class="card-text"><ul><li>let variable<b>: [ number, string ]</b>; -> variable<b> = [2,'Texto'];</b>
+
+console.log( <abbr title="Muestra: [2, 'Texto']"><b>variable</b></abbr> );
+console.log( <b><abbr title="Muestra: 2">variable</abbr>[0]</b> );
+console.log( <b><abbr title="Muestra: Texto">variable</abbr>[1]</b> );<hr></li>
+<li>let variable<b>: [ string, number ] = [ 'Texto', 36 ]</b>
+
+console.log( <abbr title="Muestra: ['Texto', 36]"><b>variable</b></abbr> );
+console.log( <b><abbr title="Muestra: Texto">variable</abbr>[0]</b> );
+console.log( <b><abbr title="Muestra: 36">variable</abbr>[1]</b> );<hr></li>
+<li>let variable<b>: <abbr title ="En angular dentro de funciones (constructor...)">string</abbr>[] = [ 'parámetro1', 'parámetro2' ]</b>;
+
+console.log( <abbr title="Muestra: ['parámetro1', 'parámetro2']"><b>variable</b></abbr> );
+console.log( <b><abbr title="Muestra: parámetro1">variable</abbr>[0]</b> );
+console.log( <b><abbr title="Muestra: parámetro2">variable</abbr>[1]</b> );<hr></li>
+<li>let variable <b>= [ 'Texto', 36 ]</b>
+
+console.log( <abbr title="Muestra: ['Texto', 36]"><b>variable</b></abbr> );
+console.log( <b><abbr title="Muestra: Texto">variable</abbr>[0]</b> );
+console.log( <b><abbr title="Muestra: 36">variable</abbr>[1]</b> );</li></ul></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Posición</h3>
+                    <pre class="card-text"><ul><li>const variable: <b>string[] = ['parametro1', 'parametro2', 'parametro3'];</b>
+
+    console.log( <abbr title="Muestra: ['parametro1', 'parametro2', 'parametro3']"><b>variable</b></abbr> );
+    console.log( <abbr title="Muestra: parametro1"><b>variable[0]</b> </abbr>);
+    console.log( <abbr title="Muestra: parametro2">variable[1] </abbr>);
+    console.log( <abbr title="Muestra: parametro3">variable[2] </abbr>);</li><hr>
+<li>const <abbr title="Dejamos espacio las posiciones que no nos interesa">variable</abbr> = [ <b>, , parametro3</b> ];
+
+    console.log(<b><abbr title="Muestra: parametro3">variable[2] </abbr></b>);</li><hr>
+<li>const [ <b>, parametro2, </b>] = <abbr title="Dejamos espacio las posiciones que no nos interesa">variable</abbr>;
+
+    console.log(<b><abbr title="Muestra: parametro2">variable[1] </abbr></b>);</li></ul></pre> 
                 </div>
             </div>
         </div>
 
-        <br>
-
-        <h3>Estructurado/Desuctrurado</h3>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><h4>Estructurado</h4>
-    const nombre_variable_arreglo: string[] = <b>['parametro1', 'parametro2', 'parametro3']</b>;
+                <div class="card-body"><h3>Estructurado</h3>
+                    <pre class="card-text">const variable: string[] = <b>['parametro1', 'parametro2', 'parametro3']</b>;
 
-console.log( <b>nombre_variable_arreglo[0], nombre_variable_arreglo[1], nombre_variable_arreglo[2]</b>);<hr><h4>Desuctrurado</h4>const nombre_variable_arreglo: string[] = <b>['parametro1', 'parametro2', 'parametro3']</b>;
+console.log( <b><abbr title="Muestra: parametro1">variable[0]</abbr>, <abbr title="Muestra: parametro2">variable[1]</abbr>, <abbr title="Muestra: parametro3">variable[2]</abbr></b>);</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Desuctrurado</h3>
+                    <pre class="card-text">const variable: string[] = <b>['parametro1', 'parametro2', 'parametro3']</b>;
 
-const [ <b>parametro_hace_referencia_al_1, parametro_hace_referencia_al_2, parametro_hace_referencia_al_3</b> ] = nombre_variable_arreglo;
+const [ <b>referencia_al_1, referencia_al_2, referencia_al_3</b> ] = variable;
 
-console.log( <b>parametro_hace_referencia_al_1, parametro_hace_referencia_al_2, parametro_hace_referencia_al_3</b>);</pre>
+console.log( <b><abbr title="Muestra: parametro1">referencia_al_1</abbr>, <abbr title="Muestra: parametro2">referencia_al_2</abbr>, <abbr title="Muestra: parametro3">referencia_al_3</abbr></b>);</pre>
                 </div>
             </div>
         </div>
 
-        <br>
 
-        <h3>Posición</h3>
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text">const nombre_variable_arreglo: string[] = ['parametro1', 'parametro2', 'parametro3'];
-
-const [ <b>, , parametro_hace_referencia_al_3</b> ] = nombre_variable_arreglo;    //Dejamos espacio las posiciones que no nos interesa
-
-console.log(<b>parametro_hace_referencia_al_3</b>);                 //No nombramos las posiciones que no nos interesa</pre>             
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <h3>Operadores</h3>
-        <div class="card-group">
-            <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li>let nombre_de_mi_variable_suma<b>: [number, number] = [nombre_de_mi_variable[0] + nombre_de_mi_variable2[0], nombre_de_mi_variable[1] + nombre_de_mi_variable2[1]]</b></li>
-                        <li>let nombre_de_mi_variable_suma <b>= [nombre_de_mi_variable[0] + nombre_de_mi_variable2[0], nombre_de_mi_variable[1] + nombre_de_mi_variable2[1]]</b></li>
-                        <li>console.log(`Me llamo <b>${{c}}nombre_de_mi_variable[0]} y tengo ${{c}}nombre_de_mi_variable[1]} años`</b>);</li></ul></pre>
+                <div class="card-body"><h3>Operadores</h3>
+                    <pre class="card-text"><ul>let variable = [ 2, 6 ];
+let variable2 = [ 3, 40 ];<hr>
+<li>let variable_suma: <b>[ number, number ] = [ <abbr title="Cogemos el 2">variable</abbr>[0] + <abbr title="Cogemos el 3">variable2</abbr>[0], <abbr title="Cogemos el 6">variable</abbr>[1] + <abbr title="Cogemos el 40">variable2</abbr>[1]];</b>
+ 
+console.log ( <abbr title="Muestra: [5, 46]"><b>variable_suma</b></abbr> );</li>
+<li>let variable_suma <b>= [ <abbr title="Cogemos el 2">variable</abbr>[0] + <abbr title="Cogemos el 3">variable2</abbr>[0], <abbr title="Cogemos el 6">variable</abbr>[1] + <abbr title="Cogemos el 40">variable2</abbr>[1]];</b>
+ 
+console.log ( <abbr title="Muestra: [5, 46]"><b>variable_suma</b></abbr> );</li></ul></pre>
                 </div>
             </div>
         </div>
@@ -331,12 +296,15 @@ console.log(<b>parametro_hace_referencia_al_3</b>);                 //No nombram
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><ul><li><b>&&</b>: <abbr title="Y - Conjunción. Ej: nombre_de_mi_variable && nombre_de_mi_variable2">Debe cumplirse <b>ambas</b> condiciones</abbr></li>
-<li><b>||</b>: <abbr title="O - Disyunción. Ej: nombre_de_mi_variable || nombre_de_mi_variable2">Debe cumplirse <b>una</b> condición al menos</abbr> </li>
-<li><b>valueOf()</b> <abbr title="Ej: nombre_de_mi_variable.valueOf()">Nos da el valor de la variable</abbr></li></ul></pre>
+                    <pre class="card-text"><ul><li><b>&&</b>: <abbr title="Y - Conjunción. Ej: variable && variable2">Debe cumplirse <b>ambas</b> condiciones</abbr></li>
+<li><b>||</b>: <abbr title="O - Disyunción. Ej: variable || variable2">Debe cumplirse <b>una</b> condición al menos</abbr> </li>
+<li><b>valueOf()</b> <abbr title="Ej: variable.valueOf()">Nos da el valor de la variable</abbr></li></ul></pre>
                 </div>
             </div>
         </div>
+
+
+        
 
     </div>
 

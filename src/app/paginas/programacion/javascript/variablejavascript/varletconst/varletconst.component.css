@@ -3,18 +3,10 @@
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link,
 button {
-    background: #03acfa !important;
-    color: white !important;
+    background: #ebd40a !important;
+    color: rgb(0, 0, 0) !important;
 }
 
-a {
+a{
     color: black;
-}
-
-#azul {
-    color: blue;
-}
-
-pre,h3 {
-    color: white;
 }

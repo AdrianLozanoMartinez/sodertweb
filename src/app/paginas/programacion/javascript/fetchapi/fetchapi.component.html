@@ -1,0 +1,86 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-fetchapi0-tab" data-toggle="pill" href="#pills-fetchapi0" role="tab" aria-controls="pills-fetchapi0" aria-selected="false" style="color: black;"><small>Normal/Simplificado</small><br>ForEach</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-fetchapi1-tab" data-toggle="pill" href="#pills-fetchapi1" role="tab" aria-controls="pills-fetchapi1" aria-selected="false" style="color: black;">Map()</a>
+    </li>
+    <b><a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=es"><u>Extensión Json Chrome</u></a></b>
+    <b><a href="https://pokeapi.co/"><u>API Pokemon</u></a></b> -> <b><a href="https://pokeapi.co/api/v2/"><u>Categorías</u></a></b> -> <b><a href="https://pokeapi.co/api/v2/pokemon/"><u>Tipos de Pokemon</u></a></b>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+    <div class="tab-pane fade show active" id="pills-fetchapi0" role="tabpanel" aria-labelledby="pills-fetchapi0-tab">
+    
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Normal</h3>
+                    <pre class="card-text"><abbr title="Consume una API / una URL"><b>fetch</b></abbr> ( 'https://pokeapi.co/api/v2/pokemon/' )
+   <b>.then</b>( respuesta => {{c}}
+     return respuesta.<b><abbr title="Lo transformamos en Json para obtener los datos">json</abbr>()</b>
+   })
+
+   <b>.then</b>( datoJson => {{c}}
+     return datoJson
+
+   console.log( <abbr title="Observamos en consola el contenido de la API">datoJson</abbr> );
+   console.log(datoJson.<abbr title="Es como está llamado en la API para coger los datos más específico. Lo vemos en consola al llamar la API......Resultado:   {count: 1118, next: https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20, previous: null, results: Array(20)} count: 1118 next: https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20 previous: null results: Array(20)"><b>results</b></abbr> );
+
+   datoJson.results.<abbr title="Solo recorre, no devuelve"><b>forEach</b></abbr>( datoRecibido => {{c}}        //Se suele <b>recorrer el array</b> que nos sale en consola con un <b>map</b>
+      
+    console.log( <abbr title="Sale las especificaciones de cada dato por separado">datoRecibido</abbr> ); 
+    console.log( <abbr title="Muestra los nombres de los Pokemon. Sale solo el nombre de cada dato por separado">datoRecibido</abbr>.<b>name</b>);
+    });
+  })
+
+  .<abbr title="Saca el error que esté predeterminado en la API, al menos que especifiquemos"><b>catch</b></abbr>( errorPredeterminadaPorAPI => console.log( errorPredeterminadaPorAPI ) );</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Simplificada</h3>
+                    <pre class="card-text"><abbr title="Consume una API / una URL"><b>fetch</b></abbr> ( 'https://pokeapi.co/api/v2/pokemon/' )
+   
+  .<b>then</b>( respuesta => respuesta.<b><abbr title="Lo transformamos en Json para obtener los datos">json</abbr>()</b> )
+
+  .<b>then</b>( datoJson => <abbr title="Si añadimos más datos ponemos {}">{{c}}</abbr> 
+    console.log( <abbr title="Observamos en consola el contenido de la API">datoJson</abbr> );
+    console.log( datoJson.<abbr title="Es como está llamado en la API para coger los datos más específico. Lo vemos en consola al llamar la API......Resultado:   {count: 1118, next: https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20, previous: null, results: Array(20)} count: 1118 next: https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20 previous: null results: Array(20)"><b>results</b></abbr> );
+
+    datoJson.results.<abbr title="Solo recorre, no devuelve">forEach</abbr>( datoRecibido => {{c}}        //Se suele recorrer el array que nos sale en consola con un <b>map</b>
+
+      console.log( <abbr title="Sale las especificaciones de cada dato por separado">datoRecibido</abbr> ); 
+      console.log( <abbr title="Muestra los nombres de los Pokemon. Sale solo el nombre de cada dato por separado">datoRecibido</abbr>.<b>name</b>);
+    });
+  })
+
+  .<abbr title="Saca el error que esté predeterminado en la API, al menos que especifiquemos"><b>catch</b></abbr>( errorPredeterminadaPorAPI => console.log( errorPredeterminadaPorAPI ) );</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-fetchapi1" role="tabpanel" aria-labelledby="pills-fetchapi1-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-body">
+                <pre class="card-text"><b><abbr title="Función que coge la API">fetch</abbr></b>( 'https://pokeapi.co/api/v2/pokemon/' )
+    .<b><abbr title="Si hay conexión, lo transforma en json">then</abbr></b>( respuesta => respuesta<b>.json</b>() )
+    
+    .<b>then</b>( respuestaJson => {{c}}
+
+    <b>const <abbr title="Almacenamos en la variable el resultado del map, en especial el name de la API, para posteriormente usarlo, mostrarlo...">variableArray</abbr></b> = respuestaJson.<b>.<abbr title="Parámetro obtenido de la API, se observa en la consola al realizar console.log sobre respuestaJson">results</abbr>.<abbr title="Igual que forEach porque recorre, pero en el map devuelve el resultado">map</abbr>( <abbr title="Con el MAP metemos en la variable la parte de la API que nos interesa, en este caso el NAME, el nombre">datoRecibido</abbr> => datoRecibido.name );</b>
+    
+    console.log( <b><abbr title="Muestra: [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, …]">variableArray</abbr></b> );
+
+    })
+  .<b>catch</b>( errorPredeterminadaPorAPI => console.log( errorPredeterminadaPorAPI ) );</pre>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</div>

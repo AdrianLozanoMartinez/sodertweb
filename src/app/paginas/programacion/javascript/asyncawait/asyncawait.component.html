@@ -1,0 +1,47 @@
+    <b><a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=es"><u>Extensión Json Chrome</u></a></b>
+    <b><a href="https://pokeapi.co/"><u>API Pokemon</u></a></b> -> <b><a href="https://pokeapi.co/api/v2/"><u>Categorías</u></a></b> -> <b><a href="https://pokeapi.co/api/v2/pokemon/"><u>Tipos de Pokemon</u></a></b>
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Sin Map()</h3>
+                    <pre class="card-text">const <abbr title="Función asíncrona">algo</abbr> = <abbr title="Asíncrona"><b>async</b></abbr><b>()</b> => {{c}}
+
+  <abbr title="Si es correcto la conexión con la API"><b>try</b></abbr> {{c}}
+    const <abbr title="Metemos en la variable la captura de los datos de la API">cogeDatosAPI</abbr> = <b>await fetch</b>( 'https://pokeapi.co/api/v2/pokemon/' );
+    const <abbr title="Metemos en la variable en formato json lo que recibimos de la API al capturarlo con la anterior variable">datoRecibido</abbr> = <b>await</b> cogeDatosAPI.<b>json()</b>;
+    console.log( datoRecibido.<abbr title="Viene en la API y lo vemos al ver en consola la API con la variable definida (datoRecibido)"><b>results</b></abbr> );
+
+    datoRecibido.<abbr title="Obtenido de la API"><b>results</b></abbr>.<abbr title="Solo recorre, no devuelve"><b>forEach</b></abbr> ( DatoRecibido2 => {{c}}
+        console.log( <abbr title="Muestra todos los datos con las especificaciones del json">DatoRecibido2</abbr> );
+        console.log( DatoRecibido2.<abbr title="Muestra los nombres de los Pokemon. Cogido de la API"><b>name</b></abbr> );      
+    });
+
+  }
+  <abbr title="Si da error la conexión a la API"><b>catch</b></abbr> ( <abbr title="Metemos en la variable">errorRecibido</abbr> ) {{c}}
+    console.log( errorRecibido );
+  }
+}
+
+<b>algo</b>();</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Map()</h3>
+                    <pre class="card-text">const <abbr title="Función asíncrona">algo</abbr> = <abbr title="Asíncrona"><b>async</b></abbr><b>()</b> => {{c}}
+
+  <abbr title="Si es correcto la conexión con la API"><b>try</b></abbr> {{c}}
+    const <abbr title="Metemos en la variable la captura de los datos de la API">cogeDatosAPI</abbr> = <b>await fetch</b>( 'https://pokeapi.co/api/v2/pokemon/' );
+    const <abbr title="Metemos en la variable en formato json lo que recibimos de la API al capturarlo con la anterior variable">datoRecibido</abbr> = <b>await</b> cogeDatosAPI.<b>json()</b>;
+   
+    <b>const <abbr title="Almacenamos en la variable el resultado del map, en especial el name de la API, para posteriormente usarlo, mostrarlo...">variableArray</abbr></b> = datoRecibido<b>.<abbr title="Parámetro obtenido de la API, se observa en la consola al realizar console.log sobre respuestaJson">results</abbr>.<abbr title="Igual que forEach porque recorre, pero en el map devuelve el resultado">map</abbr>( <abbr title="Con el MAP metemos en la variable la parte de la API que nos interesa, en este caso el NAME, el nombre">datoRecibido2</abbr> => datoRecibido2.name );</b>
+    console.log( <b><abbr title="Muestra: [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, …]">variableArray</abbr></b> );
+
+  } <b>catch</b> ( errorRecibido ) {{c}}
+    console.log( errorRecibido );
+  }
+};
+
+<b>algo()</b>;</pre>
+                </div>
+            </div>
+        </div>

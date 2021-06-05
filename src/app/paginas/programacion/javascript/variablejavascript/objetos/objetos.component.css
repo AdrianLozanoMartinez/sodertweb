@@ -1,0 +1,8 @@
+/*Cambiar de color del botón activo*/
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link,
+button {
+    background: #ebd40a !important;
+    color: rgb(0, 0, 0) !important;
+}

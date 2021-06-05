@@ -226,6 +226,13 @@ import { ArtistaguiaComponent } from './paginas/programacion/angular/httpspotify
 import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pipe/pipe-dom-seguro.pipe';
 import { VariablejavascriptComponent } from './paginas/programacion/javascript/variablejavascript/variablejavascript.component';
 import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/funcionesjavascript/funcionesjavascript.component';
+import { CondicionesjavascriptComponent } from './paginas/programacion/javascript/condicionesjavascript/condicionesjavascript.component';
+import { VarletconstComponent } from './paginas/programacion/javascript/variablejavascript/varletconst/varletconst.component';
+import { ObjetosComponent } from './paginas/programacion/javascript/variablejavascript/objetos/objetos.component';
+import { FetchapiComponent } from './paginas/programacion/javascript/fetchapi/fetchapi.component';
+import { AsyncawaitComponent } from './paginas/programacion/javascript/asyncawait/asyncawait.component';
+import { MapjavascriptComponent } from './paginas/programacion/javascript/mapjavascript/mapjavascript.component';
+import { TipoComponent } from './paginas/programacion/typescript/variabletype/tipo/tipo.component';
 
 
 
@@ -420,7 +427,14 @@ import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/
     ArtistaguiaComponent,
     PipeDomSeguroPipe,
     VariablejavascriptComponent,
-    FuncionesjavascriptComponent
+    FuncionesjavascriptComponent,
+    CondicionesjavascriptComponent,
+    VarletconstComponent,
+    ObjetosComponent,
+    FetchapiComponent,
+    AsyncawaitComponent,
+    MapjavascriptComponent,
+    TipoComponent
   ],
   imports: [
     //Por defecto

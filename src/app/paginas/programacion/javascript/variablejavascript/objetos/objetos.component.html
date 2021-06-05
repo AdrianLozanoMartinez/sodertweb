@@ -1,0 +1,64 @@
+<div class="card-group">
+    <div class="card text-dark bg-warning m-3">
+        <div class="card-body"><h3>Normal</h3>
+            <pre class="card-text">const <abbr title="Objeto: Dentro de él ponemos las propiedades, desde 1 hasta muchas..."><b>algo</b></abbr> = {{c}}
+<b>propiedad1:</b> 'Del objeto',
+propiedad2: 19,
+<abbr title="Array">propiedad4</abbr>: <b>['array1','array2']</b>,                     
+<abbr title="La última propiedad o si hay solo una, no lleva ,">propiedad3</abbr>: true
+}
+
+console.log( <abbr title="Muestra: {propiedad1: Del objeto, propiedad2: 19, propiedad3: true}">algo</abbr> );
+console.log( <abbr title="Muestra: Del objeto. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos"><b>algo</b></abbr><b>.propiedad1</b> );
+console.log( <abbr title="Muestra: 19. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos">algo</abbr>.propiedad2 );
+console.log( <abbr title="Muestra: true. Al poner . accedemos a las propiedades definidas y elegimos la que necesitamos">algo</abbr><b>.propiedad3</b> );
+console.log( <abbr title="Muestra: [array1, array2]">algo</abbr><b>.propiedad4</b> );
+console.log( <abbr title="Muestra: array1. La primera posición del array">algo</abbr><b>.propiedad4[0]</b> );
+console.log( <abbr title="Muestra: array2. La siguiente posición del array">algo</abbr><b>.propiedad4[1]</b> );</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+        <div class="card-body"><h3>Añadimos</h3>
+            <pre class="card-text">const algo = {{c}}
+propiedad1: 'Del objeto',
+propiedad2: 19,
+propiedad4: ['array1','array2'],                     
+propiedad3: true
+}
+
+console.log( algo );
+console.log( algo.propiedad1 );
+console.log( algo.propiedad2 );
+console.log( algo.propiedad3 );
+console.log( algo.propiedad4 );
+console.log( algo.propiedad4[0] );
+console.log( algo.propiedad4[1] );
+
+<b>algo.<abbr title="Se puede añadir o dentro del objeto o fuera. Ponemos el nombre de la propiedad que deseemos">propiedad5</abbr> = "<abbr title="Podemos poner texto, números, boolean, array...">Añadimos</abbr> propiedades";
+console.log(algo.<abbr title="Muestra: Añadimos propiedades">propiedad5</abbr> );</b></pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+        <div class="card-body"><h3>Objeto dentro de otro objeto</h3>
+            <pre class="card-text">const <abbr title="OBJETO">algo</abbr> = {{c}}
+propiedad1: 'Del objeto',
+propiedad2: <b>{{c}}
+subpropiedad1: 'Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)',
+subpropiedad2: 1985,
+subpropiedad3: false
+},</b>
+propiedad3: <b>{{c}}
+subpropiedad1: {{c}}
+texto: 'Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)',
+web: 'sodertweb.web.app',
+youtube: 'www.youtube.com/channel/UCDKYrjnmZAhZHN4wttRLFug'
+}
+}</b>
+};
+
+<abbr title="Muestra: Propiedad dentro de un objeto (propiedad2), que a su vez está dentro de otro objeto (algo)">console</abbr>.log( <b>algo.propiedad2.subpropiedad1</b> );
+
+<abbr title="Muestra: Propiedad dentro de un objeto (subpropiedad4), que a su vez está dentro de otro objeto (propiedad3), que a su vez está dentro de otro objeto (algo)">console</abbr>.log( <b>algo.propiedad3.subpropiedad4.texto</b> );</pre>
+        </div>
+    </div>
+</div>
