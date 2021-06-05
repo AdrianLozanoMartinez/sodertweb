@@ -24,6 +24,9 @@
         <a class="nav-link" id="pills-html7-tab" data-toggle="pill" href="#pills-html7" role="tab" aria-controls="pills-html7" aria-selected="false" style="color: black;">Imagen</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-html12-tab" data-toggle="pill" href="#pills-html12" role="tab" aria-controls="pills-html12" aria-selected="false" style="color: black;">Audio</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-html8-tab" data-toggle="pill" href="#pills-html8" role="tab" aria-controls="pills-html8" aria-selected="false" style="color: black;">Botón</a>
     </li>
     <li class="nav-item">
@@ -234,9 +237,31 @@
     </div>
 
 
-    <div class="tab-pane fade" id="pills-html11" role="tabpanel" aria-labelledby="pills-html11-tab">
-        <hr>
-        <app-formulariohtml></app-formulariohtml>
+    <div class="tab-pane fade" id="pills-html11" role="tabpanel" aria-labelledby="pills-html11-tab"><hr><app-formulariohtml></app-formulariohtml></div>
+
+
+    <div class="tab-pane fade" id="pills-html12" role="tabpanel" aria-labelledby="pills-html12-tab">
+        
+        <audio src="../../../../assets/audio/vuelve.mp3" controls></audio>
+
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body">
+                    <pre class="card-text">{{co}}!DOCTYPE html>
+{{co}}html lang="en">
+    {{co}}head> 
+    {{co}}meta charset="UTF-8">
+        {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{co}}title>Título de pestaña{{co}}/title>
+    {{co}}/head>
+    {{co}}body>
+        <b>{{co}}audio src="../../../../assets/audio/vuelve.mp3" controls>{{co}}/audio></b>   <abbr title="controls -> Obtenemos los controles de audio (play/pausa/volumen/rebobinar)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}/body>
+{{co}}/html></pre>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
