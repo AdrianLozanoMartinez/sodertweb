@@ -1,6 +1,9 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" id="pills-dfuncionamientotype-tab" data-toggle="pill" href="#pills-dfuncionamientotype" role="tab" aria-controls="pills-dfuncionamientotype" aria-selected="true" style="color: black;">Guardar</a>
+        <a class="nav-link" id="pills-dfuncionamientotype1-tab" data-toggle="pill" href="#pills-dfuncionamientotype1" role="tab" aria-controls="pills-dfuncionamientotype1" aria-selected="true" style="color: black;">Crear</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-dfuncionamientotype-tab" data-toggle="pill" href="#pills-dfuncionamientotype" role="tab" aria-controls="pills-dfuncionamientotype" aria-selected="true" style="color: black;">Guardar</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-dfuncionamientotype8-tab" data-toggle="pill" href="#pills-dfuncionamientotype8" role="tab" aria-controls="pills-dfuncionamientotype8" aria-selected="false" style="color: black;">Compilar</a>
@@ -13,13 +16,25 @@
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-    <div class="tab-pane fade show active" id="pills-dfuncionamientotype" role="tabpanel" aria-labelledby="pills-dfuncionamientotype-tab">
+    <div class="tab-pane fade" id="pills-dfuncionamientotype" role="tabpanel" aria-labelledby="pills-dfuncionamientotype-tab">
         
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
                     <pre class="card-text"><ul><li><b>Ctrl + s</b> -> Solo en el <b>Typescript</b></li>
-<li><b>tsc nombre.ts</b> -> Solo en el <b>Javascript</b> del Typescript</li></ul></pre>
+<li><b>tsc nombre.ts</b> / <b>tsc nombre</b> -> Solo en el <b>Javascript</b> del Typescript</li></ul></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-dfuncionamientotype1" role="tabpanel" aria-labelledby="pills-dfuncionamientotype1-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>tsc nombre.ts</b></pre>
                 </div>
             </div>
         </div>
@@ -30,19 +45,13 @@
         
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><h3>Solo <abbr title="Ver errores">COMPILA</abbr></h3><ul><li><b>tsc nombre.ts</b> -> Crea un archivo javascript con el mismo nombre y similar estructura para que funcione en un navegador <abbr title="Llama en el html el archivo js"><u>nombre.js</u></abbr></li></ul></pre>
+                <div class="card-body"><h3>Compila   <small><small><abbr title="Ver errores"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></small></small></h3>
+                    <pre class="card-text"><b>tsc nombre.ts</b>   <abbr title="Crea un archivo javascript con el mismo nombre y similar estructura para que funcione en un navegador -> nombre.js (Llama en el html el archivo js)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
-        </div>
-
-        <br>
-
-        <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><h3><abbr title="Ver errores">COMPILA</abbr> al GUARDAR</h3><ul><li><b>tsc nombre.ts -w</b> // <b>tsc nombre.ts --watch</b> + <abbr title="Guarda cambios en ambos lugares y ver errores"><b>Ctrl + S</b></abbr> -> A la vez en el <b>Typescript</b> y en el <b>Javascript</b> del Typescript
-                        <b>Ctrl + C</b>: Para salir del <b>observable</b>/warched</li></ul></pre>
+                <div class="card-body"><h3>Guardar -> Compila</h3>
+                    <pre class="card-text"><ol><li><b>tsc nombre.ts -w</b> / <b>tsc nombre.ts --watch</b>   <abbr title="Compila en ambos (typescript/javascript)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li><b>Ctrl + S</b>   <abbr title="Guarda en ambos (typescript/javascript). Luego SOLO GUARDAR y COMPILA AUTOMÁTICAMENTE"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li><b>Ctrl + C</b>   <abbr title="Para salir del observable/warched y dejar de compilar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ol></pre>
                 </div>
             </div>
         </div>
@@ -55,9 +64,9 @@
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
                 <div class="card-body">
-                    <pre class="card-text"><ul><li>Navegador -><b> Ctrl + Mayúscula + i -> el interior del archivo nombre.js</b></li>
-<li>Terminal -><b>node nombre.js</b></li>
-<li>Archivo.html -><b>{{co}}script src="nombre.js">{{co}}/script></b></li></ul></pre>
+                    <pre class="card-text"><ul><li>Navegador -> <b> Ctrl + Mayúscula + i -> el interior del archivo nombre.js</b></li>
+<li>Terminal -> <b>node nombre.js</b> / <b>npm start</b> <abbr title="Ejecutar en tiempo real"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
+<li>Archivo.html -> <b>{{co}}script src="nombre.js">{{co}}/script></b></li></ul></pre>
                 </div>
             </div>
         </div>

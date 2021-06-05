@@ -15,13 +15,13 @@
         <a class="nav-link" id="pills-tpscript1-tab" data-toggle="pill" href="#pills-tpscript1" role="tab" aria-controls="pills-tpscript1" aria-selected="false" style="color: black;">Variables</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-tpscript2-tab" data-toggle="pill" href="#pills-tpscript2" role="tab" aria-controls="pills-tpscript2" aria-selected="false" style="color: black;">Mostrar</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-tpscript3-tab" data-toggle="pill" href="#pills-tpscript3" role="tab" aria-controls="pills-tpscript3" aria-selected="false" style="color: black;">Funciones</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-tpscript5-tab" data-toggle="pill" href="#pills-tpscript5" role="tab" aria-controls="pills-tpscript5" aria-selected="false" style="color: black;">Promesa</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-tpscript2-tab" data-toggle="pill" href="#pills-tpscript2" role="tab" aria-controls="pills-tpscript2" aria-selected="false" style="color: black;">Mostrar</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-tpscript6-tab" data-toggle="pill" href="#pills-tpscript6" role="tab" aria-controls="pills-tpscript6" aria-selected="false" style="color: black;">Interfaces</a>
@@ -219,9 +219,12 @@
         
         <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body">
-                    <pre class="card-text"><ul><li><b>console.log (nombre_variable);</b></li>
-<li>console<b>.warn</b> (nombre_variable);   <abbr title="Para que el mensaje salga en amarillo (warning)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
+                <div class="card-body"><h3>Consola</h3>
+                    <pre class="card-text"><ul><li><b>console.log ( "Mensaje normal" );</b></li>
+<li>console<b>.info</b> ( "Mensaje de información" ); </li>
+<li>console<b>.error</b> ( "Mensaje de error" );   <abbr title="Para que el mensaje salga en rojo (error)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
+<li>console<b>.warn</b> ( "Mensaje de peligro" );   <abbr title="Para que el mensaje salga en amarillo (warning)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><hr>
+<li>console.log("<b>%cMensaje en consola del navegador", "color:blue"</b>);   <abbr title="%c + efecto css [color:blue (letra azul) - background-color: pink (fondo rosa) - font-size: xx-large (tamaño de letra grande)...] solo un efecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
                 </div>
             </div>
         </div>
