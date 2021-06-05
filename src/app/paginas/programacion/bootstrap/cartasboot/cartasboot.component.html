@@ -11,6 +11,9 @@
     <li class="nav-item">
       <a class="nav-link" id="pills-cartasboot2-tab" data-toggle="pill" href="#pills-cartasboot2" role="tab" aria-controls="pills-cartasboot2" aria-selected="false" style="color: black;">Acordeo<br><small>Enseña/Oculta información</small></a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-cartasboot3-tab" data-toggle="pill" href="#pills-cartasboot3" role="tab" aria-controls="pills-cartasboot3" aria-selected="false" style="color: black;">Css - Responsive</a>
+    </li>
 </ul>
   
 <div class="tab-content cuadro" id="pills-tabContent">
@@ -289,5 +292,28 @@
 
   
     </div>
+
+
+    <div class="tab-pane fade" id="pills-cartasboot3" role="tabpanel" aria-labelledby="pills-cartasboot3-tab">
+
+      <div class="card-group">
+        <div class="card text-dark m-3 bg-info">
+            <div class="card-body bg-info">
+              <pre class="card-text">.card-columns {{c}}   <abbr title="Especificar cuantas saldrá dependiendo de la pantalla que se muestre"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>@include media-breakpoint-only(lg) {{c}}
+    column-count: 4;   <abbr title="4 en una pantalla grande (lg)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+  @include media-breakpoint-only(xl) {{c}}
+    column-count: 5;   <abbr title="5 en una pantalla más grande (xl)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+}</pre>
+            </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+
 
   </div>

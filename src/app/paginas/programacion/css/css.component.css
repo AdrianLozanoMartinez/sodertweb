@@ -174,3 +174,99 @@ table, td{                          /*Responsive-Hijo/Padre*/
 a{
   color: black;
 }
+
+
+
+.flecha1 {
+  cursor: alias;   
+}
+
+.flecha-cruz {
+  cursor: all-scroll;  /*Opción: move*/
+}
+
+.raya-seleccionar {
+  cursor: auto;    /*Opción text*/
+}
+
+.cruz-gorda {
+  cursor: cell;
+}
+
+.flechas-inversas-barra {
+  cursor: col-resize;
+}
+
+.flechas-inversas-vertical-barra {
+  cursor: row-resize;
+}
+
+.cruz-peque {
+  cursor: copy;
+}
+
+.cruz-fina-grande {
+  cursor: crosshair;
+}
+
+.por-defecto {
+  cursor: default;
+}
+
+.flecha-horizontal-blanca {
+  cursor: e-resize;  /*Opción: ew-resize, w-resize*/
+}
+
+.flecha-vertical-blanca {
+  cursor: n-resize;  /*Opción: ns-resize, s-resize*/
+}
+
+.flecha-inclinada1-blanca {  /*Opción: nesw-resize, sw-resize*/
+  cursor: ne-resize;
+}
+
+.flecha-inclinada2-blanca {  /*Opción: nwse-resize, se-resize*/
+  cursor: nw-resize;
+}
+
+.mano-abierta {
+  cursor: -webkit-grab; 
+  cursor: grab;
+}
+
+.mano-cerrada {
+  cursor: -webkit-grabbing; 
+  cursor: grabbing;
+}
+
+.ayuda {
+  cursor: help;
+}
+
+.prohibido {
+  cursor: no-drop;   /*Opción: not-allowed*/
+}
+
+.dedo-indice {
+  cursor: pointer;
+}
+
+.cargando {
+  cursor: progress;
+}
+
+.cargando2 {
+  cursor: wait;
+}
+
+.imagen {
+  cursor: url("/src/assets/imagenes/cursor.cur"), 16 16, auto;
+}
+
+.zoom-acercar {
+  cursor: zoom-in;
+}
+
+.zoom-alejar {
+  cursor: zoom-out;
+}
