@@ -12,12 +12,13 @@
           <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
             <a class="dropdown-item text-light" [routerLink]="['/terminal']" routerLinkActive="active">Terminal</a>
             <a class="dropdown-item text-light" [routerLink]="['/git']" routerLinkActive="active">Git</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light" [routerLink]="['/fontsgoogle']" routerLinkActive="active">Google Fonts</a>
-            <a class="dropdown-item text-light" [routerLink]="['/fontawesome']" routerLinkActive="active">Fontawesome</a>
-            <a class="dropdown-item text-light" [routerLink]="['/sweepalert2']" routerLinkActive="active">Sweepalert</a>
-            <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
-            <div class="dropdown-divider"></div>          
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Servidores
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">    
             <a class="dropdown-item text-light" [routerLink]="['/hostinggeneral']" routerLinkActive="active">Hosting</a>
             <a class="dropdown-item text-light" [routerLink]="['/firebase']" routerLinkActive="active">Firebase</a>
             <a class="dropdown-item text-light" [routerLink]="['/auth0']" routerLinkActive="active">Auth0</a>
@@ -32,10 +33,6 @@
             <a class="dropdown-item text-light" [routerLink]="['/html']" routerLinkActive="active">Html</a>
             <a class="dropdown-item text-light" [routerLink]="['/css']" routerLinkActive="active">Css</a>
             <a class="dropdown-item text-light" [routerLink]="['/javascript']" routerLinkActive="active">JavaScript</a>
-            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']" routerLinkActive="active">Bootstrap</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light" [routerLink]="['/angular']" routerLinkActive="active">Angular</a>
-            <a class="dropdown-item text-light" [routerLink]="['/ionic']" routerLinkActive="active">Ionic</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -48,6 +45,29 @@
             <a class="dropdown-item text-light" [routerLink]="['/python']" routerLinkActive="active">Python</a>
             <a class="dropdown-item text-light" [routerLink]="['/typescript']" routerLinkActive="active">Typescript</a>
             <a class="dropdown-item text-light" [routerLink]="['/c']" routerLinkActive="active">C#</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Librería
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']" routerLinkActive="active">Bootstrap</a>
+            <a class="dropdown-item text-light" [routerLink]="['/jquery']" routerLinkActive="active">Jquery</a>
+            <a class="dropdown-item text-light" [routerLink]="['/tether']" routerLinkActive="active">Tether</a>
+            <a class="dropdown-item text-light" [routerLink]="['/fontsgoogle']" routerLinkActive="active">Google Fonts (+Icons)</a>
+            <a class="dropdown-item text-light" [routerLink]="['/fontawesome']" routerLinkActive="active">Fontawesome</a>
+            <a class="dropdown-item text-light" [routerLink]="['/sweepalert2']" routerLinkActive="active">Sweepalert</a>
+            <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Framework
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-light" [routerLink]="['/angular']" routerLinkActive="active">Angular</a>
+            <a class="dropdown-item text-light" [routerLink]="['/ionic']" routerLinkActive="active">Ionic</a>
           </div>
         </li>
         <!-- <li class="nav-item dropdown">

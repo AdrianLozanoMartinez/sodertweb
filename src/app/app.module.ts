@@ -59,6 +59,15 @@ import { Carouselboot2Component } from './paginas/programacion/bootstrap/imagenb
 import { Colortabla2bootComponent } from './paginas/programacion/bootstrap/tablaboot/colortabla2boot/colortabla2boot.component';
 //Programacion - JavaScript
 import { JavascriptComponent } from './paginas/programacion/javascript/javascript.component';
+import { VariablejavascriptComponent } from './paginas/programacion/javascript/variablejavascript/variablejavascript.component';
+import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/funcionesjavascript/funcionesjavascript.component';
+import { CondicionesjavascriptComponent } from './paginas/programacion/javascript/condicionesjavascript/condicionesjavascript.component';
+import { VarletconstComponent } from './paginas/programacion/javascript/variablejavascript/varletconst/varletconst.component';
+import { ObjetosComponent } from './paginas/programacion/javascript/variablejavascript/objetos/objetos.component';
+import { FetchapiComponent } from './paginas/programacion/javascript/fetchapi/fetchapi.component';
+import { AsyncawaitComponent } from './paginas/programacion/javascript/asyncawait/asyncawait.component';
+import { MapjavascriptComponent } from './paginas/programacion/javascript/mapjavascript/mapjavascript.component';
+import { TipoComponent } from './paginas/programacion/typescript/variabletype/tipo/tipo.component';
 //Programacion - SQL
 import { SqlComponent } from './paginas/programacion/sql/sql.component';
 import { BasededatosComponent } from './paginas/programacion/sql/basededatos/basededatos.component';
@@ -222,17 +231,11 @@ import { PipespotifyPipe } from './paginas/programacion/angular/httpspotify/pipe
 import { TarjetasspotifyComponent } from './paginas/programacion/angular/httpspotify/tarjetasspotify/tarjetasspotify.component';
 import { LoadingspotifyComponent } from './paginas/programacion/angular/httpspotify/loadingspotify/loadingspotify.component';
 import { ArtistaguiaComponent } from './paginas/programacion/angular/httpspotify/artistaguia/artistaguia.component';
-
 import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pipe/pipe-dom-seguro.pipe';
-import { VariablejavascriptComponent } from './paginas/programacion/javascript/variablejavascript/variablejavascript.component';
-import { FuncionesjavascriptComponent } from './paginas/programacion/javascript/funcionesjavascript/funcionesjavascript.component';
-import { CondicionesjavascriptComponent } from './paginas/programacion/javascript/condicionesjavascript/condicionesjavascript.component';
-import { VarletconstComponent } from './paginas/programacion/javascript/variablejavascript/varletconst/varletconst.component';
-import { ObjetosComponent } from './paginas/programacion/javascript/variablejavascript/objetos/objetos.component';
-import { FetchapiComponent } from './paginas/programacion/javascript/fetchapi/fetchapi.component';
-import { AsyncawaitComponent } from './paginas/programacion/javascript/asyncawait/asyncawait.component';
-import { MapjavascriptComponent } from './paginas/programacion/javascript/mapjavascript/mapjavascript.component';
-import { TipoComponent } from './paginas/programacion/typescript/variabletype/tipo/tipo.component';
+
+//Librerías
+import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
+import { TetherComponent } from './paginas/programacion/tether/tether.component';
 
 
 
@@ -291,6 +294,15 @@ import { TipoComponent } from './paginas/programacion/typescript/variabletype/ti
     Colortabla2bootComponent,
     //Programacion - JavaScript
     JavascriptComponent,
+    VariablejavascriptComponent,
+    FuncionesjavascriptComponent,
+    CondicionesjavascriptComponent,
+    VarletconstComponent,
+    ObjetosComponent,
+    FetchapiComponent,
+    AsyncawaitComponent,
+    MapjavascriptComponent,
+    TipoComponent,
     //Programacion - SQL
     SqlComponent,
     BasededatosComponent,
@@ -426,15 +438,9 @@ import { TipoComponent } from './paginas/programacion/typescript/variabletype/ti
     LoadingspotifyComponent,
     ArtistaguiaComponent,
     PipeDomSeguroPipe,
-    VariablejavascriptComponent,
-    FuncionesjavascriptComponent,
-    CondicionesjavascriptComponent,
-    VarletconstComponent,
-    ObjetosComponent,
-    FetchapiComponent,
-    AsyncawaitComponent,
-    MapjavascriptComponent,
-    TipoComponent
+    //Librerias
+    JqueryComponent,
+    TetherComponent
   ],
   imports: [
     //Por defecto

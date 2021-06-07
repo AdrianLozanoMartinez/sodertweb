@@ -69,6 +69,7 @@ import { Serviceone2Component } from './paginas/programacion/angular/serviciouno
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
 import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
 import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
+import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -136,7 +137,9 @@ import { DeudasComponent } from './paginas/deudas/deudas.component';
 import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component';
 
 
-import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
+//Librerías
+import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
+import { TetherComponent } from './paginas/programacion/tether/tether.component';
 
 
 export const appRoutes: Routes = [
@@ -255,6 +258,9 @@ export const appRoutes: Routes = [
   { path: 'ionic', component: IonicComponent},
   //Programacion - Toastr
   { path: 'toastr', component: ToastrComponent},
+  //Librerías
+  { path: 'jquery', component: JqueryComponent},
+  { path: 'tether', component: TetherComponent},
   //Empleo
   { path: 'empleo', component: EmpleoComponent},
   { path: 'empresas', component: EmpresasComponent},
