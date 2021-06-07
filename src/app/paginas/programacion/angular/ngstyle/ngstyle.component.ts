@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgstyleComponent implements OnInit {
 
+  tamano:number = 10;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+//Html
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
 }
