@@ -236,6 +236,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
+import { NgstyleComponent } from './paginas/programacion/angular/ngstyle/ngstyle.component';
 
 
 
@@ -440,7 +441,8 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     PipeDomSeguroPipe,
     //Librerias
     JqueryComponent,
-    TetherComponent
+    TetherComponent,
+    NgstyleComponent
   ],
   imports: [
     //Por defecto
