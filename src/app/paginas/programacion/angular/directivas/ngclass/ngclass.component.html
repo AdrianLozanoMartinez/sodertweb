@@ -1,0 +1,254 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-ngclass-tab" data-toggle="pill" href="#v-pills-ngclass" role="tab" aria-controls="v-pills-ngclass" aria-selected="true">Cambiar color</a>
+        <a class="nav-link" id="v-pills-ngclass0-tab" data-toggle="pill" href="#v-pills-ngclass0" role="tab" aria-controls="v-pills-ngclass0" aria-selected="true">Cambiar color - Objeto</a>
+        <a class="nav-link" id="v-pills-ngclass1-tab" data-toggle="pill" href="#v-pills-ngclass1" role="tab" aria-controls="v-pills-ngclass1" aria-selected="false">Asíncronos - Usuarios</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-ngclass" role="tabpanel" aria-labelledby="v-pills-ngclass-tab">
+            
+            <a href="https://angular.io/api/common/NgClass" class="ml-5"><u>Web oficial (ngStyle)</u></a>
+
+
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+                <div [ngClass]="'alert-success'" class="alert">Alerta modificada solo en el Html   <abbr title="Coge el color del Html con ngClass"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></div>   
+
+                <div [ngClass]="variable_alerta" class="alert">Alerta modificada en el Ts   <abbr title="Coge el color del Ts con ngClass, usando la variable (variable_alerta)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></div> 
+
+                <div [ngClass]="variable2_alerta" class="alert">Alerta modificada en el Ts con botones   <abbr title="Con los botones le cambiamos el color (Dentro de los botones define el color que se usará). Coge el color del Ts con ngClass, usando la variable (variable_alerta)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></div>  
+                
+                <button class="btn btn-info" (click)="variable2_alerta='alert-info'">Info   <abbr title="Cambiamos el valor de la variable del Ts por alert-info"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></button>   
+                <button class="btn btn-warning" (click)="variable2_alerta='alert-warning'">Warning   <abbr title="Cambiamos el valor de la variable del Ts por alert-warning"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></button>   
+
+        </div>
+    </div>
+</div>
+
+
+      <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Ts</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-ngstyle',
+  templateUrl: './ngstyle.component.html',
+  styleUrls: ['./ngstyle.component.css']
+})
+export class NgstyleComponent implements OnInit {{c}}
+
+  <b>variable_alerta:string ="alert-danger";   <abbr title="Cambia el color de la alerta del Html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    variable2_alerta:string ="alert-primary";   <abbr title="Cambia el color de la alerta del Html y en conjunto con los botones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}
+</pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-warning m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Html</h3></pre>
+            </div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}div <b>{{t}}ngClass]="'alert-success'"</b> class="alert">Alerta modificada solo en el Html   <abbr title="Coge el color del Html con ngClass"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/div>   
+
+{{co}}div <b>{{t}}ngClass]="variable_alerta"</b> class="alert">Alerta modificada en el Ts   <abbr title="Coge el color del Ts con ngClass, usando la variable (variable_alerta)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/div> 
+
+{{co}}div <b>{{t}}ngClass]="variable2_alerta"</b> class="alert">Alerta modificada en el Ts con botones   <abbr title="Con los botones le cambiamos el color (Dentro de los botones define el color que se usará). Coge el color del Ts con ngClass, usando la variable (variable_alerta)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/div>  
+
+{{co}}<b>button</b> class="btn btn-<b>info</b>" <b>{{p}}click)="variable2_alerta='alert-info'"</b>>Info   <abbr title="Cambiamos el valor de la variable del Ts por alert-info"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/button>   
+{{co}}<b>button</b> class="btn btn-<b>warning</b>" <b>{{p}}click)="variable2_alerta='alert-warning'"</b>>Warning   <abbr title="Cambiamos el valor de la variable del Ts por alert-warning"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/button>   </pre>
+            </div>
+        </div>
+      </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-ngclass0" role="tabpanel" aria-labelledby="v-pills-ngclass0-tab">
+            
+            <div class="card-group">
+                <div class="card m-3">
+                    <div class="card-header bg-danger">
+                        <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+                    </div>
+                    <div class="card-body">
+            
+                        <h3 [ngClass]=" { 'text-danger': true } ">Solo en el Html</h3>
+
+                        <h3 [ngClass]=" { 'text-success': variable_objeto.parametro_success } ">Con Ts   <abbr title="True = color, False = negro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></h3>
+                        
+                        <h3 [ngClass]=" { 'text-success': variable_objeto2.parametro_success, 'text-info': !variable_objeto2.parametro_success } ">Con Ts + Especificar colores en true/false  <abbr title="Poniendo color en True (success) y en False (info)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></h3>
+
+                        <h3 [ngClass]=" { 'text-warning': variable_objeto3.parametro_warning, 'text-primary': !variable_objeto3.parametro_warning } ">Con Ts con botones  <abbr title="Cambia el color con los botones, si es True (warning) y en False (primary)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></h3>
+
+                        <button (click)="variable_objeto3.parametro_warning = !variable_objeto3.parametro_warning" type="button" name="boton3" class="btn btn-danger">Cambiar color</button>
+            
+                        <h3 [ngClass]=" { 'text-secondary': variable_objeto4.parametro_danger, 'text-danger': !variable_objeto4.parametro_danger } ">Con Ts y cambia color en botones  <abbr title="Cambia el color con los botones y en los botones, si es True (danger) y en False (secondary)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></h3>
+
+                        <button (click)="variable_objeto4.parametro_danger = !variable_objeto4.parametro_danger" type="button" name="boton3" class="btn" [ngClass]="{ 'btn-secondary':variable_objeto4.parametro_danger, 'btn-danger':!variable_objeto4.parametro_danger }">Cambiar color - letra + botón</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <div class="card text-dark bg-primary m-3">
+                    <div class="card-header">
+                        <pre class="card-text text-center"><h3>Ts</h3></pre>
+                    </div>
+                    <div class="card-body">
+                      <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-ngclass',
+  templateUrl: './ngclass.component.html',
+  styleUrls: ['./ngclass.component.css']
+})
+export class NgclassComponent implements OnInit {{c}}
+  
+  <b>variable_objeto:any = {{c}}
+    parametro_success: true
+  }
+
+  variable_objeto2:any = {{c}}
+    parametro_success: false
+  }
+
+  variable_objeto3:any = {{c}}
+    parametro_warning: true
+  }
+
+  variable_objeto4:any = {{c}}
+    parametro_danger: true
+  }
+</b>
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+                    </div>
+                </div>
+                <div class="card text-dark bg-warning m-3">
+                  <div class="card-header">
+                      <pre class="card-text text-center"><h3>Html</h3></pre>
+                  </div>
+                  <div class="card-body">
+                      <pre class="card-text">{{co}}h3 <b>{{t}}ngClass]=" {{c}} 'text-danger': true } "</b>>Solo en el Html{{co}}/h3>
+
+{{co}}h3 <b>{{t}}ngClass]=" {{c}} 'text-success': variable_objeto.parametro_success } "</b>>Con Ts   <abbr title="True = color, False = negro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/h3>
+
+
+{{co}}h3 {{t}}ngClass]=" {{c}} 'text-success': variable_objeto2.parametro_success, <b>'text-info': !variable_objeto2.parametro_success } "</b>>Con Ts + Especificar colores en true/false  <abbr title="Poniendo color en True (success) y en False (info)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/h3>
+
+
+{{co}}h3 {{t}}ngClass]=" {{c}} 'text-warning': variable_objeto3.parametro_warning, 'text-primary': !variable_objeto3.parametro_warning } ">Con Ts con botones  <abbr title="Cambia el color con los botones, si es True (warning) y en False (primary)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/h3>
+{{co}}<b>button {{p}}click)="variable_objeto3.parametro_warning = !variable_objeto3.parametro_warning"</b> type="button" name="boton3" class="btn btn-danger">Cambiar color{{co}}/button>
+
+
+{{co}}h3 {{t}}ngClass]=" {{c}} 'text-secondary': variable_objeto4.parametro_danger, 'text-danger': !variable_objeto4.parametro_danger } ">Con Ts y cambia color en botones  <abbr title="Cambia el color con los botones y en los botones, si es True (danger) y en False (secondary)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/h3>
+{{co}}button {{p}}click)="variable_objeto4.parametro_danger = !variable_objeto4.parametro_danger" type="button" name="boton3" class="btn" <b>{{t}}ngClass]="{{c}} 'btn-secondary':variable_objeto4.parametro_danger, 'btn-danger':!variable_objeto4.parametro_danger }"</b>>Cambiar color - letra + botón{{co}}/button></pre>
+                  </div>
+              </div>
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-ngclass1" role="tabpanel" aria-labelledby="v-pills-ngclass1-tab">
+          
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                    <button (click)="ejecutar()" class="btn btn-primary" type="button" name="button" [disabled]="cargando"><abbr title="Llamamos a la función ejecutar y de ese modo se puede realizar las funciones en los iconos que está dentro del botón. [disable] al llevar [] lo maneja angular y al unirlo con la variable cargando, hace que se deshabilite si se está ejecutando (refresh)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                      - <i [ngClass]="{ 'fa-save':!cargando, 'fa-refresh fa-spin':cargando }" class="fa"></i> -    
+                      <span *ngIf="!cargando">Guardar cambios</span> -  <abbr title="Aparece si no hemos pulsado el botón o ha pasado 3seg"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      <span *ngIf="cargando">Espere por favor</span>  -  <abbr title="Aparece cuando hemos pulsado el botón durante 3seg"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    </button> -   <abbr title="!cargando -> Sino está cargando (Variable cargando con la función ejecutar llamada al pulsar el botón) se queda el icono de guardar y si está cargando (Durante 3seg que es lo que hemos marcado en la función) se pone el icono refresh. Ponemos fa aparte para no repetirlo en cada clase ya que es igual, se une con el otro class, si lo quitamos y tampoco ponemos fa en cada icono no sale nada"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Ts</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-ngclass',
+  templateUrl: './ngclass.component.html',
+  styleUrls: ['./ngclass.component.css']
+})
+export class NgclassComponent implements OnInit {{c}}
+  
+  <b>cargando:boolean = false;</b>   <abbr title="Variable inicialmente declarada false para que no se ejecute la acción que se observa en el html con la función de abajo (ejecutar())"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>ejecutar(){{c}}    <abbr title="Función que coge la variable que estaba en false y la convierte en true para que se ejecute la acción cuando es llamada en el Html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.cargando = true;
+
+    <b>setTimeout( ()=> this.cargando = false, 3000 )</b>  <abbr title="Después que pase 3 seg me cambie el valor de la variable cargando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+
+}
+</pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-warning m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Html</h3></pre>
+            </div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}button <b>{{p}}click)="ejecutar()"</b> <abbr title="Llamamos a la función ejecutar y de ese modo se puede realizar las funciones en los iconos que está dentro del botón"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> class="btn btn-primary" type="button" name="button" <b>{{t}}disabled]="cargando"</b>>   <abbr title="[disable] al llevar [] lo maneja angular y al unirlo con la variable cargando, hace que se deshabilite si se está ejecutando (refresh)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}i <b>{{t}}ngClass]="{{c}} 'fa-save':!cargando, 'fa-refresh fa-spin':cargando }" class="fa"</b>>{{co}}/i>   <abbr title="!cargando -> Sino está cargando (Variable cargando con la función ejecutar llamada al pulsar el botón) se queda el icono de guardar y si está cargando (Durante 3seg que es lo que hemos marcado en la función) se pone el icono refresh. Ponemos fa aparte para no repetirlo en cada clase ya que es igual, se une con el otro class, si lo quitamos y tampoco ponemos fa en cada icono no sale nada"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}span <b>{{f}}ngIf="!cargando"</b>>Guardar cambios{{co}}/span> <abbr title="Aparece si no hemos pulsado el botón o ha pasado 3seg"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}span <b>{{f}}ngIf="cargando"</b>>Espere por favor{{co}}/span> <abbr title="Aparece cuando hemos pulsado el botón durante 3seg"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/button></pre>
+            </div>
+        </div>
+      </div>
+
+
+        </div>
+        
+  </div>
+
+</div>
+
+
+  

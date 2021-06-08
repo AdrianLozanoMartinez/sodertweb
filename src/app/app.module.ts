@@ -236,7 +236,12 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
-import { NgstyleComponent } from './paginas/programacion/angular/ngstyle/ngstyle.component';
+import { NgstyleComponent } from './paginas/programacion/angular/directivas/ngstyle/ngstyle.component';
+import { NgclassComponent } from './paginas/programacion/angular/directivas/ngclass/ngclass.component';
+import { ResaltadoDirective } from './paginas/programacion/angular/directivas/personalizada/resaltado.directive';
+import { DirectivapersonalizadaComponent } from './paginas/programacion/angular/directivas/personalizada/directivapersonalizada/directivapersonalizada.component';
+import { ApirestangularComponent } from './paginas/programacion/angular/apirestangular/apirestangular.component';
+import { PokemonangularComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonangular.component';
 
 
 
@@ -442,7 +447,12 @@ import { NgstyleComponent } from './paginas/programacion/angular/ngstyle/ngstyle
     //Librerias
     JqueryComponent,
     TetherComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    NgclassComponent,
+    ResaltadoDirective,
+    DirectivapersonalizadaComponent,
+    ApirestangularComponent,
+    PokemonangularComponent
   ],
   imports: [
     //Por defecto

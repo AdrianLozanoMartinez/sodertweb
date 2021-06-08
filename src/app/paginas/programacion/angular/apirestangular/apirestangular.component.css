@@ -7,15 +7,7 @@ button {
     color: white !important;
 }
 
-a {
-    color: black;
-}
-
-#rojo {
-    color: red;
-}
-
-
-.blanco{
+pre, h3{
     color: white;
 }
+

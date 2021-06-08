@@ -9,7 +9,7 @@ export class ServiciodepruebaService {
     {
         VariableSecundaria1: "Datos1.1",
         VariableSecundaria2: "Datos1.2",
-        DireccionImagen: "../../../../../../assets/imagenes/Angular.png",
+        DireccionImagen: "../../../../../../assets/imagenes/angular.png",
         VariableSecundaria3: "Datos1.3",
         VariableSecundaria4:"html"
     },

@@ -1,12 +1,12 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" id="pills-ngstyle-tab" data-toggle="pill" href="#pills-ngstyle" role="tab" aria-controls="pills-ngstyle" aria-selected="true" style="color: black;">Tamaño<br>de letra</a>
+        <a class="nav-link" id="pills-ngstyle-tab" data-toggle="pill" href="#pills-ngstyle" role="tab" aria-controls="pills-ngstyle" aria-selected="true" style="color: black;">NgStyle<br><small><small>Tamaño<br>de letra</small></small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ngstyle0-tab" data-toggle="pill" href="#pills-ngstyle0" role="tab" aria-controls="pills-ngstyle0" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-ngstyle0-tab" data-toggle="pill" href="#pills-ngstyle0" role="tab" aria-controls="pills-ngstyle0" aria-selected="false" style="color: black;">NgClass</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ngstyle8-tab" data-toggle="pill" href="#pills-ngstyle8" role="tab" aria-controls="pills-ngstyle8" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-ngstyle8-tab" data-toggle="pill" href="#pills-ngstyle8" role="tab" aria-controls="pills-ngstyle8" aria-selected="false" style="color: black;">Directivas<br>Personalizadas</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-ngstyle13-tab" data-toggle="pill" href="#pills-ngstyle13" role="tab" aria-controls="pills-ngstyle13" aria-selected="false" style="color: black;">x</a>
@@ -27,7 +27,7 @@
         <a class="nav-link" id="pills-ngstyle3-tab" data-toggle="pill" href="#pills-ngstyle3" role="tab" aria-controls="pills-ngstyle3" aria-selected="false" style="color: black;">x</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-ngstyle12-tab" data-toggle="pill" href="#pills-ngstyle12" role="tab" aria-controls="pills-ngstyle12" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-ngstyle12-tab" data-toggle="pill" href="#pills-ngstyle12" role="tab" aria-controls="pills-ngstyle12" aria-selected="false" style="color: black;">Información<br>adicional</a>
     </li>
     <button class="btn btn-danger m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
 </ul>
@@ -48,25 +48,25 @@
               
 <p [ngStyle]="{ 'font-size': '10px' }">Tamaño (No recomendable)   <abbr title="Tamaño especificado en número, en el html. 'font-size': '10px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p> 
 
-<p [ngStyle]="{ 'font-size': tamano + 'px' }">Tamaño + Variable   <abbr title="Tamaño especificado en la variable del Ts (tamano). 'font-size': tamano + 'px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>
+<p [ngStyle]="{ 'font-size': tamano + 'px' }">Tamaño con Variable   <abbr title="Tamaño especificado en la variable del Ts (tamano). 'font-size': tamano + 'px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>
 
 
 <p [style.fontSize]="'10px'">Tamaño (Algo más recomendable)  <abbr title="Definimos la función dentro del style (style.fontSize). Tamaño especificado en número, en el html. '10px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>
 
 
-<p [style.fontSize.px]="tamano">Tamaño + Variable (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en la variable del Ts (tamano). tamano"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>
+<p [style.fontSize.px]="tamano">Tamaño con Variable (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en la variable del Ts (tamano). tamano"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>
 
 <p [style.fontSize.px]="'10'">Tamaño (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en el html. '10'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></p>   
 
 
-<button class="btn btn-success" (click)="tamano = tamano + 5">
-    <i class="fa fa-plus" aria-hidden="true"></i>
-</button>
+<button type="button" name="boton1" class="btn btn-success" (click)="tamano = tamano + 5">
+    <i class="fa fa-plus" aria-hidden="true"></i>   <abbr title="A la variable le sumamos 5 y la metemos en la variable para mostrar y reutilizar el nuevo valor y poder seguir sumando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</button>   
 
 
-<button class="btn btn-danger" (click)="tamano = tamano - 5">
-    <i class="fa fa-minus" aria-hidden="true"></i>
-</button>
+<button type="button" name="boton2" class="btn btn-danger" (click)="tamano = tamano - 5">
+    <i class="fa fa-minus" aria-hidden="true"></i>   <abbr title="A la variable le restamos 5 y la metemos en la variable para mostrar y reutilizar el nuevo valor y poder seguir restando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</button>   
 
         </div>
     </div>
@@ -79,7 +79,24 @@
                   <pre class="card-text text-center blanco"><h3>Ts</h3></pre>
               </div>
               <div class="card-body">
-                <pre class="card-text blanco">x</pre>
+                <pre class="card-text blanco">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-ngstyle',
+  templateUrl: './ngstyle.component.html',
+  styleUrls: ['./ngstyle.component.css']
+})
+export class NgstyleComponent implements OnInit {{c}}
+
+  <b>tamano:number = 5;</b>   <abbr title="Variable que la definimos como número para poder sumar/restar el número que pongamos en el ="><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}
+</pre>
               </div>
           </div>
           <div class="card text-dark bg-warning m-3">
@@ -89,50 +106,37 @@
             <div class="card-body">
                 <pre class="card-text">{{co}}p <b>{{t}}ngStyle]="{{c}} 'font-size': '10px' }"</b>>Tamaño (No recomendable)   <abbr title="Tamaño especificado en número, en el html. 'font-size': '10px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p> 
 
-{{co}}p <b>{{t}}ngStyle]="{{c}} 'font-size': tamano + 'px' }"</b>>Tamaño + Variable   <abbr title="Tamaño especificado en la variable del Ts (tamano). 'font-size': tamano + 'px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>
+{{co}}p <b>{{t}}ngStyle]="{{c}} 'font-size': tamano + 'px' }"</b>>Tamaño con Variable   <abbr title="Tamaño especificado en la variable del Ts (tamano). 'font-size': tamano + 'px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>
 
 
 {{co}}p <b>{{t}}style.fontSize]="'10px'"</b>>Tamaño (Algo más recomendable)  <abbr title="Definimos la función dentro del style (style.fontSize). Tamaño especificado en número, en el html. '10px'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>
 
 
-{{co}}p <b>{{t}}style.fontSize.px]="tamano"</b>>Tamaño + Variable (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en la variable del Ts (tamano). tamano"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>
+{{co}}p <b>{{t}}style.fontSize.px]="tamano"</b>>Tamaño con Variable (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en la variable del Ts (tamano). tamano"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>
 
 {{co}}p <b>{{t}}style.fontSize.px]="'10'"</b>>Tamaño (Recomendado)  <abbr title="Definimos la función dentro del style (style.fontSize.px). Tamaño especificado en número, en el html. '10'"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}/p>   
 
 
-{{co}}button class="btn btn-success" <b>{{p}}click)="tamano = tamano + 5"</b>>
-    {{co}}i class="fa fa-plus" aria-hidden="true">{{co}}/i>
-{{co}}/button>
+{{co}}button type="button" name="boton1" class="btn btn-success" <b>{{p}}click)="tamano = tamano + 5"</b>>   
+    {{co}}i class="fa fa-plus" aria-hidden="true">{{co}}/i>   <abbr title="A la variable le sumamos 5 y la metemos en la variable para mostrar y reutilizar el nuevo valor y poder seguir sumando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/button>   
 
 
-{{co}}button class="btn btn-danger" <b>{{p}}click)="tamano = tamano - 5"</b>>
-    {{co}}i class="fa fa-minus" aria-hidden="true">{{co}}/i>
+{{co}}button type="button" name="boton2" class="btn btn-danger" <b>{{p}}click)="tamano = tamano - 5"</b>>   
+    {{co}}i class="fa fa-minus" aria-hidden="true">{{co}}/i>   <abbr title="A la variable le restamos 5 y la metemos en la variable para mostrar y reutilizar el nuevo valor y poder seguir restando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 {{co}}/button></pre>
             </div>
         </div>
       </div>
 
 
-
-      <div class="card-group">
-        <div class="card text-dark bg-danger m-3 border-0">
-            <div class="card-header"><h3>x</h3>
-                <pre class="card-text">
-                  
-               Poner en icono de ayuda:   tamano -> Variable de ts, es un número que mandamos y lo unimos a px, realizando el cambio de tamaño
-                </pre>
-            </div>
-        </div>
     </div>
 
+    <div class="tab-pane fade" id="pills-ngstyle0" role="tabpanel" aria-labelledby="pills-ngstyle0-tab"><app-ngclass></app-ngclass></div>
 
-    </div>
-
-    <div class="tab-pane fade" id="pills-ngstyle0" role="tabpanel" aria-labelledby="pills-ngstyle0-tab">x</div>
+    <div class="tab-pane fade" id="pills-ngstyle8" role="tabpanel" aria-labelledby="pills-ngstyle8-tab"><app-directivapersonalizada></app-directivapersonalizada></div>
 
     <div class="tab-pane fade" id="pills-ngstyle1" role="tabpanel" aria-labelledby="pills-ngstyle1-tab">x</div>
-
-    <div class="tab-pane fade" id="pills-ngstyle8" role="tabpanel" aria-labelledby="pills-ngstyle8-tab">x</div>
 
     <div class="tab-pane fade" id="pills-ngstyle4" role="tabpanel" aria-labelledby="pills-ngstyle4-tab">x</div>
 
@@ -143,38 +147,16 @@
 
     <div class="tab-pane fade" id="pills-ngstyle12" role="tabpanel" aria-labelledby="pills-ngstyle12-tab">
       
-      <div class="card-group">
-            <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>x</h3>
-                    <pre class="card-text">x</pre>
-                </div>
-              </div>
-
-            <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>x</h3>
-                    <pre class="card-text">x</pre>
-                </div>
-            </div>
-    </div>
-    
-
         <div class="card-group">
-            <div class="card text-dark bg-danger m-3 border-0">
-                <div class="card-header"><h3>x</h3>
-                    <pre class="card-text">x</pre>
+            <div class="card text-dark bg-danger m-3">
+                <!-- <div class="card-header">
+                    <pre class="card-text text-center"><h3>x</h3></pre>
+                </div> -->
+                <div class="card-body">
+                  <pre class="card-text text-white">style.<b>backgroundColor</b> = "yellow" <abbr title="backgroundColor en vez de background-color"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
-        </div>
-
-
-        <div class="card-group">
-            <div class="card text-dark bg-danger m-3 border-0">
-                <div class="card-header"><h3>x</h3>
-                    <pre class="card-text">x</pre>
-                </div>
-            </div>
-        </div>
-
+          </div>
 
     </div>
 

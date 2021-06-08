@@ -1,0 +1,53 @@
+<p>Nombre</p>
+
+<input type="text" [(ngModel)]="name">
+
+<!-- name mismo nombre que en el ts -->
+
+<button (click)="search()">Buscar</button>
+
+<img src="{{urlImage}}">
+
+<!-- (Incluir en el module -> httpClientModule -> Conexctar api
+
+FormsModule -> Para coger y soltar datos(Ambos en imports)) -->
+
+
+{{error2}}
+
+
+
+
+
+
+<!-- 
+
+
+
+COMPONENTE PADRE
+
+padre_texto = 'yo soy tu padre'
+
+<app-hijo [nombre_mensaje]='padre_texto'></app-hijo>  //el padre da el hijo pide/recibe
+
+
+COMPONENTE HIJO
+
+@Input() nombre_mensaje: string   //Obtengo la variable/dato del padre
+
+{{nombre_mensaje}}
+
+
+
+-------------------------------------------------------------------
+
+
+al reves
+
+
+padre _> Directorio superior al inferior
+
+hijo -> Directorio inferior al superior
+
+
+ -->

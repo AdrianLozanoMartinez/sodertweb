@@ -1,0 +1,146 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-directivapersonalizada-tab" data-toggle="pill" href="#v-pills-directivapersonalizada" role="tab" aria-controls="v-pills-directivapersonalizada" aria-selected="true">Entrar/Salir<br>Manda desde directiva</a>
+        <a class="nav-link" id="v-pills-directivapersonalizada0-tab" data-toggle="pill" href="#v-pills-directivapersonalizada0" role="tab" aria-controls="v-pills-directivapersonalizada0" aria-selected="true">Entrar/Salir<br>Manda desde el html</a>
+        <a class="nav-link" id="v-pills-directivapersonalizada1-tab" data-toggle="pill" href="#v-pills-directivapersonalizada1" role="tab" aria-controls="v-pills-directivapersonalizada1" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-directivapersonalizada2-tab" data-toggle="pill" href="#v-pills-directivapersonalizada2" role="tab" aria-controls="v-pills-directivapersonalizada2" aria-selected="false">x</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-directivapersonalizada" role="tabpanel" aria-labelledby="v-pills-directivapersonalizada-tab">
+            
+            <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                    <p appResaltado>   <abbr title="appResaltado -> Llama a la directiva para usarla aquí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  Al poner ratón encima se ilumina</p>
+        
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Directiva</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text">import {{c}} Directive, <b>ElementRef   <abbr title="Operar con elementos html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, HostListener</b>   <abbr title="Para estar penddiente lo que nos da el atributo html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/core';
+
+@Directive({{c}}
+  selector: '[<b>appResaltado</b>]'   <abbr title="appResaltado -> Lo ponemos en el Html para poder llamar a esta directiva en el Html y usar sus propiedades"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+})
+export class ResaltadoDirective {{c}}
+
+  constructor( <b>private VariableElementRef:ElementRef</b> ) {{c}}
+
+    // <b>VariableElementRef.nativeElement.style.backgroundColor = "yellow";</b>   <abbr title="Se queda fijo el efecto. Metemos en la variable del ElementRef el stylo del fondo amarillo. Ponemos backgroundColor en vez de background-color. Se quita la - y se pone mayúscula"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   }
+
+   <b>@HostListener('mouseenter'   <abbr title="Se activa al pasar el ratón pero se conserva el efecto, si queremos sacar el efecto debemos hacer otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>) mouseEntro(){{c}}</b>   <abbr title="Nombre a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>this.</b>VariableElementRef.nativeElement.style.backgroundColor = "yellow";
+   <b>}</b>
+
+  @HostListener('<b>mouseleave</b>'   <abbr title="Se activa al quitar el ratón pero se conserva el efecto (null -> ninguno), si queremos sacar el efecto debemos hacer otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>) <b>mouseSalio</b>(){{c}}   <abbr title="Nombre a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.VariableElementRef.nativeElement.style.backgroundColor <b>= null</b>;
+  }
+
+ // @HostListener('mouseleave'    <abbr title="Se activa al quitar el ratón pero se conserva el efecto (green -> se queda en verde), si queremos sacar el efecto debemos hacer otra cosa. mouseSalio2"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>) <b>mouseSalio2</b>(){{c}}   <abbr title="Nombre a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      //this.VariableElementRef.nativeElement.style.backgroundColor <b>= "green"</b>;
+  //}
+
+}</pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-warning m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Html</h3></pre>
+            </div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}p <b>appResaltado</b>>   <abbr title="appResaltado -> Llama a la directiva para usarla aquí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  Al poner ratón encima se ilumina{{co}}/p></pre>
+            </div>
+        </div>
+      </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-directivapersonalizada0" role="tabpanel" aria-labelledby="v-pills-directivapersonalizada0-tab">
+            
+                        <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+
+                    <p [appResaltado]="'orange'">   <abbr title="appResaltado -> Selector de la directiva (la llama), orange -> Mandamos el dato (color en este caso) al Ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  Al poner ratón encima se ilumina y se ve en consola mensaje (datosEnviarATS)</p>  
+        
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Directiva</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text">import {{c}} Directive, <b>ElementRef   <abbr title="Operar con elementos html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, HostListener</b>   <abbr title="Para estar penddiente lo que nos da el atributo html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, <abbr title="Obtener dato del Html"><b>Input</b></abbr> } from '@angular/core';
+
+@Directive({{c}}
+  selector: '[<b>appResaltado</b>]'   <abbr title="appResaltado -> Lo ponemos en el Html para poder llamar a esta directiva en el Html y usar sus propiedades"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+})
+export class ResaltadoDirective {{c}}
+
+  constructor( private VariableElementRef:ElementRef ) {{c}} }
+
+<b>@Input("appResaltado") variableLocal:string;</b>   <abbr title="Le decimos que esa variable (appResaltado) viene de fuera y la metemos en una variable local (variableLocal). appResaltado proviene del selector de arriba que define la directiva"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+  <b>@HostListener('mouseenter') mouseEntro2(){{c}}</b>
+      //console.log( this.variableLocal );   <abbr title="Nos muestra en la consola el string que enviamos desde el html (orange -> color/otro dato)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>this.resaltar( this.variableLocal || 'yellow' );</b>   <abbr title="Al pasar (mouseenter) el ratón encima llama a la variable/función de abajo cogiendo la variable, sino obtiene variable saldrá amarillo, que es el valor por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>}
+
+    @HostListener('mouseleave') mouseSalio2(){{c}}</b>
+      <b>this.resaltar( null );</b>   <abbr title="Al quitar (mouseleave) el ratón de encima llama al valor null (nulo) para quitar la propiedad"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>}
+
+
+  private resaltar( colorRecibido:string ){{c}}</b>
+    <b>this.VariableElementRef.nativeElement.style.backgroundColor = colorRecibido;</b>   <abbr title="Aplica a la variable (VariableElementRef) el efecto del style cuando es llamado la función (resaltar())"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>}</b>
+
+}</pre>
+              </div>
+          </div>
+          <div class="card text-dark bg-warning m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Html</h3></pre>
+            </div>
+            <div class="card-body">
+                <pre class="card-text">{{co}}p {{t}}appResaltado]="'orange'">   <abbr title="appResaltado -> Selector de la directiva (la llama), orange -> Mandamos el dato (color en este caso) al Ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  Al poner ratón encima se ilumina y se ve en consola mensaje (datosEnviarATS){{co}}/p>  </pre>
+            </div>
+        </div>
+      </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-directivapersonalizada1" role="tabpanel" aria-labelledby="v-pills-directivapersonalizada1-tab">x</div>
+
+        <div class="tab-pane fade" id="v-pills-directivapersonalizada2" role="tabpanel" aria-labelledby="v-pills-directivapersonalizada2-tab">x</div>
+  </div>
+
+</div>
