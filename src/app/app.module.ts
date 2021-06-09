@@ -94,7 +94,6 @@ import { ArreglosdinamicComponent } from './paginas/programacion/angular/formula
 import { DetectarcambiosComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/detectarcambios/detectarcambios.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
-import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
 import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
 import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
 import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
@@ -249,6 +248,8 @@ import { NgswitchComponent } from './paginas/programacion/angular/directivas/ngs
 import { PadreHijoHijasComponent } from './paginas/programacion/angular/padre-hijo-hijas/padre-hijo-hijas.component';
 import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
 import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
+import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
+import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
 
 
 
@@ -342,7 +343,6 @@ import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-
     DetectarcambiosComponent,
     HostingangularComponent,
     LoginangularComponent,
-    ServiciounovariasComponent,
     ExtensionesComponent,
     FontsgoogleprincipalComponent,
     FuncionesangularComponent,
@@ -463,7 +463,9 @@ import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-
     NgswitchComponent,
     PadreHijoHijasComponent,
     UsuarioHijaComponent,
-    UsuarioNuevoHijaComponent
+    UsuarioNuevoHijaComponent,
+    UsuarioEditarHijaComponent,
+    UsuarioDetalleHijaComponent
   ],
   imports: [
     //Por defecto

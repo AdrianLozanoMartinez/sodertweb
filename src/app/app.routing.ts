@@ -64,7 +64,6 @@ import { ReactivosangularComponent } from './paginas/programacion/angular/formul
 import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
-import { ServiciounovariasComponent } from './paginas/programacion/angular/serviciounovarias/serviciounovarias.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
 import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
@@ -203,7 +202,6 @@ export const appRoutes: Routes = [
   { path: 'reactivosangular', component: ReactivosangularComponent},
   { path: 'hostingangular', component: HostingangularComponent},
   { path: 'loginangular', component: LoginangularComponent},
-  { path: 'serviciounovarias', component: ServiciounovariasComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},
   { path: 'buscador/:termino_buscar', component: BuscadorComponent},
   { path: 'buscador2/:termino_buscar', component: BuscadorComponent},

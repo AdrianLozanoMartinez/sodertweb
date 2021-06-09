@@ -11,5 +11,10 @@ export class PadreHijoHijasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  //Html
+  c=`{`;
+  co=`<`;
+  f=`*`;
+  p=`(`;
+  t=`[`;
 }

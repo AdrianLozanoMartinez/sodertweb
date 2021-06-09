@@ -1,17 +1,21 @@
-<div class="row">
-    <div class="col-2">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-serviceone0-tab" data-toggle="pill" href="#v-pills-serviceone0" role="tab" aria-controls="v-pills-serviceone0" aria-selected="true">Variable/Interface</a>
-        <a class="nav-link" id="v-pills-serviceone1-tab" data-toggle="pill" href="#v-pills-serviceone1" role="tab" aria-controls="v-pills-serviceone1" aria-selected="false">Sacar Todos</a>
-        <a class="nav-link" id="v-pills-serviceone2-tab" data-toggle="pill" href="#v-pills-serviceone2" role="tab" aria-controls="v-pills-serviceone2" aria-selected="false">Sacar Uno</a>
-      </div>
-    </div>
-    <div class="col-10">
-      <div class="tab-content" id="v-pills-tabContent">
 
-        <div class="tab-pane fade show active" id="v-pills-serviceone0" role="tabpanel" aria-labelledby="v-pills-serviceone0-tab">
-          
-          <div class="card-group">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+      <a class="nav-link" id="pills-serviceone-tab" data-toggle="pill" href="#pills-serviceone" role="tab" aria-controls="pills-serviceone" aria-selected="true" style="color: black;">Variable/Interface</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-serviceone0-tab" data-toggle="pill" href="#pills-serviceone0" role="tab" aria-controls="pills-serviceone0" aria-selected="false" style="color: black;">Sacar Todos</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-serviceone1-tab" data-toggle="pill" href="#pills-serviceone1" role="tab" aria-controls="pills-serviceone1" aria-selected="false" style="color: black;">Sacar Uno</a>
+  </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+  <div class="tab-pane fade" id="pills-serviceone" role="tabpanel" aria-labelledby="pills-serviceone-tab">
+    
+    <div class="card-group">
             <div class="card text-dark bg-danger m-3 border-0">
                 <div class="card-header"><h3>Servicio</h3>
                     <pre class="card-text">import {{c}} Injectable } from '@angular/core';
@@ -54,11 +58,11 @@ export class ServiciodepruebaService {{c}}
             </div>
         </div>
 
-        </div>
+  </div>
 
-        <div class="tab-pane fade" id="v-pills-serviceone1" role="tabpanel" aria-labelledby="v-pills-serviceone1-tab">
-          
-          <div class="card" style="width: 18rem;" *ngFor="let variable_html of nombre_variable_ts, let i = index">
+  <div class="tab-pane fade" id="pills-serviceone0" role="tabpanel" aria-labelledby="pills-serviceone0-tab">
+    
+    <div class="card" style="width: 18rem;" *ngFor="let variable_html of nombre_variable_ts, let i = index">
             <!-- <img src="{{variable_html.DireccionImagen}}"class="card-img-top" alt="...">  NO RECOMENDABLE-->
             <img [src]="variable_html.DireccionImagen" class="card-img-top" [alt]="variable_html.VariableSecundaria1">
             <div class="card-body">
@@ -166,12 +170,11 @@ export class ServiceoneComponent implements OnInit {{c}}
               </div>
           </div>
 
+  </div>
 
-        </div>
-
-        <div class="tab-pane fade" id="v-pills-serviceone2" role="tabpanel" aria-labelledby="v-pills-serviceone2-tab">
-
-          <div *ngFor="let variable_html of nombre_variable_ts, let i = index">
+  <div class="tab-pane fade" id="pills-serviceone1" role="tabpanel" aria-labelledby="pills-serviceone1-tab">
+    
+    <div *ngFor="let variable_html of nombre_variable_ts, let i = index">
               <button (click)="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-danger btn-block">Ir a Componente individual</button>
             </div>
           </div>
@@ -330,9 +333,6 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</p
         }</b></pre>
                 </div>
             </div>
-        </div></div>
+        </div>
 
   </div>
-
-
-  

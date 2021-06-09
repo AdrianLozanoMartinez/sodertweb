@@ -1,1 +1,62 @@
-<p>padre-hijo-hijas works!</p>
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-padrehijohija-tab" data-toggle="pill" href="#v-pills-padrehijohija" role="tab" aria-controls="v-pills-padrehijohija" aria-selected="true">Padre-Hijo -> Una misma página<br><small>(Reordenar-por eso dejo varios vacío)</small></a>
+        <a class="nav-link" id="v-pills-padrehijohija0-tab" data-toggle="pill" href="#v-pills-padrehijohija0" role="tab" aria-controls="v-pills-padrehijohija0" aria-selected="true">Padre-Hijo -> Diferentes páginas<br><small>(Reordenar-por eso dejo varios vacío)</small></a>
+        <a class="nav-link" id="v-pills-padrehijohija1-tab" data-toggle="pill" href="#v-pills-padrehijohija1" role="tab" aria-controls="v-pills-padrehijohija1" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-padrehijohija2-tab" data-toggle="pill" href="#v-pills-padrehijohija2" role="tab" aria-controls="v-pills-padrehijohija2" aria-selected="false">x</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade" id="v-pills-padrehijohija" role="tabpanel" aria-labelledby="v-pills-padrehijohija-tab"><hr><app-serviceone></app-serviceone></div>
+
+        <div class="tab-pane fade" id="v-pills-padrehijohija0" role="tabpanel" aria-labelledby="v-pills-padrehijohija0-tab"><hr><app-serviciopadreehijo></app-serviciopadreehijo></div>
+
+        <div class="tab-pane fade" id="v-pills-padrehijohija1" role="tabpanel" aria-labelledby="v-pills-padrehijohija1-tab">x</div>
+
+        <div class="tab-pane fade" id="v-pills-padrehijohija2" role="tabpanel" aria-labelledby="v-pills-padrehijohija2-tab">x</div>
+  </div>
+
+</div>
+
+
+<!-- ENTRA EN MOSTRAR -> HIJO-PADRE, PONER LO NUEVO Y EXPLICAR MEJOR CON OTRO EJEMPLO (INPU/OUTPUT Y VIEWCHIELD) -->
+
+
+
+<!-- 
+
+
+
+COMPONENTE PADRE
+
+padre_texto = 'yo soy tu padre'
+
+<app-hijo [nombre_mensaje]='padre_texto'></app-hijo>  //el padre da el hijo pide/recibe
+
+
+COMPONENTE HIJO
+
+@Input() nombre_mensaje: string   //Obtengo la variable/dato del padre
+
+{{nombre_mensaje}}
+
+
+
+-------------------------------------------------------------------
+
+
+al reves
+
+
+padre _> Directorio superior al inferior
+
+hijo -> Directorio inferior al superior
+
+
+ -->
+
