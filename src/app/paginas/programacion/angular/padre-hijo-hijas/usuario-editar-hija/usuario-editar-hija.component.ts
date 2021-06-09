@@ -11,5 +11,10 @@ export class UsuarioEditarHijaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ //Html
+ c=`{`;
+ co=`<`;
+ f=`*`;
+ p=`(`;
+ t=`[`;
 }

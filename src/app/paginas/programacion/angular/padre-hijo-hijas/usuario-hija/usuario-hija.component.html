@@ -1,1 +1,24 @@
-<p>usuario-hija works!</p>
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+            <button class="btn btn-danger m-2" [routerLink]="['/angular']" style="text-align: left;">Atras</button>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['nuevoH']">Nuevo</button>
+                <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['editarH']">Editar</button>
+                <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['detalleH']">Detalle</button>
+            </div>
+
+            <router-outlet></router-outlet>
+            
+        </div>
+    </div>
+</div>
+
+        
+
+      

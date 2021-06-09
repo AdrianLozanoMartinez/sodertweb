@@ -69,6 +69,10 @@ import { BuscadorComponent } from './paginas/programacion/angular/buscador/busca
 import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
 import { Tarjeta2Component } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta2/tarjeta2.component';
 import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
+import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
+import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
+import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
+import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -140,6 +144,9 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 
+//Routes/routing específico de usuario
+import { USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';
+
 
 export const appRoutes: Routes = [
   //Componentes - Especiales
@@ -208,6 +215,7 @@ export const appRoutes: Routes = [
   { path: 'tarjeta', component: TarjetaComponent},
   { path: 'tarjeta2', component: Tarjeta2Component},
   { path: 'artist/:id', component: ArtistaComponent },
+  { path: 'usuarioH/:id', component: UsuarioHijaComponent, children: USUARIO_ROUTES},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

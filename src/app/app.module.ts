@@ -113,7 +113,20 @@ import { SearchComponent } from './paginas/programacion/angular/httpspotify/sear
 import { ArtistaComponent } from './paginas/programacion/angular/httpspotify/artista/artista.component';
 import { PeticionhttpComponent } from './paginas/programacion/angular/httpspotify/peticionhttp/peticionhttp.component';
 import { MostrarhttpspotifyComponent } from './paginas/programacion/angular/httpspotify/mostrarhttpspotify/mostrarhttpspotify.component';
+import { NgstyleComponent } from './paginas/programacion/angular/directivas/ngstyle/ngstyle.component';
+import { NgclassComponent } from './paginas/programacion/angular/directivas/ngclass/ngclass.component';
+import { ResaltadoDirective } from './paginas/programacion/angular/directivas/personalizada/resaltado.directive';
+import { DirectivapersonalizadaComponent } from './paginas/programacion/angular/directivas/personalizada/directivapersonalizada/directivapersonalizada.component';
+import { ApirestangularComponent } from './paginas/programacion/angular/apirestangular/apirestangular.component';
+import { PokemonangularComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonangular.component';
+import { NgswitchComponent } from './paginas/programacion/angular/directivas/ngswitch/ngswitch.component';
+import { PadreHijoHijasComponent } from './paginas/programacion/angular/padre-hijo-hijas/padre-hijo-hijas.component';
+import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
+import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
+import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
+import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
 
+//Programación - Angular - PipeLenguaje
 import { registerLocaleData } from '@angular/common';
 
 import nombre_pipe_espanol from '@angular/common/locales/es';
@@ -238,18 +251,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
-import { NgstyleComponent } from './paginas/programacion/angular/directivas/ngstyle/ngstyle.component';
-import { NgclassComponent } from './paginas/programacion/angular/directivas/ngclass/ngclass.component';
-import { ResaltadoDirective } from './paginas/programacion/angular/directivas/personalizada/resaltado.directive';
-import { DirectivapersonalizadaComponent } from './paginas/programacion/angular/directivas/personalizada/directivapersonalizada/directivapersonalizada.component';
-import { ApirestangularComponent } from './paginas/programacion/angular/apirestangular/apirestangular.component';
-import { PokemonangularComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonangular.component';
-import { NgswitchComponent } from './paginas/programacion/angular/directivas/ngswitch/ngswitch.component';
-import { PadreHijoHijasComponent } from './paginas/programacion/angular/padre-hijo-hijas/padre-hijo-hijas.component';
-import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
-import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
-import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
-import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
+
 
 
 
@@ -361,6 +363,18 @@ import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padr
     ArtistaComponent,
     PeticionhttpComponent,
     MostrarhttpspotifyComponent,
+    NgstyleComponent,
+    NgclassComponent,
+    ResaltadoDirective,
+    DirectivapersonalizadaComponent,
+    ApirestangularComponent,
+    PokemonangularComponent,
+    NgswitchComponent,
+    PadreHijoHijasComponent,
+    UsuarioHijaComponent,
+    UsuarioNuevoHijaComponent,
+    UsuarioEditarHijaComponent,
+    UsuarioDetalleHijaComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -453,19 +467,7 @@ import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padr
     PipeDomSeguroPipe,
     //Librerias
     JqueryComponent,
-    TetherComponent,
-    NgstyleComponent,
-    NgclassComponent,
-    ResaltadoDirective,
-    DirectivapersonalizadaComponent,
-    ApirestangularComponent,
-    PokemonangularComponent,
-    NgswitchComponent,
-    PadreHijoHijasComponent,
-    UsuarioHijaComponent,
-    UsuarioNuevoHijaComponent,
-    UsuarioEditarHijaComponent,
-    UsuarioDetalleHijaComponent
+    TetherComponent
   ],
   imports: [
     //Por defecto
