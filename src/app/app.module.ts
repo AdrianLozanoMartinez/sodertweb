@@ -123,13 +123,16 @@ registerLocaleData(nombre_pipe_espanol);
 import nombre_pipe_frances from '@angular/common/locales/fr';
 registerLocaleData(nombre_pipe_frances);
 
-//Python
-import { PythonComponent } from './paginas/programacion/python/python.component';
 //Programación - Angular - Servicios/Formularios/Directivas/etc
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  //Formulario Template, Reactivo
-import { HttpClientModule, HttpClient } from '@angular/common/http';  //Servicio API Países (Json)
+import { HttpClientModule } from '@angular/common/http';  //Servicio API Países (Json)
+
+//Programación - Python
+import { PythonComponent } from './paginas/programacion/python/python.component';
+
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
+
 //Programacion - Firebase
 import { HostingComponent } from './paginas/programacion/firebase/hosting/hosting.component';
 import { FirebaseComponent } from './paginas/programacion/firebase/firebase.component';
@@ -242,6 +245,10 @@ import { ResaltadoDirective } from './paginas/programacion/angular/directivas/pe
 import { DirectivapersonalizadaComponent } from './paginas/programacion/angular/directivas/personalizada/directivapersonalizada/directivapersonalizada.component';
 import { ApirestangularComponent } from './paginas/programacion/angular/apirestangular/apirestangular.component';
 import { PokemonangularComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonangular.component';
+import { NgswitchComponent } from './paginas/programacion/angular/directivas/ngswitch/ngswitch.component';
+import { PadreHijoHijasComponent } from './paginas/programacion/angular/padre-hijo-hijas/padre-hijo-hijas.component';
+import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
+import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
 
 
 
@@ -452,7 +459,11 @@ import { PokemonangularComponent } from './paginas/programacion/angular/apiresta
     ResaltadoDirective,
     DirectivapersonalizadaComponent,
     ApirestangularComponent,
-    PokemonangularComponent
+    PokemonangularComponent,
+    NgswitchComponent,
+    PadreHijoHijasComponent,
+    UsuarioHijaComponent,
+    UsuarioNuevoHijaComponent
   ],
   imports: [
     //Por defecto

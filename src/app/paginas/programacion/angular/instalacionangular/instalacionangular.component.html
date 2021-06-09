@@ -180,7 +180,7 @@
                     <pre class="card-text">//Conexión con app.module.ts - Enlazar páginas - Relacionado al final de este archivo
 <b>import {{c}} ModuleWithProviders } from '@angular/core';</b>
 
-//Conexión con app.module.ts - Enlazar páginas - Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º
+//Conexión con app.module.ts - Enlazar páginas   <abbr title="Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} Routes, RouterModule } from '@angular/router';</b>
 
 //Componentes - Automático
@@ -192,34 +192,31 @@ import {{c}} ErrorComponent } from './componentes/error/error.component';
 import {{c}} PieComponent } from './componentes/pie/pie.component';
 import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-
-//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
-
-<b>export const appRoutes: Routes = [</b>                                  //appRoutes: Relacionado con Routes especificado aquí y en el import
+<b>export <abbr title="Dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> const appRoutes: Routes = [</b>   <abbr title="xxx"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>//appRoutes: Relacionado con Routes especificado aquí y en el import
   //Componentes - Páginas añadir después de crearlas
-  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
-  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
-  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
-  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  <b>{{c}} path: '', component: HomeComponent },</b>   <abbr title="Siempre va a HomeComponent cuando da errores los botones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>             
+  {{c}} path: 'home', component: HomeComponent},   <abbr title="Va al HomeComponent, se usa en enlaces (home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'pie', component: PieComponent},   <abbr title="Va al PieComponent, se usa en enlaces (pie)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'cabecera', component: CabeceraComponent},   <abbr title="Va al CabeceraComponent, se usa en enlaces (cabecera)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Especiales
   <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
-  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: ErrorComponent},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al ErrorComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
-  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
-  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: HomeComponent } </b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 ];
 
 
-//<b>Conexión con app.module.ts - Enlazar páginas</b>
-<b>export const appRoutingProviders: any[] = [];</b>                                    //appRoutingProviders: Relacionado en module.ts llamado con import
-<b>export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</b>    //routing: Relacionado en module.ts llamado con import / ModuleWithProviders y RouterModule: importado arriba / appRoutes: Usado en export 1º de arriba</pre>
+//<b>Conexión con app.module.ts - Enlazar páginas</b> 
+<b>export const appRoutingProviders: any[] = [];</b>   <abbr title="appRoutingProviders: Relacionado en module.ts llamado con import"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</b>   <abbr title="routing: Relacionado en module.ts llamado con import / ModuleWithProviders y RouterModule: importado arriba / appRoutes: Usado en export 1º de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
                 </div>
             </div>
             <div class="card text-dark bg-danger m-3">
                 <div class="card-body"><h4>Opción B <small>(Menos usado - app.routes.ts)</small></h4>
-                    <pre class="card-text">//Conexión con app.module.ts - Enlazar páginas - Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º
+                    <pre class="card-text">//Conexión con app.module.ts <abbr title="Routes: Relacionado en el 1º export  /  RouterModule: Relacionado en el último export (3º) que se relaciona con el module mediante (appRoutes) definido también en el export 1º"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} Routes, RouterModule } from '@angular/router';</b>
 
 //Componentes - Automático
@@ -231,28 +228,28 @@ import {{c}} ErrorComponent } from './componentes/error/error.component';
 import {{c}} PieComponent } from './componentes/pie/pie.component';
 import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-
-//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
-
-<b>export const APP_ROUTES: Routes = [</b>                                  //appRoutes: Relacionado con Routes especificado aquí y en el import
+//<b>export <abbr title="Dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>const APP_ROUTES: Routes = [</b>   <abbr title="Si usamos useHash -> appRoutes: Relacionado con Routes especificado aquí y en el import"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>export <abbr title="Dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>const APP_ROUTES: Routes = [</b>   <abbr title="Si no usamos useHash -> appRoutes: Relacionado con Routes especificado aquí y en el import"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas
-  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
-  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
-  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
-  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  <b>{{c}} path: '', component: HomeComponent },</b>   <abbr title="Siempre va a HomeComponent cuando da errores los botones  "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>             
+  {{c}} path: 'home', component: HomeComponent},   <abbr title="Va al HomeComponent, se usa en enlaces (home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'pie', component: PieComponent},   <abbr title="Va al PieComponent, se usa en enlaces (pie)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'cabecera', component: CabeceraComponent},   <abbr title="Va al CabeceraComponent, se usa en enlaces (cabecera)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Especiales
   <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
-  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: ErrorComponent},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al ErrorComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
-  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent (home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
-  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: HomeComponent } </b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 ];
 
 
 //<b>Conexión con app.module.ts - Enlazar páginas</b>                                   
-<b>export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES, {{c}} useHash:true });</b>    //APP_ROUTING: Relacionado en module.ts llamado con import / RouterModule: importado arriba / APP_ROUTES: Usado en export 1º de arriba</pre>
+//<b>export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES, {{c}} useHash:true });</b>   <abbr title="Usamos useHash. APP_ROUTING: Relacionado en module.ts llamado con import / RouterModule: importado arriba / APP_ROUTES: Usado en export 1º de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</b>    <abbr title="No usamos useHash. APP_ROUTING: Relacionado en module.ts llamado con import / RouterModule: importado arriba / APP_ROUTES: Usado en export 1º de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</pre>
                 </div>
             </div>
         </div>
@@ -275,23 +272,20 @@ import {{c}} ErrorComponent } from './componentes/error/error.component';
 import {{c}} PieComponent } from './componentes/pie/pie.component';
 import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-
-//<u>export -> dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)</u>
-
-<b>export const ROUTES: Routes = [</b>                                  //ROUTES relacionado con module.ts
+<b>export <abbr title="Dentro de '' ponemos como vamos a llamar para enlazar con botones y enlaces, NombreComponent ponemos el componente creado y llamado arriba (import)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> const ROUTES: Routes = [</b>                                  //ROUTES relacionado con module.ts
   //Componentes - Páginas añadir después de crearlas
-  <b>{{c}} path: '', component: HomeComponent },</b>                        //Siempre va a <b>HomeComponent cuando da errores</b> los botones             
-  {{c}} path: 'home', component: HomeComponent},                     //Va al HomeComponent, se usa en enlaces (home)
-  {{c}} path: 'pie', component: PieComponent},                       //Va al PieComponent, se usa en enlaces (pie)
-  {{c}} path: 'cabecera', component: CabeceraComponent},             //Va al CabeceraComponent, se usa en enlaces (cabecera)
+  <b>{{c}} path: '', component: HomeComponent },</b>   <abbr title="Siempre va a HomeComponent cuando da errores los botones  "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>             
+  {{c}} path: 'home', component: HomeComponent},   <abbr title="Va al HomeComponent, se usa en enlaces (home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'pie', component: PieComponent},   <abbr title="Va al PieComponent, se usa en enlaces (pie)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: 'cabecera', component: CabeceraComponent},   <abbr title="Va al CabeceraComponent, se usa en enlaces (cabecera)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Especiales
   <b>{{c}} path: 'appcomponente', component: AppComponent },</b>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 1
-  <b>{{c}} path: '**', component: ErrorComponent},</b>                      //<b>Si introducimos mal en la barra de direcciones</b> nos <b>va</b> al <b>ErrorComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: ErrorComponent},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al ErrorComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 2
-  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>           //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> (<b>home</b>)
+  <b>{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},</b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent (home)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   //Componentes - Páginas añadir después de crearlas - Componentes Error - Opción 3
-  <b>{{c}} path: '**', component: HomeComponent } </b>                      //Si introducimos mal en la barra de direcciones nos va al <b>HomeComponent</b> <b>(**)</b>
+  <b>{{c}} path: '**', component: HomeComponent } </b>   <abbr title="Si introducimos mal en la barra de direcciones nos va al HomeComponent (**)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 ];</pre>
                 </div>
             </div>

@@ -1,0 +1,81 @@
+ <div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+            <div [ngSwitch]="alertaaaa">   <abbr title="ngSwitch]=alertaaaa -> Variable (alertaaaa) o evaluación, que se encuentra en el TS"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                <div *ngSwitchCase="'success'">success</div>   <abbr title="Expresión, si sale ese nombre se muestra lo que pongamos dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                <div *ngSwitchCase="'info'">info</div>
+                <div *ngSwitchCase="'warning'">warning</div>
+                <div *ngSwitchDefault>danger</div>   <abbr title="*ngSwitchDefault -> Si no es ninguno sale por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            </div>
+
+                <button type="button" (click)="alertaaaa='success'" class="btn btn-danger">Cambiar color</button>   <abbr title="Si la variable (alertaaaa) es igual a lo que introducimos (success) se cambia de color/letra... de lo que pongamos en las opciones (ngSwitchCase)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+               <div [ngSwitch]="alertaaaa">
+                    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">Success: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón</div>
+
+                    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">Info: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón</div>
+                    
+                    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">Warning: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón</div>
+                    
+                    <div *ngSwitchDefault class="alert alert-danger" role="alert">Danger - Default: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón</div>
+               </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+@Component({{c}}
+  selector: 'app-ngswitch',
+  templateUrl: './ngswitch.component.html',
+  styleUrls: ['./ngswitch.component.css']
+})
+export class NgswitchComponent implements OnInit {{c}}
+
+  <b>alertaaaa:string = "warning";</b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}div <b>{{t}}ngSwitch]="alertaaaa"</b>>   <abbr title="ngSwitch]=alertaaaa -> Variable (alertaaaa) o evaluación, que se encuentra en el TS"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}div <b>{{f}}ngSwitchCase="'success'"</b>>success{{co}}/div>   <abbr title="Expresión, si sale ese nombre se muestra lo que pongamos dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}div <b>{{f}}ngSwitchCase="'info'"</b>>info{{co}}/div>
+    {{co}}div <b>{{f}}ngSwitchCase="'warning'"</b>>warning{{co}}/div>
+    {{co}}div <b>{{f}}ngSwitchDefault</b>>danger{{co}}/div>   <abbr title="*ngSwitchDefault -> Si no es ninguno sale por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/div>
+
+{{co}}button type="button" {{p}}click)="alertaaaa='success'" class="btn btn-danger">Cambiar color{{co}}/button>   <abbr title="Si la variable (alertaaaa) es igual a lo que introducimos (success) se cambia de color/letra... de lo que pongamos en las opciones (ngSwitchCase)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+{{co}}<b>div</b> <b>{{t}}ngSwitch]="alertaaaa"</b>>
+    {{co}}div <b>{{f}}ngSwitchCase="'success'"</b> class="alert alert-success" role="alert">Success: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón{{co}}/div>
+
+    {{co}}div <b>{{f}}ngSwitchCase="'info'"</b> class="alert alert-info" role="alert">Info: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón{{co}}/div>
+    
+    {{co}}div <b>{{f}}ngSwitchCase="'warning'"</b> class="alert alert-warning" role="alert">Warning: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón{{co}}/div>
+    
+    {{co}}div <b>{{f}}ngSwitchDefault</b> class="alert alert-danger" role="alert">Danger - Default: Expresión, si sale ese nombre se muestra lo que pongamos dentro en este caso esta alerta con el color elegido en la variable del Ts al pulsar el botón{{co}}/div>
+{{co}}/<b>div</b>></pre>
+      </div>
+  </div>
+</div>

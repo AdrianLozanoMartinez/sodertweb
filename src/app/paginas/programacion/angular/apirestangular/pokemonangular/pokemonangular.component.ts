@@ -8,12 +8,12 @@ import { PokemonService } from './service/pokemon.service';
 })
 export class PokemonangularComponent implements OnInit {
 
-  name: string
+  nombreDelPokemon: string
 
   urlImage: string
 
-  // error2: string;
-  error2: boolean = false;
+  error2: string;
+  error3: boolean = false;
 
   constructor( private pokemonService:PokemonService) { }
 
@@ -22,7 +22,7 @@ export class PokemonangularComponent implements OnInit {
 
   search(){
 
-    this.pokemonService.getPokemon(this.name).subscribe(
+    this.pokemonService.getPokemon(this.nombreDelPokemon).subscribe(
       
       (respuesta:any) => {
 
@@ -35,11 +35,19 @@ export class PokemonangularComponent implements OnInit {
     error => {
       console.log(error.error);
 
-      this.error2 = true;
+      this.error3 = true;
 
-      // this.error2 = error.error
+      this.error2 = error.error
     }
     )
   }
+
+
+  //Html
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
   
 }

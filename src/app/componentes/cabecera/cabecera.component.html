@@ -47,29 +47,6 @@
             <a class="dropdown-item text-light" [routerLink]="['/c']" routerLinkActive="active">C#</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Librería
-          </a>
-          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']" routerLinkActive="active">Bootstrap</a>
-            <a class="dropdown-item text-light" [routerLink]="['/jquery']" routerLinkActive="active">Jquery</a>
-            <a class="dropdown-item text-light" [routerLink]="['/tether']" routerLinkActive="active">Tether</a>
-            <a class="dropdown-item text-light" [routerLink]="['/fontsgoogle']" routerLinkActive="active">Google Fonts (+Icons)</a>
-            <a class="dropdown-item text-light" [routerLink]="['/fontawesome']" routerLinkActive="active">Fontawesome</a>
-            <a class="dropdown-item text-light" [routerLink]="['/sweepalert2']" routerLinkActive="active">Sweepalert</a>
-            <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Framework
-          </a>
-          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text-light" [routerLink]="['/angular']" routerLinkActive="active">Angular</a>
-            <a class="dropdown-item text-light" [routerLink]="['/ionic']" routerLinkActive="active">Ionic</a>
-          </div>
-        </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Otros
@@ -84,9 +61,34 @@
           </div>
         </li> -->
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Framework
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-light" [routerLink]="['/angular']" routerLinkActive="active">Angular</a>
+            <a class="dropdown-item text-light" [routerLink]="['/ionic']" routerLinkActive="active">Ionic</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Librería
+          </a>
+          <div class="dropdown-menu estrellas" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-light" [routerLink]="['/bootstrap']" routerLinkActive="active">Bootstrap</a>
+            <a class="dropdown-item text-light" [routerLink]="['/jquery']" routerLinkActive="active">Jquery</a>
+            <a class="dropdown-item text-light" [routerLink]="['/tether']" routerLinkActive="active">Tether</a>
+            <a class="dropdown-item text-light" [routerLink]="['/fontsgoogle']" routerLinkActive="active">Google Fonts (+Icons)</a>
+            <a class="dropdown-item text-light" [routerLink]="['/fontawesome']" routerLinkActive="active">Fontawesome</a>
+            <a class="dropdown-item text-light" [routerLink]="['/sweepalert2']" routerLinkActive="active">Sweepalert</a>
+            <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
+          </div>
+        </li>
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" (keyup.enter)="funcion_Buscar(buscartexto.value)" #buscartexto>
         <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="funcion_Buscar(buscartexto.value)">Buscar</button>
-    </form>
+    </form> -->
     </div>
   </nav>

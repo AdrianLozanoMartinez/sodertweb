@@ -1,53 +1,231 @@
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-dpokemonangular-tab" data-toggle="pill" href="#v-pills-dpokemonangular" role="tab" aria-controls="v-pills-dpokemonangular" aria-selected="true">Web</a>
+        <a class="nav-link" id="v-pills-dpokemonangular0-tab" data-toggle="pill" href="#v-pills-dpokemonangular0" role="tab" aria-controls="v-pills-dpokemonangular0" aria-selected="true">Búsqueda</a>
+        <a class="nav-link" id="v-pills-dpokemonangular1-tab" data-toggle="pill" href="#v-pills-dpokemonangular1" role="tab" aria-controls="v-pills-dpokemonangular1" aria-selected="false">Mostrar Todo (PENDIENTE)</a>
+        <a class="nav-link" id="v-pills-dpokemonangular2-tab" data-toggle="pill" href="#v-pills-dpokemonangular2" role="tab" aria-controls="v-pills-dpokemonangular2" aria-selected="false">Mostrar Uno (PENDIENTE)</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade show active" id="v-pills-dpokemonangular" role="tabpanel" aria-labelledby="v-pills-dpokemonangular-tab">
+
+            <div class="card-group">
+                <div class="card text-dark m-3 bg-danger">
+                    <div class="card-body ">
+                        <pre class="card-text blanco"><a href="https://pokeapi.co/"><u>Web</u></a></pre></div>
+                </div>
+            </div>
+            
+      </div>
+
+        <div class="tab-pane fade" id="v-pills-dpokemonangular0" role="tabpanel" aria-labelledby="v-pills-dpokemonangular0-tab">
+
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
 <p>Nombre</p>
 
-<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="nombreDelPokemon">   <abbr title="nombreDelPokemon mismo nombre que en el Ts. [( Recibe y envía )]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<button (click)="search()">Buscar</button>   <abbr title="Al hacer click llama a la función del Ts -> Servicio -> API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-<!-- name mismo nombre que en el ts -->
+<img src="{{urlImage}}">   <abbr title="Mostramos la imagen obtenida"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-<button (click)="search()">Buscar</button>
+<br>
+Error obtenido con variable string: {{error2}}
+<br>
+Error obtenido con variable booblean: {{error3}} <abbr title="True si es error, False sino lo es"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-<img src="{{urlImage}}">
+        </div>
+    </div>
+</div>
 
-<!-- (Incluir en el module -> httpClientModule -> Conexctar api
+<div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center blanco"><h3>Module.ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+  import {{c}} NgModule } from '@angular/core';
 
-FormsModule -> Para coger y soltar datos(Ambos en imports)) -->
+  import {{c}} routing, appRoutingProviders } from './app.routing';
+  
+  import {{c}} AppComponent } from './app.component';
+
+  import {{c}} HomeComponent } from './paginas/home/home.component';
+  import {{c}} ErrorComponent } from './componentes/error/error.component';
+  import {{c}} PieComponent } from './componentes/pie/pie.component';
+  import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+  <b>import {{c}} FormsModule } from '@angular/forms';</b>  <abbr title="Para coger y soltar datos. Formulario Template"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>import {{c}} HttpClientModule } from '@angular/common/http'; </b>   <abbr title="Para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+  @NgModule({{c}}
+      declarations: [
+        AppComponent,
+        HomeComponent,
+        ErrorComponent,
+        PieComponent,
+        CabeceraComponent
+      ],
+      imports: [
+        BrowserModule,
+        routing<b>,
+        <b>FormsModule,</b>   <abbr title="Para coger y soltar datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        HttpClientModule</b>   <abbr title="Para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      ],
+       providers: [
+        appRoutingProviders
+       ],
+        bootstrap: [AppComponent]
+   })
+    export class AppModule {{c}} }</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-danger m-3">
+      <div class="card-header">
+          <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} HttpClient   <abbr title="Usado para llamar a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>} from '@angular/common/http</b>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class PokemonService {{c}}
+
+  <b>private url <abbr title="Metemos la dirección estática de la API en una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>: string = "https://pokeapi.co/api/v2/pokemo</b>
+
+  constructor( <b>private http   <abbr title="Metemos en una variable para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> : HttpClient</b> ) {{c}} }
 
 
-{{error2}}
+  <b>getPokemon( <abbr title="Creamos función para llamar a la API especificando el nombre (name) u otro atributo que queremos buscar en ella"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> name:string ){{c}}</b>
+    // return this.http.get(this.url + name)  //Antigua forma
+
+    <b>return this.http.get <abbr title="Coge la dirección (API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> (`${{c}}this.url}/${{c}}name}`)  <abbr title="direcciónESTÁTICA/direcciónESPECÍFICA_o_PARÁMETRO"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+}</pre>
+      </div>
+  </div>
+</div>
 
 
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} PokemonService   <abbr title="Servicio para llamar a la API y usarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from './service/pokemon.service';</b>
+
+@Component({{c}}
+  selector: 'app-pokemonangular',
+  templateUrl: './pokemonangular.component.html',
+  styleUrls: ['./pokemonangular.component.css']
+})
+export class PokemonangularComponent implements OnInit {{c}}
+
+  <b>nombreDelPokemon: string   <abbr title="Variable que recibe el nombre en el Html (mismo nombre en ambos sitios) y lo manda al servicio para buscar el pokemon en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
+
+ <b> urlImage: string   <abbr title="Variable para meter la imagen que recibimos de la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
+
+  <b>error2: string;</b>   <abbr title="Variable para mostrar el error en la consola o html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>error3: boolean = false;</b>   <abbr title="Variable para mostrar el error pero en boolean, ya que si hay error (true) o no (false)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private pokemonService:PokemonService</b>   <abbr title="Metemos en la variable para usar el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>) {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+<b>  search(){{c}}
+
+    this.pokemonService.getPokemon(this.nombreDelPokemon).subscribe(   <abbr title="La variable llama a la función que está en el servicio y nos SUBSCRIBIMOS para obtener los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      (respuesta:any) => {{c}}   <abbr title="Recibimos un dato si todo es correcto y se realiza los datos que está dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      console.log(respuesta)
+
+      this.urlImage = respuesta.sprites.front_default   <abbr title="Metemos en la variable la imagen a través de la respuesta recibida (respuesta.) y los atributos (sprites.front_default) donde se encuentra ese dato en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    },
+    error => {{c}}   <abbr title="Recibimos un error al recibir los datos y se realiza los datos que está dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(error.error);
+
+      this.error2 = error.error   <abbr title="Nos muestra el error que obtenemos de la API, se usa dos veces error que es donde sale el error, depende de la API se pone más o menos error.error..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      this.error3 = true;   <abbr title="Nos muestra el error si es verdad. Al haber error (error=>) entra en esta parte y por eso lo inicializamos como true, pero ya como queramos inicializarlo, lo único que debe ser diferente a la declarada"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    )
+  }</b>
+  
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}p>Nombre{{co}}/p>
+
+{{co}}input type="text" <b>{{t}}(ngModel)]="nombreDelPokemon"</b>>   <abbr title="nombreDelPokemon mismo nombre que en el Ts. [( Recibe y envía )]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}button <b>{{p}}click)="search()"</b>>Buscar{{co}}/button>   <abbr title="Al hacer click llama a la función del Ts -> Servicio -> API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+{{co}}img src="<b>{{c}}{{c}}urlImage}}</b>">   <abbr title="Variable urlImage del Ts definida como string. Mostramos la imagen obtenida"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+{{co}}br>
+Error obtenido con variable string: <b>{{c}}{{c}}error2}}</b>   <abbr title="Variable error2 del Ts definida como string"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}br>
+Error obtenido con variable booblean: <b>{{c}}{{c}}error3}}</b> <abbr title="True si es error, False sino lo es. Variable error3 del Ts definida como boolean"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+      </div>
+  </div>
+</div>
+
+        </div>
 
 
+        <div class="tab-pane fade" id="v-pills-dpokemonangular1" role="tabpanel" aria-labelledby="v-pills-dpokemonangular1-tab">
 
+    
+          <div class="card-group">
+            <div class="card text-dark m-3 bg-primary">
+                <div class="card-body"><h3>x</h3>
+                    <pre class="card-text">x</pre>
+                </div>
+            </div>
+            <div class="card text-dark m-3 bg-warning">
+                <div class="card-body"><h3>x</h3>
+                    <pre class="card-text" style="color: white;">x</pre>
+                </div>
+           
+            </div>
+        </div>
 
-<!-- 
+        </div>
+        <div class="tab-pane fade" id="v-pills-dpokemonangular2" role="tabpanel" aria-labelledby="v-pills-dpokemonangular2-tab">
+            
+            <div class="card-group">
+                <div class="card text-dark bg-dark m-3" >
+                    <div class="card-body">
+                      <pre class="card-text">x</pre>
+                    </div>
+                  </div>
+              </div>
 
+        </div>
 
+  </div>
 
-COMPONENTE PADRE
+<!-- REALIZAR MÁS COSAS COMO LLAMAR TODO Y ENTRAR EN UNO -->
 
-padre_texto = 'yo soy tu padre'
-
-<app-hijo [nombre_mensaje]='padre_texto'></app-hijo>  //el padre da el hijo pide/recibe
-
-
-COMPONENTE HIJO
-
-@Input() nombre_mensaje: string   //Obtengo la variable/dato del padre
-
-{{nombre_mensaje}}
-
-
-
--------------------------------------------------------------------
-
-
-al reves
-
-
-padre _> Directorio superior al inferior
-
-hijo -> Directorio inferior al superior
-
-
- -->
