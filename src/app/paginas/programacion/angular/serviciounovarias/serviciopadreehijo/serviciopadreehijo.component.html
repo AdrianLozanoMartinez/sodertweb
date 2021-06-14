@@ -5,25 +5,46 @@
   <li class="nav-item">
       <a class="nav-link" id="pills-servihijopadre0-tab" data-toggle="pill" href="#pills-servihijopadre0" role="tab" aria-controls="pills-servihijopadre0" aria-selected="false" style="color: black;">@Output<br>Hijo->Padre<br><small>Llamar a la función del padre<br>Padre escuchando el elemento que pongamos del hijo</small></a>
   </li>
-  <li class="nav-item">
-      <a class="nav-link" id="pills-servihijopadre1-tab" data-toggle="pill" href="#pills-servihijopadre1" role="tab" aria-controls="pills-servihijopadre1" aria-selected="false" style="color: black;">Buscador</a>
-  </li>
 </ul>
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
   <div class="tab-pane fade" id="pills-servihijopadre" role="tabpanel" aria-labelledby="pills-servihijopadre-tab">
     
-    <app-tarjeta [otra_variable]="variable_html" [otro_index]="i" *ngFor="let variable_html of nombre_variable_ts; let i = index"></app-tarjeta>
-<!-- Mostrar una página pero a su vez usando funcionalidades (for) desde esta página, se reutiliza el código anterior en este y en otros... -->
+    <div class="card-group">
+      <div class="card m-3">
+          <div class="card-header bg-danger blanco">
+              <pre class="card-text text-center blanco"><h3>Aclaración</h3></pre>
+          </div>
+          <div class="card-body">
 
-          <h4 style="color: black;">Padre. Llama al reutilizable</h4>
+            El <b>padre coge</b> la <b>estructura del hijo</b> y lo <b>muestra</b> pasando un <b>for</b> para que se vea todos los <b>datos</b>, incluso nos <b>redirigimos al padre</b> <b> con</b> un dato específico (<b>id</b>) mediante la variable declarada en el padre
+  
+          </div>
+      </div>
+  </div>
+
+  <div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger blanco">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+          <app-tarjeta [otra_variable]="variable_html" [otro_index]="i" *ngFor="let variable_html of nombre_variable_ts; let i = index"></app-tarjeta>
+          <!-- Mostrar una página pero a su vez usando funcionalidades (for) desde esta página, se reutiliza el código anterior en este y en otros... -->
+
+        </div>
+    </div>
+</div>
+    
+
           <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Padre.Ts<small> (Llama al hijo-reutilizable)<small> - Igual en Input/Output</small></small></h3>
                     <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
 <b>import {{c}} ServiciodepruebaService, nombre_interface_servicio } from '../serviciodeprueba.service';
-import {{c}} <abbr title="Para movernos entre enlaces - navigate">Router</abbr> } from '@angular/router';</b>
+import {{c}} Router <abbr title="Para movernos entre enlaces - navigate"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/router';</b>
 
 @Component({{c}}
   selector: 'app-serviciopadreehijo',
@@ -32,13 +53,13 @@ import {{c}} <abbr title="Para movernos entre enlaces - navigate">Router</abbr> 
 })
 export class ServiciopadreehijoComponent implements OnInit {{c}}
 
-  <b><abbr title="Variable definida con una interface">nombre_variable_ts</abbr>: nombre_interface_servicio [] = [];</b>
+  <b>nombre_variable_ts: nombre_interface_servicio [] = [];</b>   <abbr title="Variable definida con una interface"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  constructor( <b>private <abbr title="Variable donde metemos el servicio">_nombredelServicio</abbr>: ServiciodepruebaService,
-                private <abbr title="Variable de enrutamiento">nombre_router</abbr>: Router</b> ) {{c}}}
+  constructor( <b>private _nombredelServicio: ServiciodepruebaService,   <abbr title="Variable donde metemos el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                private nombre_router: Router</b> ) {{c}}}   <abbr title="Variable de enrutamiento"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
   ngOnInit(): void {{c}}
-      <b>this.nombre_variable_ts = this._nombredelServicio.<abbr title="Función para sacar los datos definidos en el servicio">getsacarDatosServicio</abbr>();</b>
+      <b>this.nombre_variable_ts = this._nombredelServicio.getsacarDatosServicio();</b>   <abbr title="Función para sacar los datos definidos en el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
       console.log( this.nombre_variable_ts );
   }
@@ -47,7 +68,7 @@ export class ServiciopadreehijoComponent implements OnInit {{c}}
   <b>VerComponenteMostrar1( indice_recibido:Number ){{c}}
         console.log(indice_recibido);
 
-        this.nombre_router.navigate( [ '/<abbr title="Variable local definida en el Html que relaciona con el Ts a través del for">variable_html</abbr>',<abbr title="Índice recibido al pulsar sobre el botón del Html de este componente">indice_recibido</abbr> ] )
+        this.nombre_router.navigate( [ '/variable_html <abbr title="Variable local definida en el Html que relaciona con el Ts a través del for"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>', indice_recibido <abbr title="Índice recibido al pulsar sobre el botón del Html de este componente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ] )
   }</b>
   
 
@@ -56,27 +77,34 @@ export class ServiciopadreehijoComponent implements OnInit {{c}}
               </div>
         
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
-                    <pre class="card-text"><b><abbr title="Muestra una web pero con acciones u otra cosa">{{co}}app-tarjeta</abbr> {{t}}<abbr title="Variable usada en el Html del reutilizable, de este modo se hace la conexión entre ambos">otra_variable</abbr>]="variable_html" {{t}}<abbr title="Variable utilizada en el reutilizable en el Ts, que hace conexión del index entre ambos">otro_index</abbr>]="i" <abbr title="Usando for">{{f}}ngFor</abbr>="let <abbr title="Variable local usada antes de este for para llamar al reutilizable">variable_html</abbr> of nombre_variable_ts; let <abbr title="Variable local usada antes de este for para llamar al index del reutilizable">i</abbr>= index">{{co}}/app-tarjeta></b></pre>
+                <div class="card-body"><h3>Padre.Html<small> (Llama al hijo-reutilizable)</small></h3>
+                    <pre class="card-text"><b><abbr title="Muestra una web con acciones u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{co}}app-hijo <abbr title="Variable usada en el Html del reutilizable, de este modo se hace la conexión entre ambos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{t}}otra_variable]="variable_html"
+            <abbr title="Variable utilizada en el reutilizable en el Ts, que hace conexión del index entre ambos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{t}}otro_index]="i" 
+            {{f}}ngFor="let <abbr title="Variable local usada antes de este for para llamar al reutilizable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>variable_html of nombre_variable_ts; let <abbr title="Variable local usada antes de este for para llamar al index del reutilizable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>i= index">
+  {{co}}/app-hijo></b>
+              
+<u>Explicación</u>
+{{co}}app-hijo {{t}}variable_ts_del_hijo_Input]="variable_local_html_padre" 
+          {{t}}variable_indice_ts_hijo_input]="variable_indice_local_html_padre" 
+          {{f}}ngFor="let variable_local_html_padre of variable_ts_padre; 
+                  let variable_indice_local_html_padre = variable_indice_ts_padre">
+{{co}}/app-hijo></pre>
                 </div>
             </div>
           </div>
-
-          <h3 style="color: red;"><u>Al pulsar el ejemplo de arriba observamos el componente Reutilizable</u></h3>
         
-          <h4 style="color: black;">Hijo. Reutilizable</h4>
           <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Hijo.Ts <small> (Reutilizable llamado por el padre)</small></h3>
                     <pre class="card-text">import {{c}} Component, OnInit, <abbr title="Trae funciones del padre, usando for en este caso"><b>Input</b></abbr> } from '@angular/core';  
 <b>import {{c}} <abbr title="Poder redirigir a otro lugar">Router</abbr> } from '@angular/router';</b>
 
 @Component({{c}}
-  selector: 'app-tarjeta',
-  templateUrl: './tarjeta.component.html',
-  styleUrls: ['./tarjeta.component.css']
+  selector: 'app-hijo',
+  templateUrl: './hijo.component.html',
+  styleUrls: ['./hijo.component.css']
 })
-export class TarjetaComponent implements OnInit {{c}}
+export class hijoComponent implements OnInit {{c}}
 
   <b><abbr title="Propiedad que viene de fuera gracia a Input, está definida en otro componente, en el for, es una variable local del otro componente">@Input</abbr>() otra_variable: any={{c}}};</b>   
   <b>@Input() otro_index: number;</b>
@@ -97,7 +125,7 @@ export class TarjetaComponent implements OnInit {{c}}
               </div>
         
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
+                <div class="card-body"><h3>Hijo.Html <small> (Reutilizable llamado por el padre) <small> - Igual en Input/Output</small></small></h3>
                     <pre class="card-text">{{co}}div class="card" style="width: 18rem;">
     {{co}}img {{t}}src]="<b><abbr title="Llamado en el otro componente y relacionado con las variables del otro componente">otra_variable</abbr></b>.DireccionImagen" class="card-img-top" {{t}}alt]="<b>otra_variable</b>.VariableSecundaria1">
     {{co}}div class="card-body">
@@ -116,12 +144,32 @@ export class TarjetaComponent implements OnInit {{c}}
 
   <div class="tab-pane fade" id="pills-servihijopadre0" role="tabpanel" aria-labelledby="pills-servihijopadre0-tab">
     
-    <app-tarjeta2 (elementoSeleccionado)="VerComponenteMostrar1( $event)" [otra_variable2]="variable_html" [otro_index2]="i" *ngFor="let variable_html of nombre_variable_ts; let i = index"></app-tarjeta2>
-
-                    <h4 style="color: black;">Padre. Llama al reutilizable</h4>
+    <div class="card-group">
+      <div class="card m-3">
+          <div class="card-header bg-danger blanco">
+              <pre class="card-text text-center blanco"><h3>Aclaración</h3></pre>
+          </div>
+          <div class="card-body">
+            <b>Igual que Input</b> pero en vez de navegar al padre con la variable_html, se <b>navega</b> con el <b>$event</b> (<u><b>lo que emite el padre</b></u>) relacionado con la variable <b>elementoSeleccionado</b> del <b>padre.html y</b> con un <b>emit</b> del <b>padre.ts</b>
+          </div>
+      </div>
+  </div>
+    <div class="card-group">
+      <div class="card m-3">
+          <div class="card-header bg-danger blanco">
+              <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+          </div>
+          <div class="card-body">
+  
+            <app-tarjeta2 (elementoSeleccionado)="VerComponenteMostrar1( $event)" [otra_variable2]="variable_html" [otro_index2]="i" *ngFor="let variable_html of nombre_variable_ts; let i = index"></app-tarjeta2>
+  
+          </div>
+      </div>
+  </div>
+    
           <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Padre.Ts<small> (Llama al hijo-reutilizable)<small> - Igual en Input/Output</small></small></h3>
                     <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
 <b>import {{c}} ServiciodepruebaService, nombre_interface_servicio } from '../serviciodeprueba.service';
 import {{c}} <abbr title="Para movernos entre enlaces - navigate">Router</abbr> } from '@angular/router';</b>
@@ -157,27 +205,28 @@ export class ServiciopadreehijoComponent implements OnInit {{c}}
               </div>
         
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
-                    <pre class="card-text"><b><abbr title="Muestra una web pero con acciones u otra cosa">{{co}}app-tarjeta2</abbr> <abbr title="(Cuando hacemos clic) llama = a la función -> VerComponenteMostrar1, por el $event que es quien EMITE">(elementoSeleccionado)="VerComponenteMostrar1( $event)"</abbr> {{t}}<abbr title="Variable usada en el Html del reutilizable, de este modo se hace la conexión entre ambos">otra_variable</abbr>]="variable_html" {{t}}<abbr title="Variable utilizada en el reutilizable en el Ts, que hace conexión del index entre ambos">otro_index</abbr>]="i" <abbr title="Usando for">{{f}}ngFor</abbr>="let <abbr title="Variable local usada antes de este for para llamar al reutilizable">variable_html</abbr> of nombre_variable_ts; let <abbr title="Variable local usada antes de este for para llamar al index del reutilizable">i</abbr>= index">{{co}}/app-tarjeta2></b></pre>
+                <div class="card-body"><h3>Padre.Html<small> (Llama al hijo-reutilizable) <small>- Igual Input/Output + elementoSeleccionado-$event</small></small></h3>
+                    <pre class="card-text"><abbr title="Muestra una web pero con acciones u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr><b>{{co}}app-hijo2 <abbr title="(Cuando hacemos clic) llama = a la función -> VerComponenteMostrar1, por el $event que es quien EMITE"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{p}}elementoSeleccionado)="VerComponenteMostrar1( $event)" 
+            <abbr title="Variable usada en el Html del reutilizable, de este modo se hace la conexión entre ambos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>{{t}}otra_variable2]="variable_html" 
+            {{t}}<abbr title="Variable utilizada en el reutilizable en el Ts, que hace conexión del index entre ambos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>otro_index2]="i" {{f}}ngFor="let <abbr title="Variable local usada antes de este for para llamar al reutilizable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>variable_html of nombre_variable_ts; 
+                                      let <abbr title="Variable local usada antes de este for para llamar al index del reutilizable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>i= index">
+{{co}}/app-hijo2></b></pre>
                 </div>
             </div>
           </div>
-
-          <h3 style="color: red;"><u>Al pulsar el ejemplo de arriba observamos el componente Reutilizable</u></h3>
         
-          <h4 style="color: black;">Hijo. Reutilizable</h4>
           <div class="card-group">
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Hijo.Ts <small> (Reutilizable llamado por el padre)</small></h3>
                     <pre class="card-text">import {{c}} Component, OnInit, <b>Input</b>, <abbr title="Para que el padre escuche los cambios que se produzca en el hijo, emite (emit)"><b>Output, EventEmitter</b></abbr> } from '@angular/core';  
 <b>import {{c}} <abbr title="Poder redirigir a otro lugar">Router</abbr> } from '@angular/router';</b>
 
 @Component({{c}}
-  selector: 'app-tarjeta',
-  templateUrl: './tarjeta.component.html',
-  styleUrls: ['./tarjeta.component.css']
+  selector: 'app-hijo',
+  templateUrl: './hijo.component.html',
+  styleUrls: ['./hijo.component.css']
 })
-export class TarjetaComponent implements OnInit {{c}}
+export class hijoComponent implements OnInit {{c}}
 
   <b><abbr title="Propiedad que viene de fuera gracia a Input, está definida en otro componente, en el for, es una variable local del otro componente">@Input</abbr>() otra_variable2: any={{c}}};</b>   
   <b>@Input() otro_index2: number;</b>
@@ -200,7 +249,7 @@ export class TarjetaComponent implements OnInit {{c}}
               </div>
         
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
+                <div class="card-body"><h3>Hijo.Html <small> (Reutilizable llamado por el padre) <small> - Igual en Input/Output</small></small></h3>
                     <pre class="card-text">{{co}}div class="card" style="width: 18rem;">
     {{co}}img {{t}}src]="<b><abbr title="Llamado en el otro componente y relacionado con las variables del otro componente">otra_variable2</abbr></b>.DireccionImagen" class="card-img-top" {{t}}alt]="<b>otra_variable2</b>.VariableSecundaria1">
     {{co}}div class="card-body">
@@ -215,227 +264,6 @@ export class TarjetaComponent implements OnInit {{c}}
             </div>
           </div>
 
-  </div>
-
-  <div class="tab-pane fade" id="pills-servihijopadre1" role="tabpanel" aria-labelledby="pills-servihijopadre1-tab">
-    
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" (keyup.enter)="funcion_Buscar2(buscartexto.value)" #buscartexto>
-      <button class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="funcion_Buscar2(buscartexto.value)">Buscar</button>
-  </form>
-
-    <div class="card-group">
-      <div class="card text-dark bg-primary m-3">
-          <div class="card-body"><h3>Servicio</h3>
-              <pre class="card-text">import {{c}} Injectable } from '@angular/core';
-
-@Injectable({{c}}
-providedIn: 'root'
-})
-export class ServiciodepruebaService {{c}}
-
-private nombre_variable_servicio: nombre_interface_servicio[] = [
-{{c}}
-  VariableSecundaria1: "Datos1.1",
-  VariableSecundaria2: "Datos1.2",
-  DireccionImagen: "../../../../../../assets/imagenes/Angular.png",
-  VariableSecundaria3: "Datos1.3",
-  VariableSecundaria4:"html"
-},
-{{c}}
-  VariableSecundaria1: "Datos2.2",
-  VariableSecundaria2: "Datos2.2",
-  DireccionImagen: "../../../../../../assets/imagenes/typescript.png",
-  VariableSecundaria3: "Datos2.3",
-  VariableSecundaria4:"css"
-}
-//Y se sigue repitiendo
-];
-
-constructor() {{c}} }
-
-getsacarDatosServicio(){{c}}
-return this.nombre_variable_servicio;
-}
-
-getsacarUnDatoServicio(idx_o_indice){{c}}
-return this.nombre_variable_servicio[idx_o_indice];
-}
-
-<b>buscartexto2 ( texto_a_buscar:string) {{c}}
-
-let <abbr title="Se crea para no alterar el original">variable_arreglo</abbr>:nombre_interface_servicio[] = [];
-
-texto_a_buscar = texto_a_buscar.toLowerCase();
-
-
-for ( let i=0; i {{co}} this.nombre_variable_servicio.length; i++ ){{c}}
-
-  let variable_for = this.nombre_variable_servicio[i];
-
-  let variable_local = variable_for.<abbr title="El que queramos coger de referencia para buscar">VariableSecundaria1</abbr>.toLowerCase();
-
-  <abbr title="Si se encuenta el texto que introducimos en la variables que metemos en el for">if</abbr> ( variable_local.<abbr title="si encuentra devuelve un 0, sino -1. Con ello comparamos que sea >=0">indexOf</abbr> (texto_a_buscar) <abbr title="La posición debe ser 0 o más ya que la 1º posición es 0">>= 0</abbr> )
-    {{c}}
-      variable_for.<abbr title="Indice definido en la interface de abajo">idx</abbr> = i;
-      variable_arreglo.push( variable_for )
-    }
-}
-
-  return variable_arreglo;
-
-}</b>
-
-
-}
-
-
-export interface nombre_interface_servicio {{c}}
-VariableSecundaria1: string;
-VariableSecundaria2: string;
-DireccionImagen: string;
-VariableSecundaria3: string;
-VariableSecundaria4: string;
-<b>idx?: number;</b>
-};</pre>
-          </div>
-        </div>
-  
-      <div class="card text-dark bg-warning m-3">
-          <div class="card-body"><h3>Routing/Route</h3>
-              <pre class="card-text">import {{c}} ModuleWithProviders } from '@angular/core';
-
-import {{c}} Routes, RouterModule } from '@angular/router';
-
-import {{c}} AppComponent } from './app.component';
-
-import {{c}} HomeComponent } from './paginas/home/home.component';
-import {{c}} ErrorComponent } from './componentes/error/error.component';
-import {{c}} PieComponent } from './componentes/pie/pie.component';
-import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
-
-<b>import {{c}} BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';</b>
-
-export const appRoutes: Routes = [               
-{{c}} path: '', component: HomeComponent },             
-{{c}} path: 'home', component: HomeComponent}, 
-{{c}} path: 'pie', component: PieComponent}, 
-{{c}} path: 'cabecera', component: CabeceraComponent}, 
-{{c}} path: 'appcomponente', component: AppComponent },
-<b>{{c}} path: 'buscador2/<abbr title="Mismo nombre que en el Ts donde aparecerá el resultado"><b>:termino_buscar</b></abbr>', component: BuscadorComponent},</b>
-{{c}} path: '**', component: ErrorComponent},
-{{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},
-{{c}} path: '**', component: HomeComponent }
-];
-
-export const appRoutingProviders: any[] = [];                                    //appRoutingProviders: Relacionado en module.ts llamado con import
-export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
-          </div>
-      </div>
-    </div>
-
-    <div class="card-group"><h3>Ts buscador</h3>
-      <div class="card text-dark bg-primary m-3">
-          <div class="card-body"><h3>Ts</h3>
-              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-<b>import {{c}} Router } from '@angular/router';</b>
-
-@Component({{c}}
-selector: 'app-funcionesangular',
-templateUrl: './funcionesangular.component.html',
-styleUrls: ['./funcionesangular.component.css']
-})
-
-export class FuncionesangularComponent implements OnInit {{c}}
-
-constructor( <b>private variable_router: Router</b> ) {{c}} }
-
-ngOnInit(): void {{c}}
-}
-
-<b>funcion_Buscar2( nombre_a_buscar:string ){{c}}
-console.log(nombre_a_buscar);
-this.<abbr title="Para movernos y navegar a donde indiquemos">variable_router.navigate</abbr> ( ['/<abbr title="Mismo nombre que en routing ->   { path: 'buscador/:termino_buscar', component: BuscadorComponent},">buscador</abbr>',<abbr title="Parámetro cogido en esta función, que proviene de lo que introduzcamos en el buscador">nombre_a_buscar</abbr> ] );
-}</b>
-
-}</pre>
-          </div>
-        </div>
-  
-      <div class="card text-dark bg-warning m-3">
-          <div class="card-body"><h3>Html buscador</h3>
-              <pre class="card-text">{{co}}form class="form-inline my-2 my-lg-0">
-{{co}}input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" <b><abbr title="Actúa al hacer click">{{p}}keyup.enter)</abbr>="funcion_Buscar2{{p}}<abbr title="Variable local definida luego con # añadiendo value">buscartexto</abbr>.value)" #buscartexto</b>>
-{{co}}button class="btn btn-outline-danger my-2 my-sm-0" type=<b>"<abbr title="Cambiamos a button para que no suba la acción sino que haga la acción solo de buscar">button</abbr>" <abbr title="Actúa al darle al botón">{{p}}click)</abbr>="funcion_Buscar2{{p}}buscartexto.value)"</b>>Buscar{{co}}/button>
-{{co}}/form></pre>
-          </div>
-      </div>
-    </div>
-
-
-    <div class="card-group">
-      <div class="card text-dark bg-primary m-3">
-          <div class="card-body"><h3>Ts resultado</h3>
-              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-<b>import {{c}} <abbr title="Poder movernos y navegar entre páginas">ActivatedRoute</abbr> } from '@angular/router';</b>
-<b>import {{c}} <abbr title="Usamos el servicio para llamar a la función buscar">ServiciodepruebaService</abbr> } from '../serviciounovarias/serviciodeprueba.service';</b>
-
-@Component({{c}}
-selector: 'app-buscador',
-templateUrl: './buscador.component.html',
-styleUrls: ['./buscador.component.css']
-})
-export class BuscadorComponent implements OnInit {{c}}
-
-<b><abbr title="Variable local en arreglo, para poder enseñar varios resultados">variable_array</abbr>:any[] = []</b>
-
-<b><abbr title="Parabra de la búsqueda que saldrá reflejada en el html del resultado">palabra_a_buscar</abbr>: string;</b>
-
-constructor( <b>private variable_activatedRoute: ActivatedRoute,
-      private _variableServicio: ServiciodepruebaService</b> ) {{c}}
-
-}
-
-ngOnInit(): void {{c}}
-
-<b>this.variable_activatedRoute.<abbr title="Está pendiente de los cambios, para que funcione nos tenemos que subscribir a esos cambios"><b>params</b></abbr><abbr title="Es necesario subscribirse">.subscribe</abbr> ( params => {{c}}</b>
-console.log(params['<b><abbr title="Mismo que en router. path: 'buscador/:termino_buscar', component: BuscadorComponent">termino_buscar</abbr> </b>']);
-
-<b>this.variable_array = this._variableServicio.<abbr title="Función llamado a través del servicio llamado a su vez en la variable">buscartexto2</abbr>( params ['termino_buscar'] );
-console.log(this.variable_array);
-
-<b>this.palabra_a_buscar = params ['termino_buscar'];</b>
-
-});</b>
-}
-
-
-}</pre>
-          </div>
-        </div>
-  
-      <div class="card text-dark bg-warning m-3">
-          <div class="card-body"><h3>Html resultado</h3>
-              <pre class="card-text">{{co}}h1>Buscando 2º: {{co}}small><b>{{c}}{{c}} <abbr title="Palabra que introducimos en la búsqueda y que aparece en el html">palabra_a_buscar</abbr> }}</b>{{co}}/small>{{co}}/h1>
-
-{{co}}hr>
-{{co}}div class="row" <b>{{f}}<abbr title="Muestra SI cumple la condición, no haya ni una letra en la base de datos">ngIf</abbr>="<abbr title="Variable del TS en array">variable_array</abbr>.<abbr title="Si no tiene ninguna letra que coincida = 0">length == 0</abbr> "</b>>
-{{co}}div class="col-md-12">
-<b>{{co}}div class="alert alert-info" role="alert">
-    No existe resultados con el término: {{c}}{{c}} palabra_a_buscar }}
-{{co}}/div></b>
-{{co}}/div>
-{{co}}/div>
-
-{{co}}div class="card-columns">
-
-<b>{{co}}app-tarjeta2 {{t}}otra_variable2]="variable_html2" {{t}}otro_index2]="<abbr title="Especificamos el índice declarado en el servidor para que coja correctamente el que buscamos">variable_html2.i</abbr> " {{f}}ngFor="let variable_html2 of variable_array">{{co}}/app-tarjeta2></b>
-
-{{co}}/div></pre>
-          </div>
-      </div>
-    </div>
-    
   </div>
     
 </div>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Auth0Component } from './auth0.component';
+import { Auth0angularComponent } from './auth0angular.component';
 
-describe('Auth0Component', () => {
-  let component: Auth0Component;
-  let fixture: ComponentFixture<Auth0Component>;
+describe('Auth0angularComponent', () => {
+  let component: Auth0angularComponent;
+  let fixture: ComponentFixture<Auth0angularComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Auth0Component ]
+      declarations: [ Auth0angularComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Auth0Component);
+    fixture = TestBed.createComponent(Auth0angularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

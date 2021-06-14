@@ -85,6 +85,20 @@
             <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
           </div>
         </li>
+        
+    
+        <a class="nav-link" *ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Protegida Aux0</a>
+        
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+          <!-- <a class="nav-link" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Protegida Aux0</a>  -->
+          <button class="btn btn-outline-danger" (click)="auth.logout({ returnTo: document.location.origin })">   <!--Mirar si podemos poner dire [routerLink]="['/toast']" -->
+            Logout Aux0
+          </button>
+        </ng-container>
+    
+        <ng-template #loggedOut>
+          <button class="btn btn-outline-success" (click)="auth.loginWithRedirect()">Login/Registrar Aux0</button>
+        </ng-template>
       </ul>
       <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" (keyup.enter)="funcion_Buscar(buscartexto.value)" #buscartexto>

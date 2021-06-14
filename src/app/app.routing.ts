@@ -73,6 +73,9 @@ import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-
 import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
 import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
 import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
+import { ProtegidaComponent } from './paginas/programacion/angular/loginangular/auth0angular/protegida/protegida.component';
+import { GuardianGuard } from './paginas/programacion/angular/loginangular/auth0angular/guard/guardian.guard';
+
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -98,7 +101,7 @@ import { ElguardianGuard } from './paginas/programacion/firebase/login/guard/elg
 //Login - Páginas protegidas                                                                    
 import { ProtegidoguardfirebaseComponent } from './paginas/programacion/firebase/login/protegidoguardfirebase/protegidoguardfirebase.component'; 
 //Programacion - Auth0
-import { Auth0Component } from './paginas/programacion/auth0/auth0.component';
+
 //Programacion - Servidor Local
 import { ServidorlocalComponent } from './paginas/programacion/servidorlocal/servidorlocal.component';
 //Programacion - Fontawesome
@@ -146,6 +149,7 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
 
 //Routes/routing específico de usuario
 import { USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';
+
 
 
 export const appRoutes: Routes = [
@@ -216,6 +220,7 @@ export const appRoutes: Routes = [
   { path: 'tarjeta2', component: Tarjeta2Component},
   { path: 'artist/:id', component: ArtistaComponent },
   { path: 'usuarioH/:id', component: UsuarioHijaComponent, children: USUARIO_ROUTES},
+  { path: 'protegida', component: ProtegidaComponent, canActivate: [ GuardianGuard ]}, //Dentro de los [] metemos todos los guard que tendrá que pasar antes de entrar en el enlace
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
@@ -241,8 +246,6 @@ export const appRoutes: Routes = [
   { path: 'protegidoguardfirebase', component: ProtegidoguardfirebaseComponent, canActivate: [ElguardianGuard]},
   { path: 'subirarchivos', component: SubirarchivosComponent},
   { path: 'subidafire', component: SubidafireComponent},
-  //Programacion - Auth0
-  { path: 'auth0', component: Auth0Component},
   //Programacion - Servidor Local
   { path: 'servidorlocal', component: ServidorlocalComponent},
   //Programacion - Fonts Google

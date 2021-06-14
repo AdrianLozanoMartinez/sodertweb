@@ -1,0 +1,361 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-authangular-tab" data-toggle="pill" href="#v-pills-authangular" role="tab" aria-controls="v-pills-authangular" aria-selected="true">Web - Configurar</a>
+        <a class="nav-link" id="v-pills-authangular0-tab" data-toggle="pill" href="#v-pills-authangular0" role="tab" aria-controls="v-pills-authangular0" aria-selected="true">Module.Ts</a>
+        <a class="nav-link" id="v-pills-authangular1-tab" data-toggle="pill" href="#v-pills-authangular1" role="tab" aria-controls="v-pills-authangular1" aria-selected="false">Login/Registrar</a>
+        <a class="nav-link" id="v-pills-authangular2-tab" data-toggle="pill" href="#v-pills-authangular2" role="tab" aria-controls="v-pills-authangular2" aria-selected="false">Ocultar acceso</a>
+        <a class="nav-link" id="v-pills-authangular3-tab" data-toggle="pill" href="#v-pills-authangular3" role="tab" aria-controls="v-pills-authangular3" aria-selected="false">Bloquear acceso<small> Guard</small></a>
+        <a class="nav-link" id="v-pills-authangular4-tab" data-toggle="pill" href="#v-pills-authangular4" role="tab" aria-controls="v-pills-authangular4" aria-selected="false">Usuario conectado</a>
+        <a class="nav-link" id="v-pills-authangular5-tab" data-toggle="pill" href="#v-pills-authangular5" role="tab" aria-controls="v-pills-authangular5" aria-selected="false">Configurar Auth0</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade active show" id="v-pills-authangular" role="tabpanel" aria-labelledby="v-pills-authangular-tab">
+            
+            <div class="card-group">
+                <div class="card text-dark bg-warning m-3">
+                  <div class="card-header">
+                    <pre class="card-text text-center"><h3>Web</h3></pre>
+                </div>
+                    <div class="card-body">
+                      <pre class="card-text"><ol><li><b>Sign up</b><ul><li>Correo/Contraseña</li><li>Github</li><li>Google</li><li>Microsoft</li></ul></li>
+<li><b>Applications</b> -> Applications -> <b>+Create Application</b><ol><li><b>Name</b>: Sodert  <abbr title="Nombre de la aplicación, a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li><b>Elegimos</b>:
+Single Page Web Applications
+A JavaScript front-end app that uses an API.
+
+e.g.: <b>Angular</b>, React, Vue</li></ol>
+<li><b>Quick start</b><ol><li>What technology are you using for your web app?: <b>Angular</b></li><li><b>Configure Callback URLs</b> <small>(Lugar que va después de autentificarse)</small></li></ol><li><b>Settings</b><ul><li>Basic Information<ul><li>Name: Sodert</li><li>Domain: sodert.eu.auth0.com</li><li>Client ID: ***</li><li>Client Secret: ***</li><li>Description: Manual de programación</li></ul></li><li>Application Properties: <ul><li>Application Logo: Dirección web</li><li>Application Type: Single Page Application</li></ul><li>Application URIs<ul><li>Allowed Callback URLs: http://localhost:4200/callback  <abbr title="Nombre de la página que vamos a crear, se puede poner otro nombre, es donde pondrmeos los códigos que auth0 nos dé. Se puede poner más url poniendo una , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Logout URLs: http://localhost:4200   <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Web Origins: http://localhost:4200  <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></li></ul></li><li><b>Save Changes</b></li><li><b></b>Quick start - Instalación en Angular<ul>
+<li>Install the Auth0 Angular SDK: <b>npm install @auth0/auth0-angular</b></li></ul></li></ol></pre>
+                    </div>
+                </div>
+              </div>
+              
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-authangular0" role="tabpanel" aria-labelledby="v-pills-authangular0-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center blanco"><h3>Module.ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+import {{c}} routing, appRoutingProviders } from './app.routing';
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Auth0
+<b>  import {{c}} AuthModule } from '@auth0/auth0-angular';</b>   <abbr title="Importamos Auth0 para usarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@NgModule({{c}}
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+      BrowserModule,
+      routing<b>,</b> 
+      //Auth0   
+      <b>AuthModule.forRoot({{c}}   <abbr title="Importamos Auth0 para usarlo, en la web nos da el dominio y la Id nuestra"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        domain: 'sodert.eu.auth0.com',
+        clientId: '***'
+      }),</b>
+    ],
+      providers: [
+      appRoutingProviders
+      ],
+      bootstrap: [AppComponent]
+  })
+  export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-authangular1" role="tabpanel" aria-labelledby="v-pills-authangular1-tab">
+          
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                    <button class="btn btn-outline-danger" (click)="auth.logout({ returnTo: document.location.origin })">
+                      Logout Aux0
+                    </button>
+                  </ng-container>
+              
+                  <ng-template #loggedOut>
+                    <button class="btn btn-outline-success" (click)="auth.loginWithRedirect()">Login/Registrar Aux0</button>
+                  </ng-template>
+        
+                </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit, <b>Inject</b> } from '@angular/core';   <abbr title="Importamos para que funcione con el logout de Aux0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<b>import {{c}} AuthService } from '@auth0/auth0-angular';</b>   <abbr title="Importamos el servicio que está en Auth0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} DOCUMENT } from '@angular/common';</b>   <abbr title="Importamos para que funcione con el logout de Aux0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-auth0angular',
+  templateUrl: './auth0angular.component.html',
+  styleUrls: ['./auth0angular.component.css']
+})
+export class Auth0angularComponent implements OnInit {{c}}
+
+  constructor(<b> @Inject(DOCUMENT) public document: Document, public auth: AuthService </b>) {{c}}}   <abbr title="auth -> Metemos en una variable cualquiera el servicio. Esa variable la usamos en el Html. El resto es para que funcione con el Logout"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text"><b>{{co}}ng-container {{f}}ngIf="auth.isAuthenticated$ | async; else loggedOut"> </b> <abbr title="Sale si estamos conectados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}button <b>{{p}}click)="auth.logout{{p}}{{c}} returnTo: document.location.origin })"</b>>   <abbr title="Si estamos conectados nos desconectamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>Log out</b>
+  {{co}}/button>
+<b>{{co}}/ng-container></b>
+
+<b>{{co}}ng-template #loggedOut></b>   <abbr title="Sale si no estamos conectados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}button <b>{{p}}click)="auth.loginWithRedirect()"</b>>Log in{{co}}/button>   <abbr title="Si estamos desconectados nos conectamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>{{co}}/ng-template></b></pre>  
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-authangular2" role="tabpanel" aria-labelledby="v-pills-authangular2-tab">
+        
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                  <a class="nav-link" *ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Ir a Protegida Aux0</a>   <abbr title="Si está conectado se ve el botón que nos lleva a Protegida Aux0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                  <a class="nav-link btn btn-info" *ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Ir a Protegida Aux0</a>   <abbr title="Si está conectado se ve el botón con los colores de bootstrap que nos lleva a Protegida Aux0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        
+
+                  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                    
+                    <a class="nav-link" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Ir a Protegida Aux0</a>  <abbr title="Si está conectado se ve el botón que nos lleva a Protegida Aux0. La conexión/comprobación se realiza arriba: *ngIf=auth.isAuthenticated$ | async; else loggedOut"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                    <a class="nav-link btn btn-info" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Ir a Protegida Aux0</a>   <abbr title="Si está conectado se ve el botón con los colores de bootstrap que nos lleva a Protegida Aux0. La conexión/comprobación se realiza arriba: *ngIf=auth.isAuthenticated$ | async; else loggedOut"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                    <button class="btn btn-outline-danger" (click)="auth.logout({ returnTo: document.location.origin })">Logout Aux0</button>
+                  
+                  </ng-container>
+              
+          
+                  <ng-template #loggedOut>
+          
+                    <button class="btn btn-outline-success" (click)="auth.loginWithRedirect()">Login/Registrar Aux0</button>
+          
+                  </ng-template>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}a class="nav-link" <b>{{f}}ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" 
+    {{t}}routerLink]="['/protegida']" routerLinkActive="active"</b> role="button">Ir a Protegida Aux0{{co}}/a>   <abbr title="Si está conectado se ve el botón que nos lleva a Protegida Aux0"><i class="fa fa-question-circle. routerLinkActive=active -> Usado en la cabecera para marca que está activa" aria-hidden="true"></i></abbr>
+
+{{co}}a class="nav-link <b>btn btn-info" {{f}}ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" 
+    {{t}}routerLink]="['/protegida']" routerLinkActive="active"</b> role="button">Ir a Protegida Aux0{{co}}/a>   <abbr title="Si está conectado se ve el botón con los colores de bootstrap que nos lleva a Protegida Aux0. routerLinkActive=active -> Usado en la cabecera para marca que está activa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+{{co}}ng-container {{f}}ngIf="auth.isAuthenticated$ | async; else loggedOut">
+  
+  {{co}}a class="nav-link" <b>{{t}}routerLink]="['/protegida']" routerLinkActive="active"</b> role="button">Ir a Protegida Aux0{{co}}/a>   <abbr title="Hace efecto todo lo que esté dentro de ng-container. Si está conectado se ve el botón que nos lleva a Protegida Aux0. La conexión/comprobación se realiza arriba: *ngIf=auth.isAuthenticated$ | async; else loggedOut. routerLinkActive=active -> Usado en la cabecera para marca que está activa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  {{co}}a class="nav-link <b>btn btn-info" {{t}}routerLink]="['/protegida']" routerLinkActive="active"</b> role="button">Ir a Protegida Aux0{{co}}/a>   <abbr title="Hace efecto todo lo que esté dentro de ng-container. Si está conectado se ve el botón con los colores de bootstrap que nos lleva a Protegida Aux0. La conexión/comprobación se realiza arriba: *ngIf=auth.isAuthenticated$ | async; else loggedOut. routerLinkActive=active -> Usado en la cabecera para marca que está activa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  {{co}}button class="btn btn-outline-danger" {{p}}click)="auth.logout({{c}} returnTo: document.location.origin })">Logout Aux0{{co}}/button>
+
+{{co}}/ng-container>
+
+
+{{co}}ng-template #loggedOut>
+
+  {{co}}button class="btn btn-outline-success" {{p}}click)="auth.loginWithRedirect()">Login/Registrar Aux0{{co}}/button>
+
+{{co}}/ng-template></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-authangular3" role="tabpanel" aria-labelledby="v-pills-authangular3-tab">
+
+        <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center blanco"><h3>Guard</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+import {{c}} CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import {{c}} Observable } from 'rxjs';
+<b>import {{c}} AuthService } from '@auth0/auth0-angular';</b>   <abbr title="Servicio de auth0 instalado al llamarlo en el module"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class GuardianGuard implements <b>CanActivate</b> {{c}}   <abbr title="Podemos cambiar o ampliar aquí las demás opciones: implements CanActivate, otro, otro..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  //Creamos un constructor
+  <b>constructor( private auth: AuthService){{c}}}</b>   <abbr title="Variable que metemos el servicio declarado en el module"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+  canActivate(
+    <b>next</b>  <abbr title="Ruta que queremos entrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>: ActivatedRouteSnapshot, 
+    <b>state</b>  <abbr title="Estado. Devuelve observable o promesa o un simple boolean"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>: RouterStateSnapshot): Observable{{co}}boolean> {{c}}
+
+    return <b>this.auth.isAuthenticated$;</b>   <abbr title="Al poner el servicio instalado por ponerlo en el module de auth0"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+  
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center blanco"><h3>Routing</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+<b>import {{c}} ProtegidaComponent } from './paginas/programacion/angular/loginangular/auth0angular/protegida/protegida.component';</b>   <abbr title="Página que protegemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} GuardianGuard } from './paginas/programacion/angular/loginangular/auth0angular/guard/guardian.guard';</b>   <abbr title="Guard creado, se pone automático"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+  <b>{{c}} path: 'protegida', component: ProtegidaComponent, canActivate: [ GuardianGuard ]},</b>   <abbr title="Dentro de los [] metemos todos los guard que tendrá que pasar antes de entrar en el enlace"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+              </div>
+          </div>
+        </div>
+
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-authangular4" role="tabpanel" aria-labelledby="v-pills-authangular4-tab">
+
+          
+        <div class="card-group">
+          <div class="card m-3">
+              <div class="card-header bg-danger">
+                  <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+              </div>
+              <div class="card-body">
+      
+                Comprobación si estamos conectados:
+                <ul *ngIf="auth.user$ | async as nombre_usuario">   <abbr title="Si el usuario está longeado lo mete en la variable nombre_usuario para mostrarlo abajo. El $ significa que es un observable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li>{{ nombre_usuario.name }}</li>   <abbr title="Nombre del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li>{{ nombre_usuario.email }}</li>   <abbr title="Email del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li><pre>{{ nombre_usuario | json }}</pre></li>   <abbr title="nombre_usuario.parametro_que_aparece_en_json. Cogemos todos los datos y lo metemos en un json para ver todos los datos. sub -> ID de la red social, cambia si es otra persona u otra red social. picture -> Imagen que obtenemos de google o red social"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                </ul>
+      
+              </div>
+          </div>
+      </div>
+      
+      <div class="card-group">
+          <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text">Comprobación si estamos conectados:
+{{co}}ul <b>{{f}}ngIf="auth.user$ | async as nombre_usuario"</b>>   <abbr title="Si está identificado nos muestra la información de abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}li>{{c}}{{c}} <b>nombre_usuario.name</b> }}{{co}}/li>   <abbr title="Nombre del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}li>{{c}}{{c}} <b>nombre_usuario.email</b> }}{{co}}/li>   <abbr title="Email del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/ul></pre>
+              </div>
+          </div>
+      </div>
+
+        </div>
+        
+
+        <div class="tab-pane fade" id="v-pills-authangular5" role="tabpanel" aria-labelledby="v-pills-authangular5-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Web</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text"><ul><li><a href="https://auth0.com/docs/libraries/auth0-single-page-app-sdk"><b>Extra</b></a></li><li><b>Branding</b> -> <b>Universal login</b> -> <a href="https://manage.auth0.com/dashboard/eu/sodert/login_settings"><b>Settings</b> (Configurar Login/Registrar)</a> -> <b>New</b>   <abbr title="Nuevas funcionalidades, MANTIENE LA SESIÓN ABIERTA aparte de cambiar logo y color"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
+                </div>
+            </div>
+          </div>
+
+
+          </div>
+
+       
+  </div>
+
+</div>

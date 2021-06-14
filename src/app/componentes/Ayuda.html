@@ -7,7 +7,7 @@
 <div class="card-group">
     <div class="card m-3">
         <div class="card-header bg-danger">
-            <pre class="card-text text-center"><h3>Ejemplo</h3></pre>
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
         </div>
         <div class="card-body">
 
@@ -132,3 +132,65 @@
   <div class="tab-pane fade" id="pills-expresion8" role="tabpanel" aria-labelledby="pills-expresion8-tab">x</div>
     
 </div>
+
+
+
+
+
+import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+@NgModule({{c}}
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+      BrowserModule,
+      routing
+    ],
+      providers: [
+      appRoutingProviders
+      ],
+      bootstrap: [AppComponent]
+  })
+  export class AppModule {{c}} }
+
+
+
+
+
+import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);

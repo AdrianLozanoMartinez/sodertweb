@@ -15,7 +15,7 @@ export class PeticionhttpComponent implements OnInit {
    this.variable_http.get('https://restcountries.eu/rest/v2/lang/es')
    .subscribe ( (dato_recibido:any) => {
      this.variable_paises = dato_recibido;    //Comparamos para poder meterlo en la variable y poder sacarlo al html
-     console.log(dato_recibido);   //Se ve en consola toda la información, pero no se puede sacar al html, para ello tenemos que poner otra variable y compararla
+     //console.log(dato_recibido);   //Se ve en consola toda la información, pero no se puede sacar al html, para ello tenemos que poner otra variable y compararla
      
    });    //subscribe -> Tenemos que subscribirnos para obtener los datos de la dirección que contiene json con datos ya comprobado en el Postman
 }

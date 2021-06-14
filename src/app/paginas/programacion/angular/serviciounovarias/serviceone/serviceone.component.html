@@ -1,7 +1,7 @@
 
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item">
-      <a class="nav-link" id="pills-serviceone-tab" data-toggle="pill" href="#pills-serviceone" role="tab" aria-controls="pills-serviceone" aria-selected="true" style="color: black;">Variable/Interface</a>
+      <a class="nav-link active" id="pills-serviceone-tab" data-toggle="pill" href="#pills-serviceone" role="tab" aria-controls="pills-serviceone" aria-selected="true" style="color: black;">Variable/Interface</a>
   </li>
   <li class="nav-item">
       <a class="nav-link" id="pills-serviceone0-tab" data-toggle="pill" href="#pills-serviceone0" role="tab" aria-controls="pills-serviceone0" aria-selected="false" style="color: black;">Sacar Todos</a>
@@ -13,12 +13,12 @@
 
 <div class="tab-content cuadro" id="pills-tabContent">
 
-  <div class="tab-pane fade" id="pills-serviceone" role="tabpanel" aria-labelledby="pills-serviceone-tab">
+  <div class="tab-pane fade show active" id="pills-serviceone" role="tabpanel" aria-labelledby="pills-serviceone-tab">
     
     <div class="card-group">
             <div class="card text-dark bg-danger m-3 border-0">
-                <div class="card-header"><h3>Servicio</h3>
-                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+                <div class="card-header blanco"><h3>Servicio</h3>
+                    <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
 
 @Injectable({{c}}
   providedIn: 'root'
@@ -62,24 +62,35 @@ export class ServiciodepruebaService {{c}}
 
   <div class="tab-pane fade" id="pills-serviceone0" role="tabpanel" aria-labelledby="pills-serviceone0-tab">
     
-    <div class="card" style="width: 18rem;" *ngFor="let variable_html of nombre_variable_ts, let i = index">
-            <!-- <img src="{{variable_html.DireccionImagen}}"class="card-img-top" alt="...">  NO RECOMENDABLE-->
-            <img [src]="variable_html.DireccionImagen" class="card-img-top" [alt]="variable_html.VariableSecundaria1">
-            <div class="card-body">
-              <h5 class="card-title">{{variable_html.VariableSecundaria2}}</h5>
-              <p class="card-text">{{variable_html.VariableSecundaria3}}</p>
-              <p class="card-text">{{variable_html.VariableSecundaria4}}</p>
-              <a [routerLink]="['/variable_html',i]" class="btn btn-outline-danger">Ir a Componente individual - Enlace</a>
-              <hr>
-              <button (click)="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-primary btn-block">Ir a Componente individual - Botón</button>
-            </div>
+    <div class="card-group">
+      <div class="card m-3">
+          <div class="card-header bg-danger">
+              <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
           </div>
+          <div class="card-body">
+  
+            <div class="card" style="width: 18rem;" *ngFor="let variable_html of nombre_variable_ts, let i = index">
+              <!-- <img src="{{variable_html.DireccionImagen}}"class="card-img-top" alt="...">  NO RECOMENDABLE-->
+              <img [src]="variable_html.DireccionImagen" class="card-img-top" [alt]="variable_html.VariableSecundaria1">
+              <div class="card-body">
+                <h5 class="card-title">{{variable_html.VariableSecundaria2}}</h5>
+                <p class="card-text">{{variable_html.VariableSecundaria3}}</p>
+                <p class="card-text">{{variable_html.VariableSecundaria4}}</p>
+                <a [routerLink]="['/variable_html',i]" class="btn btn-outline-danger">Ir a Componente individual - Enlace</a>
+                <hr>
+                <button (click)="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-primary btn-block">Ir a Componente individual - Botón</button>
+              </div>
+            </div>
+  
+          </div>
+      </div>
+    </div>
 
 
           <div class="card-group">
             <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>Servicio</h3>
-                  <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+                <div class="card-body blanco"><h3>Servicio</h3>
+                  <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
 
 @Injectable({{c}}
   providedIn: 'root'
@@ -115,7 +126,7 @@ export class ServiciodepruebaService {{c}}
               </div>
 
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Todos.Ts</h3>
                     <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
 <b>import {{c}} <abbr title="Importamos el servicio para usarlo">ServiciodepruebaService</abbr>, <abbr title="Importamos la interface para usarlo, ponemos en el mismo del sitio y dirección porque lo hemos incluido en el servicio">nombre_interface_servicio</abbr> } from '../serviciodeprueba.service';</b>
 <b>import {{c}} <abbr title="Para poder redirigir mediante función, mediante el Ts">Router</abbr> } from '@angular/router';</b>
@@ -153,7 +164,7 @@ export class ServiceoneComponent implements OnInit {{c}}
 
           <div class="card-group">
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
+                <div class="card-body"><h3>Todos.Html</h3>
                     <pre class="card-text">{{co}}div class="card" style="width: 18rem;" <b>{{f}}ngFor="let variable_html of nombre_variable_ts, let i = index"</b>>
   {{co}}!-- {{co}}img <abbr title="No recomendable">src</abbr>="{{c}}{{c}}variable_html.DireccionImagen}}"class="card-img-top" alt="..."> -->
   {{co}}img <b><abbr title="Recomendable">{{t}}src]</abbr>="variable_html.DireccionImagen"</b> class="card-img-top" <b>{{t}}alt]="variable_html.VariableSecundaria1"</b>>
@@ -174,9 +185,21 @@ export class ServiceoneComponent implements OnInit {{c}}
 
   <div class="tab-pane fade" id="pills-serviceone1" role="tabpanel" aria-labelledby="pills-serviceone1-tab">
     
-    <div *ngFor="let variable_html of nombre_variable_ts, let i = index">
+    <div class="card-group">
+      <div class="card m-3">
+          <div class="card-header bg-danger">
+              <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+          </div>
+          <div class="card-body">
+  
+            <div *ngFor="let variable_html of nombre_variable_ts, let i = index">
               <button (click)="VerComponenteMostrar1(i)" type="button" class="btn btn-outline-danger btn-block">Ir a Componente individual</button>
             </div>
+  
+          </div>
+      </div>
+  </div>
+    
 
           <div class="card-group">
             <div class="card text-dark bg-danger m-3">
@@ -211,7 +234,7 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</p
               </div>
         
             <div class="card text-dark bg-primary m-3">
-                <div class="card-body"><h3>Ts</h3>
+                <div class="card-body"><h3>Uno.Ts</h3>
                     <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
         <b>import {{c}} <abbr title="Importamos para poder coger la información que nos mandan al URL, desde el componente que lee todos los datos con el botón ir a componente de un elemento">ActivatedRoute</abbr> } from '@angular/router';</b>
         <b>import {{c}} <abbr title="Importamos para coger la información que nos mandan el servidor">ServiciodepruebaService</abbr> } from '../../serviciounovarias/serviciodeprueba.service';</b>
@@ -247,8 +270,8 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</p
         
           <div class="card-group">
             <div class="card text-dark bg-danger m-3">
-                <div class="card-body"><h3>Servicio</h3>
-                    <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+                <div class="card-body blanco"><h3>Servicio</h3>
+                    <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
         
         @Injectable({{c}}
           providedIn: 'root'
@@ -289,7 +312,7 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</p
               </div>
         
             <div class="card text-dark bg-warning m-3">
-                <div class="card-body"><h3>Html</h3>
+                <div class="card-body"><h3>Uno.Html</h3>
                     <pre class="card-text">{{co}}div class="row">
         
             {{co}}div class="col-md-4">

@@ -125,6 +125,9 @@ import { UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-
 import { UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
 import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
 import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
+import { CicloVidaComponent } from './paginas/programacion/angular/ciclo-vida/ciclo-vida.component';
+import { Auth0angularComponent } from './paginas/programacion/angular/loginangular/auth0angular/auth0angular.component';
+import { ProtegidaComponent } from './paginas/programacion/angular/loginangular/auth0angular/protegida/protegida.component';
 
 //Programación - Angular - PipeLenguaje
 import { registerLocaleData } from '@angular/common';
@@ -138,6 +141,9 @@ registerLocaleData(nombre_pipe_frances);
 //Programación - Angular - Servicios/Formularios/Directivas/etc
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  //Formulario Template, Reactivo
 import { HttpClientModule } from '@angular/common/http';  //Servicio API Países (Json)
+
+//Programación - Angular - Auth0
+import { AuthModule } from '@auth0/auth0-angular';
 
 //Programación - Python
 import { PythonComponent } from './paginas/programacion/python/python.component';
@@ -176,8 +182,6 @@ import { MostrarComponent } from './paginas/programacion/firebase/subirarchivos/
  import { AngularFirestoreModule } from '@angular/fire/firestore';
  //Environment - Lo pide abajo en el imports por AngularFireModule
  import { environment } from 'src/environments/environment';              
-//Programacion - Auth0
-import { Auth0Component } from './paginas/programacion/auth0/auth0.component';
 //Programacion - Servidor Local
 import { ServidorlocalComponent } from './paginas/programacion/servidorlocal/servidorlocal.component';
 //Programacion - Fonts Google
@@ -251,7 +255,6 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
-
 
 
 
@@ -375,6 +378,9 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     UsuarioNuevoHijaComponent,
     UsuarioEditarHijaComponent,
     UsuarioDetalleHijaComponent,
+    CicloVidaComponent,
+    Auth0angularComponent,
+    ProtegidaComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -404,7 +410,7 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     DirectivasubidaDirective,
     MostrarComponent,
     //Programacion - Auth0
-    Auth0Component,
+    
     //Programacion - Servidor Local
     ServidorlocalComponent,
     //Programacion - Fontawesome
@@ -468,6 +474,7 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     //Librerias
     JqueryComponent,
     TetherComponent
+
   ],
   imports: [
     //Por defecto
@@ -482,7 +489,11 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
    //Programación - Angular - Servicios/Formularios/Directivas/etc
     FormsModule,        //Formulario Template
     ReactiveFormsModule, //Formulario Reactivo
-    HttpClientModule    //Servicio API Países (Json)
+    HttpClientModule,    //Servicio API Países (Json)
+    AuthModule.forRoot({  //Auth0
+      domain: 'sodert.eu.auth0.com',
+      clientId: 'VBi7E1WT6AJmEHChD4WTwoGHpLDecvJy'
+    }),
   ],
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas

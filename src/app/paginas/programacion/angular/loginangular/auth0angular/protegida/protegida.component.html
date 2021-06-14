@@ -1,0 +1,6 @@
+Comprobación si estamos conectados:
+                <ul *ngIf="auth.user$ | async as nombre_usuario">   <abbr title="Si el usuario está longeado lo mete en la variable nombre_usuario para mostrarlo abajo. El $ significa que es un observable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li>{{ nombre_usuario.name }}</li>   <abbr title="Nombre del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li>{{ nombre_usuario.email }}</li>   <abbr title="Email del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  <li><pre>{{ nombre_usuario | json }}</pre></li>   <abbr title="nombre_usuario.parametro_que_aparece_en_json. Cogemos todos los datos y lo metemos en un json para ver todos los datos. sub -> ID de la red social, cambia si es otra persona u otra red social. picture -> Imagen que obtenemos de google o red social"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                </ul>

@@ -39,10 +39,12 @@ hijo -> Directorio inferior al superior
 
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-padrehijohija-tab" data-toggle="pill" href="#v-pills-padrehijohija" role="tab" aria-controls="v-pills-padrehijohija" aria-selected="true">Padre-HijO -> Una misma página</a>
-        <a class="nav-link" id="v-pills-padrehijohija0-tab" data-toggle="pill" href="#v-pills-padrehijohija0" role="tab" aria-controls="v-pills-padrehijohija0" aria-selected="true">Padre-HijO -> Diferentes páginas</a>
-        <hr><a class="nav-link" id="v-pills-padrehijohija1-tab" data-toggle="pill" href="#v-pills-padrehijohija1" role="tab" aria-controls="v-pills-padrehijohija1" aria-selected="true">Padre -> HijAs</a>
-        <a class="nav-link" id="v-pills-padrehijohija2-tab" data-toggle="pill" href="#v-pills-padrehijohija2" role="tab" aria-controls="v-pills-padrehijohija2" aria-selected="false">Obtener del padre<br>desde las hijAs</a>
+        <a class="nav-link" id="v-pills-padrehijohija-tab" data-toggle="pill" href="#v-pills-padrehijohija" role="tab" aria-controls="v-pills-padrehijohija" aria-selected="true">Padre -> Hijo<br><small>Todos -> Uno</small></a>
+        <a class="nav-link" id="v-pills-padrehijohija0-tab" data-toggle="pill" href="#v-pills-padrehijohija0" role="tab" aria-controls="v-pills-padrehijohija0" aria-selected="true">Padre -> Hijo (@Input)<br>Hijo -> Padre (@Output)</a>
+        <hr><a class="nav-link" id="v-pills-padrehijohijax1-tab" data-toggle="pill" href="#v-pills-padrehijohijax1" role="tab" aria-controls="v-pills-padrehijohijax1" aria-selected="true">Routing.Ts</a>
+        <a class="nav-link" id="v-pills-padrehijohija1-tab" data-toggle="pill" href="#v-pills-padrehijohija1" role="tab" aria-controls="v-pills-padrehijohija1" aria-selected="true">Padre -> Hijas</a>
+        <a class="nav-link" id="v-pills-padrehijohija2-tab" data-toggle="pill" href="#v-pills-padrehijohija2" role="tab" aria-controls="v-pills-padrehijohija2" aria-selected="false">Obtener del padre<br>desde las hijas</a>
+        <a class="nav-link" id="v-pills-padrehijohijax2-tab" data-toggle="pill" href="#v-pills-padrehijohijax2" role="tab" aria-controls="v-pills-padrehijohijax2" aria-selected="false">Ejemplo</a>
       </div>
     </div>
 
@@ -54,108 +56,6 @@ hijo -> Directorio inferior al superior
         <div class="tab-pane fade" id="v-pills-padrehijohija0" role="tabpanel" aria-labelledby="v-pills-padrehijohija0-tab"><hr><app-serviciopadreehijo></app-serviciopadreehijo></div>
 
         <div class="tab-pane fade" id="v-pills-padrehijohija1" role="tabpanel" aria-labelledby="v-pills-padrehijohija1-tab">
-          
-        <!-- <a class="nav-link" [routerLink]="['/usuarioH/:id']">Ir</a> OTRA FORMA QUE FUNCIONA-->
-        <a [routerLink]="['/usuarioH','19']">Ir al ejemplo</a>
-        <!-- una id que ponemos, cualquier número/letra, por ahora -->
-        
-
-        <div class="card-group">
-          <div class="card text-dark bg-danger m-3">
-              <div class="card-header">
-                  <pre class="card-text text-center blanco"><h3>App.routing/routes.ts <small>(Todo junto sin dividir en otro usuario.router.ts)</small></h3></pre>
-              </div>
-              <div class="card-body">
-                <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
-
-import {{c}} AppComponent } from './app.component';
-
-import {{c}} HomeComponent } from './paginas/home/home.component';
-import {{c}} ErrorComponent } from './componentes/error/error.component';
-import {{c}} PieComponent } from './componentes/pie/pie.component';
-import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
-
-<b>import {{c}} UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
-import {{c}} UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
-import {{c}} UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
-import {{c}} UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';</b>
-
-export const APP_ROUTES: Routes = [   
-  {{c}} path: '', component: HomeComponent },   
-  {{c}} path: 'home', component: HomeComponent},   
-  {{c}} path: 'pie', component: PieComponent},  
-  {{c}} path: 'cabecera', component: CabeceraComponent},  
-  {{c}} path: 'appcomponente', component: AppComponent },   
-  <b>{{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: [   <abbr title="usuario/id/UNA_DE_LAS_HIJAS -> Dentro de cada perfil de usuario/otro, poder modificar/nuevo/detalle de sus datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},   <abbr title="usuario/id/nuevo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},  <abbr title="usuario/id/editar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},   <abbr title="usuario/id/detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-  {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}   <abbr title="Si ponemos otra dirección (usuarioH/19/direccionMalPuesta) en lugar de usuarioH/:id/nuevoH (editarH o detalleH) nos va a la ruta que hemos puesto (nuevoH)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    ] 
-},</b>
-  {{c}} path: '**', component: HomeComponent }  
-];
- 
-export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>  
-              </div>
-          </div>
-      </div>
-
-      <div class="card-group">
-        <div class="card text-dark bg-danger m-3">
-            <div class="card-header">
-                <pre class="card-text text-center blanco"><h3>App.routing/routes.ts -> usuario.routes.ts</h3></pre>
-            </div>
-            <div class="card-body">
-              <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
-
-import {{c}} AppComponent } from './app.component';
-
-import {{c}} HomeComponent } from './paginas/home/home.component';
-import {{c}} ErrorComponent } from './componentes/error/error.component';
-import {{c}} PieComponent } from './componentes/pie/pie.component';
-import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
-
-<b>import {{c}} USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';</b>   <abbr title="Llamamos para enlazarlo y usarse el Routes/routing específico de usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-export const APP_ROUTES: Routes = [   
-  {{c}} path: '', component: HomeComponent },   
-  {{c}} path: 'home', component: HomeComponent},   
-  {{c}} path: 'pie', component: PieComponent},  
-  {{c}} path: 'cabecera', component: CabeceraComponent},  
-  {{c}} path: 'appcomponente', component: AppComponent },   
-  {{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: <b>USUARIO_ROUTES</b>
-},
-  {{c}} path: '**', component: HomeComponent }  
-];
- 
-export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>
-            </div>
-        </div>
-        <div class="card text-dark bg-danger m-3">
-          <div class="card-header">
-              <pre class="card-text text-center blanco"><h3>Usuario.routes.ts</h3></pre>
-          </div>
-          <div class="card-body">
-              <pre class="card-text blanco"><b>import {{c}} Routes } from '@angular/router';   <abbr title="Llama a Routes para poder realizar el enlace entre páginas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-<abbr title="Para poder enlazar las subdirecciones del usuario: Nuevo, Editar, Detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-import {{c}} UsuarioNuevoHijaComponent } from './usuario-nuevo-hija/usuario-nuevo-hija.component';   
-import {{c}} UsuarioEditarHijaComponent } from './usuario-editar-hija/usuario-editar-hija.component';
-import {{c}} UsuarioDetalleHijaComponent } from './usuario-detalle-hija/usuario-detalle-hija.component';
-
-export const USUARIO_ROUTES: Routes = [   <abbr title="USUARIO_ROUTES -> Lo sacamos con export y lo llamamos en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-    {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},
-    {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},
-    {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},
-    {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}  
-
-]</b>;</pre>
-          </div>
-      </div>
-    </div>
-      
 
       <div class="card-group">
         <div class="card text-dark bg-warning m-3">
@@ -202,107 +102,6 @@ export const USUARIO_ROUTES: Routes = [   <abbr title="USUARIO_ROUTES -> Lo saca
 
         <div class="tab-pane fade" id="v-pills-padrehijohija2" role="tabpanel" aria-labelledby="v-pills-padrehijohija2-tab">
           
-          <!-- <a class="nav-link" [routerLink]="['/usuarioH/:id']">Ir</a> OTRA FORMA QUE FUNCIONA-->
-        <a [routerLink]="['/usuarioH','19']">Ir al ejemplo</a>
-        <!-- una id que ponemos, cualquier número/letra, por ahora -->
-
-<div class="card-group">
-          <div class="card text-dark bg-danger m-3">
-              <div class="card-header">
-                  <pre class="card-text text-center blanco"><h3>App.routing/routes.ts <small>(Todo junto sin dividir en otro usuario.router.ts)</small></h3></pre>
-              </div>
-              <div class="card-body">
-                <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
-
-import {{c}} AppComponent } from './app.component';
-
-import {{c}} HomeComponent } from './paginas/home/home.component';
-import {{c}} ErrorComponent } from './componentes/error/error.component';
-import {{c}} PieComponent } from './componentes/pie/pie.component';
-import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
-
-<b>import {{c}} UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
-import {{c}} UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
-import {{c}} UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
-import {{c}} UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';</b>
-
-export const APP_ROUTES: Routes = [   
-  {{c}} path: '', component: HomeComponent },   
-  {{c}} path: 'home', component: HomeComponent},   
-  {{c}} path: 'pie', component: PieComponent},  
-  {{c}} path: 'cabecera', component: CabeceraComponent},  
-  {{c}} path: 'appcomponente', component: AppComponent },   
-  <b>{{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: [   <abbr title="usuario/id/UNA_DE_LAS_HIJAS -> Dentro de cada perfil de usuario/otro, poder modificar/nuevo/detalle de sus datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},   <abbr title="usuario/id/nuevo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},  <abbr title="usuario/id/editar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-        {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},   <abbr title="usuario/id/detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-  {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}   <abbr title="Si ponemos otra dirección (usuarioH/19/direccionMalPuesta) en lugar de usuarioH/:id/nuevoH (editarH o detalleH) nos va a la ruta que hemos puesto (nuevoH)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    ] 
-},</b>
-  {{c}} path: '**', component: HomeComponent }  
-];
- 
-export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>  
-              </div>
-          </div>
-      </div>
-
-      <div class="card-group">
-        <div class="card text-dark bg-danger m-3">
-            <div class="card-header">
-                <pre class="card-text text-center blanco"><h3>App.routing/routes.ts -> usuario.routes.ts</h3></pre>
-            </div>
-            <div class="card-body">
-              <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
-
-import {{c}} AppComponent } from './app.component';
-
-import {{c}} HomeComponent } from './paginas/home/home.component';
-import {{c}} ErrorComponent } from './componentes/error/error.component';
-import {{c}} PieComponent } from './componentes/pie/pie.component';
-import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
-
-<b>import {{c}} USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';</b>   <abbr title="Llamamos para enlazarlo y usarse el Routes/routing específico de usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-export const APP_ROUTES: Routes = [   
-  {{c}} path: '', component: HomeComponent },   
-  {{c}} path: 'home', component: HomeComponent},   
-  {{c}} path: 'pie', component: PieComponent},  
-  {{c}} path: 'cabecera', component: CabeceraComponent},  
-  {{c}} path: 'appcomponente', component: AppComponent },   
-  {{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: <b>USUARIO_ROUTES</b>
-},
-  {{c}} path: '**', component: HomeComponent }  
-];
- 
-export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>
-            </div>
-        </div>
-        <div class="card text-dark bg-danger m-3">
-          <div class="card-header">
-              <pre class="card-text text-center blanco"><h3>Usuario.routes.ts</h3></pre>
-          </div>
-          <div class="card-body">
-              <pre class="card-text blanco"><b>import {{c}} Routes } from '@angular/router';   <abbr title="Llama a Routes para poder realizar el enlace entre páginas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-<abbr title="Para poder enlazar las subdirecciones del usuario: Nuevo, Editar, Detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-import {{c}} UsuarioNuevoHijaComponent } from './usuario-nuevo-hija/usuario-nuevo-hija.component';   
-import {{c}} UsuarioEditarHijaComponent } from './usuario-editar-hija/usuario-editar-hija.component';
-import {{c}} UsuarioDetalleHijaComponent } from './usuario-detalle-hija/usuario-detalle-hija.component';
-
-export const USUARIO_ROUTES: Routes = [   <abbr title="USUARIO_ROUTES -> Lo sacamos con export y lo llamamos en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-    {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},
-    {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},
-    {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},
-    {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}  
-
-]</b>;</pre>
-          </div>
-      </div>
-    </div>
-
-
      <div class="card-group">
         <div class="card text-dark bg-primary m-3">
             <div class="card-header">
@@ -354,7 +153,7 @@ export class UsuarioHijaComponent implements OnInit {{c}}
           </div>
           <div class="card-body">
             <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-              <b>import {{c}} ActivatedRoute } from '@angular/router';</b>   <abbr title="Para navegar entre los enlaces y así coger la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} ActivatedRoute } from '@angular/router';</b>   <abbr title="Para navegar entre los enlaces y así coger la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 @Component({{c}}
   selector: 'app-usuario-nuevo-hija',
@@ -410,6 +209,137 @@ export class UsuarioNuevoHijaComponent implements OnInit {{c}}
 
 
         </div>
+
+        <div class="tab-pane fade" id="v-pills-padrehijohijax2" role="tabpanel" aria-labelledby="v-pills-padrehijohijax2-tab">
+
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                       <!-- <a class="nav-link btn btn-danger" [routerLink]="['/usuarioH/:id']">Ir</a> OTRA FORMA QUE FUNCIONA-->
+                       <button type="button" class="btn btn-danger" [routerLink]="['/usuarioH','19']">Ir al ejemplo</button>
+                    <!-- una id que ponemos, cualquier número/letra, por ahora -->
+        
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-padrehijohijax1" role="tabpanel" aria-labelledby="v-pills-padrehijohijax1-tab">
+
+        <div class="card-group">
+          <div class="card text-dark bg-danger m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center blanco"><h3>App.routing/routes.ts <small>(Todo junto sin dividir en otro usuario.router.ts)</small></h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} UsuarioHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-hija/usuario-hija.component';
+import {{c}} UsuarioNuevoHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-nuevo-hija/usuario-nuevo-hija.component';
+import {{c}} UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-editar-hija/usuario-editar-hija.component';
+import {{c}} UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';</b>
+
+export const APP_ROUTES: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },   
+  <b>{{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: [   <abbr title="usuario/id/UNA_DE_LAS_HIJAS -> Dentro de cada perfil de usuario/otro, poder modificar/nuevo/detalle de sus datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},   <abbr title="usuario/id/nuevo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},  <abbr title="usuario/id/editar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},   <abbr title="usuario/id/detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}   <abbr title="Si ponemos otra dirección (usuarioH/19/direccionMalPuesta) en lugar de usuarioH/:id/nuevoH (editarH o detalleH) nos va a la ruta que hemos puesto (nuevoH)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    ] 
+},</b>
+  {{c}} path: '**', component: HomeComponent }  
+];
+ 
+export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>  
+              </div>
+          </div>
+      </div>
+
+
+
+      <div class="card-group">
+        <div class="card text-dark bg-danger m-3">
+            <div class="card-header">
+                <pre class="card-text text-center blanco"><h3>App.routing/routes.ts -> usuario.routes.ts</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text blanco">import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';</b>   <abbr title="Llamamos para enlazarlo y usarse el Routes/routing específico de usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+export const APP_ROUTES: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },   
+  {{c}} path: 'usuarioH/:id', component: UsuarioHijaComponent, children: <b>USUARIO_ROUTES</b>
+},
+  {{c}} path: '**', component: HomeComponent }  
+];
+ 
+export const APP_ROUTING: RouterModule.forRoot(APP_ROUTES);</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-danger m-3">
+          <div class="card-header">
+              <pre class="card-text text-center blanco"><h3>Usuario.routes.ts</h3></pre>
+          </div>
+          <div class="card-body">
+              <pre class="card-text blanco"><b>import {{c}} Routes } from '@angular/router';   <abbr title="Llama a Routes para poder realizar el enlace entre páginas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<abbr title="Para poder enlazar las subdirecciones del usuario: Nuevo, Editar, Detalle"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} UsuarioNuevoHijaComponent } from './usuario-nuevo-hija/usuario-nuevo-hija.component';   
+import {{c}} UsuarioEditarHijaComponent } from './usuario-editar-hija/usuario-editar-hija.component';
+import {{c}} UsuarioDetalleHijaComponent } from './usuario-detalle-hija/usuario-detalle-hija.component';
+
+export const USUARIO_ROUTES: Routes = [   <abbr title="USUARIO_ROUTES -> Lo sacamos con export y lo llamamos en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    {{c}} path: 'nuevoH', component: UsuarioNuevoHijaComponent},
+    {{c}} path: 'editarH', component: UsuarioEditarHijaComponent},
+    {{c}} path: 'detalleH', component: UsuarioDetalleHijaComponent},
+    {{c}} path: '**', pathMatch: 'full', redirectTo: 'nuevoH'}  
+
+]</b>;</pre>
+          </div>
+      </div>
+    </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
         
       </div>
     </div>

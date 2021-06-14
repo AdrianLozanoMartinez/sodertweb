@@ -26,7 +26,7 @@ export class MostrarhttpspotifyComponent implements OnInit {
       this.variable_servicio.get_spotify()
                             .subscribe( (datoRecibido: any) => {     //Subscribe tiene dos funciones, la 1º es lo correcto y la segunda el error
 
-            console.log(datoRecibido);    //Correcto
+           // console.log(datoRecibido);    //Correcto
             this.nuevasCanciones = datoRecibido;
             this.variable_loading = false;
       }, ( error_recibido ) => { //Error
@@ -35,9 +35,9 @@ export class MostrarhttpspotifyComponent implements OnInit {
 
         this.variable_loading = false; 
         
-        console.log(error_recibido);  
+        //console.log(error_recibido);  
 
-        console.log(error_recibido.error.error.message);  
+       // console.log(error_recibido.error.error.message);  
         
         this.variable_mensaje_error = error_recibido.error.error.message; 
       }    
