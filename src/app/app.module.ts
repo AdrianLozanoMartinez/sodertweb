@@ -167,11 +167,6 @@ import { Forfireunelementohtml5Component } from './paginas/programacion/firebase
 import { Forfirevarioselementoshtml2Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml2/forfirevarioselementoshtml2.component';
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
-import { ExistenciaComponent } from './paginas/programacion/firebase/login/existencia/existencia.component';
-import { MensajecargaerrorComponent } from './paginas/programacion/firebase/login/mensajecargaerror/mensajecargaerror.component';
-import { RecordarComponent } from './paginas/programacion/firebase/login/recordar/recordar.component';
-import { ProtegidoguardfirebaseComponent } from './paginas/programacion/firebase/login/protegidoguardfirebase/protegidoguardfirebase.component';
-import { ProtegidoguardfirebaseloginComponent } from './paginas/programacion/firebase/login/protegidoguardfirebaselogin/protegidoguardfirebaselogin.component';
 import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarchivos/subirarchivos.component';
 import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
@@ -260,6 +255,10 @@ import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth
 import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
 import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
 import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
+import { TemplateformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/templateformularioangular/templateformularioangular.component';
+import { ReactivoformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformularioangular.component';
+import { FirebaseformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/firebaseformularioangular/firebaseformularioangular.component';
+import { FormularioangularprincipalComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangularprincipal.component';
 
 
 
@@ -404,11 +403,6 @@ import { ProtegergirebaseangularComponent } from './paginas/programacion/angular
     Forfirevarioselementoshtml3Component,
     Forfirevarioselementoshtml4Component,
     HostingComponent,
-    ExistenciaComponent,
-    MensajecargaerrorComponent,
-    RecordarComponent,
-    ProtegidoguardfirebaseComponent,
-    ProtegidoguardfirebaseloginComponent,
     SubirarchivosComponent,
     InstalacionfirebaseComponent,
     SubidafireComponent,
@@ -483,7 +477,11 @@ import { ProtegergirebaseangularComponent } from './paginas/programacion/angular
     Auth0auth0Component,
     RegistrofirebaseangularrComponent,
     LoginangularloginfirebaseComponent,
-    ProtegergirebaseangularComponent
+    ProtegergirebaseangularComponent,
+    TemplateformularioangularComponent,
+    ReactivoformularioangularComponent,
+    FirebaseformularioangularComponent,
+    FormularioangularprincipalComponent
   ],
   imports: [
     //Por defecto

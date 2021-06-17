@@ -100,10 +100,6 @@ import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarc
 import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
 
-//Guard - tipo
-import { ElguardianGuard } from './paginas/programacion/firebase/login/guard/elguardian.guard';   
-//Login - Páginas protegidas                                                                    
-import { ProtegidoguardfirebaseComponent } from './paginas/programacion/firebase/login/protegidoguardfirebase/protegidoguardfirebase.component'; 
 //Programacion - Auth0
 import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
 //Programacion - Servidor Local
@@ -250,9 +246,6 @@ export const appRoutes: Routes = [
   { path: 'auth0', component: Auth0auth0Component},
   //Fonts google
   { path: 'fontsgoogle', component: FontsgoogleprincipalComponent},
-  /*Archivo protegido que vemos al longearnos, Elguardian(nombre del guardian)
-    Guard(es la extensión del guardián) -> [ElguardianGuard]*/       
-  { path: 'protegidoguardfirebase', component: ProtegidoguardfirebaseComponent, canActivate: [ElguardianGuard]},
   { path: 'subirarchivos', component: SubirarchivosComponent},
   { path: 'subidafire', component: SubidafireComponent},
   //Programacion - Servidor Local

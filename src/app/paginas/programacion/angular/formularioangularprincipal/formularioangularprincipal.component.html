@@ -1,0 +1,22 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-formulariogeneral-tab" data-toggle="pill" href="#pills-formulariogeneral" role="tab" aria-controls="pills-formulariogeneral" aria-selected="true" style="color: black;">Template <small>(No recomendable)</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-formulariogeneral0-tab" data-toggle="pill" href="#pills-formulariogeneral0" role="tab" aria-controls="pills-formulariogeneral0" aria-selected="false" style="color: black;">Reactivo <small>(Recomendable)</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-formularioprincipal0-tab" data-toggle="pill" href="#pills-formularioprincipal0" role="tab" aria-controls="pills-formularioprincipal0" aria-selected="false" style="color: black;">Firebase</a>
+    </li>
+    <button class="btn btn-danger m-2" [routerLink]="['/programacion']">Atras</button>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-formulariogeneral" role="tabpanel" aria-labelledby="pills-formulariogeneral-tab"><app-templateformularioangular></app-templateformularioangular></div>
+  
+    <div class="tab-pane fade" id="pills-formulariogeneral0" role="tabpanel" aria-labelledby="pills-formulariogeneral0-tab"><app-reactivoformularioangular></app-reactivoformularioangular></div>
+    
+    <div class="tab-pane fade" id="pills-formularioprincipal0" role="tabpanel" aria-labelledby="pills-formularioprincipal0-tab"><app-firebaseformularioangular></app-firebaseformularioangular></div>
+      
+  </div>
