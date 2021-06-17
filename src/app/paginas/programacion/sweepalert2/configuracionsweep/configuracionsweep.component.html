@@ -1,5 +1,12 @@
 <b><a href="https://sweetalert2.github.io/#configuration">Web</a></b>
-      <pre><b>import Swal from 'sweetalert2'</b>
+ 
+<div class="card-group">
+  <div class="card text-dark bg-primary m-3">
+    <div class="card-header">
+        <pre class="card-text text-center"><h3>Ts/Js</h3></pre>
+    </div>
+    <div class="card-body">
+      <pre class="card-text"><b>import Swal from 'sweetalert2'</b>
         
         <b>Dentro de una función o del ngOnInit(){{c}}</b>
         <b>Swal.fire({{c}}</b>
@@ -10,7 +17,7 @@
           <b>iconHtml</b>: '{{fon}}',              //Debe ir también el <b>icon</b> anterior. 'Icono' -> Lo que pongamos en html Código
           <b>footer</b>: 'Título' o '{{t}}',                                      //'Título' o '{{t}}'
           <b>toast</b>: true,                                                     //Muestra la ventana más pequeña. Para que funcione (true)
-          <b>timer</b>: Swal.getTimerLeft(), Swal.stopTimer(), Swal.resumeTimer(), Swal.toggleTimer(), Swal.isTimerRunning() and Swal.increaseTimer(): 'No me funciona por ahora',
+          <b>timer</b>: 200, <abbr title="Ponemos el tiempo de permanencia del popup"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> Swal.getTimerLeft(), Swal.stopTimer(), Swal.resumeTimer(), Swal.toggleTimer(), Swal.isTimerRunning() and Swal.increaseTimer(): 'No me funciona por ahora',
           <b>inputValue</b>:                                                      /*No se aún pero pone que coge los datos. Según pone en la web: Ingrese el valor inicial del 
                                                                                   campo. Si el tipo de entrada es checkbox, inputValue representará el estado marcado. Si el 
                                                                                   tipo de entrada es texto, correo electrónico, número, teléfono o área de texto, se puede 
@@ -31,39 +38,29 @@
           <b>showCloseButton</b> Icono                                            //(x), para cerrar (Arriba a la derecha)
           <b>closeButtonHtml</b> 'Texto icono de cerrar' o código html            //(Ejemplo: {{x}}) -> aparece -> X
           <app-input></app-input><app-position></app-position><app-grow></app-grow><app-imagenurl></app-imagenurl>
-          <b>showClass</b>: 'No me funciona por ahora',
-          <b>hideClass</b>: 'No me funciona por ahora',
-          <b>backdrop</b>: 'No me funciona por ahora',
-          <b>target</b>: 'No me funciona por ahora',
-          <b>customClass</b>: 'No me funciona por ahora',
-          <b>timerProgressBar</b>: 'No me funciona por ahora',
-          <b>heightAuto</b>: 'No me funciona por ahora',
-          <b>stopKeydownPropagation</b>: 'No me funciona por ahora',
-          <b>keydownListenerCapture</b>: 'No me funciona por ahora)',
-          <b>confirmButtonAriaLabel</b>: 'No me funciona por ahora',
-          <b>cancelButtonAriaLabel</b>: 'No me funciona por ahora',
-          <b>reverseButtons</b>: 'No me funciona por ahora',
-          <b>focusConfirm</b>: 'No me funciona por ahora',
-          <b>focusCancel</b>: 'No me funciona por ahora',
-          <b>closeButtonAriaLabel</b>: 'No me funciona por ahora',
-          <b>showLoaderOnConfirm</b>: 'No me funciona por ahora',
-          <b>scrollbarPadding</b>: 'No me funciona por ahora',
-          <b>preConfirm</b>: 'No me funciona por ahora',
-          <b>inputPlaceholder</b>: 'No me funciona por ahora',
-          <b>inputAutoTrim</b>: 'No me funciona por ahora',
-          <b>inputAttributes</b>: 'No me funciona por ahora',
-          <b>inputValidator</b>: 'No me funciona por ahora',
-          <b>validationMessage</b>: 'No me funciona por ahora',
-          <b>progressSteps</b>: 'No me funciona por ahora',
-          <b>currentProgressStep</b>: 'No me funciona por ahora',
-          <b>progressStepsDistance</b>: 'No me funciona por ahora',
-          <b>onBeforeOpen</b>: 'No me funciona por ahora',
-          <b>onOpen</b>: 'No me funciona por ahora',
-          <b>onRender</b>: 'No me funciona por ahora',
-          <b>onClose</b>: 'No me funciona por ahora',
-          <b>onAfterClose</b>: 'No me funciona por ahora',
-          <b>onDestroy</b>: 'No me funciona por ahora',
-      <b>})
+          <b>customClass</b>{{c}}
+                    container: '...',
+                    popup: '...',
+                    header: '...',
+                    title: '...',
+                    closeButton: '...',
+                    icon: '...',
+                    image: '...',
+                    content: '...',
+                    htmlContainer: '...',
+                    input: '...',
+                    inputLabel: '...',
+                    validationMessage: '...',
+                    actions: '...',
+                    confirmButton: '...',
+                    denyButton: '...',
+                    cancelButton: '...',
+                    loader: '...',
+                    footer: '....'
+                  }
+          <b>})
       }
       </b></pre>
-  
+    </div>
+  </div>
+</div>

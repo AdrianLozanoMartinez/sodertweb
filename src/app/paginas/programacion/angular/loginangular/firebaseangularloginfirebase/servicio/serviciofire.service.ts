@@ -13,7 +13,6 @@ export class ServiciofireService {
 
   private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';
 
-  /*TOKEN*/
   TokenUsuario: string;  //Se inicializa sin valor (undefined) porque hasta que no se identifique no obtenemos ningún token
   
     //Copiamos la parte que se repite y lo metemos en la variable url
@@ -116,6 +115,12 @@ export class ServiciofireService {
   private guardarToken ( IDToken_Recibido: string ){   //Según video idToken
     this.TokenUsuario = IDToken_Recibido;
     localStorage.setItem('AlmacenaToken', IDToken_Recibido); //ID Token lo almacenamos en AlmacenaToken, su forma es un string y lo cogemos del IDToken_Recibido
+
+    ////////////////////////////////////////////Validación de la fecha
+    let hoy = new Date();   //hoy fecha actual
+    hoy.setSeconds( 3600 );   //hoy  1h en el futuro y lo convierte en número continuo (1558457400681)
+
+    localStorage.setItem('expira', hoy.getTime().toString() );  //Almacenamos en localStorage. expira u otro nombre, getTime -> Coge la fecha en número continuo (1558457400681) y para almacenar en localStorage es necesario convertirlo en string por eso usamos toString() 
   }
 
 
@@ -132,9 +137,31 @@ export class ServiciofireService {
   }
 
 
+  estaAutenticado(): boolean {  //El resultado dará un boolean
+     
+    
+    if( this.TokenUsuario.length <2 ){
+      return false;
+    }
+    
+    const expiraVariable = Number(localStorage.getItem('expira'));  //Coge la fecha que se guarda en el localStorage en formato string y lo transformamos en número
+
+    const expiraDate = new Date();  //Metemos la fecha actual
+    expiraDate.setTime(expiraVariable);  //Fecha en la que el token expira. Porque cogemos la fecha actual (expiraDate) y la comparamos con la fecha futura (expiraVariable) realizada en guardarToken
+
+
+    if ( expiraDate > new Date() ){  //Si la fecha futura es mayor que la actual es que aún estamos autentificado
+        return true;
+    }
+    else{     //Si la fecha futura es menor que la actual es que ya expiró
+      return false;
+    }
+    
+                  
+  }
 
   logout(){
-
+    localStorage.removeItem('AlmacenaToken');
   }
 
 

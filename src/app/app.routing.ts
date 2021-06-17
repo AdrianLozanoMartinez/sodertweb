@@ -76,7 +76,11 @@ import { ProtegidaComponent } from './paginas/programacion/angular/loginangular/
 import { GuardianGuard } from './paginas/programacion/angular/loginangular/auth0angular/guard/guardian.guard';
 import { LoginloginangularComponent } from './paginas/programacion/angular/loginangular/loginloginangular/loginloginangular.component';
 import { RegistroregistroangularComponent } from './paginas/programacion/angular/loginangular/registroregistroangular/registroregistroangular.component';
-
+import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
+import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
+import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
+import { GuardprotegergirebaseangularGuard } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/guardprotegergirebaseangular.guard';
+////////
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
 //Programacion - Firebase
@@ -92,12 +96,10 @@ import { Forfireunelementohtml5Component } from './paginas/programacion/firebase
 import { Forfirevarioselementoshtml2Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml2/forfirevarioselementoshtml2.component';
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
-import { LoginComponent } from './paginas/programacion/firebase/login/login.component';
 import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarchivos/subirarchivos.component';
 import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
-import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
-import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
+
 //Guard - tipo
 import { ElguardianGuard } from './paginas/programacion/firebase/login/guard/elguardian.guard';   
 //Login - Páginas protegidas                                                                    
@@ -151,6 +153,7 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
 
 //Routes/routing específico de usuario
 import { USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';
+
 
 
 
@@ -226,6 +229,7 @@ export const appRoutes: Routes = [
   { path: 'registroregistroangular', component: RegistroregistroangularComponent},
   { path: 'registrofirebaseangularr', component: RegistrofirebaseangularrComponent},
   { path: 'loginangularfirebase', component: LoginangularloginfirebaseComponent},
+  { path: 'protegergirebaseangular', component: ProtegergirebaseangularComponent, canActivate: [ GuardprotegergirebaseangularGuard ]},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
@@ -241,7 +245,6 @@ export const appRoutes: Routes = [
   { path: 'varioselementos2', component: Forfirevarioselementoshtml2Component},
   { path: 'varioselementos3', component: Forfirevarioselementoshtml3Component},
   { path: 'varioselementos4', component: Forfirevarioselementoshtml4Component},
-  { path: 'login', component: LoginComponent},
   { path: 'instalacionfirebase', component: InstalacionfirebaseComponent},
   //Auth0
   { path: 'auth0', component: Auth0auth0Component},

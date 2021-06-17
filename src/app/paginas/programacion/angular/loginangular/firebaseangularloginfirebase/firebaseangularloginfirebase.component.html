@@ -4,9 +4,9 @@
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-firebaseangularfirebase-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase" role="tab" aria-controls="v-pills-firebaseangularfirebase" aria-selected="true">App.module.ts</a>
         <a class="nav-link" id="v-pills-firebaseangularfirebase0-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase0" role="tab" aria-controls="v-pills-firebaseangularfirebase0" aria-selected="true">Conexión firebase</a>
-        <a class="nav-link" id="v-pills-firebaseangularfirebase1-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase1" role="tab" aria-controls="v-pills-firebaseangularfirebase1" aria-selected="false">Registro + Token</a>
-        <a class="nav-link" id="v-pills-firebaseangularfirebase2-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase2" role="tab" aria-controls="v-pills-firebaseangularfirebase2" aria-selected="false">Login + Token</a>
-        <a class="nav-link" id="v-pills-firebaseangularfirebase3-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase3" role="tab" aria-controls="v-pills-firebaseangularfirebase3" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-firebaseangularfirebase1-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase1" role="tab" aria-controls="v-pills-firebaseangularfirebase1" aria-selected="false">Registro <br><small><small>Token + Sweepalert2 + Recordar</small></small></a>
+        <a class="nav-link" id="v-pills-firebaseangularfirebase2-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase2" role="tab" aria-controls="v-pills-firebaseangularfirebase2" aria-selected="false">Login <br><small><small>Token + Sweepalert2 + Recordar</small></small></a>
+        <a class="nav-link" id="v-pills-firebaseangularfirebase3-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase3" role="tab" aria-controls="v-pills-firebaseangularfirebase3" aria-selected="false">Página protegida <br><small><small>Guard + Logout</small></small></a>
       </div>
     </div>
 
@@ -143,7 +143,7 @@ export class ServiciofireService {{c}}
       <b>const authData = {{c}}</b>  <abbr title="Como viene incluido en el model email/password tenemos que declarar el token"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         <b>...usuario,</b>           <abbr title="Del model. coge todos los elementos (...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         <b>returnSecureToken: true</b>  <abbr title="Copiamos el token de la web y la declaramos en true"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-  }; 
+      }; 
   
     //LLAMA A NUESTRO SERVICIO HTTP POST PARA CREAR
 
@@ -205,6 +205,8 @@ export class ServiciofireService {{c}}
 <b>import {{c}} UsuarioModel } from '../../model/usuario.model';</b>  <abbr title="Model del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} NgForm } from '@angular/forms';</b>  <abbr title="Funciones para formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} ServiciofireService } from '../servicio/serviciofire.service';</b>  <abbr title="Servicio donde llamamos a la API y de ese modo conectarnos con el componente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import Swal from 'sweetalert2'</b>  <abbr title="Popup personalizado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} Router } from '@angular/router';</b>  <abbr title="Redirección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 @Component({{c}}
   selector: 'app-registrofirebaseangularr',
@@ -215,7 +217,10 @@ export class RegistrofirebaseangularrComponent implements OnInit {{c}}
 
   <b>usuario: UsuarioModel;</b>  <abbr title="Variable dandole formato del model"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  constructor( <b>private auth: ServiciofireService</b> ) {{c}} }  <abbr title="Variable que metemos el servicio dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>recordarme = false;</b>  <abbr title="Variable para el botón recordar, la inicializamos en false para que no aparezca marcado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private auth: ServiciofireService,  <abbr title="Variable que metemos el servicio dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  private router: Router</b> ) {{c}} }  <abbr title="Metemos en la variable router para poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
   ngOnInit() {{c}}
     <b>this.usuario = new UsuarioModel();</b>  <abbr title="Metemos el model en el usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
@@ -226,13 +231,35 @@ export class RegistrofirebaseangularrComponent implements OnInit {{c}}
     <b>if ( datoRecibido.invalid ){{c}}</b> <abbr title="Si el formulario introducido es invalido se sale"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
           <b>return;</b>
       <b>}</b>
+
+ <b>  Swal.fire({{c}}  <abbr title="Popup personalizado cuando es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        allowOutsideClick: false,  <abbr title="Usuario no pueda cerrarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        icon: 'info',             
+        text: 'Espere por favor...'
+      });
+      Swal.showLoading();  <abbr title="Transforma el botón en un loading"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
       
       <b>this.auth.registrar(this.usuario).subscribe ( resp => {{c}}</b>
         console.log(resp);
+
+        <b>Swal.close();  <abbr title="Cerrar sweepalert2 porque ha terminado de cargar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          if ( this.recordarme ){{c}}  <abbr title="Si es true, es decir, si seleccionamos la casilla de querer recordar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          localStorage.setItem('nombreTokenEmail', this.usuario.email);  <abbr title="Guardamos en el localStorage el email del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+
+          this.router.navigateByUrl('/protegergirebaseangular');</b>  <abbr title="Usamos router para poder navegar (navigateByUrl) a la página que pongamos una vez hecho registro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         
        <b>}, (variableRecibirError) => {{c}}</b>  <abbr title="Coge el error recibido. SI QUEREMOS CONTROLAR EL ERROR AQUÍ O EN EL SERVICIO. RECOMEDABLE AQUÍ"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         console.log(<b>variableRecibirError.error.error.message</b>);  <abbr title="Saca el mensaje del error, en este caso es: EMAIL_EXISTS. Sabemos que son varios error al mirar en consola, vemos error y dentro otro error..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-      <b>}</b>
+      
+      <b>Swal.fire({{c}}  <abbr title="Popup personalizad cuando es incorrecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          icon: 'error',
+          title: 'Error al autenticar',
+          text: variableRecibirError.error.error.message  <abbr title="Ponemos el mismo error que nos da la API pero podemos poner otro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        });</b>
+      
+        <b>}</b>
       
       <b>);</b>
 
@@ -293,7 +320,8 @@ export class RegistrofirebaseangularrComponent implements OnInit {{c}}
                 {{co}}div class="flex-sb-m w-full p-t-3 p-b-24">
 
                     {{co}}div class="contact100-form-checkbox">
-                        {{co}}input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        {{co}}input  <b>{{t}}(ngModel)]="recordarme"</b>  <abbr title="Cogemos el click de marcar la casilla o no, la mandamos al Ts para ejecutar las funciones para guardar o no email u otro dato al localStorage"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                     class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         {{co}}label class="label-checkbox100" for="ckb1">Recordar mi usuario{{co}}/label>
                     {{co}}/div>
 
@@ -362,7 +390,7 @@ export class ServiciofireService {{c}}
       <b>const authData = {{c}}</b>  <abbr title="Como viene incluido en el model email/password tenemos que declarar el token"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         <b>...usuario,</b>           <abbr title="Del model. coge todos los elementos (...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         <b>returnSecureToken: true</b>  <abbr title="Copiamos el token de la web y la declaramos en true"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-  }; 
+      }; 
   
     //LLAMA A NUESTRO SERVICIO HTTP POST PARA CREAR
 
@@ -394,6 +422,12 @@ export class ServiciofireService {{c}}
     <b>private guardarToken ( IDToken_Recibido: string ){{c}}</b>  <abbr title="Donde guardaremos el Token que recibimos del registro/login cuando es llamado, para luego leerlo y usarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       <b>this.TokenUsuario = IDToken_Recibido; </b> <abbr title="El Id del token recibido lo metemos en la variable TokenUsuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       <b>localStorage.setItem('AlmacenaToken', IDToken_Recibido);</b> <abbr title="ID Token lo almacenamos en AlmacenaToken, su forma es un string y lo cogemos del IDToken_Recibido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+ 
+      <b>let hoy = new Date();   <abbr title="Se almacena en la variable hoy la fecha actual"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        hoy.setSeconds( 3600 );  <abbr title="La variable hoy se guarda en 1h en el futuro y lo convierte en número continuo (1558457400681)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+        localStorage.setItem('expira', hoy.getTime().toString() );</b>  <abbr title="Almacenamos en localStorage. expira u otro nombre, getTime -> Coge la fecha en número continuo (1558457400681) y para almacenar en localStorage es necesario convertirlo en string por eso usamos toString() "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+ 
     <b>}
   
   
@@ -408,6 +442,28 @@ export class ServiciofireService {{c}}
   
         return this.TokenUsuario;</b>  <abbr title="Devolvemos la variable del token tenga (if) o no tenga (else) token almacenado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     <b>}</b>
+
+
+    <b>  estaAutenticado(): boolean {{c}}  <abbr title="El resultado dará un boolean"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      if( this.TokenUsuario.length {{co}}2 ){{c}}  <abbr title="Si el token almacenado tiene una longitud menor de 2 se sale (return) y no se realiza las funciones de abajo (guardado de fecha), significa que no está autentificado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        return false;
+      }
+      
+      const expiraVariable = Number(localStorage.getItem('expira'));  <abbr title="Coge la fecha que se guarda en el localStorage en formato string y lo transformamos en número"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+      const expiraDate = new Date();  <abbr title="Metemos la fecha actual"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      expiraDate.setTime(expiraVariable);  <abbr title="Fecha en la que el token expira. Porque cogemos la fecha actual (expiraDate) y la comparamos con la fecha futura (expiraVariable) realizada en guardarToken"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+  
+      if ( expiraDate > new Date() ){{c}}  <abbr title="Si la fecha futura es mayor que la actual es que aún estamos autentificado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          return true;
+      }
+      else{{c}}   <abbr title="Si la fecha futura es menor que la actual es que ya expiró"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        return false;
+      }
+
+    }</b>
 
 }</pre>
       </div>
@@ -424,6 +480,8 @@ export class ServiciofireService {{c}}
 <b>import {{c}} UsuarioModel } from '../../model/usuario.model';</b>  <abbr title="Model del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} NgForm } from '@angular/forms';</b>  <abbr title="Funciones para formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 <b>import {{c}} ServiciofireService } from '../servicio/serviciofire.service';</b>  <abbr title="Servicio donde llamamos a la API y de ese modo conectarnos con el componente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import Swal from 'sweetalert2'</b>  <abbr title="Popup personalizado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} Router } from '@angular/router';</b>  <abbr title="Redirección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 @Component({{c}}
   selector: 'app-loginangularloginfirebase',
@@ -434,22 +492,53 @@ export class LoginangularloginfirebaseComponent implements OnInit {{c}}
 
   <b>usuario: UsuarioModel = new UsuarioModel();</b>  <abbr title="Variable dandole formato del model"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  constructor( <b>private auth: ServiciofireService</b> ) {{c}} }  <abbr title="Variable que metemos el servicio dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>recordarme = false;</b>  <abbr title="Variable para el botón recordar, la inicializamos en false para que no aparezca marcado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  ngOnInit(): void {{c}}
+  constructor( <b>private auth: ServiciofireService,  <abbr title="Variable que metemos el servicio dentro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  private router: Router</b> ) {{c}} }  <abbr title="Metemos en la variable router para poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit() {{c}}
+
+    <b>if( localStorage.getItem ('nombreTokenEmail') ){{c}}</b>  <abbr title="AUNQUE LE DEMOS A RECORDAR EN REGISTRAR APARECERÁ SOLO EN LOGIN PORQUE LO HEMOS PUESTO AQUÍ, podemos elegir si queremos que recuerde ne el login o registrar, pero el efecto es igual"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>this.usuario.email = localStorage.getItem('nombreTokenEmail');   <abbr title="En registro y login debe tener el mismo nombre (nombreTokenEmail) para que pueda leer y mostrar luego"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.recordarme = true;  <abbr title="Si se encuentra lo anterior (Se encuentra nombreTokenEmail en el localStorage) se marca (true) la casilla de recordar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }</b>
+
   }
 
   <b>loginTs( datoRecibido: NgForm ){{c}}</b>  <abbr title="Función que comprueba lo que metemos en el formulario mandandolo al servicio y este a la API de firebase para comprobar si está o no"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     <b>if ( datoRecibido.invalid ){{c}}</b>  <abbr title="Si el formulario introducido es invalido se sale"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         <b>return;</b>
     <b>}
+
+   <b>Swal.fire({{c}}  <abbr title="Popup personalizado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        allowOutsideClick: false,  <abbr title="Usuario no pueda cerrarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        icon: 'info',             
+        text: 'Espere por favor...'
+      });
+      Swal.showLoading();  <abbr title="Transforma el botón en un loading"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
     
     this.auth.login(this.usuario).subscribe ( resp => {{c}}</b>
       console.log(<b>resp</b>);
+
+      <b>Swal.close();  <abbr title="Cerrar sweepalert2 porque ha terminado de cargar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        if ( this.recordarme ){{c}}  <abbr title="Si es true, es decir, si seleccionamos la casilla de querer recordar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          localStorage.setItem('nombreTokenEmail', this.usuario.email);  <abbr title="Guardamos en el localStorage el email del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+
+        this.router.navigateByUrl('/protegergirebaseangular');</b>  <abbr title="Usamos router para poder navegar (navigateByUrl) a la página que pongamos una vez hecho login"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       
     <b>},</b> (<b>variableRecibirError</b>) <b>=> {{c}}</b>  <abbr title="Coge el error recibido. SI QUEREMOS CONTROLAR EL ERROR AQUÍ O EN EL SERVICIO. RECOMEDABLE AQUÍ"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       console.log(<b>variableRecibirError.error.error.message</b>);  <abbr title="Muestra el mensaje del error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    <b>}</b>
+    
+      <b>Swal.fire({{c}}  <abbr title="Popup personalizad cuando es incorrecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        icon: 'error',
+        title: 'Error al autenticar',
+        text: variableRecibirError.error.error.message  <abbr title="Ponemos el mismo error que nos da la API pero podemos poner otro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      });</b>
+    
+      <b>}</b>
     
     <b>);</b>
     
@@ -497,7 +586,8 @@ export class LoginangularloginfirebaseComponent implements OnInit {{c}}
                 
                 {{co}}div class="flex-sb-m w-full p-t-3 p-b-24">
                     {{co}}div class="contact100-form-checkbox">
-                        {{co}}input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        {{co}}input  <b>{{t}}(ngModel)]="recordarme"</b>  <abbr title="Cogemos el click de marcar la casilla o no, la mandamos al Ts para ejecutar las funciones para guardar o no email u otro dato al localStorage"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                      class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         {{co}}label class="label-checkbox100" for="ckb1">Recordar mi usuario{{co}}/label>
                     {{co}}/div>
 
@@ -521,7 +611,232 @@ export class LoginangularloginfirebaseComponent implements OnInit {{c}}
 </div>
 
 
-<div class="tab-pane fade" id="v-pills-firebaseangularfirebase3" role="tabpanel" aria-labelledby="v-pills-firebaseangularfirebase3-tab">x</div>
+<div class="tab-pane fade" id="v-pills-firebaseangularfirebase3" role="tabpanel" aria-labelledby="v-pills-firebaseangularfirebase3-tab"><app-protegergirebaseangular></app-protegergirebaseangular>
+
+  <div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+import {{c}} HttpClient } from '@angular/common/http';
+import {{c}} UsuarioModel } from '../../model/usuario.model';
+import {{c}} catchError, map } from 'rxjs/operators';   //Token
+
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciofireService {{c}}
+
+  private url = 'https://identitytoolkit.googleapis.com/v1/accounts:sign'; 
+
+  private apikey = 'AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg';
+
+  TokenUsuario: string; 
+  
+    //Copiamos la parte que se repite y lo metemos en la variable url
+
+    //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]              //Crear usuario
+    //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]   //Login usuario
+
+  constructor( private http: HttpClient ) {{c}} 
+    this.leerToken();  //Así nada más empezar vemos si tenemos algún token inicializado
+  }
+
+  registrar ( usuario: UsuarioModel ){{c}}        
+      
+      //Reducida
+      const authData = {{c}}   
+        ...usuario,  
+        returnSecureToken: true     
+      }; 
+
+  //LLAMAR A NUESTRO SERVICIO HTTP POSTP PARA CREAR
+
+    return this.http.post(this.url + 'Up?key=' + this.apikey, authData)
+                          .pipe( 
+                            map( resp => {{c}}  
+                              console.log('Entro en el pipe -> map'); 
+                              this.guardarToken ( resp ['idToken']);
+                              return resp;  
+                          })/*,
+                          catchError(err => {{c}}   
+                            console.log(err.error.error.message);
+                            return err;
+                          })*/
+                         );
+  }
+
+
+  login( usuario: UsuarioModel ){{c}}
+
+      const authData = {{c}}                
+        ...usuario,                
+        returnSecureToken: true    
+      }; 
+  
+  //LLAMAR A NUESTRO SERVICIO HTTP POSTP PARA CREAR
+
+    return this.http.post(this.url + 'InWithPassword?key=' + this.apikey, authData)
+                        .pipe( 
+                          map( resp => {{c}}   
+                            console.log('Entro en el pipe -> map'); 
+                            this.guardarToken ( resp ['idToken']); 
+                            return resp;  
+                          })/*,
+                          catchError(err => {{c}}   
+                            console.log(err.error.error.message);
+                            return err;
+                          })*/
+                        );
+    }
+
+  private guardarToken ( IDToken_Recibido: string ){{c}}   
+    this.TokenUsuario = IDToken_Recibido;
+    localStorage.setItem('AlmacenaToken', IDToken_Recibido); 
+  }
+
+  leerToken(){{c}}
+      if( localStorage.getItem('AlmacenaToken') ){{c}}  
+        this.TokenUsuario = localStorage.getItem('AlmacenaToken');
+      }
+      else{{c}}  //Si no existe el token
+        this.TokenUsuario = ''; 
+      }
+
+      return this.TokenUsuario;
+  }
+
+<b>logout(){{c}}
+    localStorage.removeItem('AlmacenaToken');  <abbr title="removeItem -> Borra el token creado en la variable guardarToken, donde cogemos el token y le ponemos dicho nombre para usarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</b>
+
+
+}</pre>
+        </div>
+    </div>
+  </div>
+
+  <div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center blanco"><h3>Guard</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} CanActivate, Router } from '@angular/router';  <abbr title="CanActivate -> Guard. Router -> Redirigir página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} ServiciofireService } from './servicio/serviciofire.service';</b>  <abbr title="Servicio donde se almacena el login y registro con la API de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class GuardprotegergirebaseangularGuard implements CanActivate {{c}}
+
+  <b>constructor ( private auth: ServiciofireService,  <abbr title="Variable donde metemos el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    private router: Router ){{c}}  <abbr title="Variable donde metemos el enrutamiento para poder movernos a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+
+
+  <b>canActivate(): boolean{{c}}</b> <abbr title="Dejamos solo boolean porque es lo que vamos a usar/recibir"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    /*next: ActivatedRouteSnapshot,  <abbr title="Contiene la ruta que va a navegar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    state: RouterStateSnapshot): Observable{{co}}boolean | UrlTree> | Promise{{co}}boolean | UrlTree> | boolean | UrlTree {{c}} <abbr title="RouterStateSnapshot -> Contiene el estado actual de la ruta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>*/
+      
+      <b>if( this.auth.estaAutenticado() ){{c}}  <abbr title="Si estamos autentificados (Lo probamos porque nos lleva al servicio donde realizamos la comprobación con la función (estaAutenticado))"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        return true;  <abbr title="Si es cierto nos manda true y nos deja entrar en la página que hemos definido en el login/registro declarando su protección en el routing"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }else{{c}}
+        this.router.navigateByUrl('/loginangularfirebase');  <abbr title="Sino está autentificado nos lleva al login o donde pongamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        return false;  <abbr title="Sacamos false sino es cierto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }
+  }</b>
+ 
+  
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-danger m-3">
+      <div class="card-header">
+          <pre class="card-text text-center blanco"><h3>Routing</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text blanco">import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} ProtegergirebaseangularComponent <abbr title="Página que vamos a proteger"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
+import {{c}} GuardprotegergirebaseangularGuard <abbr title="Guardian que usaremos para proteger"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/guardprotegergirebaseangular.guard';</b>
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+  <b>{{c}} path: 'protegergirebaseangular', component: ProtegergirebaseangularComponent <abbr title="Página protegida con el guard"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, canActivate: [ GuardprotegergirebaseangularGuard <abbr title="Guard para proteger la página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ]},</b>
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+      </div>
+  </div>
+</div>
+
+<div class="card-group">
+  <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Ts</h3></pre>
+      </div>
+      <div class="card-body">
+        <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} ServiciofireService } from '../servicio/serviciofire.service';  <abbr title="Servicio que relaciona API de firebase con nuestro proyecto angular"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Router } from '@angular/router';</b>  <abbr title="Poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-protegergirebaseangular',
+  templateUrl: './protegergirebaseangular.component.html',
+  styleUrls: ['./protegergirebaseangular.component.css']
+})
+export class ProtegergirebaseangularComponent implements OnInit {{c}}
+
+  constructor( <b>private auth: ServiciofireService,  <abbr title="Variable para usar servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                private router: Router</b>) {{c}} }  <abbr title="Variable para usar la redirección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>salir(){{c}}  <abbr title="Función llamada en el html y llama al servicio, este a su vez a la API de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.auth.logout();  <abbr title="Llama al logout del servicio, por lo cual elimina el token para dejar de estar identificado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.router.navigateByUrl('/loginangularfirebase');  <abbr title="Nos lleva a la página que pongamos, normalmente login, para salir de la página protegida al hacer logout"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+}
+</pre>
+      </div>
+  </div>
+  <div class="card text-dark bg-warning m-3">
+    <div class="card-header">
+        <pre class="card-text text-center"><h3>Html</h3></pre>
+    </div>
+    <div class="card-body">
+        <pre class="card-text">{{co}}h1>Página secreta firebase{{co}}/h1>
+
+{{co}}button class="btn btn-outline-danger" <b>{{p}}click)="salir()"</b> <abbr title="Al dar click nos llama a la función del Ts que a su vez llama a la del servicio para borrar el token y salirnos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>Salir{{co}}/button></pre>
+    </div>
+</div>
+</div>
+
+
+</div>
 
 
         </div>

@@ -167,7 +167,6 @@ import { Forfireunelementohtml5Component } from './paginas/programacion/firebase
 import { Forfirevarioselementoshtml2Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml2/forfirevarioselementoshtml2.component';
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
-import { LoginComponent } from './paginas/programacion/firebase/login/login.component';
 import { ExistenciaComponent } from './paginas/programacion/firebase/login/existencia/existencia.component';
 import { MensajecargaerrorComponent } from './paginas/programacion/firebase/login/mensajecargaerror/mensajecargaerror.component';
 import { RecordarComponent } from './paginas/programacion/firebase/login/recordar/recordar.component';
@@ -260,6 +259,7 @@ import { FirebaseangularloginfirebaseComponent } from './paginas/programacion/an
 import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
 import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
 import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
+import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
 
 
 
@@ -404,7 +404,6 @@ import { LoginangularloginfirebaseComponent } from './paginas/programacion/angul
     Forfirevarioselementoshtml3Component,
     Forfirevarioselementoshtml4Component,
     HostingComponent,
-    LoginComponent,
     ExistenciaComponent,
     MensajecargaerrorComponent,
     RecordarComponent,
@@ -483,8 +482,8 @@ import { LoginangularloginfirebaseComponent } from './paginas/programacion/angul
     FirebaseangularloginfirebaseComponent,
     Auth0auth0Component,
     RegistrofirebaseangularrComponent,
-    LoginangularloginfirebaseComponent
-
+    LoginangularloginfirebaseComponent,
+    ProtegergirebaseangularComponent
   ],
   imports: [
     //Por defecto

@@ -12,19 +12,9 @@ export class Instalacionsweepalert2Component implements OnInit {
   ngOnInit(): void {
   }
 //Html
-x=`
-<!DOCTYPE html>
-  <html lang="en">
-    <head>                                                                                        
-      <meta charset="UTF-8">                                                                      
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">                     
-       <title>Sweepalert2</title>                                                           
-    </head>`;
-x0=`
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>`;
-x1=`
-    </head>
-    <body>
-    </body>                                                                                       
-  </html>`;
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
 }
