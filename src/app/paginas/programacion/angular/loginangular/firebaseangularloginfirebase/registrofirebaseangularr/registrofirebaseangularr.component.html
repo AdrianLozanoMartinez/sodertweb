@@ -1,0 +1,94 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+      <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+                <form class="login100-form validate-form flex-sb flex-w" (ngSubmit)="GuardarDatos(variableLocal)" #variableLocal="ngForm">
+    
+                    <span class="login100-form-title p-b-51">Crear nueva cuenta</span>
+    
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['email'].errors">El correo es obligatorio</span>
+
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" type="email" name="email" [(ngModel)]="usuario.email" placeholder="Email" required email>
+    
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['nombre'].errors">El nombre es obligatorio y al menos 2 letras</span>
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" type="text" name="nombre" [(ngModel)]="usuario.nombre" placeholder="Nombre y apellidos" required minlength="2">
+
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['pass'].errors">El password es obligatorio y al menos 6 letras</span>
+                    <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                        <input class="input100" type="password" name="pass" [(ngModel)]="usuario.password" placeholder="Password" required minlength="6">
+
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="flex-sb-m w-full p-t-3 p-b-24">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">Recordar mi usuario</label>
+                        </div>
+    
+                        <div>
+                            <a routerLink="/loginangularfirebase" class="txt1">¿Ya tienes cuenta? / Ingresar</a>
+                        </div>
+                    </div>
+    
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn btn btn-danger" type="submit">Crear cuenta</button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+<br>
+<pre><b><u>Resultado en consola:</u></b>
+
+{{c}}kind: "identitytoolkit#SignupNewUserResponse", idToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRjNGQwMGJjM2NiZWE4Yj…lX2EevtGC3m-L61aApipTrGDGjEIGKQVm0YDE4BTOG4UbjWkg", email: "correo@dominio.com", refreshToken: "AGEhc0CkZfXoWCokV0oQOLRTKNpXSWCTJZ7mhS7NknVGq1AGm3…Cn_ev_8JAq73gxVzr0nhy7hlxvO86VgXLXdzPA6aH54r_6oDm", expiresIn: "3600", …}
+<b>email</b>: "correo@dominio.com"
+<b>expiresIn</b>: "3600"  <abbr title="Expira en 1h"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>idToken</b>: "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRjNGQwMGJjM2NiZWE4YjU0NTMzMWQxZjFjOTZmZDRlNjdjNTFlODkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29kZXJ0d2ViIiwiYXVkIjoic29kZXJ0d2ViIiwiYXV0aF90aW1lIjoxNjIzODcwOTkyLCJ1c2VyX2lkIjoiT3VPd0tteDZ6bmI2MG5EMXR0anFjNlBVSUZaMiIsInN1YiI6Ik91T3dLbXg2em5iNjBuRDF0dGpxYzZQVUlGWjIiLCJpYXQiOjE2MjM4NzA5OTIsImV4cCI6MTYyMzg3NDU5MiwiZW1haWwiOiJjb3JyZW9AZG9taW5pby5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiY29ycmVvQGRvbWluaW8uY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Dow39kI_E4yQijNu62sdDbXQGtCbs9IP1HRTQQo5w1oTCv1DqK5EcE4kDon79FWZjiKp3E6ViKHJw9-q2Rhqef_z2SVcpgflGAbUWtrix4AnaoH_4d7Evb9Ly7ppNaCBYJUBos5uGZn7BgGpswMguJz1OwwheI5Qq9yTs8ScW7sB2kuKQ7B3EqfApOqNRlJchXzd0XeOQoM-VvEStqc0Kzs2YJ43657RGKKIqQ3IwWWLWp_z42n0OT_2_gJC1OU7BrpVcDTTCsOeQ__1yN6Rli_iL9CwAMp-Ghb-1lX2EevtGC3m-L61aApipTrGDGjEIGKQVm0YDE4BTOG4UbjWkg" <abbr title="ID Token. Necesito para validar las peticiones con el backend, hay que grabar en el localStorage para tenerlo ahí para cuando necesito longearme tenerlo ahí. LOGOUT destruye este ID Token"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+kind: "identitytoolkit#SignupNewUserResponse"
+<b>localId</b>: "OuOwKmx6znb60nD1ttjqc6PUIFZ2"  <abbr title="ID del USUARIO"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>refreshToken</b>: "AGEhc0CkZfXoWCokV0oQOLRTKNpXSWCTJZ7mhS7NknVGq1AGm3lFMm2IyGUgNmEQFtzWSFlpfGWtxUOR6WcMfSQa9Mc_bQRcZgULAAsXgmULKfhYBgyG46WRksdHE-J_1pgBqCwTmziLzm5hWUv-3z2uNbjCn_ev_8JAq73gxVzr0nhy7hlxvO86VgXLXdzPA6aH54r_6oDm" <abbr title="Refrescar token si lo deseamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+__proto__: Object
+
+
+
+<b><u>Resultado en consola -> EMAIL EXISTENTE:</u></b> 
+
+HttpErrorResponse {{c}}headers: HttpHeaders, status: 400, statusText: "OK", url: "https://identitytoolkit.googleapis.com/v1/accounts…ignUp?key=AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg", ok: false, …}
+    <b>error</b>:
+        <b>error</b>:
+            code: <b>400</b>
+            <b>errors</b>: [{{c}}…}]
+            message: "<b>EMAIL_EXISTS</b>" <abbr title="error.error.message -> 2 errores dentro de otro error para ver EMAIL_EXISTS. Es porque intentamos crear un usuario con un emails que ya existe. Si ponemos error.error... nos aparece el mensaje ese y podemos usarlo en el html o ts (console.log(variableRecibirError.error.error.message);)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            __proto__: Object
+        __proto__: Object
+    headers: HttpHeaders {{c}}}normalizedNames: Map(0), lazyUpdate: null, lazyInit: ƒ}
+    message: "Http failure response for https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg: 400 OK"
+    name: "HttpErrorResponse"
+    ok: false
+    status: 400
+    statusText: "OK"
+    url: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg"
+    __proto__: HttpResponseBase</pre>
+
+        </div>
+    </div>
+</div>
+
+

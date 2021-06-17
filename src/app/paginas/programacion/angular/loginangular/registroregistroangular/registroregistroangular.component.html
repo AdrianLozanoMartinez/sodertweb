@@ -1,0 +1,93 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+      <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+                <form class="login100-form validate-form flex-sb flex-w" (ngSubmit)="GuardarDatos(variableLocal)" #variableLocal="ngForm">
+                  <!-- (ngSubmit)="GuardarDatos()" -> Coge todos los datos y lo lleva al Ts para su procesamiento y le mandamos variableLocal
+                  variableLocal -> Para que se pueda hacer las validaciones (required etc y coja los datos) y ="ngForm" que la trate como ngForm porque tiene muchas propiedades-->
+    
+                    <span class="login100-form-title p-b-51">
+                        Crear nueva cuenta
+                    </span>
+    
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['email'].errors">El correo es obligatorio</span>
+                    <!-- Constrols u otro -> Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... 
+                      variableLocal.submitted -> Si ha sido pulsado el botón submit y (&&)
+                      variableLocal.controls['email'].errors -> Si el dato introducido da error se muestra
+                      ['email'] -> Está en relación con name="email" -->
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" 
+                               type="email" 
+                               name="email" 
+                               [(ngModel)]="usuario.email" 
+                               placeholder="Email" required email>
+                               <!-- [(ngModel)]="usuario.email" -> Coge el email 
+                              required -> Sino tiene ese valor no acepta el formulario, se ve en un console.log(form) en el Ts en la consola como valid _Z false(no rellenado) o true (rellenado)-->
+    
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['nombre'].errors">El nombre es obligatorio y al menos 2 letras</span>
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" 
+                               type="text" 
+                               name="nombre" 
+                               [(ngModel)]="usuario.nombre" 
+                               placeholder="Nombre y apellidos" required
+                               minlength="2">
+                              <!-- [(ngModel)]="usuario.nombre" -> Coge el nombre 
+                              minlength="2" -> Que tenga mínimo 2 letras
+                            required -> Obligado a rellenar sino no es aceptado el formulario-->
+
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <span class="text-danger" *ngIf="variableLocal.submitted && variableLocal.controls['pass'].errors">El password es obligatorio y al menos 6 letras</span>
+                    <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                        <input class="input100"
+                               type="password" 
+                               name="pass" 
+                               [(ngModel)]="usuario.password" 
+                               placeholder="Password" required
+                               minlength="6">
+                               <!-- [(ngModel)]="usuario.password" -> Coge el password 
+                              minlength="6" -> Que tenga mínimo 6 letras 
+                            required -> Obligado a rellenar sino no es aceptado el formulario-->
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="flex-sb-m w-full p-t-3 p-b-24">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Recordar mi usuario
+                            </label>
+                        </div>
+    
+                        <div>
+                            <a routerLink="/loginloginangular" class="txt1">
+                                ¿Ya tienes cuenta? / Ingresar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn btn btn-danger" type="submit">
+                            Crear cuenta
+                        </button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>

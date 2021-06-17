@@ -93,7 +93,6 @@ import { ArreglosestaticComponent } from './paginas/programacion/angular/formula
 import { ArreglosdinamicComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosdinamic/arreglosdinamic.component';
 import { DetectarcambiosComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/detectarcambios/detectarcambios.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
-import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
 import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
 import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
 import { FuncionesangularComponent } from './paginas/programacion/angular/funcionesangular/funcionesangular.component';
@@ -128,6 +127,10 @@ import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padr
 import { CicloVidaComponent } from './paginas/programacion/angular/ciclo-vida/ciclo-vida.component';
 import { Auth0angularComponent } from './paginas/programacion/angular/loginangular/auth0angular/auth0angular.component';
 import { ProtegidaComponent } from './paginas/programacion/angular/loginangular/auth0angular/protegida/protegida.component';
+import { LoginangulargeneralComponent } from './paginas/programacion/angular/loginangular/loginangulargeneral/loginangulargeneral.component';
+import { Loginangulargeneral2Component } from './paginas/programacion/angular/loginangular/loginangulargeneral2/loginangulargeneral2.component';
+import { LoginloginangularComponent } from './paginas/programacion/angular/loginangular/loginloginangular/loginloginangular.component';
+import { RegistroregistroangularComponent } from './paginas/programacion/angular/loginangular/registroregistroangular/registroregistroangular.component';
 
 //Programación - Angular - PipeLenguaje
 import { registerLocaleData } from '@angular/common';
@@ -164,9 +167,7 @@ import { Forfireunelementohtml5Component } from './paginas/programacion/firebase
 import { Forfirevarioselementoshtml2Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml2/forfirevarioselementoshtml2.component';
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
-import { ProyectoComponent } from './paginas/programacion/firebase/proyecto/proyecto.component';
 import { LoginComponent } from './paginas/programacion/firebase/login/login.component';
-import { LoginnormalComponent } from './paginas/programacion/angular/loginangular/loginnormal/loginnormal.component';
 import { ExistenciaComponent } from './paginas/programacion/firebase/login/existencia/existencia.component';
 import { MensajecargaerrorComponent } from './paginas/programacion/firebase/login/mensajecargaerror/mensajecargaerror.component';
 import { RecordarComponent } from './paginas/programacion/firebase/login/recordar/recordar.component';
@@ -255,6 +256,10 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
+import { FirebaseangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/firebaseangularloginfirebase.component';
+import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
+import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
+import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
 
 
 
@@ -347,7 +352,6 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     ArreglosdinamicComponent,
     DetectarcambiosComponent,
     HostingangularComponent,
-    LoginangularComponent,
     ExtensionesComponent,
     FontsgoogleprincipalComponent,
     FuncionesangularComponent,
@@ -381,6 +385,10 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     CicloVidaComponent,
     Auth0angularComponent,
     ProtegidaComponent,
+    LoginangulargeneralComponent,
+    Loginangulargeneral2Component,
+    LoginloginangularComponent,
+    RegistroregistroangularComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -396,9 +404,7 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     Forfirevarioselementoshtml3Component,
     Forfirevarioselementoshtml4Component,
     HostingComponent,
-    ProyectoComponent,
     LoginComponent,
-    LoginnormalComponent,
     ExistenciaComponent,
     MensajecargaerrorComponent,
     RecordarComponent,
@@ -473,7 +479,11 @@ import { TetherComponent } from './paginas/programacion/tether/tether.component'
     PipeDomSeguroPipe,
     //Librerias
     JqueryComponent,
-    TetherComponent
+    TetherComponent,
+    FirebaseangularloginfirebaseComponent,
+    Auth0auth0Component,
+    RegistrofirebaseangularrComponent,
+    LoginangularloginfirebaseComponent
 
   ],
   imports: [

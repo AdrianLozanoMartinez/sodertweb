@@ -1,16 +1,136 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col align-self-center text-center">
-            <h3 style="text-align: center;"><u><b>Firebase</b></u></h3>
-            <br><br>
-            <button class="btn btn-success m-5" [routerLink]="['/instalacionfirebase']">Instalación</button>
-            <button class="btn btn-success m-5" [routerLink]="['/proyecto']">Proyecto</button>
-            <button class="btn btn-success m-5" [routerLink]="['/formulariosfirebase']">Formularios - Angular</button>
-            <button class="btn btn-success m-5" [routerLink]="['/subirarchivos']">Subir archivos</button>
-            <button class="btn btn-success m-5" [routerLink]="['/login']">Login - Angular</button>
-            <button class="btn btn-success m-5" [routerLink]="['/hosting']">Hosting - Angular</button>
-            <br><br>
-            <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-expresion-tab" data-toggle="pill" href="#pills-expresion" role="tab" aria-controls="pills-expresion" aria-selected="true" style="color: black;">Proyecto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-expresion0-tab" data-toggle="pill" href="#pills-expresion0" role="tab" aria-controls="pills-expresion0" aria-selected="false" style="color: black;">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-expresion1-tab" data-toggle="pill" href="#pills-expresion1" role="tab" aria-controls="pills-expresion1" aria-selected="false" style="color: black;">Subir archivos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-expresion2-tab" data-toggle="pill" href="#pills-expresion2" role="tab" aria-controls="pills-expresion2" aria-selected="false" style="color: black;">Hosting</a>
+    </li>
+    <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-expresion" role="tabpanel" aria-labelledby="pills-expresion-tab">
+        
+        <b>Ir a la consola -> Crear un proyecto</b>
+        <div class="card-group">
+  <div class="card text-dark bg-primary m-3">
+      <div class="card-body"><h3>1º Paso</h3>
+        <pre class="card-text">Empieza por ponerle un nombre al proyecto
+<b>Introduce el nombre de tu proyecto</b> -> En este caso -> <b>Sodertweb </b>
+<small>Debes indicar el nombre del proyecto</small>
+
+<b>Continuar</b></pre>
+      </div>
+  </div>
+  <div class="card text-dark bg-primary m-3">
+    <div class="card-body"><h3>2º Paso</h3>
+      <pre class="card-text">Google Analytics para tu proyecto de Firebase
+    Google Analytics es una solución de analíticas gratuita e ilimitada 
+que permite crear informes y realizar tareas de segmentación, entre otras 
+acciones, en Firebase 
+    Crashlytics, Cloud Messaging, In‑App Messaging, Remote Config, A/B 
+Testing, Predictions y Cloud Functions.
+    Google Analytics permite usar:<ul><li>A/B Testing</li><li>Segmentación de usuarios en productos de Firebase</li><li>Predicción del comportamiento de usuarios</li><li>Usuarios sin fallos</li><li>Activadores de Cloud Functions basados en eventos</li><li>Informes gratuitos ilimitados</li>Habilitar Google Analytics en este proyecto 
+                    <small>Recomendados</small> -> <b>Opcional</b>
+<b>Crear proyecto</b></ul></pre>
+    </div>
+  </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-body"><h3>3º Paso</h3>
+          <pre class="card-text">Configurar Google Analytics
+  Ubicación de Analytics ___Elegir país___ -> Elegimos <b>España</b>
+          
+  Términos de Google Analytics y configuración de uso compartido de datos<ul><li>Usar la configuración predeterminada para compartir datos de Google Analytics. 
+  Learn more Comparte tus datos de Analytics con nosotros para ayudarnos a 
+  mejorar nuestros productos y servicios. Comparte tus datos de Analytics 
+  con nosotros para habilitar las comparativas. Comparte tus datos de Analytics 
+  con Google para habilitar el servicio de asistencia técnica. Comparte tus datos 
+  de Analytics con los especialistas en cuentas de Google.</li><li>Acepto los términos de protección de datos entre responsables del tratamiento de datos 
+  y responsables del tratamiento de datos de mediciones, y reconozco que estoy sujeto a la 
+  política de consentimiento de usuarios finales de la Unión Europea. Es obligatorio marcar 
+  esta casilla si vas a compartir tus datos de Analytics para mejorar los productos y 
+  servicios de Google. Más información</li></ul>Acepto los términos de Google Analytics.<br><small>
+       Al crear el proyecto, también se creará una propiedad de Google Analytics que se 
+  asociará a tu proyecto de Firebase. De esta forma, se habilitará el flujo de datos entre 
+  los productos. Los datos que se exportan de tu propiedad de Google Analytics a Firebase 
+  están sujetos a los términos del servicio de Firebase, mientras que los datos que se 
+  importan de Firebase a Google Analytics se rigen por los términos del servicio de Google 
+  Analytics. Más información</small>
+  
+  <b>Continuar</b></pre>
         </div>
     </div>
+  </div>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-expresion0" role="tabpanel" aria-labelledby="pills-expresion0-tab">
+        
+        <b>Ir a consola -> Proyecto -> Authentication</b>
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Habilitar correo autentificación</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text"><ol><li><b>Sign-in method <abbr title="Método de acceso"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>-> <u>Correo electrónico/contraseña</u> -> <u>Habilitar</u> <abbr title="Permite a los usuarios registrarse con su dirección de correo electrónico y contraseña. Nuestros SDK también proporcionan la verificación de la dirección de correo, la recuperación de contraseñas y las primitivas de cambio de dirección de correo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, <u>Habilitar <abbr title="Opcional. Vínculo del correo electrónico (acceso sin contraseña)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></u> -> <u>Guardar</u></li><li><b>Users</b> <abbr title="Vemos los usuarios que existen y los conectados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ol></pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Enlaces de conexión</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text"><a href="https://firebase.google.com/docs/reference/rest/auth#top_of_page"><b>Web Firebase (API REST firebase de autentificación)</b></a> -> <b>Opción lateral</b><ul>
+    <li><a href="https://firebase.google.com/docs/reference/rest/auth#section-create-email-password"><b>Crear usuario</b></a>: Sign up with email / password<pre>
+            <b>https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]</b></pre></li><li><a href="https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password"><b>Iniciar usuario</b></a>: Sign in with email / password<pre>
+            <b>https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]</b></pre></li></ul></pre>
+      </div>
+  </div>
 </div>
+
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Obtener APIKEY</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text"><b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey</b></pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Crear usuario/contraseña directamente</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text"><b>Users</b> -> <b>Añadir usuario</b></pre>
+      </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-expresion1" role="tabpanel" aria-labelledby="pills-expresion1-tab"><app-subirarchivos></app-subirarchivos></div>
+  
+    <div class="tab-pane fade" id="pills-expresion2" role="tabpanel" aria-labelledby="pills-expresion2-tab"><app-hosting></app-hosting></div>
+      
+  </div>
+
+
+  <b style="margin-left: 40%;"><a target="_black" href="https://firebase.google.com/?hl=es">Web</a></b>
+  <img src="../../../../assets/imagenes/firebase.png" style="width: 300px;">
+  <button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>
+
+
+

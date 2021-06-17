@@ -1,0 +1,47 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+      <a class="nav-link active" id="pills-auth0auth0-tab" data-toggle="pill" href="#pills-auth0auth0" role="tab" aria-controls="pills-auth0auth0" aria-selected="true" style="color: black;">Configuración principal</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-auth0auth00-tab" data-toggle="pill" href="#pills-auth0auth00" role="tab" aria-controls="pills-auth0auth00" aria-selected="false" style="color: black;">Configuración extra</a>
+  </li>
+</ul>
+
+<div class="tab-content cuadro" id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-auth0auth0" role="tabpanel" aria-labelledby="pills-auth0auth0-tab">
+      
+    <div class="card-group">
+        <div class="card text-dark bg-warning m-3">
+            <div class="card-body">
+              <pre class="card-text"><ol><li><b>Sign up</b><ul><li>Correo/Contraseña</li><li>Github</li><li>Google</li><li>Microsoft</li></ul></li>
+<li><b>Applications</b> -> Applications -> <b>+Create Application</b><ol><li><b>Name</b>: Sodert  <abbr title="Nombre de la aplicación, a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li><b>Elegimos</b>:
+Single Page Web Applications
+A JavaScript front-end app that uses an API.
+
+e.g.: <b>Angular</b>, React, Vue</li></ol>
+<li><b>Quick start</b><ol><li>What technology are you using for your web app?: <b>Angular</b></li><li><b>Configure Callback URLs</b> <small>(Lugar que va después de autentificarse)</small></li></ol><li><b>Settings</b><ul><li>Basic Information<ul><li>Name: Sodert</li><li>Domain: sodert.eu.auth0.com</li><li>Client ID: ***</li><li>Client Secret: ***</li><li>Description: Manual de programación</li></ul></li><li>Application Properties: <ul><li>Application Logo: Dirección web</li><li>Application Type: Single Page Application</li></ul><li>Application URIs<ul><li>Allowed Callback URLs: http://localhost:4200/callback, https://sodertweb.web.app/  <abbr title="Nombre de la página que vamos a crear, se puede poner otro nombre, es donde pondrmeos los códigos que auth0 nos dé. Se puede poner más url poniendo una , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Logout URLs: http://localhost:4200, https://sodertweb.web.app/   <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Web Origins: http://localhost:4200, https://sodertweb.web.app/  <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></li></ul></li><li><b>Save Changes</b></li><li><b></b>Quick start - Instalación en Angular<ul>
+<li>Install the Auth0 Angular SDK: <b>npm install @auth0/auth0-angular</b></li></ul></li></ol></pre>
+            </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="pills-auth0auth00" role="tabpanel" aria-labelledby="pills-auth0auth00-tab">
+      
+    <div class="card-group">
+        <div class="card text-dark bg-warning m-3">
+            <div class="card-body">
+              <pre class="card-text"><ul><li><a href="https://auth0.com/docs/libraries/auth0-single-page-app-sdk"><b>Extra</b></a></li><li><b>Branding</b> -> <b>Universal login</b> -> <a href="https://manage.auth0.com/dashboard/eu/sodert/login_settings"><b>Settings</b> (Configurar Login/Registrar)</a> -> <b>New</b>   <abbr title="Nuevas funcionalidades, MANTIENE LA SESIÓN ABIERTA aparte de cambiar logo y color"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
+            </div>
+        </div>
+      </div>
+
+  </div>
+    
+</div>
+
+<b style="margin-left: 40%;"><a target="_black" href="https://auth0.com/" class="m-2">Web</a></b>
+<img src="../../../../assets/imagenes/auth.jpg" style="width: 300px;">
+<button class="btn m-2" [routerLink]="['/programacion']">Atras</button>

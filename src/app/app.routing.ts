@@ -63,7 +63,6 @@ import { FormulariosangularComponent } from './paginas/programacion/angular/form
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
 import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
-import { LoginangularComponent } from './paginas/programacion/angular/loginangular/loginangular.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
 import { TarjetaComponent } from './paginas/programacion/angular/serviciounovarias/serviciosssvariasss/tarjeta/tarjeta.component';
@@ -75,6 +74,8 @@ import { UsuarioEditarHijaComponent } from './paginas/programacion/angular/padre
 import { UsuarioDetalleHijaComponent } from './paginas/programacion/angular/padre-hijo-hijas/usuario-detalle-hija/usuario-detalle-hija.component';
 import { ProtegidaComponent } from './paginas/programacion/angular/loginangular/auth0angular/protegida/protegida.component';
 import { GuardianGuard } from './paginas/programacion/angular/loginangular/auth0angular/guard/guardian.guard';
+import { LoginloginangularComponent } from './paginas/programacion/angular/loginangular/loginloginangular/loginloginangular.component';
+import { RegistroregistroangularComponent } from './paginas/programacion/angular/loginangular/registroregistroangular/registroregistroangular.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -91,17 +92,18 @@ import { Forfireunelementohtml5Component } from './paginas/programacion/firebase
 import { Forfirevarioselementoshtml2Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml2/forfirevarioselementoshtml2.component';
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
-import { ProyectoComponent } from './paginas/programacion/firebase/proyecto/proyecto.component';
 import { LoginComponent } from './paginas/programacion/firebase/login/login.component';
 import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarchivos/subirarchivos.component';
 import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
+import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
+import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
 //Guard - tipo
 import { ElguardianGuard } from './paginas/programacion/firebase/login/guard/elguardian.guard';   
 //Login - Páginas protegidas                                                                    
 import { ProtegidoguardfirebaseComponent } from './paginas/programacion/firebase/login/protegidoguardfirebase/protegidoguardfirebase.component'; 
 //Programacion - Auth0
-
+import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
 //Programacion - Servidor Local
 import { ServidorlocalComponent } from './paginas/programacion/servidorlocal/servidorlocal.component';
 //Programacion - Fontawesome
@@ -212,7 +214,6 @@ export const appRoutes: Routes = [
   { path: 'templatesangular', component: TemplatesangularComponent},
   { path: 'reactivosangular', component: ReactivosangularComponent},
   { path: 'hostingangular', component: HostingangularComponent},
-  { path: 'loginangular', component: LoginangularComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},
   { path: 'buscador/:termino_buscar', component: BuscadorComponent},
   { path: 'buscador2/:termino_buscar', component: BuscadorComponent},
@@ -221,6 +222,10 @@ export const appRoutes: Routes = [
   { path: 'artist/:id', component: ArtistaComponent },
   { path: 'usuarioH/:id', component: UsuarioHijaComponent, children: USUARIO_ROUTES},
   { path: 'protegida', component: ProtegidaComponent, canActivate: [ GuardianGuard ]}, //Dentro de los [] metemos todos los guard que tendrá que pasar antes de entrar en el enlace
+  { path: 'loginloginangular', component: LoginloginangularComponent},
+  { path: 'registroregistroangular', component: RegistroregistroangularComponent},
+  { path: 'registrofirebaseangularr', component: RegistrofirebaseangularrComponent},
+  { path: 'loginangularfirebase', component: LoginangularloginfirebaseComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
@@ -236,9 +241,10 @@ export const appRoutes: Routes = [
   { path: 'varioselementos2', component: Forfirevarioselementoshtml2Component},
   { path: 'varioselementos3', component: Forfirevarioselementoshtml3Component},
   { path: 'varioselementos4', component: Forfirevarioselementoshtml4Component},
-  { path: 'proyecto', component: ProyectoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'instalacionfirebase', component: InstalacionfirebaseComponent},
+  //Auth0
+  { path: 'auth0', component: Auth0auth0Component},
   //Fonts google
   { path: 'fontsgoogle', component: FontsgoogleprincipalComponent},
   /*Archivo protegido que vemos al longearnos, Elguardian(nombre del guardian)

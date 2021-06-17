@@ -11,5 +11,10 @@ export class Sweepalert2Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+//Html
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
 }

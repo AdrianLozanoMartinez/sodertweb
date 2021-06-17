@@ -1,0 +1,312 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-loginangular2-tab" data-toggle="pill" href="#v-pills-loginangular2" role="tab" aria-controls="v-pills-loginangular2" aria-selected="true">Model.ts / Module.ts</a>
+        <a class="nav-link" id="v-pills-loginangular20-tab" data-toggle="pill" href="#v-pills-loginangular20" role="tab" aria-controls="v-pills-loginangular20" aria-selected="true">Registro</a>
+        <a class="nav-link" id="v-pills-loginangular21-tab" data-toggle="pill" href="#v-pills-loginangular21" role="tab" aria-controls="v-pills-loginangular21" aria-selected="false">Login</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade show active" id="v-pills-loginangular2" role="tabpanel" aria-labelledby="v-pills-loginangular2-tab">
+            
+            <div class="card-group">
+                <div class="card text-dark bg-danger m-3">
+                    <div class="card-header">
+                        <pre class="card-text text-center blanco"><h3>Model.ts</h3></pre>
+                    </div>
+                    <div class="card-body">
+                      <pre class="card-text blanco"><b>export class UsuarioModel</b> {{c}}   <abbr title="Export -> Para ser usado fuera"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+    <b>email</b>: string;
+    <b>password</b>: string;
+    <b>nombre</b>: string;
+    fechadenacimiento<b>?</b>: string;   <abbr title="? -> Opcional de rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</pre>
+                    </div>
+                </div>
+                <div class="card text-dark bg-danger m-3">
+                  <div class="card-header">
+                      <pre class="card-text text-center blanco"><h3>Module.Ts</h3></pre>
+                  </div>
+                  <div class="card-body">
+                      <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+import {{c}} AppComponent } from './app.component';
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Formularios
+<b>import {{c}} FormsModule } from '@angular/forms';</b>   <abbr title="Formularios. Funcione [(ngModel)] -> Coge y escucha los datos que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@NgModule({{c}}
+    declarations: [
+    //Por defecto
+    AppComponent,
+    //Componentes - Páginas añadir después de crearlas
+    HomeComponent,
+    ErrorComponent,
+    PieComponent,
+    CabeceraComponent
+    ],
+    imports: [
+    //Por defecto
+    BrowserModule,
+    //Conexión con app.routing.ts - Enlazar páginas
+    routing<b>,</b>
+    //Formularios
+    <b>FormsModule</b>   <abbr title="Formularios. Funcione [(ngModel)] -> Coge y escucha los datos que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+],
+providers: [
+    //Conexión con app.routing.ts - Enlazar páginas
+    appRoutingProviders
+],
+//Por defecto - Librería
+bootstrap: [AppComponent]
+})
+//Por defecto
+export class AppModule {{c}}}</pre>
+                  </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-loginangular20" role="tabpanel" aria-labelledby="v-pills-loginangular20-tab"><app-registroregistroangular></app-registroregistroangular>
+       
+  <div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} UsuarioModel } from '../model/usuario.model';</b>   <abbr title="Model"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} NgForm } from '@angular/forms';</b>   <abbr title="Funcionalidades de los formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-registroregistroangular',
+  templateUrl: './registroregistroangular.component.html',
+  styleUrls: ['./registroregistroangular.component.css']
+})
+export class registroregistroangularComponent implements OnInit {{c}}
+
+  <b>usuario: UsuarioModel;</b>   <abbr title="Metemos la estructura del model en la variable del usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor() {{c}} }
+  
+  ngOnInit(): void {{c}}
+      <b>this.usuario = new UsuarioModel();</b>  <abbr title="Se asigna el formato del model y se usa para cuando se coge los datos del html y se muestra en la función GuardarDatos(){}. En lugar de usuario: UsuarioModel y esta línea podemos poner -> usuario: UsuarioModel = new UsuarioModel();"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      //<b>this.usuario.email = 'xxx@gmail.com';</b>   <abbr title="Ponemos un dato que aparecerá en el html por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }   
+
+  <b>GuardarDatos( form: NgForm ){{c}}</b>   <abbr title="Recibimos del html. form -> Le damos el valor de NgForm para que tenga más opciones (controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    <b>if (form.invalid){{c}}</b>   <abbr title="Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log("Formulario inválido");
+      
+      <b>return;</b>   <abbr title="Se sale si no es válido y no muestra los mensajes de abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>}</b>
+
+    console.log(<b>this.usuario</b>);  <abbr title="Datos de lo que cogemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log(<b>form</b>);  <abbr title="Nos aparece los datos del formulario. valid -> Si es valido el formulario, por ejemplo al poner required si no se escribe pone false, si se rellena pondría true"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  <b>}</b>
+
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+      <pre class="card-text">{{co}}div class="limiter">
+    {{co}}div class="container-login100">
+        {{co}}div class="wrap-login100 p-t-50 p-b-90">
+            {{co}}form class="login100-form validate-form flex-sb flex-w" <b>{{p}}ngSubmit)="GuardarDatos(variableLocal)" <abbr title="Coge todos los datos y lo lleva al Ts para su procesamiento y le mandamos variableLocal"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> #variableLocal="ngForm" <abbr title="variableLocal -> Para que se pueda hacer las validaciones (required etc y coja los datos) y =ngForm que la trate como ngForm porque tiene muchas propiedades"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>>   
+
+                {{co}}span class="login100-form-title p-b-51">Crear nueva cuenta{{co}}/span>
+
+                {{co}}span class="text-danger" <b>{{f}}ngIf="variableLocal.submitted <abbr title="Si ha sido pulsado el botón submit y (&&)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            && variableLocal.controls['email'].errors" <abbr title="Si el dato introducido da error se muestra, ['email'] -> Está en relación con name=email. Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> </b>>El correo es obligatorio{{co}}/span>
+
+                {{co}}div class="wrap-input100 m-b-16">
+                    {{co}}input class="input100" <b>type="email" <abbr title="nos aparece en el movil la opción de poner @"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              name="email" <abbr title="Obligado para almacenar datos y poder validar errores (como arriba) y otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              {{t}}(ngModel)]="usuario.email"</b> <abbr title="Coge el email. .email -> Debe ser igual que en model (usuario.model)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              placeholder="Email" 
+                                              <b>required <abbr title="Sino tiene ese valor no acepta el formulario, se ve en un console.log(form) en el Ts en la consola como valid -> false(no rellenado) o true (rellenado)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> email</b> <abbr title="Para que nos obligue a poner @"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                              <b>email</b> <abbr title="Ponemos email para que nos pida nombre@nombre"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>  
+                    {{co}}span class="focus-input100">{{co}}/span>
+                {{co}}/div>
+
+                {{co}}span class="text-danger" <b>{{f}}ngIf="variableLocal.submitted <abbr title="Si ha sido pulsado el botón submit y (&&)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            && variableLocal.controls['nombre'].errors"</b> <abbr title="Si el dato introducido da error se muestra, ['nombre'] -> Está en relación con name=nombre. Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> >El nombre es obligatorio y al menos 2 letras{{co}}/span>
+                {{co}}div class="wrap-input100 m-b-16">
+                    {{co}}input class="input100" type="text" 
+                                            <b>name="nombre" <abbr title="Obligado para almacenar datos y poder validar errores (como arriba) y otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              {{t}}(ngModel)]="usuario.nombre"</b> <abbr title="Coge el nombre. .nombre -> Debe ser igual que en model (usuario.model)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              placeholder="Nombre y apellidos" 
+                                              <b>required <abbr title="Obligado a rellenar sino no es aceptado el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              minlength="2"</b> <abbr title="Que tenga mínimo 2 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+              
+                    {{co}}span class="focus-input100">{{co}}/span>
+                {{co}}/div>
+                
+                {{co}}span class="text-danger" <b>{{f}}ngIf="variableLocal.submitted <abbr title="Si ha sido pulsado el botón submit y (&&)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            && variableLocal.controls['pass'].errors"</b> <abbr title="Si el dato introducido da error se muestra, ['pass'] -> Está en relación con name=pass. Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> >El password es obligatorio y al menos 6 letras{{co}}/span>
+                {{co}}div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                    {{co}}input class="input100" type="password" 
+                                            <b>name="pass" <abbr title="Obligado para almacenar datos y poder validar errores (como arriba) y otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              {{t}}(ngModel)]="usuario.password"</b> <abbr title="Coge el password. .password -> Debe ser igual que en model (usuario.model)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              placeholder="Password" 
+                                              <b>required <abbr title="Obligado a rellenar sino no es aceptado el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                              minlength="6"</b> <abbr title="Que tenga mínimo 6 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+
+                    {{co}}span class="focus-input100">{{co}}/span>
+                {{co}}/div>
+                
+                {{co}}div class="flex-sb-m w-full p-t-3 p-b-24">
+
+                    {{co}}div class="contact100-form-checkbox">
+                        {{co}}input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        {{co}}label class="label-checkbox100" for="ckb1">Recordar mi usuario{{co}}/label>
+                    {{co}}/div>
+
+                    {{co}}div>
+                        {{co}}a <b>routerLink="/loginloginangular"</b> <abbr title="Nos lleva a la página del login"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> class="txt1">¿Ya tienes cuenta? / Ingresar{{co}}/a>
+                    {{co}}/div>
+
+                {{co}}/div>
+
+                {{co}}div class="container-login100-form-btn m-t-17">
+                    {{co}}<b>button</b> class="login100-form-btn btn btn-danger" <b>type="submit" <abbr title="Para que haga efecto al pulsar, llama a la función de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>><b>Crear cuenta</b>{{co}}/button>
+                {{co}}/div>
+
+            {{co}}/form>
+        {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+      </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-loginangular21" role="tabpanel" aria-labelledby="v-pills-loginangular21-tab"><app-loginloginangular></app-loginloginangular>
+          
+          <div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} UsuarioModel } from '../model/usuario.model';</b>   <abbr title="Model"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} NgForm } from '@angular/forms';</b>   <abbr title="Funcionalidades de los formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-loginloginangular',
+  templateUrl: './loginloginangular.component.html',
+  styleUrls: ['./loginloginangular.component.css']
+})
+export class LoginloginangularComponent implements OnInit {{c}}
+
+  <b>usuario: UsuarioModel = new UsuarioModel();</b> <abbr title="Se asigna el formato del model y se usa para cuando se coge los datos del html y se muestra en la función GuardarDatos(){}. En lugar de usuario: UsuarioModel = new UsuarioModel(); -> otra opción: usuario: UsuarioModel; y dentro de una función: this.usuario = new UsuarioModel();"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>login ( form: NgForm ){{c}}</b>  <abbr title="Recibimos del html. form -> Le damos el valor de NgForm para que tenga más opciones (controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>if (form.invalid){{c}}</b>   <abbr title="Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  console.log("Formulario inválido");
+  
+  <b>return;</b>   <abbr title="Se sale si no es válido y no muestra los mensajes de abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>}</b>
+
+console.log(<b>this.usuario</b>);  <abbr title="Datos de lo que cogemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+console.log(<b>form</b>);  <abbr title="Nos aparece los datos del formulario. valid -> Si es valido el formulario, por ejemplo al poner required si no se escribe pone false, si se rellena pondría true"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<b>}</b>
+
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}div class="limiter">
+    {{co}}div class="container-login100">
+        {{co}}div class="wrap-login100 p-t-50 p-b-90">
+            {{co}}form class="login100-form validate-form flex-sb flex-w" <b>{{p}}ngSubmit)="login(variableLocal)"</b> <abbr title="Coge todos los datos y lo lleva al Ts para su procesamiento y le mandamos variableLocal"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                                                        <b>#variableLocal="ngForm"</b> <abbr title="variableLocal -> Para que se pueda hacer las validaciones (required etc y coja los datos) y =ngForm que la trate como ngForm porque tiene muchas propiedades"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+
+                {{co}}span class="login100-form-title p-b-51">Login{{co}}/span>
+
+                {{co}}span class="text-danger" <b>{{f}}ngIf="variableLocal.submitted</b>  <abbr title="Si ha sido pulsado el botón submit y (&&)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            <b>&& variableLocal.controls['email'].errors"</b> <abbr title="Si el dato introducido da error se muestra, ['email'] -> Está en relación con name=email. Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>El correo es obligatorio{{co}}/span>
+                {{co}}div class="wrap-input100 m-b-16">
+                    {{co}}input class="input100" type="<b>email</b>" 
+                                            <b>name="email"</b> <abbr title="Obligado para almacenar datos y poder validar errores (como arriba) y otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            <b>{{t}}(ngModel)]="usuario.email"</b> <abbr title="Coge el email. .email -> Debe ser igual que en model (usuario.model)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            placeholder="email"
+                                            <b>required</b> <abbr title="Obligado a rellenar sino no es aceptado el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                            <b>email</b> <abbr title="Ponemos email para que nos pida nombre@nombre"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> >
+
+                    {{co}}span class="focus-input100">{{co}}/span>
+                {{co}}/div>
+                
+                {{co}}span class="text-danger" <b>{{f}}ngIf="variableLocal.submitted</b> 
+                                            <b>&& variableLocal.controls['pass'].errors"</b> <abbr title="Si el dato introducido da error se muestra, ['pass'] -> Está en relación con name=pass. Podemos usar todo lo que venga en el ngForm que observamos en pantalla: controls, errors, invalid, ngSubmit, pending, pristine (si no ha sido modificado), statusm touched, valid... "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>La contraseña es obligatoria y necesita un mínimo de 6 letras{{co}}/span>
+                {{co}}div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                    {{co}}input class="input100" type="<b>password</b>" 
+                                            <b>name="pass"</b> <abbr title="Obligado para almacenar datos y poder validar errores (como arriba) y otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            <b>{{t}}(ngModel)]="usuario.password"</b> <abbr title="Coge el password. .password -> Debe ser igual que en model (usuario.model)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            placeholder="Password"
+                                            <b>required</b> <abbr title="Obligado a rellenar sino no es aceptado el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                            <b>minlength="6"</b> <abbr title="Que tenga mínimo 6 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+                    {{co}}span class="focus-input100">{{co}}/span>
+                {{co}}/div>
+                
+                {{co}}div class="flex-sb-m w-full p-t-3 p-b-24">
+                    {{co}}div class="contact100-form-checkbox">
+                        {{co}}input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        {{co}}label class="label-checkbox100" for="ckb1">Recordar mi usuario{{co}}/label>
+                    {{co}}/div>
+
+                    {{co}}div>
+                        {{co}}a <b>routerLink="/registroregistroangular"</b> <abbr title="Nos lleva a la página del registro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> class="txt1">¿No tienes cuenta?{{co}}/a>
+                    {{co}}/div>
+                {{co}}/div>
+
+                {{co}}div class="container-login100-form-btn m-t-17">
+                    {{co}}<b>button</b> class="login100-form-btn btn btn-danger" <b>type="submit" <abbr title="Para que haga efecto al pulsar, llama a la función de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>>Ingresar{{co}}/button>
+                {{co}}/div>
+
+            {{co}}/form>
+        {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+      </div>
+  </div>
+</div>
+
+        </div>
+
+
+  </div>
+
+</div>

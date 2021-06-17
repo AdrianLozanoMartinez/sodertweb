@@ -2,48 +2,21 @@
 
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-authangular-tab" data-toggle="pill" href="#v-pills-authangular" role="tab" aria-controls="v-pills-authangular" aria-selected="true">Web - Configurar</a>
-        <a class="nav-link" id="v-pills-authangular0-tab" data-toggle="pill" href="#v-pills-authangular0" role="tab" aria-controls="v-pills-authangular0" aria-selected="true">Module.Ts</a>
+        <a class="nav-link active" id="v-pills-authangular0-tab" data-toggle="pill" href="#v-pills-authangular0" role="tab" aria-controls="v-pills-authangular0" aria-selected="true">Module.Ts</a>
         <a class="nav-link" id="v-pills-authangular1-tab" data-toggle="pill" href="#v-pills-authangular1" role="tab" aria-controls="v-pills-authangular1" aria-selected="false">Login/Registrar</a>
         <a class="nav-link" id="v-pills-authangular2-tab" data-toggle="pill" href="#v-pills-authangular2" role="tab" aria-controls="v-pills-authangular2" aria-selected="false">Ocultar acceso</a>
         <a class="nav-link" id="v-pills-authangular3-tab" data-toggle="pill" href="#v-pills-authangular3" role="tab" aria-controls="v-pills-authangular3" aria-selected="false">Bloquear acceso<small> Guard</small></a>
         <a class="nav-link" id="v-pills-authangular4-tab" data-toggle="pill" href="#v-pills-authangular4" role="tab" aria-controls="v-pills-authangular4" aria-selected="false">Usuario conectado</a>
-        <a class="nav-link" id="v-pills-authangular5-tab" data-toggle="pill" href="#v-pills-authangular5" role="tab" aria-controls="v-pills-authangular5" aria-selected="false">Configurar Auth0</a>
       </div>
     </div>
 
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
 
-        <div class="tab-pane fade active show" id="v-pills-authangular" role="tabpanel" aria-labelledby="v-pills-authangular-tab">
-            
-            <div class="card-group">
-                <div class="card text-dark bg-warning m-3">
-                  <div class="card-header">
-                    <pre class="card-text text-center"><h3>Web</h3></pre>
-                </div>
-                    <div class="card-body">
-                      <pre class="card-text"><ol><li><b>Sign up</b><ul><li>Correo/Contraseña</li><li>Github</li><li>Google</li><li>Microsoft</li></ul></li>
-<li><b>Applications</b> -> Applications -> <b>+Create Application</b><ol><li><b>Name</b>: Sodert  <abbr title="Nombre de la aplicación, a elección"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li><b>Elegimos</b>:
-Single Page Web Applications
-A JavaScript front-end app that uses an API.
-
-e.g.: <b>Angular</b>, React, Vue</li></ol>
-<li><b>Quick start</b><ol><li>What technology are you using for your web app?: <b>Angular</b></li><li><b>Configure Callback URLs</b> <small>(Lugar que va después de autentificarse)</small></li></ol><li><b>Settings</b><ul><li>Basic Information<ul><li>Name: Sodert</li><li>Domain: sodert.eu.auth0.com</li><li>Client ID: ***</li><li>Client Secret: ***</li><li>Description: Manual de programación</li></ul></li><li>Application Properties: <ul><li>Application Logo: Dirección web</li><li>Application Type: Single Page Application</li></ul><li>Application URIs<ul><li>Allowed Callback URLs: http://localhost:4200/callback  <abbr title="Nombre de la página que vamos a crear, se puede poner otro nombre, es donde pondrmeos los códigos que auth0 nos dé. Se puede poner más url poniendo una , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Logout URLs: http://localhost:4200   <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><li>Allowed Web Origins: http://localhost:4200  <abbr title="Si queremos añadir más ponemos , entre ellas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></li></ul></li><li><b>Save Changes</b></li><li><b></b>Quick start - Instalación en Angular<ul>
-<li>Install the Auth0 Angular SDK: <b>npm install @auth0/auth0-angular</b></li></ul></li></ol></pre>
-                    </div>
-                </div>
-              </div>
-              
-        </div>
-
-        <div class="tab-pane fade" id="v-pills-authangular0" role="tabpanel" aria-labelledby="v-pills-authangular0-tab">
+        <div class="tab-pane fade show active" id="v-pills-authangular0" role="tabpanel" aria-labelledby="v-pills-authangular0-tab">
 
           <div class="card-group">
             <div class="card text-dark bg-danger m-3">
-                <div class="card-header">
-                    <pre class="card-text text-center blanco"><h3>Module.ts</h3></pre>
-                </div>
                 <div class="card-body">
                   <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
 import {{c}} NgModule } from '@angular/core';
@@ -337,24 +310,6 @@ export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</p
       </div>
 
         </div>
-        
-
-        <div class="tab-pane fade" id="v-pills-authangular5" role="tabpanel" aria-labelledby="v-pills-authangular5-tab">
-
-          <div class="card-group">
-            <div class="card text-dark bg-warning m-3">
-                <div class="card-header">
-                    <pre class="card-text text-center"><h3>Web</h3></pre>
-                </div>
-                <div class="card-body">
-                  <pre class="card-text"><ul><li><a href="https://auth0.com/docs/libraries/auth0-single-page-app-sdk"><b>Extra</b></a></li><li><b>Branding</b> -> <b>Universal login</b> -> <a href="https://manage.auth0.com/dashboard/eu/sodert/login_settings"><b>Settings</b> (Configurar Login/Registrar)</a> -> <b>New</b>   <abbr title="Nuevas funcionalidades, MANTIENE LA SESIÓN ABIERTA aparte de cambiar logo y color"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
-                </div>
-            </div>
-          </div>
-
-
-          </div>
-
        
   </div>
 

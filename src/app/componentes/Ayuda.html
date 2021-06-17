@@ -194,3 +194,61 @@ export const appRoutes: Routes = [
 
 export const appRoutingProviders: any[] = [];   
 export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);
+
+
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link,
+button {
+    background: #d80303 !important;
+    color: white !important;
+}
+
+a {
+    color: black;
+}
+
+#rojo {
+    color: red;
+}
+
+.blanco{
+    color: white;
+}
+
+
+
+
+//Html
+c=`{`;
+co=`<`;
+f=`*`;
+p=`(`;
+t=`[`;
+
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <div class="col align-self-center text-center">
+          <h3 style="text-align: center;"><u><b>Firebase</b></u></h3>
+          <br><br>
+          <button class="btn btn-success m-5" [routerLink]="['/instalacionfirebase']">Instalación</button>
+          <button class="btn btn-success m-5" [routerLink]="['/formulariosfirebase']">Formularios - Angular</button>
+          <button class="btn btn-success m-5" [routerLink]="['/subirarchivos']">Subir archivos</button>
+          <button class="btn btn-success m-5" [routerLink]="['/login']">Login - Angular</button>
+          <button class="btn btn-success m-5" [routerLink]="['/hosting']">Hosting - Angular</button>
+          <br><br>
+          <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+<b style="margin-left: 20%;">Web de Ayuda</b>: <abbr title="Manual Angular"><b><a target="_black" href="https://angular.io/cli">Angular</a></b></abbr> || <abbr title="Manual Angular"><b><a target="_black" href="https://github.com/angular/angular-cli">Github</a></b></abbr>
+<img src="../../../../assets/imagenes/angular.svg" style="width: 300px;">
+<button class="btn btn-danger m-2" [routerLink]="['/programacion']">Atras</button>

@@ -1,15 +1,33 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col align-self-center text-center">
-            <h3 style="text-align: center;"><u><b>Sweepalert2</b></u></h3>
-            <p style="text-align: center;"><a href="https://sweetalert2.github.io/#download"><b>Web</b></a></p>
-            <br>
-            <button class="btn btn-danger m-5" [routerLink]="['/instalacionsweepalert2']">Instalación</button>
-            <button class="btn btn-danger m-5" [routerLink]="['/configuracionsweepalert2']">Configuración</button>
-            <button class="btn btn-danger m-5" [routerLink]="['/ejemplossweep']">Ejemplos</button>
-            <button class="btn btn-danger m-5" [routerLink]="['/metodossweep']">Métodos</button>
-            <br><br>
-            <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
-        </div>
-    </div>
-</div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-sweetalert2principal-tab" data-toggle="pill" href="#pills-sweetalert2principal" role="tab" aria-controls="pills-sweetalert2principal" aria-selected="true" style="color: black;">Instalación</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-sweetalert2principal0-tab" data-toggle="pill" href="#pills-sweetalert2principal0" role="tab" aria-controls="pills-sweetalert2principal0" aria-selected="false" style="color: black;">Configuración</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-sweetalert2principal1-tab" data-toggle="pill" href="#pills-sweetalert2principal1" role="tab" aria-controls="pills-sweetalert2principal1" aria-selected="false" style="color: black;">Ejemplos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-sweetalert2principal2-tab" data-toggle="pill" href="#pills-sweetalert2principal2" role="tab" aria-controls="pills-sweetalert2principal2" aria-selected="false" style="color: black;">Métodos</a>
+    </li>
+    <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-sweetalert2principal" role="tabpanel" aria-labelledby="pills-sweetalert2principal-tab"><app-instalacionsweepalert2></app-instalacionsweepalert2></div>
+  
+    <div class="tab-pane fade" id="pills-sweetalert2principal0" role="tabpanel" aria-labelledby="pills-sweetalert2principal0-tab"><app-configuracionsweep></app-configuracionsweep></div>
+  
+    <div class="tab-pane fade" id="pills-sweetalert2principal1" role="tabpanel" aria-labelledby="pills-sweetalert2principal1-tab"><app-ejemplossweep></app-ejemplossweep></div>
+  
+    <div class="tab-pane fade" id="pills-sweetalert2principal2" role="tabpanel" aria-labelledby="pills-sweetalert2principal2-tab"><app-metodossweep></app-metodossweep></div>
+      
+  </div>
+
+
+  <b style="margin-left: 35%;"><a target="_black" href="https://sweetalert2.github.io/#download" class="mr-3">Oficial</a></b>
+  <img src="../../../../assets/imagenes/sweetalert2.png" style="width: 300px;">
+  <button class="btn btn-dark m-2" [routerLink]="['/programacion']">Atras</button>
+
