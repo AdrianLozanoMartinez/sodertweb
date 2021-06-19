@@ -147,6 +147,7 @@ import { DeudasidComponent } from './paginas/deudas/deudasid/deudasid.component'
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
+import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
 
 //Routes/routing específico de usuario
 import { USUARIO_ROUTES } from './paginas/programacion/angular/padre-hijo-hijas/usuario.routes';
@@ -274,6 +275,7 @@ export const appRoutes: Routes = [
   //Librerías
   { path: 'jquery', component: JqueryComponent},
   { path: 'tether', component: TetherComponent},
+  { path: 'bootswatch', component: BootswatchComponent},
   //Empleo
   { path: 'empleo', component: EmpleoComponent},
   { path: 'empresas', component: EmpresasComponent},

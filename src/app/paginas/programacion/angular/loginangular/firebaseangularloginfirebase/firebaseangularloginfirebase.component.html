@@ -68,7 +68,7 @@ export class AppModule {{c}} }</pre>
 <div class="card-group">
   <div class="card text-dark bg-danger m-3">
     <div class="card-header">
-      <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+      <pre class="card-text text-center blanco"><h3>Servicio <small><small>(1º opción)</small></small></h3></pre>
     </div>
       <div class="card-body">
         <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
@@ -94,6 +94,24 @@ export class ServiciofireService {{c}}
 
 }</pre>
       </div>
+  </div>
+  <div class="card text-dark bg-danger m-3">
+    <div class="card-header">
+        <pre class="card-text text-center blanco"><h3>Environment.Ts <small><small>(2º opción)</small></small></h3></pre>
+    </div>
+    <div class="card-body">
+        <pre class="card-text blanco">export const environment = {{c}}
+  production: false,  <abbr title="True -> Producción, False -> Desarrollo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  firebaseConfig: {{c}}
+    <b>apiKey: "***********",  <abbr title="API que usamos en la 1º Opción en el servidor"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    authDomain: "sodertweb.firebaseapp.com",   <abbr title="Dirección para ver la web aparte de la corta: sodertweb.web.app"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    databaseURL: "https://sodertweb.firebaseio.com",  <abbr title="Base de datos firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    projectId: "sodertweb",
+    storageBucket: "sodertweb.******",
+    messagingSenderId: "*********"</b>
+  }
+};</pre>
+    </div>
   </div>
 </div>
 

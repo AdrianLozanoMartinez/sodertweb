@@ -1,0 +1,43 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootswatch-tab" data-toggle="pill" href="#pills-bootswatch" role="tab" aria-controls="pills-bootswatch" aria-selected="true" style="color: black;">Instalar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-bootswatch0-tab" data-toggle="pill" href="#pills-bootswatch0" role="tab" aria-controls="pills-bootswatch0" aria-selected="false" style="color: black;">Themes</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-bootswatch" role="tabpanel" aria-labelledby="pills-bootswatch-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Web</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text"><ol><li><b>Themes</b> -> <b>Elegir tema</b><ul><li><b>Botón derecho</b> + Investigar</li><li><b>Ctrl + Shift + I</b> -> Elements</li></ul></li>
+<li><b>{{co}}head>...{{co}}/head></b> -> <b>bootstrap.css</b> y <b>bootstrap.min.css</b> -> Botón derecho abrir pestaña<ul><li><b>Copiamos dirección</b><ul><li><u>Bootstrap.css</u>: <b>Tipos (Cambiamos united por otro) -> </b>{{co}}link rel="stylesheet" href="<b>https://bootswatch.com/5/united/bootstrap.css</b>"> o <b>Por defecto</b> -> {{co}}link rel="stylesheet" href="<b>https://bootswatch.com/_vendor/bootstrap/dist/css/bootstrap.css</b>"></li><li><u>Bootstrap.min.css</u>: {{co}}link rel="stylesheet" href="<b>https://bootswatch.com/_assets/css/custom.min.css</b>"></li></ul><li><b>Descargamos</b> archivos o copiamos su interior en un archivo.css y archivo.mind.css -> Lo <b>metemos en assets</b></li></ul></li></ol></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Proyecto</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">Ver y Explicar</pre>
+              </div>
+          </div>
+        </div>
+          
+    </div>
+  
+    <div class="tab-pane fade" id="pills-bootswatch0" role="tabpanel" aria-labelledby="pills-bootswatch0-tab"><app-themes></app-themes></div>
+      
+  </div>
+
+
+<b style="margin-left: 35%;"><b><a target="_black" href="https://angular.io/cli">Web</a></b>
+<img src="../../../../assets/imagenes/bootswatch.svg" style="width: 300px; margin-top: 8%;">
+<button class="btn btn-primary m-2" [routerLink]="['/programacion']">Atras</button>

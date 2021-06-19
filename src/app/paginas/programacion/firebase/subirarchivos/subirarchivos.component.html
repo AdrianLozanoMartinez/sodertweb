@@ -193,12 +193,12 @@ service firebase.storage {{c}}
                     <pre>
   
   <b>firebaseConfig <b>=</b> {{c}}      
-  apiKey: "AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg",
+  apiKey: "*************",
   authDomain: "sodertweb.firebaseapp.com",
   databaseURL: "https://sodertweb.firebaseio.com",
   projectId: "sodertweb",
-  storageBucket: "sodertweb.appspot.com",
-  messagingSenderId: "254566057470",
+  storageBucket: "sodertweb.*****",
+  messagingSenderId: "*******",
 };</b></pre>
 
 <br>Y lo pegamos en Environment.ts <b>cambiando = por :</b>
@@ -216,12 +216,12 @@ service firebase.storage {{c}}
                 export const environment = {{c}}
                 production: false,                                         
                 <b>firebaseConfig: {{c}}
-                    apiKey: "AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg",
+                    apiKey: "************",
                     authDomain: "sodertweb.firebaseapp.com",
                     databaseURL: "https://sodertweb.firebaseio.com",
                     projectId: "sodertweb",
-                    storageBucket: "sodertweb.appspot.com",
-                    messagingSenderId: "254566057470"
+                    storageBucket: "sodertweb.*****",
+                    messagingSenderId: "*********"
                 }</b>
                 };
 </pre>

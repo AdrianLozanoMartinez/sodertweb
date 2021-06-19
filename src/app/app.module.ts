@@ -131,6 +131,16 @@ import { LoginangulargeneralComponent } from './paginas/programacion/angular/log
 import { Loginangulargeneral2Component } from './paginas/programacion/angular/loginangular/loginangulargeneral2/loginangulargeneral2.component';
 import { LoginloginangularComponent } from './paginas/programacion/angular/loginangular/loginloginangular/loginloginangular.component';
 import { RegistroregistroangularComponent } from './paginas/programacion/angular/loginangular/registroregistroangular/registroregistroangular.component';
+import { FirebaseangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/firebaseangularloginfirebase.component';
+import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
+import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
+import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
+import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
+import { TemplateformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/templateformularioangular/templateformularioangular.component';
+import { ReactivoformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformularioangular.component';
+import { FirebaseformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/firebaseformularioangular/firebaseformularioangular.component';
+import { FormularioangularprincipalComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangularprincipal.component';
+import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
 
 //Programación - Angular - PipeLenguaje
 import { registerLocaleData } from '@angular/common';
@@ -250,16 +260,8 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 //Librerías
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
-import { FirebaseangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/firebaseangularloginfirebase.component';
-import { Auth0auth0Component } from './paginas/programacion/auth0auth0/auth0auth0.component';
-import { RegistrofirebaseangularrComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/registrofirebaseangularr/registrofirebaseangularr.component';
-import { LoginangularloginfirebaseComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/loginangularloginfirebase/loginangularloginfirebase.component';
-import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
-import { TemplateformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/templateformularioangular/templateformularioangular.component';
-import { ReactivoformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformularioangular.component';
-import { FirebaseformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/firebaseformularioangular/firebaseformularioangular.component';
-import { FormularioangularprincipalComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangularprincipal.component';
-import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
+import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
+import { ThemesComponent } from './paginas/programacion/bootswatch/themes/themes.component';
 
 
 
@@ -389,6 +391,16 @@ import { LogindominicodeComponent } from './paginas/programacion/angular/loginan
     Loginangulargeneral2Component,
     LoginloginangularComponent,
     RegistroregistroangularComponent,
+    FirebaseangularloginfirebaseComponent,
+    Auth0auth0Component,
+    RegistrofirebaseangularrComponent,
+    LoginangularloginfirebaseComponent,
+    ProtegergirebaseangularComponent,
+    TemplateformularioangularComponent,
+    ReactivoformularioangularComponent,
+    FirebaseformularioangularComponent,
+    FormularioangularprincipalComponent,
+    LogindominicodeComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -474,16 +486,8 @@ import { LogindominicodeComponent } from './paginas/programacion/angular/loginan
     //Librerias
     JqueryComponent,
     TetherComponent,
-    FirebaseangularloginfirebaseComponent,
-    Auth0auth0Component,
-    RegistrofirebaseangularrComponent,
-    LoginangularloginfirebaseComponent,
-    ProtegergirebaseangularComponent,
-    TemplateformularioangularComponent,
-    ReactivoformularioangularComponent,
-    FirebaseformularioangularComponent,
-    FormularioangularprincipalComponent,
-    LogindominicodeComponent
+    BootswatchComponent,
+    ThemesComponent
   ],
   imports: [
     //Por defecto
