@@ -259,6 +259,7 @@ import { TemplateformularioangularComponent } from './paginas/programacion/angul
 import { ReactivoformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformularioangular.component';
 import { FirebaseformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/firebaseformularioangular/firebaseformularioangular.component';
 import { FormularioangularprincipalComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangularprincipal.component';
+import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
 
 
 
@@ -481,7 +482,8 @@ import { FormularioangularprincipalComponent } from './paginas/programacion/angu
     TemplateformularioangularComponent,
     ReactivoformularioangularComponent,
     FirebaseformularioangularComponent,
-    FormularioangularprincipalComponent
+    FormularioangularprincipalComponent,
+    LogindominicodeComponent
   ],
   imports: [
     //Por defecto

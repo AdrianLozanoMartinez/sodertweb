@@ -2,7 +2,7 @@
 
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-reactivoformulario-tab" data-toggle="pill" href="#v-pills-reactivoformulario" role="tab" aria-controls="v-pills-reactivoformulario" aria-selected="true">x</a>
+        <a class="nav-link" id="v-pills-reactivoformulario-tab" data-toggle="pill" href="#v-pills-reactivoformulario" role="tab" aria-controls="v-pills-reactivoformulario" aria-selected="true">Module.Ts</a>
         <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">x</a>
         <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">x</a>
         <a class="nav-link" id="v-pills-reactivoformulario2-tab" data-toggle="pill" href="#v-pills-reactivoformulario2" role="tab" aria-controls="v-pills-reactivoformulario2" aria-selected="false">x</a>
@@ -12,9 +12,137 @@
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
 
-        <div class="tab-pane fade" id="v-pills-reactivoformulario" role="tabpanel" aria-labelledby="v-pills-reactivoformulario-tab">x</div>
+        <div class="tab-pane fade" id="v-pills-reactivoformulario" role="tabpanel" aria-labelledby="v-pills-reactivoformulario-tab">
+          
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
 
-        <div class="tab-pane fade" id="v-pills-reactivoformulario0" role="tabpanel" aria-labelledby="v-pills-reactivoformulario0-tab">x</div>
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Usar funciones de los formularios
+<b>import {{c}} FormsModule } from '@angular/forms';</b>
+
+@NgModule({{c}}
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+      BrowserModule,
+      routing<b>,</b>
+      //Usar funciones de los formularios
+      <b>FormsModule</b>
+    ],
+      providers: [
+      appRoutingProviders
+      ],
+      bootstrap: [AppComponent]
+  })
+  export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-reactivoformulario0" role="tabpanel" aria-labelledby="v-pills-reactivoformulario0-tab">
+          
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                  <h4>Formularios <small> tipo </small></h4>
+                  <hr>
+                  <form autocomplete="off">
+                  
+                    <div>
+                  
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Nombre</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Nombre">
+                        </div>
+                      </div>
+                  
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Apellido</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Apellido">
+                        </div>
+                      </div>
+                  
+                    </div>
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">Correo</label>
+                      <div class="col-8">
+                  
+                        <input class="form-control"
+                               type="email"
+                               placeholder="Correo electrónico">
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">&nbsp;</label>
+                      <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary btn-block">
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  
+                  </form>
+                  
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>x</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">x</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>x</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">x</pre>
+              </div>
+          </div>
+        </div>
+
+        
+        </div>
 
         <div class="tab-pane fade" id="v-pills-reactivoformulario1" role="tabpanel" aria-labelledby="v-pills-reactivoformulario1-tab">x</div>
 

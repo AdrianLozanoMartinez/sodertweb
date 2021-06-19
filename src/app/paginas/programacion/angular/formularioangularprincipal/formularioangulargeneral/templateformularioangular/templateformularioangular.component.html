@@ -2,23 +2,741 @@
 
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link" id="v-pills-templateformulario-tab" data-toggle="pill" href="#v-pills-templateformulario" role="tab" aria-controls="v-pills-templateformulario" aria-selected="true">x</a>
-        <a class="nav-link" id="v-pills-templateformulario0-tab" data-toggle="pill" href="#v-pills-templateformulario0" role="tab" aria-controls="v-pills-templateformulario0" aria-selected="true">x</a>
-        <a class="nav-link" id="v-pills-templateformulario1-tab" data-toggle="pill" href="#v-pills-templateformulario1" role="tab" aria-controls="v-pills-templateformulario1" aria-selected="false">x</a>
-        <a class="nav-link" id="v-pills-templateformulario2-tab" data-toggle="pill" href="#v-pills-templateformulario2" role="tab" aria-controls="v-pills-templateformulario2" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-templateformulario-tab" data-toggle="pill" href="#v-pills-templateformulario" role="tab" aria-controls="v-pills-templateformulario" aria-selected="true">Module.Ts</a>
+        <a class="nav-link" id="v-pills-templateformulario0-tab" data-toggle="pill" href="#v-pills-templateformulario0" role="tab" aria-controls="v-pills-templateformulario0" aria-selected="true">Nombre - Apellido - Correo</a>
+        <a class="nav-link" id="v-pills-templateformulario1-tab" data-toggle="pill" href="#v-pills-templateformulario1" role="tab" aria-controls="v-pills-templateformulario1" aria-selected="false">Select - API - Países</a>
+        <a class="nav-link" id="v-pills-templateformulario2-tab" data-toggle="pill" href="#v-pills-templateformulario2" role="tab" aria-controls="v-pills-templateformulario2" aria-selected="false">Radio buttons - Géneros</a>
       </div>
     </div>
 
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
 
-        <div class="tab-pane fade" id="v-pills-templateformulario" role="tabpanel" aria-labelledby="v-pills-templateformulario-tab">x</div>
+        <div class="tab-pane fade" id="v-pills-templateformulario" role="tabpanel" aria-labelledby="v-pills-templateformulario-tab">
+          
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
 
-        <div class="tab-pane fade" id="v-pills-templateformulario0" role="tabpanel" aria-labelledby="v-pills-templateformulario0-tab">x</div>
+import {{c}} routing, appRoutingProviders } from './app.routing';
 
-        <div class="tab-pane fade" id="v-pills-templateformulario1" role="tabpanel" aria-labelledby="v-pills-templateformulario1-tab">x</div>
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-        <div class="tab-pane fade" id="v-pills-templateformulario2" role="tabpanel" aria-labelledby="v-pills-templateformulario2-tab">x</div>
+//Usar funciones de los formularios
+<b>import {{c}} FormsModule } from '@angular/forms';</b>  <abbr title="Usar formularios template"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} HttpClientModule } from '@angular/common/http';</b>  <abbr title="Usar API de países"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@NgModule({{c}}
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+      BrowserModule,
+      routing<b>,</b>
+      //Usar funciones de los formularios
+      <b>FormsModule,
+        HttpClientModule</b>
+    ],
+      providers: [
+      appRoutingProviders
+      ],
+      bootstrap: [AppComponent]
+  })
+  export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-templateformulario0" role="tabpanel" aria-labelledby="v-pills-templateformulario0-tab">
+          
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+
+                  <form autocomplete="off" (ngSubmit)="guardar( variableLocal )" #variableLocal="ngForm">
+                  
+                    <div>
+                  
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Nombre</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Nombre"
+                                 name="usuarioPorDefecto"
+                                 [ngModel]="usuarioPorDefecto.nombre"
+                                 required
+                                 minlength="5"
+                                 [class.is-invalid]="(variable_nombrePorDefectoLocal.invalid && variable_nombrePorDefectoLocal.touched) || (variable_nombrePorDefectoLocal.invalid && variableLocal.submitted)"
+                                 #variable_nombrePorDefectoLocal="ngModel">
+                                 <!-- [ solo ] porque solo recibe no emite, es recomendable no usar ambos sino se va a usar, en este caso recibe del Ts
+
+                                  NO RECOMENDADO:
+                                (variable_nombrePorDefectoLocal.invalid && variable_nombrePorDefectoLocal.touched) -> Si es invalido y (&&) lo hemos tocado
+                                || variable_nombrePorDefectoLocal.invalid && variableLocal.submitted -> O (||) Si es invalido y (&&) se ha pulsado el botón submit sale error. -->
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Nombre</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Nombre"
+                                 name="nombre"
+                                 [ngModel]="usuario.nombre"
+                                 required
+                                 minlength="5"
+                                 [class.is-invalid]="variable_nombreLocal.invalid && variable_nombreLocal.touched"
+                                 #variable_nombreLocal="ngModel">
+                                 <!-- [ solo ] porque solo recibe no emite, es recomendable no usar ambos sino se va a usar
+                                [class] forma dinámica -> valid/invalid
+                                variable_nombreLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, minlength="5")
+                                && variable_nombreLocal.touched -> y haber sido tocado el campo
+                                #variable_nombreLocal -> nombre del campo (input) al poner ngModel nos da el control del campo entero-->
+
+                                <small  *ngIf="variable_nombreLocal.invalid && variable_nombreLocal.touched"
+                                        class="form-text text-danger">Ingrese 5 letras</small>
+                        </div>
+                      </div>
+                  
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Apellido</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Apellido"
+                                 name="apellido"
+                                 [ngModel]="usuario.apellido"
+                                 required
+                                 minlength="5"
+                                 [class.is-invalid]="variable_apellidoLocal.invalid && variable_apellidoLocal.touched"
+                                 #variable_apellidoLocal="ngModel">
+
+                                 <small  *ngIf="variable_apellidoLocal.invalid && variable_apellidoLocal.touched"
+                                 class="form-text text-danger">Ingrese 5 letras</small>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">Correo</label>
+                      <div class="col-8">
+                  
+                        <input class="form-control"
+                               type="email"
+                               placeholder="Correo electrónico"
+                               name="correo"
+                               [ngModel]="usuario.correo"
+                               required
+                               [class.is-invalid]="variable_correoLocal.invalid && variable_correoLocal.touched"
+                               #variable_correoLocal="ngModel"
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                               <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -> Expresión regular que controla un email como debe ser escrito 
+                              ngModel -> Sin [ ] sino le enviamos nada por Ts, si le enviamos se pone []-->
+
+                              <small  *ngIf="variable_correoLocal.invalid && variable_correoLocal.touched"
+                              class="form-text text-danger">El correo es obligatorio y debe tener su formato con correo@hosting.extensión</small>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">&nbsp;</label>
+                      <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary btn-block">
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  
+                  </form>
+                  
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} NgForm } from '@angular/forms';</b>  <abbr title="Funcionalidades de los formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-templateformularioangular',
+  templateUrl: './templateformularioangular.component.html',
+  styleUrls: ['./templateformularioangular.component.css']
+})
+export class TemplateformularioangularComponent implements OnInit {{c}}
+
+
+  <b>usuarioPorDefecto = {{c}}  <abbr title="Si queremos poner datos estáticos/predeterminados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    nombre: 'Adri'
+  }
+
+  usuario = {{c}}  <abbr title="Datos vacíos para coger los que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    nombre: '',
+    apellido: '',
+    correo: ''
+  }</b>
+
+  constructor() {{c}} }
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>guardar( variableLocal: NgForm ){{c}}  <abbr title="Función del html que ejecuta validaciones, NgForm -> Coge funcionalidades de los formularios como el valid..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+    if ( variableLocal.invalid ){{c}}</b>  <abbr title="Si algún campo es inválido (no se a completado los 5 caractéres, no se ha rellenado, etc...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      <b>Object.values( variableLocal.controls ).forEach( variableControlador => {{c}}</b>  <abbr title="Evaluamos el objeto (formulario), en especial los controles (controls) de lo que recibimos (variableLocal), recorremos (forEach) todos los campos que tenga ngModel que es lo que recibe la función guardar() al pulsar el botón submit. Lo que obtenemos lo metemos en la variable -> variableControlador"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          <b>variableControlador.markAsTouched();</b>  <abbr title="markAsTouched -> Marca como tocado al pulsar submit cada variable para que se dispare los errores si no cumple los demás requisitos (required, minlegth...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>});
+
+        return;
+    }</b>
+
+    console.log(variableLocal);  <abbr title="Vemos en consola si es válido (valid) o no (invalid) el formulario, controls (ngModel), errors, status, touched...entre otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log(variableLocal<b>.value</b>);  <abbr title=".opción del ngForm"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  }
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}form <b>autocomplete="off" <abbr title="Autocompletar, on (si) / off(no)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> {{p}}ngSubmit)="guardar( variableLocal )" #variableLocal="ngForm"</b>  <abbr title="Mandamos a la función que se declara en el Ts la variable local del Html (#variableLocal) que a su vez le damos funcionalidades del formulario (ngForm)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+
+  {{co}}div>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Nombre{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Nombre"
+                <b>name="usuarioPorDefecto"  <abbr title="Le damos un nombre específico que no se puede repetir en otro campo para poder guardar con el [ngModel]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}ngModel]="usuarioPorDefecto.nombre"  <abbr title="Guardamos lo que escribamos en el objeto usuarioPorDefecto especialmente en el parámetro nombre. [emite] o (recibe) o [(Emitir y Recibir)]. Si es solo del Ts es suficiente []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                required  <abbr title="Obligatorio rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                minlength="5"  <abbr title="Mínimo 5 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}class.is-invalid]="(variable_nombrePorDefectoLocal.invalid && variable_nombrePorDefectoLocal.touched) <abbr title="Si es inválido las condiciones (require, minleght...) y es tocado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> || <abbr title="O es inválido y pulsado para guardar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> (variable_nombrePorDefectoLocal.invalid && variableLocal.submitted)"  <abbr title="Submitted se usa mejor en el Ts, es una forma NO RECOMENDABLE. Sino es válido y hemos pulsado el botón submit para guardar se dispara el error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                #variable_nombrePorDefectoLocal="ngModel"</b>>  <abbr title="Variable local que usamos para comparar si es válido o no gracias al ngModel que nos da todas las opciones de los formularios (status, invalid, valid... -> Si queremos verlos hacemos en el Ts un console.log (ngForm)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      {{co}}/div>
+    {{co}}/div>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Nombre{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Nombre"
+                <b>name="nombre"  <abbr title="Le damos un nombre específico que no se puede repetir en otro campo para poder guardar con el [ngModel]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}ngModel]="usuario.nombre"  <abbr title="Guardamos lo que escribamos en el objeto usuario especialmente en el parámetro nombre. [emite] o (recibe) o [(Emitir y Recibir)]. Si es solo del Ts es suficiente []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                required  <abbr title="Obligatorio rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                minlength="5"  <abbr title="Mínimo 5 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}class.is-invalid]="variable_nombreLocal.invalid && variable_nombreLocal.touched"  <abbr title="[class] forma dinámica (cambia - valid/invalid). variable_nombreLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, minlength=5). && variable_nombreLocal.touched -> y haber sido tocado el campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                #variable_nombreLocal="ngModel"</b>>  <abbr title="Variable local que usamos para comparar si es válido o no gracias al ngModel que nos da todas las opciones de los formularios (status, invalid, valid... -> Si queremos verlos hacemos en el Ts un console.log (ngForm)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+              {{co}}small  <b>{{f}}ngIf="variable_nombreLocal.invalid && variable_nombreLocal.touched"</b>  <abbr title="Se coge la variable local declarada con ngModel. Si es invalido y tocado muestra mensaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      class="form-text text-danger">Ingrese 5 letras{{co}}/small>
+      {{co}}/div>
+    {{co}}/div>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Apellido{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Apellido"
+                <b>name="apellido"  <abbr title="Le damos un apellido específico que no se puede repetir en otro campo para poder guardar con el [ngModel]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}ngModel]="usuario.apellido"  <abbr title="Guardamos lo que escribamos en el objeto usuario especialmente en el parámetro apellido. [emite] o (recibe) o [(Emitir y Recibir)]. Si es solo del Ts es suficiente []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                required  <abbr title="Obligatorio rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                minlength="5"  <abbr title="Mínimo 5 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}class.is-invalid]="variable_apellidoLocal.invalid && variable_apellidoLocal.touched" <abbr title="[class] forma dinámica (cambia - valid/invalid). variable_apellidoLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, minlength=5). && variable_apellidoLocal.touched -> y haber sido tocado el campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                #variable_apellidoLocal="ngModel"</b>>  <abbr title="Variable local que usamos para comparar si es válido o no gracias al ngModel que nos da todas las opciones de los formularios (status, invalid, valid... -> Si queremos verlos hacemos en el Ts un console.log (ngForm)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                {{co}}small  <b>{{f}}ngIf="variable_apellidoLocal.invalid && variable_apellidoLocal.touched"</b>  <abbr title="Se coge la variable local declarada con ngModel. Si es invalido y tocado muestra mensaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                class="form-text text-danger">Ingrese 5 letras{{co}}/small>
+      {{co}}/div>
+    {{co}}/div>
+
+  {{co}}/div>
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">Correo{{co}}/label>
+    {{co}}div class="col-8">
+
+      {{co}}input class="form-control"
+              type="email"
+              placeholder="Correo electrónico"
+              <b>name="correo"  <abbr title="Le damos un correo específico que no se puede repetir en otro campo para poder guardar con el [ngModel]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{t}}ngModel]="usuario.correo"  <abbr title="Guardamos lo que escribamos en el objeto usuario especialmente en el parámetro correo. [emite] o (recibe) o [(Emitir y Recibir)]. Si es solo del Ts es suficiente []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              required  <abbr title="Obligatorio rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{t}}class.is-invalid]="variable_correoLocal.invalid && variable_correoLocal.touched"  <abbr title="[class] forma dinámica (cambia - valid/invalid). variable_correoLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, pattern). && variable_correoLocal.touched -> y haber sido tocado el campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              #variable_correoLocal="ngModel"  <abbr title="Variable local que usamos para comparar si es válido o no gracias al ngModel que nos da todas las opciones de los formularios (status, invalid, valid... -> Si queremos verlos hacemos en el Ts un console.log (ngForm)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{{c}}2,3}$"</b>>  <abbr title="Expresión regular que controla un email como debe ser escrito "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+            {{co}}small  <b>{{f}}ngIf="variable_correoLocal.invalid && variable_correoLocal.touched"</b>  <abbr title="Se coge la variable local declarada con ngModel. Si es invalido y tocado muestra mensaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            class="form-text text-danger">El correo es obligatorio y debe tener su formato con correo@hosting.extensión{{co}}/small>
+    {{co}}/div>
+  {{co}}/div>
+
+
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">{{boom}}{{co}}/label>
+    {{co}}div class="input-group col-md-8">
+      {{co}}<b>button</b> <b>type="submit"</b> class="btn btn-outline-primary btn-block">  <abbr title="submit -> Envía los campos a la función guardar() de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        Guardar
+      {{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
+
+{{co}}/form></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-templateformulario1" role="tabpanel" aria-labelledby="v-pills-templateformulario1-tab">
+          
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+
+                  <form autocomplete="off" (ngSubmit)="guardar2( variableLocal2 )" #variableLocal2="ngForm">
+
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">Países</label>
+                      <div class="col-8">
+                  
+                        <select class="form-control"
+                                name="pais"
+                                [ngModel]="usuario.pais"
+                                required
+                                [disabled]="paises.length === 0"
+                                [class.is-invalid]="variable_paisLocal.invalid && variable_paisLocal.touched"
+                                #variable_paisLocal="ngModel">
+
+                                <small  *ngIf="variable_paisLocal.invalid && variable_paisLocal.touched"
+                                        class="form-text text-danger">El pais es obligatorio</small>
+
+                          <option *ngFor="let paisLocal of paises" [value]="paisLocal.codigo">{{ paisLocal.nombre }}</option>
+                        </select>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">&nbsp;</label>
+                      <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary btn-block">
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  
+                  </form>
+                  
+        
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-danger m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} HttpClient } from '@angular/common/http';  <abbr title="Poder usar API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} map } from 'rxjs/operators';</b>  <abbr title="Filtrar dato específico"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciotemplateService {{c}}
+
+  <b>private url:string="https://restcountries.eu/rest/v2/lang/es";</b>  <abbr title="Metemos la URL a una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private http: HttpClient</b> ) {{c}} }  <abbr title="Metemos (HttpClient) para interactuar con la API en una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+getPaises(){{c}}
+
+  //Menos recomendable
+  //<b>return this.http.get('https://restcountries.eu/rest/v2/lang/es');</b>  <abbr title="Cogemos la API de países"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  //Más recomendable
+  /*return this.http.get(this.url)  <abbr title="Cogemos la API de países. url es una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  .pipe(   <abbr title="Usamos pipe y map para coger solamente el nombre de toda la información que nos manda la API que es mucha"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    map ( (resp:any[]) =>{{c}}  <abbr title="Usamos any en resp para que no de error al usar el 2º map como arreglo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      return resp.map( paisRecibido => {{c}}  <abbr title="Este map es del arreglo, dentro del otro map. Para sacar el nombre y código solamente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        return{{c}}
+                          nombre: paisRecibido.name,  <abbr title="Nombre del país"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                          codigo: paisRecibido.alpha3Code  <abbr title="Código del país"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        }
+                      })
+                      
+                    })
+                   );  */
+
+
+    //MÁS <b>RECOMENDABLE</b> Y MÁS SIMPLE
+    <b>return this.http.get(this.url)</b>  <abbr title="Cogemos la API de países. url es una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    <b>.pipe(</b>   <abbr title="Usamos pipe y map para coger solamente el nombre de toda la información que nos manda la API que es mucha"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      <b>map ( (resp:any[]) <abbr title="Usamos any en resp para que no de error al usar el 2º map como arreglo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> => resp.map <abbr title="Este map es del arreglo, dentro del otro map. Para sacar el nombre y código solamente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ( paisRecibido => ({{c}} nombre: paisRecibido.name, codigo: paisRecibido.alpha3Code <abbr title="Nombre y Código del país"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> })</b>
+        )
+      )
+    );  
+
+
+}
+
+
+
+}</pre>
+              </div>
+          </div>
+        </div>
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';
+<b>import {{c}} ServiciotemplateService } from './servicio/serviciotemplate.service';</b>  <abbr title="Servicio para poder llamar a través de él a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-templateformularioangular',
+  templateUrl: './templateformularioangular.component.html',
+  styleUrls: ['./templateformularioangular.component.css']
+})
+export class TemplateformularioangularComponent implements OnInit {{c}}
+
+  usuario = {{c}}
+    pais: ''  <abbr title="Al tener el código abajo vacío si ponemos aquí un código lo pone predeterminado en el formulario ejemplo ESP"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  <b>paises: any[] = [];</b>
+
+  constructor( <b>private paisService: ServiciotemplateService </b>) {{c}} }  <abbr title="Variable que metemos el servicio para manejar la API de países"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+
+    <b>this.paisService.getPaises().subscribe ( VienePaises => {{c}}  <abbr title="Mediante la variable llamamos a la función del servicio para llamar a la API y subscribirnos para usarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      console.log('Países que hablan Español antes de la comparación: ', VienePaises);  <abbr title="Al meter el resultado en la variable (VienePaises) podemos mostrarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      this.paises = VienePaises   <abbr title="paises: any[] = [] (this.paises) = Paises que vienen del servicio (VienePaises)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      console.log('Países que hablan Español después de la comparación: ', this.paises);  <abbr title="Sale igual que la anterior, pero después de hacer la comparación"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      this.paises.unshift({{c}}  <abbr title="unshift añade un nuevo elemento a la posición del arreglo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        nombre: '[ Seleccione Pais ]', <abbr title="Es lo primero que saldrá y seleccionado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+        codigo: ''  <abbr title="Al dejarlo vacío podemos poner en el arreglo de usuario de arriba el código que queramos que salga por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      })
+      
+    })</b>
+  }
+
+  <b>guardar( variableLocal: NgForm ){{c}}  <abbr title="Función del html que ejecuta validaciones, NgForm -> Coge funcionalidades de los formularios como el valid..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+    if ( variableLocal.invalid ){{c}}</b>  <abbr title="Si algún campo es inválido (no se a completado los 5 caractéres, no se ha rellenado, etc...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      <b>Object.values( variableLocal.controls ).forEach( variableControlador => {{c}}</b>  <abbr title="Evaluamos el objeto (formulario), en especial los controles (controls) de lo que recibimos (variableLocal), recorremos (forEach) todos los campos que tenga ngModel que es lo que recibe la función guardar() al pulsar el botón submit. Lo que obtenemos lo metemos en la variable -> variableControlador"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          <b>variableControlador.markAsTouched();</b>  <abbr title="markAsTouched -> Marca como tocado al pulsar submit cada variable para que se dispare los errores si no cumple los demás requisitos (required, minlegth...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>});
+
+        return;
+    }</b>
+
+    console.log(variableLocal);  <abbr title="Vemos en consola si es válido (valid) o no (invalid) el formulario, controls (ngModel), errors, status, touched...entre otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log(variableLocal<b>.value</b>);  <abbr title=".opción del ngForm"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  }
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{c}}co}}form autocomplete="off" {{c}}p}}ngSubmit)="guardar( variableLocal )" #variableLocal="ngForm">
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label"><b>Países</b>{{co}}/label>
+    {{co}}div class="col-8">
+
+    <b>{{co}}select class="form-control"
+              name="pais"   <abbr title="Le damos un pais específico que no se puede repetir en otro campo para poder guardar con el [ngModel]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{t}}ngModel]="usuario.pais"   <abbr title="Guardamos lo que escribamos en el objeto usuario especialmente en el parámetro pais. [emite] o (recibe) o [(Emitir y Recibir)]. Si es solo del Ts es suficiente []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              required   <abbr title="Obligatorio rellenar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{t}}disabled]="paises.length === 0"  <abbr title="Se deshabilita si no tiene ninguna letra, sino se selecciona"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{t}}class.is-invalid]="variable_paisLocal.invalid && variable_paisLocal.touched"  <abbr title="[class] forma dinámica (cambia - valid/invalid). variable_paisLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, pattern). && variable_paisLocal.touched -> y haber sido tocado el campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              #variable_paisLocal="ngModel"></b>  <abbr title="Variable local que usamos para comparar si es válido o no gracias al ngModel que nos da todas las opciones de los formularios (status, invalid, valid... -> Si queremos verlos hacemos en el Ts un console.log (ngForm). ngModel sin [ ] porque no carga valor por defecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+              {{co}}small  <b>{{f}}ngIf="variable_paisLocal.invalid && variable_paisLocal.touched"</b>  <abbr title="Se coge la variable local declarada con ngModel. Si es invalido y tocado muestra mensaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      class="form-text text-danger">El pais es obligatorio{{co}}/small>
+
+        <b>{{co}}option {{f}}ngFor="let paisLocal of paises" {{t}}value]="paisLocal.codigo">{{c}}{{c}} paisLocal.nombre }}{{co}}/option>  <abbr title="Cogemos el codigo del servicio a através de la variable paises del Ts relacionado con el servicio dentro del ngOnit, y con la local y for vamos cogiendo uno a uno"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}/select></b>
+    {{co}}/div>
+  {{co}}/div>
+
+
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">{{boom}}{{co}}/label>
+    {{co}}div class="input-group col-md-8">
+      {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      {{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
+
+{{co}}/form></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-templateformulario2" role="tabpanel" aria-labelledby="v-pills-templateformulario2-tab">
+          
+                  <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+
+                  <form autocomplete="off" (ngSubmit)="guardar3( variableLocal3 )" #variableLocal3="ngForm">
+
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">Género</label>
+                      <div class="col-8">
+
+                        <div class="form-check form-check-inline">
+
+                          <input class="form-check-input"
+                                 type="radio"
+                                 [(ngModel)]="usuario.genero"
+                                 name="genero"
+                                 value="M"
+                                 required
+                                 #genero="ngModel"
+                                 [class.is-invalid]="genero.invalid && genero.touched">
+                                 <!-- Ponemos igual #nombre para que con que seleccionemos un elemento se valide que ha sido (valid) o no seleccionado (invalid)
+                                   ="ngModel" para saber a que apunta la selección, haga efecto del bootstrap invalid al darle función ngModel a la variable local genero -->
+
+                                 <!-- value, para seleccionar 1 y no los 2. ngModel para capturar el dato -->
+
+                          <label class="form-check-label">Masculino</label>
+
+                          </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                          <input class="form-check-input"
+                                 type="radio"
+                                 [(ngModel)]="usuario.genero"
+                                 name="genero"
+                                 value="F"
+                                 required
+                                 #genero="ngModel"
+                                 [class.is-invalid]="genero.invalid && genero.touched">
+
+
+                          <label class="form-check-label">Femenino</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <abbr title="Solo se puede seleccionar uno y sino se selecciona y pulsamos botón aparece en rojo -> error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  
+                  
+                    <div class="form-group row">
+                      <label class="col-2 col-form-label">&nbsp;</label>
+                      <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary btn-block">
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  
+                  </form>
+                  
+        
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} NgForm } from '@angular/forms';
+import {{c}} ServiciotemplateService } from './servicio/serviciotemplate.service';
+
+@Component({{c}}
+  selector: 'app-templateformularioangular',
+  templateUrl: './templateformularioangular.component.html',
+  styleUrls: ['./templateformularioangular.component.css']
+})
+export class TemplateformularioangularComponent implements OnInit {{c}}
+
+  usuario = {{c}}
+      <b>genero: ''</b>  <abbr title="Campo que usamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  paises: any[] = [];
+
+  constructor( private paisService: ServiciotemplateService ) {{c}} }
+
+  ngOnInit(): void {{c}}
+
+  }
+
+  <b>guardar( variableLocal: NgForm ){{c}}  <abbr title="Función del html que ejecuta validaciones, NgForm -> Coge funcionalidades de los formularios como el valid..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+    if ( variableLocal.invalid ){{c}}</b>  <abbr title="Si algún campo es inválido (no se a completado los 5 caractéres, no se ha rellenado, etc...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      <b>Object.values( variableLocal.controls ).forEach( variableControlador => {{c}}</b>  <abbr title="Evaluamos el objeto (formulario), en especial los controles (controls) de lo que recibimos (variableLocal), recorremos (forEach) todos los campos que tenga ngModel que es lo que recibe la función guardar() al pulsar el botón submit. Lo que obtenemos lo metemos en la variable -> variableControlador"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          <b>variableControlador.markAsTouched();</b>  <abbr title="markAsTouched -> Marca como tocado al pulsar submit cada variable para que se dispare los errores si no cumple los demás requisitos (required, minlegth...)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>});
+
+        return;
+    }</b>
+
+    console.log(variableLocal);  <abbr title="Vemos en consola si es válido (valid) o no (invalid) el formulario, controls (ngModel), errors, status, touched...entre otras opciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log(variableLocal<b>.value</b>);  <abbr title=".opción del ngForm"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  }
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{c}}co}}form autocomplete="off" {{c}}p}}ngSubmit)="guardar( variableLocal )" #variableLocal="ngForm">
+                  
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label"><b>Género</b>{{co}}/label>
+    {{co}}div class="col-8">
+
+      <b>{{co}}div class="form-check form-check-inline">
+
+        {{co}}input class="form-check-input"
+                type="radio"
+                {{t}}(ngModel)]="usuario.genero"
+                name="genero"
+                value="M"  <abbr title="Para seleccionar 1 y no los 2. ngModel para capturar el dato"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                required
+                #genero="ngModel"  <abbr title="Ponemos igual #nombre para que con que seleccionemos un elemento se valide que ha sido (valid) o no seleccionado (invalid). =ngModel para saber a que apunta la selección, haga efecto del bootstrap invalid al darle función ngModel a la variable local genero"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{t}}class.is-invalid]="genero.invalid && genero.touched"></b>  <abbr title="[class] forma dinámica (cambia - valid/invalid). variable_generoLocal.invalid -> Si el campo es invalid se muestra en rojo por la clase del bootstrap invalid. Para que sea válido debe cumplir la condición (required, pattern). && variable_generoLocal.touched -> y haber sido tocado el campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        <b>{{co}}label class="form-check-label">Masculino{{co}}/label>
+
+        {{co}}/div>
+
+
+      {{co}}div class="form-check form-check-inline">
+
+        {{co}}input class="form-check-input"
+                type="radio"
+                {{t}}(ngModel)]="usuario.genero"
+                name="genero"
+                value="F"
+                required
+                #genero="ngModel"
+                {{t}}class.is-invalid]="genero.invalid && genero.touched">
+
+
+        {{co}}label class="form-check-label">Femenino{{co}}/label>
+      {{co}}/div>
+
+    {{co}}/div>
+  {{co}}/div></b>
+
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">{{boom}}{{co}}/label>
+    {{co}}div class="input-group col-md-8">
+      {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      {{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
+
+{{co}}/form></pre>
+              </div>
+          </div>
+        </div>
+        
+        
+
+        </div>
   </div>
 
 </div>
+
