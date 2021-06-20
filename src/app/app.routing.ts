@@ -81,6 +81,7 @@ import { LoginangularloginfirebaseComponent } from './paginas/programacion/angul
 import { ProtegergirebaseangularComponent } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/protegergirebaseangular/protegergirebaseangular.component';
 import { GuardprotegergirebaseangularGuard } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/guardprotegergirebaseangular.guard';
 import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
+import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -226,8 +227,9 @@ export const appRoutes: Routes = [
   { path: 'registroregistroangular', component: RegistroregistroangularComponent},
   { path: 'registrofirebaseangularr', component: RegistrofirebaseangularrComponent},
   { path: 'loginangularfirebase', component: LoginangularloginfirebaseComponent},
-  { path: 'logindominicode', component: LogindominicodeComponent},
   { path: 'protegergirebaseangular', component: ProtegergirebaseangularComponent, canActivate: [ GuardprotegergirebaseangularGuard ]},
+  { path: 'loginfb', component: LogindominicodeComponent},
+  { path: 'registrarfb', component: RegistrardominicodeComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

@@ -9,10 +9,10 @@
     <div class="col-6 mx-auto mt-5">
         <div class="card">
             <div class="card body">
-                <h1 class="text-center">LOGIN</h1>
-                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-                    <!-- loginForm -> Proviene del Ts para controlar campos por ts (reactivo) 
-                    onLogin() -> no necesitamos meter nada dentro de () porque ya se maneja en Ts por loginForm -->
+                <h1 class="text-center">REGISTER</h1>
+                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                    <!-- registerForm -> Proviene del Ts para controlar campos por ts (reactivo) 
+                    onRegister() -> no necesitamos meter nada dentro de () porque ya se maneja en Ts por registerForm -->
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" formControlName="email">
@@ -23,10 +23,10 @@
                         <input type="password" class="form-control" formControlName="password">
                         <!-- formControlName="password" VA RELACIONADO CON registerForm = new FormGroup({ DEL TS (password: new FormControl(''),) -->
                     </div>
-                    <button type="submit" class="btn btn-danger btn-lg btn-block">Login</button>
+                    <button type="submit" class="btn btn-danger btn-lg btn-block">Register</button>
                 </form>
                 <div class="form-group mt-3">
-                    <p>Do you haven't an account? <a [routerLink]="['/registrarfb']"> Registre</a></p>
+                    <p>Do you have an account? <a [routerLink]="['/loginfb']"> Login</a></p>
                 </div>
             </div>
         </div>

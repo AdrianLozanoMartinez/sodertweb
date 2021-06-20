@@ -1,21 +1,16 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
-
-import { AuthService } from '@auth0/auth0-angular';  
-import { DOCUMENT } from '@angular/common';
-
-//Dominicode
-import { Auth2Service } from '../../paginas/programacion/angular/loginangular/serviciodominicode/auth2.service';
+import { Auth2Service } from '../serviciodominicode/auth2.service';
 import { Observable } from 'rxjs';
 
 
-
 @Component({
-  selector: 'app-cabecera',
-  templateUrl: './cabecera.component.html',
-  styleUrls: ['./cabecera.component.css']
+  selector: 'app-navbarlogin',
+  templateUrl: './navbarlogin.component.html',
+  styleUrls: ['./navbarlogin.component.css']
 })
-export class CabeceraComponent implements OnInit {
+export class NavbarloginComponent implements OnInit {
 
   //NO RECOMENDADO (Relacionado con servicio.ts y navbar.html): public isLogged = false; //Para saber si estamos longeado, lo inicializamos en false (no). Dominicode
 
@@ -23,9 +18,7 @@ export class CabeceraComponent implements OnInit {
 
   public user$: Observable<any> = this.authSvc.afAuth.user; //Meto en la variable el usuario para poder leer en comprobaciones
 
-  constructor( private variable_router: Router, @Inject(DOCUMENT) public document: Document, public auth: AuthService,
-                //Dominicode
-                private authSvc:Auth2Service,
+  constructor( private authSvc:Auth2Service,
                 private router: Router ) { }
 
   //Dominicode NO RECOMENDADO (Relacionado con servicio.ts y navbar.html):
@@ -49,12 +42,6 @@ export class CabeceraComponent implements OnInit {
       console.log(err);
     }
   }
-
- /* funcion_Buscar( nombre_a_buscar:string ){
-    console.log(nombre_a_buscar);
-    this.variable_router.navigate( ['/buscador',nombre_a_buscar] );
-  }*/
-
- 
+  
 
 }

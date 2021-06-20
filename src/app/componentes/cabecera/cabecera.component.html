@@ -36,7 +36,7 @@
             <a class="dropdown-item text-light" [routerLink]="['/typescript']" routerLinkActive="active">Typescript</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Back-End
           </a>
@@ -46,7 +46,7 @@
             <a class="dropdown-item text-light" [routerLink]="['/python']" routerLinkActive="active">Python</a>
             <a class="dropdown-item text-light" [routerLink]="['/c']" routerLinkActive="active">C#</a>
           </div>
-        </li>
+        </li> -->
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Otros
@@ -86,24 +86,51 @@
             <a class="dropdown-item text-light" [routerLink]="['/toast']" routerLinkActive="active">Toast o ?</a>
           </div>
         </li>
-        
-        <!-- <ul>
-          <li *ngIf="!user"><button class="btn btn-outline-success mr-2" [routerLink]="['/logindominicode']">Login Firebase</button></li>
-          <li *ngIf="!isLogged"><button class="btn btn-outline-info mr-2" [routerLink]="['/registrofirebaseangularr']">Registrar Firebase</button></li>
-          <li *ngIf="isLogged"><button class="btn btn-outline-danger mr-2" (click)="salirFirebase()" >Salir</button></li>
-        </ul> -->
+
+
+        <!-- NO RECOMENDADO (Relacionado con servicio.ts y navbar.ts): En vez de user$ usamos isLogged para coger usuario. Otro método menos eficaz -->
+        <ul class="navbar-nav mx-auto" *ngIf="user$ | async as user; else loginbarra">
+           <!-- <ul class="navbar-nav mx-auto" *ngIf="user$ | async as user;> Si no está longeado no lo muestra, evitamos error de intentar coger email que al no estar longeado no es posible coger -->
+            <!-- else loginbarra"> Si no estamos longeado se ejecuta <ng-template #loginbarra> de abajo. Por la variable local (loginbarra) que relacionamos else con ng-template (#loginbarra) -->
+          
+          <li class="nav-item mr-2">
+            <a class="nav-link btn btn-secondary">{{ user.email }}</a> 
+            <!--{{ user?.email }} -> Ponemos ? para que sea opcional, de ese modo no da error sino estamos longeado, ya que sino lo tiene intenta coger un email que no existe al no estar longeado, pero como preguntamos ngIf arriba no es necesario en este caso -->
+            <!-- <a class="nav-link btn btn-secondary">{{ user$ | async | json }}</a> Vemos todos los datos del usuario con la nueva variable -->
+          </li>
+
+          <li class="nav-item active" *ngIf="user">
+            <a class="nav-link btn btn-outline-danger mr-2" (click)="onLogout()">Logout <small><small>Firebase</small></small></a>
+          </li>
+
+        </ul>
+
+    <ng-template #loginbarra>  
+      <ul class="navbar-nav mx-auto">
+        <!-- Si no se cumple lo arriba se cumple esto referencia #loginbarra con else -->
+        <li class="nav-item active">
+          <a class="nav-link btn btn-outline-success mr-2" [routerLink]="['/loginfb']">Login <small><small>Firebase</small></small></a>
+        </li>
+         <!-- <li class="nav-item active" *ngIf="!isLogged"> -->
+        <li class="nav-item active">
+          <a class="nav-link btn btn-outline-info mr-2" [routerLink]="['/registrarfb']">Register <small><small>Firebase</small></small></a>
+        </li>
+      </ul>
+    </ng-template>
+
+
     
         <a class="nav-link" *ngIf="auth.isAuthenticated$ | async; else !auth.isAuthenticated$" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Protegida Aux0</a>
         
         <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
           <!-- <a class="nav-link" [routerLink]="['/protegida']" routerLinkActive="active" role="button">Protegida Aux0</a>  -->
           <button class="btn btn-outline-danger" (click)="auth.logout({ returnTo: document.location.origin })">   <!--Mirar si podemos poner dire [routerLink]="['/toast']" -->
-            Logout Aux0
+            Logout <small><small>Aux0</small></small>
           </button>
         </ng-container>
     
         <ng-template #loggedOut>
-          <button class="btn btn-outline-warning" (click)="auth.loginWithRedirect()">Login/Registrar Aux0</button>
+          <button class="btn btn-outline-warning" (click)="auth.loginWithRedirect()">Login/Registrar <small><small>Aux0</small></small></button>
         </ng-template>
       </ul>
 

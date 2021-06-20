@@ -1,0 +1,461 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-firebase2forma-tab" data-toggle="pill" href="#v-pills-firebase2forma" role="tab" aria-controls="v-pills-firebase2forma" aria-selected="true">App.module.ts / Conexión firebase</a>
+        <a class="nav-link" id="v-pills-firebase2forma0-tab" data-toggle="pill" href="#v-pills-firebase2forma0" role="tab" aria-controls="v-pills-firebase2forma0" aria-selected="true">Servicio</a>
+        <a class="nav-link" id="v-pills-firebase2forma1-tab" data-toggle="pill" href="#v-pills-firebase2forma1" role="tab" aria-controls="v-pills-firebase2forma1" aria-selected="false">Registro</a>
+        <a class="nav-link" id="v-pills-firebase2forma2-tab" data-toggle="pill" href="#v-pills-firebase2forma2" role="tab" aria-controls="v-pills-firebase2forma2" aria-selected="false">Login</a>
+        <a class="nav-link" id="v-pills-firebase2forma3-tab" data-toggle="pill" href="#v-pills-firebase2forma3" role="tab" aria-controls="v-pills-firebase2forma3" aria-selected="false">Cabecera</a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <div class="tab-pane fade show active" id="v-pills-firebase2forma" role="tabpanel" aria-labelledby="v-pills-firebase2forma-tab">
+
+          Proviene de <a href="https://firebase.google.com/docs/reference/rest/auth#top_of_page"><b>Web Firebase (API REST firebase de autentificación)</b></a> -> <b>Opción lateral</b>
+<div class="card-group">  
+<div class="card text-dark bg-danger m-3">
+      <div class="card-header">
+        <pre class="card-text text-center blanco"><h3>Module.Ts</h3></pre>
+    </div>
+    <div class="card-body">
+      <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+ 
+<b>import {{c}} FormsModule, ReactiveFormsModule } from '@angular/forms';</b>  <abbr title="FormsModule -> Formularios, ReactiveFormsModule -> Formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+//Servicio Http - Conexión con Firebase 
+<b>import {{c}} HttpClientModule } from '@angular/common/http';</b>
+
+//Servicio firebase
+<b>import {{c}} AngularFireAuthModule } from '@angular/fire/auth';</b>  <abbr title="Trabaja con las autentificaciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} AngularFireModule } from '@angular/fire';</b>  <abbr title="Iniciar la conexión con Firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+//Environment - Lo pide abajo en el imports por AngularFireModule
+<b>import {{c}} environment } from 'src/environments/environment'; </b>
+
+
+@NgModule({{c}}
+    declarations: [
+    AppComponent,
+    HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+    BrowserModule,
+    routing,
+    <b>FormsModule,
+    ReactiveFormsModule</b><b>,</b>
+    //Servicio Http - Conexión con Firebase
+    <b>HttpClientModule</b>
+    //Servicio firebase
+    <b>AngularFireModule.initializeApp(environment.firebaseConfig),</b>  //Iniciar la conexión con Firebase
+    <b>AngularFireAuthModule</b>//Trabaja con las autentificaciones
+  ],
+  providers: [
+    appRoutingProviders
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {{c}} }</pre>
+    </div>
+  </div>
+  <div class="card text-dark bg-danger m-3">
+    <div class="card-header">
+        <pre class="card-text text-center blanco"><h3>Environment.Ts</h3></pre>
+    </div>
+    <div class="card-body">
+        <pre class="card-text blanco">export const environment = {{c}}
+  production: false,  <abbr title="True -> Producción, False -> Desarrollo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  firebaseConfig: {{c}}
+    <b>apiKey: "***********",  <abbr title="API que usamos en la 1º Opción en el servidor"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    authDomain: "sodertweb.firebaseapp.com",   <abbr title="Dirección para ver la web aparte de la corta: sodertweb.web.app"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    databaseURL: "https://sodertweb.firebaseio.com",  <abbr title="Base de datos firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    projectId: "sodertweb",
+    storageBucket: "sodertweb.******",
+    messagingSenderId: "*********"</b>
+  }
+};</pre>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-firebase2forma0" role="tabpanel" aria-labelledby="v-pills-firebase2forma0-tab">
+            
+
+<div class="card-group">
+  <div class="card text-dark bg-danger m-3">
+      <div class="card-body">
+        <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+
+<b>import {{c}} AngularFireAuth } from '@angular/fire/auth';</b>  <abbr title="Importamos las funciones de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+//NO RECOMENDADO (Relacionado con navbar.ts y .html)
+// import {{c}} User } from 'firebase';  <abbr title="Importamos la sección de usuarios de firebase para ver y trabajar sobre ellos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+// import {{c}} first } from 'rxjs/operators';  <abbr title="Para coger usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class Auth2Service {{c}}
+
+  //NO RECOMENDADO (Relacionado con navbar.ts y .html)
+  //public user: User;  <abbr title="Metemos en una variable las funciones/usuarios que recibimos de la API firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>public afAuth: AngularFireAuth</b> <abbr title="Metemos en la variable las funciones de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ) {{c}} }
+
+  <b>async login( emailRecibir:string, passwordRecibir:string ){{c}} <abbr title="Recibe 2 parámetros (Da igual el nombre mientras en try sea igual). Async va con await, se usa para utilizar correcto y errores, en procedimiento asíncronos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      const result = await this.afAuth.signInWithEmailAndPassword( emailRecibir, passwordRecibir );  <abbr title="Metemos en la variable (result) la identificación (email/contraseña) que se hace conectandonos al servicio a través de la variable (afAuth) y la opción de firebase (signInWithEmailAndPassword), donde le mandamos los dos parámetros que recibimos (email/contraseña)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      return result;  <abbr title="Devolvemos el resultado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    catch (err) {{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(err);
+    }
+  }
+
+  async register( emailRecibir:string, passwordRecibir:string ){{c}}  <abbr title="Recibe 2 parámetros (Da igual el nombre mientras en try sea igual). Async va con await, se usa para utilizar correcto y errores, en procedimiento asíncronos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      const result = await this.afAuth.createUserWithEmailAndPassword( emailRecibir, passwordRecibir );  <abbr title="Metemos en la variable (result) el registro (email/contraseña) que se hace conectandonos al servicio a través de la variable (afAuth) y la opción de firebase (createUserWithEmailAndPassword), donde le mandamos los dos parámetros que recibimos (email/contraseña)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      return result;  <abbr title="Devolvemos el resultado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    catch(err){{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log(err);
+    }
+  }
+
+  async logout(){{c}}  <abbr title="Async va con await, se usa para utilizar correcto y errores, en procedimiento asíncronos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      await this.afAuth.signOut();  <abbr title="Nos conectamos al servicio a través de la variable (afAuth) y la opción de firebase (signOut), donde nos salimos cuando estamos longeados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    catch(err){{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(err);
+    }
+  }</b>
+
+  //NO RECOMENDADO (Relacionado con navbar.ts y .html)
+  // getCurrentUser(){{c}}  <abbr title="Async va con await, se usa para utilizar correcto y errores, en procedimiento asíncronos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  //     return this.afAuth.authState.pipe(first()).toPromise(); <abbr title="Coge usuario logeado a través de las funciones que nos da firebase (authState) a través de la conexión con el servicio, pasamos por la tubería (pipe) la información de los usuarios y lo cogemos con first y promise (pipe(first()).toPromise())"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  // } 
+}</pre>
+      </div>
+  </div>
+</div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-firebase2forma1" role="tabpanel" aria-labelledby="v-pills-firebase2forma1-tab"><app-registrardominicode></app-registrardominicode>
+        
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+<b>import {{c}} FormGroup <abbr title="Formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, FormControl <abbr title="Formularios reactivos - Controles"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';
+import {{c}} Auth2Service } from '../serviciodominicode/auth2.service';  <abbr title="Servicio para usar funciones de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Router } from '@angular/router';</b>  <abbr title="Para poder usar la redirección a otra zona dentro del Ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-registrardominicode',
+  templateUrl: './registrardominicode.component.html',
+  styleUrls: ['./registrardominicode.component.css']//,
+  //providers: [AuthService]  <abbr title="Si no queremos incluirlo en el module y solamente esté disponible en esta zona, la quitaríamos del module"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+})
+export class RegistrardominicodeComponent implements OnInit {{c}}
+
+  <b>registerForm = new FormGroup({{c}}  <abbr title="Control por reactivo (Ts)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    email: new FormControl(''),  
+    password: new FormControl(''),
+  });</b>
+
+  constructor( <b>private authSvc: Auth2Service,</b>  <abbr title="Metemos en la variable el servicio para usar firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               <b>private router: Router</b> ) {{c}} }  <abbr title="MEtemos en la variable el enrutamiento para poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>async onRegister(){{c}}
+
+    const {{c}}email, password} = this.registerForm.value;  <abbr title="EXTRAEMOS LOS DATOS de las variables de registerForm. Debe ser igual que en registerForm (email y password)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      const user = await this.authSvc.register(email,password);  <abbr title="Lo que extraemos lo mandamos a la función que está en el servicio que opera con firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log('Form ->', this.registerForm.value);  <abbr title="Nos muestra el resultado del registro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      if(user){{c}}  <abbr title="Si existe el usuario, es decir si se crea, nos redirige a otra página en este caso a la raíz (/)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.router.navigate(['/']);
+      }
+
+    }
+    catch (err) {{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(err);
+  }
+}</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}div class="row">
+    {{co}}div class="col-6 mx-auto mt-5">
+        {{co}}div class="card">
+            {{co}}div class="card body">
+                {{co}}h1 class="text-center">REGISTER{{co}}/h1>
+
+                {{co}}form <b>{{t}}formGroup]="registerForm"</b> <abbr title="registerForm -> Proviene del Ts para controlar campos por ts (reactivo)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> <b>{{p}}ngSubmit)="onRegister()"</b>> <abbr title="No necesitamos meter nada dentro de () porque ya se maneja en Ts por registerForm. Función que está en TS relacionado con el servicio y este con firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+
+                    {{co}}div class="form-group">
+                        {{co}}label for="email">Email{{co}}/label>
+                        {{co}}input <b>type="email"</b> class="form-control" <b>formControlName="email"</b>> <abbr title="formControlName=email -> VA RELACIONADO CON registerForm = new FormGroup({ DEL TS (email: new FormControl(''),)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    {{co}}/div>
+
+                    {{co}}div class="form-group">
+                        {{co}}label for="password">Password{{co}}/label>
+                        {{co}}input <b>type="password"</b> class="form-control" <b>formControlName="password"</b>>  <abbr title="formControlName=password -> VA RELACIONADO CON registerForm = new FormGroup({ DEL TS (password: new FormControl(''),)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    {{co}}/div>
+
+                    {{co}}button type="<b>submit</b>" class="btn btn-danger btn-lg btn-block"><b>Register</b>{{co}}/button>
+
+                {{co}}/form>
+
+                {{co}}div class="form-group mt-3">
+                    {{co}}p>Do you have an account? {{co}}a <b>{{t}}routerLink]="['/loginfb']"</b>> <b>Login</b>{{co}}/a>{{co}}/p>
+                {{co}}/div>
+
+            {{co}}/div>
+        {{co}}/div>
+    {{co}}/div>
+{{co}}/div></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-firebase2forma2" role="tabpanel" aria-labelledby="v-pills-firebase2forma2-tab"><app-logindominicode></app-logindominicode>
+        
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+<b>import {{c}} FormGroup <abbr title="Formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, FormControl <abbr title="Formularios reactivos - Controles"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';
+import {{c}} Auth2Service } from '../serviciodominicode/auth2.service';  <abbr title="Servicio para usar funciones de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Router } from '@angular/router';</b>  <abbr title="Para poder usar la redirección a otra zona dentro del Ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-logindominicode',
+  templateUrl: './logindominicode.component.html',
+  styleUrls: ['./logindominicode.component.css']//,
+  //providers: [AuthService]  <abbr title="Si no queremos incluirlo en el module y solamente esté disponible en esta zona, la quitaríamos del module"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+})
+export class LogindominicodeComponent implements OnInit {{c}}
+
+  loginForm = new FormGroup({{c}}  <abbr title="Control por reactivo (Ts)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  constructor( <b>private authSvc: Auth2Service,</b>  <abbr title="Metemos en la variable el servicio para usar firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               <b>private router: Router</b> ) {{c}} }  <abbr title="MEtemos en la variable el enrutamiento para poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>async onLogin(){{c}}  
+
+    const {{c}}email, password} = this.loginForm.value;  <abbr title="EXTRAEMOS LOS DATOS de las variables de loginForm. Debe ser igual que en loginForm (email y password)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      const user = await this.authSvc.login(email,password);  <abbr title="Lo que extraemos lo mandamos a la función que está en el servicio que opera con firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log('Form ->', this.loginForm.value);  <abbr title="Nos muestra el resultado del login"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      if(user){{c}}  <abbr title="Si existe el usuario, es decir si se crea, nos redirige a otra página en este caso a la raíz (/)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.router.navigate(['/']);
+      }
+
+    }
+    catch (err) {{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(err);
+  }
+}</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{c}}div class="row">
+    {{c}}div class="col-6 mx-auto mt-5">
+        {{c}}div class="card">
+            {{c}}div class="card body">
+                {{c}}h1 class="text-center">LOGIN{{c}}/h1>
+
+                {{c}}form <b>{{t}}formGroup]="loginForm"</b> <abbr title="loginForm -> Proviene del Ts para controlar campos por ts (reactivo)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> <b>{{p}}ngSubmit)="onLogin()"</b>>  <abbr title="No necesitamos meter nada dentro de () porque ya se maneja en Ts por loginForm. Función que está en TS relacionado con el servicio y este con firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                    
+                    {{c}}div class="form-group">
+                        {{c}}label for="email">Email{{c}}/label>
+                        {{c}}input <b>type="email"</b> class="form-control" <b>formControlName="email"</b>>  <abbr title="formControlName=email VA RELACIONADO CON loginForm = new FormGroup({ DEL TS (email: new FormControl(''),)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    {{c}}/div>
+
+                    {{c}}div class="form-group">
+                        {{c}}label for="password">Password{{c}}/label>
+                        {{c}}input <b>type="password"</b> class="form-control" <b>formControlName="password"</b>>  <abbr title="formControlName=password -> VA RELACIONADO CON loginForm = new FormGroup({ DEL TS (password: new FormControl(''),)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    {{c}}/div>
+
+                    {{c}}button <b>type="submit"</b> class="btn btn-danger btn-lg btn-block"><b>Login</b>{{c}}/button>
+
+                {{c}}/form>
+
+                {{c}}div class="form-group mt-3">
+                    {{c}}p>Do you haven't an account? {{c}}a <b>{{t}}routerLink]="['/registrarfb']"</b>> <b>Registre</b>{{c}}/a>{{c}}/p>
+                {{c}}/div>
+
+            {{c}}/div>
+        {{c}}/div>
+    {{c}}/div>
+{{c}}/div></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+        
+        <div class="tab-pane fade" id="v-pills-firebase2forma3" role="tabpanel" aria-labelledby="v-pills-firebase2forma3-tab"><app-navbarlogin></app-navbarlogin>
+        
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+
+<b>import {{c}} Router } from '@angular/router';  <abbr title="Para poder usar la redirección a otra zona dentro del Ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Auth2Service } from '../serviciodominicode/auth2.service';  <abbr title="Servicio para usar funciones de firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Observable } from 'rxjs';</b>  <abbr title="Para usar la variable que coge el usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+@Component({{c}}
+  selector: 'app-navbarlogin',
+  templateUrl: './navbarlogin.component.html',
+  styleUrls: ['./navbarlogin.component.css']
+})
+export class NavbarloginComponent implements OnInit {{c}}
+
+  //NO RECOMENDADO, OTRA FORMA (Relacionado con servicio.ts y navbar.html)
+  //<b>public isLogged = false;</b> <abbr title="Para saber si estamos longeado, lo inicializamos en false (no)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  //NO RECOMENDADO, OTRA FORMA (Relacionado con servicio.ts y navbar.html)
+  //<b>public user: any;</b>  <abbr title="Para coger usuario, lo inicializamos en nulo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  public user$: Observable{{co}}any> = this.authSvc.afAuth.user;  <abbr title="Meto en la variable el usuario para poder leer, realizar comprobaciones y otros"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private authSvc: Auth2Service,</b>  <abbr title="Metemos en la variable el servicio para usar firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               <b>private router: Router</b> ) {{c}} }  <abbr title="MEtemos en la variable el enrutamiento para poder redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  //NO RECOMENDADO, OTRA FORMA (Relacionado con servicio.ts y navbar.html):
+   /*<b>async</b> */<b>ngOnInit() {{c}}</b> /*  <abbr title="Para coger el usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   
+    <b>this.user = await this.authSvc.getCurrentUser();  <abbr title="Cogemos si existe usuario de la función getCurrentUser del servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      if (this.user){{c}}  <abbr title="Si existe usuario que lo cogemos de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.isLogged = true; <abbr title="Si existe usuario ponemos la propiedad en true, de ese modo podemos mostrar/no botones/cosas si estamos longeados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log('User -> ', this.user);  <abbr title="Muestra el usuario conectado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }</b>*/
+    }
+
+
+  <b>async onLogout(){{c}}  <abbr title="Para desconectarse"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    try{{c}}  <abbr title="Si es correcto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      await this.authSvc.logout();  <abbr title="Coge la variable del servicio para usar el servicio firebase para desconectarse"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.router.navigate(['/loginfb']);  <abbr title="Nos lleva a la página del login cuando nos hemos salido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    catch (err) {{c}}  <abbr title="Si da error muestra mensaje del error que nos da firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(err);
+    }
+  }</b>
+  
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}nav class="navbar estrellas navbar-expand-lg navbar-dark bg-dark">
+
+    {{co}}ul class="navbar-nav mx-auto" <b>{{f}}ngIf="user$ | async as user</b> <abbr title="Si no está longeado no lo muestra, evitamos error de intentar coger email que al no estar longeado no es posible coger"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr><b>; else loginbarra"</b>>  <abbr title="Si no estamos longeado se ejecuta ng-template #loginbarra> de abajo. Por la variable local (loginbarra) que relacionamos else con ng-template (#loginbarra)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}!-- Usamos <b>isLogged</b> en vez de <b>user$</b> para coger usuario. Otro método menos eficaz-->  <abbr title=", OTRA FORMA Relacionado con servicio.ts y navbar.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        
+        {{co}}li class="nav-item mr-2">
+        {{co}}a class="nav-link btn btn-secondary"><b>{{c}}{{c}} user.email }}</b>{{co}}/a> 
+                                          {{co}}!--<b>{{c}}{{c}} user?.email }}</b> <abbr title="OTRA FORMA Ponemos ? para que sea opcional, de ese modo no da error sino estamos longeado, ya que sino lo tiene intenta coger un email que no existe al no estar longeado, pero como preguntamos ngIf arriba no es necesario en este caso"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+                                          {{co}}!-- <b>{{c}}{{c}} user$ | async | json }}</b> <abbr title="OTRA FORMA Vemos todos los datos del usuario con la nueva variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}/li>
+
+        {{co}}li class="nav-item active" <b>{{f}}ngIf="user"</b>>  <abbr title="Si estamos longeados muestra el botón"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}a class="nav-link btn btn-outline-danger mr-2" <b>{{p}}click)="onLogout()"</b> <abbr title="Llama a la función del Ts y nos salimos de longearnos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>Logout</b> {{co}}small>{{co}}small>Firebase{{co}}/small>{{co}}/small>{{co}}/a>
+        {{co}}/li>
+
+    {{co}}/ul>
+
+    <b>{{co}}ng-template <abbr title="Engloba los botones que se mostrará cuando no estemos longeados, según la lógica de arriba (*ngIf=user$ | async as user ); else loginbarra"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> #loginbarra></b>  <abbr title="Variable local que hace referencia a la condición de arriba, especialmente a else loginbarra"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}ul class="navbar-nav mx-auto">
+
+        {{co}}li class="nav-item active">
+            {{co}}a class="nav-link btn btn-outline-success mr-2" <b>{{t}}routerLink]="['/loginfb']"</b>><b>Login</b> {{co}}small>{{co}}small>Firebase{{co}}/small>{{co}}/small>{{co}}/a>  <abbr title="Nos lleva al Login"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}/li>
+
+       {{co}}!-- {{co}}li class="nav-item active" <b>{{f}}ngIf="!isLogged"</b>> -->  <abbr title="OTRA FORMA. Sino estamos longeado se muestra y viceversa con !"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}li class="nav-item active">
+            {{co}}a class="nav-link btn btn-outline-info mr-2" <b>{{t}}routerLink]="['/registrarfb']"</b>><b>Register</b> {{co}}small>{{co}}small>Firebase{{co}}/small>{{co}}/small>{{co}}/a>  <abbr title="Nos lleva al registro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}/li>
+
+        {{co}}/ul>
+
+    <b>{{co}}/ng-template></b>
+
+  {{co}}/nav></pre>
+              </div>
+          </div>
+        </div>
+
+        </div>
+  </div>
+
+</div>

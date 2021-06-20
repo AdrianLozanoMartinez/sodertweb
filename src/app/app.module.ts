@@ -182,8 +182,9 @@ import { SubidafireComponent } from './paginas/programacion/firebase/subirarchiv
 import { DirectivasubidaDirective } from './paginas/programacion/firebase/subirarchivos/directiva/directivasubida.directive';
 import { MostrarComponent } from './paginas/programacion/firebase/subirarchivos/mostrar/mostrar.component';
  //Conexión con firebase
- import { AngularFireModule } from '@angular/fire';
+ import { AngularFireModule } from '@angular/fire';                //Iniciar la conexión con Firebase
  import { AngularFirestoreModule } from '@angular/fire/firestore';
+ import { AngularFireAuthModule } from '@angular/fire/auth';       //Trabaja con las autentificaciones
  //Environment - Lo pide abajo en el imports por AngularFireModule
  import { environment } from 'src/environments/environment';              
 //Programacion - Servidor Local
@@ -260,6 +261,9 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
+import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
+import { Firebase2formaComponent } from './paginas/programacion/angular/loginangular/firebase2forma/firebase2forma.component';
+import { NavbarloginComponent } from './paginas/programacion/angular/loginangular/navbarlogin/navbarlogin.component';
 
 
 
@@ -483,7 +487,10 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent
+    BootswatchComponent,
+    RegistrardominicodeComponent,
+    Firebase2formaComponent,
+    NavbarloginComponent
   ],
   imports: [
     //Por defecto
@@ -493,8 +500,9 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     /*Conexión con firebase
     Puede ser firebase o firebaseConfig, depende lo que hayamos puesto en 
     environment.ts -> firebaseConfig: { apiKey: "AIzaSyBXBZUhEffME9i58aVvigv...*/
-    AngularFireModule.initializeApp(environment.firebaseConfig),   
-    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),   //Iniciar la conexión con Firebase
+    AngularFirestoreModule,  
+    AngularFireAuthModule,  //Trabaja con las autentificaciones
    //Programación - Angular - Servicios/Formularios/Directivas/etc
     FormsModule,        //Formulario Template
     ReactiveFormsModule, //Formulario Reactivo

@@ -4,8 +4,8 @@
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-firebaseangularfirebase-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase" role="tab" aria-controls="v-pills-firebaseangularfirebase" aria-selected="true">App.module.ts</a>
         <a class="nav-link" id="v-pills-firebaseangularfirebase0-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase0" role="tab" aria-controls="v-pills-firebaseangularfirebase0" aria-selected="true">Conexión firebase</a>
-        <a class="nav-link" id="v-pills-firebaseangularfirebase1-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase1" role="tab" aria-controls="v-pills-firebaseangularfirebase1" aria-selected="false">Registro <br><small><small>Token + Sweepalert2 + Recordar</small></small></a>
-        <a class="nav-link" id="v-pills-firebaseangularfirebase2-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase2" role="tab" aria-controls="v-pills-firebaseangularfirebase2" aria-selected="false">Login <br><small><small>Token + Sweepalert2 + Recordar</small></small></a>
+        <a class="nav-link" id="v-pills-firebaseangularfirebase1-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase1" role="tab" aria-controls="v-pills-firebaseangularfirebase1" aria-selected="false">Registro</a>
+        <a class="nav-link" id="v-pills-firebaseangularfirebase2-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase2" role="tab" aria-controls="v-pills-firebaseangularfirebase2" aria-selected="false">Login</a>
         <a class="nav-link" id="v-pills-firebaseangularfirebase3-tab" data-toggle="pill" href="#v-pills-firebaseangularfirebase3" role="tab" aria-controls="v-pills-firebaseangularfirebase3" aria-selected="false">Página protegida <br><small><small>Guard + Logout</small></small></a>
       </div>
     </div>
@@ -18,7 +18,7 @@
   <div class="card-group">
     <div class="card text-dark bg-danger m-3">
         <div class="card-body">
-  <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+<pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
 import {{c}} NgModule } from '@angular/core';
 
 import {{c}} AppComponent } from './app.component';
@@ -30,9 +30,7 @@ import {{c}} ErrorComponent } from './componentes/error/error.component';
 import {{c}} PieComponent } from './componentes/pie/pie.component';
 import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-import {{c}} FormsModule } from '@angular/forms';
-
-//Servicio Http - Conexión con Firebase
+//Servicio Http - Conexión con Firebase 
 <b>import {{c}} HttpClientModule } from '@angular/common/http';</b>
 
 @NgModule({{c}}
@@ -45,8 +43,7 @@ import {{c}} FormsModule } from '@angular/forms';
     ],
     imports: [
     BrowserModule,
-    routing,
-    FormsModule<b>,</b>
+    routing,<b>,</b>
     //Servicio Http - Conexión con Firebase
     <b>HttpClientModule</b>
   ],
@@ -57,7 +54,7 @@ import {{c}} FormsModule } from '@angular/forms';
 })
 export class AppModule {{c}} }</pre>
         </div>
-    </div>
+      </div>
 </div>
 
         </div>
@@ -68,7 +65,7 @@ export class AppModule {{c}} }</pre>
 <div class="card-group">
   <div class="card text-dark bg-danger m-3">
     <div class="card-header">
-      <pre class="card-text text-center blanco"><h3>Servicio <small><small>(1º opción)</small></small></h3></pre>
+      <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
     </div>
       <div class="card-body">
         <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
@@ -94,24 +91,6 @@ export class ServiciofireService {{c}}
 
 }</pre>
       </div>
-  </div>
-  <div class="card text-dark bg-danger m-3">
-    <div class="card-header">
-        <pre class="card-text text-center blanco"><h3>Environment.Ts <small><small>(2º opción)</small></small></h3></pre>
-    </div>
-    <div class="card-body">
-        <pre class="card-text blanco">export const environment = {{c}}
-  production: false,  <abbr title="True -> Producción, False -> Desarrollo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-  firebaseConfig: {{c}}
-    <b>apiKey: "***********",  <abbr title="API que usamos en la 1º Opción en el servidor"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    authDomain: "sodertweb.firebaseapp.com",   <abbr title="Dirección para ver la web aparte de la corta: sodertweb.web.app"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    databaseURL: "https://sodertweb.firebaseio.com",  <abbr title="Base de datos firebase"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    projectId: "sodertweb",
-    storageBucket: "sodertweb.******",
-    messagingSenderId: "*********"</b>
-  }
-};</pre>
-    </div>
   </div>
 </div>
 
@@ -855,7 +834,6 @@ export class ProtegergirebaseangularComponent implements OnInit {{c}}
 
 
 </div>
-
 
         </div>
     </div>

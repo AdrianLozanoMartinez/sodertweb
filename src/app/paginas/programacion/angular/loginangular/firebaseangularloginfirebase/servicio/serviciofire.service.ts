@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UsuarioModel } from '../../model/usuario.model';
-import { catchError, first, map } from 'rxjs/operators';   //Token
-//first de Dominicode
+import { catchError, map } from 'rxjs/operators';   //Token
 
-//Dominicode
-import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +20,7 @@ export class ServiciofireService {
     //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]              //Crear usuario
     //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]   //Login usuario
 
-  constructor( private http: HttpClient,
-              //Dominicode
-               public afAuth: AngularFireAuth ) { 
+  constructor( private http: HttpClient ) { 
     this.leerToken();  //Así nada más empezar vemos si tenemos algún token inicializado
   }
 
@@ -168,47 +163,5 @@ export class ServiciofireService {
   logout(){
     localStorage.removeItem('AlmacenaToken');
   }
-
-
-
-
-
-//Dominicode - REGISTER
-async registerDominicode ( email: string, password: string ){
-  try{
-    const result = await this.afAuth.createUserWithEmailAndPassword( email, password );
-    return result;//createUserWithEmailAndPassword única diferencia con register
-  }catch (error) {
-    console.log(error); 
-  }
-}
-
-//Dominicode - LOGIN
-async loginDominicode( email: string, password: string ){
-    try{
-      const result = await this.afAuth.signInWithEmailAndPassword( email, password );
-      return result;
-    }catch (error) {
-      console.log(error);
-    }
-}
-
-//Dominicode - LOGOUT
-async logoutDominicode(){
-  try{
-    await this.afAuth.signOut();
-  }catch (error){
-    console.log(error);
-  }
-}
-
-//Dominicode - Conseguir usuario
-getCurrentUser(){
-  return this.afAuth.authState.pipe(first()).toPromise();
-}
-
-
-
-
 
 }
