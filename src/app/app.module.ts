@@ -178,7 +178,6 @@ import { Forfirevarioselementoshtml2Component } from './paginas/programacion/fir
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
 import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarchivos/subirarchivos.component';
-import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
 import { DirectivasubidaDirective } from './paginas/programacion/firebase/subirarchivos/directiva/directivasubida.directive';
 import { MostrarComponent } from './paginas/programacion/firebase/subirarchivos/mostrar/mostrar.component';
@@ -261,7 +260,6 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
-import { ThemesComponent } from './paginas/programacion/bootswatch/themes/themes.component';
 
 
 
@@ -417,7 +415,6 @@ import { ThemesComponent } from './paginas/programacion/bootswatch/themes/themes
     Forfirevarioselementoshtml4Component,
     HostingComponent,
     SubirarchivosComponent,
-    InstalacionfirebaseComponent,
     SubidafireComponent,
     DirectivasubidaDirective,
     MostrarComponent,
@@ -486,8 +483,7 @@ import { ThemesComponent } from './paginas/programacion/bootswatch/themes/themes
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent,
-    ThemesComponent
+    BootswatchComponent
   ],
   imports: [
     //Por defecto

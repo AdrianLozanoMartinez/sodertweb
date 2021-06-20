@@ -1,6 +1,6 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-estructurabootstrap-tab" data-toggle="pill" href="#pills-estructurabootstrap" role="tab" aria-controls="pills-estructurabootstrap" aria-selected="true" style="color: black;">Llamar a <br>Bootstrap</a>
+      <a class="nav-link active" id="pills-estructurabootstrap-tab" data-toggle="pill" href="#pills-estructurabootstrap" role="tab" aria-controls="pills-estructurabootstrap" aria-selected="true" style="color: black;">Instalación</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-estructurabootstrap0-tab" data-toggle="pill" href="#pills-estructurabootstrap0" role="tab" aria-controls="pills-estructurabootstrap0" aria-selected="false" style="color: black;">Simple</a>
@@ -25,33 +25,73 @@
 <div class="tab-content cuadro" id="pills-tabContent">
   
     <div class="tab-pane fade show active" id="pills-estructurabootstrap" role="tabpanel" aria-labelledby="pills-estructurabootstrap-tab">
+          
+<div class="card-group">
+    <div class="card text-dark m-3" id="lila2">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Manual</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head>                                                                                        
+          {{co}}meta charset="UTF-8">                                                                    
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+          {{co}}title>Título en pestaña de la web{{co}}/title>
+          <b>{{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            {{co}}!--LLAMA a BOOTSTRAP 1/4. El RESTO está al FINAL del BODY--></b>
+      {{co}}/head>                                                                                       
+      {{co}}body>      
 
-        <div class="card-group">
-                <div class="card text-dark m-3" id="lila2">
-                    <div class="card-body" id="lila2">
-                      <pre class="card-text">{{co}}!DOCTYPE html>
-        {{co}}html lang="en">
-            {{co}}head>                                                                                        
-                {{co}}meta charset="UTF-8">                                                                    
-                {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
-                {{co}}title>Título en pestaña de la web{{co}}/title>
-                <b>{{co}}link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">            {{co}}!--LLAMA a BOOTSTRAP 1/4. El RESTO está al FINAL del BODY--></b>
-            {{co}}/head>                                                                                       
-            {{co}}body>      
+          INFORMACIÓN VISIBLE
+          
+          <b>{{co}}!--Squery-->                                                                                                                                                                                                
+          {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+          {{co}}!--Popper-->
+          {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+          {{co}}!--Bootstrap-->
+          {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   </b>
+      {{co}}/body>                                                                                       
+  {{co}}/html></pre>
+        </div>
+    </div>
+    <div class="card text-dark m-3" id="lila2">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3><a href="https://getbootstrap.com/docs/4.6/getting-started/download/">Descargada</a></h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text"><ul><h4>Lugar de instalación</h4><li><b>src/assets/Bootstrap-4.5.0-Descargado/css</b>
+y en
+<b>src/assets/Bootstrap-4.5.0-Descargado/js</b></li>
 
-                INFORMACIÓN VISIBLE
-                
-                <b>{{co}}!--Squery-->                                                                                                                                                                                                
-                {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
-                {{co}}!--Popper-->
-                {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
-                {{co}}!--Bootstrap-->
-                {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   </b>
-            {{co}}/body>                                                                                       
-        {{co}}/html></pre>
-                    </div>
-                  </div>
-          </div>
+<h4>Se llama (Html)</h4><li>{{co}}!DOCTYPE html>
+    {{co}}html lang="en">
+        {{co}}head>                                                                                        
+            {{co}}meta charset="UTF-8">                                                                    
+            {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">                    
+            {{co}}title>Título en pestaña de la web{{co}}/title>
+            <b>{{co}}link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">            {{co}}!--LLAMA al BOOTSTRAP DESCARGADO--></b>
+        {{co}}/head>                                                                                       
+        {{co}}body>      
+
+            INFORMACIÓN VISIBLE
+        
+        <b>{{co}}!--Squery-->                                                                                                                                                                                                
+            {{co}}script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">{{co}}/script>
+            {{co}}!--Popper-->
+            {{co}}script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">{{co}}/script>
+            {{co}}!--Bootstrap-->
+            {{co}}script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">{{co}}/script>   </b>
+        {{co}}/body>                                                                                       
+    {{co}}/html></li></ul></pre>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
     </div>
   
     <div class="tab-pane fade" id="pills-estructurabootstrap0" role="tabpanel" aria-labelledby="pills-estructurabootstrap0-tab">

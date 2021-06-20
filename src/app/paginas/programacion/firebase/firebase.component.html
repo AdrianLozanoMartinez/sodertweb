@@ -1,26 +1,47 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" id="pills-expresion-tab" data-toggle="pill" href="#pills-expresion" role="tab" aria-controls="pills-expresion" aria-selected="true" style="color: black;">Proyecto</a>
+        <a class="nav-link" id="pills-firebasefirebasex-tab" data-toggle="pill" href="#pills-firebasefirebasex" role="tab" aria-controls="pills-firebasefirebasex" aria-selected="true" style="color: black;">Instalación/Uso</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-expresion0-tab" data-toggle="pill" href="#pills-expresion0" role="tab" aria-controls="pills-expresion0" aria-selected="false" style="color: black;">Login</a>
+      <a class="nav-link" id="pills-firebasefirebase-tab" data-toggle="pill" href="#pills-firebasefirebase" role="tab" aria-controls="pills-firebasefirebase" aria-selected="true" style="color: black;">Proyecto</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-expresion1-tab" data-toggle="pill" href="#pills-expresion1" role="tab" aria-controls="pills-expresion1" aria-selected="false" style="color: black;">Subir archivos</a>
+        <a class="nav-link" id="pills-firebasefirebase0-tab" data-toggle="pill" href="#pills-firebasefirebase0" role="tab" aria-controls="pills-firebasefirebase0" aria-selected="false" style="color: black;">Login</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-expresion2-tab" data-toggle="pill" href="#pills-expresion2" role="tab" aria-controls="pills-expresion2" aria-selected="false" style="color: black;">Hosting</a>
+        <a class="nav-link" id="pills-firebasefirebase1-tab" data-toggle="pill" href="#pills-firebasefirebase1" role="tab" aria-controls="pills-firebasefirebase1" aria-selected="false" style="color: black;">Subir archivos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-firebasefirebase2-tab" data-toggle="pill" href="#pills-firebasefirebase2" role="tab" aria-controls="pills-firebasefirebase2" aria-selected="false" style="color: black;">Hosting</a>
     </li>
     <button class="btn btn-primary m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
   </ul>
   
   <div class="tab-content cuadro" id="pills-tabContent">
   
-    <div class="tab-pane fade" id="pills-expresion" role="tabpanel" aria-labelledby="pills-expresion-tab">
+    <div class="tab-pane fade" id="pills-firebasefirebasex" role="tabpanel" aria-labelledby="pills-firebasefirebasex-tab">
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+          <div class="card-header">
+            <pre class="card-text text-center"><h3><a href="https://github.com/angular/angularfire">Web</a></h3></pre>
+          </div>
+            <div class="card-body">
+              <pre class="card-text"><ol><li>Instalación <b>npm i firebase</b></li>
+<li>Login/Logout: <ul><li>Login: <b>firebase login</b></li><li>Logout: <b>firebase logout</b></li></ul></li>
+<li>Añade al proyecto: <b>ng add @angular/fire</b> -> <b>Elegimos el proyecto</b></li></ol></pre>
+            </div>
+        </div>
+      </div>
+
+      </div>
+
+
+      <div class="tab-pane fade" id="pills-firebasefirebase" role="tabpanel" aria-labelledby="pills-firebasefirebase-tab">
         
         <b>Ir a la consola -> Crear un proyecto</b>
         <div class="card-group">
-  <div class="card text-dark bg-primary m-3">
+  <div class="card text-dark bg-primary m-3 border-0">
       <div class="card-body"><h3>1º Paso</h3>
         <pre class="card-text">Empieza por ponerle un nombre al proyecto
 <b>Introduce el nombre de tu proyecto</b> -> En este caso -> <b>Sodertweb </b>
@@ -28,6 +49,7 @@
 
 <b>Continuar</b></pre>
       </div>
+      <div class="card-body bg-white"></div> <div class="card-body bg-white"></div><div class="card-body bg-white"></div><div class="card-body bg-white"></div>
   </div>
   <div class="card text-dark bg-primary m-3">
     <div class="card-body"><h3>2º Paso</h3>
@@ -74,7 +96,7 @@ Testing, Predictions y Cloud Functions.
 
     </div>
   
-    <div class="tab-pane fade" id="pills-expresion0" role="tabpanel" aria-labelledby="pills-expresion0-tab">
+    <div class="tab-pane fade" id="pills-firebasefirebase0" role="tabpanel" aria-labelledby="pills-firebasefirebase0-tab">
 <pre>
         <b>Ir a consola -> Proyecto -> Authentication</b></pre>
 <div class="card-group">
@@ -125,9 +147,9 @@ Testing, Predictions y Cloud Functions.
 
     </div>
 
-    <div class="tab-pane fade" id="pills-expresion1" role="tabpanel" aria-labelledby="pills-expresion1-tab"><app-subirarchivos></app-subirarchivos></div>
+    <div class="tab-pane fade" id="pills-firebasefirebase1" role="tabpanel" aria-labelledby="pills-firebasefirebase1-tab"><app-subirarchivos></app-subirarchivos></div>
   
-    <div class="tab-pane fade" id="pills-expresion2" role="tabpanel" aria-labelledby="pills-expresion2-tab"><app-hosting></app-hosting></div>
+    <div class="tab-pane fade" id="pills-firebasefirebase2" role="tabpanel" aria-labelledby="pills-firebasefirebase2-tab"><app-hosting></app-hosting></div>
       
   </div>
 

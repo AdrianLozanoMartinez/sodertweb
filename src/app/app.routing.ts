@@ -98,7 +98,6 @@ import { Forfirevarioselementoshtml2Component } from './paginas/programacion/fir
 import { Forfirevarioselementoshtml3Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml3/forfirevarioselementoshtml3.component';
 import { Forfirevarioselementoshtml4Component } from './paginas/programacion/firebase/formulariosfirebase/forfirevarioselementoshtml4/forfirevarioselementoshtml4.component';
 import { SubirarchivosComponent } from './paginas/programacion/firebase/subirarchivos/subirarchivos.component';
-import { InstalacionfirebaseComponent } from './paginas/programacion/firebase/instalacionfirebase/instalacionfirebase.component';
 import { SubidafireComponent } from './paginas/programacion/firebase/subirarchivos/subidafire/subidafire.component';
 
 //Programacion - Auth0
@@ -244,7 +243,6 @@ export const appRoutes: Routes = [
   { path: 'varioselementos2', component: Forfirevarioselementoshtml2Component},
   { path: 'varioselementos3', component: Forfirevarioselementoshtml3Component},
   { path: 'varioselementos4', component: Forfirevarioselementoshtml4Component},
-  { path: 'instalacionfirebase', component: InstalacionfirebaseComponent},
   //Auth0
   { path: 'auth0', component: Auth0auth0Component},
   //Fonts google
