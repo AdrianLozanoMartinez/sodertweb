@@ -1,0 +1,21 @@
+<div class="card-group">
+       <div class="card m-3">
+           <div class="card-header bg-danger">
+               <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+           </div>
+           <div class="card-body">
+   
+              <input #local 
+              autofocus 
+              type="text"
+              class="form-control-lg"
+              placeholder="Search..."
+              (keyup)="onSearch(local.value)">
+              <!-- Debe ser value como en el html, no puede ser otro nombre, porque coge el valor de lo que introduzcamos -->
+   
+           </div>
+       </div>
+   </div>
+   
+
+

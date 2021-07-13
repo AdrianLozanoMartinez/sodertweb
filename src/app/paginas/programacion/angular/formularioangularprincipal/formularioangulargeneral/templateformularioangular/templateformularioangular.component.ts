@@ -30,11 +30,11 @@ export class TemplateformularioangularComponent implements OnInit {
 
     this.paisService.getPaises().subscribe ( VienePaises => {
 
-      console.log('Países que hablan Español antes de la comparación: ', VienePaises);
+      //console.log('Países que hablan Español antes de la comparación: ', VienePaises);
       
       this.paises = VienePaises  //paises: any[] = [] (this.paises) = Paises que vienen del servicio (VienePaises)
 
-      console.log('Países que hablan Español después de la comparación: ', this.paises);
+      //console.log('Países que hablan Español después de la comparación: ', this.paises);
 
       this.paises.unshift({  //unshift añade un nuevo elemento a la posición del arreglo
         nombre: '[ Seleccione Pais ]',  //Es lo primero que saldrá y seleccionado
@@ -57,8 +57,8 @@ export class TemplateformularioangularComponent implements OnInit {
         return;
     }
 
-    console.log(variableLocal);  //Vemos en consola si es válido (valid) o no (invalid) el formulario, controls (ngModel), errors, status, touched...entre otras opciones
-    console.log(variableLocal.value);  //.opción del ngForm
+   // console.log(variableLocal);  //Vemos en consola si es válido (valid) o no (invalid) el formulario, controls (ngModel), errors, status, touched...entre otras opciones
+   // console.log(variableLocal.value);  //.opción del ngForm
     
   }
 
@@ -77,8 +77,8 @@ export class TemplateformularioangularComponent implements OnInit {
         return;
     }
 
-    console.log(variableLocal2);  
-    console.log(variableLocal2.value);  
+   // console.log(variableLocal2);  
+    //console.log(variableLocal2.value);  
     
   }
 
@@ -96,8 +96,8 @@ export class TemplateformularioangularComponent implements OnInit {
         return;
     }
 
-    console.log(variableLocal3);  
-    console.log(variableLocal3.value);  
+    //console.log(variableLocal3);  
+    //console.log(variableLocal3.value);  
     
   }
 //Html

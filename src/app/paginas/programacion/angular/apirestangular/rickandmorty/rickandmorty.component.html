@@ -1,0 +1,692 @@
+<div class="row">
+
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-rickandmorty1-tab" data-toggle="pill" href="#v-pills-rickandmorty1" role="tab" aria-controls="v-pills-rickandmorty1" aria-selected="false">Module.ts - Routing.ts<br>Interface.ts</a>
+        <a class="nav-link" id="v-pills-rickandmorty0-tab" data-toggle="pill" href="#v-pills-rickandmorty0" role="tab" aria-controls="v-pills-rickandmorty0" aria-selected="true">Mostrar todos</a>
+        <a class="nav-link" id="v-pills-rickandmorty2-tab" data-toggle="pill" href="#v-pills-rickandmorty2" role="tab" aria-controls="v-pills-rickandmorty2" aria-selected="false">Mostrar uno</a>
+        <a class="nav-link" id="v-pills-rickandmorty-tab" data-toggle="pill" href="#v-pills-rickandmorty" role="tab" aria-controls="v-pills-rickandmorty" aria-selected="true">Búsqueda</a>
+        <a class="nav-link" id="v-pills-rickandmorty3-tab" data-toggle="pill" href="#v-pills-rickandmorty3" role="tab" aria-controls="v-pills-rickandmorty3" aria-selected="true">Scroll + Todas las páginas <br><small>En progresión</small><br><small>Ejemplo abajo</small></a>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <a href="https://rickandmortyapi.com/">Web API</a> -> <a href="https://rickandmortyapi.com/documentation/">Documentación</a>
+
+        <div class="tab-pane fade" id="v-pills-rickandmorty1" role="tabpanel" aria-labelledby="v-pills-rickandmorty1-tab">
+
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>App.module.ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Servicio API Países (Json)
+<b>import {{c}} HttpClientModule } from '@angular/common/http';</b>   <abbr title="Poder conectar API con proyecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@NgModule({{c}}
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      ErrorComponent,
+      PieComponent,
+      CabeceraComponent
+    ],
+    imports: [
+      BrowserModule,
+      routing<b>,
+      HttpClientModule</b>  <abbr title="Poder conectar API con proyecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    ],
+      providers: [
+      appRoutingProviders
+      ],
+      bootstrap: [AppComponent]
+  })
+  export class AppModule {{c}} }</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-danger m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>App.routing.ts</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
+import {{c}} CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';</b>
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+<b>  {{c}} path: 'listmorty', component: ListmortyComponent},
+  {{c}} path: 'character-details/:id',<abbr title="Si no ponemos la referencia (id) donde identificamos cada personaje da error, porque debe ir a la página cogiendo el id seleccionado (['/character-details', character.id])"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> component: CharacterDetailsComponent},</b>
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card text-dark bg-danger m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Character.interface.ts</h3></pre>
+              </div>
+              <div class="card-body">
+                <pre class="card-text"><b>export interface Character{{c}}   <abbr title="Sacamos para ser usado en un componente la interfaz con el nombre Character"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    id: number;
+    name: string;
+    image: string;
+    species: string;
+    gender: string;
+    created: string;
+    status: string;
+}</b></pre>
+              </div>
+          </div>
+        </div>
+          
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-rickandmorty0" role="tabpanel" aria-labelledby="v-pills-rickandmorty0-tab"><app-listmorty></app-listmorty>
+    
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} HttpClient } from '@angular/common/http';  <abbr title="Conexión con la API. Se añade en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Character } from '../interface/character.interface';</b>  <abbr title="Interface. Estructura de los datos que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicecharacterService {{c}}
+
+  <b>baseUrlAPI= 'https://rickandmortyapi.com/api/character';</b>  <abbr title="Character -> Se puede quitar y así trabajar con episodios etc"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private http: HttpClient</b>) {{c}} }  <abbr title="Se mete en la variable http el HttpClient para trabajar con la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>searchCharacters(nombrePersonaje='', page=1){{c}}  <abbr title="nombrePersonaje -> Filtrar todos los personajes (characters). page -> petición a la api de pagina 1 o 2 ..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    //const filter = `https://rickandmortyapi.com/api/character/?name=${{c}}nombrePersonaje}&page=${{c}}page}`;  <abbr title="Dirección de la API + el atributo name (nombre) que proviene de la API cuando entramos en la web o lo vemos en consola cuando hacemos console.log(this.baseUrlAPI); + Atributo page (página)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+     const filter = `${{c}}this.baseUrlAPI}/?name=${{c}}nombrePersonaje}&page=${{c}}page}`;   <abbr title="API + Atributo name + page (página) -> Lo metemos en la variable filter"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+       console.log(filter);  <abbr title="Mostramos el contenido de la variable filter -> https://rickandmortyapi.com/api/character/?name=${nombrePersonaje}&page=${page}"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+       console.log(this.baseUrlAPI);  <abbr title="Mostramos el contenido de la variable baseUrlAPI -> https://rickandmortyapi.com/api/character"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      return this.http.get{{co}}Character[]>(  <abbr title="Devolvemos lo que cogemos (get) con la interfaz (Character), API + atributo name=NombreQueCoge + Atributo page=PaginaQueCoge, incluso podemos meterlo en la variable filter como lo que hemos dejado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        // `${{c}}this.baseUrlAPI}/?name=${{c}}nombrePersonaje}&page=${{c}}page}`
+        filter  <abbr title="Esta o la de arriba (`${this.baseUrlAPI}/?name=${nombrePersonaje}&page=${page}`), se usa este por ser más fácil de leer, opcional"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      );
+  }</b>
+
+}</pre>
+                </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} Character } from '../interface/character.interface';   <abbr title="Interface"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} ServicecharacterService } from '../service/servicecharacter.service';  <abbr title="Servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} take<abbr title="Coge el número de página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, filter<abbr title="Arreglar buscar, para poder rebuscar sin volver atrás ni actualizar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from 'rxjs/operators';</b>  
+<b>import {{c}} ActivatedRoute<abbr title="Para la búsqueda, coja los elementos que introduzcamos y lo busque en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, NavigationEnd<abbr title="Cuando finalice la navegación"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, ParamMap, Router<abbr title="Navegar a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/router';</b>   <abbr title="xxx"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<b>type RequestInfo = {{c}}
+  next: string;
+};</b>
+
+@Component({{c}}
+  selector: 'app-listmorty',
+  templateUrl: './listmorty.component.html',
+  styleUrls: ['./listmorty.component.css']
+})
+export class ListmortyComponent implements OnInit {{c}}
+
+  <b>characters: Character[]=[];</b>  <abbr title="Almacenamos personajes"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>private pageNum=1;</b>  <abbr title="Lo inicializamos en la 1º página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>private NombreDePersonajes:string;</b>
+
+  <b>info:RequestInfo={{c}}</b>  <abbr title="Almacenamos si tenemos otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>next: null,  <abbr title="Lo inicializamos la siguiente página en null por si no hay más"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  };</b>
+
+  constructor( <b>private CharacterSvc: ServicecharacterService,</b>  <abbr title="Metemos en la variable (CharacterSvc) para usar el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               <b>private route: ActivatedRoute,</b>  <abbr title="Buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               <b>private router: Router</b>  <abbr title="Arreglar los cambios de una busqueda a otra sin actualizar o ir para atrás. Cuando la url cambie que pasará"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               ) {{c}}
+                    <b>this.onUrlChanged();</b>  <abbr title="Se dispara después de introducir la búsqueda la 1º vez, como el ngOnit solo se dispara una vez, por eso disparamos desde el constructor que es el 2º en dispararse"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               }  
+
+  ngOnInit(): void {{c}}
+    //<b>this.getDataFromService();</b>  <abbr title="Iniciar desde el inicio (ngOnInit) la función getDataFromService para mostrar todos los datos y llamar a la API a través del servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>getCharactersByQuery();</b>  <abbr title="Se ve el resultado de la búsqueda en la misma página donde se muestra todo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  //Mostrar
+  <b>private getDataFromService(): void{{c}}  
+        this.CharacterSvc.searchCharacters(this.NombreDePersonajes, this.pageNum)  <abbr title="Cogemos el nombre (NombreDePersonajes) y el número de la página (pageNum) a través de la función (searchCharacters) del servicio (CharacterSvc)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                          .pipe(take(1))   <abbr title="Pasamos por la tubería (pipe) toda la información y coge (take) una página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                          .subscribe( (resp:any) => {{c}}  <abbr title="Nos subscribimos para usar la información. Resp -> Respuesta de lo que recibimos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        if(resp?.results?.length){{c}}  <abbr title="Si existe respuesta de la API, si hay resultado se ejecuta y se muestre los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          console.log('Recibimos -> ', resp); 
+          
+          const {{c}} info, results } = resp;  <abbr title="Destructuramos lo que recibimos y metemos en la variable (resp) la info y results que recibimos para coger los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.characters = [...this.characters, ...results ];  <abbr title="Metemos en la variable (characters) todo lo que recibimos del atributo result (resultado) (...results) más lo que ya hemos ido obteniendo (...this.characters), ya que empieza con la 1º y guarda y coge la siguiente, etc"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.info = info;  <abbr title="Metemos en la variable (info) lo que vamos obteniendo del atributo info destructurado en la àrte de arriba de lo que recibimos (const { info, results } = resp;), coge el 1º y almacena, coge el 2º y almacena hasta cogerlo todos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+
+        <b>else{{c}}  <abbr title="Si no hay resultado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.characters = [];  <abbr title="Vacía el contenido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }</b>
+
+    });
+  }</b>
+
+
+  //Buscar
+  <b>private getCharactersByQuery():void{{c}}  <abbr title="Vamos a recibir lo que los usuarios busquen, el buscador está en otro componente, pero se puede poner en el mismo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+      this.route.queryParams.pipe(
+        take(1) ).subscribe( (RecibeParams: ParamMap) => {{c}}
+          console.log('Params -> ', RecibeParams );
+          
+          this.NombreDePersonajes = RecibeParams['variablequeryparams'<abbr title="Proviene del ts de search y lo mostramos y cogemos en la url del navegador"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>];
+          this.getDataFromService();  <abbr title="Una vez realizada la búsqueda se muestra el contenido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        })
+  
+    }</b>
+  
+  
+    //Arreglar los cambios de una búsqueda
+    <b>private onUrlChanged(): void {{c}}  <abbr title="Arreglar los cambios de una búsqueda a otra sin actualizar o ir para atrás. Cuando la url cambie que pasará"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+      this.router.events.pipe(  
+        filter((event) <abbr title="Emite"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> => event instanceof NavigationEnd <abbr title="Cuando finalice la navegación"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>)).subscribe(  
+          () => {{c}}
+            this.characters = [];  <abbr title="Ponemos los personajes en vacío para actualizar la página con lo nuevo que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            this.pageNum = 1; <abbr title="Actualizamos a la 1º página para empezar desde el inicio a buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            this.getCharactersByQuery();  <abbr title="Llamamos a la función buscar para que se actualice la nueva búsqueda"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          });
+    }</b>
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}div class="row">
+    {{co}}div class="col-xs-12 col-sm-6 col-md-4" <b>{{f}}ngFor="let character of characters"</b>>  <abbr title="For que recorre la variable (characters) donde se almacena los datos (personajes) de la API y lo metemos en la variable LOCAL (character)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}div class="card">
+            {{co}}div class="image">
+                {{co}}a <b>{{t}}routerLink]="{{t}}'/character-details', character.id]"</b>>Link{{co}}/a>  <abbr title="routerLink='/dirección' -> Nos lleva a la página donde se muestra UN ELEMENTO (character-details) especificando el elemento (character.id) usando la id (id -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{co}}img <b>{{t}}src]="character.image"</b>   <abbr title="Cogemos la imagen (image -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                     {{t}}alt]=<b>"character.name"</b>   <abbr title="Cogemos el nombre (name -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                     class="card-img-top">
+            {{co}}/div>
+        {{co}}/div>
+
+        {{co}}div class="card-inner">
+            {{co}}div class="header">
+                {{co}}a <b>{{t}}routerLink]="{{t}}'/character-details', character.id]"</b>>   <abbr title="routerLink='/dirección' -> Nos lleva a la página donde se muestra UN ELEMENTO (character-details) especificando el elemento (character.id) usando la id (id -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                    {{co}}h2><b>{{c}}{{c}} character.name<abbr title="Cogemos el nombre (name -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> | slice: 0:15 <abbr title="Coogemos solamente (slice) desde la primera posición (0) de la letras hasta la posición 16 (15)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> }}</b>{{co}}/h2>   
+                {{co}}/a>
+                {{co}}h4 class="text-muted"><b>{{c}}{{c}} character.gender }}</b>{{co}}/h4>   <abbr title="Cogemos el género (gender -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{co}}small class="text-muted"><b>{{c}}{{c}} character.created<abbr title="Cogemos el creado (created -> Atributo de la API)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> | date<abbr title="Pone la fecha con el formato predeterminado de las fechas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> }}</b>{{co}}/small>   
+            {{co}}/div>
+        {{co}}/div>
+
+    {{co}}/div>
+    {{co}}div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" <b>{{f}}ngIf="characters.length {{co}}= 0"</b> <abbr title="Si no se encuentra uno o más resultado, sino hay letras o dato cogido de la API se muestra el mensaje NO RESULTADO"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+        {{co}}p>No results...{{co}}/p>
+    {{co}}/div>
+{{co}}/div>
+
+{{co}}button class="btn btn-dark">Ir arriba{{co}}/button></pre>
+              </div>
+          </div>
+        </div>
+          
+          
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-rickandmorty2" role="tabpanel" aria-labelledby="v-pills-rickandmorty2-tab">
+
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                  Se ve en la pestaña MOSTRAR TODO -> Clickear sobre un elemento
+        
+                </div>
+            </div>
+        </div>
+        
+          <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} HttpClient } from '@angular/common/http';  <abbr title="Conexión con la API. Se añade en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Character } from '../interface/character.interface';</b>  <abbr title="Interface. Estructura de los datos que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServicecharacterService {{c}}
+
+  <b>baseUrlAPI= 'https://rickandmortyapi.com/api/character';</b>  <abbr title="Character -> Se puede quitar y así trabajar con episodios etc"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private http: HttpClient</b> ) {{c}} }  <abbr title="Se mete en la variable http el HttpClient para trabajar con la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>getDetails(id:number){{c}}
+
+    //Opción 2
+    const uno = `${{c}}this.baseUrlAPI}/${{c}}id}`;
+
+    return this.http.get{{co}}Character>( <abbr title="Devolvemos lo que cogemos (get) con la interfaz (Character), API + atributo name=NombreQueCoge + Atributo id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      //Opción 1
+      //`${{c}}this.baseUrlAPI}/${{c}}id}`
+
+      //Opción 2
+      uno
+    );
+  }</b>
+
+}</pre>
+
+    </div>
+  </div>
+</div>
+         
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} Observable } from 'rxjs';  
+import {{c}} Character } from '../interface/character.interface';  <abbr title="Tipología de los datos predeterminado a como lo hayamos puesto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} ActivatedRoute } from '@angular/router';  
+import {{c}} ServicecharacterService } from '../service/servicecharacter.service';  <abbr title="Servicio que se relaciona con la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Location } from '@angular/common';  <abbr title="Para volver a la página anterior sin especificar la ruta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} take } from 'rxjs/operators';</b>  <abbr title="Coge la página que marquemos, abajo cogemos la 1º"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-character-details',
+  templateUrl: './character-details.component.html',
+  styleUrls: ['./character-details.component.css']
+})
+export class CharacterDetailsComponent implements OnInit {{c}}
+
+  <b>character$: Observable{{co}}Character>;</b>  <abbr title="Ponemos como observable el personaje elegido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private route: ActivatedRoute, 
+                private characterSvc: ServicecharacterService, 
+                private location: Location</b> ) {{c}} }  <abbr title="Para volver a la página anterior sin especificar la ruta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+    <b>this.route.params.pipe( take(1) ).subscribe((CogeDato) => {{c}}  <abbr title="Cogemos parametros del url para buscar ese personaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+         
+      //const id = params['id'];  <abbr title="De lo que nos devuelve cogemos la id y la metemos en una variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      //this.character$ = this.characterSvc.getDetails(id);  <abbr title="Mediante la función del servicio cogemos la id y la metemos en la variable character$"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      this.character$ = this.characterSvc.getDetails( CogeDato ['id']);  <abbr title="Unimos: const id = params['id'];    Y     this.character$ = this.characterSvc.getDetails(id);"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    });</b>
+  }
+
+  <b>onGoBack():void{{c}}  <abbr title="Para volver a la página anterior sin especificar la ruta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.location.back();  
+    //Otra opción
+    //window.history.back();  
+  }</b>
+
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}div class="row" <b>{{f}}ngIf="character$ | async as character"</b> <abbr title="Si se encuentra el personaje, aparte que se muestre lo datos, se cambia ese observable por el nombre character, para mostrar los datos, de forma asíncrona (async)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+    {{co}}div class="col-xs-12 col-sm-6 col-md-4">
+        {{co}}div class="card">
+            {{co}}div class="image">
+                
+                {{co}}img <b>{{t}}src]="character.image"</b>  <abbr title="Muestra imagen del personaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                     <b>{{t}}alt]="character.name"</b>  <abbr title="Muestra nombre del personaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                     class="card-img-top">
+            {{co}}/div>
+        {{co}}/div>
+
+        {{co}}div class="card-inner">
+            {{co}}div class="header">
+                
+                    {{co}}h2><b>{{c}}{{c}}character.name | slice: 0:15}}</b>{{co}}/h2>  <abbr title="Muestra nombre del personaje acortado (slice) desde la primera (0) posición hasta la 16 (15)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                {{co}}h4 class="text-muted"><b>{{c}}{{c}}character.gender}}</b>{{co}}/h4>  <abbr title="Muestra género del personaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{co}}small class="text-muted"><b>{{c}}{{c}}character.created | date}}</b>{{co}}/small>  <abbr title="Muestra fecha de creación del personaje, con el pipe la fecha como se suele poner"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}/div>
+        {{co}}/div>
+
+    {{co}}/div>
+    
+{{co}}/div>
+
+{{co}}button class="btn btn-dark" <b>{{p}}click)="onGoBack()"</b>>Back{{co}}/button></pre>  <abbr title="Botón que al darle click llama a la función que hace que vayamos para atrás que está relacionado con el Ts sin especificar ruta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      </div>
+  </div>
+</div>
+
+        </div>
+
+        
+        <div class="tab-pane fade" id="v-pills-rickandmorty" role="tabpanel" aria-labelledby="v-pills-rickandmorty-tab"><app-searchmorty></app-searchmorty>
+          
+                    
+          <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} Router } from '@angular/router';</b>  <abbr title="Para redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-searchmorty',
+  templateUrl: './searchmorty.component.html',
+  styleUrls: ['./searchmorty.component.css']
+})
+export class SearchmortyComponent implements OnInit {{c}}
+
+  constructor( <b>private router: Router</b> ) {{c}} }  <abbr title="Para redirigir a otra página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>onSearch( value: string){{c}}</b>  <abbr title="Debe ser value como en el html, no puede ser otro nombre, porque coge el valor de lo que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    console.log('Buscar -> ', value);  <abbr title="Muestra el contenido de lo que vamos escribiendo y vamos a enviar y coger"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+
+    <b>if(value && value.length > 3){{c}}  <abbr title="Si lo que introducimos existe y es más de 3 letras"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.router.navigate(['listmorty'],  <abbr title="1º parámetro. Nos redigimos a una página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      {{c}}                          
+        queryParams: {{c}} variablequeryparams: value },  <abbr title="2º parámetro, coge todos los personajes que contenga la palabra que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      });
+    }
+  }</b>
+
+
+}</pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}input #local 
+       autofocus 
+       type="text"
+       class="form-control-lg"
+       placeholder="Search..."
+       <b>{{p}}keyup)<abbr title="Pulsar intro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>="onSearch<abbr title="Llama a la función buscar a la vez que le enviamos lo que le introducimos para la búsqueda"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>(local.value<abbr title="Debe ser value como en el html, no puede ser otro nombre, porque coge el valor de lo que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>)"</b>></pre>
+              </div>
+          </div>
+        </div>
+        
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-rickandmorty3" role="tabpanel" aria-labelledby="v-pills-rickandmorty3-tab">
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">
+import {{c}} Component, OnInit, <b>Inject</b>, HostListener } from '@angular/core';  <abbr title="Para que funcione el scroll"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} Character } from '../interface/character.interface';
+import {{c}} ServicecharacterService } from '../service/servicecharacter.service';
+import {{c}} filter, take } from 'rxjs/operators';
+import {{c}} ActivatedRoute, NavigationEnd, ParamMap, Router } from '@angular/router';
+
+<b>import {{c}} DOCUMENT } from '@angular/common';</b>
+
+
+type RequestInfo = {{c}}
+  next: string;
+};
+
+
+@Component({{c}}
+  selector: 'app-listmorty2',
+  templateUrl: './listmorty2.component.html',
+  styleUrls: ['./listmorty2.component.css']
+})
+export class Listmorty2Component implements OnInit {{c}}
+
+  
+  characters: Character[]=[];  
+
+  private pageNum2=1;
+  private NombreDePersonajes2:string;
+
+  <b>private hideScrolHeight= 200;  <abbr title="Para que se esconda cuando tenga menos tamaño que definiremos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    private showScrollHeight= 500;  <abbr title="Para que se visualice cuando tenga más tamaño que definiremos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    showGoUpButton = false;</b>  <abbr title="Mostrar botón o no que nos redirige hacia arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+  info:RequestInfo={{c}}  
+    next: null,
+  };
+               
+  constructor( <b>@Inject(DOCUMENT) private document: Document,</b>  <abbr title="PAra que funcione el scroll"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+               private CharacterSvc2: ServicecharacterService,
+               private route2: ActivatedRoute,
+               private router2: Router ) {{c}} 
+                 this.onUrlChanged2(); 
+               }
+
+  ngOnInit(): void {{c}}
+    this.getCharactersByQuery2();
+  }
+
+  //MOSTRAR TODO
+  private getDataFromService2(): void{{c}}
+    this.CharacterSvc2.searchCharacters(this.NombreDePersonajes2, this.pageNum2)
+                                      .pipe(take(1))
+                                      .subscribe( (resp2:any) => {{c}}
+        if(resp2?.results?.length){{c}}
+          console.log('Recibimos -> ', resp2);
+      
+          const {{c}} info, results } = resp2;
+          this.characters = [...this.characters, ...results ];
+          this.info = info;
+        }
+
+        else{{c}}
+          this.characters = [];
+        }
+    });
+  }
+
+
+  //Buscar
+  private getCharactersByQuery2():void{{c}}
+
+    this.route2.queryParams.pipe(
+      take(1) ).subscribe( (RecibeParams2: ParamMap) => {{c}}
+       
+        this.NombreDePersonajes2 = RecibeParams2['variablequeryparams'];  
+        this.getDataFromService2();
+      });
+
+  }
+
+
+  //Arreglar busqueda 
+  private onUrlChanged2(): void {{c}}
+
+    this.router2.events.pipe(
+      filter((event) => event instanceof NavigationEnd)).subscribe(
+        () => {{c}}
+          this.characters = [];
+          this.pageNum2 = 1;
+          this.getCharactersByQuery2();
+        });
+  }
+
+
+  
+  <b>onScrollDown(){{c}}   <abbr title="Si hay más páginas que cuando baje aumente en una página más"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    if(this.info.next){{c}}  <abbr title="Si hay más página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.pageNum2++;  <abbr title="Aumente 1 "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.getDataFromService2();  <abbr title="Se muestre esa página nueva"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+  } 
+
+  onScrollTop():void{{c}}  <abbr title="Va arriba de la página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.document.body.scrollTop = 0; <abbr title="Safari"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.document.documentElement.scrollTop = 0; <abbr title="Otros"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+
+  @HostListener('window:scroll', [])   <abbr title="Escuchamos el scroll"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  onWindowScroll():void{{c}}    <abbr title="Método que se va a ejecutar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    const yOffSet = window.pageYOffset;
+    if( (yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) > this.showScrollHeight ){{c}}  <abbr title="Si es mayor que la variable (showScrollHeight) mayor de 500"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.showGoUpButton = true;  <abbr title="Se muestre el botón de ir arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    else if(this.showGoUpButton && (yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) {{co}} this.hideScrolHeight){{c}}  <abbr title="Si es menor que la variable (hideScrolHeight) menor de 200"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      this.showGoUpButton = false;  <abbr title="No se muestre el botón ir arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+  }
+</b>
+} </pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}div class="row" <b>infinite-scroll {{p}}scrolled)="onScrollDown()"</b>>  <abbr title="llama a la función del Ts (onScrollDown) para que se vaya añadiendo las páginas a medida que bajamos el scroll"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}div class="col-xs-12 col-sm-6 col-md-4" {{f}}ngFor="let character of characters">
+        {{co}}div class="card">
+            {{co}}div class="image">
+                {{co}}a {{t}}routerLink]="['/character-details', character.id]">Link
+                {{co}}img {{t}}src]="character.image"
+                     {{t}}alt]="character.name"
+                     class="card-img-top">
+                {{co}}/a>
+            {{co}}/div>
+        {{co}}/div>
+
+        {{co}}div class="card-inner">
+            {{co}}div class="header">
+                {{co}}a {{t}}routerLink]="['/character-details', character.id]">
+                    {{co}}h2>{{c}}{{c}}character.name | slice: 0:15}}{{co}}/h2>
+                {{co}}/a>
+                {{co}}h4 class="text-muted">{{c}}{{c}}character.gender}}{{co}}/h4>
+                {{co}}small class="text-muted">{{c}}{{c}}character.created | date}}{{co}}/small>
+            {{co}}/div>
+        {{co}}/div>
+
+    {{co}}/div>
+    {{co}}div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" {{f}}ngIf="characters.length {{co}}= 0">
+        {{co}}p>No results...{{co}}/p>
+    {{co}}/div>
+{{co}}/div>
+
+{{co}}button class="btn btn-dark"
+        <b>{{t}}ngClass]="'no-hidden'"  <abbr title="Para que no se oculte"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          {{f}}ngIf="showGoUpButton"  <abbr title="Se muestra si está dentro de un rango de medida especificado en el Ts (onWindowScroll)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          {{p}}click)="onScrollTop()"</b>>Ir arriba{{co}}/button></pre>  <abbr title="Llama a la función Ts (onScrollTop) para que vaya arriba de la página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      </div>
+  </div>
+</div>
+
+
+<div class="card-group">
+  <div class="card text-dark bg-info m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Css</h3></pre>
+      </div>
+      <div class="card-body">
+        <pre class="card-text"><b>.no-hidden{{c}}
+    position: fixed;  <abbr title="Fijar botón para que no se mueva"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    bottom: 10px;
+    right: 10px;
+    visibility: visible;
+}
+
+html{{c}}
+    scroll-behavior: smooth;   <abbr title="Para que la subida no sea tan brusca"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</b></pre>
+      </div>
+  </div>
+</div>
+
+<app-listmorty2></app-listmorty2>
+
+        </div>
+        
+
+    </div>
+  </div>
+</div>

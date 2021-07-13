@@ -82,6 +82,8 @@ import { ProtegergirebaseangularComponent } from './paginas/programacion/angular
 import { GuardprotegergirebaseangularGuard } from './paginas/programacion/angular/loginangular/firebaseangularloginfirebase/guardprotegergirebaseangular.guard';
 import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
 import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
+import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
+import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -230,6 +232,9 @@ export const appRoutes: Routes = [
   { path: 'protegergirebaseangular', component: ProtegergirebaseangularComponent, canActivate: [ GuardprotegergirebaseangularGuard ]},
   { path: 'loginfb', component: LogindominicodeComponent},
   { path: 'registrarfb', component: RegistrardominicodeComponent},
+  { path: 'listmorty', component: ListmortyComponent},
+  { path: 'character-details/:id', component: CharacterDetailsComponent},
+
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

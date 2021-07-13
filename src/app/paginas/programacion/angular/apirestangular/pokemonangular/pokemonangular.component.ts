@@ -15,9 +15,12 @@ export class PokemonangularComponent implements OnInit {
   error2: string;
   error3: boolean = false;
 
-  constructor( private pokemonService:PokemonService) { }
+  constructor( private pokemonService:PokemonService) { 
+    
+  }
 
   ngOnInit(): void {
+
   }
 
   search(){
@@ -41,6 +44,8 @@ export class PokemonangularComponent implements OnInit {
     }
     )
   }
+
+  
 
 
   //Html

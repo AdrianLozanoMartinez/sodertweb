@@ -18,7 +18,7 @@ export class TarjetaComponent implements OnInit {
   }
 
   VerComponenteMostrar1(){
-    console.log( this.otro_index);
+    //console.log( this.otro_index);
     this.nombre_router.navigate( [ '/variable_html', this.otro_index ] )
   }
 

@@ -19,12 +19,12 @@ export class ServiceoneComponent implements OnInit {
   ngOnInit(): void {
       this.nombre_variable_ts = this._nombredelServicio.getsacarDatosServicio();
 
-      console.log( this.nombre_variable_ts );
+      //console.log( this.nombre_variable_ts );
   }
   
   
   VerComponenteMostrar1( indice_recibido:Number ){
-    console.log(indice_recibido);
+    //console.log(indice_recibido);
 
     this.nombre_router.navigate( [ '/variable_html',indice_recibido ] )
   }

@@ -1,0 +1,39 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+<div class="row" *ngIf="character$ | async as character">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+            <div class="image">
+                
+                <img [src]="character.image"
+                     [alt]="character.name"
+                     class="card-img-top">
+            </div>
+        </div>
+
+        <div class="card-inner">
+            <div class="header">
+                
+                    <h2>{{character.name | slice: 0:15}}</h2>
+
+                <h4 class="text-muted">{{character.gender}}</h4>
+                <small class="text-muted">{{character.created | date}}</small>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+
+<button class="btn btn-dark" (click)="onGoBack()">Back</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- SCROLL INFINITO -->

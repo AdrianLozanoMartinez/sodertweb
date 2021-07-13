@@ -98,7 +98,7 @@ export class ServicioformulariofireService {
 
         //Creamos una constante/arreglo (variableConst) donde metemos el model (UnoModel) y lo vemos (console.log(variableObjeto);)
         const variableConst: UnoModel[] = [];                                     
-        console.log(variableObjeto);
+        //console.log(variableObjeto);
 
     //Si la variable de objeto (variableObjeto) es nulo, no hay información en la base de datos, devuelve (return) un objeto vacío
     if ( variableObjeto === null ) {                                        

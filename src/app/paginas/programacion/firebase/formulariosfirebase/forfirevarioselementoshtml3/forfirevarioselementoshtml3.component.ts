@@ -17,7 +17,7 @@ export class Forfirevarioselementoshtml3Component implements OnInit {
   ngOnInit() {  
                                                                              
   this.variableservicio.getTodosElementos().subscribe( variableRespuestaTodos => {     
-    console.log(variableRespuestaTodos);
+    //console.log(variableRespuestaTodos);
     this.unomodel2 = variableRespuestaTodos;                                                  
   });
   }

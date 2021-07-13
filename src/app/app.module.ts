@@ -141,6 +141,16 @@ import { ReactivoformularioangularComponent } from './paginas/programacion/angul
 import { FirebaseformularioangularComponent } from './paginas/programacion/angular/formularioangularprincipal/firebaseformularioangular/firebaseformularioangular.component';
 import { FormularioangularprincipalComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangularprincipal.component';
 import { LogindominicodeComponent } from './paginas/programacion/angular/loginangular/logindominicode/logindominicode.component';
+import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
+import { Firebase2formaComponent } from './paginas/programacion/angular/loginangular/firebase2forma/firebase2forma.component';
+import { NavbarloginComponent } from './paginas/programacion/angular/loginangular/navbarlogin/navbarlogin.component';
+import { PokemontodosComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemontodos/pokemontodos.component';
+import { RickandmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/rickandmorty.component';
+import { SearchmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/searchmorty/searchmorty.component';
+import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
+import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
+//Scroll
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 //Programación - Angular - PipeLenguaje
 import { registerLocaleData } from '@angular/common';
@@ -261,9 +271,8 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
-import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
-import { Firebase2formaComponent } from './paginas/programacion/angular/loginangular/firebase2forma/firebase2forma.component';
-import { NavbarloginComponent } from './paginas/programacion/angular/loginangular/navbarlogin/navbarlogin.component';
+import { Listmorty2Component } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty2/listmorty2.component';
+
 
 
 
@@ -403,6 +412,14 @@ import { NavbarloginComponent } from './paginas/programacion/angular/loginangula
     FirebaseformularioangularComponent,
     FormularioangularprincipalComponent,
     LogindominicodeComponent,
+    RegistrardominicodeComponent,
+    Firebase2formaComponent,
+    NavbarloginComponent,
+    PokemontodosComponent,
+    RickandmortyComponent,
+    SearchmortyComponent,
+    ListmortyComponent,
+    CharacterDetailsComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -488,9 +505,8 @@ import { NavbarloginComponent } from './paginas/programacion/angular/loginangula
     JqueryComponent,
     TetherComponent,
     BootswatchComponent,
-    RegistrardominicodeComponent,
-    Firebase2formaComponent,
-    NavbarloginComponent
+    Listmorty2Component
+ 
   ],
   imports: [
     //Por defecto
@@ -511,6 +527,8 @@ import { NavbarloginComponent } from './paginas/programacion/angular/loginangula
       domain: 'sodert.eu.auth0.com',
       clientId: 'VBi7E1WT6AJmEHChD4WTwoGHpLDecvJy'
     }),
+    //Scroll
+    InfiniteScrollModule
   ],
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas

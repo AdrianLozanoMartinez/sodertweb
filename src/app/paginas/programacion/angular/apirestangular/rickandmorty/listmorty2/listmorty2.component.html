@@ -1,0 +1,44 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+<div class="row" infinite-scroll (scrolled)="onScrollDown()">  
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
+        <div class="card">
+            <div class="image">
+                <a [routerLink]="['/character-details', character.id]">Link
+                <img [src]="character.image"
+                     [alt]="character.name"
+                     class="card-img-top">
+                </a>
+            </div>
+        </div>
+
+        <div class="card-inner">
+            <div class="header">
+                <a [routerLink]="['/character-details', character.id]">
+                    <h2>{{character.name | slice: 0:15}}</h2>
+                </a>
+                <h4 class="text-muted">{{character.gender}}</h4>
+                <small class="text-muted">{{character.created | date}}</small>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="characters.length <= 0">
+        <p>No results...</p>
+    </div>
+</div>
+
+<button class="btn btn-dark"
+        [ngClass]="'no-hidden'"  
+        *ngIf="showGoUpButton"
+        (click)="onScrollTop()">Go up</button>
+
+        </div>
+    </div>
+</div>
+

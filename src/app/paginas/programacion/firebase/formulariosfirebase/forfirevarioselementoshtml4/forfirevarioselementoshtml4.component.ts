@@ -24,7 +24,7 @@ export class Forfirevarioselementoshtml4Component implements OnInit {
   this.variablecargando = true;                                                      
                                                                              
   this.variableservicio.getTodosElementos().subscribe( variableRespuestaTodos => {     
-    console.log(variableRespuestaTodos);
+    //console.log(variableRespuestaTodos);
     this.unomodel2 = variableRespuestaTodos;   
     
     //Para cuando termine de cargar. Cuando termine de cargar desaparezca

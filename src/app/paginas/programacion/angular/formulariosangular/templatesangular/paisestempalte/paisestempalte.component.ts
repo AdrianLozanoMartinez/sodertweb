@@ -35,7 +35,7 @@ export class PaisestempalteComponent implements OnInit {
         para realizar la petición y lo metemos todo en la variable (variablePaises)*/
   
       this.variablePaises2 = variablePaises;                                
-      console.log(this.variablePaises2);       //Observamos todos los países del JSON de la API de la web
+      //console.log(this.variablePaises2);       //Observamos todos los países del JSON de la API de la web
   
       this.variablePaises2.unshift({      
       
@@ -47,7 +47,7 @@ export class PaisestempalteComponent implements OnInit {
           codigo: ''
         })
   
-        console.log(variablePaises);  //Observamos todos los países del JSON de la API de la web
+        //console.log(variablePaises);  //Observamos todos los países del JSON de la API de la web
       
       });
   
@@ -58,17 +58,17 @@ export class PaisestempalteComponent implements OnInit {
       if ( variableLocalTemplate.invalid ){                       //Si el formulario es inválido
         
     Object.values ( variableLocalTemplate.controls ).forEach( variableControl => {  //Object.values ( variableLocalTemplate.controls ) -> Extrae todos los valores que contenga la variable local del formulario (variableLocalTemplate). .forEach -> Para coger cada campo (nombre, apellido, email...). variableControl => -> Lo metemos todos en la variableControl gracias a la función de flecha (=>)
-      console.log(variableControl);                             //Saca en consola cada control de cada campo (nombre, apellido, email...)
+      //console.log(variableControl);                             //Saca en consola cada control de cada campo (nombre, apellido, email...)
       variableControl.markAllAsTouched();
     });
 
     return;
   }
   
-      console.log("Submit pulsado");                                         
+      /*console.log("Submit pulsado");                                         
       console.log(variableLocalTemplate);                                    //Coge toda la información del formulario, incluyendo los datos cogido
       console.log(variableLocalTemplate.value);                              //Coge solo los datos cogidos
-      console.log('¿Formulario válido?:' + variableLocalTemplate.valid);
+      console.log('¿Formulario válido?:' + variableLocalTemplate.valid);*/
 }
 
 

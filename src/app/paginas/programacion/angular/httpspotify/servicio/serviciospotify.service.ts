@@ -12,7 +12,7 @@ export class ServiciospotifyService {
 
   constructor( private variable_http: HttpClient ) {
 
-    console.log('Servicio de Spotify, Listo!! ');//
+    //console.log('Servicio de Spotify, Listo!! ');//
  
     this.token_automatico = this.getToken()//
   }
@@ -56,7 +56,7 @@ export class ServiciospotifyService {
       'Authorization': `${this.token_automatico}`  //
     });
 
-    console.log( this.token_automatico, headers )
+    //console.log( this.token_automatico, headers )
 
     return this.variable_http.get(url, { headers });
 

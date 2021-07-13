@@ -18,7 +18,7 @@ export class DetectarcambiosComponent implements OnInit {
   this.crearFormulario(); 
   
   //Llamamos la función (detectarCambios()) en el constructor para que se ejecute lo primero
-  this.detectarCambios();
+ // this.detectarCambios();
 }   
 
   ngOnInit(): void {
@@ -57,6 +57,7 @@ crearFormulario(){
        /*Cogemos la variable de FormGroup (variableFormGroup) y la evaluamos (valueChanges)
          cada vez que escribimos y lo metemos/subscribimos a una variable (variableValorCambios) 
          y podemos observar los cambios por ejemplo con console.log(variableValorCambios);*/   
+
            console.log(variableValorCambios);
        });
      

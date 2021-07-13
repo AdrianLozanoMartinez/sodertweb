@@ -15,7 +15,7 @@ export class Serviceone2Component implements OnInit {
                private _variable_Servicio: ServiciodepruebaService ) { 
 
     this.nombre_activadRoute.params.subscribe ( params => {
-      console.log( params['id'] );
+      //console.log( params['id'] );
 
       this.variable_servicio = this._variable_Servicio.getsacarUnDatoServicio( params ['id']);
     })

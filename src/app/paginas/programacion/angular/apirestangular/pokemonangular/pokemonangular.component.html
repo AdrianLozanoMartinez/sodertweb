@@ -3,7 +3,7 @@
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-dpokemonangular-tab" data-toggle="pill" href="#v-pills-dpokemonangular" role="tab" aria-controls="v-pills-dpokemonangular" aria-selected="true">Web</a>
         <a class="nav-link" id="v-pills-dpokemonangular0-tab" data-toggle="pill" href="#v-pills-dpokemonangular0" role="tab" aria-controls="v-pills-dpokemonangular0" aria-selected="true">Búsqueda</a>
-        <a class="nav-link" id="v-pills-dpokemonangular1-tab" data-toggle="pill" href="#v-pills-dpokemonangular1" role="tab" aria-controls="v-pills-dpokemonangular1" aria-selected="false">Mostrar Todo (PENDIENTE)</a>
+        <a class="nav-link" id="v-pills-dpokemonangular1-tab" data-toggle="pill" href="#v-pills-dpokemonangular1" role="tab" aria-controls="v-pills-dpokemonangular1" aria-selected="false">Mostrar Todo</a>
         <a class="nav-link" id="v-pills-dpokemonangular2-tab" data-toggle="pill" href="#v-pills-dpokemonangular2" role="tab" aria-controls="v-pills-dpokemonangular2" aria-selected="false">Mostrar Uno (PENDIENTE)</a>
       </div>
     </div>
@@ -196,8 +196,22 @@ Error obtenido con variable booblean: <b>{{c}}{{c}}error3}}</b> <abbr title="Tru
 
 
         <div class="tab-pane fade" id="v-pills-dpokemonangular1" role="tabpanel" aria-labelledby="v-pills-dpokemonangular1-tab">
-
+<app-pokemontodos></app-pokemontodos>
     
+          <!-- <ul *ngFor="let pokemonTodos of nombreDelPokemon">  
+            <li>{{ pokemonTodos }}</li>  
+          </ul> -->
+
+          <!-- <div  class="card-columns">
+            <div *ngFor="let pokemonTodos of nombreDelPokemon" class="card"> -->
+              <!-- <img class="card-img-top" [src]="pokemonTodos.images[0].url" alt="Card image cap"> -->
+              <!-- <div class="card-body">
+                <h5 class="card-title">{{ pokemonTodos.name }}</h5> -->
+                <!-- <p class="card-text"><span *ngFor="let artista of pokemonTodos.artists" class="badge badge-secondary">{{ artista.name }}</span>{/p> -->
+              <!-- </div>
+            </div>
+        </div> -->
+
           <div class="card-group">
             <div class="card text-dark m-3 bg-primary">
                 <div class="card-body"><h3>x</h3>
