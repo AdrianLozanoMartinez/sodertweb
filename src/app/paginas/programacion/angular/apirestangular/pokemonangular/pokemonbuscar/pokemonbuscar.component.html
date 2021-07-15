@@ -1,0 +1,22 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+<p>Nombre</p>
+
+<input type="text" [(ngModel)]="nombreDelPokemon">   <abbr title="nombreDelPokemon mismo nombre que en el Ts. [( Recibe y envía )]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<button (click)="search()">Buscar</button>   <abbr title="Al hacer click llama a la función del Ts -> Servicio -> API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<img src="{{urlImage}}">   <abbr title="Mostramos la imagen obtenida"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<br>
+Error obtenido con variable string: {{error2}}
+<br>
+Error obtenido con variable booblean: {{error3}} <abbr title="True si es error, False sino lo es"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        </div>
+    </div>
+</div>

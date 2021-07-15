@@ -15,7 +15,7 @@ export class SearchmortyComponent implements OnInit {
 
   onSearch( value: string){ //Debe ser value como en el html, no puede ser otro nombre, porque coge el valor de lo que introduzcamos
 
-    console.log('Buscar -> ', value);
+    // console.log('Buscar -> ', value);
     
 
     if(value && value.length > 3){  //Si lo que introducimos existe y es más de 3 letras

@@ -45,7 +45,7 @@ export class ListmortyComponent implements OnInit {
                                       .pipe(take(1))
                                       .subscribe( (resp:any) => {
         if(resp?.results?.length){
-          console.log('Recibimos -> ', resp);
+          // console.log('Recibimos -> ', resp);
       
           const { info, results } = resp;
           this.characters = [...this.characters, ...results ];

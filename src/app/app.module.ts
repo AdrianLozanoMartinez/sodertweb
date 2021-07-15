@@ -149,6 +149,22 @@ import { RickandmortyComponent } from './paginas/programacion/angular/apirestang
 import { SearchmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/searchmorty/searchmorty.component';
 import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
 import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
+import { PokemonbuscarComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonbuscar/pokemonbuscar.component';
+//Angular Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+
 //Scroll
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
@@ -272,6 +288,7 @@ import { JqueryComponent } from './paginas/programacion/jquery/jquery.component'
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
 import { Listmorty2Component } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty2/listmorty2.component';
+
 
 
 
@@ -420,6 +437,8 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
     SearchmortyComponent,
     ListmortyComponent,
     CharacterDetailsComponent,
+    Listmorty2Component,
+    PokemonbuscarComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -439,8 +458,6 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
     SubidafireComponent,
     DirectivasubidaDirective,
     MostrarComponent,
-    //Programacion - Auth0
-    
     //Programacion - Servidor Local
     ServidorlocalComponent,
     //Programacion - Fontawesome
@@ -504,8 +521,7 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent,
-    Listmorty2Component
+    BootswatchComponent
  
   ],
   imports: [
@@ -528,7 +544,21 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
       clientId: 'VBi7E1WT6AJmEHChD4WTwoGHpLDecvJy'
     }),
     //Scroll
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    //Angular Material  
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatChipsModule
   ],
   providers: [
     //Conexión con app.routing.ts - Enlazar páginas

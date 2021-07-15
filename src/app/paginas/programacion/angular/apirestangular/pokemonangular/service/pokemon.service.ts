@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { type } from '../interface/type.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +8,13 @@ export class PokemonService {
 
   private url : string = "https://pokeapi.co/api/v2/pokemon"
 
-  //Todos
-  // private urlTodos : string = "https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0"
+  constructor( private http : HttpClient ) { }
 
-  constructor( private http : HttpClient ) {  }
+  getPokemon( nameIndex ){   //Da igual si ponemos index o name, porque cogerá lo que pongamos, si ponemos número nos coge la id y nos muestra, si ponemos nombre, nos coge el name y muetra igualmente, al tener dos propiedades coge una u otra según coincida
+    // return this.http.get(this.url + nameIndex)  //Antigua forma
 
-
-  getPokemon( name:string ){
-    // return this.http.get(this.url + name)  //Antigua forma
-    return this.http.get(`${this.url}/${name}`)
+    return this.http.get(`${this.url}/${nameIndex}`)
+    
   }
-
-  
-
-
-
  
 }

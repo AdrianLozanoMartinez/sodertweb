@@ -34,8 +34,11 @@ import {{c}} ErrorComponent } from './componentes/error/error.component';
 import {{c}} PieComponent } from './componentes/pie/pie.component';
 import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
-//Servicio API Países (Json)
+//API
 <b>import {{c}} HttpClientModule } from '@angular/common/http';</b>   <abbr title="Poder conectar API con proyecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+//Scroll
+<b>import {{c}} InfiniteScrollModule } from 'ngx-infinite-scroll';</b>   <abbr title="Tener scroll infinito y poder mostrar todos los componentes, suma todas las páginas a medida que va bajando va mostrando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 @NgModule({{c}}
     declarations: [
@@ -48,7 +51,10 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
     imports: [
       BrowserModule,
       routing<b>,
-      HttpClientModule</b>  <abbr title="Poder conectar API con proyecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      //API
+      HttpClientModule,</b>  <abbr title="Poder conectar API con proyecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      //Scroll
+      <b>InfiniteScrollModule</b>  <abbr title="Tener scroll infinito y poder mostrar todos los componentes, suma todas las páginas a medida que va bajando va mostrando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     ],
       providers: [
       appRoutingProviders
@@ -524,8 +530,8 @@ export class Listmorty2Component implements OnInit {{c}}
   
   characters: Character[]=[];  
 
-  private pageNum2=1;
-  private NombreDePersonajes2:string;
+  private pageNum=1;
+  private NombreDePersonajes:string;
 
   <b>private hideScrolHeight= 200;  <abbr title="Para que se esconda cuando tenga menos tamaño que definiremos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     private showScrollHeight= 500;  <abbr title="Para que se visualice cuando tenga más tamaño que definiremos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
@@ -536,25 +542,25 @@ export class Listmorty2Component implements OnInit {{c}}
   };
                
   constructor( <b>@Inject(DOCUMENT) private document: Document,</b>  <abbr title="PAra que funcione el scroll"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-               private CharacterSvc2: ServicecharacterService,
-               private route2: ActivatedRoute,
-               private router2: Router ) {{c}} 
-                 this.onUrlChanged2(); 
+               private CharacterSvc: ServicecharacterService,
+               private route: ActivatedRoute,
+               private router: Router ) {{c}} 
+                 this.onUrlChanged(); 
                }
 
   ngOnInit(): void {{c}}
-    this.getCharactersByQuery2();
+    this.getCharactersByQuery();
   }
 
   //MOSTRAR TODO
-  private getDataFromService2(): void{{c}}
-    this.CharacterSvc2.searchCharacters(this.NombreDePersonajes2, this.pageNum2)
+  private getDataFromService(): void{{c}}
+    this.CharacterSvc.searchCharacters(this.NombreDePersonajes, this.pageNum)
                                       .pipe(take(1))
-                                      .subscribe( (resp2:any) => {{c}}
-        if(resp2?.results?.length){{c}}
-          console.log('Recibimos -> ', resp2);
+                                      .subscribe( (resp:any) => {{c}}
+        if(resp?.results?.length){{c}}
+          console.log('Recibimos -> ', resp);
       
-          const {{c}} info, results } = resp2;
+          const {{c}} info, results } = resp;
           this.characters = [...this.characters, ...results ];
           this.info = info;
         }
@@ -567,27 +573,27 @@ export class Listmorty2Component implements OnInit {{c}}
 
 
   //Buscar
-  private getCharactersByQuery2():void{{c}}
+  private getCharactersByQuery():void{{c}}
 
-    this.route2.queryParams.pipe(
-      take(1) ).subscribe( (RecibeParams2: ParamMap) => {{c}}
+    this.route.queryParams.pipe(
+      take(1) ).subscribe( (RecibeParams: ParamMap) => {{c}}
        
-        this.NombreDePersonajes2 = RecibeParams2['variablequeryparams'];  
-        this.getDataFromService2();
+        this.NombreDePersonajes = RecibeParams['variablequeryparams'];  
+        this.getDataFromService();
       });
 
   }
 
 
   //Arreglar busqueda 
-  private onUrlChanged2(): void {{c}}
+  private onUrlChanged(): void {{c}}
 
-    this.router2.events.pipe(
+    this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd)).subscribe(
         () => {{c}}
           this.characters = [];
-          this.pageNum2 = 1;
-          this.getCharactersByQuery2();
+          this.pageNum = 1;
+          this.getCharactersByQuery();
         });
   }
 
