@@ -84,6 +84,7 @@ import { LogindominicodeComponent } from './paginas/programacion/angular/loginan
 import { RegistrardominicodeComponent } from './paginas/programacion/angular/loginangular/registrardominicode/registrardominicode.component';
 import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
 import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
+import { PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -234,7 +235,7 @@ export const appRoutes: Routes = [
   { path: 'registrarfb', component: RegistrardominicodeComponent},
   { path: 'listmorty', component: ListmortyComponent},
   { path: 'character-details/:id', component: CharacterDetailsComponent},
-
+  { path: 'pokemondetalle/:id', component: PokemondetalleComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

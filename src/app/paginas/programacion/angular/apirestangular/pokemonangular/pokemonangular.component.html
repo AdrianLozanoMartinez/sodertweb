@@ -4,13 +4,13 @@
         <a class="nav-link active" id="v-pills-dpokemonangular-tab" data-toggle="pill" href="#v-pills-dpokemonangular" role="tab" aria-controls="v-pills-dpokemonangular" aria-selected="true">Module/Servicio</a>
         <a class="nav-link" id="v-pills-dpokemonangular0-tab" data-toggle="pill" href="#v-pills-dpokemonangular0" role="tab" aria-controls="v-pills-dpokemonangular0" aria-selected="true">Búsqueda</a>
         <a class="nav-link" id="v-pills-dpokemonangular1-tab" data-toggle="pill" href="#v-pills-dpokemonangular1" role="tab" aria-controls="v-pills-dpokemonangular1" aria-selected="false">Mostrar Todo</a>
-        <a class="nav-link" id="v-pills-dpokemonangular2-tab" data-toggle="pill" href="#v-pills-dpokemonangular2" role="tab" aria-controls="v-pills-dpokemonangular2" aria-selected="false">Mostrar Uno (PENDIENTE)</a>
+        <a class="nav-link" id="v-pills-dpokemonangular2-tab" data-toggle="pill" href="#v-pills-dpokemonangular2" role="tab" aria-controls="v-pills-dpokemonangular2" aria-selected="false">Mostrar Uno</a>
       </div>
     </div>
     <div class="col-10">
       <div class="tab-content" id="v-pills-tabContent">
 
-        <a href="https://pokeapi.co/"><u>Web</u></a>
+        <a href="https://pokeapi.co/"><u>Web</u></a>  -  <a href="https://amoelcodigo.com/pokedex-pokeapi-angular-material/">Web ayuda</a>
 
         <div class="tab-pane fade show active" id="v-pills-dpokemonangular" role="tabpanel" aria-labelledby="v-pills-dpokemonangular-tab">
           
@@ -228,7 +228,8 @@ export class PokemontodosComponent implements OnInit {{c}}
   error2: string;  <abbr title="Error por escrito como nos da el sistema o podemos personalizado..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   error3: boolean = false;</b>  <abbr title="Error boolean, si da error da true, sino da error false, o podemos ponerlo al revés"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  constructor( <b>private pokemonService:PokemonService</b> ) {{c}}  }  <abbr title="Conecta con el servidor para conectarse a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  constructor( <b>private pokemonService:PokemonService,  <abbr title="Conecta con el servidor para conectarse a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                private route: Router</b> ) {{c}}  }  <abbr title="Para navegar entre las páginas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
   ngOnInit(): void {{c}}
     <b>this.getPokemonTodos();</b>  <abbr title="Llamamos al método que llama a todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
@@ -271,6 +272,11 @@ export class PokemontodosComponent implements OnInit {{c}}
 applyFilter(event: Event) {{c}}  <abbr title="Filtro de búsqueda, según lo que pongamos nos busca por nombre, o id u otro"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   const filterValue = (event.target as HTMLInputElement).value;
   this.dataSource.filter = filterValue.trim().toLowerCase();  
+}</b>
+
+//Un elemento
+<b>getUnPokemon(elementoRecibido){{c}}  <abbr title="Coge elemento cogido en el html como row"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  this.route.navigateByUrl(`pokemondetalle/${{c}}elementoRecibido.position}`)  <abbr title="Navega a la página de detalle mandandole la position (id) u otro elemento que no coincida con otros para ver luego detalles de cada pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 }
 </b>
   
@@ -279,7 +285,7 @@ applyFilter(event: Event) {{c}}  <abbr title="Filtro de búsqueda, según lo que
             </div>
             <div class="card text-dark m-3 bg-warning">
                 <div class="card-body"><h3>Html</h3>
-                    <pre class="card-text" style="color: white;">{{co}}mat-form-field appearance="standard">
+                    <pre class="card-text">{{co}}mat-form-field appearance="standard">
   {{co}}mat-label>Filter{{co}}/mat-label>
   <b>{{co}}input matInput {{p}}keyup)<abbr title="Cuando escribimos se ejecuta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>="applyFilter($event)"</b><abbr title="Función que se encuentra en el Ts y cogemos dato ($event) para buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> placeholder="Ex. ium" #input>
 {{co}}/mat-form-field>
@@ -303,7 +309,7 @@ applyFilter(event: Event) {{c}}  <abbr title="Filtro de búsqueda, según lo que
   {{co}}/ng-container>
 
   {{co}}tr mat-header-row {{f}}matHeaderRowDef="displayedColumns">{{co}}/tr>
-  {{co}}tr mat-row {{f}}matRowDef="let row; columns: displayedColumns;">{{co}}/tr>
+  {{co}}tr mat-row {{f}}matRowDef="let row; columns: displayedColumns;"<b> {{p}}click)="getUnPokemon(row)"<abbr title="row debe ser mismo nombre que definimso en let"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>>{{co}}/tr>
 
   {{co}}!-- Row shown when there is no matching data. -->
   {{co}}tr class="mat-row" *matNoDataRow>
@@ -319,21 +325,147 @@ applyFilter(event: Event) {{c}}  <abbr title="Filtro de búsqueda, según lo que
 
         </div>
         <div class="tab-pane fade" id="v-pills-dpokemonangular2" role="tabpanel" aria-labelledby="v-pills-dpokemonangular2-tab">
-            
-            <div class="card-group">
-                <div class="card text-dark bg-dark m-3" >
-                    <div class="card-body">
-                      <pre class="card-text">x</pre>
-                    </div>
-                  </div>
-              </div>
 
+          <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="card-body">
+        
+                  Se ve en la pestaña MOSTRAR TODO -> Clickear sobre un elemento
+        
+                </div>
+            </div>
         </div>
 
+            
+            <div class="card-group">
+            <div class="card text-dark bg-danger m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Routing</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
 
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';</b>
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+  <b>{{c}} path: 'pokemondetalle/:id', component: PokemondetalleComponent},</b>  <abbr title="/:id cogemos la id que recibimos para coger el personaje que vamos a mostrar, sino lo ponemos no coge ninguno y da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+
+    </div>
+  </div>
+  <div class="card text-dark bg-info m-3">
+    <div class="card-header">
+        <pre class="card-text text-center"><h3>Css</h3></pre>
+    </div>
+    <div class="card-body">
+      <pre class="card-text">.<b>example-card</b> {{c}}
+  max-width: <b>400px</b>;  <abbr title="Para que el cuadro y dibujo sean más pequeño y no tan grande"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</pre>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-group">
+  <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Ts</h3></pre>
+      </div>
+      <div class="card-body">
+        <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} PokemonService } from '../service/pokemon.service';  <abbr title="Servicio que se relaciona con la API para poder coger los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} ActivatedRoute } from '@angular/router';</b>  <abbr title="Obtiene los parámetros de la API, como la id..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-pokemondetalle',
+  templateUrl: './pokemondetalle.component.html',
+  styleUrls: ['./pokemondetalle.component.css']
+})
+export class PokemondetalleComponent implements OnInit {{c}}
+
+  <b>pokemon: any = '';  <abbr title="Meteremos la respuesta (pokemon elegido) en la variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  pokemonType = [];  <abbr title="Metemos el tipo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  pokemonImg = '';</b>  <abbr title="Meteremos la imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private pokemonService: PokemonService, <abbr title="Servicio que se relaciona con la API para poder coger los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>activatedRouter: ActivatedRoute</b><abbr title="Obtiene los parámetros de la API, como la id..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ) {{c}} 
+      <b>activatedRouter.params.subscribe(  
+        params => {{c}}
+        <abbr title="Coge los parámetros de la API a través de la función de abajo (getPokemon1) que llama a la función del servicio (getPokemon) que a su vez llama a la APi"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>this.getPokemon1(params['id']); <abbr title="Mismo nombre ['id'] que en el router (/:id)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+      );</b>
+  }  
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  <b>getPokemon1(id){{c}}
+    this.pokemonService.getPokemon(id).subscribe(  <abbr title="Le mandamos a la función (getPokemon) del servicio la id que recibimos por la id que cogemos del constructor gracias al activatedRouter.params"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      res => {{c}}  <abbr title="Obtenemos todos los datos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log(res);
+        this.pokemon = res;  <abbr title="Metemos la respuesta (pokemon elegido) en la variable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.pokemonImg = this.pokemon.sprites.front_default;  <abbr title="Meteremos la imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.pokemonType = this.pokemon.types[0].type.name;  <abbr title="Metemos el tipo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      },
+      err => {{c}}  <abbr title="Muestra el error si hay alguno"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log(err);
         
+      }
+    );
+  }</b>
+
+}</pre>
+      </div>
+  </div>
+  <div class="card text-dark bg-warning m-3">
+    <div class="card-header">
+        <pre class="card-text text-center"><h3>Html</h3></pre>
+    </div>
+    <div class="card-body">
+        <pre class="card-text">{{co}}mat-card class="example-card">
+  {{co}}mat-card-header>
+    <b>{{co}}img mat-card-avatar class="header-image" src="{{c}}{{c}}pokemonImg}}"></b>  <abbr title="Avatar es el icono chico redondo de arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}mat-card-title><b>{{c}}{{c}}pokemon.name}}</b>{{co}}/mat-card-title>
+    {{co}}mat-card-subtitle><b>Nº {{c}}{{c}}pokemon.id}}</b>{{co}}/mat-card-subtitle>
+  {{co}}/mat-card-header>
+  <b>{{co}}img mat-card-image src="{{c}}{{c}}pokemonImg}}</b>" alt="">  <abbr title="Imagen grande"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{co}}mat-card-content>
+
+    <b>{{co}}mat-chip-list aria-label="Fish selection"></b>  <abbr title="Rodea las palabras de un color"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>{{co}}mat-chip color="primary" selected>Type: {{c}}{{c}}pokemonType}}{{co}}/mat-chip></b>  
+      {{co}}mat-chip color="primary" selected><b>Height: {{c}}{{c}}pokemon.height}} cm</b>{{co}}/mat-chip>
+      {{co}}mat-chip color="primary" selected><b>Weight: {{c}}{{c}}pokemon.weight}} g</b>{{co}}/mat-chip>
+    <b>{{co}}/mat-chip-list></b>
+
+  {{co}}/mat-card-content>
+
+{{co}}/mat-card></pre>
+    </div>
+</div>
+</div>
+
+        </div>     
 
   </div>
-
-<!-- REALIZAR MÁS COSAS COMO LLAMAR TODO Y ENTRAR EN UNO -->
-

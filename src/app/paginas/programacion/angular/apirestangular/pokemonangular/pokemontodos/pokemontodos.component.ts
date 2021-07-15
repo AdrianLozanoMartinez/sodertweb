@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { PokemonService } from '../service/pokemon.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+//Un elemento
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemontodos',
@@ -20,7 +22,9 @@ export class PokemontodosComponent implements OnInit {
   error2: string;
   error3: boolean = false;
 
-  constructor( private pokemonService:PokemonService ) {  }
+  constructor( private pokemonService:PokemonService,
+               //Un elemento
+               private route: Router) {  }
 
   ngOnInit(): void {
     this.getPokemonTodos();
@@ -63,6 +67,11 @@ export class PokemontodosComponent implements OnInit {
 applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;
   this.dataSource.filter = filterValue.trim().toLowerCase();
+}
+
+
+getUnPokemon(elementoRecibido){  //Coge element
+  this.route.navigateByUrl(`pokemondetalle/${elementoRecibido.position}`)
 }
 
   //Html

@@ -32,7 +32,8 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getUnPokemon(row)"></tr>
+  <!-- row debe ser mismo nombre que definimso en let-->
 
   <!-- Row shown when there is no matching data. -->
   <tr class="mat-row" *matNoDataRow>
@@ -45,26 +46,3 @@
         </div>
     </div>
 </div>
- 
- 
- 
- Angular material -> https://material.angular.io/
-
- Instalar -> https://material.angular.io/guide/getting-started -> ng add @angular/material  -> ? Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow 
- keys)
- > Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ]
- Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amber ]
- Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ]
- Purple/Green       [ Preview: https://material.angular.io?theme=purple-gr(Move up and down to reveal more choices)
-
- (Elegimos uno de los 4 temas anteriores)
- 
- -> Set up global Angular Material typography styles? (Y/n) -> y
-
- -> Set up browser animations for Angular Material? (Y/n) -> Y
-
-
- Componentes/Botones... -> https://material.angular.io/components/categories
-
-
- Poner el module en la instalacion de extensiones tambien

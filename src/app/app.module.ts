@@ -150,6 +150,10 @@ import { SearchmortyComponent } from './paginas/programacion/angular/apirestangu
 import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
 import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
 import { PokemonbuscarComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonbuscar/pokemonbuscar.component';
+import { Listmorty2Component } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty2/listmorty2.component';
+import { PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';
+
+
 //Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -287,7 +291,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
-import { Listmorty2Component } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty2/listmorty2.component';
+
 
 
 
@@ -439,6 +443,7 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
     CharacterDetailsComponent,
     Listmorty2Component,
     PokemonbuscarComponent,
+    PokemondetalleComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -521,8 +526,7 @@ import { Listmorty2Component } from './paginas/programacion/angular/apirestangul
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent
- 
+    BootswatchComponent 
   ],
   imports: [
     //Por defecto

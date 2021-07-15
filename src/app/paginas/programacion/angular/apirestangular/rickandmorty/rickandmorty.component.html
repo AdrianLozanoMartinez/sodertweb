@@ -315,10 +315,44 @@ export class ListmortyComponent implements OnInit {{c}}
           <div class="card-group">
             <div class="card text-dark bg-danger m-3">
                 <div class="card-header">
-                    <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+                    <pre class="card-text text-center blanco"><h3>Routing</h3></pre>
                 </div>
                 <div class="card-body">
-                  <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
+                  <pre class="card-text blanco">import {{c}} ModuleWithProviders } from '@angular/core';
+ 
+import {{c}} Routes, RouterModule } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+<b>import {{c}} CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';</b>
+
+export const appRoutes: Routes = [   
+  {{c}} path: '', component: HomeComponent },   
+  {{c}} path: 'home', component: HomeComponent},   
+  {{c}} path: 'pie', component: PieComponent},  
+  {{c}} path: 'cabecera', component: CabeceraComponent},  
+  {{c}} path: 'appcomponente', component: AppComponent },
+  <b>{{c}} path: 'character-details/:id', component: CharacterDetailsComponent},</b>  <abbr title="/:id cogemos la id que recibimos para coger el personaje que vamos a mostrar, sino lo ponemos no coge ninguno y da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  {{c}} path: '**', component: ErrorComponent},  
+  {{c}} path: '**', pathMatch: 'full', redirectTo: 'home'},   
+  {{c}} path: '**', component: HomeComponent }    
+];
+
+export const appRoutingProviders: any[] = [];   
+export const routing: ModuleWithProviders = RouterModule.forRoot (appRoutes);</pre>
+
+    </div>
+  </div>
+  <div class="card text-dark bg-danger m-3">
+    <div class="card-header">
+        <pre class="card-text text-center blanco"><h3>Servicio</h3></pre>
+    </div>
+    <div class="card-body">
+      <pre class="card-text blanco">import {{c}} Injectable } from '@angular/core';
 <b>import {{c}} HttpClient } from '@angular/common/http';  <abbr title="Conexión con la API. Se añade en el module.ts"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 import {{c}} Character } from '../interface/character.interface';</b>  <abbr title="Interface. Estructura de los datos que introduzcamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
@@ -347,7 +381,6 @@ export class ServicecharacterService {{c}}
   }</b>
 
 }</pre>
-
     </div>
   </div>
 </div>

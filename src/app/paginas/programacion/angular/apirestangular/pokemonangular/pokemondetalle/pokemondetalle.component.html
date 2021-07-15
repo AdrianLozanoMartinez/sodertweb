@@ -1,0 +1,31 @@
+<div class="card-group">
+  <div class="card m-3">
+      <div class="card-header bg-danger">
+          <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+      </div>
+      <div class="card-body">
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <img mat-card-avatar class="header-image" src="{{pokemonImg}}">
+            <mat-card-title>{{pokemon.name}}</mat-card-title>
+            <mat-card-subtitle>Nº {{pokemon.id}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{pokemonImg}}" alt="">
+          <mat-card-content>
+
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip color="primary" selected>Type: {{pokemonType}}</mat-chip>
+              <mat-chip color="primary" selected>Height: {{pokemon.height}} cm</mat-chip>
+              <mat-chip color="primary" selected>Weight: {{pokemon.weight}} g</mat-chip>
+            </mat-chip-list>
+
+          </mat-card-content>
+
+        </mat-card>
+
+      </div>
+  </div>
+</div>
+
+

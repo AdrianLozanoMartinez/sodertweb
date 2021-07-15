@@ -4,7 +4,8 @@
         <a class="nav-link" id="v-pills-extensionesangular-tab" data-toggle="pill" href="#v-pills-extensionesangular" role="tab" aria-controls="v-pills-extensionesangular" aria-selected="true">Bootstrap - <small>Bootswatch</small></a>
         <a class="nav-link" id="v-pills-extensionesangular0-tab" data-toggle="pill" href="#v-pills-extensionesangular0" role="tab" aria-controls="v-pills-extensionesangular0" aria-selected="true">Fontawesome</a>
         <a class="nav-link" id="v-pills-extensionesangular1-tab" data-toggle="pill" href="#v-pills-extensionesangular1" role="tab" aria-controls="v-pills-extensionesangular1" aria-selected="false">Sweetalert2</a>
-        <a class="nav-link" id="v-pills-extensionesangular2-tab" data-toggle="pill" href="#v-pills-extensionesangular2" role="tab" aria-controls="v-pills-extensionesangular2" aria-selected="false">Toastr</a>
+        <a class="nav-link" id="v-pills-extensionesangular2-tab" data-toggle="pill" href="#v-pills-extensionesangular2" role="tab" aria-controls="v-pills-extensionesangular2" aria-selected="false">Material Angular</a>
+        <!-- <a class="nav-link" id="v-pills-extensionesangular3-tab" data-toggle="pill" href="#v-pills-extensionesangular3" role="tab" aria-controls="v-pills-extensionesangular3" aria-selected="false">Toastr</a> -->
       </div>
     </div>
 
@@ -157,8 +158,91 @@ y en
 
         </div>
 
-        
         <div class="tab-pane fade" id="v-pills-extensionesangular2" role="tabpanel" aria-labelledby="v-pills-extensionesangular2-tab">
+
+            <b><a href="https://material.angular.io/">Oficial</a>   -   <a href="https://material.angular.io/components/categories">Componentes/Botones...</a></b>
+
+              <div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center blanco"><h3>Instalación</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text blanco"><ul><li><a href="https://material.angular.io/guide/getting-started">Web</a></li><li>Terminal<ul><li><b>ng add @angular/material</b></li><li>? Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow keys) <abbr title="Elegimos uno de los 4 temas anteriores"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr><ul><li><b>Indigo/Pink</b>        [ Preview: https://material.angular.io?theme=indigo-pink ]</li><li><b>Deep Purple/Amber</b>  [ Preview: https://material.angular.io?theme=deeppurple-amber ]</li><li><b>Pink/Blue Grey</b>     [ Preview: https://material.angular.io?theme=pink-bluegrey ]</li><li><b>Purple/Green</b>       [ Preview: https://material.angular.io?theme=purple-gr(Move up and down to reveal more choices)</li></ul></li><li>Set up global Angular Material <b>typography</b> styles? (Y/n) -> <b>Y</b></li><li>Set up browser <b>animations</b> for Angular Material? (Y/n) -> <b>Y</b></li></ul></li></ul></pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-danger m-3">
+      <div class="card-header">
+          <pre class="card-text text-center blanco"><h3>Module.ts</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text blanco">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+
+import {{c}} routing, appRoutingProviders } from './app.routing';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './paginas/home/home.component';
+import {{c}} ErrorComponent } from './componentes/error/error.component';
+import {{c}} PieComponent } from './componentes/pie/pie.component';
+import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component';
+
+//Mostrar - Angular Material   <abbr title="Para que funcione los efectos de cada componente predeterminado de la web"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {{c}} MatSliderModule } from '@angular/material/slider';
+import {{c}} MatCardModule } from '@angular/material/card';
+import {{c}} MatButtonModule } from '@angular/material/button';
+import {{c}} MatMenuModule } from '@angular/material/menu';
+import {{c}} MatToolbarModule } from '@angular/material/toolbar';
+import {{c}} MatIconModule } from '@angular/material/icon';
+import {{c}} MatGridListModule } from '@angular/material/grid-list';
+import {{c}} MatTableModule } from '@angular/material/table';
+import {{c}} MatPaginatorModule } from '@angular/material/paginator';
+import {{c}} MatFormFieldModule } from '@angular/material/form-field';
+import {{c}} MatInputModule } from '@angular/material/input';
+import {{c}} MatChipsModule } from '@angular/material/chips';    </b>      
+
+@NgModule({{c}}
+    declarations: [
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    PieComponent,
+    CabeceraComponent
+    ],
+    imports: [
+    BrowserModule,
+    routing<b>,</b>
+    //Mostrar - Angular Material   <abbr title="Para que funcione los efectos de cada componente predeterminado de la web usando la librería de Material Angular"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatChipsModule</b>
+    ],
+    providers: [
+    appRoutingProviders
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {{c}} }</pre>
+      </div>
+  </div>
+</div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-extensionesangular3" role="tabpanel" aria-labelledby="v-pills-extensionesangular3-tab">
             
             <div class="card-group">
                 <div class="card text-dark bg-dark m-3" >
