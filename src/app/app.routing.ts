@@ -61,7 +61,6 @@ import { InstalacionangularComponent } from './paginas/programacion/angular/inst
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
-import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
@@ -215,7 +214,6 @@ export const appRoutes: Routes = [
   { path: 'instalacionangular', component: InstalacionangularComponent},
   { path: 'arranqueangular', component: ArranqueangularComponent},
   { path: 'formulariosangular', component: FormulariosangularComponent},
-  { path: 'templatesangular', component: TemplatesangularComponent},
   { path: 'reactivosangular', component: ReactivosangularComponent},
   { path: 'hostingangular', component: HostingangularComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},

@@ -80,13 +80,9 @@ import { InstalacionangularComponent } from './paginas/programacion/angular/inst
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
-import { TemplatesangularComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/templatesangular.component';
-import { ValidarbasicoComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/validarbasico/validarbasico.component';
-import { ValidarbootstrapComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/validarbootstrap/validarbootstrap.component';
 import { SincronasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/sincronas/sincronas.component';
 import { AsincronasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/asincronas/asincronas.component';
 import { PersonalizadasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/personalizadas/personalizadas.component';
-import { PaisestempalteComponent } from './paginas/programacion/angular/formulariosangular/templatesangular/paisestempalte/paisestempalte.component';
 import { PersocontraComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/persocontra/persocontra.component';
 import { CogercargarComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/cogercargar/cogercargar.component';
 import { ArreglosestaticComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosestatic/arreglosestatic.component';
@@ -373,10 +369,6 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     ArranqueangularComponent,
     FormulariosangularComponent,
     ReactivosangularComponent,
-    TemplatesangularComponent,
-    ValidarbasicoComponent,
-    ValidarbootstrapComponent,
-    PaisestempalteComponent,
     SincronasComponent,
     AsincronasComponent,
     PersonalizadasComponent,
