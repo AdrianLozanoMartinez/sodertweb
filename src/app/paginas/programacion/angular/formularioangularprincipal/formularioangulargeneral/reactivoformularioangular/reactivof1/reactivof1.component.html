@@ -1,0 +1,62 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+          <form autocomplete="off" [formGroup]="variableTsLocal" (ngSubmit)="guardar()">
+              <!-- [formGroup]="variableTsLocal" Aquí coge la variable local del Ts y lo usamos en relación con el Html. Por ello no mandamos la variable local al Ts como en el html (template) -->
+          
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Campo simple con dato predeterminado</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Nombre"
+                         formControlName="pruebaTs">
+                         <!--  formControlName="nombreTs" -> Actúa como un [ngModel] (template). Coge los nombres de dentro de la función (crearFromulario) -> this.variableTsLocal = this.fb.group({ -> nombreTs, apellidoTs, correoTs -->
+                </div>
+              </div>
+
+              <div class="form-group row" formGroupName="anidadoTs">
+                <!-- formGroupName="anidadoTs" -> el nombre (anidadoTs) va relacionado con el Ts (anidadoTs: this.fb.group()) de la función crearFromulario -->
+                <label class="col-2 col-form-label">Campo anidado</label>
+                <div class="form-row col">
+  
+                    <div class="col">
+                      <input type="text"
+                             class="form-control"
+                             placeholder="Distrito"
+                             formControlName="subanidado1Ts">
+                             <!-- Se pone los subparámetros: subanidado1Ts y ciudadTs -->
+                    </div>
+  
+                    <div class="col">
+                      <input type="text"
+                             class="form-control"
+                             placeholder="Ciudad"
+                             formControlName="subanidado2Ts">
+                    </div>
+                </div>
+              </div>
+
+            <div class="form-group row">
+              <label class="col-2 col-form-label">&nbsp;</label>
+              <div class="input-group col-md-8">
+                <button type="submit" class="btn btn-outline-primary btn-block">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          
+          </form>
+          
+          <pre>
+            Status: {{ variableTsLocal. value | json }}
+          </pre>
+
+        </div>
+    </div>
+</div>

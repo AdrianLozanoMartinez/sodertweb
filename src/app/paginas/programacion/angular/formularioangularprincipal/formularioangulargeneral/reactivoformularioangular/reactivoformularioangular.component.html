@@ -3,8 +3,8 @@
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link" id="v-pills-reactivoformulario-tab" data-toggle="pill" href="#v-pills-reactivoformulario" role="tab" aria-controls="v-pills-reactivoformulario" aria-selected="true">Module.Ts</a>
-        <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">x</a>
-        <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">x</a>
+        <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">Coger datos + Resetear</a>
+        <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">Validaciones</a>
         <a class="nav-link" id="v-pills-reactivoformulario2-tab" data-toggle="pill" href="#v-pills-reactivoformulario2" role="tab" aria-controls="v-pills-reactivoformulario2" aria-selected="false">x</a>
       </div>
     </div>
@@ -57,96 +57,141 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
 
         </div>
 
-        <div class="tab-pane fade" id="v-pills-reactivoformulario0" role="tabpanel" aria-labelledby="v-pills-reactivoformulario0-tab">
-          
-          <div class="card-group">
-            <div class="card m-3">
-                <div class="card-header bg-danger">
-                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
-                </div>
-                <div class="card-body">
-        
-                  <h4>Formularios <small> tipo </small></h4>
-                  <hr>
-                  <form autocomplete="off">
-                  
-                    <div>
-                  
-                      <div class="form-group row">
-                        <label class="col-2 col-form-label">Nombre</label>
-                        <div class="col-8">
-                  
-                          <input class="form-control"
-                                 type="text"
-                                 placeholder="Nombre">
-                        </div>
-                      </div>
-                  
-                      <div class="form-group row">
-                        <label class="col-2 col-form-label">Apellido</label>
-                        <div class="col-8">
-                  
-                          <input class="form-control"
-                                 type="text"
-                                 placeholder="Apellido">
-                        </div>
-                      </div>
-                  
-                    </div>
-                  
-                    <div class="form-group row">
-                      <label class="col-2 col-form-label">Correo</label>
-                      <div class="col-8">
-                  
-                        <input class="form-control"
-                               type="email"
-                               placeholder="Correo electrónico">
-                      </div>
-                    </div>
-                  
-                  
-                  
-                    <div class="form-group row">
-                      <label class="col-2 col-form-label">&nbsp;</label>
-                      <div class="input-group col-md-8">
-                        <button type="submit" class="btn btn-outline-primary btn-block">
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  
-                  </form>
-                  
-        
-                </div>
-            </div>
-        </div>
+        <div class="tab-pane fade" id="v-pills-reactivoformulario0" role="tabpanel" aria-labelledby="v-pills-reactivoformulario0-tab"><app-reactivoformangular1></app-reactivoformangular1>
         
         <div class="card-group">
+
             <div class="card text-dark bg-primary m-3">
+
                 <div class="card-header">
-                    <pre class="card-text text-center"><h3>x</h3></pre>
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
                 </div>
                 <div class="card-body">
-                  <pre class="card-text">x</pre>
-                </div>
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} FormGroup<abbr title="Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, FormBuilder<abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';</b>
+
+@Component({{c}}
+  selector: 'app-reactivoformangular1',
+  templateUrl: './reactivoformangular1.component.html',
+  styleUrls: ['./reactivoformangular1.component.css']
+})
+export class Reactivoformangular1Component implements OnInit {{c}}
+
+  <b>variableTsLocal: FormGroup;</b>   <abbr title="Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private fb:FormBuilder</b> ) {{c}} <abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>this.crearFromulario();</b>
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  <b>crearFromulario(){{c}}  <abbr title="Se usa estas variables (nombreTs, apellidoTs, correoTs) en el html a través de formControlName=nombreTs. formControlName (reactivo) actúa como un [ngModel] (template)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+    this.variableTsLocal = this.fb.group({{c}}
+      //Campo_del_html: ['Valor por defecto que pongamos', Validación síncronos, Validación asíncronos]
+        pruebaTs: ['Valor por defecto escrito en el Ts', , ],
+        anidadoTs: this.fb.group({{c}}    <abbr title="Engloba dos campos en un único conjunto, en el html se hace referencia al nombre (anidadoTs) en el inicio del campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+          subanidado1Ts: ['', , ],
+          subanidado2Ts: ['', , ],
+        })
+    });
+  }
+
+  <b>cargarDatoAlFormulario(){{c}}
+
+    // this.variableTsLocal.setValue({{c}}  <abbr title="Es necesario poner todos los campos (pruebaTs, anidadoTs...) aquí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.variableTsLocal.reset({{c}}  <abbr title="No es necesario poner todos los campos (pruebaTs, anidadoTs...) aquí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+      pruebaTs: '',
+      anidadoTs: {{c}}
+          subanidado1Ts: 'Podemos ponerle valores predeterminado',
+          subanidado2Ts: 'en cualquier campo',
+    }
+    });
+
+  }</b>
+
+
+  guardar(){{c}}  <abbr title="No cogemos la variable del html como en el template porque ya lo tenemos definidos en el Ts especialmente en la función crearFromulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    console.log( this.variableTsLocal );  <abbr title="Si ponemos otro (.) observamos las diferentes opciones que podemos usar, value, touched..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+    <b>//Resetear información al pulsar el botón guardar y enviar
+    // this.variableTsLocal.reset();  <abbr title="Si resetea solamente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      this.variableTsLocal.reset({{c}}  <abbr title="Resetear y dejar escrito algo en uno o más campos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        pruebaTs: 'Sin dato eah!!'
+      }); </b>
+
+  }</b>
+
+
+}</pre>
+            </div>
             </div>
             <div class="card text-dark bg-warning m-3">
               <div class="card-header">
-                  <pre class="card-text text-center"><h3>x</h3></pre>
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
               </div>
               <div class="card-body">
-                  <pre class="card-text">x</pre>
+        <pre class="card-text">{{co}}form autocomplete="off" <b>{{t}}formGroup]="variableTsLocal" <abbr title="Aquí coge la variable local del Ts y lo usamos en relación con el Html. Por ello no mandamos la variable local al Ts como en el html (template)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> {{p}}ngSubmit)="guardar()">  </b>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Campo simple con dato predeterminado{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Nombre"
+                <b>formControlName="pruebaTs"</b>>  <abbr title="Actúa como un [ngModel] (template). Coge los nombres de dentro de la función (crearFromulario) -> this.variableTsLocal = this.fb.group({ -> nombreTs, apellidoTs, correoTs"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      {{co}}/div>
+    {{co}}/div>
+
+    {{co}}div <b>class="form-group row" formGroupName="anidadoTs"</b> <abbr title="El nombre (anidadoTs) va relacionado con el Ts (anidadoTs: this.fb.group()) de la función crearFromulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>  
+      {{co}}label class="col-2 col-form-label">Campo anidado{{co}}/label>
+      {{co}}div class="form-row col">
+
+          {{co}}div class="col">
+            {{co}}input type="text"
+                   class="form-control"
+                   placeholder="Distrito"
+                   <b>formControlName="subanidado1Ts"</b> <abbr title="Se pone los subparámetros: subanidado1Ts y ciudadTs"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>
+          {{co}}/div>
+
+          {{co}}div class="col">
+            {{co}}input type="text"
+                   class="form-control"
+                   placeholder="Ciudad"
+                   <b>formControlName="subanidado2Ts"</b>>
+          {{co}}/div>
+      {{co}}/div>
+    {{co}}/div>
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
+    {{co}}div class="input-group col-md-8">
+      {{co}}<b>button type="submit"</b> class="btn btn-outline-primary btn-block">
+        Guardar
+      {{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
+
+{{co}}/form>
+
+{{co}}pre>
+   <b> Status: {{c}}{{c}} variableTsLocal. value | json }}</b>  <abbr title="En vez de en consola se ve por aquí y al instante lo que vamos introduciendo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/pre></pre>
               </div>
           </div>
         </div>
-
         
         </div>
 
-        <div class="tab-pane fade" id="v-pills-reactivoformulario1" role="tabpanel" aria-labelledby="v-pills-reactivoformulario1-tab">x</div>
+        <div class="tab-pane fade" id="v-pills-reactivoformulario1" role="tabpanel" aria-labelledby="v-pills-reactivoformulario1-tab"><app-reactivoformangularvalidar></app-reactivoformangularvalidar></div>
 
         <div class="tab-pane fade" id="v-pills-reactivoformulario2" role="tabpanel" aria-labelledby="v-pills-reactivoformulario2-tab">x</div>
   </div>
+
+</div>
 
 </div>

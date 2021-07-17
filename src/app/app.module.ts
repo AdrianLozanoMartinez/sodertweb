@@ -287,6 +287,9 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
+import { Reactivoformangular1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivof1/reactivof1.component';
+import { ReactivoformangularvalidarComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv.component';
+import { Reactivoformangularvalidar1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv1/reactivofv1.component';
 
 
 
@@ -518,7 +521,10 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent 
+    BootswatchComponent,
+    Reactivoformangular1Component,
+    ReactivoformangularvalidarComponent,
+    Reactivoformangularvalidar1Component 
   ],
   imports: [
     //Por defecto

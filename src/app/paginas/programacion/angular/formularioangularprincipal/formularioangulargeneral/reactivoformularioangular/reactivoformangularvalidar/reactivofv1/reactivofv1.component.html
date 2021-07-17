@@ -1,0 +1,106 @@
+<div class="card-group">
+    <div class="card m-3">
+        <div class="card-header bg-danger">
+            <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+        </div>
+        <div class="card-body">
+
+          <form autocomplete="off" [formGroup]="variableTsLocal" (ngSubmit)="guardar()">
+          
+            <div>
+
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Nombre</label>
+                <div class="col">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Nombre"
+                         formControlName="nombreTs"
+                         [class.is-invalid]="nombreNoValido">
+                         <!-- nombreNoValido es boolean que se define en el Ts con un get y si tiene errores al tocar o pulsar botón. Si da error no se manda formulario -->
+
+                   <small *ngIf="nombreNoValido" class="text-danger">Este campo es obligatorio</small>  
+                   <!-- Si da error muestra mensaje -->
+                </div>
+              </div>
+          
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido</label>
+                <div class="col">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Apellido"
+                         formControlName="apellidoTs"
+                         [class.is-invalid]="apellidoNoValido">
+
+                  <small *ngIf="apellidoNoValido" class="text-danger">Ingrese 5 letras</small>
+                </div>
+              </div>
+          
+            </div>
+          
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Correo</label>
+              <div class="col">
+          
+                <input class="form-control"
+                       type="email"
+                       placeholder="Correo electrónico"
+                       formControlName="correoTs"
+                       [class.is-invalid]="correoNoValido">
+
+                  <small *ngIf="correoNoValido" class="text-danger">Ingrese un correo vádido</small>
+              </div>
+            </div>
+
+
+            <div class="form-group row" formGroupName="direccionTs">
+              <label class="col-2 col-form-label">Dirección</label>
+              <div class="form-row col">
+
+                  <div class="col">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Distrito"
+                           formControlName="distritoTs"
+                           [class.is-invalid]="distritoNoValido">
+                  </div>
+
+                  <div class="col">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Ciudad"
+                           formControlName="ciudadTs"
+                           [class.is-invalid]="ciudadNoValido">
+                    
+                  </div>
+              </div>
+            </div>
+          
+          
+          
+            <div class="form-group row">
+              <label class="col-2 col-form-label">&nbsp;</label>
+              <div class="input-group col-md-8">
+                <button type="submit" class="btn btn-outline-primary btn-block">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          
+          </form>
+
+          <hr>
+          <pre>
+              Estado del formulario: {{ variableTsLocal.valid }}
+              <br>
+              Status: {{ variableTsLocal. status }}
+              <br>
+              Status: {{ variableTsLocal. value | json }}
+          </pre>
+
+        </div>
+    </div>
+</div>

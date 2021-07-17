@@ -1,0 +1,285 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones-tab" data-toggle="pill" href="#pills-reactivovalidaciones" role="tab" aria-controls="pills-reactivovalidaciones" aria-selected="true" style="color: black;">Síncronas<br><small>Instantánea</small></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones0-tab" data-toggle="pill" href="#pills-reactivovalidaciones0" role="tab" aria-controls="pills-reactivovalidaciones0" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones1-tab" data-toggle="pill" href="#pills-reactivovalidaciones1" role="tab" aria-controls="pills-reactivovalidaciones1" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-reactivovalidaciones2-tab" data-toggle="pill" href="#pills-reactivovalidaciones2" role="tab" aria-controls="pills-reactivovalidaciones2" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-reactivovalidaciones3-tab" data-toggle="pill" href="#pills-reactivovalidaciones3" role="tab" aria-controls="pills-reactivovalidaciones3" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones4-tab" data-toggle="pill" href="#pills-reactivovalidaciones4" role="tab" aria-controls="pills-reactivovalidaciones4" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones5-tab" data-toggle="pill" href="#pills-reactivovalidaciones5" role="tab" aria-controls="pills-reactivovalidaciones5" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones6-tab" data-toggle="pill" href="#pills-reactivovalidaciones6" role="tab" aria-controls="pills-reactivovalidaciones6" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones7-tab" data-toggle="pill" href="#pills-reactivovalidaciones7" role="tab" aria-controls="pills-reactivovalidaciones7" aria-selected="false" style="color: black;">x</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-reactivovalidaciones8-tab" data-toggle="pill" href="#pills-reactivovalidaciones8" role="tab" aria-controls="pills-reactivovalidaciones8" aria-selected="false" style="color: black;">x</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones" role="tabpanel" aria-labelledby="pills-reactivovalidaciones-tab"><app-reactivoformangularvalidar1></app-reactivoformangularvalidar1>
+    
+      <div class="card-group">
+
+            <div class="card text-dark bg-primary m-3">
+
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} FormGroup, FormBuilder<b>, Validators</b><abbr title="Validación síncronos -> Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';  
+
+@Component({{c}}
+  selector: 'app-reactivoformangular1',
+  templateUrl: './reactivoformangular1.component.html',
+  styleUrls: ['./reactivoformangular1.component.css']
+})
+export class Reactivoformangular1Component implements OnInit {{c}}
+
+  variableTsLocal: FormGroup;   
+
+  constructor( private fb:FormBuilder ) {{c}} 
+    this.crearFromulario();
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  crearFromulario(){{c}}  
+    
+    this.variableTsLocal = this.fb.group({{c}}
+
+      //Campo_del_html: ['Valor por defecto que pongamos', <b>Validación síncronos</b>, Validación asíncronos]  //Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo
+        <b>nombreTs: ['',],
+        apellidoTs: ['',],
+        correoTs: ['',],
+        direccionTs: this.fb.group({{c}}      
+          distritoTs: ['', Validators.required ],
+          ciudadTs: ['', Validators.required ],
+        })</b>
+    });
+  }
+
+  cargarDatoAlFormulario(){{c}}
+
+    // this.variableTsLocal.setValue({{c}}  
+    this.variableTsLocal.reset({{c}}  
+    nombreTs: '',
+    apellidoTs: '',
+    correoTs: '',
+    direccionTs: {{c}}
+      distritoTs: '',
+      ciudadTs: '',
+    }
+    });
+
+  }
+
+  //Para que salga rojo si da fallo y los mensajes
+  <b>get nombreNoValido(){{c}}
+    return this.variableTsLocal.get('nombreTs').invalid && this.variableTsLocal.get('nombreTs').touched   <abbr title="nombreTs definido arriba, dentro de la función (crearFromulario)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+
+  get <b>apellidoNoValido</b>(){{c}}
+    return this.variableTsLocal.get('<b>apellidoTs</b>').invalid && this.variableTsLocal.get('<b>apellidoTs</b>').touched
+  }
+
+  get <b>correoNoValido</b>(){{c}}
+    return this.variableTsLocal.get('<b>correoTs</b>').invalid && this.variableTsLocal.get('<b>correoTs</b>').touched
+  }
+
+  get <b>distritoNoValido</b>(){{c}}  <abbr title="En los anidados hay que especificar que proviene de uno (direccionTs) y tienen uno o más subanidados (distritoTs y ciudadTs)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    return this.variableTsLocal.get('<b>direccionTs.distritoTs</b>').invalid && this.variableTsLocal.get('<b>direccionTs.distritoTs</b>').touched
+  }
+
+  get <b>ciudadNoValido</b>(){{c}}
+    return this.variableTsLocal.get('<b>direccionTs.ciudadTs</b>').invalid && this.variableTsLocal.get('<b>direccionTs.ciudadTs</b>').touched
+  }
+
+
+  guardar(){{c}}  
+    console.log( this.variableTsLocal );  
+
+    <b>if ( this.variableTsLocal.invalid ){{c}}   <abbr title="Si es invalido lo que introducimos lanza lo de abajo que junto con el html muestra todo lo que no se ha tocado, o no tenga las condiones síncronas al pulsar el botón salga en rojo y la letra también en rojo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+  
+      return Object.values( this.variableTsLocal.controls ).forEach( variableControlador => {{c}}  <abbr title="Devuelve el valor de cada variable de control, para que salga si tiene o no error (en rojo y mensaje en rojo) según las condiciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          // variableControlador.markAsTouched();  <abbr title="Tocado, Si no tiene campos anidado se deja este ahí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+          if ( variableControlador instanceof FormGroup ){{c}}  <abbr title="Cuando se ponen campos anidados y usamos de nuevo el fb.group"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            Object.values( variableControlador.controls ).forEach ( controladorgrupal => controladorgrupal.markAsTouched() );
+          }
+          else{{c}}
+            variableControlador.markAsTouched();  <abbr title="Igual que sin anidados pero cambiando el sitio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          }
+      });
+
+    }</b>
+
+    console.log(this.variableTsLocal);  
+    console.log(this.variableTsLocal.value);  
+
+
+    //Resetear información al pulsar el botón guardar y enviar
+     this.variableTsLocal.reset();  
+
+      /*this.variableTsLocal.reset({{c}}
+      nombreTs: 'Sin dato eah!!'
+      });*/
+  }
+
+
+}</pre>
+            </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+        <pre class="card-text">{{co}}form autocomplete="off" {{t}}formGroup]="variableTsLocal" {{p}}ngSubmit)="guardar()">
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Nombre{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Nombre"
+                <b>formControlName="nombreTs"
+                {{t}}class.is-invalid]="nombreNoValido">  <abbr title="Es boolean que se define en el Ts con un get y si tiene errores al tocar o pulsar botón. Si da error no se manda formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}small {{f}}ngIf="nombreNoValido" class="text-danger">Este campo es obligatorio{{co}}/small></b>  <abbr title="Si da error muestra mensaje"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      {{co}}/div>
+    {{co}}/div>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">Apellido{{co}}/label>
+      {{co}}div class="col-8">
+
+        {{co}}input class="form-control"
+                type="text"
+                placeholder="Apellido"
+                <b>formControlName="apellidoTs"
+                {{t}}class.is-invalid]="apellidoNoValido">
+
+        {{co}}small {{f}}ngIf="apellidoNoValido" class="text-danger">Ingrese 5 letras{{co}}/small></b>
+                
+      {{co}}/div>
+    {{co}}/div>
+
+  {{co}}/div>
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">Correo{{co}}/label>
+    {{co}}div class="col-8">
+
+      {{co}}input class="form-control"
+              type="email"
+              placeholder="Correo electrónico"
+              <b>formControlName="correoTs"
+              {{t}}class.is-invalid]="correoNoValido">
+
+      {{co}}small {{f}}ngIf="correoNoValido" class="text-danger">Ingrese un correo vádido{{co}}/small></b>
+    {{co}}/div>
+  {{co}}/div>
+
+  {{co}}div class="form-group row" <b>formGroupName="direccionTs"</b>>
+    {{co}}label class="col-2 col-form-label">Dirección{{co}}/label>
+    {{co}}div class="form-row col">
+
+        {{co}}div class="col">
+          {{co}}input type="text"
+                 class="form-control"
+                 placeholder="Distrito"
+                 <b>formControlName="distritoTs"
+                 {{t}}class.is-invalid]="distritoNoValido"</b>>
+        {{co}}/div>
+
+        {{co}}div class="col">
+          {{co}}input type="text"
+                 class="form-control"
+                 placeholder="Ciudad"
+                 <b>formControlName="ciudadTs"
+                 {{t}}class.is-invalid]="ciudadNoValido"</b>>
+          
+        {{co}}/div>
+    {{co}}/div>
+  {{co}}/div>
+
+
+  {{co}}div class="form-group row">
+    {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
+    {{co}}div class="input-group col-md-8">
+      {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      {{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
+
+{{co}}/form>
+
+{{co}}hr>
+{{co}}pre>  <abbr title="Para no estar mirando en consola si se valida bien los datos, lo vemos aquí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+Estado del formulario: <b>{{c}}{{c}} variableTsLocal.valid }}</b>  
+{{co}}br>
+Status: <b>{{c}}{{c}} variableTsLocal. status }}</b>
+{{co}}br>
+   <b> Status: {{c}}{{c}} variableTsLocal. value | json }}</b>  <abbr title="En vez de en consola se ve por aquí y al instante lo que vamos introduciendo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+{{co}}/pre></pre>
+              </div>
+          </div>
+        </div>
+
+
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones0" role="tabpanel" aria-labelledby="pills-reactivovalidaciones0-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones1" role="tabpanel" aria-labelledby="pills-reactivovalidaciones1-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones2" role="tabpanel" aria-labelledby="pills-reactivovalidaciones2-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones3" role="tabpanel" aria-labelledby="pills-reactivovalidaciones3-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones4" role="tabpanel" aria-labelledby="pills-reactivovalidaciones4-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones5" role="tabpanel" aria-labelledby="pills-reactivovalidaciones5-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones6" role="tabpanel" aria-labelledby="pills-reactivovalidaciones6-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones7" role="tabpanel" aria-labelledby="pills-reactivovalidaciones7-tab">x</div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones8" role="tabpanel" aria-labelledby="pills-reactivovalidaciones8-tab">x</div>
+      
+  </div>
+
+
+
+
+
+
+
+
+
+
+
