@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';  //FormGroup -> Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos  //FormBuilder -> Simplifica la forma de controlar los formularios reactivos
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';  //FormGroup -> Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos  //FormBuilder -> Simplifica la forma de controlar los formularios reactivos
 
 @Component({
   selector: 'app-reactivoformangular1',
@@ -12,12 +12,11 @@ export class Reactivoformangular1Component implements OnInit {
 
   constructor( private fb:FormBuilder ) { //Simplifica la forma de controlar los formularios reactivos
     this.crearFromulario();
-    this.cargarDatoAlFormulario();
+    //this.cargarDatoAlFormulario();
   }
 
   ngOnInit(): void {
   }
-
 
   crearFromulario(){
     // Se usa estas variables (nombreTs, apellidoTs, correoTs) en el html a través de formControlName="nombreTs". formControlName (reactivo) actúa como un [ngModel] (template)
@@ -27,8 +26,21 @@ export class Reactivoformangular1Component implements OnInit {
       anidadoTs: this.fb.group({    //Engloba dos campos en un único conjunto, en el html se hace referencia al nombre (anidadoTs) en el inicio del campo
           subanidado1Ts: ['', , ],
           subanidado2Ts: ['', , ],
-    })
+      }),
+      camposDinamicos: this.fb.array([])
     });
+  }
+
+  get camposDinamicosfuncion(){
+    return this.variableTsLocal.get('camposDinamicos') as FormArray;
+  }
+
+  agregarCampoDinamico(){
+    this.camposDinamicosfuncion.push( this.fb.control(''));
+  }
+
+  borrarCampoDinamico( i:number ){
+    this.camposDinamicosfuncion.removeAt(i);
   }
 
   cargarDatoAlFormulario(){
@@ -41,7 +53,8 @@ export class Reactivoformangular1Component implements OnInit {
           subanidado2Ts: 'en cualquier campo',
     }
     });
-
+      // ['Dato1','Dato2'].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
+      ['',''].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
   }
 
 

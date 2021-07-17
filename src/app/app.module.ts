@@ -290,6 +290,7 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
 import { Reactivoformangular1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivof1/reactivof1.component';
 import { ReactivoformangularvalidarComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv.component';
 import { Reactivoformangularvalidar1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv1/reactivofv1.component';
+import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
 
 
 
@@ -524,7 +525,8 @@ import { Reactivoformangularvalidar1Component } from './paginas/programacion/ang
     BootswatchComponent,
     Reactivoformangular1Component,
     ReactivoformangularvalidarComponent,
-    Reactivoformangularvalidar1Component 
+    Reactivoformangularvalidar1Component,
+    Reactivov2pComponent 
   ],
   imports: [
     //Por defecto

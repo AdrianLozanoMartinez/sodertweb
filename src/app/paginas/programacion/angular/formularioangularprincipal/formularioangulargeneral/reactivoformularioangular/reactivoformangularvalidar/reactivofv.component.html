@@ -3,10 +3,10 @@
         <a class="nav-link" id="pills-reactivovalidaciones-tab" data-toggle="pill" href="#pills-reactivovalidaciones" role="tab" aria-controls="pills-reactivovalidaciones" aria-selected="true" style="color: black;">Síncronas<br><small>Instantánea</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones0-tab" data-toggle="pill" href="#pills-reactivovalidaciones0" role="tab" aria-controls="pills-reactivovalidaciones0" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-reactivovalidaciones0-tab" data-toggle="pill" href="#pills-reactivovalidaciones0" role="tab" aria-controls="pills-reactivovalidaciones0" aria-selected="false" style="color: black;">Síncronas<br><small>Personalizada letras</small></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones1-tab" data-toggle="pill" href="#pills-reactivovalidaciones1" role="tab" aria-controls="pills-reactivovalidaciones1" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-reactivovalidaciones1-tab" data-toggle="pill" href="#pills-reactivovalidaciones1" role="tab" aria-controls="pills-reactivovalidaciones1" aria-selected="false" style="color: black;">Síncronas<br><small>Pass1 = Pass2</small></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-reactivovalidaciones2-tab" data-toggle="pill" href="#pills-reactivovalidaciones2" role="tab" aria-controls="pills-reactivovalidaciones2" aria-selected="false" style="color: black;">x</a>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="card-body">
                   <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-import {{c}} FormGroup, FormBuilder<b>, Validators</b><abbr title="Validación síncronos -> Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';  
+import {{c}} FormGroup, FormBuilder, FormArray<b>, Validators</b><abbr title="Validación síncronos -> Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';  
 
 @Component({{c}}
   selector: 'app-reactivoformangular1',
@@ -57,6 +57,7 @@ export class Reactivoformangular1Component implements OnInit {{c}}
 
   constructor( private fb:FormBuilder ) {{c}} 
     this.crearFromulario();
+    //this.cargarDatoAlFormulario();
   }
 
   ngOnInit(): void {{c}}
@@ -74,8 +75,21 @@ export class Reactivoformangular1Component implements OnInit {{c}}
         direccionTs: this.fb.group({{c}}      
           distritoTs: ['', Validators.required ],
           ciudadTs: ['', Validators.required ],
-        })</b>
+        })</b>,
+        camposDinamicos: this.fb.array([])
     });
+  }
+
+  get camposDinamicosfuncion(){{c}}
+    return this.variableTsLocal.get('camposDinamicos') as FormArray;
+  }
+
+  agregarCampoDinamico(){{c}}
+    this.camposDinamicosfuncion.push( this.fb.control(''<b>, Validators.required</b>));  <abbr title="Ponemos aquí las validaciones que tendrá cada campo que añadimos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  borrarCampoDinamico( i:number ){{c}}
+    this.camposDinamicosfuncion.removeAt(i);
   }
 
   cargarDatoAlFormulario(){{c}}
@@ -90,7 +104,8 @@ export class Reactivoformangular1Component implements OnInit {{c}}
       ciudadTs: '',
     }
     });
-
+    // ['Dato1','Dato2'].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
+      ['',''].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
   }
 
   //Para que salga rojo si da fallo y los mensajes
@@ -225,6 +240,31 @@ export class Reactivoformangular1Component implements OnInit {{c}}
     {{co}}/div>
   {{co}}/div>
 
+  {{co}}div class="row">
+    {{co}}div class="col">
+      {{co}}table class="table">
+        {{co}}thead class="thead-dark">
+          {{co}}tr>
+            {{co}}th>Id{{co}}/th>
+            {{co}}th>Campo{{co}}/th>
+            {{co}}th>Borrar{{co}}/th>
+          {{co}}/tr>
+        {{co}}/thead>
+          {{co}}tbody formArrayName="camposDinamicos">
+            {{co}}tr {{f}}ngFor="let local of camposDinamicosfuncion.controls; let i = index">
+              {{co}}td>{{c}}{{c}} i + 1 }}{{co}}/td>
+              {{co}}td>{{co}}input class="form-control" type="text" {{t}}formControlName]="i">{{co}}/td>
+              {{co}}td>{{co}}button class="btn btn-danger" 
+                          type="button"
+                          {{p}}click)="borrarCampoDinamico(i)">Borrar{{co}}/button>{{co}}/td>
+            {{co}}/tr>
+          {{co}}/tbody>
+      {{co}}/table>
+      {{co}}button class="btn btn-primary mt-3 mb-5 btn-block" 
+              type="button"
+              {{p}}click)="agregarCampoDinamico()">Agregar{{co}}/button>
+    {{co}}/div>
+  {{co}}/div>
 
   {{co}}div class="form-group row">
     {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
@@ -253,7 +293,173 @@ Status: <b>{{c}}{{c}} variableTsLocal. status }}</b>
 
     </div>
   
-    <div class="tab-pane fade" id="pills-reactivovalidaciones0" role="tabpanel" aria-labelledby="pills-reactivovalidaciones0-tab">x</div>
+    <div class="tab-pane fade" id="pills-reactivovalidaciones0" role="tabpanel" aria-labelledby="pills-reactivovalidaciones0-tab"><app-reactivov2p></app-reactivov2p>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Servicio</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} FormControl } from '@angular/forms';</b>  <abbr title="Para usar una función como control"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class Reactivov2pService {{c}}
+
+  constructor() {{c}} }
+
+  <b>noPalabra( VariableControl: FormControl ): {{c}} [variable2:string]: boolean }{{c}} <abbr title="Función (noPalabra) que coge el valor del input (VariableControl) y le damos el valor de controlador (FormControl). Primero lo coge string (variable2) y luego lo transforma en boolean"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+     if ( <abbr title="Se pone ? por si no se rellena no de error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>VariableControl.value?.toLowerCase() === 'nombrephohibido' ){{c}}  <abbr title="Hay que poner en minúscula en esta función (nombrephohibido) porque lo que metamos en el input del html lo podemos poner mayúscula/minúscula que se transforma en minúsculas (toLowerCase) "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                                                                        
+      return{{c}}
+        noPalabra: true  <abbr title="Si es la palabra se transforma en true, es decir, para que coja lo que en el Ts y Html y salga el error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      };
+
+    }
+      return null;  <abbr title="Si no es la palabra se sale sin reaccionar en el Ts ni Html, no muestra nada"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  }</b>
+
+}</pre>
+            </div>
+        </div>
+      </div>
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} FormGroup, FormBuilder, Validators } from '@angular/forms'; 
+<b>import {{c}} Reactivov2pService } from './reactivov2p.service';  <abbr title="Validación personalizada: Phobibir escribir una palabra"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></b>
+
+@Component({{c}}
+  selector: 'app-reactivov2p',
+  templateUrl: './reactivov2p.component.html',
+  styleUrls: ['./reactivov2p.component.css']
+})
+export class Reactivov2pComponent implements OnInit {{c}}
+
+  variableTsLocal: FormGroup;   
+
+  constructor( private fb:FormBuilder,
+               private validadorPersonalizado: Reactivov2pService ) {{c}} 
+    this.crearFromulario();
+    //this.cargarDatoAlFormulario();
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+
+  crearFromulario(){{c}}
+    
+    this.variableTsLocal = this.fb.group({{c}}
+      //Campo_del_html: ['Valor por defecto que pongamos', 'Validación síncronos', 'Validación asíncronos']   <abbr title="Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>datoTs: ['', [Validators.required, this.validadorPersonalizado.noPalabra<abbr title="Definimos que el control está en el servicio (validadorPersonalizado) en una función (noPalabra)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>] ],</b>  <abbr title="1 Validación no necesario ponerlo entre [] en 2 o más Validaciones necesario poner []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    });
+  }
+
+  cargarDatoAlFormulario(){{c}}
+
+    // this.variableTsLocal.setValue({{c}}  
+    this.variableTsLocal.reset({{c}}   
+      datoTs: '',
+    });
+     
+  }
+
+
+  //Para que salga rojo si da fallo y los mensajes
+  <b>get datoNoValido(){{c}}
+        return this.variableTsLocal.get('datoTs').invalid && this.variableTsLocal.get('datoTs').touched   <abbr title="datoTs definido arriba, dentro de la función (crearFromulario)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+
+
+  guardar(){{c}}  
+    console.log( this.variableTsLocal );  
+
+      if ( this.variableTsLocal.invalid ){{c}}
+  
+        return Object.values( this.variableTsLocal.controls ).forEach( variableControlador => {{c}}  
+  
+             variableControlador.markAsTouched();  
+        });
+
+      }
+  
+      console.log(this.variableTsLocal);  
+      console.log(this.variableTsLocal.value);  
+
+      //Resetear información al pulsar el botón guardar y enviar
+     this.variableTsLocal.reset();  //Si resetea solamente
+
+     /*this.variableTsLocal.reset({{c}}  //Resetear y dejar escrito algo en uno o más campos
+      datoTs: 'Sin dato eah!!'
+    }); */
+      
+    }
+
+}</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">{{co}}form autocomplete="off" {{t}}formGroup]="variableTsLocal" {{p}}ngSubmit)="guardar()">
+          
+            {{co}}div>
+
+              {{co}}div class="form-group row">
+                {{co}}label class="col-2 col-form-label">Nombre phohibido {{co}}small>(Poner esto para verlo: nombrephohibido){{co}}/small>{{co}}/label>
+                {{co}}div class="col">
+          
+                  {{co}}input class="form-control"
+                         type="text"
+                         placeholder="Dato"
+                         <b>formControlName="datoTs"</b>  <abbr title="Donde se especifica el nombre que en el Ts se especifica los controles personalizados..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                         <b>{{t}}class.is-invalid]="datoNoValido"</b>>  <abbr title="Es boolean que se define en el Ts con un get y si tiene errores al tocar o pulsar botón. Si da error no se manda formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                   {{co}}small <b>{{f}}ngIf="datoNoValido"</b> class="text-danger">Este campo es obligatorio{{co}}/small>  <abbr title="Sale mensaje en rojo si cumple el control personalizado, si se escribe algo prohibido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                   {{co}}!-- Si da error muestra mensaje -->
+                {{co}}/div>
+              {{co}}/div>
+
+            {{co}}/div>
+          
+          
+            {{co}}div class="form-group row">
+              {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
+              {{co}}div class="input-group col-md-8">
+                {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+                  Guardar
+                {{co}}/button>
+              {{co}}/div>
+            {{co}}/div>
+          
+          {{co}}/form>
+
+          {{co}}hr>
+          {{co}}pre>
+              Estado del formulario: {{c}}{{c}} variableTsLocal.valid }}
+              {{co}}br>
+              Status: {{c}}{{c}} variableTsLocal. status }}
+              {{co}}br>
+              Status: {{c}}{{c}} variableTsLocal. value | json }}
+          {{co}}/pre></pre>
+      </div>
+  </div>
+</div>
+
+    </div>
   
     <div class="tab-pane fade" id="pills-reactivovalidaciones1" role="tabpanel" aria-labelledby="pills-reactivovalidaciones1-tab">x</div>
   

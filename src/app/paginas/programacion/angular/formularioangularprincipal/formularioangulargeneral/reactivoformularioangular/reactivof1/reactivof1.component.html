@@ -42,10 +42,37 @@
                 </div>
               </div>
 
+              <div class="row">  <!--formArrayName="camposDinamicos" puede ir aquí pero mejor más cerca del for-->
+                <div class="col">
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Id</th>
+                        <th>Campo</th>
+                        <th>Borrar</th>
+                      </tr>
+                    </thead>
+                      <tbody formArrayName="camposDinamicos">
+                        <tr *ngFor="let local of camposDinamicosfuncion.controls; let i = index">
+                          <td>{{ i + 1 }}</td>
+                          <td><input class="form-control" type="text" [formControlName]="i"></td>
+                          <td><button class="btn btn-danger" 
+                                      type="button"
+                                      (click)="borrarCampoDinamico(i)">Borrar</button></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <button class="btn btn-primary mt-3 mb-5 btn-block" 
+                          type="button"
+                          (click)="agregarCampoDinamico()">Agregar</button>
+                </div>
+              </div>
+
             <div class="form-group row">
               <label class="col-2 col-form-label">&nbsp;</label>
               <div class="input-group col-md-8">
-                <button type="submit" class="btn btn-outline-primary btn-block">
+                <button type="submit" 
+                        class="btn btn-outline-primary btn-block">
                   Guardar
                 </button>
               </div>

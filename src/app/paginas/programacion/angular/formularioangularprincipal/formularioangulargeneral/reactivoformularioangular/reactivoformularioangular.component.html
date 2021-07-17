@@ -3,8 +3,8 @@
     <div class="col-2">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link" id="v-pills-reactivoformulario-tab" data-toggle="pill" href="#v-pills-reactivoformulario" role="tab" aria-controls="v-pills-reactivoformulario" aria-selected="true">Module.Ts</a>
-        <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">Coger datos + Resetear</a>
-        <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">Validaciones</a>
+        <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">Coger datos<small><small><br>Resetear + Agregar + Borrar</small></small></a>
+        <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">Validaciones<br><small><small>Síncrona - Asíncrona<br>Personalizada: Contraseña</small></small></a>
         <a class="nav-link" id="v-pills-reactivoformulario2-tab" data-toggle="pill" href="#v-pills-reactivoformulario2" role="tab" aria-controls="v-pills-reactivoformulario2" aria-selected="false">x</a>
       </div>
     </div>
@@ -68,7 +68,7 @@ import {{c}} CabeceraComponent } from './componentes/cabecera/cabecera.component
                 </div>
                 <div class="card-body">
                   <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-<b>import {{c}} FormGroup<abbr title="Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, FormBuilder<abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';</b>
+<b>import {{c}} FormGroup<abbr title="Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, FormBuilder<abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr><b>, FormArray</b><abbr title="Para crear campos dinámicos (agregar o borrar campos al pulsar botones)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/forms';</b>
 
 @Component({{c}}
   selector: 'app-reactivoformangular1',
@@ -80,7 +80,8 @@ export class Reactivoformangular1Component implements OnInit {{c}}
   <b>variableTsLocal: FormGroup;</b>   <abbr title="Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
   constructor( <b>private fb:FormBuilder</b> ) {{c}} <abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    <b>this.crearFromulario();</b>
+    <b>this.crearFromulario();
+      //this.cargarDatoAlFormulario();</b>  <abbr title="Si queremos cargar datos predeterminados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   }
 
   ngOnInit(): void {{c}}
@@ -95,9 +96,22 @@ export class Reactivoformangular1Component implements OnInit {{c}}
         anidadoTs: this.fb.group({{c}}    <abbr title="Engloba dos campos en un único conjunto, en el html se hace referencia al nombre (anidadoTs) en el inicio del campo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
           subanidado1Ts: ['', , ],
           subanidado2Ts: ['', , ],
-        })
+        })<b>,
+          camposDinamicos: this.fb.array([])</b> <abbr title="Campos en array que controlaremos en una función poder añadir/borrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     });
   }
+
+  <b>get camposDinamicosfuncion(){{c}}
+        return this.variableTsLocal.get('camposDinamicos') as FormArray;  <abbr title="Realizamos una función que coge (get) cada campo (camposDinamicos) anterior como array y así añadir/borrar en las funciones de abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
+
+  <b>agregarCampoDinamico(){{c}}
+       this.camposDinamicosfuncion.push( this.fb.control(''));  <abbr title="Añadimos usando la función de arriba (camposDinamicosfuncion) el push (añadir)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  borrarCampoDinamico( i:number ){{c}}  <abbr title="Cogemos la index (i) para elegir el que hemos seleccionado para borrarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+       this.camposDinamicosfuncion.removeAt(i);  <abbr title="Borramos usando la función de arriba (camposDinamicosfuncion) el removeAt cogiendo el index (i)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
 
   <b>cargarDatoAlFormulario(){{c}}
 
@@ -109,6 +123,9 @@ export class Reactivoformangular1Component implements OnInit {{c}}
           subanidado2Ts: 'en cualquier campo',
     }
     });
+
+    // ['Dato1','Dato2'].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );  <abbr title="Podemos poner datos prederteminado al cargar la página o vacío ('')"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>['',''].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );</b>
 
   }</b>
 
@@ -164,6 +181,32 @@ export class Reactivoformangular1Component implements OnInit {{c}}
                    placeholder="Ciudad"
                    <b>formControlName="subanidado2Ts"</b>>
           {{co}}/div>
+      {{co}}/div>
+    {{co}}/div>
+
+    {{co}}div class="row">  <abbr title="formArrayName=camposDinamicos puede ir aquí pero mejor más cerca del for"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      {{co}}div class="col">
+        {{co}}table class="table">
+          {{co}}thead class="thead-dark">
+            {{co}}tr>
+              {{co}}th>Id{{co}}/th>
+              {{co}}th>Campo{{co}}/th>
+              {{co}}th>Borrar{{co}}/th>
+            {{co}}/tr>
+          {{co}}/thead>
+            {{co}}tbody <b>formArrayName="camposDinamicos"</b>>  <abbr title="Coge el array se puede poner más arriba"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{co}}tr <b>{{f}}ngFor="let local of camposDinamicosfuncion.controls;<abbr title="Coge los controles de la función del Ts (camposDinamicosfuncion), dicho controls lo vamos en la consola por el FormGroup"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> let i = index"</b><abbr title="Cogemos la index (i) para mostrar los números que hay y posición"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>  
+                {{co}}td><b>{{c}}{{c}} i + 1 }}</b>{{co}}/td>  <abbr title="Mostramos la index (i) pero como siempre se inicia en 0 le sumamos 1 para que se empiece en 1"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{co}}td>{{co}}input class="form-control" type="text" <b>{{t}}formControlName]="i"</b>>{{co}}/td>  <abbr title="Para introducir datos y controlarlo mediante la index (i) por eso ponemos [formControlName]=i"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                {{co}}td>{{co}}button class="btn btn-danger"  
+                            <b>type="button"  <abbr title="Ponemos button para que no haga submit al darle, ya que tenemos submit en el guardar y solos e ejecute al darle a ese"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                            {{p}}click)="borrarCampoDinamico(i)"</b>>Borrar{{co}}/button>{{co}}/td>  <abbr title="Al pulsar se ejecuta la función (borrarCampoDinamico) del Ts y se borra el input especificando la index (i) que hemos seleccionado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+              {{co}}/tr>
+            {{co}}/tbody>
+        {{co}}/table>
+        {{co}}button class="btn btn-primary mt-3 mb-5 btn-block" 
+                <b>type="button"  <abbr title="Ponemos button para que no haga submit al darle, ya que tenemos submit en el guardar y solos e ejecute al darle a ese"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  {{p}}click)="agregarCampoDinamico()"</b>>Agregar{{co}}/button>  <abbr title="Al pulsar se ejecuta la función (agregarCampoDinamico) del Ts y se añade un input"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       {{co}}/div>
     {{co}}/div>
 

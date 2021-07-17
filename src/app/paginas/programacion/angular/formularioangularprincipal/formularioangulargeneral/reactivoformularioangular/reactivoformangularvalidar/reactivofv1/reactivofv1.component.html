@@ -79,6 +79,32 @@
               </div>
             </div>
           
+
+            <div class="row"> 
+              <div class="col">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Id</th>
+                      <th>Campo</th>
+                      <th>Borrar</th>
+                    </tr>
+                  </thead>
+                    <tbody formArrayName="camposDinamicos">
+                      <tr *ngFor="let local of camposDinamicosfuncion.controls; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td><input class="form-control" type="text" [formControlName]="i"></td>
+                        <td><button class="btn btn-danger" 
+                                    type="button"
+                                    (click)="borrarCampoDinamico(i)">Borrar</button></td>
+                      </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary mt-3 mb-5 btn-block" 
+                        type="button"
+                        (click)="agregarCampoDinamico()">Agregar</button>
+              </div>
+            </div>
           
           
             <div class="form-group row">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';  //Validación síncronos -> Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';  //Validación síncronos -> Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo
 
 
 @Component({
@@ -14,6 +14,7 @@ export class Reactivoformangularvalidar1Component implements OnInit {
 
   constructor( private fb:FormBuilder ) { 
     this.crearFromulario();
+    //this.cargarDatoAlFormulario();
   }
 
   ngOnInit(): void {
@@ -30,8 +31,21 @@ export class Reactivoformangularvalidar1Component implements OnInit {
       direccionTs: this.fb.group({      //Engloba dos campos en un único conjunto, en el html se hace referencia al nombre (direccion) en el inicio del campo
         distritoTs: ['', Validators.required ],
         ciudadTs: ['', Validators.required ],
-      })
+      }),
+      camposDinamicos: this.fb.array([])
     });
+  }
+
+  get camposDinamicosfuncion(){
+    return this.variableTsLocal.get('camposDinamicos') as FormArray;
+  }
+
+  agregarCampoDinamico(){
+    this.camposDinamicosfuncion.push( this.fb.control('', Validators.required));
+  }
+
+  borrarCampoDinamico( i:number ){
+    this.camposDinamicosfuncion.removeAt(i);
   }
 
   cargarDatoAlFormulario(){
@@ -46,7 +60,8 @@ export class Reactivoformangularvalidar1Component implements OnInit {
         ciudadTs: '',
     }
     });
-
+      // ['Dato1','Dato2'].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
+      ['',''].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
   }
 
 
