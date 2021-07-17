@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CogercargarComponent } from './cogercargar.component';
+import { ReactivovasinComponent } from './reactivovasin.component';
 
-describe('CogercargarComponent', () => {
-  let component: CogercargarComponent;
-  let fixture: ComponentFixture<CogercargarComponent>;
+describe('ReactivovasinComponent', () => {
+  let component: ReactivovasinComponent;
+  let fixture: ComponentFixture<ReactivovasinComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CogercargarComponent ]
+      declarations: [ ReactivovasinComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CogercargarComponent);
+    fixture = TestBed.createComponent(ReactivovasinComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

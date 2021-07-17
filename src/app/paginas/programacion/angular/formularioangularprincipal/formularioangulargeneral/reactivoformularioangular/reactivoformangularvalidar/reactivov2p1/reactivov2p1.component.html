@@ -8,18 +8,26 @@
           <form autocomplete="off" [formGroup]="variableTsLocal" (ngSubmit)="guardar()">
           
               <div class="form-group row">
-                <label class="col-2 col-form-label">Nombre phohibido <small>(Poner esto para verlo: nombrephohibido)</small></label>
+                <label class="col-2 col-form-label">Contraseña</label>
                 <div class="col">
           
                   <input class="form-control"
-                         type="text"
-                         placeholder="Dato"
-                         formControlName="datoTs"
-                         [class.is-invalid]="datoNoValido">
-                         <!-- datoNoValido es boolean que se define en el Ts con un get y si tiene errores al tocar o pulsar botón. Si da error no se manda formulario -->
+                         type="password"
+                         placeholder="Contraseña"
+                         formControlName="pass1"
+                         [class.is-invalid]="passNoValido">
+                </div>
+              </div>
 
-                   <small *ngIf="datoNoValido" class="text-danger">Este campo es obligatorio y no puede contener nombrephohibido ni con mayúscula</small>  
-                   <!-- Si da error muestra mensaje -->
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Repetir/Verificar contraseña</label>
+                <div class="col">
+          
+                  <input class="form-control"
+                         type="password"
+                         placeholder="Repita contraseña"
+                         formControlName="pass2"
+                         [class.is-invalid]="passIGUALNoValido">
                 </div>
               </div>
           
@@ -38,9 +46,9 @@
           <pre>
               Estado del formulario: {{ variableTsLocal.valid }}
               <br>
-              Status: {{ variableTsLocal. status }}
+              Status: {{ variableTsLocal.status }}
               <br>
-              Status: {{ variableTsLocal. value | json }}
+              Status: {{ variableTsLocal.value | json }}
           </pre>
 
         </div>

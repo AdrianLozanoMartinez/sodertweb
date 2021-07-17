@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PersonalizadasComponent } from './personalizadas.component';
+import { Reactivov2p1Component } from './reactivov2p1.component';
 
-describe('PersonalizadasComponent', () => {
-  let component: PersonalizadasComponent;
-  let fixture: ComponentFixture<PersonalizadasComponent>;
+describe('Reactivov2p1Component', () => {
+  let component: Reactivov2p1Component;
+  let fixture: ComponentFixture<Reactivov2p1Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonalizadasComponent ]
+      declarations: [ Reactivov2p1Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PersonalizadasComponent);
+    fixture = TestBed.createComponent(Reactivov2p1Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

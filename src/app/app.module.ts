@@ -80,11 +80,8 @@ import { InstalacionangularComponent } from './paginas/programacion/angular/inst
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
 import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
 import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
-import { SincronasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/sincronas/sincronas.component';
 import { AsincronasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/asincronas/asincronas.component';
-import { PersonalizadasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/personalizadas/personalizadas.component';
 import { PersocontraComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/persocontra/persocontra.component';
-import { CogercargarComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/cogercargar/cogercargar.component';
 import { ArreglosestaticComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosestatic/arreglosestatic.component';
 import { ArreglosdinamicComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosdinamic/arreglosdinamic.component';
 import { DetectarcambiosComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/detectarcambios/detectarcambios.component';
@@ -291,9 +288,8 @@ import { Reactivoformangular1Component } from './paginas/programacion/angular/fo
 import { ReactivoformangularvalidarComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv.component';
 import { Reactivoformangularvalidar1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv1/reactivofv1.component';
 import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
-
-
-
+import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
+import { ReactivovasinComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivovasin/reactivovasin.component';
 
 
 
@@ -373,11 +369,8 @@ import { Reactivov2pComponent } from './paginas/programacion/angular/formularioa
     ArranqueangularComponent,
     FormulariosangularComponent,
     ReactivosangularComponent,
-    SincronasComponent,
     AsincronasComponent,
-    PersonalizadasComponent,
     PersocontraComponent,
-    CogercargarComponent,
     ArreglosestaticComponent,
     ArreglosdinamicComponent,
     DetectarcambiosComponent,
@@ -526,7 +519,9 @@ import { Reactivov2pComponent } from './paginas/programacion/angular/formularioa
     Reactivoformangular1Component,
     ReactivoformangularvalidarComponent,
     Reactivoformangularvalidar1Component,
-    Reactivov2pComponent 
+    Reactivov2pComponent,
+    Reactivov2p1Component,
+    ReactivovasinComponent
   ],
   imports: [
     //Por defecto

@@ -9,7 +9,7 @@
         <a class="nav-link" id="pills-reactivovalidaciones1-tab" data-toggle="pill" href="#pills-reactivovalidaciones1" role="tab" aria-controls="pills-reactivovalidaciones1" aria-selected="false" style="color: black;">Síncronas<br><small>Pass1 = Pass2</small></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-reactivovalidaciones2-tab" data-toggle="pill" href="#pills-reactivovalidaciones2" role="tab" aria-controls="pills-reactivovalidaciones2" aria-selected="false" style="color: black;">x</a>
+      <a class="nav-link" id="pills-reactivovalidaciones2-tab" data-toggle="pill" href="#pills-reactivovalidaciones2" role="tab" aria-controls="pills-reactivovalidaciones2" aria-selected="false" style="color: black;">Asíncronas<br><small>Con tiempo/Con servicio externo</small></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-reactivovalidaciones3-tab" data-toggle="pill" href="#pills-reactivovalidaciones3" role="tab" aria-controls="pills-reactivovalidaciones3" aria-selected="false" style="color: black;">x</a>
@@ -296,7 +296,7 @@ Status: <b>{{c}}{{c}} variableTsLocal. status }}</b>
     <div class="tab-pane fade" id="pills-reactivovalidaciones0" role="tabpanel" aria-labelledby="pills-reactivovalidaciones0-tab"><app-reactivov2p></app-reactivov2p>
       
       <div class="card-group">
-        <div class="card text-dark bg-primary m-3">
+        <div class="card text-dark bg-danger m-3">
             <div class="card-header">
                 <pre class="card-text text-center"><h3>Servicio</h3></pre>
             </div>
@@ -428,7 +428,7 @@ export class Reactivov2pComponent implements OnInit {{c}}
                          <b>formControlName="datoTs"</b>  <abbr title="Donde se especifica el nombre que en el Ts se especifica los controles personalizados..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
                          <b>{{t}}class.is-invalid]="datoNoValido"</b>>  <abbr title="Es boolean que se define en el Ts con un get y si tiene errores al tocar o pulsar botón. Si da error no se manda formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-                   {{co}}small <b>{{f}}ngIf="datoNoValido"</b> class="text-danger">Este campo es obligatorio{{co}}/small>  <abbr title="Sale mensaje en rojo si cumple el control personalizado, si se escribe algo prohibido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                   {{co}}small <b>{{f}}ngIf="datoNoValido"</b> class="text-danger">Es obligatorio y no puede contener nombrephohibido ni con mayúscula{{co}}/small>  <abbr title="Sale mensaje en rojo si cumple el control personalizado, si se escribe algo prohibido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
                    {{co}}!-- Si da error muestra mensaje -->
                 {{co}}/div>
               {{co}}/div>
@@ -461,9 +461,205 @@ export class Reactivov2pComponent implements OnInit {{c}}
 
     </div>
   
-    <div class="tab-pane fade" id="pills-reactivovalidaciones1" role="tabpanel" aria-labelledby="pills-reactivovalidaciones1-tab">x</div>
+    <div class="tab-pane fade" id="pills-reactivovalidaciones1" role="tabpanel" aria-labelledby="pills-reactivovalidaciones1-tab"><app-reactivov2p1></app-reactivov2p1>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-danger m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Servicio</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} FormGroup } from '@angular/forms';</b>  <abbr title="Para poder usar las funciones de los formularios"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+export class ServiciopassService {{c}}
+
+  constructor() {{c}} }
+
+
+  <b>passIgual( pass1Nombre:string, pass2Nombre:string ){{c}}  <abbr title="Función que coge dos argumentos (pass1 y 2) para efectuar una comparación correcta entre ellas y que sea válido el formulario, si no ponemos esta función da como correcta visualmente pero el formulario será inválido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   
-    <div class="tab-pane fade" id="pills-reactivovalidaciones2" role="tabpanel" aria-labelledby="pills-reactivovalidaciones2-tab">x</div>
+    return( TodoFormulario:FormGroup )=>{{c}}  <abbr title="Devuelve la variable dandole el formato de los formularios y lo usamos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      const pass1Control = TodoFormulario.controls[pass1Nombre];  <abbr title="Definimos dos constante que no cambiará para luego hacer comparación"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      const pass2Control = TodoFormulario.controls[pass2Nombre];
+
+      if ( pass1Control.value === pass2Control.value ){{c}}  <abbr title="Si el contenido de ambos que recibimos son iguales"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          pass2Control.setErrors(null);  <abbr title="No da error y es válido el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }else{{c}}
+          pass2Control.setErrors({{c}} noEsIgual: true });  <abbr title="Sino es igual da error y no es válido el formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }
+  }
+ }</b>
+
+}</pre>
+            </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Ts</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} FormGroup, FormBuilder, <b>Validators</b> } from '@angular/forms';  <abbr title="Para poder validar de forma síncrona"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>import {{c}} ServiciopassService } from './servicio/serviciopass.service';</b>  <abbr title="Servicio llamado para hacer más efectivo la comprobación de la igualdad"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-reactivov2p1',
+  templateUrl: './reactivov2p1.component.html',
+  styleUrls: ['./reactivov2p1.component.css']
+})
+export class Reactivov2p1Component implements OnInit {{c}}
+
+  variableTsLocal: FormGroup;   
+
+  constructor( private fb:FormBuilder,
+               <b>private servicioPass: ServiciopassService</b> <abbr title="Metemos el servicio en una variable para usarlo y para hacer más efectivo la comprobación de la igualdad"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> ) {{c}} 
+    this.crearFromulario();
+    //this.cargarDatoAlFormulario();
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+  crearFromulario(){{c}}
+    
+    this.variableTsLocal = this.fb.group({{c}}
+      //Campo_del_html: ['Valor por defecto que pongamos', 'Validación síncronos', 'Validación asíncronos']   <abbr title="Se puede hacer directamente sin necesidad de web externa y mismo hilo de tiempo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>pass1: ['', Validators.required ],  <abbr title="1 Validación no necesario ponerlo entre [] en 2 o más Validaciones necesario poner []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      pass2: ['', Validators.required ], <abbr title="Que sea obligado, validación síncrona"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    },{{c}}  <abbr title="Añadimos aquí lo nuevo ponemos , y {}"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      validators: this.servicioPass.passIgual('pass1','pass2')  <abbr title="Llamamos a la función validators del import (Validators) y le metemos el servicio (servicioPass) y dentro de él (passIgual), mandamos los dos parámetros (pass1 y pass2) para que en el servicio se haga la igualdad más específica"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    });</b>
+  }
+
+//Para que salga rojo si da fallo y los mensajes
+<b>get passNoValido(){{c}}
+  return this.variableTsLocal.get('pass1').invalid && this.variableTsLocal.get('pass1').touched   <abbr title="Sale error si se toca o no se rellena si pulsamos guardar, pass1 definido arriba, dentro de la función (crearFromulario)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}
+
+get passIGUALNoValido(){{c}}  <abbr title="Necesario para relacionar con el html y poder hacer la igualdad aunque no es tan efectiva como la que usamos en el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  const pass1 = this.variableTsLocal.get('pass1').value;
+  const pass2 = this.variableTsLocal.get('pass2').value;
+
+  return ( pass1 === pass2 ) ? false : true;  <abbr title="? -> Sino es igual manda false. : -> Si es igual manda true"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</b>
+
+
+guardar(){{c}}  
+  console.log( this.variableTsLocal );  
+
+    if ( this.variableTsLocal.invalid ){{c}}    //Si es invalido lo que introducimos lanza lo de abajo que junto con el html muestra todo lo que no se ha tocado, o no tenga las condiones síncronas al pulsar el botón salga en rojo y la letra también en rojo
+
+      return Object.values( this.variableTsLocal.controls ).forEach( variableControlador => {{c}}  //Devuelve el valor de cada variable de control, para que salga si tiene o no error (en rojo y mensaje en rojo) según las condiciones
+
+           variableControlador.markAsTouched();  //Tocado, Si no tiene campos anidado se deja este ahí
+      });
+
+    }
+
+    console.log(this.variableTsLocal);  
+    console.log(this.variableTsLocal.value);  
+
+    //Resetear información al pulsar el botón guardar y enviar
+   this.variableTsLocal.reset();  //Si resetea solamente
+
+   /*this.variableTsLocal.reset({{c}}  //Resetear y dejar escrito algo en uno o más campos
+    datoTs: 'Sin dato eah!!'
+  }); */
+    
+  }
+  
+}</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-warning m-3">
+          <div class="card-header">
+              <pre class="card-text text-center"><h3>Html</h3></pre>
+          </div>
+          <div class="card-body">
+              <pre class="card-text">{{co}}form autocomplete="off" {{t}}formGroup]="variableTsLocal" {{p}}ngSubmit)="guardar()">
+          
+          {{co}}div class="form-group row">
+            {{co}}label class="col-2 col-form-label">Contraseña{{co}}/label>
+            {{co}}div class="col">
+      
+              {{co}}input class="form-control"
+                      type="password"
+                      placeholder="Contraseña"
+                      <b>formControlName="pass1"  <abbr title="pass1 se coge de la función (crearFromulario) del Ts (this.variableTsLocal = this.fb.group)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                        {{t}}class.is-invalid]="passNoValido"</b>>  <abbr title="passNoValido se coge de la función get y verifica si es tocado y si da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}/div>
+          {{co}}/div>
+
+          {{co}}div class="form-group row">
+            {{co}}label class="col-2 col-form-label">Repetir/Verificar contraseña{{co}}/label>
+            {{co}}div class="col">
+      
+              {{co}}input class="form-control"
+                      type="password"
+                      placeholder="Repita contraseña"
+                      <b>formControlName="pass2"  <abbr title="Cambiamos el nombre porque es otro campo y así poder hacer la comparación si son iguales"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                      {{t}}class.is-invalid]="passIGUALNoValido"</b>>   <abbr title="passNoValido se coge de la función get y verifica si son iguales los dos, en esta comprobación inicialmente dice que si son iguales no da error pero la validación dice invalid, por eso hay que hacer el servicio y a través de 
+                      el la función donde ya se pone válido la igualdad"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}/div>
+          {{co}}/div>
+      
+        {{co}}div class="form-group row">
+          {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
+          {{co}}div class="input-group col-md-8">
+            {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+              Guardar
+            {{co}}/button>
+          {{co}}/div>
+        {{co}}/div>
+      
+      {{co}}/form>
+
+      {{co}}hr>
+      {{co}}pre>
+          Estado del formulario: {{c}}{{c}} variableTsLocal.valid }}
+          {{co}}br>
+          Status: {{c}}{{c}} variableTsLocal.status }}
+          {{co}}br>
+          Status: {{c}}{{c}} variableTsLocal.value | json }}
+      {{co}}/pre></pre>
+      </div>
+  </div>
+</div>
+    
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-reactivovalidaciones2" role="tabpanel" aria-labelledby="pills-reactivovalidaciones2-tab"><app-reactivovasin></app-reactivovasin>
+      
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>x</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text">x</pre>
+            </div>
+        </div>
+        <div class="card text-dark bg-warning m-3">
+          <div class="card-header">
+              <pre class="card-text text-center"><h3>x</h3></pre>
+          </div>
+          <div class="card-body">
+              <pre class="card-text">x</pre>
+          </div>
+      </div>
+    </div>
+
+    </div>
   
     <div class="tab-pane fade" id="pills-reactivovalidaciones3" role="tabpanel" aria-labelledby="pills-reactivovalidaciones3-tab">x</div>
   

@@ -84,6 +84,8 @@ import { RegistrardominicodeComponent } from './paginas/programacion/angular/log
 import { ListmortyComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty/listmorty.component';
 import { CharacterDetailsComponent } from './paginas/programacion/angular/apirestangular/rickandmorty/character-details/character-details.component';
 import { PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';
+import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
+import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -234,6 +236,8 @@ export const appRoutes: Routes = [
   { path: 'listmorty', component: ListmortyComponent},
   { path: 'character-details/:id', component: CharacterDetailsComponent},
   { path: 'pokemondetalle/:id', component: PokemondetalleComponent},
+  { path: 'passss', component: Reactivov2p1Component},
+  { path: 'personalizar', component: Reactivov2pComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase
