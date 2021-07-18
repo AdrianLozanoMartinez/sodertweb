@@ -5,7 +5,41 @@
         </div>
         <div class="card-body">
 
-            AQUÍ EL EJEMPLO
+          <form autocomplete="off" [formGroup]="variableTsLocal" (ngSubmit)="guardar()">
+          
+            <h6>Poner <b>sodert</b> -> Para ver que en 3seg detecta que el usuario sodert está cogido, sino sale el mensaje al instante, pulsar guardar sale</h6>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Usuario</label>
+                <div class="col">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Usuario"
+                         formControlName="usuarioTs"
+                         [class.is-invalid]="usuarioNoValido">
+                  <small *ngIf="usuarioNoValido" class="text-danger">Ese nombre de usuario ya fue tomado</small>  
+                </div>
+              </div>
+
+            <div class="form-group row">
+              <label class="col-2 col-form-label">&nbsp;</label>
+              <div class="input-group col-md-8">
+                <button type="submit" class="btn btn-outline-primary btn-block">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          
+          </form>
+
+          <hr>
+          <pre>
+              Estado del formulario: {{ variableTsLocal.valid }}
+              <br>
+              Status: {{ variableTsLocal.status }}
+              <br>
+              Status: {{ variableTsLocal.value | json }}
+          </pre>
 
         </div>
     </div>

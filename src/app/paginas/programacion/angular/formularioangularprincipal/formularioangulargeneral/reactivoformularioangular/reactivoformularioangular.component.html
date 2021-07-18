@@ -5,7 +5,6 @@
         <a class="nav-link" id="v-pills-reactivoformulario-tab" data-toggle="pill" href="#v-pills-reactivoformulario" role="tab" aria-controls="v-pills-reactivoformulario" aria-selected="true">Module.Ts</a>
         <a class="nav-link" id="v-pills-reactivoformulario0-tab" data-toggle="pill" href="#v-pills-reactivoformulario0" role="tab" aria-controls="v-pills-reactivoformulario0" aria-selected="true">Coger datos<small><small><br>Resetear + Agregar + Borrar</small></small></a>
         <a class="nav-link" id="v-pills-reactivoformulario1-tab" data-toggle="pill" href="#v-pills-reactivoformulario1" role="tab" aria-controls="v-pills-reactivoformulario1" aria-selected="false">Validaciones<br><small><small>Síncrona - Asíncrona<br>Personalizada: Contraseña</small></small></a>
-        <a class="nav-link" id="v-pills-reactivoformulario2-tab" data-toggle="pill" href="#v-pills-reactivoformulario2" role="tab" aria-controls="v-pills-reactivoformulario2" aria-selected="false">x</a>
       </div>
     </div>
 
@@ -82,6 +81,7 @@ export class Reactivoformangular1Component implements OnInit {{c}}
   constructor( <b>private fb:FormBuilder</b> ) {{c}} <abbr title="Simplifica la forma de controlar los formularios reactivos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     <b>this.crearFromulario();
       //this.cargarDatoAlFormulario();</b>  <abbr title="Si queremos cargar datos predeterminados"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    <b>this.crearListeners()  </b><abbr title="Vemos lo que introduzcamos en consola"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   }
 
   ngOnInit(): void {{c}}
@@ -100,6 +100,10 @@ export class Reactivoformangular1Component implements OnInit {{c}}
           camposDinamicos: this.fb.array([])</b> <abbr title="Campos en array que controlaremos en una función poder añadir/borrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
     });
   }
+
+<b>  crearListeners(){{c}}
+  this.variableTsLocal.get('usuarioTs').valueChanges.subscribe( console.log );  <abbr title="Vemos lo que introduzcamos en consola"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }</b>
 
   <b>get camposDinamicosfuncion(){{c}}
         return this.variableTsLocal.get('camposDinamicos') as FormArray;  <abbr title="Realizamos una función que coge (get) cada campo (camposDinamicos) anterior como array y así añadir/borrar en las funciones de abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
@@ -154,7 +158,7 @@ export class Reactivoformangular1Component implements OnInit {{c}}
         <pre class="card-text">{{co}}form autocomplete="off" <b>{{t}}formGroup]="variableTsLocal" <abbr title="Aquí coge la variable local del Ts y lo usamos en relación con el Html. Por ello no mandamos la variable local al Ts como en el html (template)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> {{p}}ngSubmit)="guardar()">  </b>
 
     {{co}}div class="form-group row">
-      {{co}}label class="col-2 col-form-label">Campo simple con dato predeterminado{{co}}/label>
+      {{co}}label class="col-2 col-form-label">Campo simple con dato predeterminado (También se vé ne consola los cambios si escribimos en este campo){{co}}/label>
       {{co}}div class="col-8">
 
         {{co}}input class="form-control"
@@ -231,8 +235,6 @@ export class Reactivoformangular1Component implements OnInit {{c}}
         </div>
 
         <div class="tab-pane fade" id="v-pills-reactivoformulario1" role="tabpanel" aria-labelledby="v-pills-reactivoformulario1-tab"><app-reactivoformangularvalidar></app-reactivoformangularvalidar></div>
-
-        <div class="tab-pane fade" id="v-pills-reactivoformulario2" role="tabpanel" aria-labelledby="v-pills-reactivoformulario2-tab">x</div>
   </div>
 
 </div>

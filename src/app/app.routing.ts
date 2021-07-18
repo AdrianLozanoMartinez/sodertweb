@@ -59,8 +59,6 @@ import { PythonComponent } from './paginas/programacion/python/python.component'
 import { AngularComponent } from './paginas/programacion/angular/angular.component';
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
-import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
-import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { Serviceone2Component } from './paginas/programacion/angular/serviciounovarias/serviceone2/serviceone2.component';
 import { BuscadorComponent } from './paginas/programacion/angular/buscador/buscador.component';
@@ -215,8 +213,6 @@ export const appRoutes: Routes = [
   { path: 'angular', component: AngularComponent},
   { path: 'instalacionangular', component: InstalacionangularComponent},
   { path: 'arranqueangular', component: ArranqueangularComponent},
-  { path: 'formulariosangular', component: FormulariosangularComponent},
-  { path: 'reactivosangular', component: ReactivosangularComponent},
   { path: 'hostingangular', component: HostingangularComponent},
   { path: 'variable_html/:id', component: Serviceone2Component},
   { path: 'buscador/:termino_buscar', component: BuscadorComponent},

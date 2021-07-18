@@ -78,13 +78,6 @@ import { EstructuraphpComponent } from './paginas/programacion/php/estructuraphp
 import { AngularComponent } from './paginas/programacion/angular/angular.component';
 import { InstalacionangularComponent } from './paginas/programacion/angular/instalacionangular/instalacionangular.component';
 import { ArranqueangularComponent } from './paginas/programacion/angular/arranqueangular/arranqueangular.component';
-import { FormulariosangularComponent } from './paginas/programacion/angular/formulariosangular/formulariosangular.component';
-import { ReactivosangularComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/reactivosangular.component';
-import { AsincronasComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/asincronas/asincronas.component';
-import { PersocontraComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/validaciones/persocontra/persocontra.component';
-import { ArreglosestaticComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosestatic/arreglosestatic.component';
-import { ArreglosdinamicComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/arreglosdinamic/arreglosdinamic.component';
-import { DetectarcambiosComponent } from './paginas/programacion/angular/formulariosangular/reactivosangular/detectarcambios/detectarcambios.component';
 import { HostingangularComponent } from './paginas/programacion/angular/hostingangular/hostingangular.component';
 import { ExtensionesComponent } from './paginas/programacion/angular/instalacionangular/extensiones/extensiones.component';
 import { FontsgoogleprincipalComponent } from './paginas/programacion/fontsgoogle/fontsgoogleprincipal.component';
@@ -145,7 +138,12 @@ import { CharacterDetailsComponent } from './paginas/programacion/angular/apires
 import { PokemonbuscarComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonbuscar/pokemonbuscar.component';
 import { Listmorty2Component } from './paginas/programacion/angular/apirestangular/rickandmorty/listmorty2/listmorty2.component';
 import { PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';
-
+import { Reactivoformangular1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivof1/reactivof1.component';
+import { ReactivoformangularvalidarComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv.component';
+import { Reactivoformangularvalidar1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv1/reactivofv1.component';
+import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
+import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
+import { ReactivovasinComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivovasin/reactivovasin.component';
 
 //Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -284,12 +282,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
-import { Reactivoformangular1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivof1/reactivof1.component';
-import { ReactivoformangularvalidarComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv.component';
-import { Reactivoformangularvalidar1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivofv1/reactivofv1.component';
-import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
-import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
-import { ReactivovasinComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivovasin/reactivovasin.component';
+
 
 
 
@@ -367,13 +360,6 @@ import { ReactivovasinComponent } from './paginas/programacion/angular/formulari
     AngularComponent,
     InstalacionangularComponent,
     ArranqueangularComponent,
-    FormulariosangularComponent,
-    ReactivosangularComponent,
-    AsincronasComponent,
-    PersocontraComponent,
-    ArreglosestaticComponent,
-    ArreglosdinamicComponent,
-    DetectarcambiosComponent,
     HostingangularComponent,
     ExtensionesComponent,
     FontsgoogleprincipalComponent,
@@ -433,6 +419,12 @@ import { ReactivovasinComponent } from './paginas/programacion/angular/formulari
     Listmorty2Component,
     PokemonbuscarComponent,
     PokemondetalleComponent,
+    Reactivoformangular1Component,
+    ReactivoformangularvalidarComponent,
+    Reactivoformangularvalidar1Component,
+    Reactivov2pComponent,
+    Reactivov2p1Component,
+    ReactivovasinComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
@@ -515,13 +507,7 @@ import { ReactivovasinComponent } from './paginas/programacion/angular/formulari
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent,
-    Reactivoformangular1Component,
-    ReactivoformangularvalidarComponent,
-    Reactivoformangularvalidar1Component,
-    Reactivov2pComponent,
-    Reactivov2p1Component,
-    ReactivovasinComponent
+    BootswatchComponent
   ],
   imports: [
     //Por defecto

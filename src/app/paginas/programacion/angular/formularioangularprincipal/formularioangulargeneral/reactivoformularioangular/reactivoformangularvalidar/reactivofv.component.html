@@ -11,24 +11,6 @@
     <li class="nav-item">
       <a class="nav-link" id="pills-reactivovalidaciones2-tab" data-toggle="pill" href="#pills-reactivovalidaciones2" role="tab" aria-controls="pills-reactivovalidaciones2" aria-selected="false" style="color: black;">Asíncronas<br><small>Con tiempo/Con servicio externo</small></a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-reactivovalidaciones3-tab" data-toggle="pill" href="#pills-reactivovalidaciones3" role="tab" aria-controls="pills-reactivovalidaciones3" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones4-tab" data-toggle="pill" href="#pills-reactivovalidaciones4" role="tab" aria-controls="pills-reactivovalidaciones4" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones5-tab" data-toggle="pill" href="#pills-reactivovalidaciones5" role="tab" aria-controls="pills-reactivovalidaciones5" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones6-tab" data-toggle="pill" href="#pills-reactivovalidaciones6" role="tab" aria-controls="pills-reactivovalidaciones6" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones7-tab" data-toggle="pill" href="#pills-reactivovalidaciones7" role="tab" aria-controls="pills-reactivovalidaciones7" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-reactivovalidaciones8-tab" data-toggle="pill" href="#pills-reactivovalidaciones8" role="tab" aria-controls="pills-reactivovalidaciones8" aria-selected="false" style="color: black;">x</a>
-    </li>
   </ul>
   
   <div class="tab-content cuadro" id="pills-tabContent">
@@ -641,37 +623,165 @@ guardar(){{c}}
     <div class="tab-pane fade" id="pills-reactivovalidaciones2" role="tabpanel" aria-labelledby="pills-reactivovalidaciones2-tab"><app-reactivovasin></app-reactivovasin>
       
       <div class="card-group">
-        <div class="card text-dark bg-primary m-3">
+        <div class="card text-dark bg-danger m-3">
             <div class="card-header">
-                <pre class="card-text text-center"><h3>x</h3></pre>
+                <pre class="card-text text-center"><h3>Servicio</h3></pre>
             </div>
             <div class="card-body">
-              <pre class="card-text">x</pre>
+              <pre class="card-text">import {{c}} Injectable } from '@angular/core';
+<b>import {{c}} Observable } from 'rxjs';  
+import {{c}} FormControl } from '@angular/forms';</b>  <abbr title="Controles del formulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+<b>interface ErrorValidate{{c}}  <abbr title="Interface que se crea sin exportarlo (export) porque lo usaremos aquí solo, para evitar de usar any en la función existeUsuario( RecibimosControl: FormControl ): Promise ErrorValidate> | Observable ErrorValidate>"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  [s:string]: boolean  <abbr title="Coge el string y lo transforma en un boolean para poder dar los dos estados (true/false) y usar las promesas"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</b>
+
+@Injectable({{c}}
+  providedIn: 'root'
+})
+
+export class AsinservicioService {{c}}
+
+  constructor() {{c}} }
+
+  <b>existeUsuario( RecibimosControl: FormControl ): Promise{{co}}ErrorValidate> | Observable{{co}}ErrorValidate> {{c}}  <abbr title="Función que coge el usuario (RecibimosControl) y le metemos los controles de formularios (FormControl), devuelve una promesa o un observable"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+    if( !RecibimosControl.value ){{c}}  <abbr title="Para que cuando recargarmos el usuario no dispare la petición de saber si el usuario está cogido hasta que introduzcamos datos (!RecibimosControl.value). Mientras no introduzcamos nada se mantenga en nulo (null) y no dispare nada"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      return Promise.resolve(null);  <abbr title="Devuelve null sino hemos introducido nada en el campo para que no pregunte si existe hasta que introduzcamos algo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+
+    return new Promise ( (resolve, reject) => {{c}}  <abbr title="La promesa devuelve resolve (si devuelve algo), reject (si da error)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      setTimeout(() => {{c}}  <abbr title="Dentro de un tiempo que marcamos abajo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        if ( RecibimosControl.value === 'sodert' ){{c}}  <abbr title="Si el valor de lo que introduzcamos es igual a la palabra que ponemos (sodert)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          resolve ({{c}} existe: true });  <abbr title="Devuelve que si existe el nombre, devuelve true que ya depende como lo intepreto en el Ts, en este caso existe usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }else{{c}}
+          resolve ( null );  <abbr title="Devuelve null, no coge valor, para que en el Ts se inteprete como que no existe"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+
+      }, 3500);  <abbr title="El tiempo se traduce en 3,5 seg"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    });
+
+  }</b>
+}</pre>
+            </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card text-dark bg-primary m-3">
+            <div class="card-header">
+                <pre class="card-text text-center"><h3>Ts</h3></pre>
+            </div>
+            <div class="card-body">
+              <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+import {{c}} FormGroup, FormBuilder } from '@angular/forms';
+<b>import {{c}} AsinservicioService } from './servicio/asinservicio.service';</b>  <abbr title="Servicio donde mediante una promesa sabemos si existe o no el usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{c}}
+  selector: 'app-reactivovasin',
+  templateUrl: './reactivovasin.component.html',
+  styleUrls: ['./reactivovasin.component.css']
+})
+export class ReactivovasinComponent implements OnInit {{c}}
+
+  variableTsLocal: FormGroup;   
+
+  constructor( private fb:FormBuilder,
+               <b>private servicioasincrono: AsinservicioService</b> ) {{c}}   <abbr title="Servicio donde mediante una promesa sabemos si existe o no el usuario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.crearFromulario();
+    //this.cargarDatoAlFormulario();
+  }
+
+  ngOnInit(): void {{c}}
+  }
+
+  crearFromulario(){{c}}
+    
+    this.variableTsLocal = this.fb.group({{c}}
+      //Campo_del_html: ['Valor por defecto que pongamos', 'Validación síncronos', 'Validación asíncronos']  <abbr title="Necesita una web externa o se ejecuta en un tiempo definido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      <b>usuarioTs: ['', , this.servicioasincrono.existeUsuario ],</b>  <abbr title="1 Validación no necesario ponerlo entre [] en 2 o más Validaciones necesario poner []"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    });
+  }
+
+//Para que salga rojo si da fallo y los mensajes
+<b>get usuarioNoValido(){{c}}
+  return this.variableTsLocal.get('usuarioTs').invalid && this.variableTsLocal.get('usuarioTs').touched   <abbr title="usuarioTs definido arriba en CrearFromulario"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+}</b>
+
+guardar(){{c}}  
+  console.log( this.variableTsLocal );  
+
+    if ( this.variableTsLocal.invalid ){{c}}    <abbr title="Si es invalido lo que introducimos lanza lo de abajo que junto con el html muestra todo lo que no se ha tocado, o no tenga las condiones síncronas al pulsar el botón salga en rojo y la letra también en rojo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      return Object.values( this.variableTsLocal.controls ).forEach( variableControlador => {{c}}  <abbr title="Devuelve el valor de cada variable de control, para que salga si tiene o no error (en rojo y mensaje en rojo) según las condiciones"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+           variableControlador.markAsTouched();  <abbr title="Tocado, Si no tiene campos anidado se deja este ahí"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      });
+
+    }
+
+    console.log(this.variableTsLocal);  
+    console.log(this.variableTsLocal.value);  
+
+    //Resetear información al pulsar el botón guardar y enviar
+   this.variableTsLocal.reset();  <abbr title="Si resetea solamente"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+   /*this.variableTsLocal.reset({{c}}  <abbr title="Resetear y dejar escrito algo en uno o más campos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    datoTs: 'Sin dato eah!!'
+  }); */
+    
+  }
+  
+}</pre>
             </div>
         </div>
         <div class="card text-dark bg-warning m-3">
           <div class="card-header">
-              <pre class="card-text text-center"><h3>x</h3></pre>
+              <pre class="card-text text-center"><h3>Html</h3></pre>
           </div>
           <div class="card-body">
-              <pre class="card-text">x</pre>
+              <pre class="card-text">{{co}}form autocomplete="off" {{t}}formGroup]="variableTsLocal" {{p}}ngSubmit)="guardar()">
+          
+    {{co}}h6>Poner {{co}}b>sodert{{co}}/b> -> Para ver que en 3seg detecta que el usuario sodert está cogido, sino sale el mensaje al instante, pulsar guardar sale{{co}}/h6>
+      {{co}}div class="form-group row">
+        {{co}}label class="col-2 col-form-label">Usuario{{co}}/label>
+        {{co}}div class="col">
+  
+          {{co}}input class="form-control"
+                  type="text"
+                  placeholder="Contraseña"
+                  <b>formControlName="usuarioTs"  <abbr title="Variable usada en el Ts (usuarioTs) donde ponemos los controles asíncronos (this.variableTsLocal = this.fb.group)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                  {{t}}class.is-invalid]="usuarioNoValido"</b>>  <abbr title="Función get usado en el Ts para verifica si da error y si es tocado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          {{co}}small <b>{{f}}ngIf="usuarioNoValido"</b> class="text-danger">Ese nombre de usuario ya fue tomado{{co}}/small>  <abbr title="Mensaje de error si da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}/div>
+      {{co}}/div>
+
+    {{co}}div class="form-group row">
+      {{co}}label class="col-2 col-form-label">{{bu}}{{co}}/label>
+      {{co}}div class="input-group col-md-8">
+        {{co}}button type="submit" class="btn btn-outline-primary btn-block">
+          Guardar
+        {{co}}/button>
+      {{co}}/div>
+    {{co}}/div>
+  
+  {{co}}/form>
+
+  {{co}}hr>
+  {{co}}pre>
+      Estado del formulario: {{c}}{{c}} variableTsLocal.valid }}
+      {{co}}br>
+      Status: {{c}}{{c}} variableTsLocal.status }}
+      {{co}}br>
+      Status: {{c}}{{c}} variableTsLocal.value | json }}
+  {{co}}/pre></pre>
           </div>
       </div>
     </div>
 
     </div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones3" role="tabpanel" aria-labelledby="pills-reactivovalidaciones3-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones4" role="tabpanel" aria-labelledby="pills-reactivovalidaciones4-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones5" role="tabpanel" aria-labelledby="pills-reactivovalidaciones5-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones6" role="tabpanel" aria-labelledby="pills-reactivovalidaciones6-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones7" role="tabpanel" aria-labelledby="pills-reactivovalidaciones7-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-reactivovalidaciones8" role="tabpanel" aria-labelledby="pills-reactivovalidaciones8-tab">x</div>
+
       
   </div>
 

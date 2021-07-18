@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';  //FormGroup -> Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos  //FormBuilder -> Simplifica la forma de controlar los formularios reactivos
+import { FormGroup, FormBuilder, FormArray } from '@angular/forms';  //FormGroup -> Variable local (variableTsLocal) como cuando se usaba en el Html (template) pero esta vez en el Ts y sin # lo inicializamos  //FormBuilder -> Simplifica la forma de controlar los formularios reactivos
 
 @Component({
   selector: 'app-reactivoformangular1',
@@ -13,6 +13,7 @@ export class Reactivoformangular1Component implements OnInit {
   constructor( private fb:FormBuilder ) { //Simplifica la forma de controlar los formularios reactivos
     this.crearFromulario();
     //this.cargarDatoAlFormulario();
+    this.crearListeners()  //Vemos lo que introduzcamos en consola
   }
 
   ngOnInit(): void {
@@ -29,6 +30,10 @@ export class Reactivoformangular1Component implements OnInit {
       }),
       camposDinamicos: this.fb.array([])
     });
+  }
+
+  crearListeners(){
+    this.variableTsLocal.get('pruebaTs').valueChanges.subscribe( console.log );  //Vemos lo que introduzcamos en consola
   }
 
   get camposDinamicosfuncion(){
@@ -56,6 +61,8 @@ export class Reactivoformangular1Component implements OnInit {
       // ['Dato1','Dato2'].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
       ['',''].forEach( DatoRecibido => this.camposDinamicosfuncion.push( this.fb.control(DatoRecibido) ) );
   }
+
+
 
 
   guardar(){  //No cogemos la variable del html como en el template porque ya lo tenemos definidos en el Ts especialmente en la función crearFromulario

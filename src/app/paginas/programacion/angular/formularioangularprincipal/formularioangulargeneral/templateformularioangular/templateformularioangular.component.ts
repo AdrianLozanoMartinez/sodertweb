@@ -53,7 +53,7 @@ export class TemplateformularioangularComponent implements OnInit {
 
           variableControlador.markAsTouched(); //markAsTouched -> Marca como tocado al pulsar submit cada variable para que se dispare los errores si no cumple los demás requisitos (required, minlegth...)
       });
-
+      variableLocal.reset();  //Se resetea formulario al pulsar guardar
         return;
     }
 
@@ -73,7 +73,7 @@ export class TemplateformularioangularComponent implements OnInit {
 
           variableControlador2.markAsTouched(); 
       });
-
+      variableLocal2.reset();  //Se resetea formulario al pulsar guardar
         return;
     }
 
@@ -92,7 +92,7 @@ export class TemplateformularioangularComponent implements OnInit {
 
           variableControlador3.markAsTouched(); 
       });
-
+      variableLocal3.reset();  //Se resetea formulario al pulsar guardar
         return;
     }
 
