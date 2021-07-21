@@ -154,9 +154,15 @@ background: green url("../../../../../assets/imagenes/01.jpg") repeat-x left;</b
                     <h4><b>Css</b></h4>
                 </div>
                 <div class="card-body">
-                    <pre class="card-text"><b>@media screen and (min-width: 480px){{c}}   /*Con un mínimo de 480px de pantalla*/</b>
+                    <pre class="card-text"><b>@media screen and (min-width: 1024px){{c}}   /*Con un mínimo de 1024px de pantalla*/</b>
   body{{c}}
       background-color: red;            /*Se pone en rojo el fondo*/
+  }
+}
+
+<b>@media screen and (max-width: 1023px){{c}}   /*Con un máximo de 1023px de pantalla*/</b>
+  body{{c}}
+      background-color: green;            /*Se pone en verde el fondo*/
   }
 }</pre>
                 </div>

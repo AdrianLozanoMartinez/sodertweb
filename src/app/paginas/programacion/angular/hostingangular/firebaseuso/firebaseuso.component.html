@@ -1,0 +1,75 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-hosting-tab" data-toggle="pill" href="#pills-hosting" role="tab" aria-controls="pills-hosting" aria-selected="true" style="color: black;">___Web___<br>(Firebase)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-hosting0-tab" data-toggle="pill" href="#pills-hosting0" role="tab" aria-controls="pills-hosting0" aria-selected="false" style="color: black;">Firebase.json</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-hosting1-tab" data-toggle="pill" href="#pills-hosting1" role="tab" aria-controls="pills-hosting1" aria-selected="false" style="color: black;">Environment.prod.ts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-hosting2-tab" data-toggle="pill" href="#pills-hosting2" role="tab" aria-controls="pills-hosting2" aria-selected="false" style="color: black;">Último paso + Actualizar web</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-hosting3-tab" data-toggle="pill" href="#pills-hosting3" role="tab" aria-controls="pills-hosting3" aria-selected="false" style="color: black;">Corregir errores</a>
+    </li>
+</ul>
+  
+<div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade show active" id="pills-hosting" role="tabpanel" aria-labelledby="pills-hosting-tab"><app-hosting></app-hosting></div>
+  
+    <div class="tab-pane fade" id="pills-hosting0" role="tabpanel" aria-labelledby="pills-hosting0-tab">
+<pre>Se queda como mostramos y le <b>añadimos</b>:
+  {{c}}
+    "hosting": {{c}}
+      <b>"public": "dist/Sodert",</b>  //dist/nombre_proyecto_carpeta, NO_DEL_FIREBASE
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]<b>,
+        "rewrites": [                             //Necesario <b>copiarlo</b> para <b>no</b> dar <b>error</b> al <b>actualizar</b> si estamos <b>fuera del index</b>
+          {{c}}
+            "source": "**",
+            "destination": "/index.html"
+          }</b>
+    }
+  }</pre>
+    </div>
+
+  <div class="tab-pane fade" id="pills-hosting1" role="tabpanel" aria-labelledby="pills-hosting1-tab">
+    <pre>export const environment = {{c}}
+    production: true<b>,
+      firebaseConfig: {{c}}
+        apiKey: "***********"
+        authDomain: "sodertweb.firebaseapp.com",
+        databaseURL: "https://sodertweb.firebaseio.com",
+        projectId: "sodertweb",
+        storageBucket: "sodertweb.appspot.com",
+        messagingSenderId: "**********"
+    }</b>
+  };</pre>
+  </div>
+
+  <div class="tab-pane fade" id="pills-hosting2" role="tabpanel" aria-labelledby="pills-hosting2-tab">
+   <ol>
+    <li><b>ng build</b></li>
+    <li><b>firebase deploy</b></li>
+  </ol>
+    </div>
+
+  <div class="tab-pane fade" id="pills-hosting3" role="tabpanel" aria-labelledby="pills-hosting3-tab">
+    <ul>    
+        <li>No se sube: Hacer de nuevo -> <b>ng build --prod</b> -> <b>firebase init hosting</b> -> Igual en todo excepto en el directorio, poner <b>dist</b> -> <b>yes</b> -> <b>no</b> -> <b>Cambiar firebase.json</b> -> poner <b>/dist/nombre_de_carpeta_proyecto</b></li>
+        <li>SI SIGUE DANDO ERROR, REPETIR Y REPETIR cambiando valores (ng build --prod o ng build -> firebase init hosting (public o dist o dist/nombre_proyecto, luego yes o no, el resto no siempre) -> firebase.json (public o /dist o /dist/nombre_proyecto))</li>
+        <li>Se sube pero da error en navegador: Volver a actualizar la página</li>
+        <li><b>ng deploy</b> -> Compila y sube a firebase. Cuando no funciona firebase deploy</li>
+</ul>
+
+  </div>
+
+
+</div>
+

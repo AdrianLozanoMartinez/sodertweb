@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hosting',
-  templateUrl: './hosting.component.html',
-  styleUrls: ['./hosting.component.css']
+  selector: 'app-firebaseuso',
+  templateUrl: './firebaseuso.component.html',
+  styleUrls: ['./firebaseuso.component.css']
 })
-export class HostingComponent implements OnInit {
+export class FirebaseusoComponent implements OnInit {
 
   constructor() { }
 
@@ -32,12 +32,12 @@ x=`<body>:
   // Your web app's Firebase configuration
   var firebaseConfig = {`;
 xx=`
-  apiKey: "**********",
+  apiKey: "AIzaSyBXBZUhEffME9i58aVvigvAkSoOgCEfSPg",
   authDomain: "sodertweb.firebaseapp.com",
   databaseURL: "https://sodertweb.firebaseio.com",
   projectId: "sodertweb",
   storageBucket: "sodertweb.appspot.com",
-  messagingSenderId: "*****"`;
+  messagingSenderId: "254566057470"`;
 xxx=`
 };
 // Initialize Firebase

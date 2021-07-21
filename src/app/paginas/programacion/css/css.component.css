@@ -157,6 +157,7 @@ table, td{                          /*Responsive-Hijo/Padre*/
   font-family: FuenteEspecial;                                            /*Ponemos un nombre que luego elegimos a lo que queramos aplicar*/
   src: url("../../../../libreria/FuenteGoogle/Roboto/Roboto-Black.ttf");  /*Dirección de la fuente descargada*/
 }
+
 #descargada{
   font-family: Fuente especial;                                           /*Nombre definido arriba para ser usado mediante la id o class*/
 }

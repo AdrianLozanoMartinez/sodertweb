@@ -14,5 +14,5 @@ export class ExtensionesComponent implements OnInit {
 
   //Html
   c=`{`;
-co=`<`;
+  co=`<`;
 }

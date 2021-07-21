@@ -1,38 +1,12 @@
-<h6><u><b>Firebase - Hosting - Angular</b></u></h6>
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="pills-hosting-tab" data-toggle="pill" href="#pills-hosting" role="tab" aria-controls="pills-hosting" aria-selected="true" style="color: black;">___Web___<br>(Firebase)</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-hosting0-tab" data-toggle="pill" href="#pills-hosting0" role="tab" aria-controls="pills-hosting0" aria-selected="false" style="color: black;">Firebase.json</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-hosting1-tab" data-toggle="pill" href="#pills-hosting1" role="tab" aria-controls="pills-hosting1" aria-selected="false" style="color: black;">Environment.prod.ts</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-hosting2-tab" data-toggle="pill" href="#pills-hosting2" role="tab" aria-controls="pills-hosting2" aria-selected="false" style="color: black;">Último paso + Actualizar web</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-hosting3-tab" data-toggle="pill" href="#pills-hosting3" role="tab" aria-controls="pills-hosting3" aria-selected="false" style="color: black;">Corregir errores</a>
-    </li>
-</ul>
-  
-<div class="tab-content cuadro" id="pills-tabContent">
-  
-    <div class="tab-pane fade show active" id="pills-hosting" role="tabpanel" aria-labelledby="pills-hosting-tab">
+Ir a la consola  -> Proyecto -> Hosting -> Empezar
 
-    <u><b>Hosting</b></u> (<a class="enlace" href="https://firebase.google.com/?pli=1"><u><b>Web Firebase</b></u></a> -> Ir a la consola -> Proyecto -> Hosting -> Empezar
-
-        <div class="table-responsive-md">
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">1º Paso</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><pre>Instalar CLI de Firebase
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>1º Paso</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text"><pre>Instalar CLI de Firebase
 Para alojar tu sitio web con Firebase Hosting, necesitas la herramienta de línea de comandos (CLI) de Firebase.
 
 Ejecuta el siguiente comando npm para instalar la CLI o actualizarla a la versión más reciente.
@@ -43,22 +17,15 @@ Ejecuta el siguiente comando npm para instalar la CLI o actualizarla a la versi�
 También quiero <b>ver los pasos para añadir el SDK</b> de JavaScript de Firebase a mi aplicación web    -> <b>Seleccionamos para ver SDK</b>
 El SDK incluye Cloud Firestore, Authentication, Performance Monitoring y otros servicios. Puedes añadirlo ahora o más adelante.
 
-<b>Siguiente</b></pre></td>
-            </tr>
-        </tbody>
-    </table>
+<b>Siguiente</b></pre></pre>
+        </div>
     </div>
-
-            <div class="table-responsive-md">
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">2º Paso</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><pre>Inicializar tu proyecto
+    <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>2º Paso</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text"><pre>Inicializar tu proyecto
 Abre una ventana de terminal y accede al directorio "root" de la aplicación web (si no tienes uno, tendrás que crearlo)
 
 Inicia sesión en Google
@@ -73,22 +40,19 @@ Ejecuta este comando desde el directorio "root" de tu aplicación:
                 <b>What do you want to use as your public directory? (public)</b> (1º WEB PUSIMOS <b>/dist/nombre_de_la_carpeta_del_proyecto NO_DEL_FIREBASE</b>, 2º WEB PUSIMOS <b>/dist</b>) 
                 <b>Configure as a single-page app (rewrite all urls to /index.html)? (y/N)</b> (1º WEB ELEGIMOS <b>No (N)</b>, 2º WEB ELEGIMOS Yes(Y)) -> Firebase initialization complete!
 
-<b>Siguiente</b></pre></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+<b>Siguiente</b></pre></pre>
+      </div>
+  </div>
+</div>
 
-            <div class="table-responsive-md">
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">3º Paso</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><pre>Añadir SDK de Firebase
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>3º Paso</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text"><pre>Añadir SDK de Firebase
 Si planeas usar los productos de Firebase, como Cloud Firestore, Authentication o Performance Monitoring, asigna un apodo a tu aplicación web para registrarla:
 
 Vincular con una aplicación web
@@ -103,22 +67,15 @@ Antes de utilizar cualquier servicio de Firebase, copia y pega estas secuencias 
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 {{scr}}
-Más información sobre Firebase para aplicaciones web: Primeros pasos, Referencia de APIs del SDK web y Muestras</pre></td>
-            </tr>
-        </tbody>
-    </table>
+Más información sobre Firebase para aplicaciones web: Primeros pasos, Referencia de APIs del SDK web y Muestras</pre></pre>
+        </div>
     </div>
-
-            <div class="table-responsive-md">
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">4º Paso</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><pre>Desplegar en Firebase Hosting
+    <div class="card text-dark bg-primary m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>4º Paso</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text"><pre>Desplegar en Firebase Hosting
 Cuando tengas todo listo, despliega tu aplicación web
 Incluye los archivos estáticos (p. ej., HTML, CSS o JS) en el directorio de despliegue de tu aplicación, que se configura como "public" de forma predeterminada. 
 Luego, ejecuta el siguiente comando desde el directorio "root" de la aplicación:
@@ -129,22 +86,18 @@ Después del despliegue, consulta tu aplicación en manual-sodert.web.app
 
 ¿Necesitas ayuda? Consulta la documentación de Hosting
 
-<b>Ir a la consola</b></pre></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+<b>Ir a la consola</b></pre></pre>
+      </div>
+  </div>
+</div>
 
-            <div class="table-responsive-md">
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">5º Paso</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey hasta messagingSenderId, lo <u>METEMOS</u> en <u>ENVIRONMENT.PROD.TS</u></b> y <b><u>EJECUTAMOS NG BUILD</u></b><pre>
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>5º Paso</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text"><b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey hasta messagingSenderId, lo <u>METEMOS</u> en <u>ENVIRONMENT.PROD.TS</u></b> y <b><u>EJECUTAMOS NG BUILD</u></b><pre>
 <pre>
 Aplicaciones web
 sodertweb
@@ -159,63 +112,8 @@ Firebase SDK snippet
 Red CDN      Configuración
 
 Antes de utilizar cualquier servicio de Firebase, copia y pega estas secuencias de comandos en la parte inferior de la etiqueta {{x}}<b>{{xx}}</b>{{xxx}}</pre>
-</pre></td>
-            </tr>
-        </tbody>
-    </table>
+</pre></pre>
+        </div>
     </div>
-    </div>
-  
-    <div class="tab-pane fade" id="pills-hosting0" role="tabpanel" aria-labelledby="pills-hosting0-tab">
-<pre>Se queda como mostramos y le <b>añadimos</b>:
-  {{c}}
-    "hosting": {{c}}
-      <b>"public": "dist/Sodert",</b>  //dist/nombre_proyecto_carpeta, NO_DEL_FIREBASE
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]<b>,
-        "rewrites": [                             //Necesario <b>copiarlo</b> para <b>no</b> dar <b>error</b> al <b>actualizar</b> si estamos <b>fuera del index</b>
-          {{c}}
-            "source": "**",
-            "destination": "/index.html"
-          }</b>
-    }
-  }</pre>
-    </div>
-
-  <div class="tab-pane fade" id="pills-hosting1" role="tabpanel" aria-labelledby="pills-hosting1-tab">
-    <pre>export const environment = {{c}}
-    production: true<b>,
-      firebaseConfig: {{c}}
-        apiKey: "***********"
-        authDomain: "sodertweb.firebaseapp.com",
-        databaseURL: "https://sodertweb.firebaseio.com",
-        projectId: "sodertweb",
-        storageBucket: "sodertweb.appspot.com",
-        messagingSenderId: "**********"
-    }</b>
-  };</pre>
   </div>
-
-  <div class="tab-pane fade" id="pills-hosting2" role="tabpanel" aria-labelledby="pills-hosting2-tab">
-   <ol>
-    <li><b>ng build</b></li>
-    <li><b>firebase deploy</b></li>
-  </ol>
-    </div>
-
-  <div class="tab-pane fade" id="pills-hosting3" role="tabpanel" aria-labelledby="pills-hosting3-tab">
-    <ul>    
-        <li>No se sube: Hacer de nuevo -> <b>ng build --prod</b> -> <b>firebase init hosting</b> -> Igual en todo excepto en el directorio, poner <b>dist</b> -> <b>yes</b> -> <b>no</b> -> <b>Cambiar firebase.json</b> -> poner <b>/dist/nombre_de_carpeta_proyecto</b></li>
-        <li>SI SIGUE DANDO ERROR, REPETIR Y REPETIR cambiando valores (ng build --prod o ng build -> firebase init hosting (public o dist o dist/nombre_proyecto, luego yes o no, el resto no siempre) -> firebase.json (public o /dist o /dist/nombre_proyecto))</li>
-        <li>Se sube pero da error en navegador: Volver a actualizar la página</li>
-        <li><b>ng deploy</b> -> Compila y sube a firebase. Cuando no funciona firebase deploy</li>
-</ul>
-
-  </div>
-
-
-</div>
-
+    

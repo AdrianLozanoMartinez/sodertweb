@@ -144,6 +144,9 @@ import { Reactivoformangularvalidar1Component } from './paginas/programacion/ang
 import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
 import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
 import { ReactivovasinComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivovasin/reactivovasin.component';
+import { FirebaseserviComponent } from './paginas/programacion/angular/instalacionangular/servidores/firebaseservi/firebaseservi.component';
+import { ServidoresComponent } from './paginas/programacion/angular/instalacionangular/servidores/servidores.component';
+import { FirebaseusoComponent } from './paginas/programacion/angular/hostingangular/firebaseuso/firebaseuso.component';
 
 //Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -282,8 +285,6 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
-
-
 
 
 @NgModule({
@@ -425,6 +426,9 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     Reactivov2pComponent,
     Reactivov2p1Component,
     ReactivovasinComponent,
+    FirebaseserviComponent,
+    ServidoresComponent,
+    FirebaseusoComponent,
     //Programacion - Hosting
     HostinggeneralComponent,
     //Programacion - Firebase
