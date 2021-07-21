@@ -4,3 +4,8 @@
     background: #009614 !important;
     color: white !important;
 }
+
+
+.cuadro{
+    border: black 1px solid;
+}

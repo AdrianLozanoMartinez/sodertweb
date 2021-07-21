@@ -10,11 +10,11 @@ Ir a la consola  -> Proyecto -> Hosting -> Empezar
 Para alojar tu sitio web con Firebase Hosting, necesitas la herramienta de línea de comandos (CLI) de Firebase.
 
 Ejecuta el siguiente comando npm para instalar la CLI o actualizarla a la versión más reciente.
-<b>npm install -g firebase-tools</b> -> (<b>EJECUTAR EN EL TERMINAL</b>)
+<b>npm install -g firebase-tools</b>   <abbr title="EJECUTAR EN EL TERMINAL"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 ¿No funciona? Consulta la referencia de la CLI de Firebase o cambia los permisos npm.
 
-También quiero <b>ver los pasos para añadir el SDK</b> de JavaScript de Firebase a mi aplicación web    -> <b>Seleccionamos para ver SDK</b>
+También quiero <b>ver los pasos para añadir el SDK</b> de JavaScript de Firebase a mi aplicación web   <abbr title="Seleccionamos para ver SDK"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
 El SDK incluye Cloud Firestore, Authentication, Performance Monitoring y otros servicios. Puedes añadirlo ahora o más adelante.
 
 <b>Siguiente</b></pre></pre>
@@ -29,16 +29,18 @@ El SDK incluye Cloud Firestore, Authentication, Performance Monitoring y otros s
 Abre una ventana de terminal y accede al directorio "root" de la aplicación web (si no tienes uno, tendrás que crearlo)
 
 Inicia sesión en Google
-<b><u>firebase login</u></b> -> <b>Compilar información de errores (Y/n)</b> -> <b>Usuario</b> (De firebase) -> <b>Permitir</b> -> <b>Mensaje que sale:</b> Success! Logged in as adrianlm1985@gmail.com
-                                <b>Si ya estamos longeado en otro usuario</b>, debemos <b>salir (firebase logout)</b>
+<b><u>firebase login</u></b> 
+<br><b>En consola:</b><div class="cuadro"><b>Compilar información de errores (Y/n)</b> -> <b>Usuario</b> (De firebase) -> <b>Permitir</b> -> <b>Mensaje que sale:</b> Success! Logged in as adrianlm1985@gmail.com
+<b>Si ya estamos longeado en otro usuario</b>, debemos <b>salir (firebase logout)</b></div>
 Inicia tu proyecto
 Ejecuta este comando desde el directorio "root" de tu aplicación:
-<b><u>firebase init</u></b> (1º WEB SIN <b>ng build --prod</b>, 2º WEB SI FUE NECESARIO)
-                <b>Are you ready to proceed? (Y/n)</b> (Elegimos: Yes (Y))
-                Elegimos con los botones de dirección - > <b>Hosting: Configure and deploy Firebase Hosting sites</b> y seleccionamos con la barra de espacio -> Enter
-                <b>Use an existing project</b> -> <b>Proyecto</b> (manual-sodert (Manual-Sodert))
-                <b>What do you want to use as your public directory? (public)</b> (1º WEB PUSIMOS <b>/dist/nombre_de_la_carpeta_del_proyecto NO_DEL_FIREBASE</b>, 2º WEB PUSIMOS <b>/dist</b>) 
-                <b>Configure as a single-page app (rewrite all urls to /index.html)? (y/N)</b> (1º WEB ELEGIMOS <b>No (N)</b>, 2º WEB ELEGIMOS Yes(Y)) -> Firebase initialization complete!
+<b><u>firebase init</u></b>
+<br><b>En consola:</b><div class="cuadro"> (1º WEB SIN <b>ng build --prod</b>, 2º WEB SI FUE NECESARIO)
+<b>Are you ready to proceed? (Y/n)</b> (Elegimos: Yes (Y))
+Elegimos con los botones de dirección - > <b>Hosting: Configure and deploy Firebase Hosting sites</b> y seleccionamos con la barra de espacio -> Enter
+<b>Use an existing project</b> -> <b>Proyecto</b> (manual-sodert (Manual-Sodert))
+<b>What do you want to use as your public directory? (public)</b> (1º WEB PUSIMOS <b>/dist/nombre_de_la_carpeta_del_proyecto NO_DEL_FIREBASE</b>, 2º WEB PUSIMOS <b>/dist</b>) 
+<b>Configure as a single-page app (rewrite all urls to /index.html)? (y/N)</b> (1º WEB ELEGIMOS <b>No (N)</b>, 2º WEB ELEGIMOS Yes(Y)) -> Firebase initialization complete!                                             </div>
 
 <b>Siguiente</b></pre></pre>
       </div>
@@ -56,10 +58,10 @@ Ejecuta este comando desde el directorio "root" de tu aplicación:
 Si planeas usar los productos de Firebase, como Cloud Firestore, Authentication o Performance Monitoring, asigna un apodo a tu aplicación web para registrarla:
 
 Vincular con una aplicación web
-App nickname
-sodertweb
-Añadir el SDK
-Antes de utilizar cualquier servicio de Firebase, copia y pega estas secuencias de comandos en la parte inferior de la etiqueta {{body}}:
+App <b>nickname</b>
+<b>sodertweb</b>
+<b>Añadir el SDK</b>
+<b>Antes de utilizar cualquier servicio de Firebase, copia y pega estas secuencias de comandos en la parte inferior de la etiqueta {{body}}:</b>
 
 {{sc}}
 
@@ -75,14 +77,16 @@ Más información sobre Firebase para aplicaciones web: Primeros pasos, Referenc
           <pre class="card-text text-center"><h3>4º Paso</h3></pre>
       </div>
       <div class="card-body">
-          <pre class="card-text"><pre>Desplegar en Firebase Hosting
+          <pre class="card-text"><pre><div class="cuadro"><b>HACER ANTES <u>Paso 5 - ENVIRONMENT.PRO.TS</u> + <u>ENVIRONMENT.PRO.TS</u> + <u>BUILD</u> -> ÚLTIMO <U>FIREBASE DEPLOY</U></b>
+<b>firebase deploy --project nombre_proyecto</b> -> Especificando proyecto</div> 
+        
+Desplegar en Firebase Hosting
 Cuando tengas todo listo, despliega tu aplicación web
 Incluye los archivos estáticos (p. ej., HTML, CSS o JS) en el directorio de despliegue de tu aplicación, que se configura como "public" de forma predeterminada. 
 Luego, ejecuta el siguiente comando desde el directorio "root" de la aplicación:
-<u><b>firebase deploy</b></u> -> <b>HACER ANTES <u>Paso 5 - ENVIRONMENT.PRO.TS</u> + <u>ENVIRONMENT.PRO.TS</u> + <u>BUILD</u> -> ÚLTIMO <U>FIREBASE DEPLOY</U></b>
-<b>firebase deploy --project nombre_proyecto</b> -> Especificando proyecto
+<u><b>firebase deploy</b></u>
 
-Después del despliegue, consulta tu aplicación en manual-sodert.web.app
+Después del despliegue, consulta tu aplicación en sodert.web.app
 
 ¿Necesitas ayuda? Consulta la documentación de Hosting
 
@@ -97,7 +101,7 @@ Después del despliegue, consulta tu aplicación en manual-sodert.web.app
             <pre class="card-text text-center"><h3>5º Paso</h3></pre>
         </div>
         <div class="card-body">
-          <pre class="card-text"><b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey hasta messagingSenderId, lo <u>METEMOS</u> en <u>ENVIRONMENT.PROD.TS</u></b> y <b><u>EJECUTAMOS NG BUILD</u></b><pre>
+          <pre class="card-text"><div class="cuadro"><b>Configuración</b> -> <b>Configuración del proyecto</b> -> <b>Tus aplicaciones</b> -> <b><u>COPIAMOS</u> apiKey hasta messagingSenderId, lo <u>METEMOS</u> en <u>ENVIRONMENT.PROD.TS</u></b> y <b><u>EJECUTAMOS NG BUILD</u></b></div> <pre>
 <pre>
 Aplicaciones web
 sodertweb

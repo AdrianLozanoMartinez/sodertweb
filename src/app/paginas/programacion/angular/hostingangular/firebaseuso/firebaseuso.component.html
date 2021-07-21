@@ -21,52 +21,76 @@
     <div class="tab-pane fade show active" id="pills-hosting" role="tabpanel" aria-labelledby="pills-hosting-tab"><app-hosting></app-hosting></div>
   
     <div class="tab-pane fade" id="pills-hosting0" role="tabpanel" aria-labelledby="pills-hosting0-tab">
-<pre>Se queda como mostramos y le <b>añadimos</b>:
+
+      <div class="card-group">
+        <div class="card text-dark bg-danger m-3">
+            <div class="card-body">
+              <pre class="card-text">Se queda como mostramos y le <b>añadimos</b>:
   {{c}}
     "hosting": {{c}}
-      <b>"public": "dist/Sodert",</b>  //dist/nombre_proyecto_carpeta, NO_DEL_FIREBASE
+      <b>"public": "dist/Sodert",</b>  //dist/nombre_proyecto_carpeta <abbr title="LO QUE APARECE DENTRO DE DIST SI LO MIRAMOS -> NO_DEL_FIREBASE "><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
       ]<b>,
-        "rewrites": [                             //Necesario <b>copiarlo</b> para <b>no</b> dar <b>error</b> al <b>actualizar</b> si estamos <b>fuera del index</b>
+        "rewrites": [           <abbr title="Necesario copiarlo para no dar error al actualizar si estamos fuera del index"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>    
           {{c}}
             "source": "**",
             "destination": "/index.html"
           }</b>
     }
   }</pre>
+            </div>
+        </div>
+      </div>
+
     </div>
 
   <div class="tab-pane fade" id="pills-hosting1" role="tabpanel" aria-labelledby="pills-hosting1-tab">
-    <pre>export const environment = {{c}}
+    
+    <div class="card-group">
+      <div class="card text-dark bg-danger m-3">
+          <div class="card-body">
+            <pre class="card-text">export const environment = {{c}}
     production: true<b>,
       firebaseConfig: {{c}}
         apiKey: "***********"
         authDomain: "sodertweb.firebaseapp.com",
-        databaseURL: "https://sodertweb.firebaseio.com",
         projectId: "sodertweb",
         storageBucket: "sodertweb.appspot.com",
         messagingSenderId: "**********"
     }</b>
   };</pre>
+          </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="tab-pane fade" id="pills-hosting2" role="tabpanel" aria-labelledby="pills-hosting2-tab">
-   <ol>
-    <li><b>ng build</b></li>
-    <li><b>firebase deploy</b></li>
-  </ol>
+   
+    <div class="card-group">
+      <div class="card text-dark bg-danger m-3">
+          <div class="card-body">
+            <pre class="card-text"><ol><li><b>ng build</b></li><li><b>firebase deploy</b></li></ol></pre>
+          </div>
+      </div>
+    </div>
+   
     </div>
 
   <div class="tab-pane fade" id="pills-hosting3" role="tabpanel" aria-labelledby="pills-hosting3-tab">
-    <ul>    
-        <li>No se sube: Hacer de nuevo -> <b>ng build --prod</b> -> <b>firebase init hosting</b> -> Igual en todo excepto en el directorio, poner <b>dist</b> -> <b>yes</b> -> <b>no</b> -> <b>Cambiar firebase.json</b> -> poner <b>/dist/nombre_de_carpeta_proyecto</b></li>
-        <li>SI SIGUE DANDO ERROR, REPETIR Y REPETIR cambiando valores (ng build --prod o ng build -> firebase init hosting (public o dist o dist/nombre_proyecto, luego yes o no, el resto no siempre) -> firebase.json (public o /dist o /dist/nombre_proyecto))</li>
-        <li>Se sube pero da error en navegador: Volver a actualizar la página</li>
-        <li><b>ng deploy</b> -> Compila y sube a firebase. Cuando no funciona firebase deploy</li>
-</ul>
+    
+    <div class="card-group">
+      <div class="card text-dark bg-danger m-3">
+          <div class="card-body">
+            <pre class="card-text"><ul><li>No se sube: Hacer de nuevo -> <b>ng build --prod</b> -> <b>firebase init hosting</b> -> Igual en todo excepto en el directorio, poner <b>dist</b> -> <b>yes</b> -> <b>no</b> -> <b>Cambiar firebase.json</b> -> poner <b>/dist/nombre_de_carpeta_proyecto</b></li><li>SI SIGUE DANDO ERROR, REPETIR Y REPETIR cambiando valores (ng build --prod o ng build -> firebase init hosting (public o dist o dist/nombre_proyecto, luego yes o no, el resto no siempre) -> firebase.json (public o /dist o /dist/nombre_proyecto))</li><li>Se sube pero da error en navegador: Volver a actualizar la página</li><li><b>ng deploy</b> -> Compila y sube a firebase. Cuando no funciona firebase deploy</li></ul></pre>
+          </div>
+      </div>
+    </div>
+    
+    
 
   </div>
 
