@@ -12,6 +12,9 @@
         <a class="nav-link" id="pills-funcionesangularx0-tab" data-toggle="pill" href="#pills-funcionesangularx0" role="tab" aria-controls="pills-funcionesangularx0" aria-selected="false" style="color: black;">Enlaces</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-funcionesangular88-tab" data-toggle="pill" href="#pills-funcionesangular88" role="tab" aria-controls="pills-funcionesangular88" aria-selected="false" style="color: black;">Imagen</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-funcionesangularw-tab" data-toggle="pill" href="#pills-funcionesangularw" role="tab" aria-controls="pills-funcionesangularw" aria-selected="false" style="color: black;">Padre-Hijo/a</a>
     </li>
     <li class="nav-item">
@@ -172,6 +175,31 @@ export class AngularComponent implements OnInit {{c}}
     </div>
 
     <div class="tab-pane fade" id="pills-funcionesangularw" role="tabpanel" aria-labelledby="pills-funcionesangularw-tab"><app-padre-hijo-hijas></app-padre-hijo-hijas></div>
+    
+    
+    <div class="tab-pane fade" id="pills-funcionesangular88" role="tabpanel" aria-labelledby="pills-funcionesangular88-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Html</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text"><ul><li>{{co}}img <b>src="/assets/img/imagen.jpg"</b> alt="image"></li><li>{{co}}img <b>src='http:dirección/imagen.jpg'</b> alt='image'></li></ul></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html con Ts</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text"><ul><li>Html<ul><li>{{co}}img <b>{{t}}src]="imagePath"</b> /></li><li>{{co}}img <b>src={{c}}{{c}}imagePath}}</b> /></li></ul></li><li>Ts<ul><li><b>imagePath="dirección"</b></li><li><b>resultado.imagePath</b> -> En un subscribe...</li></ul></li></ul></pre>
+              </div>
+          </div>
+        </div>
+
+
+    </div>
 
 
 </div>
