@@ -1,9 +1,6 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" id="pills-javascript0-tab" data-toggle="pill" href="#pills-javascript0" role="tab" aria-controls="pills-javascript0" aria-selected="false" style="color: black;">Instalación</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-javascript1-tab" data-toggle="pill" href="#pills-javascript1" role="tab" aria-controls="pills-javascript1" aria-selected="false" style="color: black;">Enlazar con Html</a>
+        <a class="nav-link" id="pills-javascript0-tab" data-toggle="pill" href="#pills-javascript0" role="tab" aria-controls="pills-javascript0" aria-selected="false" style="color: black;">Instalación +<br>Enlazar con Html</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-javascript2-tab" data-toggle="pill" href="#pills-javascript2" role="tab" aria-controls="pills-javascript2" aria-selected="false" style="color: black;">Ejecutar</a>
@@ -41,6 +38,9 @@
     <li class="nav-item">
         <a class="nav-link" id="pills-javascript12-tab" data-toggle="pill" href="#pills-javascript12" role="tab" aria-controls="pills-javascript12" aria-selected="false" style="color: black;">Map + Filter</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-javascriptdom-tab" data-toggle="pill" href="#pills-javascriptdom" role="tab" aria-controls="pills-javascriptdom" aria-selected="false" style="color: black;">DOM</a>
+    </li>
     <button class="btn btn-warning m-2" [routerLink]="['/programacion']" style="text-align: left;">Atras</button>
 </ul>
 
@@ -50,19 +50,17 @@
         
         <div class="card-group">
             <div class="card text-dark bg-warning m-3">
+                <div class="card-header bg-warning">
+                    <pre class="card-text text-center blanco"><h3>Instalación</h3></pre>
+                </div>
                 <div class="card-body">
                     <pre class="card-text"><ul><li><b><a href="https://nodejs.org/es/">Descargar</a> NodeJS</b> -> La más recomendable (número Actual)</li><li><b>Instalar</b> -> node-v14.9.0-x64.msi</li><li><b>Ver versión</b> -> Terminal/MSDOS -> <b>node –v</b></li></ul></pre>
                 </div>
             </div>
-        </div>
-
-    </div>
-
-
-    <div class="tab-pane fade" id="pills-javascript1" role="tabpanel" aria-labelledby="pills-javascript1-tab">
-
-        <div class="card-group">
             <div class="card text-dark bg-warning m-3">
+                <div class="card-header bg-warning">
+                    <pre class="card-text text-center blanco"><h3>Enlazar con Html</h3></pre>
+                </div>
                 <div class="card-body">
                     <pre class="card-text">{{co}}!DOCTYPE html>
       {{co}}html lang="en">
@@ -81,8 +79,6 @@
                 </div>
             </div>
         </div>
-
-
 
     </div>
 
@@ -206,7 +202,7 @@ console.log(web, youtube);</b></pre>
 
     </div>
 
-    <div class="tab-pane fade" id="pills-javascript7" role="tabpanel" aria-labelledby="pills-javascript7-tab"><app-fetchapi></app-fetchapi></div>
+    <div class="tab-pane fade" id="pills-javascript7" role="tabpanel" aria-labelledby="pills-javascript7-tab"><hr><app-fetchapi></app-fetchapi></div>
 
 
     <div class="tab-pane fade" id="pills-javascript8" role="tabpanel" aria-labelledby="pills-javascript8-tab"><app-asyncawait></app-asyncawait></div>
@@ -320,9 +316,6 @@ console.log(web, youtube);</b></pre>
     </div>
 
 
-
-
-
     <div class="tab-pane fade" id="pills-javascript13" role="tabpanel" aria-labelledby="pills-javascript13-tab">
         
         <div class="card-group">
@@ -332,7 +325,8 @@ console.log(web, youtube);</b></pre>
 <li>console<b>.info</b> ( "Mensaje de información" ); </li>
 <li>console<b>.error</b> ( "Mensaje de error" );   <abbr title="Para que el mensaje salga en rojo (error)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
 <li>console<b>.warn</b> ( "Mensaje de peligro" );   <abbr title="Para que el mensaje salga en amarillo (warning)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li><hr>
-<li>console.log("<b>%cMensaje en consola del navegador", "color:blue"</b>);   <abbr title="%c + efecto css [color:blue (letra azul) - background-color: pink (fondo rosa) - font-size: xx-large (tamaño de letra grande)...] solo un efecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
+<li>console.log("<b>%cMensaje en consola del navegador", "color:blue"</b>);   <abbr title="%c + efecto css [color:blue (letra azul) - background-color: pink (fondo rosa) - font-size: xx-large (tamaño de letra grande)...] solo un efecto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<hr><li>console.log(<b>document</b>);   <abbr title="Se muestra la estructura del archivo html realizado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
                 </div>
             </div>
             <div class="card text-dark bg-warning m-3">
@@ -345,6 +339,7 @@ console.log(web, youtube);</b></pre>
     </div>
 
 
+    <div class="tab-pane fade" id="pills-javascriptdom" role="tabpanel" aria-labelledby="pills-javascriptdom-tab"><hr><app-dom></app-dom></div>
 
 </div>
 <br><br>

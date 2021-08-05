@@ -285,6 +285,7 @@ import { PipeDomSeguroPipe } from './paginas/programacion/angular/httpspotify/pi
 import { JqueryComponent } from './paginas/programacion/jquery/jquery.component';
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
+import { DomComponent } from './paginas/programacion/javascript/dom/dom.component';
 
 
 @NgModule({
@@ -511,7 +512,8 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
     //Librerias
     JqueryComponent,
     TetherComponent,
-    BootswatchComponent
+    BootswatchComponent,
+    DomComponent
   ],
   imports: [
     //Por defecto

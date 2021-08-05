@@ -12,6 +12,9 @@
         <a class="nav-link" id="pills-funcionesangularx0-tab" data-toggle="pill" href="#pills-funcionesangularx0" role="tab" aria-controls="pills-funcionesangularx0" aria-selected="false" style="color: black;">Enlaces</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="pills-funcionesangular77-tab" data-toggle="pill" href="#pills-funcionesangular77" role="tab" aria-controls="pills-funcionesangular77" aria-selected="false" style="color: black;">Ir a...</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="pills-funcionesangular88-tab" data-toggle="pill" href="#pills-funcionesangular88" role="tab" aria-controls="pills-funcionesangular88" aria-selected="false" style="color: black;">Imagen</a>
     </li>
     <li class="nav-item">
@@ -39,8 +42,8 @@
     <li><b>routerLink="nombre_componente" o <b>routerLink="/home"</b></b></li>
     <li><b>{{t}}routerLink]="{{t}}'/nombre_componente','nombre_componente','1','2']"</b>   <abbr title="Es igual a -> /home/paginas/1/2. [] significa que lo controla Angular"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
     <li><b>{{t}}routerLink]="{{t}}'/nombre_componente',i]"</b>      <abbr title="Para usar index hay que nombrarlo previamente en el for (let i of index) /home/index (0...). [] significa que lo controla Angular"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
-    <li><b>routerLinkActive="active"</b>   <abbr title="Se pone en cada enlace, dentro de una class de bootstrap o una creada, que queramos que se active (se ilumine) al pulsar el enlace/s"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
     <li><b>{{t}}routerLink]="{{t}}'/']"</b> <abbr title="/ raíz de la página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li></ul></pre>
+    <li><b>routerLinkActive="active"</b>   <abbr title="Se pone en cada enlace, dentro de una class de bootstrap o una creada, que queramos que se active (se ilumine) al pulsar el enlace/s"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></li>
                 </div>
             </div>
         </div>
@@ -198,6 +201,51 @@ export class AngularComponent implements OnInit {{c}}
           </div>
         </div>
 
+
+    </div>
+
+
+
+    <div class="tab-pane fade" id="pills-funcionesangular77" role="tabpanel" aria-labelledby="pills-funcionesangular77-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Html</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">{{co}}button class="btn btn-danger m-2" <b>{{t}}routerLink]="['/dirección']"</b>>Ir atrás{{co}}/button></pre>
+                </div>
+            </div>
+          </div>
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Ts</h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text"><b>import {{c}} Location } from '@angular/common';</b>
+
+constructor( <b>private location: Location</b> ) {{c}} }
+
+
+<b>onGoBack():void{{c}}
+    this.location.back();</b>
+    //Otra opción
+    //<b>window.history.back();</b>
+  <b>}</b></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-warning m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Html</h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">{{co}}button <b>{{p}}click)="onGoBack()"</b>>Ir atrás{{co}}/button></pre>
+              </div>
+          </div>
+        </div>
 
     </div>
 
