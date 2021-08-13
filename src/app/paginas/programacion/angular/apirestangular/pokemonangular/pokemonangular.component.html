@@ -1,20 +1,22 @@
-<div class="row">
-    <div class="col-2">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-dpokemonangular-tab" data-toggle="pill" href="#v-pills-dpokemonangular" role="tab" aria-controls="v-pills-dpokemonangular" aria-selected="true">Module/Servicio</a>
-        <a class="nav-link" id="v-pills-dpokemonangular0-tab" data-toggle="pill" href="#v-pills-dpokemonangular0" role="tab" aria-controls="v-pills-dpokemonangular0" aria-selected="true">Búsqueda</a>
-        <a class="nav-link" id="v-pills-dpokemonangular1-tab" data-toggle="pill" href="#v-pills-dpokemonangular1" role="tab" aria-controls="v-pills-dpokemonangular1" aria-selected="false">Mostrar Todo</a>
-        <a class="nav-link" id="v-pills-dpokemonangular2-tab" data-toggle="pill" href="#v-pills-dpokemonangular2" role="tab" aria-controls="v-pills-dpokemonangular2" aria-selected="false">Mostrar Uno</a>
-      </div>
-    </div>
-    <div class="col-10">
-      <div class="tab-content" id="v-pills-tabContent">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+      <a class="nav-link" id="pills-dpokemonangular-tab" data-toggle="pill" href="#pills-dpokemonangular" role="tab" aria-controls="pills-dpokemonangular" aria-selected="true" style="color: black;">Module/Servicio</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-dpokemonangular0-tab" data-toggle="pill" href="#pills-dpokemonangular0" role="tab" aria-controls="pills-dpokemonangular0" aria-selected="false" style="color: black;">Búsqueda</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" id="pills-dpokemonangular1-tab" data-toggle="pill" href="#pills-dpokemonangular1" role="tab" aria-controls="pills-dpokemonangular1" aria-selected="false" style="color: black;">Mostrar Todo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-dpokemonangular2-tab" data-toggle="pill" href="#pills-dpokemonangular2" role="tab" aria-controls="pills-dpokemonangular2" aria-selected="false" style="color: black;">Mostrar Uno</a>
+  </li>
+</ul>
 
-        <a href="https://pokeapi.co/"><u>Web</u></a>  -  <a href="https://amoelcodigo.com/pokedex-pokeapi-angular-material/">Web ayuda</a>
+<div class="tab-content cuadro" id="pills-tabContent">
 
-        <div class="tab-pane fade show active" id="v-pills-dpokemonangular" role="tabpanel" aria-labelledby="v-pills-dpokemonangular-tab">
-          
-          <div class="card-group">
+  <div class="tab-pane fade" id="pills-dpokemonangular" role="tabpanel" aria-labelledby="pills-dpokemonangular-tab">
+     <div class="card-group">
     <div class="card text-dark bg-danger m-3">
         <div class="card-header">
             <pre class="card-text text-center blanco"><h3>Module.ts</h3></pre>
@@ -120,11 +122,11 @@ export class PokemonService {{c}}
   </div>
 </div>
 
-        </div>
+  </div>
 
-        <div class="tab-pane fade" id="v-pills-dpokemonangular0" role="tabpanel" aria-labelledby="v-pills-dpokemonangular0-tab"><app-pokemonbuscar></app-pokemonbuscar>
-
-<div class="card-group">
+  <div class="tab-pane fade" id="pills-dpokemonangular0" role="tabpanel" aria-labelledby="pills-dpokemonangular0-tab">
+    
+    <div class="card-group">
     <div class="card text-dark bg-primary m-3">
         <div class="card-header">
             <pre class="card-text text-center"><h3>Ts</h3></pre>
@@ -197,11 +199,11 @@ Error obtenido con variable booblean: <b>{{c}}{{c}}error3}}</b> <abbr title="Tru
   </div>
 </div>
 
-        </div>
+  </div>
 
-
-        <div class="tab-pane fade" id="v-pills-dpokemonangular1" role="tabpanel" aria-labelledby="v-pills-dpokemonangular1-tab">
-<app-pokemontodos></app-pokemontodos>
+  <div class="tab-pane fade" id="pills-dpokemonangular1" role="tabpanel" aria-labelledby="pills-dpokemonangular1-tab">
+    
+    <app-pokemontodos></app-pokemontodos>
 
           <div class="card-group">
             <div class="card text-dark m-3 bg-primary">
@@ -322,11 +324,12 @@ applyFilter(event: Event) {{c}}  <abbr title="Filtro de búsqueda, según lo que
            
             </div>
         </div>
+        
+  </div>
 
-        </div>
-        <div class="tab-pane fade" id="v-pills-dpokemonangular2" role="tabpanel" aria-labelledby="v-pills-dpokemonangular2-tab">
-
-          <div class="card-group">
+  <div class="tab-pane fade" id="pills-dpokemonangular2" role="tabpanel" aria-labelledby="pills-dpokemonangular2-tab">
+    
+     <div class="card-group">
             <div class="card m-3">
                 <div class="card-header bg-danger">
                     <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
@@ -466,6 +469,6 @@ export class PokemondetalleComponent implements OnInit {{c}}
 </div>
 </div>
 
-        </div>     
-
   </div>
+    
+</div>

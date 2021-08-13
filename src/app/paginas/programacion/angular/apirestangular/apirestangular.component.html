@@ -22,7 +22,7 @@
 
     <div class="tab-pane fade" id="pills-angularspotify" role="tabpanel" aria-labelledby="pills-angularspotify-tab"><app-httpspotify></app-httpspotify></div>
 
-    <div class="tab-pane fade" id="pills-angularspotify1" role="tabpanel" aria-labelledby="pills-angularspotify1-tab"><app-pokemonangular></app-pokemonangular></div>
+    <div class="tab-pane fade" id="pills-angularspotify1" role="tabpanel" aria-labelledby="pills-angularspotify1-tab"><app-unionapipokemon></app-unionapipokemon></div>
 
     <div class="tab-pane fade" id="pills-angularspotify2" role="tabpanel" aria-labelledby="pills-angularspotify2-tab"><app-rickandmorty></app-rickandmorty></div>
 
@@ -70,8 +70,8 @@ this.pokemonType = this.pokemon.types[0].type.name;  <abbr title="[0] cogemos la
                   <pre class="card-text text-center"><h3>Con <b>dato recibido</b> <small><small>getFuncion(<b>id</b> o <b>name</b> u otro)</small></small></h3></pre>
               </div>
               <div class="card-body">
-                  <pre class="card-text">if ( this.pokemon.types[0].type.name === 'nombreCogido' ) {{c}}  <abbr title="Si el nombre del tipo es igual a nombreCogido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-this.pokemonType = [' nomvreQueSeCambia'];   <abbr title="Se cambia ese nombre del tipo por nomvreQueSeCambia"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+                  <pre class="card-text">if ( <b>this.pokemon.types[0].type.name</b> === 'nombreCogido' ) {{c}}  <abbr title="Si el nombre del tipo es igual a nombreCogido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>this.pokemonType = [' nomvreQueSeCambia']</b>;   <abbr title="Se cambia ese nombre del tipo por nomvreQueSeCambia"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
               </div>
           </div>
         </div>

@@ -286,6 +286,8 @@ import { JqueryComponent } from './paginas/programacion/jquery/jquery.component'
 import { TetherComponent } from './paginas/programacion/tether/tether.component';
 import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatch.component';
 import { DomComponent } from './paginas/programacion/javascript/dom/dom.component';
+import { UnionapipokemonComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/unionapipokemon/unionapipokemon.component';
+import { PokemonformamejoradaComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonformamejorada/pokemonformamejorada.component';
 
 
 @NgModule({
@@ -513,7 +515,9 @@ import { DomComponent } from './paginas/programacion/javascript/dom/dom.componen
     JqueryComponent,
     TetherComponent,
     BootswatchComponent,
-    DomComponent
+    DomComponent,
+    UnionapipokemonComponent,
+    PokemonformamejoradaComponent
   ],
   imports: [
     //Por defecto
