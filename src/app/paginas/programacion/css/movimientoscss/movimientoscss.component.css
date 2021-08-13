@@ -810,3 +810,21 @@ p{                  /*Para que se vea el efecto*/
             width: 300px;
         }
   }
+
+
+
+
+  .desaparecer{
+    animation-name: desaparecer;                
+    animation-duration: 5s;                
+    animation-fill-mode: forwards;      
+  }
+  
+  @keyframes desaparecer{                       
+    from{                                   
+        width: 8.8%;
+    }
+    to{                                     
+        visibility: hidden;   /*Para que desaparezca en un tiempo marcado arriba (5seg)*/
+    }
+  }

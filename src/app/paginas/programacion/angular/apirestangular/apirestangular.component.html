@@ -11,6 +11,9 @@
     <li class="nav-item">
         <a class="nav-link" id="pills-angularspotify2-tab" data-toggle="pill" href="#pills-angularspotify2" role="tab" aria-controls="pills-angularspotify2" aria-selected="false" style="color: black;">Rick and Morty</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-angularspotify3-tab" data-toggle="pill" href="#pills-angularspotify3" role="tab" aria-controls="pills-angularspotify3" aria-selected="false" style="color: black;">Sacar dato Ts</a>
+    </li>
 </ul>
 
 <div class="tab-content cuadro" id="pills-tabContent">
@@ -22,6 +25,58 @@
     <div class="tab-pane fade" id="pills-angularspotify1" role="tabpanel" aria-labelledby="pills-angularspotify1-tab"><app-pokemonangular></app-pokemonangular></div>
 
     <div class="tab-pane fade" id="pills-angularspotify2" role="tabpanel" aria-labelledby="pills-angularspotify2-tab"><app-rickandmorty></app-rickandmorty></div>
+
+    <div class="tab-pane fade" id="pills-angularspotify3" role="tabpanel" aria-labelledby="pills-angularspotify3-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Con <b>for</b> <small><small>getFuncion(<b>i</b>)</small></small></h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">pokemonData = {{c}}  
+    position: <b>resp</b>.id,  <abbr title="resp -> Es el dato obtenido de this.servicioPokemon.getPokemon(i).subscribe( (resp:any) => {"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    image: resp.<b>sprites.front_default</b>,   <abbr title="sprites.front_default -> Cada nombre es una parte de la API, cada { parte { hasta llegar al dato buscado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    types0: resp.types<b>[0]</b>.type.name,   <abbr title="[0] cogemos la parte de la API que comienza en [] y ya depende si cogemos el primer dato (0) o el siguiente (1) u otro..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+    };
+    this.pokemon.<b>push</b>(pokemonData);  <abbr title="push -> Metemos lo obtenido en pokemonData en otra variable pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Con <b>dato recibido</b> <small><small>getFuncion(<b>id</b> o <b>name</b> u otro)</small></small></h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">this.pokemon = <b>res</b>;  <abbr title="res -> Respuesta obtenida de this.pokemonService.getPokemon(id).subscribe(. Para usar pokemon.id..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+this.image = this.<b>pokemon.sprites.front_default</b>;   <abbr title="pokemon realmente es res, la repsuesta y dentro de él las partes de la API (sprites.front_default)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+this.pokemonType = this.pokemon.types[0].type.name;  <abbr title="[0] cogemos la parte de la API que comienza en [] y ya depende si cogemos el primer dato (0) o el siguiente (1) u otro..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-header">
+                    <pre class="card-text text-center"><h3>Con <b>for</b> <small><small>getFuncion(<b>i</b>)</small></small></h3></pre>
+                </div>
+                <div class="card-body">
+                  <pre class="card-text">if ( <b>resp.types[0].type.name</b> === 'nombreCogido' ) {{c}}  <abbr title="Si el nombre del tipo es igual a nombreCogido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+<b>pokemonData.types0 = [' nomvreQueSeCambia']</b>;</pre>  <abbr title="Se cambia ese nombre del tipo por nomvreQueSeCambia"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                </div>
+            </div>
+            <div class="card text-dark bg-primary m-3">
+              <div class="card-header">
+                  <pre class="card-text text-center"><h3>Con <b>dato recibido</b> <small><small>getFuncion(<b>id</b> o <b>name</b> u otro)</small></small></h3></pre>
+              </div>
+              <div class="card-body">
+                  <pre class="card-text">if ( this.pokemon.types[0].type.name === 'nombreCogido' ) {{c}}  <abbr title="Si el nombre del tipo es igual a nombreCogido"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+this.pokemonType = [' nomvreQueSeCambia'];   <abbr title="Se cambia ese nombre del tipo por nomvreQueSeCambia"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr></pre>
+              </div>
+          </div>
+        </div>
+
+    </div>
 </div>
 
 

@@ -1149,7 +1149,51 @@
    </div>
    
 
-      
+   <br>
+   <h3>Desaparecer</h3>
+   <p class="desaparecer">Texto que desaparece en un tiempo</p>  
+
+   <div class="card-group">
+    <div class="card text-dark bg-warning m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Html</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">{{co}}!DOCTYPE html>
+  {{co}}html lang="en">
+      {{co}}head> 
+          {{co}}meta charset="UTF-8">
+          {{co}}meta name="viewport" content="width=device-width, initial-scale=1.0">
+          {{co}}title>Título de pestaña{{co}}/title>
+          {{co}}link rel="stylesheet" href="ArchivoCssAparte.css">
+      {{co}}/head>
+      {{co}}body>
+            <b>{{co}}p class="desaparecer">Texto que desaparece en un tiempo{{co}}/p>
+            {{co}}p id="forwards">Forwards: Retiene estilos del ultimo frame{{co}}/p>
+            {{co}}p id="backwards">Backwards: Retiene estilos del primer frame{{co}}/p>
+            {{co}}p id="both">Both: Ambas{{co}}/p></b> 
+      {{co}}/body>
+  {{co}}/html></pre>
+        </div>
+      </div>
+      <div class="card text-dark bg-info m-3" >
+        <div class="card-header" style="text-align: center;"><h4><b>Css</b></h4></div>
+        <div class="card-body">
+          <pre class="card-text">.<b>desaparecer</b>{{c}}
+    animation-name: desaparecer;                
+    animation-duration: 5s;                
+    animation-fill-mode: forwards;      
+  }
+  
+  @keyframes desaparecer{{c}}                       
+    from{{c}}                                   
+        width: 8.8%;
+    }
+    to{{c}}                                     
+        <b>visibility: hidden;</b>   /*Para que desaparezca en un tiempo marcado arriba (5seg)*/
+    }
+  }</pre>
+        </div>
+      </div>
+  </div>      
       
 
   </div>

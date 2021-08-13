@@ -17,6 +17,12 @@ export class FuncionesangularComponent implements OnInit {
      autor: 'Adrián Lozano'
    };
 
+   errorN: string;
+   pokemon: any = {
+      id: '1',
+      name: 'Prueba'
+   }
+
    //For - Variable en forma de arreglo [] donde contiene el contenido que será mostrado en el componente.html con el for
    variableTS: string[] = ['Contenido1', 'Contenido2', 'Contenido3', 'más contenidos'];
 

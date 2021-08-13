@@ -94,6 +94,26 @@ export class AngularComponent implements OnInit {{c}}
             </div>
         </div>
 
+
+        <h4>*ngIF</h4>
+        <h5 class="card-title mt-5">{{pokemon.id}}º  {{pokemon.name}}</h5>
+        <img src="../../../../../assets/imagenes/01.jpg">  
+
+      <div class="card-group">
+            <div class="card text-dark bg-primary m-3">
+                <div class="card-body"><h3>Ts</h3>
+                    <pre class="card-text"><b>errorN: string;</b></pre>
+                </div>
+              </div>
+
+            <div class="card text-dark bg-warning m-3">
+                <div class="card-body"><h3>Html</h3>
+                    <pre class="card-text">{{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="!errorN"</b>>{{c}}{{c}}pokemon.id}}º  {{c}}{{c}}pokemon.name}}{{co}}/h5>
+{{co}}img <b>{{f}}ngIf="errorN"</b> src="../../../../../assets/imagenes/01.jpg"></pre>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="tab-pane fade" id="pills-funcionesangularyy" role="tabpanel" aria-labelledby="pills-funcionesangularyy-tab"><hr><app-buscadorprincipal></app-buscadorprincipal></div>
@@ -196,7 +216,7 @@ export class AngularComponent implements OnInit {{c}}
                   <pre class="card-text text-center"><h3>Html con Ts</h3></pre>
               </div>
               <div class="card-body">
-                  <pre class="card-text"><ul><li>Html<ul><li>{{co}}img <b>{{t}}src]="imagePath"</b> /></li><li>{{co}}img <b>src={{c}}{{c}}imagePath}}</b> /></li></ul></li><li>Ts<ul><li><b>imagePath="dirección"</b></li><li><b>resultado.imagePath</b> -> En un subscribe...</li></ul></li></ul></pre>
+                  <pre class="card-text"><ul><li>Html<ul><li>{{co}}img <b>{{t}}src]="imagePath"</b> /></li><li>{{co}}img <b>src={{c}}{{c}}imagePath}}</b> /></li></ul></li><li>Ts<ul><li><b>imagePath="dirección"</b></li><li><b>resultado.imagePath</b> -> En un subscribe...</li><li><b>this.imagePath = "";</b> -> Vaciar variable de imagen</li></ul></li></ul></pre>
               </div>
           </div>
         </div>
