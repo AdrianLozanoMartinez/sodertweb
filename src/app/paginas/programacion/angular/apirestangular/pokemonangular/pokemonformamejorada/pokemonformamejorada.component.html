@@ -1,56 +1,209 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada-tab" data-toggle="pill" href="#pills-pokemonformamejorada" role="tab" aria-controls="pills-pokemonformamejorada" aria-selected="true" style="color: black;">x</a>
+        <a class="nav-link" id="pills-pokemonformamejorada-tab" data-toggle="pill" href="#pills-pokemonformamejorada" role="tab" aria-controls="pills-pokemonformamejorada" aria-selected="true" style="color: black;">Module/Servicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada0-tab" data-toggle="pill" href="#pills-pokemonformamejorada0" role="tab" aria-controls="pills-pokemonformamejorada0" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-pokemonformamejorada0-tab" data-toggle="pill" href="#pills-pokemonformamejorada0" role="tab" aria-controls="pills-pokemonformamejorada0" aria-selected="false" style="color: black;">Búsqueda</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada1-tab" data-toggle="pill" href="#pills-pokemonformamejorada1" role="tab" aria-controls="pills-pokemonformamejorada1" aria-selected="false" style="color: black;">x</a>
+        <a class="nav-link" id="pills-pokemonformamejorada1-tab" data-toggle="pill" href="#pills-pokemonformamejorada1" role="tab" aria-controls="pills-pokemonformamejorada1" aria-selected="false" style="color: black;">Mostrar Todo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-pokemonformamejorada2-tab" data-toggle="pill" href="#pills-pokemonformamejorada2" role="tab" aria-controls="pills-pokemonformamejorada2" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-pokemonformamejorada3-tab" data-toggle="pill" href="#pills-pokemonformamejorada3" role="tab" aria-controls="pills-pokemonformamejorada3" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada4-tab" data-toggle="pill" href="#pills-pokemonformamejorada4" role="tab" aria-controls="pills-pokemonformamejorada4" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada5-tab" data-toggle="pill" href="#pills-pokemonformamejorada5" role="tab" aria-controls="pills-pokemonformamejorada5" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada6-tab" data-toggle="pill" href="#pills-pokemonformamejorada6" role="tab" aria-controls="pills-pokemonformamejorada6" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada7-tab" data-toggle="pill" href="#pills-pokemonformamejorada7" role="tab" aria-controls="pills-pokemonformamejorada7" aria-selected="false" style="color: black;">x</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada8-tab" data-toggle="pill" href="#pills-pokemonformamejorada8" role="tab" aria-controls="pills-pokemonformamejorada8" aria-selected="false" style="color: black;">x</a>
+      <a class="nav-link" id="pills-pokemonformamejorada2-tab" data-toggle="pill" href="#pills-pokemonformamejorada2" role="tab" aria-controls="pills-pokemonformamejorada2" aria-selected="false" style="color: black;">Mostrar Uno</a>
     </li>
   </ul>
   
   <div class="tab-content cuadro" id="pills-tabContent">
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada" role="tabpanel" aria-labelledby="pills-pokemonformamejorada-tab">x</div>
+    <div class="tab-pane fade" id="pills-pokemonformamejorada" role="tabpanel" aria-labelledby="pills-pokemonformamejorada-tab">
+        
+<div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Module.ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}} BrowserModule } from '@angular/platform-browser';
+import {{c}} NgModule } from '@angular/core';
+
+import {{c}} RouterModule } from '@angular/router';
+import {{c}} ROUTES } from './app.routes';
+
+<b>import {{c}} HttpClientModule } from '@angular/common/http';  <abbr title="Poder llamar a la API y coger los datos del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} FormsModule } from '@angular/forms'; </b>  <abbr title="Coger dato y trabajar con ellos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+import {{c}} AppComponent } from './app.component';
+import {{c}} HomeComponent } from './page/home/home.component';
+import {{c}} ErrorComponent } from './component/error/error.component';
+import {{c}} FootComponent } from './component/foot/foot.component';
+import {{c}} NavbarComponent } from './component/navbar/navbar.component';
+import {{c}} OnlyallComponent } from './page/onlyall/onlyall.component';
+
+
+@NgModule({{c}}
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    FootComponent,
+    NavbarComponent,
+    OnlyallComponent
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot( ROUTES, {{c}} useHash: true } ),
+    <b>HttpClientModule,
+    FormsModule,</b>
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {{c}} }
+</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-danger m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Routes.ts</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">import {{c}} Routes } from '@angular/router';
+
+import {{c}} AppComponent } from './app.component';
+
+import {{c}} HomeComponent } from './page/home/home.component';
+import {{c}} ErrorComponent } from './component/error/error.component';
+
+import {{c}} OnlyallComponent } from './page/onlyall/onlyall.component';
+
+export  const ROUTES: Routes = [                                
+  {{c}} path: '', component: HomeComponent },                 
+  {{c}} path: 'appcomponente', component: AppComponent },
+  {{c}} path: 'home', component: HomeComponent },
+  {{c}} path: 'onlyall/<b>:id</b>', component: OnlyallComponent },
+  {{c}} path: '**', component: ErrorComponent}
+];</pre>
+      </div>
+  </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-danger m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Servicio</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">import {{c}}} Injectable } from '@angular/core';
+<b>import {{c}}} HttpClient  } from '@angular/common/http';</b>  <abbr title="Llamar a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Injectable({{c}}}
+  providedIn: 'root'
+})
+export class TodospokemonsService {{c}}}
+
+  <b>private url: string = "https://pokeapi.co/api/v2/pokemon";</b>  <abbr title="Metemos en la variable (url) la dirección estática de la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private http: HttpClient</b> ) {{c}}} }  <abbr title="Metemos en la variable (http) las funciones necesarias para llamar a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  <b>getPokemon( nameIndex ){{c}}}  <abbr title="Función (getPokemon) donde coge un dato (nameIndex) -> ambos nombres son opcionales"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+       return  this.http.get(`${{c}}this.url}/${{c}}nameIndex}`)  <abbr title="A través del HttpClient llamamos a la función get (coger dato) y cogemos los datos de la API (dirección fija + el nombre/id/otro que introducimos)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+   }</b>
+
+}</pre>
+        </div>
+    </div>
+  </div>
+
+    </div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada0" role="tabpanel" aria-labelledby="pills-pokemonformamejorada0-tab">x</div>
+    <div class="tab-pane fade" id="pills-pokemonformamejorada0" role="tabpanel" aria-labelledby="pills-pokemonformamejorada0-tab">
+        
+        <div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Navbar.Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">x</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Navbar.Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">x</pre>
+      </div>
+  </div>
+</div>
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Un elemento.Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">x</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Un elemento.Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">x</pre>
+      </div>
+  </div>
+</div>
+
+    </div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada1" role="tabpanel" aria-labelledby="pills-pokemonformamejorada1-tab">x</div>
+    <div class="tab-pane fade" id="pills-pokemonformamejorada1" role="tabpanel" aria-labelledby="pills-pokemonformamejorada1-tab">
+        
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">x</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">x</pre>
+      </div>
+  </div>
+</div>
+
+    </div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada2" role="tabpanel" aria-labelledby="pills-pokemonformamejorada2-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada3" role="tabpanel" aria-labelledby="pills-pokemonformamejorada3-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada4" role="tabpanel" aria-labelledby="pills-pokemonformamejorada4-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada5" role="tabpanel" aria-labelledby="pills-pokemonformamejorada5-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada6" role="tabpanel" aria-labelledby="pills-pokemonformamejorada6-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada7" role="tabpanel" aria-labelledby="pills-pokemonformamejorada7-tab">x</div>
-  
-    <div class="tab-pane fade" id="pills-pokemonformamejorada8" role="tabpanel" aria-labelledby="pills-pokemonformamejorada8-tab">x</div>
+    <div class="tab-pane fade" id="pills-pokemonformamejorada2" role="tabpanel" aria-labelledby="pills-pokemonformamejorada2-tab">
+
+<div class="card-group">
+    <div class="card text-dark bg-primary m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Ts</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">x</pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-warning m-3">
+      <div class="card-header">
+          <pre class="card-text text-center"><h3>Html</h3></pre>
+      </div>
+      <div class="card-body">
+          <pre class="card-text">x</pre>
+      </div>
+  </div>
+</div>
+
+    </div>
       
   </div>
