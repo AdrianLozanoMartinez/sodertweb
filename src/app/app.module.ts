@@ -288,6 +288,8 @@ import { BootswatchComponent } from './paginas/programacion/bootswatch/bootswatc
 import { DomComponent } from './paginas/programacion/javascript/dom/dom.component';
 import { UnionapipokemonComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/unionapipokemon/unionapipokemon.component';
 import { PokemonformamejoradaComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonformamejorada/pokemonformamejorada.component';
+import { FuncionamientogitComponent } from './paginas/programacion/git/funcionamientogit/funcionamientogit.component';
+import { ConfiguraciongitComponent } from './paginas/programacion/git/configuraciongit/configuraciongit.component';
 
 
 @NgModule({
@@ -517,7 +519,9 @@ import { PokemonformamejoradaComponent } from './paginas/programacion/angular/ap
     BootswatchComponent,
     DomComponent,
     UnionapipokemonComponent,
-    PokemonformamejoradaComponent
+    PokemonformamejoradaComponent,
+    FuncionamientogitComponent,
+    ConfiguraciongitComponent
   ],
   imports: [
     //Por defecto

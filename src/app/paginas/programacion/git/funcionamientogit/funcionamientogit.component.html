@@ -1,0 +1,93 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionamientogit-tab" data-toggle="pill" href="#pills-funcionamientogit" role="tab" aria-controls="pills-funcionamientogit" aria-selected="true" style="color: black;">Configurar subida<br>+ 1º subida</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionamientogit0-tab" data-toggle="pill" href="#pills-funcionamientogit0" role="tab" aria-controls="pills-funcionamientogit0" aria-selected="false" style="color: black;">Obtener proyecto</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-funcionamientogit1-tab" data-toggle="pill" href="#pills-funcionamientogit1" role="tab" aria-controls="pills-funcionamientogit1" aria-selected="false" style="color: black;">Crear rama</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-funcionamientogit3-tab" data-toggle="pill" href="#pills-funcionamientogit3" role="tab" aria-controls="pills-funcionamientogit3" aria-selected="false" style="color: black;">Subida rápida</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content cuadro" id="pills-tabContent">
+  
+    <div class="tab-pane fade" id="pills-funcionamientogit" role="tabpanel" aria-labelledby="pills-funcionamientogit-tab">
+        
+        <div class="card-group">
+    <div class="card text-dark bg-dark m-3">
+        <div class="card-body">
+            <pre class="card-text"><ol><li><b><abbr title="Aparece: Initialized empty Git repository in E:/Documentos/Programación/Git/.git/ -> porque aún no hemos creado nada">git</abbr> init</b> -> Iniciar repositorio o clonar de alguien. DENTRO DEL PROYECTO que vamos a trabajar</li>
+<li><b><abbr title="1 archivo">git</abbr> add nombre.extensión</b> // <b><abbr title="Todos los archivos">git</abbr> add --all</b> -> <abbr title="Directorio de trabajo">Añadimos de Working Dyrectory</abbr> -> a <abbr title="Ejem: Se crea pieza del muñeco o programa, cuando se finaliza cada pieza se envía pieza a pieza al Staging Area">Staging Area</abbr></li>
+<li><b><abbr title="Añadimos comentario del Directorio de trabajo al Reposición local o Directorio de Git">git</abbr> commit -m "Comentario" // <abbr title="Si no ponemos -m Comentario">git</abbr> commit</b> (<abbr title="Área de preparación. Solo está a la espera que se le avise para enviar del directorio de trabajo al directorio de Git">Staging Area</abbr> -> nos abre el <b>editor de texto</b> -> Podemos escribir dentro, para salir y guardar (<b>ESC + :wq!</b>) (<abbr title="Ejem: Quien se encarga de coordinar cuando está listo las piezas del muñeco (piernas, brazos...) o programa y si lo está se envía a Local Repository">Pasar a Local Repository</abbr>))</li>
+<li><b>git remote add nombreDelRepositorio <a href="https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git">https://github.com/usuario/nombre-del-proyecto</a></b> -> (nombreDelRepositorio o <abbr title="1º nombre que se suele usar">origin</abbr> o <abbr title="2º nombre que se suele usar">upstream</abbr>). <abbr title="Reposición local o Directorio de Git"><b>Local Repository</b></abbr>: <abbr title="Ejem: Se recibe todas las piezas del muñeco o programa">Ejemplo</abbr></li>
+<li><b>git push -u nombreDelRepositorio master</b> -> <u>Subir el <abbr title="Prueba-Curso-Git.git u otro">proyecto</abbr> relacionado con el <abbr title="nombreDelRepositorio o origin o upstream">repositorio</abbr></u><b>. Nos pide <abbr title="Identificación de la cuenta github, una vez identificado en consola sale:
+info: please complete authentication in your browser...
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 715 bytes | 715.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git
+* [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.">identificarnos</abbr></b></li></ol></pre>
+        </div>
+    </div>
+    <div class="card text-dark bg-dark m-3">
+        <div class="card-body"><h3>Comprobar</h3>
+            <pre class="card-text"><ul>Git add...<li><b><abbr title="Estado del archivo">git</abbr> status</b> (<small><abbr title="Visual Studio - Nos informa que están listo para hacer git commit (para subirlo al Local Repository)" style="color: green;">Añadido (git add)</abbr> / <abbr title="Visual Studio - Nos informa que no están listo y debemos hacer git add (para meterlo en Staging Area)" style="color: red;">No añadido (no git add)</abbr> -> Si <b>modificamos</b> archivos se pondrá en <u>verde</u> la <u>parte </u><u>anterior</u> y en <u>rojo lo <b>nuevo</b></u> el mismo archivo, hasta que hagamos git add</small>)</li>
+Git commit -m "Comentario"<li><b><abbr title="Estado del archivo. Visual Studio - Nos informa que se ha hecho git commit y está subido al Local Repository)">git </abbr>log</b> -> <abbr title="commit 703c756a581589863bc8bb242c7ec65c34162786 (HEAD -> master) - Identificador (Y que estamos en el directorio maestro)">Log</abbr> (<abbr title="Author: Adrian Lozano {{co}}adrianlm1985@gmail.com>">Autor</abbr> / <abbr title="Date:   Mon May 3 22:32:57 2021 +0200">Día y hora</abbr> / <abbr title="Comentario">Comentario escrito</abbr> -> Arriba (Los más nuevo) - Abajo)(Lo más viejos)</li>
+Git remote add nombreDelRepositorio https://github.com/usuario/nombre-del-proyecto<li><b>git remote -v</b> -> <abbr title="origin  https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git (fetch) origin  https://github.com/AdrianLozanoMartinez/Prueba-Curso-Git.git (push)">Comprobar si está bien subido</abbr></li></ul></pre>
+        </div>
+    </div>
+</div>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-funcionamientogit0" role="tabpanel" aria-labelledby="pills-funcionamientogit0-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-dark m-3">
+                <div class="card-body">
+                    <pre class="card-text"><b>git pull nombreDelRepositorio master</b> -> Obtener archivos de Github de otros usuarios que trabajan en el mismo proyecto o modificados por uno mismo desde la web</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-funcionamientogit1" role="tabpanel" aria-labelledby="pills-funcionamientogit1-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-dark m-3">
+                <div class="card-body">
+                    <pre class="card-text"><abbr title="Para no usar la raíz"><a href="https://rogerdudler.github.io/git-guide/index.es.html"><h3>Ramas</h3></a></abbr><b>git branch -M main</b>  -> Investigar bien como funciona</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+    <div class="tab-pane fade" id="pills-funcionamientogit3" role="tabpanel" aria-labelledby="pills-funcionamientogit3-tab">
+        
+        <div class="card-group">
+            <div class="card text-dark bg-dark m-3">
+                <div class="card-body">
+                    <pre class="card-text"><h3> <small>(Una vez creado)</small></h3><ol><li><em><b>git add archivos.extensión</b></em> o <b><em>git add --all</em></b></li>
+        <li><em><b>git commit -m "comentario"</b></em></li>
+        <li><em><b>git push -u nombreDelRepositorio master</b></em> -> Nos identificamos</li></ol></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+      
+  </div>
+
+
+
+
