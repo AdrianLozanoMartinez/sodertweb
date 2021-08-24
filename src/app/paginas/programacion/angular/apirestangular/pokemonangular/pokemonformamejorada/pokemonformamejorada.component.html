@@ -126,7 +126,59 @@ export class TodospokemonsService {{c}}}
             <pre class="card-text text-center"><h3>Navbar.Ts</h3></pre>
         </div>
         <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} Router } from '@angular/router';   <abbr title="Redirigir a otra página de la web"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+import {{c}} TodospokemonsService } from '../../service/todospokemons.service';</b>  <abbr title="Servicio usado para buscar el pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+@Component({{c}}
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
+})
+export class NavbarComponent implements OnInit {{c}} 
+
+  <b>nombreDelPokemon: string   <abbr title="Usado para transformar y coger el dato que introducimos en la búsqueda y cambiarlo a minúscula u otra forma"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    urlImage: string    <abbr title="Meter luego la imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+    error2: string; </b>  <abbr title="Meter el error ocasionado"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private pokemonService: TodospokemonsService,  <abbr title="Metemos en la variable el servicio para usarlo y llamar al servio para poder a su vez llamar a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+                private route: Router</b> ) {{c}} }  <abbr title="Metemos en la variable el router para poder movernos entre página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+  }
+
+  <b>search( value: string ){{c}}  <abbr title="Función para realizar la búsqueda del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    this.error2 = "";   <abbr title="Aparezca el fallo cada vez que introducimos el dato"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.urlImage = "";  <abbr title="Coge la imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    
+    this.pokemonService.getPokemon(this.nombreDelPokemon.toLocaleLowerCase()).subscribe(   <abbr title="Llama al servicio y este a su vez a la función que llama a la API, lo cambiamos a minúscula para que de igual como lo introduzcamos pero que pueda buscarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr><abbr title="toLocaleLowerCase() -> Minúscula, toLocaleUpperCase() -> Mayúscula, toLowerCase(), toUpperCase(), valueOf(), length()"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> 
+      
+      (respuesta:any) => {{c}}   
+        
+        console.log(respuesta)
+
+      this.urlImage = respuesta.sprites.front_default  <abbr title="Metemos en la variable de la imagen, la localización de la imagen en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      
+      this.route.navigate ( ['/onlyall', respuesta.id ] ),  <abbr title="Va a la página mandando la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      {{c}}                          
+        queryParams: {{c}} params: value },  <abbr title="Coge el valor que introducimos y mediante el nombre params u otro lo cogemos en onlyall"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      };
+
+    },
+    error => {{c}}   
+      console.log(error.error);
+      
+      this.error2 = error.error   <abbr title="Metemos en la variable error2 el error que nos aparece en la API, lo sacamos cuando realizamos la búsqueda en la información que muestra la API en consola. Es un error dentro de otro error, depende la API puede haber más o menos error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    )
+  }</b>
+
+}</pre>
         </div>
     </div>
     <div class="card text-dark bg-warning m-3">
@@ -134,7 +186,26 @@ export class TodospokemonsService {{c}}}
           <pre class="card-text text-center"><h3>Navbar.Html</h3></pre>
       </div>
       <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">{{co}}nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    {{co}}div class="container-fluid">
+      <b>{{co}}a class="nav-link active" href="#">{{co}}img src="../../../assets/image/bola.jpg" width="50px">{{co}}/a></b>  <abbr title="Si pulsamos sobre la imagen vuelve al home o página elegida cuando da error, al no especificar lugar #"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}ul class="navbar-nav me-auto">
+          {{co}}li class="nav-item">
+            <b>{{co}}a class="nav-link active" href="#">Pokédex </b> <abbr title="Si pulsamos sobre la imagen vuelve al home o página elegida cuando da error, al no especificar lugar #"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}/a>
+          {{co}}/li>
+        {{co}}/ul>
+                
+      <b>{{co}}p {{f}}ngIf="error2" class="m-2">Error: {{c}}{{c}}error2}}{{co}}/p></b>  <abbr title="Error que saca en consola de la API la mostramos en el html"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      <b>{{co}}img src="{{c}}{{c}}urlImage}}"></b> <abbr title="Muestra imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      <b>{{co}}input type="text" {{t}}(ngModel)]="nombreDelPokemon" placeholder="Busca el pokemon">   <abbr title="Coge los datos introducido (ngModel)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}button {{p}}click)="search(local.value)" class="btn btn-dark" #local>Buscar{{co}}/button>  <abbr title="Al pulsar click nos llama a la función del Ts mandando el valor (value) de lo introducido (variable llamada -> local)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> </b>
+
+      {{co}}/div>
+
+  {{co}}/nav></pre>
       </div>
   </div>
 </div>
@@ -145,7 +216,115 @@ export class TodospokemonsService {{c}}}
             <pre class="card-text text-center"><h3>Un elemento.Ts</h3></pre>
         </div>
         <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">import {{co}} Component, OnInit } from '@angular/core';
+<b>import {{co}} TodospokemonsService } from '../../service/todospokemons.service';  <abbr title="Servicio llamado para mostrar un pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+import {{co}} ParamMap<abbr title="Coger y buscar el pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, ActivatedRoute <abbr title="Coge ['el dato de la API'] para poder usarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/router';  
+import {{co}} take } from 'rxjs/operators';</b>  <abbr title="Coge la 1º página, usado en paginación, AHORA MISMO NO SE USA"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{co}}
+  selector: 'app-onlyall',
+  templateUrl: './onlyall.component.html',
+  styleUrls: ['./onlyall.component.css']
+})
+export class OnlyallComponent implements OnInit {{co}}
+
+  <b>pokemon: any = '';  
+    pokemonType = [];  
+    image = '';  
+    imageback = '';  
+    height = '';
+    weight = '';
+    errorN: string;  </b>
+
+
+  constructor( <b>private pokemonService: TodospokemonsService,  <abbr title="MEtemos en la variable el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    activatedRouter: ActivatedRoute</b> ) {{co}}  <abbr title="Metemos en la variable àra coger el dato que recibimos y especialmente el dato que se encuentra en la ['id'], ['name']..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+      <b>activatedRouter.params.subscribe(  <abbr title="Cogemos lo que recibimos y nos subscribimos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        params => {{co}}
+        this.getPokemon1(params['id']);   <abbr title="Cogemos la función para coger un dato que está abajo, para coger de los datos que recibimos la id u otro dato"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+      );</b>
+
+  }  
+
+
+  ngOnInit(): void {{co}}
+    <b>this.getsearch();</b>  <abbr title="Llamamos para que se ejecute la función buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  <b>getPokemon1(id){{co}}  <abbr title="Función para coger un pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.pokemonService.getPokemon(id).subscribe(   <abbr title="Usamos el servicio para llamar a su función de conseguir todos los pokemons, pero especificando que queremos la id u otro, nos subscribimos siempre"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      res => {{co}}  
+        // console.log(res);
+        this.pokemon = res;  <abbr title="Metemos en la variable todo lo que recibimos de la API, de este modo podemos usar pokemon.id..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        // this.image = this.pokemon.sprites.front_default;     <abbr title="Metemos la imagen pixelada frontal obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        // this.imageback = this.pokemon.sprites.back_default;   <abbr title="Metemos la imagen pixelada trasera obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.image = this.pokemon.sprites.other.dream_world.front_default;   <abbr title="Metemos la imagen mejor calidad obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.pokemonType = this.pokemon.types[0].type.name;  <abbr title="Metemos en la variable el tipo. Si cogemos el 1º elemento, si cogemos el 2 sería [1]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.height = this.pokemon.height;  <abbr title="Metemos en la variable la altura que se encuentra en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.weight = this.pokemon.weight;  <abbr title="Metemos en la variable el peso que se encuentra en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</b>
+         //CAMBIAR NOMBRE A MOSTRAR
+         <b>if ( this.pokemon.types[0].type.name === 'grass' ) {{co}}  <abbr title="Si el tipo obtenido es igual a la palabra que ponemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            this.pokemonType = [' Planta'];       <abbr title="Metemos el dato [''] en la variable del tipo almacenado para mostrar en lugar del que recibimos, en este caso hacemos una traducción manual u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }else if ( this.pokemon.types[0].type.name === 'bug' ) {{co}}
+          this.pokemonType = [' Bicho'];
+        }else if ( this.pokemon.types[0].type.name === 'water' ) {{co}}
+          this.pokemonType = [' Agua'];
+        }else if ( this.pokemon.types[0].type.name === 'fire' ) {{co}}
+          this.pokemonType = [' Fuego'];
+        }else if ( this.pokemon.types[0].type.name === 'poison' ) {{co}}
+          this.pokemonType = [' Veneno'];
+        }else if ( this.pokemon.types[0].type.name === 'ground' ) {{co}}
+          this.pokemonType = [' Tierra'];
+        }else if ( this.pokemon.types[0].type.name === 'electric' ) {{co}}
+          this.pokemonType = [' Eléctrico'];
+        }else if ( this.pokemon.types[0].type.name === 'fairy' ) {{co}}
+          this.pokemonType = [' Hada'];
+        }else if ( this.pokemon.types[0].type.name === 'rock' ) {{co}}
+          this.pokemonType = [' Roca'];
+        }else if ( this.pokemon.types[0].type.name === 'fighting' ) {{co}}
+          this.pokemonType = [' Lucha'];
+        }else if ( this.pokemon.types[0].type.name === 'psychic' ) {{co}}
+          this.pokemonType = [' Psíquico'];
+        }else if ( this.pokemon.types[0].type.name === 'ghost' ) {{co}}
+          this.pokemonType = [' Fantasma'];
+        }else if ( this.pokemon.types[0].type.name === 'ice' ) {{co}}
+          this.pokemonType = [' Hielo'];
+        }else if ( this.pokemon.types[0].type.name === 'dragon' ) {{co}}
+          this.pokemonType = [' Dragón'];
+        }else if ( this.pokemon.types[0].type.name === 'steel' ) {{co}}
+          this.pokemonType = [' Acero'];
+        }else if ( this.pokemon.types[0].type.name === 'dark' ) {{co}}
+          this.pokemonType = [' Oscuro'];
+        }else if ( this.pokemon.types[0].type.name === 'flying' ) {{co}}
+          this.pokemonType = [' Volador'];
+        }else if ( this.pokemon.types[0].type.name === 'normal' ) {{co}}
+          this.pokemonType = [' Normal'];
+        }
+      },
+      err => {{co}}   <abbr title="Si da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log(err);
+        this.errorN = err.error  <abbr title="Muestra el error de la API y se almacena en la variable para usarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }
+    );
+  }</b>
+
+//Buscar
+  <b>private getsearch():void{{co}}    <abbr title="Función para buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+    this.activatedRouter.queryParams.pipe(  <abbr title="Poder coger y buscar el dato en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      take(1) <abbr title="take(1) -> no es necesario en este en otro si"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>).subscribe( (RecibeParams: ParamMap) => {{co}}  <abbr title="ParamMap -> Debe ser igual que en la búsqueda para coger y usar el dato para búsqueda"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log('Params -> ', RecibeParams );
+        
+        this.pokemon = RecibeParams['params'];  <abbr title="Metemos en la variable pokemon lo que recibimos de la búsqueda ... ['Cogemos el valor introducimos en la búsqueda']"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      })
+  
+  }</b>
+
+}</pre>
         </div>
     </div>
     <div class="card text-dark bg-warning m-3">
@@ -153,7 +332,24 @@ export class TodospokemonsService {{c}}}
           <pre class="card-text text-center"><h3>Un elemento.Html</h3></pre>
       </div>
       <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">{{co}}div class="row justify-content-center mt-5">
+    {{co}}div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-5">
+
+        {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="!errorN"</b><abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}pokemon?.id}}</b>º  <b>{{c}}{{c}}pokemon?.name}}</b>{{co}}/h5>  <abbr title="Ponemos ? para que no de error en la consola, ya que significa que sino existe no es obligatorio de mostrar. Muestra la id y nombre del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}img class="hunter" <b>{{f}}ngIf="errorN" <abbr title="Si hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> src="../../../assets/image/hunter.png"</b>>  <abbr title="Muestra una imagen que hemos usado para error con efecto de css"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="errorN" <abbr title="Si hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>Ups! algo ha fallado: {{c}}{{c}}errorN}}</b>{{co}}/h5>  <abbr title="Muestra un texto que hemos usado para error con efecto de css"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                {{co}}img src="<b>{{c}}{{c}}image}</b>}" class="d-block w-100 mt-5" alt="...">  <abbr title="Muestra la imagen obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>Tipo: <b>{{c}}{{c}}pokemonType}}</b>{{co}}/span> <abbr title="Muestra el tipo obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}weight}}</b> g{{co}}/span> <abbr title="Muestra el peso obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}height}}</b> cm{{co}}/span> <abbr title="Muestra el tamaño obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          
+    {{co}}/div>
+{{co}}/div>
+ 
+{{co}}button <b>{{t}}routerLink]="['/home']"</b> class="btn btn-primary" type="button">Ir atrás...{{co}}/button></pre>
       </div>
   </div>
 </div>
@@ -168,7 +364,104 @@ export class TodospokemonsService {{c}}}
             <pre class="card-text text-center"><h3>Ts</h3></pre>
         </div>
         <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
+<b>import {{c}} TodospokemonsService } from '../../service/todospokemons.service';</b>  <abbr title="Llama al servicio para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+
+@Component({{c}}
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {{c}}
+
+   <b>pokemon: string [] = [];  <abbr title="Mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    image:string;  <abbr title="Muestra imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    errorN: string;</b>  <abbr title="Muestra error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private servicioPokemon: TodospokemonsService</b> ) {{c}} }  <abbr title="Usar servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  ngOnInit(): void {{c}}
+    <b>this.getTodos();</b>  <abbr title="Llama a la función que muestra todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+  }
+
+  <b>getTodos(){{c}}  <abbr title="Función para mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    let pokemonData;   <abbr title="Variable donde metemos todos los datos de los pokemons y lo vamos acumulando para mostrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    for (let i=1; i {{co}}= 898; i++ ){{c}}   <abbr title="For para recorrer todos los pokemons que existen y poder coger la información"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+      
+      this.servicioPokemon.getPokemon(i).subscribe( (resp:any) => {{c}}  <abbr title="Llama a la API a través de la función del servicio, cogiendo la id/name... (i del for)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+         pokemonData = {{c}}  <abbr title="Arreglo para meter todos los datos que usaremos de los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           position: resp.id, <abbr title="Metemos en la variable posicion, lo que recibimos (res u otro nombre) especificando (igual que en la API -> id) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           image: resp.sprites.front_default,  <abbr title="Metemos en la variable image, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.front_default) el dato que queremos obtener. Peor imagen   -> Mantengo esta para poner la imagen delantera y trasera"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          //image: resp.sprites.other.dream_world.front_default, <abbr title="Metemos en la variable image, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.other.dream_world.front_default) el dato que queremos obtener. Mejor imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           imageback: resp.sprites.back_default,  <abbr title="Metemos en la variable imageback, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.back_default) el dato que queremos obtener. Peor imagen   -> Mantengo esta para poner la imagen delantera y trasera"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           name: resp.name,  <abbr title="Metemos en la variable name, lo que recibimos (res u otro nombre) especificando (igual que en la API -> name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           weight: resp.weight, <abbr title="Metemos en la variable name, lo que recibimos (res u otro nombre) especificando (igual que en la API -> name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  
+           id: resp.id, <abbr title="Metemos en la variable id, lo que recibimos (res u otro nombre) especificando (igual que en la API -> id) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           height: resp.height, <abbr title="Metemos en la variable height, lo que recibimos (res u otro nombre) especificando (igual que en la API -> height) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           types0: resp.types[0].type.name, <abbr title="Metemos en la variable types0, lo que recibimos (res u otro nombre) especificando (igual que en la API -> types[0].type.name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>    //Si cogemos el 1º elemento, si cogemos el 2 sería [1]
+         };
+          this.pokemon.push(pokemonData);  <abbr title="Metemos en la variable pokemon: string [] = []; con push lo que metemos en pokemonData"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</b>
+        //CAMBIAR NOMBRE A MOSTRAR
+         <b>if ( resp.types[0].type.name === 'grass' ) {{c}}  <abbr title="Si el tipo obtenido es igual a la palabra que ponemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          pokemonData.types0 = [' Planta'];   <abbr title="Metemos el dato [''] en la variable del tipo almacenado para mostrar en lugar del que recibimos, en este caso hacemos una traducción manual u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+         }else if ( resp.types[0].type.name === 'bug' ) {{c}}
+          pokemonData.types0 = [' Bicho'];
+        }else if ( resp.types[0].type.name === 'water' ) {{c}}
+          pokemonData.types0 = [' Agua'];
+        }else if ( resp.types[0].type.name === 'fire' ) {{c}}
+          pokemonData.types0 = [' Fuego'];
+        }else if ( resp.types[0].type.name === 'poison' ) {{c}}
+          pokemonData.types0 = [' Veneno'];
+        }else if ( resp.types[0].type.name === 'ground' ) {{c}}
+          pokemonData.types0 = [' Tierra'];
+        }else if ( resp.types[0].type.name === 'electric' ) {{c}}
+          pokemonData.types0 = [' Eléctrico'];
+        }else if ( resp.types[0].type.name === 'fairy' ) {{c}}
+          pokemonData.types0 = [' Hada'];
+        }else if ( resp.types[0].type.name === 'rock' ) {{c}}
+          pokemonData.types0 = [' Roca'];
+        }else if ( resp.types[0].type.name === 'fighting' ) {{c}}
+          pokemonData.types0 = [' Lucha'];
+        }else if ( resp.types[0].type.name === 'psychic' ) {{c}}
+          pokemonData.types0 = [' Psíquico'];
+        }else if ( resp.types[0].type.name === 'ghost' ) {{c}}
+          pokemonData.types0 = [' Fantasma'];
+        }else if ( resp.types[0].type.name === 'ice' ) {{c}}
+          pokemonData.types0 = [' Hielo'];
+        }else if ( resp.types[0].type.name === 'dragon' ) {{c}}
+          pokemonData.types0 = [' Dragón'];
+        }else if ( resp.types[0].type.name === 'steel' ) {{c}}
+          pokemonData.types0 = [' Acero'];
+        }else if ( resp.types[0].type.name === 'dark' ) {{c}}
+          pokemonData.types0 = [' Oscuro'];
+        }else if ( resp.types[0].type.name === 'flying' ) {{c}}
+          pokemonData.types0 = [' Volador'];
+        }else if ( resp.types[0].type.name === 'normal' ) {{c}}
+          pokemonData.types0 = [' Normal'];
+        }
+
+      },
+      
+    error => {{c}}  <abbr title="Si hay error se ejecuta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      console.log(error.error);
+      this.errorN = error.error  <abbr title="Metemos en la variable el error obtenido, se pone el nombre que quiera (error u otro) más punto y los errores dentro de otros errores tal y como sale en la API, en este caso solo un error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    }
+    
+    
+    );
+  }
+
+}</b>
+
+  
+}</pre>
         </div>
     </div>
     <div class="card text-dark bg-warning m-3">
@@ -176,7 +469,37 @@ export class TodospokemonsService {{c}}}
           <pre class="card-text text-center"><h3>Html</h3></pre>
       </div>
       <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">{{co}}div class="row justify-content-center mt-5">
+  {{co}}div class="col-6">
+
+    {{co}}img class="hunter mt-5" <b>{{f}}ngIf="errorN"</b> src="../../../assets/image/hunter.png">  <abbr title="Si existe un error mostrar imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="errorN"</b>>Ups! algo ha fallado: <b>{{c}}{{c}}errorN}}</b>{{co}}/h5>  <abbr title="Si existe un error mostrar texto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    {{co}}table class="table table-hover table-dark justify-content-center" <b>{{f}}ngIf="!errorN"</b>>  <abbr title="Si no existe un error mostrar todo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}thead>
+          {{co}}tr>
+            {{co}}!-- {{co}}th scope="col">Id{{co}}/th> -->
+            {{co}}th scope="col" class="centrar">Nombre{{co}}/th>
+            {{co}}th scope="col" class="centrar">Imagen{{co}}/th>
+            {{co}}!-- {{co}}th scope="col">Peso{{co}}/th>
+            {{co}}th scope="col">Altura{{co}}/th>-->
+            {{co}}th scope="col" class="centrar">Tipos{{co}}/th> 
+          {{co}}/tr>
+        {{co}}/thead>
+        {{co}}tbody>
+          {{co}}tr class="table-light" <b>{{f}}ngFor="let pok of pokemon"</b>>  <abbr title="For para mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}!-- {{co}}td><b>{{c}}{{c}}pok.id}}</b>{{co}}/td> -->  <abbr title="Muestra id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}th scope="row" class="centrar">{{co}}a <b>{{t}}routerLink]="['/onlyall', pok.id]</b>"><b>{{c}}{{c}}pok.name}}</b>{{co}}/a>{{co}}/th>  <abbr title="Muestra nombre y si pulsamos nos lleva a la página individual del pokemon, porque cogemos la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td class="centrar">{{co}}a <b>{{t}}routerLink]="['/onlyall', pok.id]</b>">{{co}}img src="<b>{{c}}{{c}}pok.imageback}}</b>">{{co}}img src="<b>{{c}}{{c}}pok.image}}</b>">{{co}}/a>{{co}}/td>  <abbr title="Muestra imagen trasera y frontal y si pulsamos nos lleva a la página individual del pokemon, porque cogemos la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}!-- {{co}}td><b>{{c}}{{c}}pok.weight}}</b> g{{co}}/td>  <abbr title="Muestra peso"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td><b>{{c}}{{c}}pok.height}}</b> cm{{co}}/td> -->  <abbr title="Muestra altura"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td class="centrar"><b>{{c}}{{c}}pok.types0}}</b>{{co}}/td>  <abbr title="Muestra tipo: fuego, agua..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          {{co}}/tr>
+        {{co}}/tbody>
+      {{co}}/table>
+
+    {{co}}/div>
+  {{co}}/div></pre>
       </div>
   </div>
 </div>
@@ -188,18 +511,143 @@ export class TodospokemonsService {{c}}}
 <div class="card-group">
     <div class="card text-dark bg-primary m-3">
         <div class="card-header">
-            <pre class="card-text text-center"><h3>Ts</h3></pre>
+            <pre class="card-text text-center"><h3>Un elemento.Ts</h3></pre>
         </div>
         <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">import {{co}} Component, OnInit } from '@angular/core';
+<b>import {{co}} TodospokemonsService } from '../../service/todospokemons.service';  <abbr title="Servicio llamado para mostrar un pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+import {{co}} ParamMap<abbr title="Coger y buscar el pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>, ActivatedRoute <abbr title="Coge ['el dato de la API'] para poder usarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> } from '@angular/router';  
+import {{co}} take } from 'rxjs/operators';</b>  <abbr title="Coge la 1º página, usado en paginación, AHORA MISMO NO SE USA"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+@Component({{co}}
+  selector: 'app-onlyall',
+  templateUrl: './onlyall.component.html',
+  styleUrls: ['./onlyall.component.css']
+})
+export class OnlyallComponent implements OnInit {{co}}
+
+  <b>pokemon: any = '';  
+    pokemonType = [];  
+    image = '';  
+    imageback = '';  
+    height = '';
+    weight = '';
+    errorN: string;  </b>
+
+
+  constructor( <b>private pokemonService: TodospokemonsService,  <abbr title="MEtemos en la variable el servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    activatedRouter: ActivatedRoute</b> ) {{co}}  <abbr title="Metemos en la variable àra coger el dato que recibimos y especialmente el dato que se encuentra en la ['id'], ['name']..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    
+      <b>activatedRouter.params.subscribe(  <abbr title="Cogemos lo que recibimos y nos subscribimos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        params => {{co}}
+        this.getPokemon1(params['id']);   <abbr title="Cogemos la función para coger un dato que está abajo, para coger de los datos que recibimos la id u otro dato"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }
+      );</b>
+
+  }  
+
+
+  ngOnInit(): void {{co}}
+    <b>this.getsearch();</b>  <abbr title="Llamamos para que se ejecute la función buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  }
+
+  <b>getPokemon1(id){{co}}  <abbr title="Función para coger un pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.pokemonService.getPokemon(id).subscribe(   <abbr title="Usamos el servicio para llamar a su función de conseguir todos los pokemons, pero especificando que queremos la id u otro, nos subscribimos siempre"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      res => {{co}}  
+        // console.log(res);
+        this.pokemon = res;  <abbr title="Metemos en la variable todo lo que recibimos de la API, de este modo podemos usar pokemon.id..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        // this.image = this.pokemon.sprites.front_default;     <abbr title="Metemos la imagen pixelada frontal obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        // this.imageback = this.pokemon.sprites.back_default;   <abbr title="Metemos la imagen pixelada trasera obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.image = this.pokemon.sprites.other.dream_world.front_default;   <abbr title="Metemos la imagen mejor calidad obtenida en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.pokemonType = this.pokemon.types[0].type.name;  <abbr title="Metemos en la variable el tipo. Si cogemos el 1º elemento, si cogemos el 2 sería [1]"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.height = this.pokemon.height;  <abbr title="Metemos en la variable la altura que se encuentra en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.weight = this.pokemon.weight;  <abbr title="Metemos en la variable el peso que se encuentra en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+</b>
+         //CAMBIAR NOMBRE A MOSTRAR
+         <b>if ( this.pokemon.types[0].type.name === 'grass' ) {{co}}  <abbr title="Si el tipo obtenido es igual a la palabra que ponemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            this.pokemonType = [' Planta'];       <abbr title="Metemos el dato [''] en la variable del tipo almacenado para mostrar en lugar del que recibimos, en este caso hacemos una traducción manual u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        }else if ( this.pokemon.types[0].type.name === 'bug' ) {{co}}
+          this.pokemonType = [' Bicho'];
+        }else if ( this.pokemon.types[0].type.name === 'water' ) {{co}}
+          this.pokemonType = [' Agua'];
+        }else if ( this.pokemon.types[0].type.name === 'fire' ) {{co}}
+          this.pokemonType = [' Fuego'];
+        }else if ( this.pokemon.types[0].type.name === 'poison' ) {{co}}
+          this.pokemonType = [' Veneno'];
+        }else if ( this.pokemon.types[0].type.name === 'ground' ) {{co}}
+          this.pokemonType = [' Tierra'];
+        }else if ( this.pokemon.types[0].type.name === 'electric' ) {{co}}
+          this.pokemonType = [' Eléctrico'];
+        }else if ( this.pokemon.types[0].type.name === 'fairy' ) {{co}}
+          this.pokemonType = [' Hada'];
+        }else if ( this.pokemon.types[0].type.name === 'rock' ) {{co}}
+          this.pokemonType = [' Roca'];
+        }else if ( this.pokemon.types[0].type.name === 'fighting' ) {{co}}
+          this.pokemonType = [' Lucha'];
+        }else if ( this.pokemon.types[0].type.name === 'psychic' ) {{co}}
+          this.pokemonType = [' Psíquico'];
+        }else if ( this.pokemon.types[0].type.name === 'ghost' ) {{co}}
+          this.pokemonType = [' Fantasma'];
+        }else if ( this.pokemon.types[0].type.name === 'ice' ) {{co}}
+          this.pokemonType = [' Hielo'];
+        }else if ( this.pokemon.types[0].type.name === 'dragon' ) {{co}}
+          this.pokemonType = [' Dragón'];
+        }else if ( this.pokemon.types[0].type.name === 'steel' ) {{co}}
+          this.pokemonType = [' Acero'];
+        }else if ( this.pokemon.types[0].type.name === 'dark' ) {{co}}
+          this.pokemonType = [' Oscuro'];
+        }else if ( this.pokemon.types[0].type.name === 'flying' ) {{co}}
+          this.pokemonType = [' Volador'];
+        }else if ( this.pokemon.types[0].type.name === 'normal' ) {{co}}
+          this.pokemonType = [' Normal'];
+        }
+      },
+      err => {{co}}   <abbr title="Si da error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log(err);
+        this.errorN = err.error  <abbr title="Muestra el error de la API y se almacena en la variable para usarla"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      }
+    );
+  }</b>
+
+//Buscar
+  <b>private getsearch():void{{co}}    <abbr title="Función para buscar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  
+    this.activatedRouter.queryParams.pipe(  <abbr title="Poder coger y buscar el dato en la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      take(1) <abbr title="take(1) -> no es necesario en este en otro si"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>).subscribe( (RecibeParams: ParamMap) => {{co}}  <abbr title="ParamMap -> Debe ser igual que en la búsqueda para coger y usar el dato para búsqueda"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        console.log('Params -> ', RecibeParams );
+        
+        this.pokemon = RecibeParams['params'];  <abbr title="Metemos en la variable pokemon lo que recibimos de la búsqueda ... ['Cogemos el valor introducimos en la búsqueda']"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+      })
+  
+  }</b>
+
+}</pre>
         </div>
     </div>
-    <div class="card text-dark bg-warning m-3">
+        <div class="card text-dark bg-warning m-3">
       <div class="card-header">
-          <pre class="card-text text-center"><h3>Html</h3></pre>
+          <pre class="card-text text-center"><h3>Un elemento.Html</h3></pre>
       </div>
       <div class="card-body">
-          <pre class="card-text">x</pre>
+          <pre class="card-text">{{co}}div class="row justify-content-center mt-5">
+    {{co}}div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-5">
+
+        {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="!errorN"</b><abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}pokemon?.id}}</b>º  <b>{{c}}{{c}}pokemon?.name}}</b>{{co}}/h5>  <abbr title="Ponemos ? para que no de error en la consola, ya que significa que sino existe no es obligatorio de mostrar. Muestra la id y nombre del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}img class="hunter" <b>{{f}}ngIf="errorN" <abbr title="Si hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> src="../../../assets/image/hunter.png"</b>>  <abbr title="Muestra una imagen que hemos usado para error con efecto de css"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="errorN" <abbr title="Si hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>Ups! algo ha fallado: {{c}}{{c}}errorN}}</b>{{co}}/h5>  <abbr title="Muestra un texto que hemos usado para error con efecto de css"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+                {{co}}img src="<b>{{c}}{{c}}image}</b>}" class="d-block w-100 mt-5" alt="...">  <abbr title="Muestra la imagen obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>>Tipo: <b>{{c}}{{c}}pokemonType}}</b>{{co}}/span> <abbr title="Muestra el tipo obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}weight}}</b> g{{co}}/span> <abbr title="Muestra el peso obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}span class="badge rounded-pill bg-danger mx-3" <b>{{f}}ngIf="!errorN"</b> <abbr title="Si no hay error muestra esto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>><b>{{c}}{{c}}height}}</b> cm{{co}}/span> <abbr title="Muestra el tamaño obtenida del pokemon"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          
+    {{co}}/div>
+{{co}}/div>
+ 
+{{co}}button <b>{{t}}routerLink]="['/home']"</b> class="btn btn-primary" type="button">Ir atrás...{{co}}/button></pre>
       </div>
   </div>
 </div>
