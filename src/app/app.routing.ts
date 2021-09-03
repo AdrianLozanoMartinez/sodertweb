@@ -84,6 +84,7 @@ import { CharacterDetailsComponent } from './paginas/programacion/angular/apires
 import { PokemondetalleComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemondetalle/pokemondetalle.component';
 import { Reactivov2p1Component } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p1/reactivov2p1.component';
 import { Reactivov2pComponent } from './paginas/programacion/angular/formularioangularprincipal/formularioangulargeneral/reactivoformularioangular/reactivoformangularvalidar/reactivov2p/reactivov2p.component';
+import { UnoalgomejorComponent } from './paginas/programacion/angular/apirestangular/pokemonalgomejor/unoalgomejor/unoalgomejor.component';
 
 //Programacion - Hosting
 import { HostinggeneralComponent } from './paginas/programacion/hostinggeneral/hostinggeneral.component';
@@ -234,6 +235,7 @@ export const appRoutes: Routes = [
   { path: 'pokemondetalle/:id', component: PokemondetalleComponent},
   { path: 'passss', component: Reactivov2p1Component},
   { path: 'personalizar', component: Reactivov2pComponent},
+  { path: 'unoalgomejor/:id', component: UnoalgomejorComponent},
   //Programacion - Hosting
   { path: 'hostinggeneral', component: HostinggeneralComponent},
   //Programacion - Firebase

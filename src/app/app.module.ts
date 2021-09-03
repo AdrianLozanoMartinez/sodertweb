@@ -290,6 +290,11 @@ import { UnionapipokemonComponent } from './paginas/programacion/angular/apirest
 import { PokemonformamejoradaComponent } from './paginas/programacion/angular/apirestangular/pokemonangular/pokemonformamejorada/pokemonformamejorada.component';
 import { FuncionamientogitComponent } from './paginas/programacion/git/funcionamientogit/funcionamientogit.component';
 import { ConfiguraciongitComponent } from './paginas/programacion/git/configuraciongit/configuraciongit.component';
+import { TodosalgomejorComponent } from './paginas/programacion/angular/apirestangular/pokemonalgomejor/todosalgomejor/todosalgomejor.component';
+import { UnoalgomejorComponent } from './paginas/programacion/angular/apirestangular/pokemonalgomejor/unoalgomejor/unoalgomejor.component';
+import { BuscaralgomejorComponent } from './paginas/programacion/angular/apirestangular/pokemonalgomejor/buscaralgomejor/buscaralgomejor.component';
+import { TodopaginarComponent } from './paginas/programacion/angular/apirestangular/pokemonmejorpaginacion/todopaginar/todopaginar.component';
+import { PokemonmejorpaginacionComponent } from './paginas/programacion/angular/apirestangular/pokemonmejorpaginacion/pokemonmejorpaginacion.component';
 
 
 @NgModule({
@@ -521,7 +526,12 @@ import { ConfiguraciongitComponent } from './paginas/programacion/git/configurac
     UnionapipokemonComponent,
     PokemonformamejoradaComponent,
     FuncionamientogitComponent,
-    ConfiguraciongitComponent
+    ConfiguraciongitComponent,
+    TodosalgomejorComponent,
+    UnoalgomejorComponent,
+    BuscaralgomejorComponent,
+    TodopaginarComponent,
+    PokemonmejorpaginacionComponent
   ],
   imports: [
     //Por defecto

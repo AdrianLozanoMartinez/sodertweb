@@ -1,23 +1,25 @@
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada-tab" data-toggle="pill" href="#pills-pokemonformamejorada" role="tab" aria-controls="pills-pokemonformamejorada" aria-selected="true" style="color: black;">Module/Servicio</a>
+        <a class="nav-link" id="pills-pokemonpaginacionmejor-tab" data-toggle="pill" href="#pills-pokemonpaginacionmejor" role="tab" aria-controls="pills-pokemonpaginacionmejor" aria-selected="true" style="color: black;">Module/Servicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada0-tab" data-toggle="pill" href="#pills-pokemonformamejorada0" role="tab" aria-controls="pills-pokemonformamejorada0" aria-selected="false" style="color: black;">Búsqueda</a>
+        <a class="nav-link" id="pills-pokemonpaginacionmejor0-tab" data-toggle="pill" href="#pills-pokemonpaginacionmejor0" role="tab" aria-controls="pills-pokemonpaginacionmejor0" aria-selected="false" style="color: black;">Búsqueda</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-pokemonformamejorada1-tab" data-toggle="pill" href="#pills-pokemonformamejorada1" role="tab" aria-controls="pills-pokemonformamejorada1" aria-selected="false" style="color: black;">Mostrar Todo</a>
+        <a class="nav-link" id="pills-pokemonpaginacionmejor1-tab" data-toggle="pill" href="#pills-pokemonpaginacionmejor1" role="tab" aria-controls="pills-pokemonpaginacionmejor1" aria-selected="false" style="color: black;">Mostrar Todo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-pokemonformamejorada2-tab" data-toggle="pill" href="#pills-pokemonformamejorada2" role="tab" aria-controls="pills-pokemonformamejorada2" aria-selected="false" style="color: black;">Mostrar Uno</a>
+      <a class="nav-link" id="pills-pokemonpaginacionmejor2-tab" data-toggle="pill" href="#pills-pokemonpaginacionmejor2" role="tab" aria-controls="pills-pokemonpaginacionmejor2" aria-selected="false" style="color: black;">Mostrar Uno</a>
     </li>
   </ul>
   
   <div class="tab-content cuadro" id="pills-tabContent">
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada" role="tabpanel" aria-labelledby="pills-pokemonformamejorada-tab">
+    <div class="tab-pane fade" id="pills-pokemonpaginacionmejor" role="tabpanel" aria-labelledby="pills-pokemonpaginacionmejor-tab">
         
-<div class="card-group">
+        <p>1º Instalamos paginación: <b>npm install ngx-pagination --save</b></p>
+
+        <div class="card-group">
     <div class="card text-dark bg-danger m-3">
         <div class="card-header">
             <pre class="card-text text-center"><h3>Module.ts</h3></pre>
@@ -39,6 +41,8 @@ import {{c}} FootComponent } from './component/foot/foot.component';
 import {{c}} NavbarComponent } from './component/navbar/navbar.component';
 import {{c}} OnlyallComponent } from './page/onlyall/onlyall.component';
 
+//Paginación
+<b>import {{c}} NgxPaginationModule } from 'ngx-pagination';</b>
 
 @NgModule({{c}}
   declarations: [
@@ -54,6 +58,8 @@ import {{c}} OnlyallComponent } from './page/onlyall/onlyall.component';
     RouterModule.forRoot( ROUTES, {{c}} useHash: true } ),
     <b>HttpClientModule,
     FormsModule,</b>
+    //Paginación
+    <b>NgxPaginationModule</b>
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -105,6 +111,13 @@ export class TodospokemonsService {{c}}}
 
   constructor( <b>private http: HttpClient</b> ) {{c}}} }  <abbr title="Metemos en la variable (http) las funciones necesarias para llamar a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
+  //Mostrar todo con paginación
+  <b>getTODOSPokemon( limit: number, offset: number ){{c}}  <abbr title="Para coger el límite, y la cantidad que se va a mostrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+    return  this.http.get(`${{c}}this.url}?limit=${{c}}limit}&offset=${{c}}offset}`);
+  }</b>
+
+  //Búsqueda e individual. Sin paginación funciona para que aparezca todos
   <b>getPokemon( nameIndex ){{c}}}  <abbr title="Función (getPokemon) donde coge un dato (nameIndex) -> ambos nombres son opcionales"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
        return  this.http.get(`${{c}}this.url}/${{c}}nameIndex}`)  <abbr title="A través del HttpClient llamamos a la función get (coger dato) y cogemos los datos de la API (dirección fija + el nombre/id/otro que introducimos)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
@@ -118,10 +131,9 @@ export class TodospokemonsService {{c}}}
 
     </div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada0" role="tabpanel" aria-labelledby="pills-pokemonformamejorada0-tab">
-        
+    <div class="tab-pane fade" id="pills-pokemonpaginacionmejor0" role="tabpanel" aria-labelledby="pills-pokemonpaginacionmejor0-tab">
     
-               <app-buscaralgomejor></app-buscaralgomejor>
+        <app-buscaralgomejor></app-buscaralgomejor>
 
 
         <div class="card-group">
@@ -358,22 +370,22 @@ export class OnlyallComponent implements OnInit {{co}}
   </div>
 </div>
 
-    </div>
+</div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada1" role="tabpanel" aria-labelledby="pills-pokemonformamejorada1-tab">
+    <div class="tab-pane fade" id="pills-pokemonpaginacionmejor1" role="tabpanel" aria-labelledby="pills-pokemonpaginacionmejor1-tab">
+       
+        <div class="card-group">
+            <div class="card m-3">
+                <div class="card-header bg-danger">
+                    <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
+                </div>
+                <div class="c.ard-body">
         
-      <div class="card-group">
-        <div class="card m-3">
-            <div class="card-header bg-danger">
-                <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
-            </div>
-            <div class="c.ard-body">
-    
-                Debajo del código porque es muy largo
-    
+                    <app-todopaginar></app-todopaginar>
+        
+                </div>
             </div>
         </div>
-    </div>
 
 <div class="card-group">
     <div class="card text-dark bg-primary m-3">
@@ -382,8 +394,7 @@ export class OnlyallComponent implements OnInit {{co}}
         </div>
         <div class="card-body">
           <pre class="card-text">import {{c}} Component, OnInit } from '@angular/core';
-<b>import {{c}} TodospokemonsService } from '../../service/todospokemons.service';</b>  <abbr title="Llama al servicio para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
+<b>import {{c}} TodospokemonsService } from '../../service/todospokemons.service';</b>  <abbr title="Llamar al servicio que llama a la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
 @Component({{c}}
   selector: 'app-home',
@@ -393,91 +404,37 @@ export class OnlyallComponent implements OnInit {{co}}
 export class HomeComponent implements OnInit {{c}}
 
    <b>pokemon: string [] = [];  <abbr title="Mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    image:string;  <abbr title="Muestra imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    errorN: string;</b>  <abbr title="Muestra error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   image:string;  <abbr title="Mostrar imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   errorN: string;</b>  <abbr title="Mostrar error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-  constructor( <b>private servicioPokemon: TodospokemonsService</b> ) {{c}} }  <abbr title="Usar servicio"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   //Paginacion
+   <b>paginaCoge=1;  <abbr title="Comience por la 1º página"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+   totalpokemons: number;</b>  <abbr title="El número total de página con todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+  constructor( <b>private servicioPokemon: TodospokemonsService</b> ) {{c}} }  <abbr title="Usar el servicio para usar la API"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
   ngOnInit(): void {{c}}
-    <b>this.getTodos();</b>  <abbr title="Llama a la función que muestra todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    
+    <b>this.getTodos();</b>  <abbr title="Llama la función que llama a todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
   }
 
-  <b>getTodos(){{c}}  <abbr title="Función para mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+  <b>getTodos(){{c}}
 
-    let pokemonData;   <abbr title="Variable donde metemos todos los datos de los pokemons y lo vamos acumulando para mostrar"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    this.servicioPokemon.getTODOSPokemon(10, this.paginaCoge + 0).subscribe ((resp: any) =>{{c}}  <abbr title="Llama a la función del servicio, mostrando cada 10, cogiendo de base 1º página y a través del html va añadiendo la siguiente página o la última..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+ 
+      this.totalpokemons = resp.count;  <abbr title="Cada respuesta va sumando al totalpokemons para saber cuantas páginas tenemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+ 
+      resp.results.forEach(result => {{c}}  <abbr title="Lo que recibimos, especialmente el results (que lo obtenemos de la API), lo recorremos con un forEach (igual que for i>100; i++ etc) pero sin definir número"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        this.servicioPokemon.getPokemon(result.name).subscribe((uniqResponse: any) => {{c}} <abbr title="Del servicio cogemos la función de un solo pokemon, para obtener el nombre e ir añadiendo con push a la variable pokemon y de ese modo pode rmostrarlo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          this.pokemon.push(uniqResponse);  <abbr title="Metemos con push a pokemon todo lo que recibimos y mostramos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          console.log(this.pokemon);
+          
+        });
+      });
+    });
+ 
+  }</b>
 
-    for (let i=1; i {{co}}= 898; i++ ){{c}}   <abbr title="For para recorrer todos los pokemons que existen y poder coger la información"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-      
-      this.servicioPokemon.getPokemon(i).subscribe( (resp:any) => {{c}}  <abbr title="Llama a la API a través de la función del servicio, cogiendo la id/name... (i del for)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-
-         pokemonData = {{c}}  <abbr title="Arreglo para meter todos los datos que usaremos de los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           position: resp.id, <abbr title="Metemos en la variable posicion, lo que recibimos (res u otro nombre) especificando (igual que en la API -> id) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           image: resp.sprites.front_default,  <abbr title="Metemos en la variable image, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.front_default) el dato que queremos obtener. Peor imagen   -> Mantengo esta para poner la imagen delantera y trasera"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-          //image: resp.sprites.other.dream_world.front_default, <abbr title="Metemos en la variable image, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.other.dream_world.front_default) el dato que queremos obtener. Mejor imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           imageback: resp.sprites.back_default,  <abbr title="Metemos en la variable imageback, lo que recibimos (res u otro nombre) especificando (igual que en la API -> sprites.back_default) el dato que queremos obtener. Peor imagen   -> Mantengo esta para poner la imagen delantera y trasera"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           name: resp.name,  <abbr title="Metemos en la variable name, lo que recibimos (res u otro nombre) especificando (igual que en la API -> name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           weight: resp.weight, <abbr title="Metemos en la variable name, lo que recibimos (res u otro nombre) especificando (igual que en la API -> name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>  
-           id: resp.id, <abbr title="Metemos en la variable id, lo que recibimos (res u otro nombre) especificando (igual que en la API -> id) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           height: resp.height, <abbr title="Metemos en la variable height, lo que recibimos (res u otro nombre) especificando (igual que en la API -> height) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-           types0: resp.types[0].type.name, <abbr title="Metemos en la variable types0, lo que recibimos (res u otro nombre) especificando (igual que en la API -> types[0].type.name) el dato que queremos obtener"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>    //Si cogemos el 1º elemento, si cogemos el 2 sería [1]
-         };
-          this.pokemon.push(pokemonData);  <abbr title="Metemos en la variable pokemon: string [] = []; con push lo que metemos en pokemonData"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-</b>
-        //CAMBIAR NOMBRE A MOSTRAR
-         <b>if ( resp.types[0].type.name === 'grass' ) {{c}}  <abbr title="Si el tipo obtenido es igual a la palabra que ponemos"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-          pokemonData.types0 = [' Planta'];   <abbr title="Metemos el dato [''] en la variable del tipo almacenado para mostrar en lugar del que recibimos, en este caso hacemos una traducción manual u otra cosa"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-         }else if ( resp.types[0].type.name === 'bug' ) {{c}}
-          pokemonData.types0 = [' Bicho'];
-        }else if ( resp.types[0].type.name === 'water' ) {{c}}
-          pokemonData.types0 = [' Agua'];
-        }else if ( resp.types[0].type.name === 'fire' ) {{c}}
-          pokemonData.types0 = [' Fuego'];
-        }else if ( resp.types[0].type.name === 'poison' ) {{c}}
-          pokemonData.types0 = [' Veneno'];
-        }else if ( resp.types[0].type.name === 'ground' ) {{c}}
-          pokemonData.types0 = [' Tierra'];
-        }else if ( resp.types[0].type.name === 'electric' ) {{c}}
-          pokemonData.types0 = [' Eléctrico'];
-        }else if ( resp.types[0].type.name === 'fairy' ) {{c}}
-          pokemonData.types0 = [' Hada'];
-        }else if ( resp.types[0].type.name === 'rock' ) {{c}}
-          pokemonData.types0 = [' Roca'];
-        }else if ( resp.types[0].type.name === 'fighting' ) {{c}}
-          pokemonData.types0 = [' Lucha'];
-        }else if ( resp.types[0].type.name === 'psychic' ) {{c}}
-          pokemonData.types0 = [' Psíquico'];
-        }else if ( resp.types[0].type.name === 'ghost' ) {{c}}
-          pokemonData.types0 = [' Fantasma'];
-        }else if ( resp.types[0].type.name === 'ice' ) {{c}}
-          pokemonData.types0 = [' Hielo'];
-        }else if ( resp.types[0].type.name === 'dragon' ) {{c}}
-          pokemonData.types0 = [' Dragón'];
-        }else if ( resp.types[0].type.name === 'steel' ) {{c}}
-          pokemonData.types0 = [' Acero'];
-        }else if ( resp.types[0].type.name === 'dark' ) {{c}}
-          pokemonData.types0 = [' Oscuro'];
-        }else if ( resp.types[0].type.name === 'flying' ) {{c}}
-          pokemonData.types0 = [' Volador'];
-        }else if ( resp.types[0].type.name === 'normal' ) {{c}}
-          pokemonData.types0 = [' Normal'];
-        }
-
-      },
-      
-    error => {{c}}  <abbr title="Si hay error se ejecuta"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-      console.log(error.error);
-      this.errorN = error.error  <abbr title="Metemos en la variable el error obtenido, se pone el nombre que quiera (error u otro) más punto y los errores dentro de otros errores tal y como sale en la API, en este caso solo un error"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    }
-    
-    
-    );
-  }
-
-}</b>
-
-  
 }</pre>
         </div>
     </div>
@@ -489,58 +446,166 @@ export class HomeComponent implements OnInit {{c}}
           <pre class="card-text">{{co}}div class="row justify-content-center mt-5">
   {{co}}div class="col-6">
 
-    {{co}}img class="hunter mt-5" <b>{{f}}ngIf="errorN"</b> src="../../../assets/image/hunter.png">  <abbr title="Si existe un error mostrar imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-    {{co}}h5 class="card-title mt-5" <b>{{f}}ngIf="errorN"</b>>Ups! algo ha fallado: <b>{{c}}{{c}}errorN}}</b>{{co}}/h5>  <abbr title="Si existe un error mostrar texto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}img class="hunter mt-5" {{f}}ngIf="errorN" src="../../../assets/image/hunter.png">  <abbr title="Si da error sale la imagen"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}h5 class="card-title mt-5" {{f}}ngIf="errorN">Ups! algo ha fallado: {{c}}{{c}}errorN}}{{co}}/h5>   <abbr title="Si da error sale el texto"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
 
-    {{co}}table class="table table-hover table-dark justify-content-center" <b>{{f}}ngIf="!errorN"</b>>  <abbr title="Si no existe un error mostrar todo"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}!-- {{co}}table class="table table-hover table-dark justify-content-center" {{f}}ngIf="!errorN"> -->  {{co}}!--*Forma 1-->   <abbr title="Si no da error sale todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+    {{co}}table class="table table-hover table-dark justify-content-center">  {{co}}!--*Forma 2-->   <abbr title="Sale la tabla con o sin error, saldría sola si hubiera error, para evitar tabla vacía"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
         {{co}}thead>
           {{co}}tr>
             {{co}}!-- {{co}}th scope="col">Id{{co}}/th> -->
             {{co}}th scope="col" class="centrar">Nombre{{co}}/th>
             {{co}}th scope="col" class="centrar">Imagen{{co}}/th>
-            {{co}}!-- {{co}}th scope="col">Peso{{co}}/th>
-            {{co}}th scope="col">Altura{{co}}/th>-->
+            {{co}}th scope="col">Peso{{co}}/th>
+            {{co}}th scope="col">Altura{{co}}/th>
             {{co}}th scope="col" class="centrar">Tipos{{co}}/th> 
           {{co}}/tr>
         {{co}}/thead>
-        {{co}}tbody>
-          {{co}}tr class="table-light" <b>{{f}}ngFor="let pok of pokemon"</b>>  <abbr title="For para mostrar todos los pokemons"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}!-- {{co}}td><b>{{c}}{{c}}pok.id}}</b>{{co}}/td> -->  <abbr title="Muestra id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}th scope="row" class="centrar">{{co}}a <b>{{t}}routerLink]="['/onlyall', pok.id]</b>"><b>{{c}}{{c}}pok.name}}</b>{{co}}/a>{{co}}/th>  <abbr title="Muestra nombre y si pulsamos nos lleva a la página individual del pokemon, porque cogemos la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}td class="centrar">{{co}}a <b>{{t}}routerLink]="['/onlyall', pok.id]</b>">{{co}}img src="<b>{{c}}{{c}}pok.imageback}}</b>">{{co}}img src="<b>{{c}}{{c}}pok.image}}</b>">{{co}}/a>{{co}}/td>  <abbr title="Muestra imagen trasera y frontal y si pulsamos nos lleva a la página individual del pokemon, porque cogemos la id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}!-- {{co}}td><b>{{c}}{{c}}pok.weight}}</b> g{{co}}/td>  <abbr title="Muestra peso"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}td><b>{{c}}{{c}}pok.height}}</b> cm{{co}}/td> -->  <abbr title="Muestra altura"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
-            {{co}}td class="centrar"><b>{{c}}{{c}}pok.types0}}</b>{{co}}/td>  <abbr title="Muestra tipo: fuego, agua..."><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+        {{co}}!-- {{co}}tbody> -->  {{co}}!--*Forma 1-->
+        {{co}}tbody {{f}}ngIf="pokemon?.length != 0">  {{co}}!--*Forma 2-->   <abbr title="Si se recibe pokemons se muestra sino no"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+          {{co}}tr class="table-light" {{f}}ngFor="let pok of pokemon | paginate: {{c}} itemsPerPage: 10, currentPage: paginaCoge, totalItems: totalpokemons }">  {{co}}!-- Paginacion -->   <abbr title="Recorremos la API y la metemos en el método de paginación (paginate) que hemos creado en el TS, mandandole que muestre 10, la ubicación de la página (paginaCoge) y el total de páginas de pokemons (totalpokemons)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}!-- {{co}}td>{{c}}{{c}}pok.id}}{{co}}/td> -->  <abbr title="Muestra id"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           {{co}}th scope="row" class="centrar">{{co}}a {{t}}routerLink]="['/onlyall', pok.id]">{{c}}{{c}}pok.name}}{{co}}/a>{{co}}/th>  <abbr title="Muestra nombre y nos lleva a la página individual"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+           {{co}}td class="centrar">{{co}}a {{t}}routerLink]="['/onlyall', pok.id]">{{co}}img src="{{c}}{{c}}pok.sprites.back_default}}">{{co}}img src="{{c}}{{c}}pok.sprites.front_default}}">{{co}}/a>{{co}}/td>  <abbr title="Muestra imagen y nos lleva a la página individual"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td>{{c}}{{c}}pok.weight}} g{{co}}/td>  <abbr title="Muestra peso"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td>{{c}}{{c}}pok.height}} cm{{co}}/td>   <abbr title="Muestra altura"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+             
+            {{co}}!-- Sin traducción -->
+            {{co}}!-- {{co}}td class="centrar">{{c}}{{c}}pok.types[0].type.name}}{{co}}/td> -->  <abbr title="Muestra tipo en INGLÉS"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+
+            {{co}}!-- Traduccion mal hecha -->
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'grass'">Hierva{{co}}/td>  <abbr title="Muestra tipo en ESPAÑOL"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'bug'">Insecto{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'fire'">Fuego{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'water'">Agua{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'normal'">Normal{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'psychic'">Psíquico{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'ground'">Suelo{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'poison'">Veneno{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'fighting'">Luchador{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'electric'">Eléctrico{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'fairy'">Hada{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'rock'">Roca{{co}}/td>
+            {{co}}td class="centrar" {{f}}ngIf="pok.types[0].type.name === 'ghost'">Fantasma{{co}}/td>
           {{co}}/tr>
         {{co}}/tbody>
       {{co}}/table>
 
     {{co}}/div>
-  {{co}}/div></pre>
-      </div>
-  </div>
-</div>
+  {{co}}/div>
 
+{{co}}!-- Paginacion -->
+  {{co}}pagination-controls <abbr title="Llamamos al método de paginación que previamente instalamos por comando"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> {{p}}pageChange)="paginaCoge = $event; <abbr title="Detecta los cambios (pageChange) según lo que pulsemos ($event) sobre la paginación (paginaCoge)"><i class="fa fa-question-circle" aria-hidden="true"></i></abbr> pokemon = []; getTodos()">{{co}}/pagination-controls>{{co}}/pre>  
+    {{co}}/div>
+        </pre>
+    </div>
+</div>
+        
 <div class="card-group">
-  <div class="card m-3">
-      <div class="card-header bg-danger">
-          <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
-      </div>
-      <div class="c.ard-body">
+    <div class="card text-dark bg-info m-3">
+        <div class="card-header">
+            <pre class="card-text text-center"><h3>Css</h3></pre>
+        </div>
+        <div class="card-body">
+          <pre class="card-text">.table{{c}}
+    margin-top: 65px;
+}
 
-        <app-todosalgomejor></app-todosalgomejor>
+.hunter{{c}}
+    animation-name: hunter;               
+    animation-duration: 3s;                 
+    animation-delay: 1s;                    
+    animation-iteration-count: 10;           
+    animation-direction:alternate;           
+    animation-timing-function: ease;      
+    animation-fill-mode: both;              
+  }
+  
+@keyframes hunter{{c}}                        
+    from{{c}}                                  
+            width: 100px;
+        }
+    to{{c}}                                     
+            width: 400px;
+        }
+  }
 
-      </div>
+.centrar{{c}}
+    text-align: center;
+}
+
+/*CAMBIAR ALGUNA Tablet por ROW O COL PARA REDUCIR TABLA O USAR ROW Y COL SIEMPRE...IR PROBANDO*/
+
+@media screen and (min-width: 1025px){{c}}     /*Más de 1025px -> PC / TV*/
+    .table{{c}}
+        width: 600px;
+    }
+}
+
+
+@media screen and (width: 1024px){{c}}     /*Con 1024px -> Lapto*/
+    .table{{c}}
+        width: 600px;
+    }
+}
+
+
+@media screen and (width: 768px){{c}}     /*Con 768px -> .Tablet*/
+    .table{{c}}
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 612px){{c}}     /*Menos de 612px*/
+    .table{{c}}
+        width: 200px;
+    }
+}
+
+@media screen and (width: 540px){{c}}     /*Con 540px  -> Surface Duo*/
+    .table{{c}}
+        width: 10px;
+    }
+}
+
+
+@media screen and (width: 320px){{c}}     /*Con 320px  -> Mobile S*/
+    .table{{c}}
+        width: 600px;
+    }
+}
+
+@media screen and (width: 360px){{c}}     /*Con 360px ->  -> Mobile Moto G*/
+    .table{{c}}
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 320px){{c}}     /*Menos de 320px ->  -> Mobile Galaxy Fold*/
+    .table{{c}}
+        width: 600px;
+    }
+}
+
+
+/* img{{c}}    /*Se usa cuando se pone la mejor imagen*/
+    /*width: 50px;
+} */
+
+
+<b>pagination-controls {{c}}
+    text-align: center;
+}</b></pre>
+        </div>
+    </div>
   </div>
-</div>
-
-
-
+    
     </div>
   
-    <div class="tab-pane fade" id="pills-pokemonformamejorada2" role="tabpanel" aria-labelledby="pills-pokemonformamejorada2-tab">
-
-      <div class="card-group">
+    <div class="tab-pane fade" id="pills-pokemonpaginacionmejor2" role="tabpanel" aria-labelledby="pills-pokemonpaginacionmejor2-tab">
+        
+        <div class="card-group">
         <div class="card m-3">
             <div class="card-header bg-danger">
                 <pre class="card-text text-center blanco"><h3>Ejemplo</h3></pre>
@@ -699,5 +764,5 @@ export class OnlyallComponent implements OnInit {{c}}
 </div>
 
     </div>
-      
-  </div>
+
+</div>
